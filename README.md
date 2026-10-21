@@ -20,9 +20,16 @@ LIBERO observation + task instruction
 
 ## 当前状态
 
-**DOCUMENTATION_BOOTSTRAP / NOT_RUNTIME_VALIDATED**。
+**M0/M1 READY_FOR_REVIEW / INCOMPLETE**。
 
-本仓库初始化提交的是计划、实施约束、实验协议与审核流程，不是已完成的模型部署、治理代码或实验结果。未在本次规划中登录 GPU 节点、运行 GR00T 或验证治理效果。首个有界执行包为 **M0–M1：隔离部署、接口核验、原生 baseline**；见 [Codex 首轮交接](docs/CODEX_HANDOFF.md)。
+隔离双环境、Object推理文件下载/哈希、依赖检查和三个预定任务的真实双相机EGL检查已完成。5次开发环境attempt中4次通过、1次初始化加载失败并保留；完整policy episode为0，不能将环境probe通过解释为任务成功。
+
+真实模型加载被 `nvidia/Cosmos-Reason2-2B` 的Hugging Face受限访问阻塞（HTTP401）。用户要求先提交阻塞审核包；没有继续GPU尝试，没有WBC、训练、CALIB/TEST、shadow或Gate运行。下一关为GPT R1审核，执行者没有自行批准下一阶段。
+
+- [M0安装、资源与失败报告](reports/M0/preflight.md)
+- [M1完整开发记录与未完成验收](reports/M1/baseline_report.md)
+- [原生运行契约：已验证与未验证分列](reports/M1/runtime_contract.md)
+- [运行身份](configs/runtime_lock.json) / [artifact manifest](reports/M1/artifact_manifest.json)
 
 ## 阅读顺序
 
@@ -62,4 +69,25 @@ LIBERO observation + task instruction
 
 ## 启动方式
 
-当前没有已验证的安装脚本或可运行的治理入口。**不要把文档中的拟实现命令当作已存在的程序。** Codex 从 `docs/CODEX_HANDOFF.md` 开始，以 PR 和可核查证据完成首轮交付。
+CPU侧检查不加载模型：
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/verify_delivery.py
+```
+
+本轮实际安装入口为 `scripts/prepare_runtime.py`，运行前必须固定上游源码并建立独立workspace、HOME与cache；详见[M0报告](reports/M0/preflight.md)。官方setup之后还须按 `configs/sim_constraints.txt` 修复实测发现的兼容冲突。安装成功不能代替模型/环境验收。
+
+`scripts/runtime_env.sh` 接受运行者明确设置的 `TASE_WORKSPACE`、`TASE_GPU_UUID`、`TASE_EGL_DEVICE_ID`，只使用项目目录内的配置、缓存与环境。实际GPU使用必须得到资源许可。`--allocation-record` 是已有用户许可的记录，不会自动产生许可。
+
+真实环境检查已用如下入口验证；每个新attempt必须使用新的run ID，失败也消耗总计24次的DEV预算：
+
+```bash
+"$SIM_PY" -m tase.baseline --workspace "$WORKSPACE" \
+  --run-id dev-env-NEW --task alphabet_soup --init-index 0 \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json" --probe-only
+```
+
+`tase.server` 和去掉 `--probe-only` 的原生runner已经实现，**尚未通过真实policy运行验证**；当前阻塞是Cosmos访问权，不能将其写成可复现的成功baseline命令。Hugging Face访问许可及登录应由负责人在隔离环境中完成，不能将token写入代码、命令参数、PR或日志。
+
+本仓库当前没有shadow/Gate/校准/正式测试入口。R1审核后才能决定下一段工作；保留现有5次attempt，不能重新置零预算。
