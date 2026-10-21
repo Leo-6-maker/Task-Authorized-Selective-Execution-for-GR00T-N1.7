@@ -51,10 +51,21 @@ def main():
         calls += 1
         torch.cuda.synchronize()
         start = time.perf_counter()
-        result = original(observation, options)
+        try:
+            result = original(observation, options)
+        except Exception as exc:
+            append_json(a.output / 'inference.jsonl', {
+                'request': calls, 'status': 'ERROR', 'error_type': type(exc).__name__,
+                'elapsed_ms': (time.perf_counter()-start)*1000,
+                'peak_allocated_bytes': torch.cuda.max_memory_allocated(),
+                'peak_reserved_bytes': torch.cuda.max_memory_reserved()})
+            raise
         torch.cuda.synchronize()
         append_json(a.output / 'inference.jsonl', {
-            'request': calls, 'inference_ms': (time.perf_counter()-start)*1000,
+            'request': calls, 'status': 'PASS',
+            'input_shapes': {k: list(v.shape) for k, v in observation.items()
+                             if hasattr(v, 'shape')},
+            'inference_ms': (time.perf_counter()-start)*1000,
             'peak_allocated_bytes': torch.cuda.max_memory_allocated(),
             'peak_reserved_bytes': torch.cuda.max_memory_reserved(),
             'output_shapes': {k: list(v.shape) for k, v in result[0].items()}})
