@@ -1,36 +1,31 @@
 # 当前状态索引
 
-更新时间：2026-10-21（Asia/Singapore）
+更新时间：2026-10-21（Asia/Singapore）。最新适用审核：[R002](reviews/R002-R1-native-baseline-conditional.md)。
 
-## 权威范围
+## 范围与版本
 
-协议：TASE-001 v1.0。架构决定：[ADR-0001](decisions/ADR-0001-native-libero-only.md)。初始审核：[R000](reviews/R000-planning-review.md)。
+TASE-001 v1.0：**GR00T N1.7 LIBERO-adapted policy → 任务授权 Safety Gate → 原生 LIBERO/Panda**。无WBC、训练、实机。架构见[ADR-0001](decisions/ADR-0001-native-libero-only.md)。R000/R001保留历史，不被覆盖。
 
-**GR00T N1.7 LIBERO-adapted policy → Safety Gate → native LIBERO/Panda execution。无WBC、无实机、无额外训练。**
+本main主要保存计划/审核；实现仍在[PR #3](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/pull/3)，本轮审阅head=`5e64f2408e4e798d229c0e42761207576abe7e46`，**未合并**。
 
-## 当前阶段
+## 当前证据
 
-| 项目 | 状态 | 证据/说明 |
+| 项目 | 状态 | 解释 |
 |---|---|---|
-| 计划、范围与工作流 | DOCUMENTED | 本仓库文档及R000 |
-| 官方checkpoint与native接口的外部依据 | SOURCE_VERIFIED | SOURCES中的官方材料与固定源码 |
-| 本地部署和GPU预留 | NOT_VERIFIED | 本次规划未登录/安装/预留资源 |
-| 真实模型推理与native episode | NOT_RUN | 待Codex M0/M1 |
-| Shadow一致性 | NOT_IMPLEMENTED | 待M2 |
-| Gate与oracle | NOT_IMPLEMENTED | 本仓库没有运行时实现 |
-| CALIB/TEST冻结 | NOT_FROZEN | 阈值与规模仍为计划候选 |
-| 治理有效性 | NO_EVIDENCE_YET | 不填写示意结果 |
+| 原生部署/HF访问 | EXECUTOR_RUNTIME_EVIDENCE_DELIVERED | 新报告已记录模型加载和完整policy运行，旧401不再是主阻塞 |
+| 六个预定DEV任务格 | 5 SUCCESS / 1 TIME_LIMIT | 公开账本复算一致；两任务各两初态成功；不是TEST或治理结果 |
+| 推理/控制 | 181 calls / 1438 steps | 公开汇总与代码路径审阅；私有NPZ尚未由reviewer读取 |
+| CPU证据/安装测试 | REVIEWER_REPRODUCED 8/8 PASS | 精确Git blob校验后，在reviewer CPU sandbox重跑 |
+| 证据auditor完整性 | CHANGES_REQUIRED | 缺腕部图、空observation、空parity、空manifest均可假PASS；R002已复现 |
+| 私有原件 | NOT_VERIFIED_BY_REVIEWER | 必须提供可访问原件/脱敏包；hash声明不等于独立核验 |
+| Shadow/oracle | M2 CONDITIONALLY_AUTHORIZED | 见下述工作包；尚未实现/通过 |
+| Gate/CALIB/TEST | NOT_AUTHORIZED | 未进入M3/正式实验 |
+| 治理有效性 | NO_EVIDENCE_YET | baseline成功不是治理效果 |
 
-## 当前授权
+## 当前授权与入口
 
-`APPROVED_FOR_BOUNDED_BOOTSTRAP`：Codex执行M0–M1，最多24个开发episode runs；允许授权内的CPU测试和文档实现；实际GPU使用需资源许可。下一关为R1。
+**PR处置：CHANGES_REQUIRED，不合并。执行处置：CONDITIONAL_APPROVAL，允许[M2工作包](work_packages/M2-shadow-oracle.md)。**
 
-未授权：训练、正式TEST、修改最终事件/阈值后继续沿用旧结果、WBC/其他仿真器、实机、无限重试、破坏共享环境。
+先修复证据校验和异常留证，重审既有raw；条件满足后进行有界shadow/oracle开发。旧DEV账本12/24，本工作包最多新增6次，失败也计入；剩余6次保留。另有最多80个有记录的短shadow验证case，不计为独立任务，不得扩成无界完整rollout。
 
-## 当前入口
-
-- [Codex工作指令](CODEX_HANDOFF.md)
-- [完整工作包](PROJECT_PLAN.md)
-- [审核规范](REVIEW_WORKFLOW.md)
-
-阶段完成后Codex可以更新客观进度与报告链接，但reviewer批准状态必须引用新审核记录，不能自签。GitHub issue和PR承载正在执行的具体任务；建立issue并不代表执行已经启动。
+私有原件独立核验尚未关闭；Codex不得自签GPT认可。下一关为M2交接审核，不自动进入M3/CALIB/TEST。GPU使用仍须现有资源许可有效。没有后台任务或自动Codex启动。
