@@ -55,6 +55,7 @@ def main():
         import numpy as np
         import cv2
         import gymnasium as gym
+        from gymnasium.vector.utils import concatenate, create_empty_array
         import torch
         from PIL import Image
         from libero.libero import benchmark, get_libero_path
@@ -183,8 +184,10 @@ def main():
         raw.step = traced_step
         done = False
         while not done:
-            request = {k: (np.asarray(v)[None] if not k.startswith('annotation') else [v])
-                       for k, v in observation.items()}
+            # Use the same declared-space batching as native SyncVectorEnv.
+            # Raw MuJoCo state is float64; its native Box contract is float32.
+            request = concatenate(wrapped.observation_space, [observation],
+                                  create_empty_array(wrapped.observation_space, n=1))
             n = result['policy_calls']
             np.savez_compressed(folder / f'observation-{n:03d}.npz', **{
                 k: v for k, v in request.items() if not k.startswith('annotation')})
