@@ -47,6 +47,7 @@ def main():
     result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split='DEV',
                   repo_sha=repo_sha, config_hash=sha256(a.config),
                   status='STARTED', official_success=None, policy_calls=0,
+                  policy_requests_attempted=0,
                   inner_steps=0, settling_steps=0, exit_code=1,
                   started_at_sgt=now_sgt())
     native = wrapped = client = video = None
@@ -147,6 +148,20 @@ def main():
                                   max_episode_steps=config['max_inner_steps'],
                                   terminate_on_success=True)
         observation, _ = wrapped.reset()
+        # This M1 adapter only substitutes the declared benchmark reset. Verify
+        # it neither steps physics nor alters native observation/history values.
+        state_unchanged = np.array_equal(np.asarray(raw.get_sim_state()), settled)
+        equal_streams = {
+            key: (observation[key] == value if key.startswith('annotation') else
+                  np.array_equal(np.asarray(observation[key])[-1], np.asarray(value)))
+            for key, value in processed.items()}
+        write_json(folder / 'reset_parity.json', {
+            'state_unchanged': bool(state_unchanged),
+            'latest_native_observation_equal': {k: bool(v) for k, v in equal_streams.items()},
+            'history': vars(contract),
+            'scope': 'native settled reset and official wrapper history; no shadow'})
+        if not state_unchanged or not all(equal_streams.values()):
+            raise ValueError('fixed-reset native observation/state parity mismatch')
         video = cv2.VideoWriter(str(folder / 'rollout.mp4'), cv2.VideoWriter_fourcc(*'mp4v'),
                                 20.0, (512, 256))
         if not video.isOpened():
@@ -159,6 +174,7 @@ def main():
             value = original_step(action)
             state_rows.append(np.array(raw.get_sim_state(), copy=True))
             converted_rows.append(converted)
+            result['inner_steps'] += 1
             frame = np.concatenate([value[0]['agentview_image'][::-1, ::-1],
                                     value[0]['robot0_eye_in_hand_image'][::-1, ::-1]], axis=1)
             video.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
@@ -173,6 +189,7 @@ def main():
             np.savez_compressed(folder / f'observation-{n:03d}.npz', **{
                 k: v for k, v in request.items() if not k.startswith('annotation')})
             tick = time.perf_counter()
+            result['policy_requests_attempted'] += 1
             actions, _ = client.get_action(request)
             latency_ms = (time.perf_counter()-tick)*1000
             result['policy_calls'] += 1
@@ -190,7 +207,6 @@ def main():
             observation, _, done, truncated, info = wrapped.step(prefix)
             count = len(converted_rows)-before
             success = bool(np.any(info['success']))
-            result['inner_steps'] += count
             result['official_success'] = bool(result['official_success'] or success)
             append_json(folder / 'decisions.jsonl', dict(index=n, native_baseline=True,
                         inference_roundtrip_ms=latency_ms, inner_steps=count,
