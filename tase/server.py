@@ -23,6 +23,12 @@ def main():
     from gr00t.policy.server_client import PolicyServer
     torch.manual_seed(a.policy_seed)
     torch.cuda.manual_seed_all(a.policy_seed)
+    free, total = torch.cuda.mem_get_info()
+    if free < 16 * 1024**3:
+        raise RuntimeError('less than 16 GiB free VRAM; do not share this device now')
+    # Leave >=2 GiB of currently free memory and cap this process at 55% total.
+    fraction = min(0.55, (free - 2*1024**3) / total)
+    torch.cuda.set_per_process_memory_fraction(fraction)
     torch.cuda.reset_peak_memory_stats()
     start = time.perf_counter()
     policy = Gr00tSimPolicyWrapper(Gr00tPolicy(
@@ -34,6 +40,8 @@ def main():
         'peak_allocated_bytes': torch.cuda.max_memory_allocated(),
         'peak_reserved_bytes': torch.cuda.max_memory_reserved(),
         'device_name': torch.cuda.get_device_name(0), 'dtype': 'bfloat16',
+        'torch': torch.__version__, 'torch_cuda': torch.version.cuda,
+        'free_vram_before_load_bytes': free, 'allocator_fraction_cap': fraction,
         'mode': 'eval/no_training', 'host': '127.0.0.1', 'port': a.port})
     original = policy.get_action
     calls = 0
