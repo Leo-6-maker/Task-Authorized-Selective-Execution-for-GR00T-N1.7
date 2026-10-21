@@ -1,0 +1,50 @@
+{
+  "review_id": "R002",
+  "reviewed_head": "5e64f2408e4e798d229c0e42761207576abe7e46",
+  "reviewer_role": "GPT",
+  "execution_location": "reviewer CPU sandbox, not Corelab",
+  "python": "3.13.5",
+  "source_acquisition": "GitHub connector UTF-8 content materialized locally; Git blob SHA-1 verified before execution",
+  "source_blobs": {
+    "tase/evidence.py": "ab43038b3177b22bc5257539f5bab5e4e9b36140",
+    "scripts/prepare_runtime.py": "86e944e5966e2be9423be45191e23455e1cb4977",
+    "tests/test_evidence.py": "768377295cfc5fee806559a36b63028d1bc81daa",
+    "tests/test_install_safety.py": "703c1053be5043500c4c877bd0c8ed69b6fe4747",
+    "scripts/summarize_baseline.py": "f3c28210f3c9dfac4af8192739d4910bdd7d3483"
+  },
+  "run_source_identity_checks": {
+    "baseline_run_commit": "46b3461a0f24d0575141b4e35e430ee1e3280e2c",
+    "baseline_blob_matches_review_head": "3700bf72719d00ec323222b4a34ab6ebd37d530f",
+    "server_run_commit": "5c8d8136b6e52a50ebcaf243f713a4c1a16bbda1",
+    "server_blob_matches_review_head": "bcf7354065326f36244314eef30c1c1f91186c1c"
+  },
+  "cpu_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0
+  },
+  "synthetic_auditor_tests": [
+    {"case": "valid_control", "expected": "ACCEPT", "actual": "ACCEPT"},
+    {"case": "missing_wrist", "expected": "REJECT", "actual": "ACCEPT", "false_pass": "request_dtypes_shapes"},
+    {"case": "empty_observation", "expected": "REJECT", "actual": "ACCEPT", "false_pass": "request_dtypes_shapes"},
+    {"case": "empty_reset_keys", "expected": "REJECT", "actual": "ACCEPT", "false_pass": "native_reset_history_parity"},
+    {"case": "empty_manifest", "expected": "REJECT", "actual": "ACCEPT", "false_pass": "artifact_hashes"}
+  ],
+  "public_ledger_recalculation": {
+    "source": "reports/M1/dev_runs_resume.csv@5e64f2408e4e798d229c0e42761207576abe7e46",
+    "method": "recomputed from six published row values, not private raw evidence",
+    "complete_episodes": 6,
+    "successes": 5,
+    "model_calls": 181,
+    "control_steps": 1438,
+    "median_wall_seconds": 9.462103741476312,
+    "mean_wall_seconds": 11.466311869056275,
+    "reported_pytorch_reserved_bytes_in_GiB": 6.037109375,
+    "success_per_complete_episode": 0.8333333333333334,
+    "success_per_policy_attempt_including_dtype_failure": 0.7142857142857143
+  },
+  "not_performed": ["Corelab login", "GPU model execution", "private raw artifact inspection", "full public/private manifest byte verification", "new real episode"],
+  "synthetic_fixture_is_model_or_simulator_evidence": false
+}
