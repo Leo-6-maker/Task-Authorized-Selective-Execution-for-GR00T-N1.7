@@ -16,7 +16,7 @@ TASE-001 v1.0：**GR00T N1.7 LIBERO-adapted policy → 任务授权 Safety Gate 
 | 六个预定DEV任务格 | 5 SUCCESS / 1 TIME_LIMIT | 公开账本复算一致；两任务各两初态成功；不是TEST或治理结果 |
 | 推理/控制 | 181 calls / 1438 steps | 公开汇总与代码路径审阅；私有NPZ尚未由reviewer读取 |
 | CPU证据/安装测试 | REVIEWER_REPRODUCED 8/8 PASS | 精确Git blob校验后，在reviewer CPU sandbox重跑 |
-| 证据auditor完整性 | CHANGES_REQUIRED | 缺腕部图、空observation、空parity、空manifest均可假PASS；R002已复现 |
+| 证据auditor完整性 | EXECUTOR_FIX_AND_REAUDIT_DELIVERED | R002四类假PASS及其余负例已补；普通/-O 13项测试；[A项报告](../reports/M1/audit_hardening_report.md)，待独立复核 |
 | 私有原件 | NOT_VERIFIED_BY_REVIEWER | 必须提供可访问原件/脱敏包；hash声明不等于独立核验 |
 | Shadow/oracle | M2 CONDITIONALLY_AUTHORIZED | 见下述工作包；尚未实现/通过 |
 | Gate/CALIB/TEST | NOT_AUTHORIZED | 未进入M3/正式实验 |

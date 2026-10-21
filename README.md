@@ -20,11 +20,11 @@ LIBERO observation + task instruction
 
 ## 当前状态
 
-**M0/M1 READY_FOR_REVIEW：真实原生 baseline 证据已交付，等待新 head 的独立 R1 审核。**
+**R002：有条件允许 M2，PR #3 保持 CHANGES_REQUIRED、未合并。证据校验修复与既有 raw 重审已另存，待独立复核。**
 
 真实 Object 模型已加载，完成 181 次 forward、6 个预定 DEV episode：5 次官方成功，ketchup 初态 1 在 720 步上限失败。Alphabet soup 和 cream cheese 均在初态 0、1 成功。累计 12/24 次 DEV 尝试，包含历史环境检查和两次基础设施错误；全部保留。
 
-通过进程级外部 HF_TOKEN_PATH 解决隔离环境的凭据发现问题，并固定 Cosmos auxiliary revision。实测峰值 reserved 显存约 6.04 GiB，完整 episode 中位耗时 9.46 秒。模型进程已正常退出。独立 [R001](docs/reviews/R001-M0-M1-access-blocked.md) 是旧 head 的阻塞审核；当前等待新 head 复核，尚未放行 M2。
+通过进程级外部 HF_TOKEN_PATH 解决凭据发现问题，并固定 Cosmos revision。实测 PyTorch peak reserved 约 6.04 GiB（不是整进程及渲染总显存），episode 中位 9.46 秒。[R002](docs/reviews/R002-R1-native-baseline-conditional.md) 有条件允许 M2；先完成[审计加固](reports/M1/audit_hardening_report.md)，再按 Issue #4 有界验证 snapshot/shadow/oracle。M3 尚未授权。
 
 - [M0安装、资源与失败报告](reports/M0/preflight.md)
 - [M1续验报告与全部开发记录](reports/M1/continuation_report.md)
