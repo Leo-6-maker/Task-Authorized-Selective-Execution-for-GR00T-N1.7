@@ -6,10 +6,12 @@ conversion, MultiStepWrapper history and control remain upstream code.
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
 import traceback
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from .evidence import append_json, manifest, now_sgt, reserve_episode, sha256, write_json
 
@@ -95,6 +97,12 @@ def main():
                       scene_xml_hash=sha256(folder / 'scene.xml'),
                       control_hz=raw.env.control_freq,
                       task_objects=list(raw.obj_of_interest))
+        objects = getattr(raw.env, 'objects', [])
+        names = list(objects) if isinstance(objects, dict) else [o.name for o in objects]
+        write_json(folder / 'object_catalog.json', {
+            'objects': names, 'objects_of_interest': list(raw.obj_of_interest),
+            'body_names': list(raw.sim.model.body_names),
+            'meaning': 'Native scene inventory only; not a Gate or event oracle'})
         write_json(folder / 'observation_schema.json', {
             k: {'shape': list(np.asarray(v).shape), 'dtype': str(np.asarray(v).dtype)}
             for k, v in processed.items()})
@@ -106,6 +114,13 @@ def main():
         from OpenGL import GL
         result['gl_renderer'] = GL.glGetString(GL.GL_RENDERER).decode()
         result['gl_vendor'] = GL.glGetString(GL.GL_VENDOR).decode()
+        xml_query = subprocess.check_output(['nvidia-smi', '-q', '-x'], text=True)
+        own_gpus = [index for index, gpu in enumerate(ET.fromstring(xml_query).findall('gpu'))
+                    if any(process.findtext('pid') == str(os.getpid())
+                           for process in gpu.findall('./processes/process_info'))]
+        result['egl_process_gpu_indices'] = own_gpus
+        result['egl_binding_check'] = ('MATCH' if own_gpus ==
+            [int(os.environ['MUJOCO_EGL_DEVICE_ID'])] else 'NOT_VERIFIED')
         controllers = raw.robots[0].controller
         write_json(folder / 'controller.json', {
             key: np.asarray(getattr(controllers, key)).tolist()
