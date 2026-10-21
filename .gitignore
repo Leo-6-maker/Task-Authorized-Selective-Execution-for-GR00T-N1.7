@@ -1,0 +1,48 @@
+# Local runtimes and third-party checkouts
+.venv/
+venv/
+libero_uv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+/vendor/
+/external_dependencies/
+/checkpoints/
+/datasets/
+/cache/
+/runs/
+/artifacts/raw/
+/artifacts/private/
+/local/
+
+# Weights / optimizer states / raw recordings
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.mkv
+*.hdf5
+*.h5
+*.pkl
+
+# Secrets / machine configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.ssh/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local build and course packages
+build/
+dist/
+*.egg-info/
+/ME6401_*.zip
+
+# Do not assume .gitignore replaces secret or asset/license review.
