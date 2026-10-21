@@ -1,0 +1,37 @@
+{
+  "run_id": "dev-policy-010",
+  "task": "cream_cheese",
+  "init_index": 1,
+  "split": "DEV",
+  "repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c",
+  "config_hash": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+  "status": "SUCCESS",
+  "official_success": true,
+  "policy_calls": 21,
+  "policy_requests_attempted": 21,
+  "inner_steps": 162,
+  "settling_steps": 10,
+  "exit_code": 0,
+  "started_at_sgt": "2026-10-21T19:32:30.497086+08:00",
+  "init_hash": "3eb6820e2a87e6f286b57caed2794f41e69a7ddb3a2c2893afbd84b1441ff9d2",
+  "init_file_sha256": "5ea5483bca8abd80a8f1935e2c60570d60eaaf6a985c283d62805b46fb76aa94",
+  "bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2",
+  "full_task_name": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+  "native_language": "pick up the cream cheese and place it in the basket",
+  "settled_state_hash": "cd073bd5ef3fb6d2d9a2d91219e798515c725837d7deba02c70bafe41b87a742",
+  "scene_xml_hash": "14fb1bf5f4f1d28c582d485f8fd004fc98281ebc0f59407431173e56934b7179",
+  "control_hz": 20,
+  "task_objects": [
+    "cream_cheese_1",
+    "basket_1"
+  ],
+  "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+  "gl_vendor": "NVIDIA Corporation",
+  "egl_process_gpu_indices": [
+    0
+  ],
+  "egl_binding_check": "MATCH",
+  "wall_seconds": 9.704921422060579,
+  "completed_at_sgt": "2026-10-21T19:32:40.201989+08:00",
+  "full_policy_episode": true
+}

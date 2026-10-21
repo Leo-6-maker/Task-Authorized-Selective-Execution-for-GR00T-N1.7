@@ -1,0 +1,39 @@
+{
+  "run_id": "dev-policy-006",
+  "task": "alphabet_soup",
+  "init_index": 0,
+  "split": "DEV",
+  "repo_sha": "5c8d8136b6e52a50ebcaf243f713a4c1a16bbda1",
+  "config_hash": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+  "status": "RUNTIME_ERROR",
+  "official_success": null,
+  "policy_calls": 0,
+  "policy_requests_attempted": 1,
+  "inner_steps": 0,
+  "settling_steps": 10,
+  "exit_code": 1,
+  "started_at_sgt": "2026-10-21T19:30:26.013044+08:00",
+  "init_hash": "34350cbaada02949b397a75286eb1f8b4034bee665ed29e4fc3ba1229b4455f2",
+  "init_file_sha256": "b9023e5546b239cacb2aaa3c76df3b73c3de6f97500fea5e27a0db9827002a19",
+  "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+  "full_task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "native_language": "pick up the alphabet soup and place it in the basket",
+  "settled_state_hash": "fb092b3673f4a74898a2019f082017066d53b5ab56ff696264cedec4c4b67bb1",
+  "scene_xml_hash": "67343e48219418a95042ae9d55d1c9ca23ec784815c811c8202eac86889628f9",
+  "control_hz": 20,
+  "task_objects": [
+    "alphabet_soup_1",
+    "basket_1"
+  ],
+  "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+  "gl_vendor": "NVIDIA Corporation",
+  "egl_process_gpu_indices": [
+    0
+  ],
+  "egl_binding_check": "MATCH",
+  "error_type": "RuntimeError",
+  "wall_seconds": 6.478597462177277,
+  "completed_at_sgt": "2026-10-21T19:30:32.491610+08:00",
+  "full_policy_episode": false,
+  "error_summary": "Native state batch float64 rejected by strict policy float32 validation; corrected by native Gymnasium declared-space batching."
+}

@@ -9,7 +9,7 @@ from tase.evidence import verify_manifest
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--manifest',type=Path,default=Path('reports/M1/artifact_manifest.json'))
+    p.add_argument('--manifest',type=Path,default=Path('reports/M1/artifact_manifest_resume.json'))
     p.add_argument('--private-runtime',type=Path)
     p.add_argument('--private-operator',type=Path)
     a=p.parse_args()

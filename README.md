@@ -20,16 +20,17 @@ LIBERO observation + task instruction
 
 ## 当前状态
 
-**M0/M1 READY_FOR_REVIEW / INCOMPLETE**。
+**M0/M1 READY_FOR_REVIEW：真实原生 baseline 证据已交付，等待新 head 的独立 R1 审核。**
 
-隔离双环境、Object推理文件下载/哈希、依赖检查和三个预定任务的真实双相机EGL检查已完成。5次开发环境attempt中4次通过、1次初始化加载失败并保留；完整policy episode为0，不能将环境probe通过解释为任务成功。
+真实 Object 模型已加载，完成 181 次 forward、6 个预定 DEV episode：5 次官方成功，ketchup 初态 1 在 720 步上限失败。Alphabet soup 和 cream cheese 均在初态 0、1 成功。累计 12/24 次 DEV 尝试，包含历史环境检查和两次基础设施错误；全部保留。
 
-真实模型加载被 `nvidia/Cosmos-Reason2-2B` 的Hugging Face受限访问阻塞（HTTP401）。用户要求先提交阻塞审核包；没有继续GPU尝试，没有WBC、训练、CALIB/TEST、shadow或Gate运行。下一关为GPT R1审核，执行者没有自行批准下一阶段。
+通过进程级外部 HF_TOKEN_PATH 解决隔离环境的凭据发现问题，并固定 Cosmos auxiliary revision。实测峰值 reserved 显存约 6.04 GiB，完整 episode 中位耗时 9.46 秒。模型进程已正常退出。独立 [R001](docs/reviews/R001-M0-M1-access-blocked.md) 是旧 head 的阻塞审核；当前等待新 head 复核，尚未放行 M2。
 
 - [M0安装、资源与失败报告](reports/M0/preflight.md)
-- [M1完整开发记录与未完成验收](reports/M1/baseline_report.md)
-- [原生运行契约：已验证与未验证分列](reports/M1/runtime_contract.md)
-- [运行身份](configs/runtime_lock.json) / [artifact manifest](reports/M1/artifact_manifest.json)
+- [M1续验报告与全部开发记录](reports/M1/continuation_report.md)
+- [原生运行契约与实测限制](reports/M1/runtime_contract_resume.md)
+- [运行身份](configs/runtime_lock_resume.json) / [artifact manifest](reports/M1/artifact_manifest_resume.json)
+- [首次阻塞交付的历史报告](reports/M1/baseline_report.md)
 
 ## 阅读顺序
 
@@ -88,6 +89,37 @@ python scripts/verify_delivery.py
   --allocation-record "$WORKSPACE/runs/gpu-authorization.json" --probe-only
 ```
 
-`tase.server` 和去掉 `--probe-only` 的原生runner已经实现，**尚未通过真实policy运行验证**；当前阻塞是Cosmos访问权，不能将其写成可复现的成功baseline命令。Hugging Face访问许可及登录应由负责人在隔离环境中完成，不能将token写入代码、命令参数、PR或日志。
+`tase.server` 和去掉 `--probe-only` 的原生 runner 已通过本轮六个 DEV episode 验证，包含一个真实策略失败。访问许可由负责人确认；通过外部 `HF_TOKEN_PATH` 使用已有 active token，无需复制 token 到项目环境。不能将 token 写入代码、命令参数、PR 或日志。
 
-本仓库当前没有shadow/Gate/校准/正式测试入口。R1审核后才能决定下一段工作；保留现有5次attempt，不能重新置零预算。
+固定 Cosmos revision `9ce19a195e423419c349abfc86fd07178b230561` 的推理文件并核验后，将 `$WORKSPACE/runtime/model-resolution/nvidia/Cosmos-Reason2-2B` 符号链接指向该 isolated HF cache snapshot。从 `runtime/model-resolution` 启动 native server，可让官方相对模型标识解析到固定本地文件，避开本次离线 tokenizer 元数据查询问题。具体文件清单与失败修复见续验报告。
+
+已验证的 server/client 入口如下；先完成上述环境、缓存、资源许可检查，设置 `SERVER_PY`、`SIM_PY` 与 `REPO` 的绝对路径，再分别在两个终端执行。NEW 必须换成未使用的 attempt ID：
+
+```bash
+# Server terminal: source scripts/runtime_env.sh before changing directory.
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+cd "$WORKSPACE/runtime/model-resolution"
+"$SERVER_PY" -u "$REPO/scripts/record_process.py" \
+  --receipt "$WORKSPACE/runs/server-NEW.exit.json" -- \
+  "$SERVER_PY" -u -m tase.server \
+  --model "$WORKSPACE/checkpoints/libero_object" \
+  --output "$WORKSPACE/runs/server-NEW" \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json"
+
+# Client terminal: same runtime_env.sh; wait for MODEL_LOADED / loopback ready.
+cd "$REPO"
+"$SIM_PY" -u scripts/record_process.py \
+  --receipt "$WORKSPACE/runs/dev-policy-NEW.exit.json" -- \
+  "$SIM_PY" -u -m tase.baseline --workspace "$WORKSPACE" \
+  --run-id dev-policy-NEW --task alphabet_soup --init-index 0 \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json"
+```
+
+CPU 复算私有 evidence（需要 numpy；不会调用 GPU）：
+
+```bash
+"$SIM_PY" scripts/summarize_baseline.py --private-runtime "$WORKSPACE" \
+  --output "$WORKSPACE/runs/audit-NEW.json"
+```
+
+本仓库当前没有 shadow/Gate/校准/正式测试入口。R1审核后才能决定下一段工作；保留现有12次attempt，不能重新置零预算。此命令文档不自动授权新增 GPU 运行。
