@@ -66,7 +66,13 @@ def main():
         bddl = Path(get_libero_path('bddl_files')) / task.problem_folder / task.bddl_file
         init_file = Path(get_libero_path('init_states')) / task.problem_folder / task.init_states_file
         # Only the two declared DEV indices are executed. No model selection by seed.
-        initial_states = suite.get_task_init_states(task_index)
+        # LIBERO's torch.load predates PyTorch 2.6's weights_only default. Keep
+        # restricted loading and allow only the numpy types used by these pinned
+        # initialization arrays, rather than enabling arbitrary pickle loading.
+        safe_numpy = [np.core.multiarray._reconstruct, np.ndarray, np.dtype,
+                      type(np.dtype('float64')), type(np.dtype('float32'))]
+        with torch.serialization.safe_globals(safe_numpy):
+            initial_states = torch.load(init_file, map_location='cpu', weights_only=True)
         selected_init = np.asarray(initial_states[a.init_index], dtype=np.float64)
         np.save(folder / 'benchmark_init.npy', selected_init, allow_pickle=False)
         result.update(init_hash=sha256(folder / 'benchmark_init.npy'),
