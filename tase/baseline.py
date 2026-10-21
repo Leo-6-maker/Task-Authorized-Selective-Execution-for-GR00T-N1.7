@@ -14,6 +14,7 @@ import traceback
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from .evidence import append_json, manifest, now_sgt, reserve_episode, sha256, write_json
+from .retention import cleanup_resources, traced_control_step
 
 TASKS = {name: f'pick_up_the_{name}_and_place_it_in_the_basket'
          for name in ['alphabet_soup', 'cream_cheese', 'ketchup']}
@@ -171,11 +172,8 @@ def main():
         original_step = raw.step
 
         def traced_step(action):
-            converted = np.array(action, copy=True)
-            value = original_step(action)
-            state_rows.append(np.array(raw.get_sim_state(), copy=True))
-            converted_rows.append(converted)
-            result['inner_steps'] += 1
+            value = traced_control_step(original_step, action, raw.get_sim_state,
+                                       folder, state_rows, converted_rows, result)
             frame = np.concatenate([value[0]['agentview_image'][::-1, ::-1],
                                     value[0]['robot0_eye_in_hand_image'][::-1, ::-1]], axis=1)
             video.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
@@ -220,33 +218,27 @@ def main():
                 expected[-1] = -np.sign(2*expected[-1]-1)
                 if not np.array_equal(actual, expected):
                     raise ValueError('native action/gripper transformation mismatch')
-            np.savez_compressed(folder / 'control_trace.npz',
-                                states=np.asarray(state_rows), converted_actions=np.asarray(converted_rows))
             if truncated:
                 done = True
         result.update(status='SUCCESS' if result['official_success'] else 'TIME_LIMIT', exit_code=0)
         return 0
-    except Exception as exc:
+    except BaseException as exc:
         result.update(status='RUNTIME_ERROR', error_type=type(exc).__name__,
                       error_message=str(exc), exit_code=1)
         (folder / 'traceback.txt').write_text(traceback.format_exc())
         print(traceback.format_exc(), file=sys.stderr)
         return 1
     finally:
-        if video is not None:
-            video.release()
-        if client is not None:
-            client.close()
-        if native is not None:
-            try:
-                native.close()
-            except Exception:
-                (folder / 'close_error.txt').write_text(traceback.format_exc())
+        cleanup_resources(folder, result, [
+            ('video', video.release if video is not None else None),
+            ('client', client.close if client is not None else None),
+            ('native', native.close if native is not None else None)])
         result.update(wall_seconds=time.perf_counter()-start, completed_at_sgt=now_sgt())
         write_json(folder / 'result.json', result)
         records = manifest(a.workspace, sorted(folder.glob('*')), a.run_id)
         write_json(folder / 'artifact_manifest.json', records)
         print(json.dumps(result, indent=2))
+        return result['exit_code']
 
 
 if __name__ == '__main__':

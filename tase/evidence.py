@@ -75,11 +75,28 @@ def manifest(root, paths, source_run, visibility='private'):
     return records
 
 
-def verify_manifest(root, records):
+def verify_manifest(root, records, required=None, source_run=None):
     root = Path(root).resolve()
+    if not isinstance(records, list) or not records:
+        raise ValueError('manifest must contain records')
+    seen = set()
     for record in records:
+        identifier = record['artifact_id']
+        if not isinstance(identifier, str) or identifier in seen or '\\' in identifier:
+            raise ValueError('invalid or duplicate artifact ID')
+        seen.add(identifier)
+        if Path(identifier).is_absolute() or '..' in Path(identifier).parts:
+            raise ValueError('manifest path escapes root')
+        if type(record['bytes']) is not int or record['bytes'] < 0:
+            raise ValueError('invalid artifact size')
+        if not re.fullmatch('[0-9a-f]{64}', record['sha256']):
+            raise ValueError('invalid artifact digest')
+        if source_run is not None and record.get('source_run') != source_run:
+            raise ValueError('cross-run manifest identity mismatch')
         path = (root / record['artifact_id']).resolve(strict=True)
-        if not path.is_relative_to(root):
+        if not path.is_relative_to(root) or not path.is_file():
             raise ValueError('manifest path escapes root')
         if path.stat().st_size != record['bytes'] or sha256(path) != record['sha256']:
             raise ValueError('artifact content mismatch: ' + record['artifact_id'])
+    if required is not None and seen != set(required):
+        raise ValueError('manifest coverage mismatch')
