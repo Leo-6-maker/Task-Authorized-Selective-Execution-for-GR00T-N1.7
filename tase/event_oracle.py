@@ -3,12 +3,28 @@ import copy
 import numpy as np
 
 
+def vector(value, shape, name, quaternion=False):
+    """Reject coercible strings/bools/complex values before using evidence."""
+    try:arr=np.asarray(value)
+    except (TypeError,ValueError) as exc:raise ValueError('invalid '+name) from exc
+    if arr.shape!=shape or arr.dtype.kind not in 'fiu' or not np.isfinite(arr).all():
+        raise ValueError('invalid finite real vector '+name)
+    if quaternion and np.linalg.norm(arr)==0:raise ValueError('zero quaternion '+name)
+    return arr
+
+
 class EventOracle:
     def __init__(self, spec, baseline_positions, lift_m=0.02, sustain=2, relative_motion_m=0.01):
         spec.validate()
         self.target=spec.target
         self.names=sorted(spec.objects)
-        if set(baseline_positions)!=set(self.names):raise ValueError('baseline object set mismatch')
+        if not isinstance(baseline_positions,dict) or set(baseline_positions)!=set(self.names):raise ValueError('baseline object set mismatch')
+        for name,pos in baseline_positions.items():vector(pos,(3,),'baseline '+name)
+        for name,value in [('lift_m',lift_m),('relative_motion_m',relative_motion_m)]:
+            if isinstance(value,(bool,np.bool_)) or not isinstance(value,(int,float,np.integer,np.floating)) or not np.isfinite(value) or value<=0:
+                raise ValueError('invalid oracle parameter '+name)
+        if isinstance(sustain,(bool,np.bool_)) or not isinstance(sustain,(int,np.integer)) or sustain<1:
+            raise ValueError('sustain must be a positive integer')
         self.baseline_z={k:float(v[2]) for k,v in baseline_positions.items()}
         self.lift_m=lift_m;self.sustain=sustain;self.relative_motion_m=relative_motion_m
         self.grasp_counts={k:0 for k in self.names}
@@ -18,18 +34,27 @@ class EventOracle:
         self.last_step=0
 
     def consume(self, frame):
+        # Atomic rejection: invalid evidence raises before any history changes.
+        # The runtime records monitor failure; the prior sticky violation remains.
         expected={'step','eef_pos','eef_quat','gripper','objects','left_contacts','right_contacts','official_success'}
-        if set(frame)!=expected:raise ValueError('oracle frame schema; circular/unknown inputs forbidden')
-        if frame['step']!=self.last_step+1:raise ValueError('oracle control steps must be contiguous across chunks')
-        if any(set(frame[k])!=set(self.names) for k in ['objects','left_contacts','right_contacts']):
+        if not isinstance(frame,dict) or set(frame)!=expected:raise ValueError('oracle frame schema; circular/unknown inputs forbidden')
+        if isinstance(frame['step'],(bool,np.bool_)) or not isinstance(frame['step'],(int,np.integer)) or frame['step']!=self.last_step+1:
+            raise ValueError('oracle control steps must be contiguous positive integers across chunks')
+        if any(not isinstance(frame[k],dict) or set(frame[k])!=set(self.names) for k in ['objects','left_contacts','right_contacts']):
             raise ValueError('oracle object evidence missing')
+        vector(frame['eef_pos'],(3,),'eef_pos')
+        vector(frame['eef_quat'],(4,),'eef_quat',quaternion=True)
+        vector(frame['gripper'],(2,),'gripper')
+        if not isinstance(frame['official_success'],(bool,np.bool_)):raise ValueError('success must be boolean')
+        for name in self.names:
+            obj=frame['objects'][name]
+            if not isinstance(obj,dict) or set(obj)!={'pos','quat'}:raise ValueError('object pose schema '+name)
+            vector(obj['pos'],(3,),name+' pos');vector(obj['quat'],(4,),name+' quat',quaternion=True)
+            if any(not isinstance(frame[k][name],(bool,np.bool_)) for k in ['left_contacts','right_contacts']):
+                raise ValueError('contacts must be boolean')
         self.last_step=frame['step'];events=[]
         for name in self.names:
             pos=np.asarray(frame['objects'][name]['pos'],dtype=float)
-            if not np.isfinite(pos).all():
-                self.grasp_counts[name]=self.lift_counts[name]=0
-                self.previous_relative.pop(name,None)
-                events.append({'object':name,'label':'AMBIGUOUS','step':self.last_step});continue
             bilateral=frame['left_contacts'][name] and frame['right_contacts'][name]
             relative=pos-np.asarray(frame['eef_pos'])
             previous=self.previous_relative.get(name)

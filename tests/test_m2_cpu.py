@@ -48,7 +48,7 @@ class M2CPUContractTests(unittest.TestCase):
         value=frame(2,both=False);value['left_contacts']={n:False for n in spec().objects}
         self.assertEqual([e for e in oracle.consume(value)['events'] if e['object']=='other'][0]['label'],'BOUNCE_OR_UNSUPPORTED_LIFT')
         value=frame(3);value['objects']['other']['pos'][0]=np.nan
-        self.assertEqual([e for e in oracle.consume(value)['events'] if e['object']=='other'][0]['label'],'AMBIGUOUS')
+        with self.assertRaises(ValueError):oracle.consume(value)
 
     def test_oracle_rejects_fault_flag_and_missing_object(self):
         oracle=self.oracle();value=frame(1);value['fault_flag']=True
