@@ -20,9 +20,13 @@ LIBERO observation + task instruction
 
 ## 当前状态
 
-**R002：有条件允许 M2，PR #3 保持 CHANGES_REQUIRED、未合并。证据校验修复与既有 raw 重审已另存，待独立复核。**
+**M2 READY_FOR_REVIEW：24快照、74次shadow比较及原始重算已交付。PR #3/#5保持未合并，M3尚未授权。**
 
-真实 Object 模型已加载，完成 181 次 forward、6 个预定 DEV episode：5 次官方成功，ketchup 初态 1 在 720 步上限失败。Alphabet soup 和 cream cheese 均在初态 0、1 成功。累计 12/24 次 DEV 尝试，包含历史环境检查和两次基础设施错误；全部保留。
+[M2实际报告](reports/M2/runtime_report.md) · [逐case数值](reports/M2/snapshot_validation.csv) · [独立事件定义/记录](reports/M2/oracle_definition.md) · [无副作用验证](reports/M2/noninterference_report.md) · [预算](reports/M2/budget_ledger.json) · [manifest](reports/M2/artifact_manifest.json)
+
+M2使用6次预定采集（3 C0、3明确标记的C2指令错配），共249次真实推理、1,985控制步。74次短预测中主状态与policy RNG保持一致；1段受控错误物体抬升用于oracle可观测性，不能解释成自然风险率或治理改善。累计DEV 18/24，其余6次保留。私有原件独立审核仍待实际访问。
+
+M1历史交付：真实 Object 模型完成181次forward、6个预定DEV episode，5次官方成功，ketchup初态1在720步上限失败。Alphabet soup和cream cheese均在初态0、1成功。当时累计12/24次DEV，包含环境检查和两次基础设施错误；M2之后的当前累计为18/24。
 
 通过进程级外部 HF_TOKEN_PATH 解决凭据发现问题，并固定 Cosmos revision。实测 PyTorch peak reserved 约 6.04 GiB（不是整进程及渲染总显存），episode 中位 9.46 秒。[R002](docs/reviews/R002-R1-native-baseline-conditional.md) 有条件允许 M2；先完成[审计加固](reports/M1/audit_hardening_report.md)，再按 Issue #4 有界验证 snapshot/shadow/oracle。M3 尚未授权。
 
@@ -122,4 +126,4 @@ CPU 复算私有 evidence（需要 numpy；不会调用 GPU）：
   --output "$WORKSPACE/runs/audit-NEW.json"
 ```
 
-本仓库当前没有 shadow/Gate/校准/正式测试入口。R1审核后才能决定下一段工作；保留现有12次attempt，不能重新置零预算。此命令文档不自动授权新增 GPU 运行。
+M2入口为同一 `tase.baseline` 加 `--m2`，只接受 `configs/m2_dev_cells.json` 的6个固定run ID；server需加 `--audit-rng`。本次6个ID已消耗，不能重用或再新增采集。CPU原件重算入口 `scripts/audit_m2.py --help`，只读取可信的本任务私有归档。Gate/校准/正式TEST仍没有获授权运行入口；此文档不授权继续花费保留预算。

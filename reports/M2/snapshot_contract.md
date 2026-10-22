@@ -1,6 +1,6 @@
-# M2 native snapshot contract — implementation before runtime
+# M2 native snapshot contract
 
-Protocol TASE-001 v1.0; authority R002 / Issue #4. Parent PR #3 head `3e214c0b761d0639bf73948356a92a03bf2ddedc`. This initial contract is IMPLEMENTED/CPU_TESTED, not a physics PASS. Runtime evidence will be appended separately.
+Protocol TASE-001 v1.0; authority R002 / Issue #4. Parent PR #3 head `3e214c0b761d0639bf73948356a92a03bf2ddedc`. The contract and tolerances were committed before runtime. Executor validation now covers 24 snapshots / 74 cases; independent M2 review is pending. [Actual report](runtime_report.md).
 
 | State group | Actual capture/restore method |
 |---|---|
