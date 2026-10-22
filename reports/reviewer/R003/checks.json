@@ -1,0 +1,74 @@
+{
+  "review_date": "2026-10-22",
+  "reviewer_role": "GPT",
+  "reviewed_pr5_head": "d64cb1002980738f170e3206d004b4a882166543",
+  "reviewed_pr3_head": "3e214c0b761d0639bf73948356a92a03bf2ddedc",
+  "runtime": {"python": "3.13.5", "numpy": "2.3.5", "gpu_or_physics_run": false},
+  "scope": "Selective source copies verified against connector Git blob SHA-1; focused CPU synthetic probes and public derived CSV recomputation. This is not a rerun of the complete 21-method unittest suite or private raw audit.",
+  "source_blobs_verified": {
+    "tase/__init__.py": "96b2edef1ef0066945a8bd2ad985c624512e5c1f",
+    "tase/task_spec.py": "5b034c4ce2319cf4b0a0fa632f7bba42d8efdf00",
+    "tase/event_oracle.py": "0c429689a71cbd0ecc3404a774eb4a6bd362b03e",
+    "tase/snapshot.py": "fd85e3e9ee11dc6d193ded5f88b9743e9a878268",
+    "tase/evidence.py": "8cbe5f3c6dceda0216542cf22ecdd29805dffe74",
+    "tase/audit_contract.py": "5a1fa83cc77d59b0d5a13957e5d1f417a8086971",
+    "tase/retention.py": "9a031f63bae9e62ffe2f5c76d2197e9ac9d3de49",
+    "reports/M2/snapshot_validation.csv": "11a89da9930c27a822f5b11272909f5935412fef"
+  },
+  "execution": {
+    "oracle_cases": 12,
+    "parent_repair_cases": 10,
+    "normal_mode_exit_codes": [0, 0],
+    "optimized_mode_exit_codes": [0, 0],
+    "normal_optimized_outputs_equal": true,
+    "interpretation": "A successful probe process means observations were recorded, not that every tested contract is correct. Five oracle input-contract gaps were observed."
+  },
+  "parent_repair_observations": [
+    {"case":"valid_observation","accepted":true},
+    {"case":"missing_wrist","accepted":false},
+    {"case":"empty_observation","accepted":false},
+    {"case":"wrong_dtype","accepted":false},
+    {"case":"valid_manifest","accepted":true},
+    {"case":"empty_manifest","accepted":false},
+    {"case":"duplicate_manifest","accepted":false},
+    {"case":"missing_manifest_coverage","accepted":false},
+    {"case":"partial_step_retention","retained_successful_steps":1,"completed_step_count":1,"failure_record_present":true},
+    {"case":"cleanup_failure_retention","status":"CLEANUP_ERROR","exit_code":1,"other_cleanup_executed":true,"error_record_present":true}
+  ],
+  "oracle_observations": [
+    {"case":"valid_wrong_lift_control","labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_LIFT"],"first_violation_step":3},
+    {"case":"valid_authorized_lift_control","labels":["CONTACT_ONLY","AUTHORIZED_GRASP_EVIDENCE","AUTHORIZED_LIFT"],"first_violation_step":null},
+    {"case":"nonfinite_object_position_control","labels":["AMBIGUOUS","AMBIGUOUS","AMBIGUOUS"],"first_violation_step":null},
+    {"case":"nonfinite_eef_position","raises":false,"labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_GRASP_EVIDENCE"],"first_violation_step":null},
+    {"case":"nonfinite_eef_quaternion","raises":false,"labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_LIFT"],"first_violation_step":3},
+    {"case":"nonfinite_finger_position","raises":false,"labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_LIFT"],"first_violation_step":3},
+    {"case":"nonfinite_object_quaternion","raises":false,"labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_LIFT"],"first_violation_step":3},
+    {"case":"string_contacts_not_boolean","raises":false,"labels":["CONTACT_ONLY","WRONG_OBJECT_GRASP_EVIDENCE","WRONG_OBJECT_LIFT"],"first_violation_step":3},
+    {"case":"prohibited_gate_field","raises":true,"error_type":"ValueError"},
+    {"case":"missing_object","raises":true,"error_type":"ValueError"},
+    {"case":"cross_chunk_sustain","first_violation_step":9},
+    {"case":"snapshot_tree_copy","roundtrip_digest":true,"independent_arrays":true}
+  ],
+  "public_recomputation": {
+    "csv_copy_matches_git_blob":true,
+    "comparisons":74,
+    "distinct_snapshots":24,
+    "prediction_controls":589,
+    "early_success_comparisons":3,
+    "source_calls":249,
+    "source_controls":1985,
+    "source_wall_seconds":152.7576160710305,
+    "source_017_wrong_lift_segment":[94,170],
+    "source_017_shadow_windows":[[49,56],[73,80],[713,720]],
+    "positive_wrong_lift_windows_checked":0,
+    "interpretation":"The reported 77 positive control samples are one event segment, not 77 independent failures."
+  },
+  "private_originals": {
+    "status":"NOT_ACCESSIBLE_IN_CURRENT_SESSION",
+    "reason":"Only Windows-local path links were supplied. Neither archive is mounted or discoverable in the available conversation/Library file search.",
+    "m1_expected_archive_sha256":"d0d317ee83226ce3dd34a654468636b43deb8cae5a959b4fe628fda5ba3eba98",
+    "m2_expected_archive_sha256":"859b177e097fab1c88449d30afcf3c2d2175256ecdb795793cc9a517de9737a2",
+    "archive_hashes_checked_by_reviewer":false,
+    "raw_media_or_pickle_read":false
+  }
+}
