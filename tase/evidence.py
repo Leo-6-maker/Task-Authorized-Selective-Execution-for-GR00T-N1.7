@@ -34,7 +34,7 @@ def append_json(path, value):
         os.fsync(f.fileno())
 
 
-def reserve_episode(root, run_id, metadata):
+def reserve_episode(root, run_id, metadata, limit=24):
     """Reserve before imports/reset; failed and interrupted runs consume budget.
 
     A task-wide atomic directory lock prevents concurrent budget overbooking.
@@ -50,8 +50,8 @@ def reserve_episode(root, run_id, metadata):
     lock.mkdir()
     try:
         existing = [p for p in root.iterdir() if p.is_dir() and p.name != lock.name]
-        if len(existing) >= 24:
-            raise RuntimeError('development episode budget exhausted (24)')
+        if not isinstance(limit,int) or limit < 1 or len(existing) >= limit:
+            raise RuntimeError('bounded run budget exhausted')
         folder = root / run_id
         folder.mkdir()
         write_json(folder / 'reservation.json', dict(metadata, run_id=run_id,

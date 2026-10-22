@@ -30,7 +30,14 @@ def main():
     p.add_argument('--allocation-record', type=Path, required=True)
     p.add_argument('--probe-only', action='store_true')
     p.add_argument('--port', type=int, default=5558)
+    p.add_argument('--m2', action='store_true', help='R002 bounded DEV capture; no Gate intervention')
     a = p.parse_args()
+    cell = None
+    if a.m2:
+        cells = json.loads(Path('configs/m2_dev_cells.json').read_text())['cells']
+        cell = next((c for c in cells if c['run_id'] == a.run_id), None)
+        if cell is None or cell['task'] != a.task or cell['init_index'] != a.init_index or a.probe_only:
+            raise ValueError('run does not match the six predeclared M2 acquisitions')
     config = json.loads(a.config.read_text())
     if config['split'] != 'DEV' or config['condition'] != 'C0':
         raise ValueError('M1 permits only native C0 DEV in this runner')
@@ -43,7 +50,10 @@ def main():
     folder = reserve_episode(a.workspace / 'runs/episodes', a.run_id, {
         'split': 'DEV', 'task': a.task, 'init_index': a.init_index,
         'repo_sha': repo_sha, 'config_hash': sha256(a.config),
-        'probe_only': a.probe_only, 'started_at_sgt': now_sgt()})
+        'probe_only': a.probe_only, 'started_at_sgt': now_sgt(),
+        'work_package': 'M2' if cell else 'M1', 'condition': cell['condition'] if cell else 'C0',
+        'm2_validation_hash': sha256('configs/m2_validation.json') if cell else None},
+        limit=18 if cell else 24)
     start = time.perf_counter()
     result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split='DEV',
                   repo_sha=repo_sha, config_hash=sha256(a.config),
@@ -51,7 +61,10 @@ def main():
                   policy_requests_attempted=0,
                   inner_steps=0, settling_steps=0, exit_code=1,
                   started_at_sgt=now_sgt())
-    native = wrapped = client = video = None
+    if cell:
+        result.update(work_package='M2', condition=cell['condition'],
+                      m2_validation_hash=sha256('configs/m2_validation.json'))
+    native = wrapped = client = video = m2 = None
     try:
         import numpy as np
         import cv2
@@ -164,6 +177,11 @@ def main():
             'scope': 'native settled reset and official wrapper history; no shadow'})
         if not state_unchanged or not all(equal_streams.values()):
             raise ValueError('fixed-reset native observation/state parity mismatch')
+        if cell:
+            from .m2_context import M2Context
+            m2 = M2Context(raw, wrapped, client, folder, a.workspace, cell)
+            result.update(work_package='M2', condition=cell['condition'],
+                          m2_validation_hash=sha256('configs/m2_validation.json'))
         video = cv2.VideoWriter(str(folder / 'rollout.mp4'), cv2.VideoWriter_fourcc(*'mp4v'),
                                 20.0, (512, 256))
         if not video.isOpened():
@@ -174,6 +192,8 @@ def main():
         def traced_step(action):
             value = traced_control_step(original_step, action, raw.get_sim_state,
                                        folder, state_rows, converted_rows, result)
+            if m2 is not None:
+                m2.frame(action)
             frame = np.concatenate([value[0]['agentview_image'][::-1, ::-1],
                                     value[0]['robot0_eye_in_hand_image'][::-1, ::-1]], axis=1)
             video.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
@@ -186,6 +206,8 @@ def main():
             # Raw MuJoCo state is float64; its native Box contract is float32.
             request = concatenate(wrapped.observation_space, [observation],
                                   create_empty_array(wrapped.observation_space, n=1))
+            if m2 is not None:
+                request['annotation.human.action.task_description'] = [m2.policy_language]
             n = result['policy_calls']
             np.savez_compressed(folder / f'observation-{n:03d}.npz', **{
                 k: v for k, v in request.items() if not k.startswith('annotation')})
@@ -205,7 +227,10 @@ def main():
             # Copies protect raw policy chunks from upstream in-place gripper helpers.
             prefix = {key: np.array(actions[key][0], copy=True) for key in keys}
             before = len(converted_rows)
+            predictions = m2.predict(n, prefix) if m2 is not None else []
             observation, _, done, truncated, info = wrapped.step(prefix)
+            if m2 is not None:
+                m2.compare(predictions, before, done, truncated)
             count = len(converted_rows)-before
             success = bool(np.any(info['success']))
             result['official_success'] = bool(result['official_success'] or success)
@@ -230,6 +255,7 @@ def main():
         return 1
     finally:
         cleanup_resources(folder, result, [
+            ('m2_shadow', m2.close if m2 is not None else None),
             ('video', video.release if video is not None else None),
             ('client', client.close if client is not None else None),
             ('native', native.close if native is not None else None)])
