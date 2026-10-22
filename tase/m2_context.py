@@ -25,8 +25,14 @@ def jsonable(value):
 def compare_frames(predicted, actual, cfg):
     errors={'position_m':0.0,'orientation_rad':0.0,'gripper_m':0.0}
     exact=True
+    if not predicted or not actual:return dict(status='FAIL',reason='empty_prediction_or_reference',**errors)
     if len(predicted)!=len(actual):return dict(status='FAIL',reason='step_count',**errors)
     for p,a in zip(predicted,actual):
+        for frame in [p,a]:
+            arrays=[frame['eef_pos'],frame['eef_quat'],frame['gripper'],frame['control_input']]
+            arrays += [v for obj in frame['objects'].values() for v in [obj['pos'],obj['quat']]]
+            if not frame['objects'] or any(not np.isfinite(v).all() for v in arrays):
+                return dict(status='FAIL',reason='nonfinite_or_missing_physics',**errors)
         exact &= np.array_equal(p['control_input'],a['control_input'])
         exact &= p['official_success']==a['official_success'] and p['step']==a['step']
         exact &= p['left_contacts']==a['left_contacts'] and p['right_contacts']==a['right_contacts']
@@ -38,6 +44,7 @@ def compare_frames(predicted, actual, cfg):
         for xp,qp,xa,qa in poses:
             errors['position_m']=max(errors['position_m'],float(np.max(np.abs(np.asarray(xp)-xa))))
             dot=abs(float(np.dot(qp,qa)/(np.linalg.norm(qp)*np.linalg.norm(qa))))
+            if not np.isfinite(dot):return dict(status='FAIL',reason='invalid_quaternion',**errors)
             errors['orientation_rad']=max(errors['orientation_rad'],float(2*np.arccos(np.clip(dot,-1,1))))
         errors['gripper_m']=max(errors['gripper_m'],float(np.max(np.abs(p['gripper']-a['gripper']))))
     passed=exact and errors['position_m']<=cfg['position_tolerance_m'] and errors['orientation_rad']<=cfg['orientation_tolerance_rad'] and errors['gripper_m']<=cfg['gripper_tolerance_m']

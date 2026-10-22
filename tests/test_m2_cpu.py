@@ -10,7 +10,8 @@ from tase.m2_context import compare_frames
 
 
 def spec():
-    return TaskSpec('target','basket',{n:{'geoms':[i+1]} for i,n in enumerate(['target','other','basket'])},[20],[21]).validate()
+    return TaskSpec('target','basket',{n:{'geoms':[i+1],'geom_names':[n+'_geom'],
+        'body_id':i+1,'body_name':n+'_body'} for i,n in enumerate(['target','other','basket'])},[20],[21]).validate()
 
 
 def frame(step,name='other',height=0.03,both=True):
@@ -58,6 +59,18 @@ class M2CPUContractTests(unittest.TestCase):
     def test_missing_target_and_overlapping_geometry_fail_closed(self):
         value=spec();del value.objects['target']
         with self.assertRaises(ValueError):value.validate()
+
+    def test_body_identity_and_lift_threshold_boundary(self):
+        value=spec();value.objects['other']['body_id']=value.objects['target']['body_id']
+        with self.assertRaises(ValueError):value.validate()
+        oracle=self.oracle()
+        self.assertIsNone(oracle.first_violation_step)
+        oracle.consume(frame(1,height=0.019999))
+        oracle.consume(frame(2,height=0.02))
+        result=oracle.consume(frame(3,height=0.02))
+        self.assertEqual(result['first_violation_step'],3)
+        oracle.consume(frame(4,height=0.019999))
+        self.assertEqual(oracle.lift_counts['other'],0)
         value=spec();value.objects['other']['geoms']=value.left_geoms
         with self.assertRaises(ValueError):value.validate()
 
@@ -83,3 +96,6 @@ class M2CPUContractTests(unittest.TestCase):
         b['eef_pos'][0]+=0.001
         self.assertEqual(compare_frames([a],[b],cfg)['status'],'FAIL')
         self.assertEqual(compare_frames([a],[],cfg)['status'],'FAIL')
+        self.assertEqual(compare_frames([],[],cfg)['status'],'FAIL')
+        b=copy.deepcopy(a);b['eef_pos'][0]=np.nan
+        self.assertEqual(compare_frames([a],[b],cfg)['status'],'FAIL')

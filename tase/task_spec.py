@@ -16,10 +16,18 @@ class TaskSpec:
         if not self.left_geoms or not self.right_geoms or set(self.left_geoms)&set(self.right_geoms):
             raise ValueError('missing/overlapping finger contact geometry')
         seen=set()
+        bodies=set();body_names=set()
         for name, item in self.objects.items():
-            if not item['geoms'] or seen&set(item['geoms']):
+            if (type(item.get('body_id')) is not int or item['body_id']<=0 or
+                    not item.get('body_name') or item['body_id'] in bodies or item['body_name'] in body_names):
+                raise ValueError('missing/duplicate object body: '+name)
+            if (not item['geoms'] or len(item['geoms'])!=len(set(item['geoms'])) or
+                    seen&set(item['geoms']) or any(type(g) is not int or g<0 for g in item['geoms']) or
+                    len(item.get('geom_names',[]))!=len(item['geoms']) or
+                    len(set(item['geom_names']))!=len(item['geoms'])):
                 raise ValueError('missing/overlapping object geometry: '+name)
             seen.update(item['geoms'])
+            bodies.add(item['body_id']);body_names.add(item['body_name'])
         if seen & (set(self.left_geoms)|set(self.right_geoms)):
             raise ValueError('object geometry overlaps robot')
         return self
