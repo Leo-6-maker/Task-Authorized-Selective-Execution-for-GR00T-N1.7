@@ -2,6 +2,7 @@
 import argparse
 import json
 import time
+import hashlib
 from pathlib import Path
 from .evidence import append_json, now_sgt, write_json
 
@@ -13,6 +14,7 @@ def main():
     p.add_argument('--port', type=int, default=5558)
     p.add_argument('--policy-seed', type=int, default=640100)
     p.add_argument('--allocation-record', type=Path, required=True)
+    p.add_argument('--audit-rng', action='store_true', help='M2 read-only policy RNG fingerprint endpoint')
     a = p.parse_args()
     permission = json.loads(a.allocation_record.read_text())
     if not permission.get('shared_gpu_inference_authorized'):
@@ -73,6 +75,15 @@ def main():
 
     policy.get_action = measured
     with PolicyServer(policy, host='127.0.0.1', port=a.port) as server:
+        if a.audit_rng:
+            def rng_digest():
+                result={'policy_calls':calls,
+                    'cpu_rng_sha256':hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest(),
+                    'cuda_rng_sha256':[hashlib.sha256(s.numpy().tobytes()).hexdigest()
+                                       for s in torch.cuda.get_rng_state_all()]}
+                append_json(a.output/'rng_checks.jsonl', result)
+                return result
+            server.register_endpoint('rng_digest', rng_digest, requires_input=False)
         server.run()
 
 

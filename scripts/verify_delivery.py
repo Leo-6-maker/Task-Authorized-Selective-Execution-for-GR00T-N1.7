@@ -9,10 +9,12 @@ from tase.evidence import verify_manifest
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--manifest',type=Path,default=Path('reports/M1/artifact_manifest_hardening.json'))
+    p.add_argument('--manifest',type=Path,default=Path('reports/M2/artifact_manifest.json'))
     p.add_argument('--private-runtime',type=Path)
     p.add_argument('--private-operator',type=Path)
     p.add_argument('--private-audit',type=Path)
+    p.add_argument('--private-m1',type=Path)
+    p.add_argument('--private-bundle',type=Path)
     p.add_argument('--require-private',action='store_true',help='fail if any declared raw artifact is unavailable')
     a=p.parse_args()
     root=Path(__file__).resolve().parents[1]
@@ -32,7 +34,8 @@ def main():
         if entry['visibility']=='public':
             location=root
         else:
-            location={'runtime':a.private_runtime,'operator':a.private_operator,'audit':a.private_audit}.get(entry['storage'])
+            location={'runtime':a.private_runtime,'operator':a.private_operator,'audit':a.private_audit,
+                      'm1-reference':a.private_m1,'bundle':a.private_bundle}.get(entry['storage'])
         if location is None:
             counts['private_not_verified']+=1
             continue
