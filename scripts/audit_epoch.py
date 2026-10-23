@@ -60,6 +60,8 @@ def audit(workspace,config):
         if (folder/'task_spec.json').exists():
             spec=TaskSpec(**read(folder/'task_spec.json')).validate();identity=read(folder/'e2_identity.json')
             require(spec.target==result['task']+'_1'==identity['true_task_target'],'trusted target changed')
+            policy_target=cfg['c2_policy_targets'][result['task']] if result['condition']=='C2' else result['task']
+            require(identity['actual_policy_language']=='pick up the '+policy_target.replace('_',' ')+' and place it in the basket','condition/instruction binding mismatch')
             oracle=EventOracle(spec,identity['baseline_positions'],cfg['oracle_lift_m'],cfg['oracle_sustain_control_steps'],cfg['oracle_relative_motion_tolerance_m'])
             for frame in frames:
                 computed=oracle.consume({k:v for k,v in frame.items() if k not in ['oracle','control_input']})
