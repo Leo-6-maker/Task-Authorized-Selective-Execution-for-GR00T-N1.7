@@ -3,6 +3,7 @@ import argparse
 import json
 import time
 import hashlib
+import os
 from pathlib import Path
 from .evidence import append_json, now_sgt, write_json
 
@@ -21,6 +22,8 @@ def main():
     if not permission.get('shared_gpu_inference_authorized'):
         raise ValueError('GPU inference allocation is not authorized')
     a.output.mkdir(parents=True, exist_ok=False)
+    if a.epoch and os.environ.get('GROOT_SKIP_HF_MODEL_WEIGHTS','').strip().lower() not in ['', '0','false','no','off']:
+        raise ValueError('E2 requires real weights; upstream test-only weight skipping is forbidden')
     import torch
     from gr00t.policy.gr00t_policy import Gr00tPolicy, Gr00tSimPolicyWrapper
     from gr00t.policy.server_client import PolicyServer

@@ -15,12 +15,13 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.evidence import write_json,sha256
 
 
-def run(root,token_file,gpu_index,port,session):
+def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=None):
     root=root.resolve(strict=True)
     if not session or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in session):
         raise ValueError('invalid server session ID')
     repo=root/'course-repo';up=root/'upstream/Isaac-GR00T'
-    server_python=up/'.venv/bin/python';sim_python=up/'gr00t/eval/sim/LIBERO/libero_uv/.venv/bin/python'
+    server_python=server_python or up/'.venv/bin/python'
+    sim_python=sim_python or up/'gr00t/eval/sim/LIBERO/libero_uv/.venv/bin/python'
     if subprocess.check_output(['git','status','--porcelain'],cwd=repo,text=True).strip():
         raise ValueError('commit code before runtime')
     if subprocess.check_output(['git','rev-parse','HEAD'],cwd=up,text=True).strip()!='dac54b313160c201c450f97df0fd74ebd379c892':
@@ -29,6 +30,10 @@ def run(root,token_file,gpu_index,port,session):
         raise ValueError('wrong LIBERO source')
     for python in [server_python,sim_python]:
         if not python.is_file():raise ValueError('isolated runtime missing')
+        if not python.absolute().is_relative_to(root):
+            ownership=python.parent.parent/'e2-derived-environment.json'
+            if not ownership.is_file() or json.loads(ownership.read_text())['workspace']!=str(root):
+                raise ValueError('external runtime must be an independent task-owned E2 copy')
     if not (root/'runtime/libero-config/config.yaml').is_file():
         raise ValueError('isolated LIBERO configuration not prepared')
     cells=json.loads((repo/'configs/e2_dev_cells.json').read_text())['planned_cells'][:6]
@@ -43,7 +48,7 @@ def run(root,token_file,gpu_index,port,session):
     selected=next(row.split(',') for row in inventory.splitlines() if int(row.split(',')[0])==gpu_index)
     if int(selected[2])<16384:raise RuntimeError('insufficient currently free memory; preserve other tasks')
     env=os.environ.copy();env.update(HOME=str(root/'runtime/home'),HF_HOME=str(root/'cache/huggingface'),
-        LIBERO_CONFIG_PATH=str(root/'runtime/libero-config'),PYTHONPATH=str(repo)+os.pathsep+str(up),
+        LIBERO_CONFIG_PATH=str(root/'runtime/libero-config'),PYTHONPATH=os.pathsep.join(map(str,[repo,up,up/'external_dependencies/LIBERO'])),
         PYTHONNOUSERSITE='1',CUDA_VISIBLE_DEVICES=selected[1].strip(),MUJOCO_GL='egl',
         PYOPENGL_PLATFORM='egl',MUJOCO_EGL_DEVICE_ID=str(gpu_index),WANDB_MODE='disabled',WANDB_DISABLED='true',
         HF_HUB_DISABLE_TELEMETRY='1',DO_NOT_TRACK='1',NO_ALBUMENTATIONS_UPDATE='1',TOKENIZERS_PARALLELISM='false',
@@ -129,4 +134,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True)
     p.add_argument('--token-file',type=Path);p.add_argument('--gpu-index',type=int,default=0);p.add_argument('--port',type=int,default=5559)
     p.add_argument('--session-id',required=True)
-    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id)
+    p.add_argument('--server-python',type=Path);p.add_argument('--sim-python',type=Path)
+    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id,a.server_python,a.sim_python)

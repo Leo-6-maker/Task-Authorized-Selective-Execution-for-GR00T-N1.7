@@ -15,13 +15,13 @@ def environment(python):
     return json.loads(proc.stdout) if proc.returncode==0 else {'status':'ERROR','exit_code':proc.returncode}
 
 
-def capture(root):
+def capture(root,server=None,sim=None):
     upstream=root/'upstream/Isaac-GR00T';repo=root/'course-repo'
     git=lambda path,*args:subprocess.check_output(['git','-C',str(path),*args],text=True).strip()
     sources=['pyproject.toml','uv.lock','gr00t/policy/gr00t_policy.py','gr00t/policy/server_client.py',
              'gr00t/eval/_horizon_contract.py','gr00t/eval/sim/LIBERO/libero_env.py',
              'gr00t/eval/sim/wrapper/multistep_wrapper.py']
-    server=upstream/'.venv/bin/python';sim=upstream/'gr00t/eval/sim/LIBERO/libero_uv/.venv/bin/python'
+    server=server or upstream/'.venv/bin/python';sim=sim or upstream/'gr00t/eval/sim/LIBERO/libero_uv/.venv/bin/python'
     record={'epoch':'E2','protocol_id':'TASE-002-v1.0','captured_at_sgt':now_sgt(),
         'scope':'IDENTITY_ONLY_NOT_RUNTIME_ACCEPTANCE','repo_sha':git(repo,'rev-parse','HEAD'),
         'upstream_sha':git(upstream,'rev-parse','HEAD'),
@@ -48,5 +48,6 @@ def capture(root):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
-    a=p.parse_args();record=capture(a.workspace);write_json(a.output,record)
+    p.add_argument('--server-python',type=Path);p.add_argument('--sim-python',type=Path)
+    a=p.parse_args();record=capture(a.workspace,a.server_python,a.sim_python);write_json(a.output,record)
     print(json.dumps({'scope':record['scope'],'object_files_verified':record['object_files'] is not None,'cosmos_record_present':record['cosmos_files'] is not None}))
