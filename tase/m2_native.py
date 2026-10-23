@@ -22,7 +22,7 @@ def sample(raw, spec, step):
         'official_success':bool(raw.check_success())}
 
 
-def make_clone(task_name, init_index, contract_dict):
+def make_clone(task_name, init_index, contract_dict, environment_seed=None):
     import torch
     import gymnasium as gym
     from pathlib import Path
@@ -30,12 +30,16 @@ def make_clone(task_name, init_index, contract_dict):
     from gr00t.eval.sim.LIBERO.libero_env import LiberoEnv
     from gr00t.eval._horizon_contract import PolicyHorizonSpec
     from gr00t.eval.sim.wrapper.multistep_wrapper import MultiStepWrapper
-    np.random.seed(640101)
+    seed=640101 if environment_seed is None else environment_seed
+    np.random.seed(seed)
+    if environment_seed is not None:
+        import random
+        random.seed(seed);torch.manual_seed(seed)
     suite=benchmark.get_benchmark_dict()['libero_object']()
     full='pick_up_the_'+task_name+'_and_place_it_in_the_basket'
     task=suite.get_task(suite.get_task_names().index(full))
     native=LiberoEnv(str(Path(get_libero_path('bddl_files'))/task.problem_folder/task.bddl_file),task.language)
-    native.reset(seed=640101);raw=native._env
+    native.reset(seed=seed);raw=native._env
     initial=Path(get_libero_path('init_states'))/task.problem_folder/task.init_states_file
     safe=[np.core.multiarray._reconstruct,np.ndarray,np.dtype,type(np.dtype('float64')),type(np.dtype('float32'))]
     with torch.serialization.safe_globals(safe):states=torch.load(initial,map_location='cpu',weights_only=True)

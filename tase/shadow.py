@@ -9,10 +9,10 @@ from .snapshot import capture, restore, digest
 from .m2_native import make_clone, sample
 
 
-def worker(connection,task,init,contract):
+def worker(connection,task,init,contract,environment_seed=None):
     native=None
     try:
-        native,raw,wrapped,spec,oracle=make_clone(task,init,contract)
+        native,raw,wrapped,spec,oracle=make_clone(task,init,contract,environment_seed)
         frames=[];progress={'policy_control_steps':0}
         original=raw.step
         def traced(action):
@@ -56,10 +56,10 @@ def worker(connection,task,init,contract):
 
 
 class Shadow:
-    def __init__(self,task,init,contract):
+    def __init__(self,task,init,contract,environment_seed=None):
         context=mp.get_context('spawn')
         self.connection,child=context.Pipe()
-        self.process=context.Process(target=worker,args=(child,task,init,contract),daemon=True)
+        self.process=context.Process(target=worker,args=(child,task,init,contract,environment_seed),daemon=True)
         self.process.start();child.close()
         self.setup=self.receive(60)
         if self.setup['status']!='READY':

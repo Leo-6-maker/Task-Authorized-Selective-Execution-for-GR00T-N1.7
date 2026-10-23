@@ -35,6 +35,7 @@ class E2Context:
         write_json(folder/'task_spec.json',asdict(self.spec))
         write_json(folder/'e2_identity.json',{'cell':cell,'actual_policy_language':self.policy_language,
             'true_task_target':self.spec.target,'epoch':'E2','protocol_id':'TASE-002-v1.0',
+            'baseline_positions':{n:o['pos'].tolist() for n,o in first['objects'].items()},
             'oracle_parameters':{k:cfg[k] for k in ['oracle_lift_m','oracle_sustain_control_steps','oracle_relative_motion_tolerance_m']}})
 
     def frame(self, action):
@@ -62,11 +63,12 @@ class E2Context:
         rng_before=self.client.call_endpoint('rng_digest',requires_input=False)
         try:
             if self.shadow is None:
-                self.shadow=Shadow(self.cell['task'],self.cell['init_index'],vars(self.wrapped.contract))
+                self.shadow=Shadow(self.cell['task'],self.cell['init_index'],vars(self.wrapped.contract),self.cell['environment_seed'])
                 write_json(self.folder/'shadow_setup.json',self.shadow.setup)
             tick=time.perf_counter(); prediction=self.shadow.predict(snapshot,prefix)
             prediction_seconds=time.perf_counter()-tick
             with (self.folder/f'prediction-{index:03d}.pkl').open('xb') as f:pickle.dump(prediction,f,protocol=5)
+            write_json(self.folder/f'prediction-{index:03d}.json',jsonable(prediction))
             if prediction['status']!='PASS' or not 1<=prediction['steps']<=8:
                 raise ValueError('shadow error or invalid prefix length')
             if prediction['source_snapshot_hash']!=snapshot_hash or prediction['restored_snapshot_hash']!=snapshot_hash:

@@ -236,7 +236,7 @@ def main():
                 raise ValueError('unexpected action streams')
             for key in keys:
                 arr = np.asarray(actions[key])
-                if arr.shape != (1, contract.action_horizon, 1) or not np.isfinite(arr).all():
+                if arr.shape != (1, contract.action_horizon, 1) or arr.dtype != np.float32 or not np.isfinite(arr).all():
                     raise ValueError('action shape/horizon/finite contract mismatch')
             np.savez_compressed(folder / f'action-{n:03d}.npz', **actions)
             # Copies protect raw policy chunks from upstream in-place gripper helpers.
