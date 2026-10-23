@@ -61,7 +61,7 @@ def main():
     start = time.perf_counter()
     result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split='DEV',
                   repo_sha=repo_sha, config_hash=sha256(a.config),
-                  status='STARTED', official_success=None, policy_calls=0,
+                  status='STARTED', official_success=False, policy_calls=0,
                   policy_requests_attempted=0,
                   inner_steps=0, settling_steps=0, exit_code=1,
                   started_at_sgt=now_sgt())
