@@ -6,11 +6,12 @@ review. No authorization fixture is committed in docs/reviews or used remotely.
 import copy
 import json
 import shutil
+import signal
 import subprocess
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch,Mock
 import numpy as np
 from tase.test_authorization import frozen,authorize,bind_cell,validate_identity
 from tase.test_ledger import reserve,claim,inventory
@@ -65,6 +66,41 @@ class TestFreezeTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 run(root,REPO,'e2-test-0001',None,None,root/'missing',root/'no-python','no-server')
             popen.assert_not_called();self.assertFalse((root/'runs').exists())
+
+    def test_reserved_entry_failure_and_forwarded_signal_keep_original_receipts(self):
+        for mode in ['missing_binding','signal']:
+            with self.subTest(mode=mode),tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp);repo,rev,path,_=fixture(root);cfg,cells,identity=authorize(repo,rev,path)
+                server=root/'runs/test-server-synthetic';server.mkdir(parents=True)
+                allocation=root/'allocation.json';write_json(allocation,{'shared_gpu_inference_authorized':True})
+                write_json(server/'test_admission.json',dict(authorization=identity,port=5559,gpu_uuid='GPU_SYNTHETIC',
+                    egl_device_id='0',allocation_sha256=sha256(allocation)))
+                write_json(server/'loaded.json',{'status':'MODEL_LOADED','port':5559,'host':'127.0.0.1'})
+                write_json(root/'runs/test-server-synthetic.exit.started.json',{'command':['--epoch','E2']})
+                python=root/'synthetic-env/bin/python';python.parent.mkdir(parents=True);python.touch()
+                write_json(python.parent.parent/'e2-derived-environment.json',{'workspace':str(root)})
+                def fake_git(where,*args):
+                    if args[0]=='status':return ''
+                    if where==repo:return identity['authorized_head']
+                    if Path(where).name=='LIBERO':return '8f1084e3132a39270c3a13ebe37270a43ece2a01'
+                    return 'dac54b313160c201c450f97df0fd74ebd379c892'
+                child=Mock();child.poll.return_value=None
+                def finish(**kwargs):
+                    signal.getsignal(signal.SIGTERM)(signal.SIGTERM,None)
+                    child.poll.return_value=143
+                    return 143
+                child.wait.side_effect=finish
+                with patch('scripts.e2_run_test.git',side_effect=fake_git),\
+                     patch.dict('os.environ',CUDA_VISIBLE_DEVICES='' if mode=='missing_binding' else 'GPU_SYNTHETIC',
+                                MUJOCO_EGL_DEVICE_ID='0'),\
+                     patch('scripts.e2_run_test.subprocess.Popen',return_value=child) as popen,\
+                     patch('scripts.e2_run_test.authorize',return_value=(cfg,cells,identity)):
+                    with self.assertRaises(ValueError):run(root,repo,cells[0]['run_id'],rev,path,allocation,python,server.name)
+                closed=json.loads((root/'runs/TEST/e2-test-0001/supervisor_exit.json').read_text())
+                self.assertEqual(closed['failure_type'],'ValueError');self.assertFalse(closed['complete_child_receipt'])
+                if mode=='missing_binding':popen.assert_not_called();self.assertIsNone(closed['wrapper_returncode'])
+                else:child.send_signal.assert_called_once_with(signal.SIGTERM);self.assertEqual(closed['wrapper_returncode'],143)
+                self.assertEqual(len(list((root/'runs/TEST').iterdir())),1)
 
     def test_direct_native_entry_cannot_bypass_permission(self):
         from tase.epoch_runner import main

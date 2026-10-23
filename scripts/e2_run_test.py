@@ -8,6 +8,7 @@ Every attempt is reserved before spawning the native child. No implicit retry.
 import argparse
 import json
 import os
+import signal
 from pathlib import Path
 import subprocess
 import sys
@@ -53,32 +54,42 @@ def run(workspace, repo, run_id, review_commit, review_path, allocation_record,
         marker = json.loads((sim_python.parent.parent/'e2-derived-environment.json').read_text())
         require(marker['workspace']==str(workspace), 'interpreter is not task-owned E2')
     folder = reserve(workspace/'runs/TEST',cell,cells,identity)
-    env = os.environ.copy()
-    env.update(HOME=str(workspace/'runtime/home'),HF_HOME=str(workspace/'cache/huggingface'),
-        LIBERO_CONFIG_PATH=str(workspace/'runtime/libero-config'),
-        PYTHONPATH=os.pathsep.join(map(str,[repo,up,up/'external_dependencies/LIBERO'])),
-        PYTHONNOUSERSITE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',
-        WANDB_DISABLED='true',WANDB_MODE='disabled',DO_NOT_TRACK='1',HF_HUB_DISABLE_TELEMETRY='1',
-        OPENBLAS_NUM_THREADS='1')
-    # EGL/CUDA binding is supplied by the legal allocation, never guessed here.
-    require(bool(env.get('CUDA_VISIBLE_DEVICES')) and bool(env.get('MUJOCO_EGL_DEVICE_ID')),
-            'explicit allocated CUDA/EGL binding required (reservation retained if missing)')
-    require(env['CUDA_VISIBLE_DEVICES']==admission['gpu_uuid'] and
-            env['MUJOCO_EGL_DEVICE_ID']==admission['egl_device_id'], 'TEST client/server GPU binding differs')
-    env.update(MUJOCO_GL='egl',PYOPENGL_PLATFORM='egl')
-    cmd=[str(sim_python),'-u',str(repo/'scripts/record_process.py'),'--receipt',
-         str(workspace/'runs'/f'{run_id}.exit.json'),'--',str(sim_python),'-u','-m','tase.epoch_runner',
-         '--workspace',str(workspace),'--run-id',run_id,'--task',cell['task'],
-         '--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system',cell['system'],
-         '--config',str(repo/'configs/e2_test.json'),'--allocation-record',str(allocation_record),
-         '--port',str(port),'--test-review-commit',review_commit,'--test-review-path',review_path]
-    write_json(folder/'supervisor_start.json',dict(run_id=run_id,started_at_sgt=now_sgt(),
-        server_session=server_session,server_loaded_sha256=sha256(server/'loaded.json'),
-        sim_interpreter_marker_sha256=sha256(sim_python.parent.parent/'e2-derived-environment.json')))
-    logs=workspace/'operator'/('test-'+run_id)
-    logs.mkdir()
-    process = None
+    process=None
+    failure=None
+    received_signal=None
+    def forward(signum,frame):
+        nonlocal received_signal
+        received_signal=signum
+        if process is not None and process.poll() is None:
+            process.send_signal(signum)
+        else:
+            raise InterruptedError('TEST entry interrupted before child start')
+    old_handlers={sig:signal.signal(sig,forward) for sig in [signal.SIGTERM,signal.SIGINT]}
     try:
+        env = os.environ.copy()
+        env.update(HOME=str(workspace/'runtime/home'),HF_HOME=str(workspace/'cache/huggingface'),
+            LIBERO_CONFIG_PATH=str(workspace/'runtime/libero-config'),
+            PYTHONPATH=os.pathsep.join(map(str,[repo,up,up/'external_dependencies/LIBERO'])),
+            PYTHONNOUSERSITE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',
+            WANDB_DISABLED='true',WANDB_MODE='disabled',DO_NOT_TRACK='1',HF_HUB_DISABLE_TELEMETRY='1',
+            OPENBLAS_NUM_THREADS='1')
+        # EGL/CUDA binding is supplied by the legal allocation, never guessed here.
+        require(bool(env.get('CUDA_VISIBLE_DEVICES')) and bool(env.get('MUJOCO_EGL_DEVICE_ID')),
+                'explicit allocated CUDA/EGL binding required (reservation retained if missing)')
+        require(env['CUDA_VISIBLE_DEVICES']==admission['gpu_uuid'] and
+                env['MUJOCO_EGL_DEVICE_ID']==admission['egl_device_id'], 'TEST client/server GPU binding differs')
+        env.update(MUJOCO_GL='egl',PYOPENGL_PLATFORM='egl')
+        cmd=[str(sim_python),'-u',str(repo/'scripts/record_process.py'),'--receipt',
+             str(workspace/'runs'/f'{run_id}.exit.json'),'--',str(sim_python),'-u','-m','tase.epoch_runner',
+             '--workspace',str(workspace),'--run-id',run_id,'--task',cell['task'],
+             '--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system',cell['system'],
+             '--config',str(repo/'configs/e2_test.json'),'--allocation-record',str(allocation_record),
+             '--port',str(port),'--test-review-commit',review_commit,'--test-review-path',review_path]
+        write_json(folder/'supervisor_start.json',dict(run_id=run_id,started_at_sgt=now_sgt(),
+            server_session=server_session,server_loaded_sha256=sha256(server/'loaded.json'),
+            sim_interpreter_marker_sha256=sha256(sim_python.parent.parent/'e2-derived-environment.json')))
+        logs=workspace/'operator'/('test-'+run_id)
+        logs.mkdir()
         with (logs/'stdout.private.txt').open('x') as out,(logs/'stderr.private.txt').open('x') as err:
             process=subprocess.Popen(cmd,cwd=repo,env=env,stdout=out,stderr=err)
             try:
@@ -89,10 +100,20 @@ def run(workspace, repo, run_id, review_commit, review_path, allocation_record,
                 raise TimeoutError('TEST child wall deadline; no replacement; audit original ID')
         require(code==0, 'TEST child failed; retain original reservation and actual exit')
         return code
+    except BaseException as exc:
+        failure=type(exc).__name__
+        raise
     finally:
-        write_json(folder/'supervisor_exit.json',dict(run_id=run_id,completed_at_sgt=now_sgt(),
-            wrapper_returncode=None if process is None else process.poll(),
-            complete_child_receipt=(workspace/'runs'/f'{run_id}.exit.json').is_file()))
+        try:
+            if process is not None and process.poll() is None:
+                process.terminate()
+                process.wait(timeout=30)
+        finally:
+            for sig,handler in old_handlers.items():signal.signal(sig,handler)
+            write_json(folder/'supervisor_exit.json',dict(run_id=run_id,completed_at_sgt=now_sgt(),
+                wrapper_returncode=None if process is None else process.poll(),
+                signal_received=received_signal,failure_type=failure,
+                complete_child_receipt=(workspace/'runs'/f'{run_id}.exit.json').is_file()))
 
 
 def main():
