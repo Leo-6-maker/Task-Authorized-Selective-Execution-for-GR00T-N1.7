@@ -6,7 +6,7 @@
 
 - 按 [E2 START HERE](work_packages/E2-START-HERE.md) 从 PR #7 实时 head `bb9b4346037441b220d03c26737002748856dc23` 建立 `codex/8-e2-gate`，正常整合 main；保留 PR #5 的运行实现与旧交接成果。原本地14个修改/未跟踪文件继续保全，未覆盖。
 - `E2 / TASE-002-v1.0`：新 DEV 上限24、独立短一致性96；满足工作包前置条件后 CALIB48。TEST 待 R2，未授权；不训练、不接WBC、不上实机、不自动合并。
-- 已建立新的合法可写 workspace；隔离双环境安装继续进行，失败/超时留存。Object 固定版本7个文件已下载，独立复算大小及SHA256全部一致。发现先前项目专用缓存中的固定 Cosmos 版本，正在校验并建立独立 E2 副本，不要求恢复旧账本。
+- 已建立新的合法可写 workspace；隔离双环境安装继续进行，失败/超时留存。Object 固定版本7/7文件独立复算大小及SHA256全部一致。先前项目缓存中的固定 Cosmos 版本10/10文件已校验并复制到独立E2副本，真实退出码0；无需再下载或提供token，不要求恢复旧账本。
 - 新代码已实现 scenario reset/seed、实际语言与TaskSpec分离、接触前兆Gate、唯一执行边界、完整快照采集、安全数值审计和有界验证/备份入口。**IMPLEMENTED，不等于 RUNTIME_VALIDATED 或 REVIEWED。**
 - [E2 CPU收据](../reports/E2/cpu/normal.json)及[-O收据](../reports/E2/cpu/optimized.json)：31项纯合成测试 exit0，绑定各自 source commit；不替代真实模型/仿真验收。
 - 当前六格 baseline 尚未完成；真实运行、账本和审核状态将在 [E2 setup](../reports/E2/setup.md) 持续记录。下一项关键交付仍是新环境真实 baseline，随后关键 shadow 与可运行 Gate。

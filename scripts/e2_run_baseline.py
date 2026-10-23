@@ -1,7 +1,7 @@
 """Run the six committed E2 C0 baseline cells in the isolated workspace.
 
-No TEST/CALIB/C2 or implicit retry. Requires pinned artifacts and an owner-issued
-Cosmos credential file. Always shuts down this script's own policy server.
+No TEST/CALIB/C2 or implicit retry. Requires pinned artifacts; a credential is
+only needed when verified Cosmos files are absent. Shuts down its own server.
 """
 import argparse
 import json
@@ -49,6 +49,7 @@ def run(root,token_file,gpu_index,port,session):
         HF_HUB_DISABLE_TELEMETRY='1',DO_NOT_TRACK='1',NO_ALBUMENTATIONS_UPDATE='1',TOKENIZERS_PARALLELISM='false',
         OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='2',NUMBA_NUM_THREADS='2')
     if not (root/'operator/cosmos-download-manifest.json').is_file():
+        if token_file is None:raise ValueError('verified Cosmos cache or owner credential file required')
         # This probes access with the actual server interpreter before any model load.
         subprocess.run([str(server_python),str(repo/'scripts/e2_download_cosmos.py'),'--workspace',str(root),
                         '--token-file',str(token_file)],cwd=repo,env=env,check=True)
@@ -126,6 +127,6 @@ def run(root,token_file,gpu_index,port,session):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True)
-    p.add_argument('--token-file',type=Path,required=True);p.add_argument('--gpu-index',type=int,default=0);p.add_argument('--port',type=int,default=5559)
+    p.add_argument('--token-file',type=Path);p.add_argument('--gpu-index',type=int,default=0);p.add_argument('--port',type=int,default=5559)
     p.add_argument('--session-id',required=True)
     a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id)

@@ -13,7 +13,7 @@ The branch starts at PR #7 `bb9b4346037441b220d03c26737002748856dc23`, inheritin
 | GR00T source | `dac54b313160c201c450f97df0fd74ebd379c892` in new checkout |
 | LIBERO source | `8f1084e3132a39270c3a13ebe37270a43ece2a01` in new submodule |
 | Object revision | `2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21`; 7/7 files rehashed, 6,914,936,710 bytes, match |
-| Cosmos revision | `9ce19a195e423419c349abfc86fd07178b230561`; existing project cache located, independent copy/verification in progress |
+| Cosmos revision | `9ce19a195e423419c349abfc86fd07178b230561`; 10/10 existing cached files verified and independently copied, 4,888,970,298 bytes; real copy child exit0 |
 | CPU synthetic tests | 31 normal and 31 optimized, exit0; [receipts](cpu/normal.json), [optimized](cpu/optimized.json) |
 | Real E2 baseline | NOT_RUN; no success or governance claim |
 | Independent GPT review of new code/results | NOT_PERFORMED |
@@ -28,7 +28,7 @@ The bounded continuation exports the unchanged upstream lock and omits TensorRT/
 
 ## Model-cache finding
 
-A fresh unauthenticated Cosmos small-file request returned HTTP401. That was insufficient evidence of a missing model: following the owner's request, a bounded model-cache check located the earlier project's runtime-resolution link and all ten expected Cosmos files. The link points to the fixed revision. Reuse is permitted only after complete byte/hash verification; it creates a separate E2 copy and leaves the source untouched. Hostnames, internal paths and private cache provenance remain outside Git. No token has been printed or committed.
+A fresh unauthenticated Cosmos small-file request returned HTTP401. That was insufficient evidence of a missing model: following the owner's request, a bounded model-cache check located the earlier project's runtime-resolution link and all ten expected Cosmos files. All ten files have now been streamed into an independent E2 copy and verified against fixed bytes and SHA256, with real child exit0. The source was left untouched. There is no remaining Cosmos credential requirement for these verified local files. Hostnames, internal paths and private cache provenance remain outside Git. No token has been printed or committed.
 
 ## Execution and evidence boundaries
 
