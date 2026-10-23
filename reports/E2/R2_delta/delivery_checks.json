@@ -1,0 +1,75 @@
+{
+  "scope": "CURRENT_DELTA_BYTES_ONLY_NOT_PARENT_GIT_HISTORY_OR_GPT_APPROVAL",
+  "parent": "fc38e816ff3e75e87c29da3aa18009dcc0542f02",
+  "implementation_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+  "frozen_files": [
+    {
+      "path": "tase/gate_features.py",
+      "unchanged_from_parent": true,
+      "sha256": "4ecefd7bc4a381bf624ee84a2f16538fefe5305d15d65c5e46ce458d7972afec"
+    },
+    {
+      "path": "tase/event_oracle.py",
+      "unchanged_from_parent": true,
+      "sha256": "9aceedda605ec944bea795d5f48cfcef2b51e2f6b17e3be085524b9695afaff9"
+    },
+    {
+      "path": "tase/task_spec.py",
+      "unchanged_from_parent": true,
+      "sha256": "8bd892311bdaa2b01c6ab500d88bac94f6e53aa741d3c7752ef675e51883348c"
+    },
+    {
+      "path": "tase/e2_context.py",
+      "unchanged_from_parent": true,
+      "sha256": "ccfa40c78f21b495489e818fc01a9b37ddc9b830d42835bc77469c1fc264af10"
+    },
+    {
+      "path": "configs/e2_calib.json",
+      "unchanged_from_parent": true,
+      "sha256": "a7513168ead71a39415ffa123b1ce24d39268c7674d70795deb07c6c9d1119e4"
+    },
+    {
+      "path": "configs/e2_calib_cells.json",
+      "unchanged_from_parent": true,
+      "sha256": "ea5dbe867b51310b6fa939af9d0607edc03625495dc47b5884b7c9cfd7d16503"
+    },
+    {
+      "path": "configs/e2_calibration_plan.json",
+      "unchanged_from_parent": true,
+      "sha256": "6c7150c206a7981a78c821889b5aba781ee8071db17d4e179360e45d54d77eec"
+    },
+    {
+      "path": "configs/e2_calib_selection.json",
+      "unchanged_from_parent": true,
+      "sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115"
+    },
+    {
+      "path": "configs/e2_splits.json",
+      "unchanged_from_parent": true,
+      "sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7"
+    },
+    {
+      "path": "configs/e2_test_cells.proposed.json",
+      "unchanged_from_parent": true,
+      "sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff"
+    },
+    {
+      "path": "configs/e2_protocol_lock.json",
+      "unchanged_from_parent": true,
+      "sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2"
+    },
+    {
+      "path": "configs/runtime_lock_E2.json",
+      "unchanged_from_parent": true,
+      "sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e"
+    }
+  ],
+  "private_runtime_marker_scan": {
+    "text_files": 1469,
+    "violations": []
+  },
+  "credential_pattern_scan": "NO_MATCH_IN_CHANGED_PUBLIC_TEXT",
+  "TEST_executed": 0,
+  "TEST_authorized": false,
+  "limitations": "Pattern/known-marker scan is not a proof of universal absence. Parent historical noncredential path disclosure is unchanged."
+}

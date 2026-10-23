@@ -1,0 +1,34 @@
+{
+  "derivative": {
+    "status": "TWO_LOCATIONS_DERIVATIVE_ARCHIVE_AND_EVERY_EXPORT_FILE_SHA256_VERIFIED",
+    "archive_bytes": 7271801,
+    "archive_sha256": "4defac23a1f828b359c660d142a6d63def3b5099fec1f139d7dd1ee82f0e95c4",
+    "manifest_sha256": "6c21c57a3196d08f1f7872736399c2b85e4f4499ddfb291cc0937d750354bdc8",
+    "verified_export_files": 1441,
+    "primary": "AUTHORIZED_REMOTE_PROJECT_EVIDENCE",
+    "second": "OWNER_LOCAL_PRIVATE_COPY",
+    "new_model_requests": 0,
+    "TEST_executed": 0
+  },
+  "source_chain_crosscheck": {
+    "status": "ALL_EXPORTED_SOURCE_HASHES_BOUND_TO_EXISTING_VERIFIED_RAW_CHAIN",
+    "source_files": 4944,
+    "missing": [],
+    "hash_mismatches": [],
+    "raw_stage": "calib-final-09",
+    "raw_archive_sha256": "69b1403787d2fe74b6c2891bc7d8dc11a70606248d77aa0a26d3d0667ff352f3",
+    "raw_source_index_entries": 12675
+  },
+  "private_metadata": {
+    "status": "TWO_LOCATIONS_IDENTICAL_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "archive_bytes": 23095,
+    "archive_sha256": "cefd651891e83ee6be2ba5dec9cebf4cddb0580b2fb5e87a5843401bad5ffbb1",
+    "files": 58,
+    "contains": "Private runtime map, original CPU logs including failed tests, actual remote capture and source-backup reconciliation; no credentials or weights",
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_REMOTE_PROJECT_PRIVATE"
+    ],
+    "remote_verified_members": 58
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "status": "PUBLIC_DERIVATIVE_CPU_RECOMPUTED_NOT_GPT_APPROVAL",
+  "candidate_rows": 488,
+  "selected_k": 3,
+  "metrics": [
+    {
+      "k": 1,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    },
+    {
+      "k": 2,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    },
+    {
+      "k": 3,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    }
+  ],
+  "selected_pairs": [
+    {
+      "b0": "e2-calib-0010",
+      "g": "e2-calib-0034",
+      "B0_onset": 62,
+      "G_onset": null,
+      "G_controls": 56,
+      "B0_status": "TIME_LIMIT",
+      "G_status": "SEMANTIC_ABORT"
+    },
+    {
+      "b0": "e2-calib-0012",
+      "g": "e2-calib-0036",
+      "B0_onset": 148,
+      "G_onset": null,
+      "G_controls": 56,
+      "B0_status": "TIME_LIMIT",
+      "G_status": "SEMANTIC_ABORT"
+    },
+    {
+      "b0": "e2-calib-0014",
+      "g": "e2-calib-0038",
+      "B0_onset": 61,
+      "G_onset": null,
+      "G_controls": 56,
+      "B0_status": "TIME_LIMIT",
+      "G_status": "SEMANTIC_ABORT"
+    },
+    {
+      "b0": "e2-calib-0016",
+      "g": "e2-calib-0040",
+      "B0_onset": 61,
+      "G_onset": null,
+      "G_controls": 56,
+      "B0_status": "TIME_LIMIT",
+      "G_status": "SEMANTIC_ABORT"
+    },
+    {
+      "b0": "e2-calib-0001",
+      "g": "e2-calib-0025",
+      "B0_onset": null,
+      "G_onset": null,
+      "G_controls": 172,
+      "B0_status": "SUCCESS",
+      "G_status": "SUCCESS"
+    },
+    {
+      "b0": "e2-calib-0005",
+      "g": "e2-calib-0029",
+      "B0_onset": null,
+      "G_onset": null,
+      "G_controls": 720,
+      "B0_status": "TIME_LIMIT",
+      "G_status": "TIME_LIMIT"
+    },
+    {
+      "b0": "e2-calib-0009",
+      "g": "e2-calib-0033",
+      "B0_onset": null,
+      "G_onset": null,
+      "G_controls": 126,
+      "B0_status": "SUCCESS",
+      "G_status": "SUCCESS"
+    },
+    {
+      "b0": "e2-calib-0017",
+      "g": "e2-calib-0041",
+      "B0_onset": null,
+      "G_onset": null,
+      "G_controls": 127,
+      "B0_status": "SUCCESS",
+      "G_status": "SUCCESS"
+    }
+  ],
+  "selected_candidate_numeric_inputs": 187,
+  "exported_artifact_files": 1441,
+  "source_files_hashed_not_all_public_bytes": 4944,
+  "no_pickle_loaded": true,
+  "new_model_requests": 0,
+  "new_simulations": 0,
+  "TEST_executed": 0
+}

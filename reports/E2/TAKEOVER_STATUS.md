@@ -1,3 +1,9 @@
+# Issue #10 接续状态 — READY_FOR_R2_DELTA_REVIEW
+
+R005 已条件冻结研究配置，明确未授权 TEST。当前独立分支 `codex/10-test-freeze` 从 PR #9 exact parent `fc38e816ff3e75e87c29da3aa18009dcc0542f02` 接续。已交付独立 TEST 准入/120格 ledger/CPU审计与配对统计，以及既有CALIB的488行和8组完整安全数值配对。无新模型、真实仿真、CALIB、TEST或下载；原course checkout保留。详见 [R2_DELTA_HANDOFF](R2_DELTA_HANDOFF.md)。唯一下一步为独立GPT对新head的delta-review；不得把本状态视为TEST许可。
+
+下方保留 Issue #8 原交接历史，旧“等待首次R2”不覆盖R005当前结论。
+
 # E2 delivery status — 2026-10-24 SGT
 
 Codex executor; READY_FOR_R2_REVIEW, no GPT result approval. Issue #8/R004 replaced the old recovery prerequisite; no further old-workspace search was performed. PR #7/#5 ancestry and the original local edits remain preserved.

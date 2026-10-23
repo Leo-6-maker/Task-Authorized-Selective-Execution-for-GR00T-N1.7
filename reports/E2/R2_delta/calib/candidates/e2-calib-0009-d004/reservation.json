@@ -1,0 +1,19 @@
+{
+  "split": "CALIB",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "repo_sha": "703fe4cd0170145baa02318c2906b1ccfd020243",
+  "runtime_lock_hash": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "classification": "P4_FUNCTIONAL_FIXED_CANDIDATE_NOT_INDEPENDENT_CONSISTENCY",
+  "source_run": "e2-calib-0009",
+  "decision": 4,
+  "new_model_requests_permitted": false,
+  "controller_pid": 2929025,
+  "source_manifest_sha256": "7438be04b68fe07a5f42121450f7394b8257483e046912144e58f85b8a10fc66",
+  "source_snapshot_sha256": "292affa8e41fda9165d2d017ab112834cf64650997c4364829c9606089a5e813",
+  "calibration_plan_hash": "6c7150c206a7981a78c821889b5aba781ee8071db17d4e179360e45d54d77eec",
+  "run_id": "e2-calib-0009-d004",
+  "status": "STARTED",
+  "started_at_sgt": "2026-10-23T23:29:56.885885+08:00",
+  "budget_ordinal": 231
+}

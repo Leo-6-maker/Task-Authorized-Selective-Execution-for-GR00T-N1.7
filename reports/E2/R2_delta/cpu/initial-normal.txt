@@ -1,0 +1,19 @@
+test_bad_cell_fields_and_unknown_ids_refused (test_e2_test_freeze.TestFreezeTests.test_bad_cell_fields_and_unknown_ids_refused) ... ok
+test_bootstrap_is_paired_reproducible_with_missing_units_retained (test_e2_test_freeze.TestFreezeTests.test_bootstrap_is_paired_reproducible_with_missing_units_retained) ... ok
+test_current_frozen_catalog_and_valid_synthetic_main_grant (test_e2_test_freeze.TestFreezeTests.test_current_frozen_catalog_and_valid_synthetic_main_grant) ... ok
+test_direct_native_entry_cannot_bypass_permission (test_e2_test_freeze.TestFreezeTests.test_direct_native_entry_cannot_bypass_permission) ... ok
+test_exclusive_child_claim_and_original_id (test_e2_test_freeze.TestFreezeTests.test_exclusive_child_claim_and_original_id) ... ok
+test_failed_interrupted_reservations_consume_all120_and_no_retry (test_e2_test_freeze.TestFreezeTests.test_failed_interrupted_reservations_consume_all120_and_no_retry) ... ok
+test_frozen_contract_and_oracle_source_changes_refused (test_e2_test_freeze.TestFreezeTests.test_frozen_contract_and_oracle_source_changes_refused) ... ok
+test_grant_wrong_head_scope_k_hash_or_disposition_refused (test_e2_test_freeze.TestFreezeTests.test_grant_wrong_head_scope_k_hash_or_disposition_refused) ... ok
+test_invalid_prediction_reject_error_zero_steps_accept_same_prefix (test_e2_test_freeze.TestFreezeTests.test_invalid_prediction_reject_error_zero_steps_accept_same_prefix) ... ok
+test_missing_duplicate_corrupt_and_reordered_manifest_refused (test_e2_test_freeze.TestFreezeTests.test_missing_duplicate_corrupt_and_reordered_manifest_refused) ... ok
+test_missing_permission_never_creates_process_or_reservation (test_e2_test_freeze.TestFreezeTests.test_missing_permission_never_creates_process_or_reservation) ... ok
+test_partial_empty_folder_locks_next_cell_and_cannot_be_reclaimed (test_e2_test_freeze.TestFreezeTests.test_partial_empty_folder_locks_next_cell_and_cannot_be_reclaimed) ... ok
+test_unopened_audit_keeps120_unknowns_and_no_zero_event_claim (test_e2_test_freeze.TestFreezeTests.test_unopened_audit_keeps120_unknowns_and_no_zero_event_claim) ... ok
+test_unreachable_review_dirty_checkout_and_changed_main_grant_refused (test_e2_test_freeze.TestFreezeTests.test_unreachable_review_dirty_checkout_and_changed_main_grant_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.501s
+
+OK

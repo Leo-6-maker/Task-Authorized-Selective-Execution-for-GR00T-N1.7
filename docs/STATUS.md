@@ -1,5 +1,12 @@
 # 当前状态索引
 
+## Issue #10 — READY_FOR_R2_DELTA_REVIEW / TEST NOT_AUTHORIZED
+
+当前依据为 main [R005](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/blob/e00f40cea298ce67159007d619dbf5e2747cb178/docs/reviews/R005-R2-E2-conditional-freeze.md)：条件科学冻结，不是 TEST 放行。独立 stacked `codex/10-test-freeze` 接续 PR #9 `fc38e816ff3e75e87c29da3aa18009dcc0542f02`；保留原交付，不重写/rebase父PR。
+
+新增固定120格许可门/ledger/CPU审计及统计；仅CPU导出既有488候选与8组CALIB完整数值配对。真实TEST仍0，DEV19/CALIB48、原始失败和备份均保留，无新模型/仿真/下载。详见 [R2_DELTA_HANDOFF](../reports/E2/R2_DELTA_HANDOFF.md) 和 [TEST入口合同](work_packages/E2-TEST-ENTRY.md)。本段优先于下方历史Issue8“尚无R005”状态；原运行事实不变。下一步仅独立GPT delta审核。
+
+
 更新时间：2026-10-24（Asia/Singapore）。当前执行：Issue #8 / E2；最新适用范围决定为 [R004](reviews/R004-fresh-epoch-progress-decision.md)，它不是新结果验收。历史 R003 仍仅绑定其所审提交。
 
 ## 当前 E2 入口（优先于历史索引）

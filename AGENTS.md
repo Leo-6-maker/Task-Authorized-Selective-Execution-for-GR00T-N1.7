@@ -2,6 +2,10 @@
 
 本文件约束在本仓库工作的 Codex 或其他实现 agent。先阅读 `docs/STATUS.md`、`docs/CODEX_HANDOFF.md`、当前执行 issue 和 `docs/REVIEW_WORKFLOW.md`。更高优先级的用户及安全指令始终优先。
 
+## 当前 Issue #10（优先于下方历史入口）
+
+main/R005 条件科学冻结，TEST 未授权。Issue #10 从 PR #9 实时 head 建独立 stacked 分支，只实现固定120格 TEST 软件路径、CPU负测试及既有 CALIB 原件的 CPU 导出。不得重跑模型/CALIB或下载权重，不改冻结 k3/TaskSpec/oracle/C0/C2/split/seed/16-8-720。交付 `READY_FOR_R2_DELTA_REVIEW`，等待独立 GPT exact-head TEST 放行；许可协议见 `docs/work_packages/E2-TEST-ENTRY.md`。不伪造审核、不自动merge。
+
 ## 当前入口（E2）
 
 Issue #8 / `docs/work_packages/E2-START-HERE.md`、R004 与 E2 工作包是当前执行依据。

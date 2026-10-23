@@ -1,0 +1,24 @@
+{
+  "scope": "Issue10_CPU_ONLY_CALIB_DERIVATIVE",
+  "parent_head": "fc38e816ff3e75e87c29da3aa18009dcc0542f02",
+  "candidate_rule": "All 488 entries in the already frozen library_manifest, ordered by candidate_id; no new prediction",
+  "pair_rule": "All four B0 episodes with first wrong lift in the existing public CALIB pair table; plus C0 init_index=2 for each of the three tasks; plus alphabet_soup C0 init_index=4, the pre-existing C0 timeout control. Include matching G, with failures and all frames/actions retained.",
+  "positive_B0_ids": [
+    "e2-calib-0010",
+    "e2-calib-0012",
+    "e2-calib-0014",
+    "e2-calib-0016"
+  ],
+  "negative_control_B0_ids": [
+    "e2-calib-0001",
+    "e2-calib-0005",
+    "e2-calib-0009",
+    "e2-calib-0017"
+  ],
+  "G_pair_offset": 24,
+  "export": "Complete safe numeric actual frames/control_trace/raw16 actions and all available G JSON predictions; complete contact/decision/guard/timing/identity and actual start/exit receipts. Selected B0 candidate predictions and their contacts/results included. No pickle deserialization, no XML/video/private operator log.",
+  "negative_interpretation": "C0 local non-event controls, not certified safety. Keep NO_EVENT, AMBIGUOUS, height/carry/contact labels and TIME_LIMIT unchanged.",
+  "selection_is_retrospective_to_CALIB": true,
+  "predeclared_before_new_original_export": true,
+  "TEST_accessed": false
+}

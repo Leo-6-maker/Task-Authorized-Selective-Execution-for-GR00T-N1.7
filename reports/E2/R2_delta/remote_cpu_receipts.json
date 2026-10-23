@@ -1,0 +1,228 @@
+{
+  "scope": "ACTUAL_CPU_PROCESSES_NO_MODEL_OR_SIM",
+  "export_preflight_code_sha": "cb4e10a8e240c9fd80e0cf1176fcf47e18a7b83a",
+  "zero_test_audit_code_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+  "receipts": [
+    {
+      "origin_id": "operator/issue10-export-01/export.exit.started.json",
+      "original_sha256": "fa82a1f143cd25418cb0a58976c7c9a546774f2714c689d16eea7780c63bda58",
+      "receipt": {
+        "started_at_sgt": "2026-10-24T01:36:08.207476+08:00",
+        "wrapper_pid": 3035645,
+        "child_pid": 3035650,
+        "private_actual_command_sha256": "e4795e5625a7751cd838ff2b34559932583eddba13d634100da302240f35540c",
+        "command_template": [
+          "<PRIVATE_PATH>",
+          "-u",
+          "<PRIVATE>/operator/issue10-code-01/scripts/e2_export_calib_delta.py",
+          "--workspace",
+          "<PRIVATE>",
+          "--repo",
+          "<PRIVATE>/operator/issue10-code-01",
+          "--output",
+          "<PRIVATE>/operator/issue10-export-01/evidence"
+        ]
+      }
+    },
+    {
+      "origin_id": "operator/issue10-export-01/export.exit.json",
+      "original_sha256": "79eb8b5d5d7af91ef050c4941bfda3758377783cb9b41151674cddae9e3a1054",
+      "receipt": {
+        "completed_at_sgt": "2026-10-24T01:38:39.515337+08:00",
+        "child_pid": 3035650,
+        "child_returncode": 0,
+        "exit_code": 0,
+        "signal": null
+      }
+    },
+    {
+      "origin_id": "operator/issue10-export-01/archive-receipt.json",
+      "original_sha256": "34529df30af19a31dafe3edca179d6ff86021e911decf5e4fb9962e1779cdc80",
+      "receipt": {
+        "bytes": 7271801,
+        "sha256": "4defac23a1f828b359c660d142a6d63def3b5099fec1f139d7dd1ee82f0e95c4",
+        "manifest_sha256": "6c21c57a3196d08f1f7872736399c2b85e4f4499ddfb291cc0937d750354bdc8"
+      }
+    },
+    {
+      "origin_id": "operator/issue10-preflight-02/preflight.exit.started.json",
+      "original_sha256": "30a6fc11a8804f0deb0278a55234a77727b61bf3e833f8f481dbd12e7b1d5221",
+      "receipt": {
+        "started_at_sgt": "2026-10-24T01:42:40.960360+08:00",
+        "wrapper_pid": 3041297,
+        "child_pid": 3041336,
+        "private_actual_command_sha256": "c5b506c2019a9997b9d317b2e5bdcde1c7a550690b5b5c886ccc249c639f1ce2",
+        "command_template": [
+          "<PRIVATE_PATH>",
+          "-c",
+          "from pathlib import Path;import json;from tase.test_runtime import verify;from tase.evidence import write_json;r=Path.home()/\"<PRIVATE>\";repo=r/\"operator/issue10-code-01\";base=Path(json.loads((r/\"operator/environment-copy-05/launch.json\").read_text())[\"derived_environments\"]);v=verify(r,repo,base/\"server/bin/python\",base/\"sim/bin/python\");write_json(r/\"operator/issue10-preflight-02/evidence.json\",v);print(json.dumps(dict(files=len(v[\"files\"]),environments=v[\"environments\"],model_loads=0,TEST_started=False)))"
+        ]
+      }
+    },
+    {
+      "origin_id": "operator/issue10-preflight-02/preflight.exit.json",
+      "original_sha256": "b8e32657b84a0fa5d89609eb01a9b652ad38dd30ad7a9e698885069f537793df",
+      "receipt": {
+        "completed_at_sgt": "2026-10-24T01:42:44.966443+08:00",
+        "child_pid": 3041336,
+        "child_returncode": 0,
+        "exit_code": 0,
+        "signal": null
+      }
+    },
+    {
+      "origin_id": "operator/issue10-preflight-02/evidence.json",
+      "original_sha256": "8022bffe59aafca964d03a14d7a46c8ef45c9502f4291e3879faeab8ec55455f",
+      "receipt": {
+        "environments": {
+          "server": {
+            "python": "3.12.14",
+            "verified_packages": 138,
+            "marker_sha256": "5033aa07440889fce08e211362cfdd7f08807b96855b93b5a5d57a2c4155f32b"
+          },
+          "sim": {
+            "python": "3.12.14",
+            "verified_packages": 159,
+            "marker_sha256": "9266aee1d6f26e80cf9de0b4413f441b8fb9dd5893e8fe4a4e9028620a91d8f6"
+          }
+        },
+        "files": [
+          {
+            "model": "Object",
+            "path": "libero_object/config.json",
+            "bytes": 2266,
+            "sha256": "ce763f74ad1cda2ca9e67491229cbc5810d83cae675cb4dad839a69a9731fd97"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/embodiment_id.json",
+            "bytes": 2145,
+            "sha256": "abc4a749389837416a102d9455a8c089336f2e417afb18565703b9944974bc35"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/model-00001-of-00002.safetensors",
+            "bytes": 4990519232,
+            "sha256": "cfe3a25d809ac9558375e5e6ea3e2c550dce2fb51082dbcdb05395295e50183d"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/model-00002-of-00002.safetensors",
+            "bytes": 1919980184,
+            "sha256": "0c7e87f4c326564301e08751a2b61b9876f1062a041c5a90aae35fe8aac723de"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/model.safetensors.index.json",
+            "bytes": 104985,
+            "sha256": "407804ea5a62f4f8823f48811ae0edbb82fac101e9cf4d7273e6e2f692bb4d59"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/processor_config.json",
+            "bytes": 26935,
+            "sha256": "545bb44c7d8caaf5ac82df55b90831271a1469a4e48adcc9a5f469f064f4e121"
+          },
+          {
+            "model": "Object",
+            "path": "libero_object/statistics.json",
+            "bytes": 4298451,
+            "sha256": "193cbb84e44c6d53fe4736e5fcc80f5f5d35c1c0637b9b0c601d54b4cd610a69"
+          },
+          {
+            "model": "Cosmos",
+            "path": "chat_template.json",
+            "bytes": 5502,
+            "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+          },
+          {
+            "model": "Cosmos",
+            "path": "config.json",
+            "bytes": 1505,
+            "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b"
+          },
+          {
+            "model": "Cosmos",
+            "path": "generation_config.json",
+            "bytes": 269,
+            "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4"
+          },
+          {
+            "model": "Cosmos",
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "model": "Cosmos",
+            "path": "model.safetensors",
+            "bytes": 4877470304,
+            "sha256": "fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede"
+          },
+          {
+            "model": "Cosmos",
+            "path": "preprocessor_config.json",
+            "bytes": 390,
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "model": "Cosmos",
+            "path": "tokenizer.json",
+            "bytes": 7032403,
+            "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+          },
+          {
+            "model": "Cosmos",
+            "path": "tokenizer_config.json",
+            "bytes": 10868,
+            "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+          },
+          {
+            "model": "Cosmos",
+            "path": "video_preprocessor_config.json",
+            "bytes": 385,
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "model": "Cosmos",
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e"
+      }
+    },
+    {
+      "origin_id": "operator/issue10-zero-test-03/zero-test.exit.started.json",
+      "original_sha256": "c31972c36a1bcd47051edaca32bddbc72c3b522fe2e5c545f38297188defe96f",
+      "receipt": {
+        "started_at_sgt": "2026-10-24T01:53:00.125759+08:00",
+        "wrapper_pid": 3049845,
+        "child_pid": 3049846,
+        "private_actual_command_sha256": "f4ba92f68856c00105b264c36291d99f4afcd5e14f8be460a457f6d6dc926c06",
+        "command_template": [
+          "<PRIVATE_PATH>",
+          "<PRIVATE>/operator/issue10-code-final-03/scripts/e2_audit_test.py",
+          "--workspace",
+          "<PRIVATE>",
+          "--repo",
+          "<PRIVATE>/operator/issue10-code-final-03",
+          "--output",
+          "<PRIVATE>/operator/issue10-zero-test-03/zero-test.json"
+        ]
+      }
+    },
+    {
+      "origin_id": "operator/issue10-zero-test-03/zero-test.exit.json",
+      "original_sha256": "2ee6388365af42aebfba8a0254c1424d6b4f21f4b5bd03a2b441119074aef651",
+      "receipt": {
+        "completed_at_sgt": "2026-10-24T01:53:01.988295+08:00",
+        "child_pid": 3049846,
+        "child_returncode": 0,
+        "exit_code": 0,
+        "signal": null
+      }
+    }
+  ]
+}

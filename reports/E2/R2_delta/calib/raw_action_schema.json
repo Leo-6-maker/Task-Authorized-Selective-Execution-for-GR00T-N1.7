@@ -1,0 +1,18 @@
+{
+  "keys": [
+    "action.x",
+    "action.y",
+    "action.z",
+    "action.roll",
+    "action.pitch",
+    "action.yaw",
+    "action.gripper"
+  ],
+  "axes": [
+    "decision",
+    "stream",
+    "batch",
+    "horizon16",
+    "channel"
+  ]
+}

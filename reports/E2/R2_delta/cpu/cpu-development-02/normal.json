@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "command": [
+    "<CPU_PYTHON>",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+  "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+  "original_private_log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+  "public_log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+  "public_log": "cpu/cpu-development-02/normal.txt"
+}

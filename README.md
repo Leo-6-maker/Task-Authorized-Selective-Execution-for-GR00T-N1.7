@@ -1,5 +1,7 @@
 # Task-Authorized Selective Execution for GR00T N1.7
 
+当前 Issue #10：**READY_FOR_R2_DELTA_REVIEW，TEST 未授权**。新增 TEST 软件门与既有 CALIB CPU 派生包，见 [R2 delta 交接](reports/E2/R2_DELTA_HANDOFF.md)；R005 不是执行许可，下方 Issue #8 运行记录保留。
+
 **ME6401 Part 2 — AI Governance for AI-Enabled Systems**
 
 在原生 **GR00T N1.7 LIBERO-adapted policy → LIBERO/Panda execution** 链路中插入运行时 Safety Gate，研究错误物体抓持／抬升的选择性阻止及其任务完成、误拦截和计算成本。

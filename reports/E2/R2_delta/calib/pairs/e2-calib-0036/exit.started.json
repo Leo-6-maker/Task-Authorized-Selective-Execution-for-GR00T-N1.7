@@ -1,0 +1,29 @@
+{
+  "started_at_sgt": "2026-10-23T23:45:26.319665+08:00",
+  "wrapper_pid": 2946631,
+  "child_pid": 2946632,
+  "command": [
+    "<PRIVATE_PATH>",
+    "-u",
+    "-m",
+    "tase.epoch_runner",
+    "--workspace",
+    "<PRIVATE>",
+    "--run-id",
+    "e2-calib-0036",
+    "--task",
+    "cream_cheese",
+    "--init-index",
+    "3",
+    "--condition",
+    "C2",
+    "--system",
+    "G",
+    "--allocation-record",
+    "<PRIVATE>/runs/gpu-authorization.json",
+    "--port",
+    "5559",
+    "--config",
+    "<PRIVATE>/course-repo/configs/e2_calib.json"
+  ]
+}
