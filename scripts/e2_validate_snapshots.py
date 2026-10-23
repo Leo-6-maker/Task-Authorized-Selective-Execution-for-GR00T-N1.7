@@ -6,13 +6,15 @@ Two repeats per requested decision; any failure stops without retry/ID change.
 import argparse
 import json
 import pickle
+import os
+import re
 import subprocess
 import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import numpy as np
 from tase.audit_contract import require
-from tase.evidence import reserve_episode,sha256,write_json
+from tase.evidence import reserve_episode,sha256,write_json,now_sgt
 from tase.e2_evidence import verify_manifest,manifest
 from tase.shadow import Shadow
 from tase.snapshot import digest
@@ -20,7 +22,8 @@ from tase.m2_context import compare_frames,jsonable
 from audit_m2 import frame_arrays,read,lines,KEYS
 
 
-def run(workspace,source_id,decisions):
+def run(workspace,source_id,decisions,invocation_id=None):
+    if invocation_id is not None and not re.fullmatch('[a-zA-Z0-9_-]+',invocation_id):raise ValueError('invalid invocation ID')
     cfg=read(Path('configs/e2_dev.json'));source=workspace/'runs/DEV'/source_id
     require(not subprocess.check_output(['git','status','--porcelain'],text=True).strip(),'commit code before sim')
     require(read(workspace/'runs/gpu-authorization.json')['shared_gpu_inference_authorized'] is True,'resource permission missing')
@@ -31,7 +34,7 @@ def run(workspace,source_id,decisions):
     frames=[frame_arrays(f) for f in lines(source/'physical_frames.jsonl')]
     records={r['decision']:r for r in lines(source/'snapshots.jsonl')}
     require(len(decisions)==len(set(decisions)) and set(decisions)<=set(records),'invalid or duplicate decisions')
-    worker=None;out=[]
+    worker=None;out=[];case_ids=[]
     try:
         for index in decisions:
             record=records[index];path=source/f'snapshot-{index:03d}.pkl'
@@ -42,15 +45,20 @@ def run(workspace,source_id,decisions):
                 prefix={k:np.array(action[k][0],copy=True) for k in KEYS}
             for repeat in range(2):
                 case_id=f'{source_id}-d{index:03d}-r{repeat}'
+                case_ids.append(case_id)
                 case=reserve_episode(workspace/'runs/consistency',case_id,{'split':'DEV','epoch':'E2',
                     'protocol_id':'TASE-002-v1.0','repo_sha':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
                     'source_run':source_id,'decision':index,'repeat':repeat,'source_snapshot_sha256':sha256(path),
-                    'classification':'DEV_DIAGNOSTIC_NOT_INDEPENDENT_TEST','policy_requests_permitted':False},limit=96)
+                    'classification':'DEV_DIAGNOSTIC_NOT_INDEPENDENT_TEST','policy_requests_permitted':False,
+                    'invocation_id':invocation_id},limit=96)
+                write_json(case/'started.json',{'started_at_sgt':now_sgt(),'controller_pid':os.getpid(),
+                    'invocation_id':invocation_id,'case_id':case_id})
                 row={'status':'STARTED','case_id':case_id,'source_run':source_id,'decision':index,'repeat':repeat}
                 try:
                     if worker is None:
                         worker=Shadow(result['task'],result['init_index'],read(source/'horizon.json'),result['environment_seed'])
                         write_json(case/'worker_setup.json',worker.setup)
+                    row.update(controller_pid=os.getpid(),worker_pid=worker.process.pid,invocation_id=invocation_id)
                     predicted=worker.predict(snapshot,prefix)
                     write_json(case/'prediction.json',jsonable(predicted))
                     require(predicted['status']=='PASS','worker error')
@@ -69,11 +77,20 @@ def run(workspace,source_id,decisions):
                     write_json(case/'artifact_manifest.json',manifest(workspace,sorted(case.iterdir()),case_id))
                     out.append(row)
     finally:
-        if worker is not None:worker.close()
+        try:
+            if worker is not None:worker.close()
+        finally:
+            if invocation_id is not None:
+                write_json(workspace/'runs/consistency_processes'/f'{invocation_id}.worker_exit.json',{
+                    'controller_pid':os.getpid(),'invocation_id':invocation_id,'case_ids':case_ids,
+                    'worker_pid':worker.process.pid if worker is not None else None,
+                    'worker_returncode':worker.process.exitcode if worker is not None else None,
+                    'recorded_at_sgt':now_sgt(),'scope':'ACTUAL_WORKER_EXIT_NOT_AN_EPISODE_RESULT'})
     return out
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True)
     p.add_argument('--source-run',required=True);p.add_argument('--decisions',type=int,nargs='+',required=True)
-    a=p.parse_args();print(json.dumps(run(a.workspace,a.source_run,a.decisions),indent=2))
+    p.add_argument('--invocation-id')
+    a=p.parse_args();print(json.dumps(run(a.workspace,a.source_run,a.decisions,a.invocation_id),indent=2))

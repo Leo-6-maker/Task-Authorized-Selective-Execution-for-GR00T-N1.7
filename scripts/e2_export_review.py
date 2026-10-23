@@ -47,7 +47,7 @@ def export(workspace,destination,config,private_map):
         markers += [private.get(key,'') for key in ['login_alias','compute_alias','home','home_resolved','workspace','workspace_resolved']]
     archive_path=destination/'review.tar.gz'
     originals=[]
-    for folder in ['DEV','consistency']:
+    for folder in ['DEV','consistency','consistency_processes']:
         originals += list((workspace/'runs'/folder).rglob('*'))
     for row in report['rows']:
         for suffix in ['exit.json','exit.started.json']:
