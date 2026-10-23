@@ -89,7 +89,7 @@ def run(workspace, repo, run_id, review_commit, review_path, allocation_record,
             server_session=server_session,server_loaded_sha256=sha256(server/'loaded.json'),
             sim_interpreter_marker_sha256=sha256(sim_python.parent.parent/'e2-derived-environment.json')))
         logs=workspace/'operator'/('test-'+run_id)
-        logs.mkdir()
+        logs.mkdir(parents=True)
         with (logs/'stdout.private.txt').open('x') as out,(logs/'stderr.private.txt').open('x') as err:
             process=subprocess.Popen(cmd,cwd=repo,env=env,stdout=out,stderr=err)
             try:
