@@ -34,8 +34,8 @@ def backup(workspace,stage,base_stage=None):
     destination=workspace/'evidence_exports'/stage;destination.mkdir()
     pending=destination/'evidence.tar.gz.pending';records=[];source_index=[]
     files=[]
-    for base in [workspace/'runs',workspace/'operator']:
-        files.extend(p for p in base.rglob('*') if p.is_file() and not p.is_symlink() and p.suffix not in ['.bundle','.gz'])
+    for source_root in [workspace/'runs',workspace/'operator']:
+        files.extend(p for p in source_root.rglob('*') if p.is_file() and not p.is_symlink() and p.suffix not in ['.bundle','.gz'])
     files.extend(p for p in [workspace/'runtime-map.local.yaml',workspace/'checkpoints/download_manifest.json'] if p.is_file())
     with tarfile.open(pending,'w:gz') as archive:
         for path in sorted(set(files)):
