@@ -14,7 +14,8 @@ The branch starts at PR #7 `bb9b4346037441b220d03c26737002748856dc23`, inheritin
 | LIBERO source | `8f1084e3132a39270c3a13ebe37270a43ece2a01` in new submodule |
 | Object revision | `2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21`; 7/7 files rehashed, 6,914,936,710 bytes, match |
 | Cosmos revision | `9ce19a195e423419c349abfc86fd07178b230561`; 10/10 existing cached files verified and independently copied, 4,888,970,298 bytes; real copy child exit0 |
-| CPU synthetic tests | 31 normal and 31 optimized, exit0; [receipts](cpu/normal.json), [optimized](cpu/optimized.json) |
+| CPU synthetic tests | Latest 33 normal and 33 optimized, exit0; [export-boundary receipt](cpu/review_export.json); earlier source-bound full logs retained |
+| New independent environments | Python3.12.14; server138 / sim159 packages pass dependency check; native imports exit0 with CUDA uninitialized |
 | Real E2 baseline | NOT_RUN; no success or governance claim |
 | Independent GPT review of new code/results | NOT_PERFORMED |
 
@@ -24,7 +25,11 @@ The new server and simulation environments are separate. No other research check
 
 All observed failures remain in private operator evidence: missing system pip, an incomplete uv transfer invocation, a first sim installer targeting externally managed Python (refused), a cache lock timeout, and the full server lock timing out at 1,200 seconds. One interrupted sim resume has a start record and missing child exit; it is not counted as success and no exit code is invented.
 
-The bounded continuation exports the unchanged upstream lock and omits TensorRT/DeepSpeed distributions for the native PyTorch inference environment. It does not change policy/model/controller source. Simulation applies the upstream script's final Torch, physics and supporting constraints in one resolution, avoiding temporary latest-package downloads. Every continuation uses a new operation ID, start/exit receipts and captured logs; no old result is overwritten. Actual installed versions and dependency checks are still pending.
+The bounded network continuation exported the unchanged upstream lock with TensorRT/DeepSpeed omitted, and applied final sim constraints together. These operations were deliberately stopped once the existing project cache was located; UV child exits -15 and installer exits1 are retained. A subsequent offline cache-index resolution failed immediately (exit1); cache metadata is not treated as an installed environment.
+
+The final environments are independent copies of the existing pinned native environments, using the new E2 Python3.12.14 base. Original environments were not changed. Only the copies' interpreter/editable source references were redirected to the new fixed checkout, with before/after hashes retained. They retain the full original dependency sets, including optional server packages; the earlier proposed omissions did not become the final recipe. Server138 and sim159 packages pass `uv pip check`; native imports pass with CUDA uninitialized and no model/environment constructed. Both source-binding checks point into the new fixed GR00T/LIBERO sources and match their file hashes. Server Torch2.9.0+cu128, sim Torch2.9.0, both CUDA12.8; Transformers4.57.3/NumPy1.26.4; sim robosuite1.4.0/MuJoCo3.3.1/Gymnasium0.29.1.
+
+Every continuation uses a new operation ID, start/exit receipts and captured logs; no old result is overwritten. Private interpreter paths and copy provenance are in the verified-environment runtime map. The first installation-progress backup has two verified locations and all78 archived members match; [receipt](setup_backup_verification.json). This is not yet a finalized experiment backup.
 
 ## Model-cache finding
 

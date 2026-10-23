@@ -30,9 +30,10 @@ def audit(workspace,config):
         if not result_file.exists():
             rows.append({'run_id':folder.name,'status':'STARTED_OR_INTERRUPTED','slot_consumed':True,'complete':False});continue
         result=read(result_file)
-        for key in ['run_id','repo_sha','config_hash','epoch','protocol_id','task','init_index','condition','system','scenario_id','policy_seed','environment_seed']:
+        for key in ['run_id','repo_sha','config_hash','runtime_lock_hash','epoch','protocol_id','task','init_index','condition','system','scenario_id','policy_seed','environment_seed']:
             require(result[key]==reservation[key],'reservation/result mismatch: '+key)
         require(result['config_hash']==sha256(config),'config changed')
+        require(result['runtime_lock_hash']==sha256(config.parent/'runtime_lock_E2.json'),'runtime identity changed')
         names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name!='artifact_manifest.json'}
         verify_manifest(workspace,read(folder/'artifact_manifest.json'),required=names,source_run=folder.name)
         exit_file=workspace/'runs'/f'{folder.name}.exit.json'

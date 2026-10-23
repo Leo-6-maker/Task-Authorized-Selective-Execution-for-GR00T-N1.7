@@ -53,14 +53,15 @@ def main():
     dirty = subprocess.check_output(['git', 'status', '--porcelain'], text=True).strip()
     if dirty:
         raise ValueError('commit implementation before runtime; dirty worktree refused')
+    runtime_lock_hash = sha256(a.config.parent/'runtime_lock_E2.json')
     folder = reserve_episode(a.workspace / 'runs/DEV', a.run_id, {
         'split': 'DEV', 'task': a.task, 'init_index': a.init_index,
-        'repo_sha': repo_sha, 'config_hash': sha256(a.config),
+        'repo_sha': repo_sha, 'config_hash': sha256(a.config), 'runtime_lock_hash': runtime_lock_hash,
         'probe_only': a.probe_only, 'started_at_sgt': now_sgt(),
         **cell}, limit=config['maximum_episode_attempts'])
     start = time.perf_counter()
     result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split='DEV',
-                  repo_sha=repo_sha, config_hash=sha256(a.config),
+                  repo_sha=repo_sha, config_hash=sha256(a.config), runtime_lock_hash=runtime_lock_hash,
                   status='STARTED', official_success=False, policy_calls=0,
                   policy_requests_attempted=0,
                   inner_steps=0, settling_steps=0, exit_code=1,

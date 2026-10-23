@@ -23,7 +23,7 @@ def write(path,value):path.parent.mkdir(parents=True,exist_ok=True);path.write_t
 def build(root):
     config=REPO/'configs/e2_dev.json';run='e2-dev-0001';folder=root/'runs/DEV'/run;folder.mkdir(parents=True)
     identity=dict(run_id=run,repo_sha='1'*40,config_hash=sha256(config),epoch='E2',protocol_id='TASE-002-v1.0',
-        task='alphabet_soup',init_index=0,condition='C0',system='B0',scenario_id='synthetic',policy_seed=1,environment_seed=2)
+        runtime_lock_hash=sha256(config.parent/'runtime_lock_E2.json'),task='alphabet_soup',init_index=0,condition='C0',system='B0',scenario_id='synthetic',policy_seed=1,environment_seed=2)
     write(folder/'reservation.json',dict(identity,budget_ordinal=1))
     write(folder/'result.json',dict(identity,status='SUCCESS',exit_code=0,inner_steps=1,settling_steps=10,
         official_success=True,policy_calls=1,policy_requests_attempted=1,first_wrong_lift_step=None))
@@ -66,7 +66,7 @@ class E2AuditTests(unittest.TestCase):
             self.assertEqual(result['dev_used'],1)
             self.assertTrue(result['all_process_receipts_complete'])
     def test_rehashed_corruptions_are_rejected(self):
-        for mutation in ['empty_gate','changed_action','changed_language','missing_snapshot','wrong_child']:
+        for mutation in ['empty_gate','changed_action','changed_language','missing_snapshot','wrong_child','runtime_identity']:
             with self.subTest(mutation=mutation),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp);folder=build(root)
                 if mutation=='empty_gate':(folder/'gate_decisions.jsonl').write_text('')
@@ -77,5 +77,8 @@ class E2AuditTests(unittest.TestCase):
                     p=folder/'actual_requests.jsonl';row=json.loads(p.read_text());row['actual_policy_language']='wrong';write(p,row)
                 if mutation=='missing_snapshot':(folder/'snapshot-000.pkl').unlink()
                 if mutation=='wrong_child':write(root/'runs/e2-dev-0001.exit.json',{'child_pid':999,'exit_code':0})
+                if mutation=='runtime_identity':
+                    for name in ['reservation.json','result.json']:
+                        p=folder/name;row=json.loads(p.read_text());row['runtime_lock_hash']='0'*64;write(p,row)
                 seal(root,folder)
                 with self.assertRaises((ValueError,KeyError,FileNotFoundError)):module.audit(root,REPO/'configs/e2_dev.json')
