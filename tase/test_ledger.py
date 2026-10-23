@@ -1,7 +1,7 @@
 """Append-only TEST reservations; interrupted/empty folders still consume a cell."""
 import json
 from pathlib import Path
-from .evidence import write_json, now_sgt
+from .evidence import write_json, now_sgt, sha256
 from .test_authorization import bind_cell, require
 
 
@@ -39,6 +39,17 @@ def reserve(root, cell, cells, identity):
         # A partially written reservation blocks further execution, while still consuming its slot.
         require(all((p/'reservation.json').is_file() and (p/'supervisor_exit.json').is_file()
                     for p in existing), 'unclosed TEST reservation; audit/reconcile before next cell')
+        for previous in existing:
+            closed=json.loads((previous/'supervisor_exit.json').read_text())
+            if closed.get('complete_child_receipt') is not True:
+                recovery=previous/'reconciliation.json'
+                require(recovery.is_file(), 'partial TEST child requires explicit original-ID reconciliation')
+                record=json.loads(recovery.read_text())
+                require(record.get('run_id')==previous.name and
+                        record.get('status')=='CLOSED_INTERRUPTED_NO_RETRY' and
+                        record.get('reservation_sha256')==sha256(previous/'reservation.json') and
+                        isinstance(record.get('reason'),str) and bool(record['reason']),
+                        'invalid TEST reconciliation; never rerun or replace original ID')
         folder = root/cell['run_id']
         folder.mkdir()
         record = dict(cell, epoch='E2',protocol_id='TASE-002-v1.0',split='TEST',

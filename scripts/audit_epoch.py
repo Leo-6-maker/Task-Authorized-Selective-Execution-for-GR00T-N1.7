@@ -61,7 +61,7 @@ def audit(workspace,config, *, test_audit=False):
                 if result['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT']:
                     worker=read(folder/'shadow_worker_exit.json')
                     require(type(worker['worker_pid']) is int and worker['worker_returncode']==0,'CALIB Gate worker failed exit')
-        excluded={'artifact_manifest.json'}|({'supervisor_exit.json'} if split=='TEST' else set())
+        excluded={'artifact_manifest.json'}|({'supervisor_exit.json','reconciliation.json'} if split=='TEST' else set())
         names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name not in excluded}
         verify_manifest(workspace,read(folder/'artifact_manifest.json'),required=names,source_run=folder.name)
         exit_file=workspace/'runs'/f'{folder.name}.exit.json'

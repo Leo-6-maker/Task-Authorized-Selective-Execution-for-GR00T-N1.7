@@ -125,6 +125,9 @@ class TestFreezeTests(unittest.TestCase):
                 if mutate=='duplicate':data['cells'][1]=data['cells'][0]
                 if mutate=='reorder':data['cells'].reverse()
                 path.write_text('' if mutate=='corrupt' else json.dumps(data))
+                config=repo/'configs/e2_test.json';cfg=json.loads(config.read_text())
+                cfg['frozen_sha256']['configs/e2_test_cells.proposed.json']=sha256(path)
+                config.write_text(json.dumps(cfg))
                 with self.assertRaises(ValueError):frozen(repo)
 
     def test_frozen_contract_and_oracle_source_changes_refused(self):
@@ -145,7 +148,7 @@ class TestFreezeTests(unittest.TestCase):
             for cell in cells:
                 folder=reserve(ledger,cell,cells,identity)
                 # No result at all: an interrupted/failed cell still counts.
-                write_json(folder/'supervisor_exit.json',{'wrapper_returncode':143,'complete_child_receipt':False})
+                write_json(folder/'supervisor_exit.json',{'wrapper_returncode':143,'complete_child_receipt':True})
             self.assertEqual(len(inventory(ledger,cells)),120)
             with self.assertRaises(ValueError):reserve(ledger,cells[-1],cells,identity)
             self.assertEqual(len(list(ledger.glob('*/reservation.json'))),120)
@@ -196,6 +199,24 @@ class TestFreezeTests(unittest.TestCase):
             _,cells=frozen(REPO)
             with self.assertRaises(ValueError):validate_identity(cells[0],spec,
                 dict(true_task_target='alphabet_soup_1',cell=cells[0],actual_policy_language='wrong'))
+            spec['objects']['basket_1']=spec['objects'].pop('basket');spec['basket']='basket_1'
+            identity=dict(true_task_target='alphabet_soup_1',cell=cells[0],
+                actual_policy_language='pick up the alphabet soup and place it in the basket')
+            validate_identity(cells[0],spec,identity)
+            with self.assertRaises(ValueError):validate_identity(cells[0],spec,dict(identity,actual_policy_language='wrong'))
+            with self.assertRaises(ValueError):validate_identity(cells[0],spec,dict(identity,true_task_target='other'))
+
+    def test_missing_child_exit_blocks_next_until_original_id_reconciled(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);repo,rev,path,_=fixture(root);_,cells,identity=authorize(repo,rev,path)
+            folder=reserve(root/'TEST',cells[0],cells,identity)
+            write_json(folder/'supervisor_exit.json',{'wrapper_returncode':None,'complete_child_receipt':False})
+            with self.assertRaises(ValueError):reserve(root/'TEST',cells[1],cells,identity)
+            write_json(folder/'reconciliation.json',dict(run_id=cells[0]['run_id'],status='CLOSED_INTERRUPTED_NO_RETRY',
+                reservation_sha256=sha256(folder/'reservation.json'),reason='SYNTHETIC interrupted child; original reservation retained'))
+            reserve(root/'TEST',cells[1],cells,identity)
+            self.assertEqual(len(inventory(root/'TEST',cells)),2)
+            with self.assertRaises(ValueError):reserve(root/'TEST',cells[0],cells,identity)
 
     def test_exclusive_child_claim_and_original_id(self):
         with tempfile.TemporaryDirectory() as tmp:
