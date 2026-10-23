@@ -11,6 +11,7 @@ from tase.task_spec import TaskSpec
 from tase.event_oracle import EventOracle
 from tase.evidence import manifest,sha256
 from tase.audit_contract import OBS_KEYS
+from tase.gate_features import score_contacts,contact_view
 
 REPO=Path(__file__).resolve().parents[1]
 loader=importlib.util.spec_from_file_location('audit_epoch',REPO/'scripts/audit_epoch.py')
@@ -33,7 +34,10 @@ def build(root):
     language='pick up the alphabet soup and place it in the basket'
     write(folder/'e2_identity.json',{'true_task_target':spec.target,'baseline_positions':base,'actual_policy_language':language})
     write(folder/'policy_reset.json',{'scenario_id':'synthetic','seed':1})
-    for name in ['horizon.json','reset_parity.json']:write(folder/name,{'fixture':'SYNTHETIC'})
+    horizon={'n_action_steps':8,'action_horizon':16,'video_delta_indices':[0],'state_delta_indices':[0]}
+    write(folder/'horizon.json',horizon)
+    write(folder/'reset_parity.json',{'state_unchanged':True,'history':horizon,
+        'latest_native_observation_equal':{key:True for key in list(OBS_KEYS)+['annotation.human.action.task_description']}})
     write(folder/'actual_requests.jsonl',{'index':0,'actual_policy_language':language,'trusted_task_spec_sha256':sha256(folder/'task_spec.json')})
     controls=[0.,0.,0.,0.,0.,0.,1.]
     frame={'step':1,'eef_pos':[0.,0.,0.],'eef_quat':[1.,0.,0.,0.],'gripper':[0.,0.],
@@ -43,6 +47,7 @@ def build(root):
     write(folder/'physical_frames.jsonl',frame)
     np.savez(folder/'control_trace.npz',states=np.zeros((1,2)),converted_actions=np.array([controls]))
     write(folder/'gate_decisions.jsonl',{'index':0,'decision':'ACCEPT','completed_controls_before':0,'completed_controls_after':1})
+    write(folder/'decisions.jsonl',{'index':0,'inner_steps':1,'official_success':True,'terminated':True,'truncated':False,'native_baseline':True})
     np.savez(folder/'action-000.npz',**{'action.'+k:np.zeros((1,16,1),np.float32) for k in ['x','y','z','roll','pitch','yaw','gripper']})
     observation={k:np.zeros((1,1,256,256,3),np.uint8) if k.startswith('video') else np.zeros((1,1,2 if k=='state.gripper' else 1),np.float32) for k in OBS_KEYS}
     np.savez(folder/'observation-000.npz',**observation)
@@ -58,7 +63,43 @@ def seal(root,folder):
     write(folder/'artifact_manifest.json',manifest(root,[p for p in folder.iterdir() if p.name!='artifact_manifest.json'],folder.name))
 
 
+def gate_fixture(root,folder):
+    for name in ['reservation.json','result.json']:
+        path=folder/name;row=json.loads(path.read_text());row['system']='G';write(path,row)
+    path=folder/'decisions.jsonl';row=json.loads(path.read_text());row['native_baseline']=False;write(path,row)
+    spec=TaskSpec(**json.loads((folder/'task_spec.json').read_text()))
+    frame=json.loads((folder/'physical_frames.jsonl').read_text());view=contact_view(frame,spec.objects)
+    history={name:0 for name in spec.objects};snapshot_hash='2'*64
+    path=folder/'snapshots.jsonl';row=json.loads(path.read_text());row['snapshot_hash']=snapshot_hash;write(path,row)
+    write(folder/'prediction-000.json',{'status':'PASS','steps':1,'frames':[frame],
+        'source_snapshot_hash':snapshot_hash,'restored_snapshot_hash':snapshot_hash,'terminated':True,'truncated':False})
+    write(folder/'gate_contact_views.jsonl',{'index':0,'views':[view],'actual_contact_history':history,'trusted_target':spec.target})
+    write(folder/'gate_decisions.jsonl',dict(score_contacts([view],list(spec.objects),spec.target,history,0,2),
+        index=0,completed_controls_before=0,completed_controls_after=1))
+    write(folder/'noninterference.jsonl',{'index':0,'before_hash':snapshot_hash,'after_hash':snapshot_hash,
+        'main_state_unchanged':True,'policy_rng_unchanged':True,'policy_rng_before':{'policy_calls':1},
+        'policy_rng_after':{'policy_calls':1},'model_calls_from_shadow':0})
+
+
 class E2AuditTests(unittest.TestCase):
+    def test_gate_predictions_and_guards_bind_to_the_scored_evidence(self):
+        for mutation in [None,'missing_guards','dishonest_guard','missing_prediction','forged_view','bad_accepted_rollout']:
+            with self.subTest(mutation=mutation),tempfile.TemporaryDirectory() as temp:
+                root=Path(temp);folder=build(root);gate_fixture(root,folder)
+                if mutation=='missing_guards':(folder/'noninterference.jsonl').write_text('')
+                if mutation=='dishonest_guard':
+                    path=folder/'noninterference.jsonl';row=json.loads(path.read_text());row['policy_rng_after']['policy_calls']=2;write(path,row)
+                if mutation=='missing_prediction':(folder/'prediction-000.json').unlink()
+                if mutation=='forged_view':
+                    path=folder/'gate_contact_views.jsonl';row=json.loads(path.read_text())
+                    for side in ['left_contacts','right_contacts']:row['views'][0][side]['other']=True
+                    write(path,row);path=folder/'gate_decisions.jsonl';row=json.loads(path.read_text());row['risk']=1;write(path,row)
+                if mutation=='bad_accepted_rollout':
+                    path=folder/'prediction-000.json';row=json.loads(path.read_text());row['frames'][0]['eef_pos'][0]=1;write(path,row)
+                seal(root,folder)
+                if mutation is None:module.audit(root,REPO/'configs/e2_dev.json')
+                else:
+                    with self.assertRaises((ValueError,KeyError,FileNotFoundError)):module.audit(root,REPO/'configs/e2_dev.json')
     def test_valid_safe_control_does_not_deserialize_snapshot(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);folder=build(root);seal(root,folder)
@@ -66,7 +107,7 @@ class E2AuditTests(unittest.TestCase):
             self.assertEqual(result['dev_used'],1)
             self.assertTrue(result['all_process_receipts_complete'])
     def test_rehashed_corruptions_are_rejected(self):
-        for mutation in ['empty_gate','changed_action','changed_language','missing_snapshot','wrong_child','runtime_identity']:
+        for mutation in ['empty_gate','changed_action','changed_language','missing_snapshot','wrong_child','runtime_identity','reset_parity','horizon','native_decisions','early_timeout']:
             with self.subTest(mutation=mutation),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp);folder=build(root)
                 if mutation=='empty_gate':(folder/'gate_decisions.jsonl').write_text('')
@@ -80,5 +121,12 @@ class E2AuditTests(unittest.TestCase):
                 if mutation=='runtime_identity':
                     for name in ['reservation.json','result.json']:
                         p=folder/name;row=json.loads(p.read_text());row['runtime_lock_hash']='0'*64;write(p,row)
+                if mutation=='reset_parity':
+                    p=folder/'reset_parity.json';row=json.loads(p.read_text());row['state_unchanged']=False;write(p,row)
+                if mutation=='horizon':
+                    p=folder/'horizon.json';row=json.loads(p.read_text());row['n_action_steps']=4;write(p,row)
+                if mutation=='native_decisions':(folder/'decisions.jsonl').write_text('')
+                if mutation=='early_timeout':
+                    p=folder/'result.json';row=json.loads(p.read_text());row.update(status='TIME_LIMIT',official_success=False);write(p,row)
                 seal(root,folder)
                 with self.assertRaises((ValueError,KeyError,FileNotFoundError)):module.audit(root,REPO/'configs/e2_dev.json')

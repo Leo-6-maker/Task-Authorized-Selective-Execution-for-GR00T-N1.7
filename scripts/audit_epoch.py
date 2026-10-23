@@ -6,12 +6,12 @@ from pathlib import Path
 import sys
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from tase.audit_contract import require,check_observation
+from tase.audit_contract import require,check_observation,OBS_KEYS
 from tase.evidence import verify_manifest,sha256,write_json
 from tase.task_spec import TaskSpec
 from tase.event_oracle import EventOracle
-from tase.m2_context import jsonable
-from tase.gate_features import score_contacts
+from tase.m2_context import jsonable,compare_frames
+from tase.gate_features import score_contacts,contact_view
 from tase.execution_gate import KEYS
 
 
@@ -47,6 +47,7 @@ def audit(workspace,config):
         require(len(frames)==result['inner_steps'],'physical frame count mismatch')
         require([f['step'] for f in frames]==list(range(1,len(frames)+1)),'physical frame sequence')
         full=result['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT']
+        snapshots=lines(folder/'snapshots.jsonl');guards=lines(folder/'noninterference.jsonl')
         if full:
             require(complete and result['exit_code']==0,'full outcome missing normal child exit')
             require(result['settling_steps']==cfg['settling_steps'],'full outcome incomplete settling')
@@ -58,6 +59,27 @@ def audit(workspace,config):
             require(result['inner_steps']<=cfg['max_inner_steps'],'policy control cap exceeded')
             for name in ['e2_identity.json','task_spec.json','policy_reset.json','horizon.json','reset_parity.json','actual_requests.jsonl','snapshots.jsonl','rollout.mp4']:
                 require((folder/name).is_file(),'full outcome required evidence missing: '+name)
+            horizon=read(folder/'horizon.json');parity=read(folder/'reset_parity.json')
+            require(horizon=={'n_action_steps':cfg['execution_horizon_candidate'],'action_horizon':16,
+                             'video_delta_indices':[0],'state_delta_indices':[0]},'native horizon changed')
+            equality=parity['latest_native_observation_equal']
+            require(parity['state_unchanged'] is True and parity['history']==horizon and
+                    set(equality)==set(OBS_KEYS)|{'annotation.human.action.task_description'} and
+                    all(value is True for value in equality.values()),'native reset parity failed')
+            accepted=[g for g in gates if g['decision']=='ACCEPT'];decisions=lines(folder/'decisions.jsonl')
+            require([d['index'] for d in decisions]==[g['index'] for g in accepted],'native decision coverage')
+            for decision,gate in zip(decisions,accepted):
+                require(decision['inner_steps']==gate['completed_controls_after']-gate['completed_controls_before'] and
+                        decision['native_baseline']==(result['system']=='B0'),'native decision/control binding')
+            if result['status']=='TIME_LIMIT':
+                require(result['inner_steps']==cfg['max_inner_steps'] and decisions[-1]['truncated'] is True,'time limit stopped early')
+            if result['status']=='SUCCESS':
+                require(decisions[-1]['terminated'] is True and decisions[-1]['official_success'] is True,'success not terminal')
+            if result['status']=='SEMANTIC_ABORT':require(gates[-1]['decision']=='REJECT','semantic abort is not a reject')
+            require([s['decision'] for s in snapshots]==list(range(result['policy_calls'])),'snapshot record coverage')
+            if result['system']=='G':
+                require([g['index'] for g in guards]==list(range(result['policy_calls'])),'missing Gate noninterference receipt')
+                require({p.name for p in folder.glob('prediction-*.json')}=={f'prediction-{i:03d}.json' for i in range(result['policy_calls'])},'missing Gate prediction')
         if (folder/'task_spec.json').exists():
             spec=TaskSpec(**read(folder/'task_spec.json')).validate();identity=read(folder/'e2_identity.json')
             require(spec.target==result['task']+'_1'==identity['true_task_target'],'trusted target changed')
@@ -95,14 +117,29 @@ def audit(workspace,config):
             prediction_file=folder/f'prediction-{index:03d}.json'
             if result['system']=='G' and prediction_file.exists() and gate['decision']!='ERROR':
                 views=next(r for r in lines(folder/'gate_contact_views.jsonl') if r['index']==index)
+                prediction=read(prediction_file);snapshot=next(s for s in snapshots if s['decision']==index)
+                require(prediction['status']=='PASS' and 1<=prediction['steps']==len(prediction['frames'])<=8,'invalid prediction length/status')
+                require(prediction['source_snapshot_hash']==prediction['restored_snapshot_hash']==snapshot['snapshot_hash'],'prediction snapshot binding')
+                require(views['views']==[contact_view(frame,spec.objects) for frame in prediction['frames']],'Gate view differs from actual prediction')
+                history={name:0 for name in spec.objects}
+                for frame in frames[:before]:
+                    for name in history:history[name]=history[name]+1 if frame['left_contacts'][name] and frame['right_contacts'][name] else 0
+                require(views['actual_contact_history']==history and views['trusted_target']==spec.target,'Gate historical contacts/target changed')
                 computed=score_contacts(views['views'],list(spec.objects),spec.target,views['actual_contact_history'],before,cfg['gate_k'])
                 require(all(gate[k]==v for k,v in computed.items()),'contact Gate decision differs')
+                if gate['decision']=='ACCEPT':
+                    numeric=lambda frame:{**frame,'gripper':np.asarray(frame['gripper'])}
+                    comparison=compare_frames([numeric(f) for f in prediction['frames']],
+                                              [numeric(f) for f in frames[before:after]],cfg)
+                    require(comparison['status']=='PASS','accepted predicted/actual prefix differs')
         for path in folder.glob('observation-*.npz'):
             with np.load(path,allow_pickle=False) as observation:check_observation(observation)
-        for snapshot in lines(folder/'snapshots.jsonl'):
+        for snapshot in snapshots:
             require(sha256(folder/f"snapshot-{snapshot['decision']:03d}.pkl")==snapshot['file_sha256'],'snapshot byte identity mismatch')
-        for guard in lines(folder/'noninterference.jsonl'):
+        for guard in guards:
             require(guard['main_state_unchanged'] is True and guard['policy_rng_unchanged'] is True and guard['before_hash']==guard['after_hash'],'noninterference failure')
+            require(guard['policy_rng_before']==guard['policy_rng_after'] and guard['model_calls_from_shadow']==0,'policy state/calls changed')
+            require(guard['before_hash']==next(s for s in snapshots if s['decision']==guard['index'])['snapshot_hash'],'guard snapshot binding')
         if full:
             require(sum(g['completed_controls_after']-g['completed_controls_before'] for g in gates)==len(frames),'Gate/control coverage mismatch')
         rows.append({k:result.get(k) for k in ['run_id','task','init_index','condition','system','status','official_success','inner_steps','policy_calls','policy_requests_attempted','first_wrong_lift_step','exit_code']}|{'slot_consumed':True,'complete':complete})
