@@ -73,6 +73,8 @@ def main():
             selection=json.loads(Path('configs/e2_calib_selection.json').read_text())
             if selection['status']!='SELECTED_WITHIN_PREDECLARED_RULE' or selection['calibration_plan_hash']!=extra['calibration_plan_hash']:
                 raise ValueError('CALIB G requires valid frozen selection')
+            if selection['selected_k'] not in [1,2,3] or selection['library_manifest_sha256']!=sha256(a.workspace/'runs/CALIB_candidates/library_manifest.json'):
+                raise ValueError('selected candidate/library identity differs')
             extra['calibration_selection_hash']=sha256('configs/e2_calib_selection.json');config=dict(config,gate_k=selection['selected_k'])
     if a.system=='G':
         # Recompute all committed short-check receipts before any DEV Gate

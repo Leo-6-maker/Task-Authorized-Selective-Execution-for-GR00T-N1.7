@@ -73,6 +73,10 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
         env_audit=os.environ.copy();env_audit.update(CUDA_VISIBLE_DEVICES='-1',PYTHONNOUSERSITE='1')
         subprocess.run([str(sim_python),str(repo/'scripts/e2_audit_pairs.py'),'--workspace',str(root),'--repo',str(repo),
             '--output',str(root/'operator'/f'{session}.p3-audit.json')],cwd=repo,env=env_audit,check=True,stdout=subprocess.DEVNULL)
+        if any(c['system']=='G' for c in cells):
+            subprocess.run([str(sim_python),str(repo/'scripts/e2_audit_calibration.py'),'--workspace',str(root),'--repo',str(repo),
+                '--selection',str(repo/'configs/e2_calib_selection.json'),'--output',str(root/'operator'/f'{session}.calib-audit.json')],
+                cwd=repo,env=env_audit,check=True,stdout=subprocess.DEVNULL)
     model=json.loads((root/'checkpoints/download_manifest.json').read_text())
     for row in model['files']:
         path=root/'checkpoints'/row['path']
