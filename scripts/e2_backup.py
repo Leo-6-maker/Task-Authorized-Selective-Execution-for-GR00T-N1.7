@@ -30,6 +30,7 @@ def backup(workspace,stage,base_stage=None):
             old=json.load(archive.extractfile('backup-manifest.json'))
         previous={r['path']:r for r in old.get('source_index',old['artifacts'])}
         base={'stage':base_stage,'bytes':receipt['bytes'],'sha256':receipt['sha256']}
+    (workspace/'evidence_exports').mkdir(exist_ok=True)
     destination=workspace/'evidence_exports'/stage;destination.mkdir()
     pending=destination/'evidence.tar.gz.pending';records=[];source_index=[]
     files=[]
