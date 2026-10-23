@@ -48,13 +48,13 @@ test_numpy_and_json_native_valid_evidence (test_oracle_inputs.OracleInputTests.t
 ERROR: test_delta_requires_verified_base_and_retains_changes (test_e2_backup.BackupTests.test_delta_requires_verified_base_and_retains_changes)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/liuyu/ME6401-PROJ2/e2-gate/tests/test_e2_backup.py", line 15, in test_delta_requires_verified_base_and_retains_changes
+  File "<PRIVATE_LOCAL_PATH>", line 15, in test_delta_requires_verified_base_and_retains_changes
     base=backup(root,'first')
          ^^^^^^^^^^^^^^^^^^^^
-  File "/home/liuyu/ME6401-PROJ2/e2-gate/scripts/e2_backup.py", line 33, in backup
+  File "<PRIVATE_LOCAL_PATH>", line 33, in backup
     destination=workspace/'evidence_exports'/stage;destination.mkdir()
                                                    ^^^^^^^^^^^^^^^^^^^
-  File "/home/liuyu/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/interpreters/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1311, in mkdir
+  File "<PRIVATE_LOCAL_PATH>", line 1311, in mkdir
     os.mkdir(self, mode)
 FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpmtw72ynp/evidence_exports/first'
 

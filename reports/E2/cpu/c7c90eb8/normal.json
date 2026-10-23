@@ -12,6 +12,8 @@
   ],
   "exit_code": 1,
   "tests": 45,
-  "log_sha256": "85a061dbe7ac5c3b67acb454eba3edbab5d69630b5904bb04f86308492527261",
-  "model_or_sim_runs": 0
+  "log_sha256": "a54659897d3c3e379d43e4a1fcea7a41d260c3b2b6594fc349a548439a877973",
+  "model_or_sim_runs": 0,
+  "original_private_log_sha256": "85a061dbe7ac5c3b67acb454eba3edbab5d69630b5904bb04f86308492527261",
+  "public_log_derivation": "LOCAL_PATHS_REDACTED; raw failure retained privately; exit/source/test counts unchanged"
 }
