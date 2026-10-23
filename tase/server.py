@@ -15,6 +15,7 @@ def main():
     p.add_argument('--policy-seed', type=int, default=640100)
     p.add_argument('--allocation-record', type=Path, required=True)
     p.add_argument('--audit-rng', action='store_true', help='M2 read-only policy RNG fingerprint endpoint')
+    p.add_argument('--epoch', choices=['E2'], help='Enable scenario-scoped E2 reset/seed receipts')
     a = p.parse_args()
     permission = json.loads(a.allocation_record.read_text())
     if not permission.get('shared_gpu_inference_authorized'):
@@ -47,10 +48,18 @@ def main():
         'mode': 'eval/no_training', 'host': '127.0.0.1', 'port': a.port})
     original = policy.get_action
     calls = 0
+    scenario = None
 
     def measured(observation, options=None):
         nonlocal calls
         calls += 1
+        if a.epoch:
+            if scenario is None:
+                raise ValueError('E2 requires reset_and_seed before inference')
+            language = observation.get('annotation.human.action.task_description')
+            append_json(a.output / 'actual_requests.jsonl', {
+                'request': calls, 'epoch': a.epoch, 'scenario': scenario,
+                'actual_policy_language': language})
         torch.cuda.synchronize()
         start = time.perf_counter()
         try:
@@ -75,12 +84,40 @@ def main():
 
     policy.get_action = measured
     with PolicyServer(policy, host='127.0.0.1', port=a.port) as server:
+        if a.epoch:
+            import random
+            import numpy as np
+
+            def reset_and_seed(payload):
+                nonlocal scenario
+                if not isinstance(payload, dict) or set(payload) != {'scenario_id', 'seed'}:
+                    raise ValueError('reset_and_seed schema')
+                seed = payload['seed']
+                if type(seed) is not int or not 0 <= seed < 2**32:
+                    raise ValueError('invalid scenario seed')
+                if not isinstance(payload['scenario_id'], str) or not payload['scenario_id']:
+                    raise ValueError('invalid scenario identity')
+                policy.reset()
+                random.seed(seed); np.random.seed(seed)
+                torch.manual_seed(seed); torch.cuda.manual_seed_all(seed)
+                scenario = dict(payload)
+                ack = {'epoch': a.epoch, **scenario, 'policy_calls_before': calls,
+                    'cpu_rng_sha256': hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest(),
+                    'cuda_rng_sha256': [hashlib.sha256(s.numpy().tobytes()).hexdigest()
+                                       for s in torch.cuda.get_rng_state_all()]}
+                append_json(a.output/'scenario_resets.jsonl', ack)
+                return ack
+
+            server.register_endpoint('reset_and_seed', reset_and_seed, requires_input=True)
         if a.audit_rng:
             def rng_digest():
                 result={'policy_calls':calls,
                     'cpu_rng_sha256':hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest(),
                     'cuda_rng_sha256':[hashlib.sha256(s.numpy().tobytes()).hexdigest()
                                        for s in torch.cuda.get_rng_state_all()]}
+                if a.epoch:
+                    result.update(python_rng_sha256=hashlib.sha256(repr(random.getstate()).encode()).hexdigest(),
+                                  numpy_rng_sha256=hashlib.sha256(repr(np.random.get_state()).encode()).hexdigest())
                 append_json(a.output/'rng_checks.jsonl', result)
                 return result
             server.register_endpoint('rng_digest', rng_digest, requires_input=False)

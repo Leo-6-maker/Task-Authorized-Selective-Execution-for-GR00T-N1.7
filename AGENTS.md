@@ -2,6 +2,12 @@
 
 本文件约束在本仓库工作的 Codex 或其他实现 agent。先阅读 `docs/STATUS.md`、`docs/CODEX_HANDOFF.md`、当前执行 issue 和 `docs/REVIEW_WORKFLOW.md`。更高优先级的用户及安全指令始终优先。
 
+## 当前入口（E2）
+
+Issue #8 / `docs/work_packages/E2-START-HERE.md`、R004 与 E2 工作包是当前执行依据。
+R004 已替代 Issue #6 的旧 workspace/ledger 恢复前置条件。允许在合法可写新目录隔离安装双环境、下载必要官方权重并运行 E2 / TASE-002-v1.0。
+新 DEV 最多24 attempts、独立短一致性验证最多96次；DEV前置条件通过后 CALIB最多48次；正式 TEST仍须R2。不搜索旧目录，不修改其他checkout，不把旧预算重置或混入新效果分母。下方初始授权文字仅为历史启动约束，不否定R004。
+
 ## Project boundary
 
 - 这是 ME6401 运行时治理项目，不是 GR00T+WBC 科研仓库。
