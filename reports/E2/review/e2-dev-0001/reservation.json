@@ -1,0 +1,21 @@
+{
+  "split": "DEV",
+  "task": "alphabet_soup",
+  "init_index": 0,
+  "repo_sha": "0b00464eacd8a5e8d6be78de7044584ab9a3ef8b",
+  "config_hash": "5e2c469568d5e82c5f70d38e086fc179240a8607ff738e636bfeb181e7f573a5",
+  "runtime_lock_hash": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "probe_only": false,
+  "started_at_sgt": "2026-10-23T20:32:53.871164+08:00",
+  "run_id": "e2-dev-0001",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "condition": "C0",
+  "system": "B0",
+  "scenario_id": "E2-DEV-alphabet_soup-i0-C0",
+  "policy_seed": 640200,
+  "environment_seed": 640201,
+  "policy_target": "alphabet_soup",
+  "status": "STARTED",
+  "budget_ordinal": 1
+}

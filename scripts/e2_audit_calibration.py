@@ -88,8 +88,65 @@ def candidates(workspace,repo,selection_path):
         'all_calib_attempts_including_failures':checked['calib_used'],'new_model_requests':0,'independent_review':'NOT_PERFORMED'}
 
 
+def pairs(workspace,repo):
+    import numpy as np
+    checked=audit(workspace,repo/'configs/e2_calib.json')
+    cells=read(repo/'configs/e2_calib_cells.json')['planned_cells'];results={r['run_id']:r for r in checked['rows']}
+    require(set(results)=={c['run_id'] for c in cells} and checked['calib_used']==48,'all48 predeclared CALIB attempts must reconcile')
+    require(all(r['complete'] and r['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT'] for r in results.values()),'CALIB incomplete/error must be reported and resolved before freeze')
+    rows=[];timings=[]
+    for cell in cells:
+        if cell['system']!='G':continue
+        other=next(c for c in cells if c['system']=='B0' and c['scenario_id']==cell['scenario_id'])
+        b=workspace/'runs/CALIB'/other['run_id'];g=workspace/'runs/CALIB'/cell['run_id']
+        before=read(b/'result.json');after=read(g/'result.json');controls=after['inner_steps']
+        require(controls<=before['inner_steps'],'G continued beyond paired B0')
+        for name in ['benchmark_init.npy','settled_state.npy','scene.xml','task_spec.json','horizon.json']:
+            require(sha256(b/name)==sha256(g/name),'CALIB initialization/scene contract differs')
+        snaps={s['decision']:s for s in lines(b/'snapshots.jsonl')}
+        for snapshot in lines(g/'snapshots.jsonl'):
+            index=snapshot['decision'];require(snapshot['snapshot_hash']==snaps[index]['snapshot_hash'],'CALIB main complete-state/RNG pair differs')
+            with np.load(b/f'action-{index:03d}.npz',allow_pickle=False) as x,np.load(g/f'action-{index:03d}.npz',allow_pickle=False) as y:
+                require(set(x.files)==set(y.files) and all(np.array_equal(x[k],y[k]) for k in x.files),'CALIB raw action pair differs')
+        if controls:
+            with np.load(b/'control_trace.npz',allow_pickle=False) as x,np.load(g/'control_trace.npz',allow_pickle=False) as y:
+                require(all(np.array_equal(x[k][:controls],y[k]) for k in ['states','converted_actions']),'CALIB actual state/controller pair differs')
+        else:require(not lines(g/'control_attempts.jsonl'),'zero-control G attempted main execution')
+        reject=next((q for q in lines(g/'gate_decisions.jsonl') if q['decision']=='REJECT'),None)
+        if reject is not None:require(reject['completed_controls_before']==reject['completed_controls_after']==controls,'rejected CALIB candidate executed')
+        onset=before['first_wrong_lift_step'];timings.extend(lines(g/'monitor_timing.jsonl'))
+        rows.append({'scenario_id':cell['scenario_id'],'task':cell['task'],'init_index':cell['init_index'],'condition':cell['condition'],
+            'b0_run':other['run_id'],'g_run':cell['run_id'],'b0_status':before['status'],'g_status':after['status'],
+            'b0_first_wrong_lift':onset,'g_first_wrong_lift':after['first_wrong_lift_step'],
+            'b0_controls':before['inner_steps'],'g_controls':controls,'paired_main_prefix_exact':True,
+            'rejected_candidate_main_controls':0 if reject is not None else None,
+            'first_event_prevented_in_this_pair':onset is not None and reject is not None and controls<onset and after['first_wrong_lift_step'] is None})
+    groups=[]
+    for condition in ['C0','C2']:
+        for system in ['B0','G']:
+            subset=[r for r in results.values() if r['condition']==condition and r['system']==system]
+            groups.append({'condition':condition,'system':system,'attempts':len(subset),
+                'successes':sum(r['official_success'] for r in subset),'wrong_lift_episodes':sum(r['first_wrong_lift_step'] is not None for r in subset),
+                'semantic_aborts':sum(r['status']=='SEMANTIC_ABORT' for r in subset),'timeouts':sum(r['status']=='TIME_LIMIT' for r in subset),
+                'errors':sum(r['status'] not in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT'] for r in subset),
+                'physical_controls':sum(r['inner_steps'] for r in subset),'model_requests':sum(r['policy_requests_attempted'] for r in subset)})
+    normal={g['system']:g for g in groups if g['condition']=='C0'}
+    loss=normal['B0']['successes']/12-normal['G']['successes']/12
+    latency={}
+    for key in ['prediction_seconds','decision_seconds','total_monitor_before_execution_seconds']:
+        values=[r[key]*1000 for r in timings];latency[key.removesuffix('_seconds')+'_ms']={
+            'n':len(values),'median':float(np.median(values)),'p95':float(np.percentile(values,95)),'sum':float(sum(values))}
+    return {'scope':'CALIB_SELECTED_ON_SAME_DATA_NOT_INDEPENDENT_TEST_OR_GPT_APPROVAL','calib_used':48,
+        'pairs':rows,'groups':groups,'C0_success_loss_percentage_points':100*loss,
+        'C0_success_loss_target_met':loss<=.1,'actual_gate_candidates':len(timings),'latency':latency,
+        'TEST_authorized':False,'independent_review':'NOT_PERFORMED'}
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True)
     p.add_argument('--repo',type=Path,default=Path.cwd());p.add_argument('--selection',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
-    a=p.parse_args();report=candidates(a.workspace,a.repo,a.selection);write_json(a.output,report);print(json.dumps(report,indent=2))
+    p.add_argument('--pairs',action='store_true')
+    a=p.parse_args();report=candidates(a.workspace,a.repo,a.selection)
+    if a.pairs:report['paired_execution']=pairs(a.workspace,a.repo)
+    write_json(a.output,report);print(json.dumps(report,indent=2))

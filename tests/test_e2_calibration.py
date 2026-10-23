@@ -2,11 +2,22 @@
 import tempfile
 import unittest
 from pathlib import Path
-from tase.e2_ledger import reserve_calibration
+from tase.e2_ledger import reserve_calibration,reserve_candidate
 from tase.calibration import select
 
 
 class CalibrationTests(unittest.TestCase):
+    def test_functional_candidate_split_role_and_original_id_are_preserved(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'CALIB_candidates';meta={'split':'CALIB','epoch':'E2','protocol_id':'TASE-002-v1.0',
+                'calibration_plan_hash':'1'*64,'new_model_requests_permitted':False}
+            for bad in [dict(meta,split='DEV'),dict(meta,new_model_requests_permitted=True)]:
+                with self.assertRaises(ValueError):reserve_candidate(root,'e2-calib-0001-d000',bad)
+            with self.assertRaises(ValueError):reserve_candidate(root,'e2-calib-0025-d000',meta)
+            reserve_candidate(root,'e2-calib-0001-d000',meta)
+            with self.assertRaises(FileExistsError):reserve_candidate(root,'e2-calib-0001-d000',meta)
+            self.assertEqual(len(list(root.glob('*/reservation.json'))),1)
+
     def test_no_test_permission_and_failures_consume_48_cap(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/'CALIB';meta={'split':'CALIB','epoch':'E2','protocol_id':'TASE-002-v1.0','splits_hash':'1'*64,'calibration_plan_hash':'2'*64}

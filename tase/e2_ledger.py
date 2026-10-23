@@ -27,6 +27,9 @@ def reserve_candidate(root,run_id,metadata):
         raise ValueError('only P4 fixed CALIB candidates are authorized here')
     if not re.fullmatch('e2-calib-[0-9]{4}-d[0-9]{3}',run_id) or not re.fullmatch('[0-9a-f]{64}',metadata.get('calibration_plan_hash','')):
         raise ValueError('candidate requires frozen CALIB identity')
+    source,index=run_id.rsplit('-d',1)
+    if not 1<=int(source.rsplit('-',1)[1])<=24 or not 0<=int(index)<90 or metadata.get('new_model_requests_permitted') is not False:
+        raise ValueError('only one of24 B0 sources, at most90 windows, with zero policy requests')
     root.mkdir(parents=True,exist_ok=True);lock=root/'.reservation-lock';lock.mkdir()
     try:
         existing=[p for p in root.iterdir() if p.is_dir() and p!=lock]
