@@ -63,6 +63,13 @@ def statistics(rows):
                         for s in ['B0','G']] for c in ['C0','C2']] for i in range(6,16)] for t in tasks])
     samples=np.stack([rng.integers(0,10,size=(2000,10)) for _ in tasks])
     boot=np.stack([values[t][samples[t]].mean(axis=1) for t in range(3)])
+    for group in groups:
+        draws=boot.mean(axis=0) if group['task']=='ALL' else boot[tasks.index(group['task'])]
+        ci=['C0','C2'].index(group['condition']);si=['B0','G'].index(group['system'])
+        for mi,metric in enumerate(METRICS):
+            group['metrics'][metric]['cluster_percentile95_bounds']=[
+                float(np.percentile(draws[:,ci,si,mi,0],2.5)),
+                float(np.percentile(draws[:,ci,si,mi,1],97.5))]
     contrasts=[]
     for ti,task in enumerate(tasks+['ALL']):
         observed=values.mean(axis=(0,1)) if task=='ALL' else values[ti].mean(axis=0)
@@ -138,7 +145,7 @@ def audit(workspace,repo):
                     worker=read(folder/'shadow_worker_exit.json')
                     require(worker['worker_returncode']==0,'TEST Gate worker failed')
             costs.extend(lines(folder/'monitor_timing.jsonl'))
-            inference.extend(r['inference_roundtrip_ms'] for r in lines(folder/'decisions.jsonl'))
+            inference.extend(r['inference_roundtrip_ms'] for r in lines(folder/'inference_timing.jsonl'))
         observed_onset=next((f['oracle']['first_violation_step'] for f in frames
                             if f.get('oracle',{}).get('first_violation_step') is not None),
                             result.get('first_wrong_lift_step'))

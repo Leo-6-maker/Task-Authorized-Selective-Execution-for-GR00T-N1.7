@@ -300,7 +300,16 @@ def main(argv=None):
                 k: v for k, v in request.items() if not k.startswith('annotation')})
             tick = time.perf_counter()
             result['policy_requests_attempted'] += 1
-            actions, _ = client.get_action(request)
+            returned=False
+            try:
+                actions, _ = client.get_action(request)
+                returned=True
+            finally:
+                if split=='TEST':
+                    append_json(folder/'inference_timing.jsonl',dict(index=n,
+                        inference_roundtrip_ms=(time.perf_counter()-tick)*1000,
+                        status='MODEL_RETURNED' if returned else 'REQUEST_ERROR',
+                        scope='ALL_TEST_REQUESTS_INCLUDING_REJECTED_AND_FAILED_CANDIDATES'))
             latency_ms = (time.perf_counter()-tick)*1000
             result['policy_calls'] += 1
             if a.verify_reset and n == 0:
