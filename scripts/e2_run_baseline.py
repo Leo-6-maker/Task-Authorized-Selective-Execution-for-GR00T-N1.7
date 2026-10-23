@@ -16,7 +16,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.evidence import write_json,sha256
 
 
-def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=None,cell_ids=None):
+def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=None,cell_ids=None,phase='DEV'):
     root=root.resolve(strict=True)
     if not session or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in session):
         raise ValueError('invalid server session ID')
@@ -37,8 +37,9 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                 raise ValueError('external runtime must be an independent task-owned E2 copy')
     if not (root/'runtime/libero-config/config.yaml').is_file():
         raise ValueError('isolated LIBERO configuration not prepared')
-    catalog=json.loads((repo/'configs/e2_dev_cells.json').read_text())
-    cells=catalog['planned_cells'][:6]
+    if phase not in ['DEV','CALIB']:raise ValueError('TEST is not authorized')
+    catalog=json.loads((repo/'configs'/('e2_dev_cells.json' if phase=='DEV' else 'e2_calib_cells.json')).read_text())
+    cells=catalog['planned_cells'][:6] if phase=='DEV' else catalog['planned_cells'][:24]
     if cell_ids:
         declared={c['run_id']:c for c in catalog['planned_cells']+catalog.get('diagnostic_cells',[])}
         if len(set(cell_ids))!=len(cell_ids) or not set(cell_ids)<=set(declared):raise ValueError('undeclared or duplicate cells')
@@ -49,7 +50,7 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
         subprocess.run([str(sim_python),str(repo/'scripts/e2_audit_validation.py'),'--workspace',str(root),
             '--plan',str(repo/'configs/e2_shadow_plan.json'),'--output',str(root/'operator'/f'{session}.p2-audit.json')],
             cwd=repo,env=audit_env,check=True,stdout=subprocess.DEVNULL)
-    if any((root/'runs/DEV'/cell['run_id']).exists() for cell in cells):
+    if any((root/'runs'/phase/cell['run_id']).exists() for cell in cells):
         raise ValueError('baseline already started; audit existing IDs before explicit continuation')
     if any(c['condition']=='C2' for c in cells):
         # The lightweight operator interpreter need not contain NumPy. Audit
@@ -65,8 +66,13 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                 successes.setdefault(row['task'],set()).add(row['init_index'])
         if sum({0,1}<=indices for indices in successes.values())<2:
             raise ValueError('P1 needs at least two tasks completing both declared normal initializations')
-        for cell in catalog['planned_cells'][:6]:
+        dev_catalog=json.loads((repo/'configs/e2_dev_cells.json').read_text())
+        for cell in dev_catalog['planned_cells'][:6]:
             if not (root/'runs'/f"{cell['run_id']}.exit.json").exists():raise ValueError('close baseline attempts before C2')
+    if phase=='CALIB':
+        env_audit=os.environ.copy();env_audit.update(CUDA_VISIBLE_DEVICES='-1',PYTHONNOUSERSITE='1')
+        subprocess.run([str(sim_python),str(repo/'scripts/e2_audit_pairs.py'),'--workspace',str(root),'--repo',str(repo),
+            '--output',str(root/'operator'/f'{session}.p3-audit.json')],cwd=repo,env=env_audit,check=True,stdout=subprocess.DEVNULL)
     model=json.loads((root/'checkpoints/download_manifest.json').read_text())
     for row in model['files']:
         path=root/'checkpoints'/row['path']
@@ -124,6 +130,7 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                 str(sim_python),'-u','-m','tase.epoch_runner','--workspace',str(root),'--run-id',run_id,
                 '--task',cell['task'],'--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system',cell['system'],
                 '--allocation-record',str(permission),'--port',str(port)]
+            if phase=='CALIB':command.extend(['--config',str(repo/'configs/e2_calib.json')])
             if run_id=='e2-dev-0001':command.append('--verify-reset')
             with (folder/'stdout.txt').open('x') as stdout,(folder/'stderr.txt').open('x') as stderr:
                 process=subprocess.Popen(command,cwd=repo,env=env,stdout=stdout,stderr=stderr)
@@ -138,7 +145,7 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                     write_json(folder/'operator_timeout.json',{'timeout_seconds':900,
                         'wrapper_returncode':process.returncode})
                     raise
-            result=json.loads((root/'runs/DEV'/run_id/'result.json').read_text())
+            result=json.loads((root/'runs'/phase/run_id/'result.json').read_text())
             rows.append({'run_id':run_id,'status':result['status'],'exit_code':process.returncode,
                          'inner_steps':result['inner_steps'],'official_success':result['official_success']})
             write_json(folder/'operator_exit.json',rows[-1]);print(json.dumps(rows[-1]),flush=True)
@@ -164,4 +171,5 @@ if __name__=='__main__':
     p.add_argument('--session-id',required=True)
     p.add_argument('--server-python',type=Path);p.add_argument('--sim-python',type=Path)
     p.add_argument('--cells',nargs='+')
-    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id,a.server_python,a.sim_python,a.cells)
+    p.add_argument('--phase',choices=['DEV','CALIB'],default='DEV')
+    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id,a.server_python,a.sim_python,a.cells,a.phase)

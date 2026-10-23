@@ -11,6 +11,7 @@
 - 最新[普通CPU39项](../reports/E2/cpu/07a8a49a/normal.json)与[-O39项](../reports/E2/cpu/07a8a49a/optimized.json)均exit0；真实数据普通/-O安全审计也一致，非GPT验收。
 - [六格真实baseline](../reports/E2/baseline_report.md)已完成场景覆盖：5 SUCCESS、1满720步TIME_LIMIT；另保留原0006的537步中断/SIGTERM143，共[7个attempt](../reports/E2/baseline.csv)。唯一诊断0019退出0，68动作/观测和537控制/完整状态摘要与原重叠前缀一致；关闭接口修复真实退出0。当前DEV7/24，一致性0/96，CALIB0；TEST未授权。
 - 新增六个C2 B0全部结束：4 SUCCESS、2 TIME_LIMIT；cream cheese两初态首次wrong lift为60/67控制步，实际272个请求的指令/seed已核对。[C2与shadow报告](../reports/E2/shadow_validation_report.md)：16个不同快照、32/32真实短比较PASS，252预测控制、0模型调用；普通/-O原件复算一致，所有controller/worker退出0。当前总DEV13/24、短一致性32/96、CALIB0，TEST未授权。下一步为六个已声明DEV G配对格；当前结果未由GPT独立验收。
+- [六个真实DEV Gate配对](../reports/E2/gate_dev_report.md)已结束，所有主动作/完整快照/RNG及实际状态前缀一致；5 SUCCESS、1 SEMANTIC_ABORT。cream cheese C2在56步后拒绝下一候选、候选主执行0，B0首次事件60步。当前DEV19/24、短一致性32/96；117个功能预测不混入独立短验证分母。条件CALIB初态/候选规则正在冻结，TEST仍待R2；无GPT独立结果验收。
 - 检查下载时已定位旧项目缓存入口；旧结果仍 `NOT_INDEPENDENTLY_VERIFIED`，未恢复/重审旧账本，后续消费 UNKNOWN。下面 Issue #6 的恢复阻塞已由 R004 取代，不能用来停止 E2。
 
 ## 历史 Issue #6 接手状态（其恢复前置条件已由 R004 取代）

@@ -114,4 +114,8 @@ class E2Context:
                 raise RuntimeError('shadow modified main state or policy RNG')
 
     def close(self):
-        if self.shadow is not None:self.shadow.close()
+        if self.shadow is not None:
+            try:self.shadow.close()
+            finally:
+                write_json(self.folder/'shadow_worker_exit.json',{'worker_pid':self.shadow.process.pid,
+                    'worker_returncode':self.shadow.process.exitcode,'scope':'ACTUAL_OWNED_WORKER_JOIN'})

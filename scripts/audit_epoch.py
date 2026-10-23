@@ -22,7 +22,8 @@ def lines(path):return [json.loads(s) for s in path.read_text().splitlines()] if
 
 def audit(workspace,config):
     cfg=read(config);require(cfg['run_epoch']=='E2' and cfg['protocol_id']=='TASE-002-v1.0','wrong epoch')
-    root=workspace/'runs/DEV';folders=sorted(p for p in root.iterdir() if p.is_dir() and p.name!='.reservation-lock')
+    split=cfg['split'];require(split in ['DEV','CALIB'],'TEST audit/run requires frozen authorized protocol')
+    root=workspace/'runs'/split;folders=sorted(p for p in root.iterdir() if p.is_dir() and p.name!='.reservation-lock')
     require(len(folders)<=cfg['maximum_episode_attempts'],'budget exceeded')
     rows=[];ordinals=[]
     for folder in folders:
@@ -44,6 +45,22 @@ def audit(workspace,config):
             require(result[key]==reservation[key],'reservation/result mismatch: '+key)
         require(result['config_hash']==sha256(config),'config changed')
         require(result['runtime_lock_hash']==sha256(config.parent/'runtime_lock_E2.json'),'runtime identity changed')
+        gate_k=cfg['gate_k']
+        if split=='CALIB':
+            for key in ['splits_hash','calibration_plan_hash','planned_init_hash']:
+                require(result[key]==reservation[key],'CALIB reservation mismatch: '+key)
+            require(result['splits_hash']==sha256(config.parent/'e2_splits.json') and
+                    result['calibration_plan_hash']==sha256(config.parent/'e2_calibration_plan.json'),'CALIB frozen identity differs')
+            declared=read(config.parent/'e2_calib_cells.json')['planned_cells']
+            bound=next(c for c in declared if c['run_id']==folder.name)
+            require(all(result[key]==value for key,value in bound.items()),'CALIB cell differs')
+            if result['system']=='G':
+                selection=read(config.parent/'e2_calib_selection.json')
+                require(result['calibration_selection_hash']==reservation['calibration_selection_hash']==sha256(config.parent/'e2_calib_selection.json'),'CALIB selected operating point differs')
+                require(selection['status']=='SELECTED_WITHIN_PREDECLARED_RULE','invalid selection');gate_k=selection['selected_k']
+                if result['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT']:
+                    worker=read(folder/'shadow_worker_exit.json')
+                    require(type(worker['worker_pid']) is int and worker['worker_returncode']==0,'CALIB Gate worker failed exit')
         names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name!='artifact_manifest.json'}
         verify_manifest(workspace,read(folder/'artifact_manifest.json'),required=names,source_run=folder.name)
         exit_file=workspace/'runs'/f'{folder.name}.exit.json'
@@ -137,7 +154,7 @@ def audit(workspace,config):
                 for frame in frames[:before]:
                     for name in history:history[name]=history[name]+1 if frame['left_contacts'][name] and frame['right_contacts'][name] else 0
                 require(views['actual_contact_history']==history and views['trusted_target']==spec.target,'Gate historical contacts/target changed')
-                computed=score_contacts(views['views'],list(spec.objects),spec.target,views['actual_contact_history'],before,cfg['gate_k'])
+                computed=score_contacts(views['views'],list(spec.objects),spec.target,views['actual_contact_history'],before,gate_k)
                 require(all(gate[k]==v for k,v in computed.items()),'contact Gate decision differs')
                 if gate['decision']=='ACCEPT':
                     numeric=lambda frame:{**frame,'gripper':np.asarray(frame['gripper'])}
@@ -157,7 +174,7 @@ def audit(workspace,config):
         rows.append({k:result.get(k) for k in ['run_id','task','init_index','condition','system','status','official_success','inner_steps','policy_calls','policy_requests_attempted','first_wrong_lift_step','exit_code','repo_sha','config_hash','runtime_lock_hash']}|{'slot_consumed':True,'complete':complete,'result_present':True,'process_receipts_complete':complete})
     require(sorted(ordinals)==list(range(1,len(folders)+1)),'reservation ordinals missing/duplicated')
     return {'epoch':'E2','protocol_id':'TASE-002-v1.0','scope':'JSON_NPZ_BYTE_AUDIT_NO_PICKLE_OR_SIM',
-            'dev_used':len(folders),'dev_cap':cfg['maximum_episode_attempts'],'rows':rows,
+            ('dev_used' if split=='DEV' else 'calib_used'):len(folders),('dev_cap' if split=='DEV' else 'calib_cap'):cfg['maximum_episode_attempts'],'rows':rows,
             'all_process_receipts_complete':all(r['process_receipts_complete'] for r in rows),
             'all_attempt_results_present':all(r['result_present'] for r in rows),
             'independent_review':'NOT_PERFORMED_BY_THIS_EXECUTOR'}

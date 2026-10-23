@@ -21,7 +21,7 @@ def main():
     p.add_argument('--workspace', type=Path, required=True)
     p.add_argument('--run-id', required=True)
     p.add_argument('--task', choices=TASKS, required=True)
-    p.add_argument('--init-index', type=int, choices=[0, 1], required=True)
+    p.add_argument('--init-index', type=int, required=True)
     p.add_argument('--config', type=Path, default=Path('configs/e2_dev.json'))
     p.add_argument('--condition', choices=['C0','C2'], default='C0')
     p.add_argument('--system', choices=['B0','G'], default='B0')
@@ -32,18 +32,20 @@ def main():
     p.add_argument('--m2', action='store_true', help='R002 bounded DEV capture; no Gate intervention')
     a = p.parse_args()
     config = json.loads(a.config.read_text())
-    if config['protocol_id'] != 'TASE-002-v1.0' or config['run_epoch'] != 'E2' or config['split'] != 'DEV':
-        raise ValueError('only authorized E2 DEV is currently implemented')
+    split=config['split']
+    if config['protocol_id'] != 'TASE-002-v1.0' or config['run_epoch'] != 'E2' or split not in ['DEV','CALIB']:
+        raise ValueError('only E2 DEV and conditional CALIB; TEST requires R2')
+    if split=='DEV' and a.init_index not in [0,1]:raise ValueError('DEV initializations remain fixed')
     if a.m2 or a.probe_only:
         raise ValueError('E2 does not reuse legacy M2 IDs or unplanned probes')
     scenario_number=list(TASKS).index(a.task)*10+a.init_index*2+(a.condition=='C2')
-    cell={'run_id':a.run_id,'epoch':'E2','protocol_id':'TASE-002-v1.0','split':'DEV',
+    cell={'run_id':a.run_id,'epoch':'E2','protocol_id':'TASE-002-v1.0','split':split,
           'task':a.task,'init_index':a.init_index,'condition':a.condition,'system':a.system,
-          'scenario_id':f'E2-DEV-{a.task}-i{a.init_index}-{a.condition}',
+          'scenario_id':f'E2-{split}-{a.task}-i{a.init_index}-{a.condition}',
           'policy_seed':config['policy_seed_base']+scenario_number,
           'environment_seed':config['environment_seed_base']+scenario_number,
           'policy_target':config['c2_policy_targets'][a.task] if a.condition=='C2' else a.task}
-    declared=json.loads(Path('configs/e2_dev_cells.json').read_text())
+    declared=json.loads(Path('configs/e2_dev_cells.json' if split=='DEV' else 'configs/e2_calib_cells.json').read_text())
     planned=declared['planned_cells']+declared.get('diagnostic_cells',[])
     bound=next((row for row in planned if row['run_id']==a.run_id),None)
     if bound is None or any(cell[key]!=value for key,value in bound.items()):
@@ -55,24 +57,45 @@ def main():
     if dirty:
         raise ValueError('commit implementation before runtime; dirty worktree refused')
     runtime_lock_hash = sha256(a.config.parent/'runtime_lock_E2.json')
+    extra={}
+    if split=='CALIB':
+        from scripts.e2_audit_pairs import summarize
+        summarize(a.workspace,Path.cwd())
+        splits=json.loads(Path('configs/e2_splits.json').read_text())
+        selected_init=next((r for r in splits['rows'] if r['task']==a.task and r['init_index']==a.init_index and r['split']=='CALIB'),None)
+        if selected_init is None:raise ValueError('CALIB cell is outside frozen holdout')
+        extra={'splits_hash':sha256('configs/e2_splits.json'),'calibration_plan_hash':sha256('configs/e2_calibration_plan.json'),
+               'planned_init_hash':selected_init['init_hash']}
+        plan=json.loads(Path('configs/e2_calibration_plan.json').read_text())
+        if plan['splits_hash']!=extra['splits_hash'] or plan['cells_hash']!=sha256('configs/e2_calib_cells.json') or plan['TEST_authorized'] is not False:
+            raise ValueError('CALIB plan/split/cell binding differs')
+        if a.system=='G':
+            selection=json.loads(Path('configs/e2_calib_selection.json').read_text())
+            if selection['status']!='SELECTED_WITHIN_PREDECLARED_RULE' or selection['calibration_plan_hash']!=extra['calibration_plan_hash']:
+                raise ValueError('CALIB G requires valid frozen selection')
+            extra['calibration_selection_hash']=sha256('configs/e2_calib_selection.json');config=dict(config,gate_k=selection['selected_k'])
     if a.system=='G':
         # Recompute all committed short-check receipts before any DEV Gate
         # reservation/model call. This is a machine gate under R004, not review.
         from scripts.e2_audit_validation import audit as audit_validation
         audit_validation(a.workspace,Path('configs/e2_shadow_plan.json'))
-    folder = reserve_episode(a.workspace / 'runs/DEV', a.run_id, {
-        'split': 'DEV', 'task': a.task, 'init_index': a.init_index,
+    metadata={
+        'split': split, 'task': a.task, 'init_index': a.init_index,
         'repo_sha': repo_sha, 'config_hash': sha256(a.config), 'runtime_lock_hash': runtime_lock_hash,
         'probe_only': a.probe_only, 'started_at_sgt': now_sgt(),
-        **cell}, limit=config['maximum_episode_attempts'])
+        **cell,**extra}
+    if split=='DEV':folder=reserve_episode(a.workspace/'runs/DEV',a.run_id,metadata,limit=config['maximum_episode_attempts'])
+    else:
+        from .e2_ledger import reserve_calibration
+        folder=reserve_calibration(a.workspace/'runs/CALIB',a.run_id,metadata)
     start = time.perf_counter()
-    result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split='DEV',
+    result = dict(run_id=a.run_id, task=a.task, init_index=a.init_index, split=split,
                   repo_sha=repo_sha, config_hash=sha256(a.config), runtime_lock_hash=runtime_lock_hash,
                   status='STARTED', official_success=False, policy_calls=0,
                   policy_requests_attempted=0,
                   inner_steps=0, settling_steps=0, exit_code=1,
                   started_at_sgt=now_sgt())
-    result.update(**cell)
+    result.update(**cell,**extra)
     native = wrapped = client = video = m2 = None
     try:
         import numpy as np
@@ -103,6 +126,8 @@ def main():
             initial_states = torch.load(init_file, map_location='cpu', weights_only=True)
         selected_init = np.asarray(initial_states[a.init_index], dtype=np.float64)
         np.save(folder / 'benchmark_init.npy', selected_init, allow_pickle=False)
+        if split=='CALIB' and sha256(folder/'benchmark_init.npy')!=extra['planned_init_hash']:
+            raise ValueError('official initialization differs from committed split content')
         result.update(init_hash=sha256(folder / 'benchmark_init.npy'),
                       init_file_sha256=sha256(init_file), bddl_sha256=sha256(bddl),
                       full_task_name=task.name, native_language=task.language)
