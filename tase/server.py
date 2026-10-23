@@ -88,11 +88,10 @@ def main():
             import random
             import numpy as np
 
-            def reset_and_seed(payload):
+            def reset_and_seed(scenario_id, seed):
                 nonlocal scenario
-                if not isinstance(payload, dict) or set(payload) != {'scenario_id', 'seed'}:
-                    raise ValueError('reset_and_seed schema')
-                seed = payload['seed']
+                # Native PolicyServer dispatches input data as keyword arguments.
+                payload = {'scenario_id': scenario_id, 'seed': seed}
                 if type(seed) is not int or not 0 <= seed < 2**32:
                     raise ValueError('invalid scenario seed')
                 if not isinstance(payload['scenario_id'], str) or not payload['scenario_id']:
