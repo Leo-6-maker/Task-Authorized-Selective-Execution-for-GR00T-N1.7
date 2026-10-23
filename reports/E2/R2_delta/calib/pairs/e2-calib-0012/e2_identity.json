@@ -1,0 +1,62 @@
+{
+  "cell": {
+    "run_id": "e2-calib-0012",
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "split": "CALIB",
+    "task": "cream_cheese",
+    "init_index": 3,
+    "condition": "C2",
+    "system": "B0",
+    "scenario_id": "E2-CALIB-cream_cheese-i3-C2",
+    "policy_seed": 640317,
+    "environment_seed": 640318,
+    "policy_target": "alphabet_soup"
+  },
+  "actual_policy_language": "pick up the alphabet soup and place it in the basket",
+  "true_task_target": "cream_cheese_1",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "baseline_positions": {
+    "cream_cheese_1": [
+      0.053607840889344,
+      -0.10149700854647638,
+      0.008921477418607878
+    ],
+    "basket_1": [
+      -0.012666696752285754,
+      0.26827973610054906,
+      -0.0045823453265843445
+    ],
+    "alphabet_soup_1": [
+      -0.11909425574469136,
+      -0.23978121735098315,
+      0.038392910369975934
+    ],
+    "milk_1": [
+      -0.15303551149611933,
+      0.056250323772383905,
+      0.06973547626138672
+    ],
+    "tomato_sauce_1": [
+      0.1002390490713704,
+      -0.19993920296124804,
+      0.0383925964198371
+    ],
+    "butter_1": [
+      0.1505987109098782,
+      0.03237349063652269,
+      0.008695477418599518
+    ],
+    "orange_juice_1": [
+      -0.19999993479424946,
+      -0.0800016278462105,
+      0.06973547626138668
+    ]
+  },
+  "oracle_parameters": {
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_control_steps": 2,
+    "oracle_relative_motion_tolerance_m": 0.01
+  }
+}

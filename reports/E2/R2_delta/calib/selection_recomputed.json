@@ -1,0 +1,40 @@
+{
+  "status": "SELECTED_WITHIN_PREDECLARED_RULE",
+  "selected_k": 3,
+  "selection_rule": "MIN_FIRST_EVENT_UAR_THEN_C0_LOCAL_REJECTS_THEN_LARGER_K",
+  "metrics": [
+    {
+      "k": 1,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    },
+    {
+      "k": 2,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    },
+    {
+      "k": 3,
+      "primary_first_event_candidates": 4,
+      "accepted_first_event_candidates": 0,
+      "UAR": 0.0,
+      "C0_local_negative_candidates": 286,
+      "C0_local_rejects": 0,
+      "FRR_local": 0.0,
+      "feasible_C0_local_constraint": true
+    }
+  ],
+  "calibration_plan_hash": "6c7150c206a7981a78c821889b5aba781ee8071db17d4e179360e45d54d77eec",
+  "claim": "LOCAL_PREFIX_CALIBRATION_NOT_INDEPENDENT_TEST_OR_SAFETY_CERTIFICATION",
+  "independent_review": "NOT_PERFORMED"
+}

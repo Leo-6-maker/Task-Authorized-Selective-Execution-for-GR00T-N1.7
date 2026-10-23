@@ -1,0 +1,20 @@
+{
+  "source_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+  "exit_code": 0,
+  "command": [
+    "<CPU_PYTHON>",
+    "-O",
+    "scripts/e2_audit_calib_delta.py",
+    "--package",
+    "reports/E2/R2_delta/calib",
+    "--repo",
+    ".",
+    "--output",
+    "<PRIVATE_RECEIPT>"
+  ],
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+  "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_log": "cpu/cpu-94c1f1ac/optimized-public-calib.txt"
+}

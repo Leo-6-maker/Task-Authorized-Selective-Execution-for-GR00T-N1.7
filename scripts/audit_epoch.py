@@ -20,9 +20,9 @@ def read(path):return json.loads(path.read_text())
 def lines(path):return [json.loads(s) for s in path.read_text().splitlines()] if path.exists() else []
 
 
-def audit(workspace,config):
+def audit(workspace,config, *, test_audit=False):
     cfg=read(config);require(cfg['run_epoch']=='E2' and cfg['protocol_id']=='TASE-002-v1.0','wrong epoch')
-    split=cfg['split'];require(split in ['DEV','CALIB'],'TEST audit/run requires frozen authorized protocol')
+    split=cfg['split'];require(split in ['DEV','CALIB'] or (split=='TEST' and test_audit),'TEST audit requires independent TEST auditor')
     root=workspace/'runs'/split;folders=sorted(p for p in root.iterdir() if p.is_dir() and p.name!='.reservation-lock')
     require(len(folders)<=cfg['maximum_episode_attempts'],'budget exceeded')
     rows=[];ordinals=[]
@@ -61,7 +61,8 @@ def audit(workspace,config):
                 if result['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT']:
                     worker=read(folder/'shadow_worker_exit.json')
                     require(type(worker['worker_pid']) is int and worker['worker_returncode']==0,'CALIB Gate worker failed exit')
-        names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name!='artifact_manifest.json'}
+        excluded={'artifact_manifest.json'}|({'supervisor_exit.json','reconciliation.json'} if split=='TEST' else set())
+        names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name not in excluded}
         verify_manifest(workspace,read(folder/'artifact_manifest.json'),required=names,source_run=folder.name)
         exit_file=workspace/'runs'/f'{folder.name}.exit.json'
         start_file=workspace/'runs'/f'{folder.name}.exit.started.json'
@@ -147,6 +148,9 @@ def audit(workspace,config):
             if result['system']=='G' and prediction_file.exists() and gate['decision']!='ERROR':
                 views=next(r for r in lines(folder/'gate_contact_views.jsonl') if r['index']==index)
                 prediction=read(prediction_file);snapshot=next(s for s in snapshots if s['decision']==index)
+                if split=='TEST':
+                    from tase.test_context import validate_prediction_envelope
+                    validate_prediction_envelope(prediction,snapshot['snapshot_hash'],before)
                 require(prediction['status']=='PASS' and 1<=prediction['steps']==len(prediction['frames'])<=8,'invalid prediction length/status')
                 require(prediction['source_snapshot_hash']==prediction['restored_snapshot_hash']==snapshot['snapshot_hash'],'prediction snapshot binding')
                 require(views['views']==[contact_view(frame,spec.objects) for frame in prediction['frames']],'Gate view differs from actual prediction')
@@ -174,7 +178,7 @@ def audit(workspace,config):
         rows.append({k:result.get(k) for k in ['run_id','task','init_index','condition','system','status','official_success','inner_steps','policy_calls','policy_requests_attempted','first_wrong_lift_step','exit_code','repo_sha','config_hash','runtime_lock_hash']}|{'slot_consumed':True,'complete':complete,'result_present':True,'process_receipts_complete':complete})
     require(sorted(ordinals)==list(range(1,len(folders)+1)),'reservation ordinals missing/duplicated')
     return {'epoch':'E2','protocol_id':'TASE-002-v1.0','scope':'JSON_NPZ_BYTE_AUDIT_NO_PICKLE_OR_SIM',
-            ('dev_used' if split=='DEV' else 'calib_used'):len(folders),('dev_cap' if split=='DEV' else 'calib_cap'):cfg['maximum_episode_attempts'],'rows':rows,
+            split.lower()+'_used':len(folders),split.lower()+'_cap':cfg['maximum_episode_attempts'],'rows':rows,
             'all_process_receipts_complete':all(r['process_receipts_complete'] for r in rows),
             'all_attempt_results_present':all(r['result_present'] for r in rows),
             'independent_review':'NOT_PERFORMED_BY_THIS_EXECUTOR'}

@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-23T23:28:43.693315+08:00",
+  "wrapper_pid": 2929019,
+  "child_pid": 2929025,
+  "command": [
+    "<PRIVATE_PATH>",
+    "-u",
+    "<PRIVATE>/course-repo/scripts/e2_calibrate_candidates.py",
+    "--workspace",
+    "<PRIVATE>",
+    "--repo",
+    "<PRIVATE>/course-repo",
+    "--output",
+    "<PRIVATE>/operator/calib-candidates-26/selection.json"
+  ]
+}

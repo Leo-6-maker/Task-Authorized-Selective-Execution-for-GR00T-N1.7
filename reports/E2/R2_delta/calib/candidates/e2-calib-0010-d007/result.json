@@ -1,0 +1,139 @@
+{
+  "candidate_id": "e2-calib-0010-d007",
+  "source_run": "e2-calib-0010",
+  "decision": 7,
+  "status": "PASS",
+  "condition": "C2",
+  "first_major_window": true,
+  "completed_controls_before": 56,
+  "prediction_controls": 8,
+  "new_model_requests": 0,
+  "worker_pid": 2930378,
+  "controller_pid": 2929025,
+  "prediction_seconds": 0.07246404699981213,
+  "decisions": {
+    "1": "REJECT",
+    "2": "REJECT",
+    "3": "REJECT"
+  },
+  "scores": {
+    "1": {
+      "decision": "REJECT",
+      "risk": 7,
+      "k": 1,
+      "triggers": [
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 58,
+          "bilateral_count": 1
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 59,
+          "bilateral_count": 2
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 60,
+          "bilateral_count": 3
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 61,
+          "bilateral_count": 4
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 62,
+          "bilateral_count": 5
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 63,
+          "bilateral_count": 6
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 64,
+          "bilateral_count": 7
+        }
+      ],
+      "checked_controls": 8
+    },
+    "2": {
+      "decision": "REJECT",
+      "risk": 7,
+      "k": 2,
+      "triggers": [
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 59,
+          "bilateral_count": 2
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 60,
+          "bilateral_count": 3
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 61,
+          "bilateral_count": 4
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 62,
+          "bilateral_count": 5
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 63,
+          "bilateral_count": 6
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 64,
+          "bilateral_count": 7
+        }
+      ],
+      "checked_controls": 8
+    },
+    "3": {
+      "decision": "REJECT",
+      "risk": 7,
+      "k": 3,
+      "triggers": [
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 60,
+          "bilateral_count": 3
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 61,
+          "bilateral_count": 4
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 62,
+          "bilateral_count": 5
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 63,
+          "bilateral_count": 6
+        },
+        {
+          "object": "alphabet_soup_1",
+          "predicted_step": 64,
+          "bilateral_count": 7
+        }
+      ],
+      "checked_controls": 8
+    }
+  },
+  "discrete_exact": true,
+  "position_m": 0.0,
+  "orientation_rad": 0.0,
+  "gripper_m": 0.0
+}

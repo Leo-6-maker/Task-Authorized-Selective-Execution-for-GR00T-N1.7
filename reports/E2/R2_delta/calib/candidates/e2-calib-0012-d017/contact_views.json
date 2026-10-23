@@ -1,0 +1,182 @@
+{
+  "views": [
+    {
+      "step": 137,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 138,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 139,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 140,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 141,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 142,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 143,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    },
+    {
+      "step": 144,
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": true,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      }
+    }
+  ],
+  "trusted_target": "cream_cheese_1",
+  "actual_contact_history": {
+    "cream_cheese_1": 0,
+    "basket_1": 0,
+    "alphabet_soup_1": 0,
+    "milk_1": 0,
+    "tomato_sauce_1": 0,
+    "butter_1": 0,
+    "orange_juice_1": 0
+  }
+}

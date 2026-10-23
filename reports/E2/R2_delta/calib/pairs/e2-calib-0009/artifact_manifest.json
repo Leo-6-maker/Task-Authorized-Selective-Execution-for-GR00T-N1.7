@@ -1,0 +1,570 @@
+[
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-000.npz",
+    "bytes": 1797,
+    "sha256": "1ceffc721e7f2b04a3679feb999bf0a8160601bf8609010d331ae0a6989fbcd9",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-001.npz",
+    "bytes": 1804,
+    "sha256": "64955e32eb64e1500eb22122e677351d96cbedfb2c17338bc3fb8831bb4ae8a4",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-002.npz",
+    "bytes": 1788,
+    "sha256": "adfc7b9828cb54945017eac28a0d1b87285741d7c4ff5cb9a3e8e7a5402c2760",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-003.npz",
+    "bytes": 1800,
+    "sha256": "3fd40369f96eae13a6298e2c1c3d5588600cc6ffec178aa1ebab738c674e039e",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-004.npz",
+    "bytes": 1786,
+    "sha256": "a58cf4b76ff3f0119c2e2bb0ea2af335e692e4e00e44d795f2af8e86178b9eec",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-005.npz",
+    "bytes": 1798,
+    "sha256": "827045112f7f9a5ffb3df0d82123b0ddcf4a61101c3fc59a83caec120129306a",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-006.npz",
+    "bytes": 1774,
+    "sha256": "6dedaf50a9c23fe568937783d44fcbf2d4d3c236762b6f69d287835239345e33",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-007.npz",
+    "bytes": 1765,
+    "sha256": "218990281197973517dd6804a9980b051debb1c9fa2e0eb7bb5b16935d687172",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-008.npz",
+    "bytes": 1755,
+    "sha256": "221724afa4c4053301764da9f360c05663e30f024abac70cfff71a99a7fcad9b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-009.npz",
+    "bytes": 1779,
+    "sha256": "209bcda4b7f50ad6f584d36864ec2fb5b56afe412cc91fef0c1af3a506df5594",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-010.npz",
+    "bytes": 1735,
+    "sha256": "7267891862d004e08ab77cf1bde92758f4ef98f16ee1dd4a3353efe4a95a8c7b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-011.npz",
+    "bytes": 1757,
+    "sha256": "e88885e2c0fa4aecc6fd9c3fcfd9c574f5f609e1176e7302b6bff21495ed21ea",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-012.npz",
+    "bytes": 1778,
+    "sha256": "36bf41ffa8466b82391ff70aec3503fdb64908584cfb1890743506a7dedebd0f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-013.npz",
+    "bytes": 1797,
+    "sha256": "c30be529d3138c56cc7c41e604602f3ca1ef545ec1057bf9a7b82ef2efcddac9",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-014.npz",
+    "bytes": 1810,
+    "sha256": "bab14e9e4f4144caf04e952965a820bc19a8fa5756281a4be9e786e9984fa4ae",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/action-015.npz",
+    "bytes": 1778,
+    "sha256": "2b95cd2deec27d6a2fc5d460c0c5c4675c2e68fb0daa5f7ae7c05fd21b15d29b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/actual_requests.jsonl",
+    "bytes": 3782,
+    "sha256": "b7a0e48f6a52cdeda8cc3acf103055154a8d2a9e97e5b90e465376512c915861",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/benchmark_init.npy",
+    "bytes": 1008,
+    "sha256": "6dee209e1987a0115683a14cb1f44e0084f84b7d03adc1ab52ff824bc613b319",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/control_attempts.jsonl",
+    "bytes": 25694,
+    "sha256": "5a5911ad164db0ef9ed2e284d4cc34ace978fa4700c2fab6f467afea20dab021",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/control_trace.npz",
+    "bytes": 73856,
+    "sha256": "f35b80f52224fd128e3d7d46c1f1efbc27e40882c30532a64753070132bee583",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/controller.json",
+    "bytes": 596,
+    "sha256": "dcaa08654c44628d7e615bcb1b6f360b29c781b4f9f00c7a00eecc8899746551",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/decisions.jsonl",
+    "bytes": 2707,
+    "sha256": "d01a93ff4f7deb3c40a1cef5c87b6fd74510df1e5ae113e6901aa4ae63cf7cc5",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/e2_identity.json",
+    "bytes": 1484,
+    "sha256": "86fdc4ce12e846e4c680b4f1725e2a4873536556ff6d61563eeac392957d79a9",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/gate_decisions.jsonl",
+    "bytes": 2698,
+    "sha256": "a19ec89ad33a9f2bb2f4aa651f84140c8c482295ebfd7dada314e239a4969153",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/horizon.json",
+    "bytes": 126,
+    "sha256": "ea976b040046e5fce3392df26ea9f5b18fb009d232b041c00fb785c54dbaeb33",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/object_catalog.json",
+    "bytes": 912,
+    "sha256": "544274472036127b5b17b0b3381b4bb1486a31335f43f5de7ad8e3ebbed051e3",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-000.npz",
+    "bytes": 199441,
+    "sha256": "54d3eedf2f2996093d54261a23d5b2d2cecd241478ec1689c180b51acbdbfe3a",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-001.npz",
+    "bytes": 200702,
+    "sha256": "bd11c68041da2e51f6176f1506bd9f8a970ef99d36d7db638c1069b87195cb91",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-002.npz",
+    "bytes": 196845,
+    "sha256": "36edec74a3a04552ec9df6f70868646ebaeddabe483d87b4c0c761f768dda78f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-003.npz",
+    "bytes": 188560,
+    "sha256": "832dd660a355a3c3a5185d7318b9144f9ababc853bddf5101e294ed9f461dc5f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-004.npz",
+    "bytes": 188989,
+    "sha256": "063f7c852c178b9cf1f27826492d8303c018118865ea622e72221a601c65a596",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-005.npz",
+    "bytes": 188113,
+    "sha256": "eebdff253d50aad4f36ec24636cb7614642a6e047405569e472260d0e4e6f97f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-006.npz",
+    "bytes": 176895,
+    "sha256": "0120edf6d182b99bad237d36398be024236f9a5eef23c341ae3a1af43e00e973",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-007.npz",
+    "bytes": 172386,
+    "sha256": "29a89dce17fa5040b2c9f2e64146541a496737019e753665ed9f4802f5e3b19f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-008.npz",
+    "bytes": 176734,
+    "sha256": "0e416423a313f81bed1e4b249a8fdf6fa4ec638d9758f12f95fcd94b41e97856",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-009.npz",
+    "bytes": 192623,
+    "sha256": "58db4e00591ee600980db72db8c329eac954e60fa33a249d7cfceee435b47f3c",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-010.npz",
+    "bytes": 194362,
+    "sha256": "a91b8d4cba48d1415a605f803daf117f53d1bc742369fdc142f52134bed71de3",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-011.npz",
+    "bytes": 197261,
+    "sha256": "9cfbf69b5024b0d9ec83745454c947f3a32af6f53c52378b8c2b31b98ca8b4ea",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-012.npz",
+    "bytes": 198009,
+    "sha256": "61cd198e2d4ecf83e9594efafc777e7e5a4e657875cc63764961cc5389b778b4",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-013.npz",
+    "bytes": 195317,
+    "sha256": "a0b52466e2eca9115604674e1236e61801fe2e103475b23341ceaa9a998fcf9a",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-014.npz",
+    "bytes": 192800,
+    "sha256": "5b9d53d99f16cb07ffe9b00b4bd0611bb0a5def22f7d993acc403e12220d2e6d",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation-015.npz",
+    "bytes": 194799,
+    "sha256": "71d84eaee9c617b4514f3ec828bc179b89dd09f2a1da60437de3f520fa93143b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/observation_schema.json",
+    "bytes": 819,
+    "sha256": "01adc9f2e080668b94f3e37fb8ceecbd19bbe750e118e48eb6fc1e2167bcda94",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/physical_frames.jsonl",
+    "bytes": 401894,
+    "sha256": "9648580bd771df0a7210abb6b693d1fda859c905e302733b0ec2762fcf5f4752",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/policy_reset.json",
+    "bytes": 303,
+    "sha256": "fd664cbfad7bcf4e473f323a2e63a78fe2fafb8006b1db9a4f1f6fdcbe770433",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/reservation.json",
+    "bytes": 955,
+    "sha256": "a4f823bcbe3ca7e70be2e9a3e17e86b3d7f56aa98647483cc37d2ee2e3cf74c5",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/reset_parity.json",
+    "bytes": 578,
+    "sha256": "ea4987f27a22bf2b0f527aa09645b4c95fc274489a6c96963fab27bfdd3b1067",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/result.json",
+    "bytes": 2028,
+    "sha256": "3c69189710fff2aa31f7a8463265c0ea57b162a83d2fc00359074eff41a46ad1",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/rollout.mp4",
+    "bytes": 809275,
+    "sha256": "378b374e0481b1ae54ce9bd5795fb6941c35cdf3ef4f6efa2ae59ff7223f5684",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/scene.xml",
+    "bytes": 61801,
+    "sha256": "10a873228328d687c2daf9fb5f3c55f3c3de1a30adc2865be2a384ff04daa08b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/settled_state.npy",
+    "bytes": 1008,
+    "sha256": "f58f4249eed568a9bcce6684a4f4bc3992bc8824a8f29b7d8670a2770f8297ea",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-000.pkl",
+    "bytes": 1222412,
+    "sha256": "431f362bc60c55b23aca7d2992aee4fae915b854e7f1d3efd8a9ccac3ce30def",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-001.pkl",
+    "bytes": 1616498,
+    "sha256": "69fd56e9a3de9d8d5c13403163a98c3c758952a293963156c1d024981ca192ea",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-002.pkl",
+    "bytes": 1616615,
+    "sha256": "a1cc994d7cfaf7a91602c1957b0f62a1c97e077663b5662a15b6b67c8be792e1",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-003.pkl",
+    "bytes": 1616727,
+    "sha256": "8d643b7e47d520a255cf272b72cdbe869953a38471937f7af2504e91e933f1ee",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-004.pkl",
+    "bytes": 1616839,
+    "sha256": "292affa8e41fda9165d2d017ab112834cf64650997c4364829c9606089a5e813",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-005.pkl",
+    "bytes": 1616951,
+    "sha256": "50f12e3590e54f61d94d746d3429784f6a4c427b06ec3e25de9f18c66d0a6ca5",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-006.pkl",
+    "bytes": 1617063,
+    "sha256": "5fec02ec9c3ca2a9cbd50be061ea2f983eb323dbdd5769a69633d6f88a44500b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-007.pkl",
+    "bytes": 1617175,
+    "sha256": "d40b5c1272472bd1f87eca732df68173456fe9365b6c4d06ff1917fca10d3011",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-008.pkl",
+    "bytes": 1617287,
+    "sha256": "9e3927db048fc2e1ddf430a14d0a9fcfbf00fa3f3cabae84a0d27201db67e890",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-009.pkl",
+    "bytes": 1617399,
+    "sha256": "5119c891c25e91091f2897f0894f199ad7e27b5692ffc6dba33a3a2165c94041",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-010.pkl",
+    "bytes": 1617511,
+    "sha256": "4dc79d235921213d18bd33631206f46cade300c1a93c4ccaa66ce3017ee4a07b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-011.pkl",
+    "bytes": 1617623,
+    "sha256": "d585d5fbbaffd7b020ac37bcbab44321ead7db3b402221ba81100ebb37ba68af",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-012.pkl",
+    "bytes": 1617735,
+    "sha256": "b2ca4b2244246205db3c5d06ae4e552eac3e37f23f7eab4bc18ccdcb2451ee21",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-013.pkl",
+    "bytes": 1617847,
+    "sha256": "753eb7cdbbe861168a4fc095d127a40922d7eaf1aee647777ae76869334b1adb",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-014.pkl",
+    "bytes": 1617959,
+    "sha256": "0216cc6221683347c71729631292deb0aa812960a80992d604f4fdd7177a691f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshot-015.pkl",
+    "bytes": 1618071,
+    "sha256": "85cac9ad33bb7721003079d3d486ade5b33a8386f59c47668d9182b0c6625f43",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/snapshots.jsonl",
+    "bytes": 7262,
+    "sha256": "789d48fb92683eb1879e5f4cffe24645066a3f6ad90c29c8afae3d3d31d4c58f",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/task_spec.json",
+    "bytes": 3610,
+    "sha256": "4140d0cd7e33c95ba72e1bdbafce7ec700515eb611d0d5ee358e98f0234813e1",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/video.image.png",
+    "bytes": 77818,
+    "sha256": "f4874dbc31b5bfa35913d133053cd0cad7af2d141d52f0279d5209417cff0d65",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB/e2-calib-0009/video.wrist_image.png",
+    "bytes": 67575,
+    "sha256": "99fde9c4097b164b79e29d3f036d92ba746270a3d41f5c85625ba74d3d27f56b",
+    "source_run": "e2-calib-0009",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  }
+]

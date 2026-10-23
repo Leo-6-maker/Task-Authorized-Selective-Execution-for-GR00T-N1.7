@@ -1,0 +1,427 @@
+{
+  "final_code_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+  "final_unit_tests_each_mode": 71,
+  "final_exit_codes": {
+    "normal": 0,
+    "optimized": 0,
+    "normal_public_calib": 0,
+    "optimized_public_calib": 0
+  },
+  "retained_failure": "e9de31eb8128bf072b77c03f34b2dbdd4a626083 normal/O each exit1: new synthetic signal case exposed missing operator parent; fixed by94c1f1a, no native execution",
+  "runs": [
+    {
+      "scope": "EXPLORATORY_UNCOMMITTED_CPU_ONLY",
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_e2_test_freeze.py",
+        "-v"
+      ],
+      "child_exit_code": null,
+      "driver_shell_exit_code": 0,
+      "observed_summary": "14 tests OK; child status not separately captured; superseded by exact-SHA runs",
+      "original_private_log_sha256": "d39921570cc11f160aace8bcce24a644590480689c9b8ab1921e565dd4dc80bc",
+      "public_log": "cpu/initial-normal.txt"
+    },
+    {
+      "source_sha": "1e8260d7ee815fd77a309dd5d4e282e95829fec1",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-1e8260d7/normal-public-calib.txt"
+    },
+    {
+      "source_sha": "1e8260d7ee815fd77a309dd5d4e282e95829fec1",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "b18446146c1314c33cf8c562c3c45c382b14a8b8cce2e06d19303de56cbd78b5",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "b18446146c1314c33cf8c562c3c45c382b14a8b8cce2e06d19303de56cbd78b5",
+      "public_log_sha256": "b18446146c1314c33cf8c562c3c45c382b14a8b8cce2e06d19303de56cbd78b5",
+      "public_log": "cpu/cpu-1e8260d7/normal-unit.txt"
+    },
+    {
+      "source_sha": "1e8260d7ee815fd77a309dd5d4e282e95829fec1",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-1e8260d7/optimized-public-calib.txt"
+    },
+    {
+      "source_sha": "1e8260d7ee815fd77a309dd5d4e282e95829fec1",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "18d2e787da7231f796958836b683b8c337fb9b8faabf60c915fa8354d02b51f1",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "18d2e787da7231f796958836b683b8c337fb9b8faabf60c915fa8354d02b51f1",
+      "public_log_sha256": "18d2e787da7231f796958836b683b8c337fb9b8faabf60c915fa8354d02b51f1",
+      "public_log": "cpu/cpu-1e8260d7/optimized-unit.txt"
+    },
+    {
+      "source_sha": "500804869a084479453246c0c25a1c0a674e9755",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "d35788323661587b1460560fb789fe969825d8f45a4b42f6b298c4a75c9f088e",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "d35788323661587b1460560fb789fe969825d8f45a4b42f6b298c4a75c9f088e",
+      "public_log_sha256": "d35788323661587b1460560fb789fe969825d8f45a4b42f6b298c4a75c9f088e",
+      "public_log": "cpu/cpu-50080486/normal.txt"
+    },
+    {
+      "source_sha": "500804869a084479453246c0c25a1c0a674e9755",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "dc0da08fc9a75c614a4b10d3b780a4898ca13c4ca31b192a4bb51fe5c83c9a94",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "dc0da08fc9a75c614a4b10d3b780a4898ca13c4ca31b192a4bb51fe5c83c9a94",
+      "public_log_sha256": "dc0da08fc9a75c614a4b10d3b780a4898ca13c4ca31b192a4bb51fe5c83c9a94",
+      "public_log": "cpu/cpu-50080486/optimized.txt"
+    },
+    {
+      "source_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-94c1f1ac/normal-public-calib.txt"
+    },
+    {
+      "source_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "c5ecc9e48f7685fd30128ade38cf3e552cbfc9afee8f20483102c68fa9ee12c3",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "c5ecc9e48f7685fd30128ade38cf3e552cbfc9afee8f20483102c68fa9ee12c3",
+      "public_log_sha256": "c5ecc9e48f7685fd30128ade38cf3e552cbfc9afee8f20483102c68fa9ee12c3",
+      "public_log": "cpu/cpu-94c1f1ac/normal-unit.txt"
+    },
+    {
+      "source_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-94c1f1ac/optimized-public-calib.txt"
+    },
+    {
+      "source_sha": "94c1f1acdf0370039a39ed780ebed1295f34a757",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "53bbd504f8efa83734cfbaffd2a09ae1e1bfbca5bbadb88cd8c517169d417c2f",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "53bbd504f8efa83734cfbaffd2a09ae1e1bfbca5bbadb88cd8c517169d417c2f",
+      "public_log_sha256": "53bbd504f8efa83734cfbaffd2a09ae1e1bfbca5bbadb88cd8c517169d417c2f",
+      "public_log": "cpu/cpu-94c1f1ac/optimized-unit.txt"
+    },
+    {
+      "source_sha": "b5e07c6189242d9a00817c9f52d92114926aa2e4",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-b5e07c61/normal-public-calib.txt"
+    },
+    {
+      "source_sha": "b5e07c6189242d9a00817c9f52d92114926aa2e4",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "26195fb2efd15bd17fb9fefbdd32ea1c6b598b3af1606337811fd8ffdf886521",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "26195fb2efd15bd17fb9fefbdd32ea1c6b598b3af1606337811fd8ffdf886521",
+      "public_log_sha256": "26195fb2efd15bd17fb9fefbdd32ea1c6b598b3af1606337811fd8ffdf886521",
+      "public_log": "cpu/cpu-b5e07c61/normal-unit.txt"
+    },
+    {
+      "source_sha": "b5e07c6189242d9a00817c9f52d92114926aa2e4",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-b5e07c61/optimized-public-calib.txt"
+    },
+    {
+      "source_sha": "b5e07c6189242d9a00817c9f52d92114926aa2e4",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "c1da659dcfc35c54297f9b562697b14fb9ca5617fc1c59ecd8a6629e08c7f0bd",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "c1da659dcfc35c54297f9b562697b14fb9ca5617fc1c59ecd8a6629e08c7f0bd",
+      "public_log_sha256": "c1da659dcfc35c54297f9b562697b14fb9ca5617fc1c59ecd8a6629e08c7f0bd",
+      "public_log": "cpu/cpu-b5e07c61/optimized-unit.txt"
+    },
+    {
+      "source_sha": "cb4e10a8e240c9fd80e0cf1176fcf47e18a7b83a",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "0aa212630ee89b2f3d2661f1a7088ba3ae1f108dba08fed2149e84596ebd7de7",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "0aa212630ee89b2f3d2661f1a7088ba3ae1f108dba08fed2149e84596ebd7de7",
+      "public_log_sha256": "0aa212630ee89b2f3d2661f1a7088ba3ae1f108dba08fed2149e84596ebd7de7",
+      "public_log": "cpu/cpu-cb4e10a8/normal.txt"
+    },
+    {
+      "source_sha": "cb4e10a8e240c9fd80e0cf1176fcf47e18a7b83a",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "8b38b6858f0949ea0d4cd45cf33a2021b1e06622c543fea508b2e0ef9c22bab8",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "8b38b6858f0949ea0d4cd45cf33a2021b1e06622c543fea508b2e0ef9c22bab8",
+      "public_log_sha256": "8b38b6858f0949ea0d4cd45cf33a2021b1e06622c543fea508b2e0ef9c22bab8",
+      "public_log": "cpu/cpu-cb4e10a8/optimized.txt"
+    },
+    {
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+      "public_log_sha256": "4294009fbe6db3eb053ac5bf00bc4523df79ba4b8cf76e1d764c569563a9c432",
+      "public_log": "cpu/cpu-development-02/normal.txt"
+    },
+    {
+      "source_sha": "e9de31eb8128bf072b77c03f34b2dbdd4a626083",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-e9de31eb/normal-public-calib.txt"
+    },
+    {
+      "source_sha": "e9de31eb8128bf072b77c03f34b2dbdd4a626083",
+      "exit_code": 1,
+      "command": [
+        "<CPU_PYTHON>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "46d684a2c3e137c97f323151e7fb9aad4ac4b7c90d74478b70cdba8af04cd982",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "46d684a2c3e137c97f323151e7fb9aad4ac4b7c90d74478b70cdba8af04cd982",
+      "public_log_sha256": "ad64be4ddb5bb224c012dc0125695bd24ddb820518fc2fd37313ddf9f2eaa9ed",
+      "public_log": "cpu/cpu-e9de31eb/normal-unit.txt"
+    },
+    {
+      "source_sha": "e9de31eb8128bf072b77c03f34b2dbdd4a626083",
+      "exit_code": 0,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "scripts/e2_audit_calib_delta.py",
+        "--package",
+        "reports/E2/R2_delta/calib",
+        "--repo",
+        ".",
+        "--output",
+        "<PRIVATE_RECEIPT>"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_log": "cpu/cpu-e9de31eb/optimized-public-calib.txt"
+    },
+    {
+      "source_sha": "e9de31eb8128bf072b77c03f34b2dbdd4a626083",
+      "exit_code": 1,
+      "command": [
+        "<CPU_PYTHON>",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log_sha256": "5ef04a0a3e332e4c7c265d7ce91d130d590a9068e5810f62b97cc04a6376a1a8",
+      "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+      "original_private_log_sha256": "5ef04a0a3e332e4c7c265d7ce91d130d590a9068e5810f62b97cc04a6376a1a8",
+      "public_log_sha256": "211c62b82862907afb4f35b100acba796326055c453c8e9b6ec0bb25080e40b2",
+      "public_log": "cpu/cpu-e9de31eb/optimized-unit.txt"
+    }
+  ]
+}

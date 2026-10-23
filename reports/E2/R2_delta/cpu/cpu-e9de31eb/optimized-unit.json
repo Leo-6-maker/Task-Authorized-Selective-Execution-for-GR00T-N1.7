@@ -1,0 +1,19 @@
+{
+  "source_sha": "e9de31eb8128bf072b77c03f34b2dbdd4a626083",
+  "exit_code": 1,
+  "command": [
+    "<CPU_PYTHON>",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "log_sha256": "5ef04a0a3e332e4c7c265d7ce91d130d590a9068e5810f62b97cc04a6376a1a8",
+  "scope": "CPU_SYNTHETIC_UNIT_OR_PUBLIC_NUMERIC_AUDIT_NO_MODEL_SIM_TEST",
+  "original_private_log_sha256": "5ef04a0a3e332e4c7c265d7ce91d130d590a9068e5810f62b97cc04a6376a1a8",
+  "public_log_sha256": "211c62b82862907afb4f35b100acba796326055c453c8e9b6ec0bb25080e40b2",
+  "public_log": "cpu/cpu-e9de31eb/optimized-unit.txt"
+}

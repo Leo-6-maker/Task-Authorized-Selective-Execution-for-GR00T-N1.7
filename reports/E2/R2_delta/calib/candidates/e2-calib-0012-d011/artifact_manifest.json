@@ -1,0 +1,42 @@
+[
+  {
+    "artifact_id": "runs/CALIB_candidates/e2-calib-0012-d011/contact_views.json",
+    "bytes": 4416,
+    "sha256": "73641ea13c419804aef3bfd56124a7044aba7ec19840900c8db819dd0de49348",
+    "source_run": "e2-calib-0012-d011",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB_candidates/e2-calib-0012-d011/prediction.json",
+    "bytes": 43004,
+    "sha256": "2339d7bd2d08c2f2ac0ba27d30696539a7ee72c40630c9137eca0a0b844e0e26",
+    "source_run": "e2-calib-0012-d011",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB_candidates/e2-calib-0012-d011/reservation.json",
+    "bytes": 850,
+    "sha256": "c5a1ba6c963a50b8428c9ad5a71665fcdc4ced32a4fecef310f022c8de7c06ba",
+    "source_run": "e2-calib-0012-d011",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB_candidates/e2-calib-0012-d011/result.json",
+    "bytes": 925,
+    "sha256": "f6515a70567ad528d696f37e1f4d2597aa72677e6aec9edcc44091b8de0ebd41",
+    "source_run": "e2-calib-0012-d011",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  },
+  {
+    "artifact_id": "runs/CALIB_candidates/e2-calib-0012-d011/started.json",
+    "bytes": 88,
+    "sha256": "ca1eea978d4efe05d497c43a14feb0d01c4ad2f31fc72a0bc2bfa3995907c26d",
+    "source_run": "e2-calib-0012-d011",
+    "visibility": "private",
+    "verification": "bytes_and_sha256"
+  }
+]
