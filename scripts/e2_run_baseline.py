@@ -1,6 +1,6 @@
-"""Run committed E2 B0 cells; default to the six C0 baseline cells.
+"""Run committed E2 DEV cells; default to the six C0 B0 baseline cells.
 
-No TEST/CALIB/Gate or implicit retry. C2 requires completed P1 evidence.
+No TEST/CALIB or implicit retry. C2 requires P1; Gate requires recomputed P2.
 Requires pinned artifacts; a credential is
 only needed when verified Cosmos files are absent. Shuts down its own server.
 """
@@ -43,7 +43,12 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
         declared={c['run_id']:c for c in catalog['planned_cells']+catalog.get('diagnostic_cells',[])}
         if len(set(cell_ids))!=len(cell_ids) or not set(cell_ids)<=set(declared):raise ValueError('undeclared or duplicate cells')
         cells=[declared[name] for name in cell_ids]
-    if any(c['system']!='B0' for c in cells):raise ValueError('Gate batch awaits P2 validation; B0 only here')
+    if any(c['system'] not in ['B0','G'] for c in cells):raise ValueError('undeclared system')
+    if any(c['system']=='G' for c in cells):
+        audit_env=os.environ.copy();audit_env.update(CUDA_VISIBLE_DEVICES='-1',PYTHONNOUSERSITE='1')
+        subprocess.run([str(sim_python),str(repo/'scripts/e2_audit_validation.py'),'--workspace',str(root),
+            '--plan',str(repo/'configs/e2_shadow_plan.json'),'--output',str(root/'operator'/f'{session}.p2-audit.json')],
+            cwd=repo,env=audit_env,check=True,stdout=subprocess.DEVNULL)
     if any((root/'runs/DEV'/cell['run_id']).exists() for cell in cells):
         raise ValueError('baseline already started; audit existing IDs before explicit continuation')
     if any(c['condition']=='C2' for c in cells):
@@ -113,11 +118,11 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
             if time.monotonic()>deadline:raise TimeoutError('bounded policy load timeout')
             time.sleep(1)
         for index,cell in enumerate(cells):
-            if cell['system']!='B0' or cell['condition'] not in ['C0','C2']:raise ValueError('B0 cell contract changed')
+            if cell['system'] not in ['B0','G'] or cell['condition'] not in ['C0','C2']:raise ValueError('DEV cell contract changed')
             run_id=cell['run_id'];folder=root/'operator'/run_id;folder.mkdir()
             command=[str(sim_python),'-u',str(repo/'scripts/record_process.py'),'--receipt',str(root/'runs'/f'{run_id}.exit.json'),'--',
                 str(sim_python),'-u','-m','tase.epoch_runner','--workspace',str(root),'--run-id',run_id,
-                '--task',cell['task'],'--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system','B0',
+                '--task',cell['task'],'--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system',cell['system'],
                 '--allocation-record',str(permission),'--port',str(port)]
             if run_id=='e2-dev-0001':command.append('--verify-reset')
             with (folder/'stdout.txt').open('x') as stdout,(folder/'stderr.txt').open('x') as stderr:

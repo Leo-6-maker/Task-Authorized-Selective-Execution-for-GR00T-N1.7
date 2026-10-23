@@ -55,6 +55,11 @@ def main():
     if dirty:
         raise ValueError('commit implementation before runtime; dirty worktree refused')
     runtime_lock_hash = sha256(a.config.parent/'runtime_lock_E2.json')
+    if a.system=='G':
+        # Recompute all committed short-check receipts before any DEV Gate
+        # reservation/model call. This is a machine gate under R004, not review.
+        from scripts.e2_audit_validation import audit as audit_validation
+        audit_validation(a.workspace,Path('configs/e2_shadow_plan.json'))
     folder = reserve_episode(a.workspace / 'runs/DEV', a.run_id, {
         'split': 'DEV', 'task': a.task, 'init_index': a.init_index,
         'repo_sha': repo_sha, 'config_hash': sha256(a.config), 'runtime_lock_hash': runtime_lock_hash,
