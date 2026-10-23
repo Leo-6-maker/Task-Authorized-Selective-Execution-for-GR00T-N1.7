@@ -14,9 +14,9 @@ The branch starts at PR #7 `bb9b4346037441b220d03c26737002748856dc23`, inheritin
 | LIBERO source | `8f1084e3132a39270c3a13ebe37270a43ece2a01` in new submodule |
 | Object revision | `2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21`; 7/7 files rehashed, 6,914,936,710 bytes, match |
 | Cosmos revision | `9ce19a195e423419c349abfc86fd07178b230561`; 10/10 existing cached files verified and independently copied, 4,888,970,298 bytes; real copy child exit0 |
-| CPU synthetic tests | Latest 33 normal and 33 optimized, exit0; [export-boundary receipt](cpu/review_export.json); earlier source-bound full logs retained |
+| CPU synthetic tests | Latest38 normal /38 optimized exit0; [normal](cpu/c8f52fde/normal.json), [optimized](cpu/c8f52fde/optimized.json); earlier receipts retained |
 | New independent environments | Python3.12.14; server138 / sim159 packages pass dependency check; native imports exit0 with CUDA uninitialized |
-| Real E2 baseline | NOT_RUN; no success or governance claim |
+| Real E2 baseline | First6 attempts:5 SUCCESS,1 executor wall-time interruption; [exact continuation](baseline_recovery_plan.md). No Gate effectiveness claim |
 | Independent GPT review of new code/results | NOT_PERFORMED |
 
 ## Environment continuation
@@ -37,6 +37,8 @@ A fresh unauthenticated Cosmos small-file request returned HTTP401. That was ins
 
 ## Execution and evidence boundaries
 
-New DEV reservations: 0/24 at the last direct inventory. Independent consistency: 0/96; CALIB: 0/48; TEST not authorized. Environment installation/download attempts are recorded separately and are not physical episode successes. The six committed C0 B0 cells must run only after model identities, environment imports/dependency checks, isolated LIBERO config and current GPU availability are verified. Any physical attempt, including failure, reserves before imports/reset; no silent replacement run IDs.
+New DEV reservations:6/24, including the interrupted sixth cell. Independent consistency:0/96; CALIB:0/48; TEST not authorized. Environment installation/download attempts are recorded separately and are not physical episode successes. Model load took9.685seconds; first five official successes and the sixth interruption were executed at `0b00464eacd8a5e8d6be78de7044584ab9a3ef8b`, with the committed runtime-lock hash. Every physical attempt reserved before imports/reset. A single diagnostic is precommitted inside the six diagnostic slots; the original interruption is not replaced or reclassified.
+
+NFS evidence persistence made the360-second operator deadline shorter than a possible720-control rollout. The closed first batch is being byte-verified for task-owned local evidence storage, retaining the NFS tree and all logical IDs. Unsupported cross-filesystem permission metadata caused the first copy command to exit1; its partial copy and receipt remain, and continuation verifies existing bytes before any path switch. Future wall cap900seconds leaves the720 physical-control cap unchanged. The mistaken `shutdown` call is corrected to the fixed native `PolicyClient.kill_server()`; first-server SIGTERM/143 remains recorded. No active native process was present before storage continuation.
 
 The Gate and audit code are implemented with synthetic CPU evidence. Real shadow consistency, physical acceptance/rejection, event/media checks, CALIB and R2 remain unfinished. Legacy results are excluded from all new effect denominators. Private runtime map, manifests and two-copy backup verification are part of this work package and will be recorded before a larger experiment batch.

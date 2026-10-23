@@ -6,10 +6,11 @@
 
 - 按 [E2 START HERE](work_packages/E2-START-HERE.md) 从 PR #7 实时 head `bb9b4346037441b220d03c26737002748856dc23` 建立 `codex/8-e2-gate`，正常整合 main；保留 PR #5 的运行实现与旧交接成果。原本地14个修改/未跟踪文件继续保全，未覆盖。
 - `E2 / TASE-002-v1.0`：新 DEV 上限24、独立短一致性96；满足工作包前置条件后 CALIB48。TEST 待 R2，未授权；不训练、不接WBC、不上实机、不自动合并。
-- 新工作区和独立双环境副本已建立，失败/超时留存；server138/sim159包依赖检查与原生CPU导入均exit0，尚无模型/环境实例。Object7/7与Cosmos10/10固定文件大小/SHA256一致，Cosmos独立复制exit0；无需再下载或提供token，不要求恢复旧账本。[模型清单](../reports/E2/model_file_verification.json)与[双备份收据](../reports/E2/setup_backup_verification.json)。
+- 新工作区和独立双环境已通过依赖/CPU导入，真实模型已加载并执行；Object7/7与Cosmos10/10固定文件大小/SHA256一致，且有独立E2副本，无需token。[模型清单](../reports/E2/model_file_verification.json)、[实际双环境](../configs/runtime_lock_E2.json)与[双备份收据](../reports/E2/setup_backup_verification.json)。
 - 新代码已实现 scenario reset/seed、实际语言与TaskSpec分离、接触前兆Gate、唯一执行边界、完整快照采集、安全数值审计和有界验证/备份入口。**IMPLEMENTED，不等于 RUNTIME_VALIDATED 或 REVIEWED。**
-- [E2 CPU收据](../reports/E2/cpu/normal.json)及[-O收据](../reports/E2/cpu/optimized.json)保留31项日志；新增安全导出边界后[普通/-O各33项exit0](../reports/E2/cpu/review_export.json)，绑定代码哈希；不替代真实模型/仿真验收。
-- 当前六格 baseline 尚未完成；真实运行、账本和审核状态将在 [E2 setup](../reports/E2/setup.md) 持续记录。下一项关键交付仍是新环境真实 baseline，随后关键 shadow 与可运行 Gate。
+- 最新[普通CPU38项](../reports/E2/cpu/c8f52fde/normal.json)与[-O38项](../reports/E2/cpu/c8f52fde/optimized.json)均exit0，覆盖Gate、oracle、安全审计、部分账本和存储边界；纯合成测试不替代真实验收。
+- 首六格真实baseline：5 SUCCESS /1被执行器360秒墙钟上限中断，实际SIGTERM/143；第六格原件与预算保留，不能写作完成的TIME_LIMIT。当前DEV6/24，一致性0/96；[精确单次诊断计划](../reports/E2/baseline_recovery_plan.md)已提交，诊断将另占一槽，不覆盖失败。运行source为`0b00464eacd8a5e8d6be78de7044584ab9a3ef8b`；新的IO/关闭接口修复尚待本轮真实验证。
+- 后续：核验并迁移闭合证据、完成同场景诊断及两份最终备份，然后六个预定C2 B0、新shadow关键覆盖和真正Gate。当前结果未由GPT独立验收；[E2 setup](../reports/E2/setup.md)记录代码/运行/审核区别。
 - 检查下载时已定位旧项目缓存入口；旧结果仍 `NOT_INDEPENDENTLY_VERIFIED`，未恢复/重审旧账本，后续消费 UNKNOWN。下面 Issue #6 的恢复阻塞已由 R004 取代，不能用来停止 E2。
 
 ## 历史 Issue #6 接手状态（其恢复前置条件已由 R004 取代）
