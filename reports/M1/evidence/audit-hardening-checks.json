@@ -1,0 +1,27 @@
+{
+  "source_sha": "a3cd38876df8a8a96b77da47568b0abacc70e57f",
+  "scope": "CPU_ONLY; synthetic fixtures and immutable existing raw evidence; no new simulator or policy calls",
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -O -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/summarize_baseline.py --private-runtime local/private_resume --delivery-manifest reports/M1/artifact_manifest_resume.json --output reports/M1/evidence/audit-hardening-summary.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -O scripts/summarize_baseline.py --private-runtime local/private_resume --delivery-manifest reports/M1/artifact_manifest_resume.json --output local/audit_hardening/optimized-summary.json",
+      "exit_code": 0
+    }
+  ],
+  "differences_from_existing_ledger": {},
+  "synthetic_negative_variants": 19,
+  "test_methods_normal": 13,
+  "test_methods_optimized": 13,
+  "private_review_status": "NOT_VERIFIED_BY_REVIEWER"
+}

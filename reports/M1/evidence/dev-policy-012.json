@@ -1,0 +1,37 @@
+{
+  "run_id": "dev-policy-012",
+  "task": "ketchup",
+  "init_index": 1,
+  "split": "DEV",
+  "repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c",
+  "config_hash": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+  "status": "TIME_LIMIT",
+  "official_success": false,
+  "policy_calls": 90,
+  "policy_requests_attempted": 90,
+  "inner_steps": 720,
+  "settling_steps": 10,
+  "exit_code": 0,
+  "started_at_sgt": "2026-10-21T19:32:50.774499+08:00",
+  "init_hash": "ee350ce5a057cc8c4946aad6b20d1ccb386e17acb1750e09e23f0228dcf46048",
+  "init_file_sha256": "b987f7b11e8f9b47353cd7882e1da38ecdf6ec9715ad8a84346583ea71049fd3",
+  "bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319",
+  "full_task_name": "pick_up_the_ketchup_and_place_it_in_the_basket",
+  "native_language": "pick up the ketchup and place it in the basket",
+  "settled_state_hash": "52f761411673e81412e6eece51db6e1953a6a8c1b8cf418bee999fe37360e247",
+  "scene_xml_hash": "0eb2ec3f802159e69636c6683c92f13dfceedb786d50fa6315b298f7bd38e2ca",
+  "control_hz": 20,
+  "task_objects": [
+    "ketchup_1",
+    "basket_1"
+  ],
+  "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+  "gl_vendor": "NVIDIA Corporation",
+  "egl_process_gpu_indices": [
+    0
+  ],
+  "egl_binding_check": "MATCH",
+  "wall_seconds": 21.953414655756205,
+  "completed_at_sgt": "2026-10-21T19:33:12.727878+08:00",
+  "full_policy_episode": true
+}

@@ -1,0 +1,21 @@
+{
+  "status": "SOURCE_HELPERS_EXECUTED_CPU_ONLY",
+  "native_wrapper_sha256": "49a8017517f1f21b7c21bf5f599244189720c83785763e4ab05a3cd0292cf5b1",
+  "mapping": [
+    {
+      "policy_gripper": 0.0,
+      "raw_controller_gripper": 1.0
+    },
+    {
+      "policy_gripper": 0.5,
+      "raw_controller_gripper": -0.0
+    },
+    {
+      "policy_gripper": 1.0,
+      "raw_controller_gripper": -1.0
+    }
+  ],
+  "environment_created": false,
+  "model_forward": false,
+  "runtime_contract_validated": false
+}

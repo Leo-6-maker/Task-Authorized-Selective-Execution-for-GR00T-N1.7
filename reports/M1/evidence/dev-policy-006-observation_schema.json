@@ -1,0 +1,64 @@
+{
+  "video.image": {
+    "shape": [
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "video.wrist_image": {
+    "shape": [
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "state.x": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.y": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.z": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.roll": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.pitch": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.yaw": {
+    "shape": [
+      1
+    ],
+    "dtype": "float64"
+  },
+  "state.gripper": {
+    "shape": [
+      2
+    ],
+    "dtype": "float64"
+  },
+  "annotation.human.action.task_description": {
+    "shape": [],
+    "dtype": "<U52"
+  }
+}
