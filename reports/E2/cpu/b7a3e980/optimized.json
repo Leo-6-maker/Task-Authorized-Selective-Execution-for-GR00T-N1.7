@@ -1,0 +1,22 @@
+{
+  "classification": "SYNTHETIC_CPU_ONLY_NOT_RUNTIME",
+  "source_commit": "b7a3e98067f67c7d99a51080a7207162014b0273",
+  "command": [
+    "<CPU_PYTHON>",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "started_at_sgt": "2026-10-23T20:42:45.383122+08:00",
+  "completed_at_sgt": "2026-10-23T20:42:45.826754+08:00",
+  "exit_code": 0,
+  "tests": 34,
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "log_sha256": "e1b6c6f15b8d763a8eae8d93886fd662c8bc53b60c9f6da2e315cf8921405967",
+  "model_or_sim_runs": 0
+}
