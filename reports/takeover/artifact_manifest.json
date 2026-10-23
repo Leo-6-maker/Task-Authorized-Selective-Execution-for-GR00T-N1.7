@@ -1,0 +1,65 @@
+{
+  "protocol_id": "TASE-001-v1.0",
+  "work_package": "TAKEOVER-RECOVERY-001",
+  "tested_source_commit": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+  "classification": "PUBLIC_SANITIZED_DELIVERY_ONLY",
+  "private_originals_included": false,
+  "manifest_itself_excluded": true,
+  "artifacts": [
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 5286,
+      "sha256": "0318764c19ad61a24aff6a2eecaa31055428d8c7566fb325aea9491800f7411d"
+    },
+    {
+      "path": "reports/takeover/README.md",
+      "bytes": 1074,
+      "sha256": "6c8dc94034ec2ae20856550b1cfa173de6b7f31084edc515db0742c74642c1f1"
+    },
+    {
+      "path": "reports/takeover/TAKEOVER_STATUS.md",
+      "bytes": 9845,
+      "sha256": "9862b30dca591139ebec9970e728fa2d206e55d5f2233b1b12edafd46e98d6e5"
+    },
+    {
+      "path": "reports/takeover/issue6-cpu/cli-help.json",
+      "bytes": 1604,
+      "sha256": "fb1ac008bea7ae2e925714b199dbb5a12914c6ed64668c89b769b4810f565b7c"
+    },
+    {
+      "path": "reports/takeover/issue6-cpu/normal.json",
+      "bytes": 4789,
+      "sha256": "624767f53c7bfb35b46faa717bfe3c246b20d103e6da9e90a2c14a3a0451c052"
+    },
+    {
+      "path": "reports/takeover/issue6-cpu/normal.txt",
+      "bytes": 3162,
+      "sha256": "9a689de24243cdd077b05980413b209cce747fa9a1a8eccf228bdff61d6e184c"
+    },
+    {
+      "path": "reports/takeover/issue6-cpu/optimized.json",
+      "bytes": 4802,
+      "sha256": "ffceaf72a462f372148614d890e27bfa553c7f911cd4c3ed2760e32ed1c8fa29"
+    },
+    {
+      "path": "reports/takeover/issue6-cpu/optimized.txt",
+      "bytes": 3162,
+      "sha256": "8e5094932a87cb081cb6b0e8e3efc9ea13be272ff56025a5acd1b133ebf9e821"
+    },
+    {
+      "path": "reports/takeover/ledger_summary.json",
+      "bytes": 857,
+      "sha256": "fae5862830e75b127d33adeb388cf6cf6cbfc69686cd9a17610e32b18d21ac71"
+    },
+    {
+      "path": "reports/takeover/source_map.json",
+      "bytes": 1252,
+      "sha256": "16605d2b5ea24ca78a82a860017d27a939ca882b3b1df8a7b5c49207a64811ac"
+    },
+    {
+      "path": "reports/takeover/validation_receipt.json",
+      "bytes": 845,
+      "sha256": "0f212de13c17bf130e8943b4c7585a0289c61fcd44c3489edcd28dbfd4d63ba9"
+    }
+  ]
+}
