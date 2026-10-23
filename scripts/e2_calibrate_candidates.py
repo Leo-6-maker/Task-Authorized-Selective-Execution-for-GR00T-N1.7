@@ -30,6 +30,7 @@ def run(workspace,repo,output):
     import subprocess
     require(not subprocess.check_output(['git','status','--porcelain'],cwd=repo,text=True).strip(),'commit code before functional predictions')
     repo_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()
+    require(read(workspace/'runs/gpu-authorization.json')['shared_gpu_inference_authorized'] is True,'resource permission missing')
     cfg=read(repo/'configs/e2_calib.json');plan=read(repo/'configs/e2_calibration_plan.json')
     checked=audit(workspace,repo/'configs/e2_calib.json')
     cells=[c for c in read(repo/'configs/e2_calib_cells.json')['planned_cells'] if c['system']=='B0']
