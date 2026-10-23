@@ -1,6 +1,7 @@
-"""Run the six committed E2 C0 baseline cells in the isolated workspace.
+"""Run committed E2 B0 cells; default to the six C0 baseline cells.
 
-No TEST/CALIB/C2 or implicit retry. Requires pinned artifacts; a credential is
+No TEST/CALIB/Gate or implicit retry. C2 requires completed P1 evidence.
+Requires pinned artifacts; a credential is
 only needed when verified Cosmos files are absent. Shuts down its own server.
 """
 import argparse
@@ -15,7 +16,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.evidence import write_json,sha256
 
 
-def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=None):
+def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=None,cell_ids=None):
     root=root.resolve(strict=True)
     if not session or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in session):
         raise ValueError('invalid server session ID')
@@ -36,9 +37,31 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                 raise ValueError('external runtime must be an independent task-owned E2 copy')
     if not (root/'runtime/libero-config/config.yaml').is_file():
         raise ValueError('isolated LIBERO configuration not prepared')
-    cells=json.loads((repo/'configs/e2_dev_cells.json').read_text())['planned_cells'][:6]
+    catalog=json.loads((repo/'configs/e2_dev_cells.json').read_text())
+    cells=catalog['planned_cells'][:6]
+    if cell_ids:
+        declared={c['run_id']:c for c in catalog['planned_cells']+catalog.get('diagnostic_cells',[])}
+        if len(set(cell_ids))!=len(cell_ids) or not set(cell_ids)<=set(declared):raise ValueError('undeclared or duplicate cells')
+        cells=[declared[name] for name in cell_ids]
+    if any(c['system']!='B0' for c in cells):raise ValueError('Gate batch awaits P2 validation; B0 only here')
     if any((root/'runs/DEV'/cell['run_id']).exists() for cell in cells):
         raise ValueError('baseline already started; audit existing IDs before explicit continuation')
+    if any(c['condition']=='C2' for c in cells):
+        # The lightweight operator interpreter need not contain NumPy. Audit
+        # with the isolated sim Python, hiding GPUs and creating no environment.
+        audit_path=root/'operator'/f'{session}.p1-audit.json'
+        audit_env=os.environ.copy();audit_env.update(CUDA_VISIBLE_DEVICES='-1',PYTHONNOUSERSITE='1')
+        subprocess.run([str(sim_python),str(repo/'scripts/audit_epoch.py'),'--workspace',str(root),
+                        '--config',str(repo/'configs/e2_dev.json'),'--output',str(audit_path)],
+                       cwd=repo,env=audit_env,check=True,stdout=subprocess.DEVNULL)
+        checked=json.loads(audit_path.read_text());successes={}
+        for row in checked['rows']:
+            if row.get('condition')=='C0' and row.get('system')=='B0' and row['status']=='SUCCESS' and row['complete']:
+                successes.setdefault(row['task'],set()).add(row['init_index'])
+        if sum({0,1}<=indices for indices in successes.values())<2:
+            raise ValueError('P1 needs at least two tasks completing both declared normal initializations')
+        for cell in catalog['planned_cells'][:6]:
+            if not (root/'runs'/f"{cell['run_id']}.exit.json").exists():raise ValueError('close baseline attempts before C2')
     model=json.loads((root/'checkpoints/download_manifest.json').read_text())
     for row in model['files']:
         path=root/'checkpoints'/row['path']
@@ -90,16 +113,16 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
             if time.monotonic()>deadline:raise TimeoutError('bounded policy load timeout')
             time.sleep(1)
         for index,cell in enumerate(cells):
-            if cell['system']!='B0' or cell['condition']!='C0':raise ValueError('baseline list changed')
+            if cell['system']!='B0' or cell['condition'] not in ['C0','C2']:raise ValueError('B0 cell contract changed')
             run_id=cell['run_id'];folder=root/'operator'/run_id;folder.mkdir()
             command=[str(sim_python),'-u',str(repo/'scripts/record_process.py'),'--receipt',str(root/'runs'/f'{run_id}.exit.json'),'--',
                 str(sim_python),'-u','-m','tase.epoch_runner','--workspace',str(root),'--run-id',run_id,
-                '--task',cell['task'],'--init-index',str(cell['init_index']),'--condition','C0','--system','B0',
+                '--task',cell['task'],'--init-index',str(cell['init_index']),'--condition',cell['condition'],'--system','B0',
                 '--allocation-record',str(permission),'--port',str(port)]
-            if index==0:command.append('--verify-reset')
+            if run_id=='e2-dev-0001':command.append('--verify-reset')
             with (folder/'stdout.txt').open('x') as stdout,(folder/'stderr.txt').open('x') as stderr:
                 process=subprocess.Popen(command,cwd=repo,env=env,stdout=stdout,stderr=stderr)
-                try:process.wait(timeout=360)
+                try:process.wait(timeout=900)
                 except subprocess.TimeoutExpired:
                     # record_process forwards SIGTERM to its owned runner and
                     # retains the actual child exit. Never kill unrelated jobs.
@@ -107,7 +130,7 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
                     try:process.wait(timeout=30)
                     except subprocess.TimeoutExpired:
                         raise RuntimeError('owned runner did not terminate; retain receipts and stop')
-                    write_json(folder/'operator_timeout.json',{'timeout_seconds':360,
+                    write_json(folder/'operator_timeout.json',{'timeout_seconds':900,
                         'wrapper_returncode':process.returncode})
                     raise
             result=json.loads((root/'runs/DEV'/run_id/'result.json').read_text())
@@ -117,7 +140,7 @@ def run(root,token_file,gpu_index,port,session,server_python=None,sim_python=Non
             if process.returncode:raise RuntimeError('baseline attempt failed; no implicit replacement')
     finally:
         if child.poll() is None:
-            code="from gr00t.policy.server_client import PolicyClient;c=PolicyClient(host='127.0.0.1',port="+str(port)+",timeout_ms=5000);c.call_endpoint('shutdown',requires_input=False);c.close()"
+            code="from gr00t.policy.server_client import PolicyClient;c=PolicyClient(host='127.0.0.1',port="+str(port)+",timeout_ms=5000);c.kill_server();c.close()"
             try:subprocess.run([str(server_python),'-c',code],cwd=repo,env=env,timeout=15,check=True)
             except Exception:
                 # Only this owned process receives termination after shutdown failure.
@@ -135,4 +158,5 @@ if __name__=='__main__':
     p.add_argument('--token-file',type=Path);p.add_argument('--gpu-index',type=int,default=0);p.add_argument('--port',type=int,default=5559)
     p.add_argument('--session-id',required=True)
     p.add_argument('--server-python',type=Path);p.add_argument('--sim-python',type=Path)
-    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id,a.server_python,a.sim_python)
+    p.add_argument('--cells',nargs='+')
+    a=p.parse_args();run(a.workspace,a.token_file,a.gpu_index,a.port,a.session_id,a.server_python,a.sim_python,a.cells)

@@ -8,7 +8,8 @@ import time
 import traceback
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from .evidence import append_json, manifest, now_sgt, reserve_episode, sha256, write_json
+from .evidence import append_json, now_sgt, reserve_episode, sha256, write_json
+from .e2_evidence import manifest
 from .retention import cleanup_resources, traced_control_step
 
 TASKS = {name: f'pick_up_the_{name}_and_place_it_in_the_basket'

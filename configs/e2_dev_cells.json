@@ -203,5 +203,28 @@
   ],
   "diagnostic_slots": 6,
   "cap_including_all_failures": 24,
-  "failure_policy": "Preserve failed attempt; no replacement ID without explicit diagnostic entry committed within cap"
+  "failure_policy": "Preserve failed attempt; no replacement ID without explicit diagnostic entry committed within cap",
+  "diagnostic_cells": [
+    {
+      "run_id": "e2-dev-0019",
+      "task": "ketchup",
+      "init_index": 1,
+      "condition": "C0",
+      "system": "B0",
+      "scenario_id": "E2-DEV-ketchup-i1-C0",
+      "policy_seed": 640222,
+      "environment_seed": 640223,
+      "policy_target": "ketchup"
+    }
+  ],
+  "diagnostic_notes": {
+    "e2-dev-0019": {
+      "source_attempt": "e2-dev-0006",
+      "maximum_additional_attempts": 1,
+      "purpose": "Complete the same predeclared C0 ketchup/init1 scenario after executor wall-time interruption; original attempt remains consumed and retained",
+      "changes": "Verified task-owned local evidence storage; wall cap900 seconds, unchanged720 controls; native kill endpoint",
+      "same_runtime_init_policy_seed_environment_seed": true,
+      "replace_or_rewrite_source_attempt": false
+    }
+  }
 }

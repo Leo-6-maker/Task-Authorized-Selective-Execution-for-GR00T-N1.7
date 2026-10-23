@@ -7,7 +7,8 @@ import sys
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.audit_contract import require,check_observation,OBS_KEYS
-from tase.evidence import verify_manifest,sha256,write_json
+from tase.evidence import sha256,write_json
+from tase.e2_evidence import verify_manifest
 from tase.task_spec import TaskSpec
 from tase.event_oracle import EventOracle
 from tase.m2_context import jsonable,compare_frames
@@ -28,7 +29,16 @@ def audit(workspace,config):
         reservation=read(folder/'reservation.json');ordinals.append(reservation['budget_ordinal'])
         result_file=folder/'result.json'
         if not result_file.exists():
-            rows.append({'run_id':folder.name,'status':'STARTED_OR_INTERRUPTED','slot_consumed':True,'complete':False});continue
+            start_file=workspace/'runs'/f'{folder.name}.exit.started.json'
+            exit_file=workspace/'runs'/f'{folder.name}.exit.json'
+            process_complete=start_file.exists() and exit_file.exists()
+            exit_receipt=read(exit_file) if exit_file.exists() else {}
+            if process_complete:require(read(start_file)['child_pid']==exit_receipt['child_pid'],'partial process ID mismatch')
+            rows.append({k:reservation.get(k) for k in ['run_id','task','init_index','condition','system','repo_sha','config_hash','runtime_lock_hash']}|
+                {'status':'STARTED_OR_INTERRUPTED','slot_consumed':True,'complete':False,'result_present':False,
+                 'process_receipts_complete':process_complete,'exit_code':exit_receipt.get('exit_code'),
+                 'child_returncode':exit_receipt.get('child_returncode'),'official_success':None})
+            continue
         result=read(result_file)
         for key in ['run_id','repo_sha','config_hash','runtime_lock_hash','epoch','protocol_id','task','init_index','condition','system','scenario_id','policy_seed','environment_seed']:
             require(result[key]==reservation[key],'reservation/result mismatch: '+key)
@@ -142,11 +152,12 @@ def audit(workspace,config):
             require(guard['before_hash']==next(s for s in snapshots if s['decision']==guard['index'])['snapshot_hash'],'guard snapshot binding')
         if full:
             require(sum(g['completed_controls_after']-g['completed_controls_before'] for g in gates)==len(frames),'Gate/control coverage mismatch')
-        rows.append({k:result.get(k) for k in ['run_id','task','init_index','condition','system','status','official_success','inner_steps','policy_calls','policy_requests_attempted','first_wrong_lift_step','exit_code']}|{'slot_consumed':True,'complete':complete})
+        rows.append({k:result.get(k) for k in ['run_id','task','init_index','condition','system','status','official_success','inner_steps','policy_calls','policy_requests_attempted','first_wrong_lift_step','exit_code','repo_sha','config_hash','runtime_lock_hash']}|{'slot_consumed':True,'complete':complete,'result_present':True,'process_receipts_complete':complete})
     require(sorted(ordinals)==list(range(1,len(folders)+1)),'reservation ordinals missing/duplicated')
     return {'epoch':'E2','protocol_id':'TASE-002-v1.0','scope':'JSON_NPZ_BYTE_AUDIT_NO_PICKLE_OR_SIM',
             'dev_used':len(folders),'dev_cap':cfg['maximum_episode_attempts'],'rows':rows,
-            'all_process_receipts_complete':all(r['complete'] for r in rows),
+            'all_process_receipts_complete':all(r['process_receipts_complete'] for r in rows),
+            'all_attempt_results_present':all(r['result_present'] for r in rows),
             'independent_review':'NOT_PERFORMED_BY_THIS_EXECUTOR'}
 
 

@@ -82,6 +82,14 @@ def gate_fixture(root,folder):
 
 
 class E2AuditTests(unittest.TestCase):
+    def test_missing_result_keeps_actual_process_exit_and_budget_slot(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);folder=build(root);(folder/'result.json').unlink();seal(root,folder)
+            write(root/'runs/e2-dev-0001.exit.json',{'child_pid':123,'child_returncode':-15,'exit_code':143})
+            report=module.audit(root,REPO/'configs/e2_dev.json');row=report['rows'][0]
+            self.assertEqual(report['dev_used'],1);self.assertFalse(row['complete']);self.assertFalse(row['result_present'])
+            self.assertEqual(row['exit_code'],143);self.assertEqual(row['child_returncode'],-15)
+            self.assertTrue(report['all_process_receipts_complete']);self.assertFalse(report['all_attempt_results_present'])
     def test_gate_predictions_and_guards_bind_to_the_scored_evidence(self):
         for mutation in [None,'missing_guards','dishonest_guard','missing_prediction','forged_view','bad_accepted_rollout']:
             with self.subTest(mutation=mutation),tempfile.TemporaryDirectory() as temp:

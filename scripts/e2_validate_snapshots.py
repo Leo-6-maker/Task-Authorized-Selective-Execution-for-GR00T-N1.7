@@ -12,7 +12,8 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import numpy as np
 from tase.audit_contract import require
-from tase.evidence import reserve_episode,verify_manifest,sha256,write_json,manifest
+from tase.evidence import reserve_episode,sha256,write_json
+from tase.e2_evidence import verify_manifest,manifest
 from tase.shadow import Shadow
 from tase.snapshot import digest
 from tase.m2_context import compare_frames,jsonable

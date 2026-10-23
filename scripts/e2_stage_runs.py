@@ -47,6 +47,9 @@ def stage(root,cache,operation):
     if {str(p.relative_to(source)) for p in source.rglob('*') if p.is_file()}!=set(before):raise ValueError('source changed during copy')
     for path in paths:
         if sha256(path)!=before[str(path.relative_to(source))]['sha256']:raise ValueError('source bytes changed during copy')
+    write_json(root/'operator/e2-storage-alias.json',{'epoch':'E2','workspace':str(root),
+        'cache_root':str(cache),'target':str(destination.resolve()),
+        'ownership_marker_sha256':sha256(cache/'e2-cache-ownership.json')})
     source.rename(retained)
     try:source.symlink_to(destination,target_is_directory=True)
     except Exception:
