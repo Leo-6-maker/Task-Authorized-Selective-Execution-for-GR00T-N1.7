@@ -1,0 +1,932 @@
+{
+  "scope": "EXECUTOR_DECODE_NOT_INDEPENDENT_MEDIA_LABELING",
+  "rows": [
+    {
+      "run_id": "e2-dev-0001",
+      "complete_result": true,
+      "decoded_frames": 143,
+      "physical_controls": 143,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 909,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 9,
+        "AUTHORIZED_LIFT": 77,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0002",
+      "complete_result": true,
+      "decoded_frames": 138,
+      "physical_controls": 138,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 881,
+        "CONTACT_ONLY": 2,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 77,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0003",
+      "complete_result": true,
+      "decoded_frames": 128,
+      "physical_controls": 128,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 822,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 62,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-dev-0004",
+      "complete_result": true,
+      "decoded_frames": 160,
+      "physical_controls": 160,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1049,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 9,
+        "AUTHORIZED_LIFT": 54,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-dev-0005",
+      "complete_result": true,
+      "decoded_frames": 143,
+      "physical_controls": 143,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 914,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 8,
+        "AUTHORIZED_LIFT": 75
+      }
+    },
+    {
+      "run_id": "e2-dev-0006",
+      "complete_result": false,
+      "decoded_frames": 0,
+      "physical_controls": 537,
+      "coverage_complete": false,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 3741,
+        "CONTACT_ONLY": 7,
+        "AMBIGUOUS": 8,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0007",
+      "complete_result": true,
+      "decoded_frames": 128,
+      "physical_controls": 128,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 818,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 71
+      }
+    },
+    {
+      "run_id": "e2-dev-0008",
+      "complete_result": true,
+      "decoded_frames": 132,
+      "physical_controls": 132,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 844,
+        "CONTACT_ONLY": 5,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 71
+      }
+    },
+    {
+      "run_id": "e2-dev-0009",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4955,
+        "CONTACT_ONLY": 3,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 3,
+        "WRONG_OBJECT_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0010",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4952,
+        "CONTACT_ONLY": 2,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 6,
+        "WRONG_OBJECT_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-dev-0011",
+      "complete_result": true,
+      "decoded_frames": 321,
+      "physical_controls": 321,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 2141,
+        "CONTACT_ONLY": 10,
+        "AUTHORIZED_GRASP_EVIDENCE": 9,
+        "AUTHORIZED_LIFT": 82,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 5
+      }
+    },
+    {
+      "run_id": "e2-dev-0012",
+      "complete_result": true,
+      "decoded_frames": 141,
+      "physical_controls": 141,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 913,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 2,
+        "AMBIGUOUS": 12,
+        "AUTHORIZED_LIFT": 56
+      }
+    },
+    {
+      "run_id": "e2-dev-0013",
+      "complete_result": true,
+      "decoded_frames": 143,
+      "physical_controls": 143,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 909,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 9,
+        "AUTHORIZED_LIFT": 77,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0014",
+      "complete_result": true,
+      "decoded_frames": 128,
+      "physical_controls": 128,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 822,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 62,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-dev-0015",
+      "complete_result": true,
+      "decoded_frames": 143,
+      "physical_controls": 143,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 914,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 8,
+        "AUTHORIZED_LIFT": 75
+      }
+    },
+    {
+      "run_id": "e2-dev-0016",
+      "complete_result": true,
+      "decoded_frames": 128,
+      "physical_controls": 128,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 818,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 71
+      }
+    },
+    {
+      "run_id": "e2-dev-0017",
+      "complete_result": true,
+      "decoded_frames": 56,
+      "physical_controls": 56,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 389,
+        "CONTACT_ONLY": 3
+      }
+    },
+    {
+      "run_id": "e2-dev-0018",
+      "complete_result": true,
+      "decoded_frames": 321,
+      "physical_controls": 321,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 2141,
+        "CONTACT_ONLY": 10,
+        "AUTHORIZED_GRASP_EVIDENCE": 9,
+        "AUTHORIZED_LIFT": 82,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 5
+      }
+    },
+    {
+      "run_id": "e2-dev-0019",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 5022,
+        "CONTACT_ONLY": 7,
+        "AMBIGUOUS": 8,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0001",
+      "complete_result": true,
+      "decoded_frames": 172,
+      "physical_controls": 172,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1090,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 104,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0002",
+      "complete_result": true,
+      "decoded_frames": 153,
+      "physical_controls": 153,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 973,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 91,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0003",
+      "complete_result": true,
+      "decoded_frames": 145,
+      "physical_controls": 145,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 928,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 75,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0004",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 894,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 7,
+        "AUTHORIZED_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0005",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4994,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 34,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-calib-0006",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 890,
+        "CONTACT_ONLY": 6,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 77,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0007",
+      "complete_result": true,
+      "decoded_frames": 161,
+      "physical_controls": 161,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1014,
+        "CONTACT_ONLY": 9,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 98,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0008",
+      "complete_result": true,
+      "decoded_frames": 138,
+      "physical_controls": 138,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 874,
+        "CONTACT_ONLY": 8,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 78,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0009",
+      "complete_result": true,
+      "decoded_frames": 126,
+      "physical_controls": 126,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 813,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 56,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0010",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4941,
+        "CONTACT_ONLY": 3,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 3,
+        "WRONG_OBJECT_LIFT": 89,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-calib-0011",
+      "complete_result": true,
+      "decoded_frames": 134,
+      "physical_controls": 134,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 862,
+        "CONTACT_ONLY": 2,
+        "AUTHORIZED_GRASP_EVIDENCE": 8,
+        "AUTHORIZED_LIFT": 63,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0012",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4931,
+        "CONTACT_ONLY": 9,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 5,
+        "AMBIGUOUS": 12,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 10,
+        "WRONG_OBJECT_LIFT": 73
+      }
+    },
+    {
+      "run_id": "e2-calib-0013",
+      "complete_result": true,
+      "decoded_frames": 131,
+      "physical_controls": 131,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 850,
+        "CONTACT_ONLY": 2,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 57,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-calib-0014",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4956,
+        "CONTACT_ONLY": 4,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 3,
+        "WRONG_OBJECT_LIFT": 74,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0015",
+      "complete_result": true,
+      "decoded_frames": 127,
+      "physical_controls": 127,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 817,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 5,
+        "AUTHORIZED_LIFT": 61,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0016",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4945,
+        "CONTACT_ONLY": 3,
+        "WRONG_OBJECT_GRASP_EVIDENCE": 3,
+        "WRONG_OBJECT_LIFT": 83,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 6
+      }
+    },
+    {
+      "run_id": "e2-calib-0017",
+      "complete_result": true,
+      "decoded_frames": 127,
+      "physical_controls": 127,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 818,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 5,
+        "AMBIGUOUS": 39,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_LIFT": 26
+      }
+    },
+    {
+      "run_id": "e2-calib-0018",
+      "complete_result": true,
+      "decoded_frames": 145,
+      "physical_controls": 145,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 930,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 2,
+        "AUTHORIZED_LIFT": 59,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 22
+      }
+    },
+    {
+      "run_id": "e2-calib-0019",
+      "complete_result": true,
+      "decoded_frames": 134,
+      "physical_controls": 134,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 864,
+        "CONTACT_ONLY": 2,
+        "AMBIGUOUS": 22,
+        "AUTHORIZED_LIFT": 50
+      }
+    },
+    {
+      "run_id": "e2-calib-0020",
+      "complete_result": true,
+      "decoded_frames": 157,
+      "physical_controls": 157,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1017,
+        "CONTACT_ONLY": 6,
+        "AMBIGUOUS": 10,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 1,
+        "AUTHORIZED_LIFT": 65
+      }
+    },
+    {
+      "run_id": "e2-calib-0021",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 899,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 73,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0022",
+      "complete_result": true,
+      "decoded_frames": 230,
+      "physical_controls": 230,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1509,
+        "CONTACT_ONLY": 5,
+        "AUTHORIZED_GRASP_EVIDENCE": 12,
+        "AUTHORIZED_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 8
+      }
+    },
+    {
+      "run_id": "e2-calib-0023",
+      "complete_result": true,
+      "decoded_frames": 135,
+      "physical_controls": 135,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 862,
+        "CONTACT_ONLY": 5,
+        "AMBIGUOUS": 6,
+        "AUTHORIZED_LIFT": 72
+      }
+    },
+    {
+      "run_id": "e2-calib-0024",
+      "complete_result": true,
+      "decoded_frames": 131,
+      "physical_controls": 131,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 845,
+        "CONTACT_ONLY": 4,
+        "AMBIGUOUS": 5,
+        "AUTHORIZED_LIFT": 63
+      }
+    },
+    {
+      "run_id": "e2-calib-0025",
+      "complete_result": true,
+      "decoded_frames": 172,
+      "physical_controls": 172,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1090,
+        "CONTACT_ONLY": 4,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 104,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0026",
+      "complete_result": true,
+      "decoded_frames": 153,
+      "physical_controls": 153,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 973,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 91,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0027",
+      "complete_result": true,
+      "decoded_frames": 145,
+      "physical_controls": 145,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 928,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 75,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0028",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 894,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 7,
+        "AUTHORIZED_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0029",
+      "complete_result": true,
+      "decoded_frames": 720,
+      "physical_controls": 720,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 4994,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 34,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-calib-0030",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 890,
+        "CONTACT_ONLY": 6,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 77,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0031",
+      "complete_result": true,
+      "decoded_frames": 161,
+      "physical_controls": 161,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1014,
+        "CONTACT_ONLY": 9,
+        "AUTHORIZED_GRASP_EVIDENCE": 3,
+        "AUTHORIZED_LIFT": 98,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0032",
+      "complete_result": true,
+      "decoded_frames": 138,
+      "physical_controls": 138,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 874,
+        "CONTACT_ONLY": 8,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 78,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0033",
+      "complete_result": true,
+      "decoded_frames": 126,
+      "physical_controls": 126,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 813,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 6,
+        "AUTHORIZED_LIFT": 56,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0034",
+      "complete_result": true,
+      "decoded_frames": 56,
+      "physical_controls": 56,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 391,
+        "CONTACT_ONLY": 1
+      }
+    },
+    {
+      "run_id": "e2-calib-0035",
+      "complete_result": true,
+      "decoded_frames": 134,
+      "physical_controls": 134,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 862,
+        "CONTACT_ONLY": 2,
+        "AUTHORIZED_GRASP_EVIDENCE": 8,
+        "AUTHORIZED_LIFT": 63,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0036",
+      "complete_result": true,
+      "decoded_frames": 56,
+      "physical_controls": 56,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 392
+      }
+    },
+    {
+      "run_id": "e2-calib-0037",
+      "complete_result": true,
+      "decoded_frames": 131,
+      "physical_controls": 131,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 850,
+        "CONTACT_ONLY": 2,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 57,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 4
+      }
+    },
+    {
+      "run_id": "e2-calib-0038",
+      "complete_result": true,
+      "decoded_frames": 56,
+      "physical_controls": 56,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 389,
+        "CONTACT_ONLY": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0039",
+      "complete_result": true,
+      "decoded_frames": 127,
+      "physical_controls": 127,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 817,
+        "CONTACT_ONLY": 3,
+        "AUTHORIZED_GRASP_EVIDENCE": 5,
+        "AUTHORIZED_LIFT": 61,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0040",
+      "complete_result": true,
+      "decoded_frames": 56,
+      "physical_controls": 56,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 390,
+        "CONTACT_ONLY": 2
+      }
+    },
+    {
+      "run_id": "e2-calib-0041",
+      "complete_result": true,
+      "decoded_frames": 127,
+      "physical_controls": 127,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 818,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 5,
+        "AMBIGUOUS": 39,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_LIFT": 26
+      }
+    },
+    {
+      "run_id": "e2-calib-0042",
+      "complete_result": true,
+      "decoded_frames": 145,
+      "physical_controls": 145,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 930,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 2,
+        "AUTHORIZED_LIFT": 59,
+        "AMBIGUOUS": 1,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 22
+      }
+    },
+    {
+      "run_id": "e2-calib-0043",
+      "complete_result": true,
+      "decoded_frames": 134,
+      "physical_controls": 134,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 864,
+        "CONTACT_ONLY": 2,
+        "AMBIGUOUS": 22,
+        "AUTHORIZED_LIFT": 50
+      }
+    },
+    {
+      "run_id": "e2-calib-0044",
+      "complete_result": true,
+      "decoded_frames": 157,
+      "physical_controls": 157,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1017,
+        "CONTACT_ONLY": 6,
+        "AMBIGUOUS": 10,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 1,
+        "AUTHORIZED_LIFT": 65
+      }
+    },
+    {
+      "run_id": "e2-calib-0045",
+      "complete_result": true,
+      "decoded_frames": 140,
+      "physical_controls": 140,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 899,
+        "CONTACT_ONLY": 1,
+        "AUTHORIZED_GRASP_EVIDENCE": 4,
+        "AUTHORIZED_LIFT": 73,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 3
+      }
+    },
+    {
+      "run_id": "e2-calib-0046",
+      "complete_result": true,
+      "decoded_frames": 230,
+      "physical_controls": 230,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 1509,
+        "CONTACT_ONLY": 5,
+        "AUTHORIZED_GRASP_EVIDENCE": 12,
+        "AUTHORIZED_LIFT": 76,
+        "BOUNCE_OR_UNSUPPORTED_LIFT": 8
+      }
+    },
+    {
+      "run_id": "e2-calib-0047",
+      "complete_result": true,
+      "decoded_frames": 135,
+      "physical_controls": 135,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 862,
+        "CONTACT_ONLY": 5,
+        "AMBIGUOUS": 6,
+        "AUTHORIZED_LIFT": 72
+      }
+    },
+    {
+      "run_id": "e2-calib-0048",
+      "complete_result": true,
+      "decoded_frames": 131,
+      "physical_controls": 131,
+      "coverage_complete": true,
+      "event_label_frame_object_counts": {
+        "NO_EVENT": 845,
+        "CONTACT_ONLY": 4,
+        "AMBIGUOUS": 5,
+        "AUTHORIZED_LIFT": 63
+      }
+    }
+  ],
+  "complete_result_videos": 66,
+  "all_complete_result_videos_match_controls": true,
+  "known_original_interruption_retained": "e2-dev-0006: undecodable MP4,537 saved main controls,actual exit143,missing result retained"
+}

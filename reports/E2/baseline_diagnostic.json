@@ -1,0 +1,86 @@
+{
+  "prefix": {
+    "scope": "SAVED_JSON_NUMPY_BYTE_CHECK_NO_PICKLE_MODEL_SIM",
+    "source_attempt": "e2-dev-0006",
+    "diagnostic": "e2-dev-0019",
+    "status": "PASS",
+    "checks": {
+      "benchmark_init.npy": true,
+      "settled_state.npy": true,
+      "scene.xml": true,
+      "task_spec.json": true,
+      "horizon.json": true,
+      "action_prefix_exact": true,
+      "action_source_files": 68,
+      "observation_prefix_exact": true,
+      "observation_source_files": 68,
+      "states_prefix_exact": true,
+      "converted_actions_prefix_exact": true,
+      "physical_prefix_controls": 537,
+      "full_snapshot_digest_prefix_exact": true,
+      "physical_frames_oracle_prefix_exact": true,
+      "scenario_reset_rng_exact": true
+    },
+    "new_model_requests": 0
+  },
+  "diagnostic": {
+    "run_id": "e2-dev-0019",
+    "task": "ketchup",
+    "init_index": 1,
+    "split": "DEV",
+    "repo_sha": "2cb9b437cb8609bc21bb43ede8b9163fe91f16e5",
+    "config_hash": "5e2c469568d5e82c5f70d38e086fc179240a8607ff738e636bfeb181e7f573a5",
+    "runtime_lock_hash": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "status": "TIME_LIMIT",
+    "official_success": false,
+    "policy_calls": 90,
+    "policy_requests_attempted": 90,
+    "inner_steps": 720,
+    "settling_steps": 10,
+    "exit_code": 0,
+    "started_at_sgt": "2026-10-23T21:11:28.334187+08:00",
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "condition": "C0",
+    "system": "B0",
+    "scenario_id": "E2-DEV-ketchup-i1-C0",
+    "policy_seed": 640222,
+    "environment_seed": 640223,
+    "policy_target": "ketchup",
+    "init_hash": "ee350ce5a057cc8c4946aad6b20d1ccb386e17acb1750e09e23f0228dcf46048",
+    "init_file_sha256": "b987f7b11e8f9b47353cd7882e1da38ecdf6ec9715ad8a84346583ea71049fd3",
+    "bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319",
+    "full_task_name": "pick_up_the_ketchup_and_place_it_in_the_basket",
+    "native_language": "pick up the ketchup and place it in the basket",
+    "settled_state_hash": "050bada04b5a558b13a043a38cb4c940c6497ad3cac3cafc34a1228e5aa3bf41",
+    "scene_xml_hash": "d54c12a8b2c23956e514d359ca73b0e2dc8bb1b3da10d3187c97180d427b0712",
+    "control_hz": 20,
+    "task_objects": [
+      "ketchup_1",
+      "basket_1"
+    ],
+    "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+    "gl_vendor": "NVIDIA Corporation",
+    "egl_process_gpu_indices": [
+      0
+    ],
+    "egl_binding_check": "MATCH",
+    "first_wrong_lift_step": null,
+    "wall_seconds": 34.69774678722024,
+    "completed_at_sgt": "2026-10-23T21:12:03.031879+08:00"
+  },
+  "exit": {
+    "completed_at_sgt": "2026-10-23T21:12:03.809426+08:00",
+    "child_pid": 2822224,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "server_exit": {
+    "completed_at_sgt": "2026-10-23T21:12:06.757781+08:00",
+    "child_pid": 2822120,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  }
+}

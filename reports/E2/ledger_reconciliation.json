@@ -1,0 +1,65 @@
+{
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "attempts_including_failures": 67,
+  "DEV_used": 19,
+  "CALIB_used": 48,
+  "TEST_used": 0,
+  "TEST_authorized": false,
+  "statuses": {
+    "SUCCESS": 52,
+    "STARTED_OR_INTERRUPTED": 1,
+    "TIME_LIMIT": 9,
+    "SEMANTIC_ABORT": 5
+  },
+  "physical_controls_observed": 15126,
+  "actual_model_requests": 1920,
+  "all_attempt_start_exit_pairs_present": true,
+  "all_result_files_present": false,
+  "servers": [
+    {
+      "server": "server-e2-01",
+      "actual_requests": 159,
+      "actual_exit_code": 143,
+      "child_returncode": -15,
+      "all_native_contracts_and_language_seed_verified": true
+    },
+    {
+      "server": "server-e2-02",
+      "actual_requests": 90,
+      "actual_exit_code": 0,
+      "child_returncode": 0,
+      "all_native_contracts_and_language_seed_verified": true
+    },
+    {
+      "server": "server-e2-03",
+      "actual_requests": 272,
+      "actual_exit_code": 0,
+      "child_returncode": 0,
+      "all_native_contracts_and_language_seed_verified": true
+    },
+    {
+      "server": "server-e2-04",
+      "actual_requests": 117,
+      "actual_exit_code": 0,
+      "child_returncode": 0,
+      "all_native_contracts_and_language_seed_verified": true
+    },
+    {
+      "server": "server-e2-05",
+      "actual_requests": 805,
+      "actual_exit_code": 0,
+      "child_returncode": 0,
+      "all_native_contracts_and_language_seed_verified": true
+    },
+    {
+      "server": "server-e2-06",
+      "actual_requests": 477,
+      "actual_exit_code": 0,
+      "child_returncode": 0,
+      "all_native_contracts_and_language_seed_verified": true
+    }
+  ],
+  "ledger_sha256": "f6f722f87b1033630bea22e0e06c893ab8a096110fe2c586d9664d36a4df99d7",
+  "independent_review": "NOT_PERFORMED"
+}

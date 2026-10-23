@@ -1,0 +1,13 @@
+# E2 real DEV Gate
+
+Executor checkpoint, not independent GPT approval or TEST evidence. Runtime code: `0917f1b480fa81f593558c456bcdfd239b0bcb22`; subsequent JSON/numeric pair re-audit code: `8f3108d`. Normal and optimized re-audits both exit0 and agree.
+
+All six predeclared G cells completed: C0 soup/cream cheese/ketchup SUCCESS, C2 soup/ketchup SUCCESS, C2 cream cheese SEMANTIC_ABORT. All actual runner and owned server exits0. DEV total19/24 includes the retained original interruption0006 and diagnostic0019; no failures were removed. Independent short comparisons remain32/96, CALIB not yet run, TEST not authorized.
+
+The cream-cheese C2 B0 first wrong lift occurs at control60; G executes the identical first56 controls, inspects the next prefix, predicts non-target bilateral contacts and rejects. Rejected candidate main execution is0 controls and the episode terminates; G has no actual wrong lift. Its incomplete task remains an abort, not a success. This is one selected DEV paired mechanism demonstration, not an estimate of generalization or safety effectiveness.
+
+For every G decision, raw16-step model outputs and full pre-action snapshot/RNG digests equal matched B0. All executed main controller inputs and integration-state rows equal the B0 prefix exactly. Full state and server RNG guards pass around each prediction; scoring only receives contact maps/history and trusted target. The same immutable candidate passes to the native wrapper, with one gripper conversion. [All six pairs](gate_dev_pairs.csv), [numeric audits and actual exits](gate_dev_audit.json).
+
+117 candidates produced117 independent-worker predictions across six episodes. Median prediction70.09ms/P9585.16ms; median contact decision0.0224ms/P950.0454ms. Total monitor before main execution includes snapshot/persistence, worker creation, prediction, evidence and guards: median109.05ms/P95905.93ms, sum40.22s. Six one-time worker setups account for27.49s; the total row excludes its own final timing-row write and main execution. These measurements describe actual cost; original NFS baseline wall time is unsuitable as a Gate overhead comparator.
+
+P0/P1, fresh normal/event-window shadow checks, oracle input regressions/media inspection and real ACCEPT/REJECT wiring now have executor evidence. Conditional CALIB may proceed under R004 after committed content-hash holdout/candidate rules. Current DEV results have no independent reviewer approval. Exact raw originals are retained; [P2 two-location backup](p2_backup_verification.json) is verified, and the closed DEV archive is being copied and independently checked before final handoff.

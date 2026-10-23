@@ -1,0 +1,29 @@
+{
+  "recorded_at_sgt": "2026-10-23T17:38:22.024577+08:00",
+  "role": "Codex executor",
+  "classification": "DELIVERY_SELF_CHECK_NOT_GPT_REVIEW",
+  "tested_source_commit": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+  "original_local_files_preserved_and_unchanged": 14,
+  "original_HEAD_preserved": true,
+  "implementation_tests_configs_history_unchanged": true,
+  "cpu_normal": {
+    "tests": 24,
+    "exit_code": 0
+  },
+  "cpu_optimized": {
+    "tests": 24,
+    "exit_code": 0
+  },
+  "bounded_search_rounds": 2,
+  "candidate_roots_per_round": [
+    6,
+    6
+  ],
+  "trusted_originals_acquired": false,
+  "authoritative_ledger_reconciled": false,
+  "expected_ID_index_rows": 99,
+  "real_runtime_permission": "SUSPENDED",
+  "status": "BLOCKED_EXACT_ACCESS_REQUEST",
+  "private_delivery_exists": true,
+  "public_privacy_and_link_checks": "PASS"
+}

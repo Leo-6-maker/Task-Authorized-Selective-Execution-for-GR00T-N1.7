@@ -1,0 +1,142 @@
+{
+  "audit": {
+    "scope": "EXECUTOR_DEV_PAIR_AUDIT_NOT_TEST_OR_GPT_APPROVAL",
+    "dev_used": 19,
+    "rows": [
+      {
+        "b0_run": "e2-dev-0001",
+        "g_run": "e2-dev-0013",
+        "task": "alphabet_soup",
+        "condition": "C0",
+        "b0_status": "SUCCESS",
+        "g_status": "SUCCESS",
+        "b0_first_wrong_lift": null,
+        "g_first_wrong_lift": null,
+        "b0_controls": 143,
+        "g_controls": 143,
+        "rejected_candidate_main_controls": null,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": false
+      },
+      {
+        "b0_run": "e2-dev-0003",
+        "g_run": "e2-dev-0014",
+        "task": "cream_cheese",
+        "condition": "C0",
+        "b0_status": "SUCCESS",
+        "g_status": "SUCCESS",
+        "b0_first_wrong_lift": null,
+        "g_first_wrong_lift": null,
+        "b0_controls": 128,
+        "g_controls": 128,
+        "rejected_candidate_main_controls": null,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": false
+      },
+      {
+        "b0_run": "e2-dev-0005",
+        "g_run": "e2-dev-0015",
+        "task": "ketchup",
+        "condition": "C0",
+        "b0_status": "SUCCESS",
+        "g_status": "SUCCESS",
+        "b0_first_wrong_lift": null,
+        "g_first_wrong_lift": null,
+        "b0_controls": 143,
+        "g_controls": 143,
+        "rejected_candidate_main_controls": null,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": false
+      },
+      {
+        "b0_run": "e2-dev-0007",
+        "g_run": "e2-dev-0016",
+        "task": "alphabet_soup",
+        "condition": "C2",
+        "b0_status": "SUCCESS",
+        "g_status": "SUCCESS",
+        "b0_first_wrong_lift": null,
+        "g_first_wrong_lift": null,
+        "b0_controls": 128,
+        "g_controls": 128,
+        "rejected_candidate_main_controls": null,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": false
+      },
+      {
+        "b0_run": "e2-dev-0009",
+        "g_run": "e2-dev-0017",
+        "task": "cream_cheese",
+        "condition": "C2",
+        "b0_status": "TIME_LIMIT",
+        "g_status": "SEMANTIC_ABORT",
+        "b0_first_wrong_lift": 60,
+        "g_first_wrong_lift": null,
+        "b0_controls": 720,
+        "g_controls": 56,
+        "rejected_candidate_main_controls": 0,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": true
+      },
+      {
+        "b0_run": "e2-dev-0011",
+        "g_run": "e2-dev-0018",
+        "task": "ketchup",
+        "condition": "C2",
+        "b0_status": "SUCCESS",
+        "g_status": "SUCCESS",
+        "b0_first_wrong_lift": null,
+        "g_first_wrong_lift": null,
+        "b0_controls": 321,
+        "g_controls": 321,
+        "rejected_candidate_main_controls": null,
+        "paired_prefix_exact": true,
+        "first_event_prevented_in_this_pair": false
+      }
+    ],
+    "actual_gate_candidates": 117,
+    "actual_gate_worker_instances": 6,
+    "timing": {
+      "prediction_ms": {
+        "n": 117,
+        "median": 70.08838094770908,
+        "p95": 85.16325820237398,
+        "sum": 8182.307675015181
+      },
+      "decision_ms": {
+        "n": 117,
+        "median": 0.022409949451684952,
+        "p95": 0.04535634070634841,
+        "sum": 3.0827797017991543
+      },
+      "total_monitor_before_execution_ms": {
+        "n": 117,
+        "median": 109.04704639688134,
+        "p95": 905.926966573999,
+        "sum": 40216.58983966336
+      },
+      "worker_setup_and_record_ms": {
+        "n": 117,
+        "median": 0.0,
+        "p95": 778.2572089693998,
+        "sum": 27492.990442551672
+      }
+    },
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "independent_review": "NOT_PERFORMED"
+  },
+  "normal_exit": {
+    "completed_at_sgt": "2026-10-23T23:03:16.492358+08:00",
+    "child_pid": 2904354,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "optimized_exit": {
+    "completed_at_sgt": "2026-10-23T23:03:20.260888+08:00",
+    "child_pid": 2904371,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  }
+}

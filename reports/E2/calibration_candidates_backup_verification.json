@@ -1,0 +1,13 @@
+{
+  "stage": "calib-candidates-08",
+  "bytes": 2719421,
+  "sha256": "e59b5f889bc8376bef8f0e07c04377b2e5b4287f14ee6a904e1628f1d4501cc8",
+  "artifacts": 3002,
+  "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+  "independent_review": "NOT_PERFORMED",
+  "base_archive": {
+    "stage": "calib-b0-07",
+    "bytes": 829962538,
+    "sha256": "86f4e8d45f7d12123c12736e0a7a686d71ee478db4b3301d42632fc8f1dff545"
+  }
+}

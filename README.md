@@ -18,11 +18,32 @@ LIBERO observation + task instruction
       └─ REJECT / ERROR → withhold prefix → end autonomous episode + record
 ```
 
-## 当前状态
+## 当前状态（E2，2026-10-24）
 
-**DOCUMENTATION_BOOTSTRAP / NOT_RUNTIME_VALIDATED**。
+Issue #8 的新环境、原生baseline、真实Gate及48次条件CALIB已完成，**READY_FOR_R2_REVIEW；无GPT结果批准、无自动merge、TEST未启动**。当前依据为[R004](docs/reviews/R004-fresh-epoch-progress-decision.md)，取代旧目录恢复门槛。不要重跑已完成ID或把下面历史M2额度当当前余额。
 
-本仓库初始化提交的是计划、实施约束、实验协议与审核流程，不是已完成的模型部署、治理代码或实验结果。未在本次规划中登录 GPU 节点、运行 GR00T 或验证治理效果。首个有界执行包为 **M0–M1：隔离部署、接口核验、原生 baseline**；见 [Codex 首轮交接](docs/CODEX_HANDOFF.md)。
+- [接手状态](reports/E2/TAKEOVER_STATUS.md) · [集中R2包](reports/E2/R2_REVIEW_PACKET.md) · [CALIB结果](reports/E2/calibration_report.md) · [67项完整账本](reports/E2/attempt_identity_ledger.csv)
+- DEV19/24、独立短检查32/96、CALIB48/48、TEST0。1920次实际模型请求已对账，全部失败保留。Object7/7、Cosmos10/10重新核验完整，[无需重复下载](reports/E2/model_file_recheck.json)。
+- [真实DEV Gate](reports/E2/gate_dev_report.md)及24组CALIB配对均核对同一主状态/RNG/动作前缀。C0成功11/12对11/12；C2实际wrong lift4/12对0/12，G以4次拒绝终止换取拦截，成功均8/12。CALIB同数据选k3和评价，不能当独立TEST或自然错误率。
+- [可实际获取的最小数值/媒体材料](reports/E2/review/README.md)、[新CALIB事件图](reports/E2/calibration-first-event-contact-sheet.png)、[双地点归档核验](reports/E2/backup_chain_verification.json)。模型/仿真均已退出。下一步仅为GPT一次R2审核；[120格TEST只是未授权提案](configs/e2_protocol_lock.json)。
+
+## 历史M2交付（以下是当时状态，当前入口以E2为准）
+
+**M2 READY_FOR_REVIEW：24快照、74次shadow比较及原始重算已交付。PR #3/#5保持未合并，M3尚未授权。**
+
+[M2实际报告](reports/M2/runtime_report.md) · [逐case数值](reports/M2/snapshot_validation.csv) · [独立事件定义/记录](reports/M2/oracle_definition.md) · [无副作用验证](reports/M2/noninterference_report.md) · [预算](reports/M2/budget_ledger.json) · [manifest](reports/M2/artifact_manifest.json)
+
+M2使用6次预定采集（3 C0、3明确标记的C2指令错配），共249次真实推理、1,985控制步。74次短预测中主状态与policy RNG保持一致；1段受控错误物体抬升用于oracle可观测性，不能解释成自然风险率或治理改善。累计DEV 18/24，其余6次保留。私有原件独立审核仍待实际访问。
+
+M1历史交付：真实 Object 模型完成181次forward、6个预定DEV episode，5次官方成功，ketchup初态1在720步上限失败。Alphabet soup和cream cheese均在初态0、1成功。当时累计12/24次DEV，包含环境检查和两次基础设施错误；M2之后的当前累计为18/24。
+
+通过进程级外部 HF_TOKEN_PATH 解决凭据发现问题，并固定 Cosmos revision。实测 PyTorch peak reserved 约 6.04 GiB（不是整进程及渲染总显存），episode 中位 9.46 秒。[R002](docs/reviews/R002-R1-native-baseline-conditional.md) 有条件允许 M2；先完成[审计加固](reports/M1/audit_hardening_report.md)，再按 Issue #4 有界验证 snapshot/shadow/oracle。M3 尚未授权。
+
+- [M0安装、资源与失败报告](reports/M0/preflight.md)
+- [M1续验报告与全部开发记录](reports/M1/continuation_report.md)
+- [原生运行契约与实测限制](reports/M1/runtime_contract_resume.md)
+- [运行身份](configs/runtime_lock_resume.json) / [artifact manifest](reports/M1/artifact_manifest_resume.json)
+- [首次阻塞交付的历史报告](reports/M1/baseline_report.md)
 
 ## 阅读顺序
 
@@ -62,4 +83,56 @@ LIBERO observation + task instruction
 
 ## 启动方式
 
-当前没有已验证的安装脚本或可运行的治理入口。**不要把文档中的拟实现命令当作已存在的程序。** Codex 从 `docs/CODEX_HANDOFF.md` 开始，以 PR 和可核查证据完成首轮交付。
+CPU侧检查不加载模型：
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/verify_delivery.py
+```
+
+本轮实际安装入口为 `scripts/prepare_runtime.py`，运行前必须固定上游源码并建立独立workspace、HOME与cache；详见[M0报告](reports/M0/preflight.md)。官方setup之后还须按 `configs/sim_constraints.txt` 修复实测发现的兼容冲突。安装成功不能代替模型/环境验收。
+
+`scripts/runtime_env.sh` 接受运行者明确设置的 `TASE_WORKSPACE`、`TASE_GPU_UUID`、`TASE_EGL_DEVICE_ID`，只使用项目目录内的配置、缓存与环境。实际GPU使用必须得到资源许可。`--allocation-record` 是已有用户许可的记录，不会自动产生许可。
+
+真实环境检查已用如下入口验证；每个新attempt必须使用新的run ID，失败也消耗总计24次的DEV预算：
+
+```bash
+"$SIM_PY" -m tase.baseline --workspace "$WORKSPACE" \
+  --run-id dev-env-NEW --task alphabet_soup --init-index 0 \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json" --probe-only
+```
+
+`tase.server` 和去掉 `--probe-only` 的原生 runner 已通过本轮六个 DEV episode 验证，包含一个真实策略失败。访问许可由负责人确认；通过外部 `HF_TOKEN_PATH` 使用已有 active token，无需复制 token 到项目环境。不能将 token 写入代码、命令参数、PR 或日志。
+
+固定 Cosmos revision `9ce19a195e423419c349abfc86fd07178b230561` 的推理文件并核验后，将 `$WORKSPACE/runtime/model-resolution/nvidia/Cosmos-Reason2-2B` 符号链接指向该 isolated HF cache snapshot。从 `runtime/model-resolution` 启动 native server，可让官方相对模型标识解析到固定本地文件，避开本次离线 tokenizer 元数据查询问题。具体文件清单与失败修复见续验报告。
+
+已验证的 server/client 入口如下；先完成上述环境、缓存、资源许可检查，设置 `SERVER_PY`、`SIM_PY` 与 `REPO` 的绝对路径，再分别在两个终端执行。NEW 必须换成未使用的 attempt ID：
+
+```bash
+# Server terminal: source scripts/runtime_env.sh before changing directory.
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+cd "$WORKSPACE/runtime/model-resolution"
+"$SERVER_PY" -u "$REPO/scripts/record_process.py" \
+  --receipt "$WORKSPACE/runs/server-NEW.exit.json" -- \
+  "$SERVER_PY" -u -m tase.server \
+  --model "$WORKSPACE/checkpoints/libero_object" \
+  --output "$WORKSPACE/runs/server-NEW" \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json"
+
+# Client terminal: same runtime_env.sh; wait for MODEL_LOADED / loopback ready.
+cd "$REPO"
+"$SIM_PY" -u scripts/record_process.py \
+  --receipt "$WORKSPACE/runs/dev-policy-NEW.exit.json" -- \
+  "$SIM_PY" -u -m tase.baseline --workspace "$WORKSPACE" \
+  --run-id dev-policy-NEW --task alphabet_soup --init-index 0 \
+  --allocation-record "$WORKSPACE/runs/gpu-authorization.json"
+```
+
+CPU 复算私有 evidence（需要 numpy；不会调用 GPU）：
+
+```bash
+"$SIM_PY" scripts/summarize_baseline.py --private-runtime "$WORKSPACE" \
+  --output "$WORKSPACE/runs/audit-NEW.json"
+```
+
+M2入口为同一 `tase.baseline` 加 `--m2`，只接受 `configs/m2_dev_cells.json` 的6个固定run ID；server需加 `--audit-rng`。本次6个ID已消耗，不能重用或再新增采集。CPU原件重算入口 `scripts/audit_m2.py --help`，只读取可信的本任务私有归档。Gate/校准/正式TEST仍没有获授权运行入口；此文档不授权继续花费保留预算。

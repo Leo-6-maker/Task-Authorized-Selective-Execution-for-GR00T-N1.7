@@ -1,0 +1,78 @@
+{
+  "runtime_sha": "16f0249299a11805666f68eb06c09c8f3974efef",
+  "audit_sha": "7b3ccdec283bb565864ffba726d479b13d01de90",
+  "cpu_tests": {
+    "normal_passed": 21,
+    "optimized_passed": 21
+  },
+  "raw_reaudit_normal_equals_optimized": true,
+  "remote_final_cpu_operation": {
+    "operation": "m2-remote-final-cpu-01",
+    "exit_code": 0,
+    "wall_seconds": 5.187000000005355,
+    "completed_utc": "2026-10-22T05:56:46.562133+00:00"
+  },
+  "native_wrapper_cpu_operation": {
+    "operation": "m2-native-wrapper-cpu-01",
+    "exit_code": 0,
+    "wall_seconds": 7.375,
+    "completed_utc": "2026-10-22T05:51:37.583518+00:00"
+  },
+  "raw_archive": {
+    "bytes": 79358392,
+    "sha256": "712a124504a2ebed3da877e92066b0ac8d39b3c66d34e7c5956916dc3d43395a",
+    "exit_code": 0,
+    "seconds": 4.75
+  },
+  "reviewer_package": {
+    "file": "M2-private-sanitized-originals.zip",
+    "bytes": 81209425,
+    "sha256": "859b177e097fab1c88449d30afcf3c2d2175256ecdb795793cc9a517de9737a2",
+    "entries": 979,
+    "independent_review": "NOT_VERIFIED_BY_REVIEWER"
+  },
+  "episode_wall_seconds_total": 152.7576160710305,
+  "inference_median_ms": 68.97463137283921,
+  "inference_first_ms": 262.1155697852373,
+  "peak_pytorch_reserved_bytes": 6482296832,
+  "model_server_exit": 0,
+  "media_video_frame_counts": [
+    {
+      "run_id": "dev-m2-013",
+      "video_frames": 141,
+      "expected_control_steps": 141
+    },
+    {
+      "run_id": "dev-m2-014",
+      "video_frames": 127,
+      "expected_control_steps": 127
+    },
+    {
+      "run_id": "dev-m2-015",
+      "video_frames": 149,
+      "expected_control_steps": 149
+    },
+    {
+      "run_id": "dev-m2-016",
+      "video_frames": 128,
+      "expected_control_steps": 128
+    },
+    {
+      "run_id": "dev-m2-017",
+      "video_frames": 720,
+      "expected_control_steps": 720
+    },
+    {
+      "run_id": "dev-m2-018",
+      "video_frames": 720,
+      "expected_control_steps": 720
+    }
+  ],
+  "executor_visual_samples": [
+    "authorized grasp",
+    "controlled wrong lift",
+    "contact only",
+    "ambiguous"
+  ],
+  "independent_raw_review": "NOT_VERIFIED_BY_REVIEWER"
+}

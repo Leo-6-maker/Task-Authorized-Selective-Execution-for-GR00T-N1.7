@@ -1,0 +1,13 @@
+{
+  "stage": "calib-b0-07",
+  "bytes": 829962538,
+  "sha256": "86f4e8d45f7d12123c12736e0a7a686d71ee478db4b3301d42632fc8f1dff545",
+  "artifacts": 3136,
+  "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+  "independent_review": "NOT_PERFORMED",
+  "base_archive": {
+    "stage": "dev-complete-06",
+    "bytes": 643419493,
+    "sha256": "68410d4b365bffe2bd1bb9338402e6017f8b0bdd525610dc8c08a1bd0ef713b2"
+  }
+}

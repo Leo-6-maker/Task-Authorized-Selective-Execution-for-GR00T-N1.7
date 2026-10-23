@@ -1,0 +1,11 @@
+{
+  "stage": "setup-progress-01",
+  "bytes": 17815,
+  "sha256": "dd830e0c64aa1623b74d9ac4ac89daa9eb5a9a7006efd4d0e10b5aee72979e81",
+  "artifacts_verified": 78,
+  "transport_exit": 0,
+  "status": "SECOND_LOCATION_ARCHIVE_AND_EVERY_MEMBER_VERIFIED",
+  "classification": "INSTALL_PROGRESS_SNAPSHOT_NOT_FINAL_EXPERIMENT_BACKUP",
+  "first_local_verifier_exit": 1,
+  "first_local_verifier_error": "system Python3.10 lacks hashlib.file_digest; preserved transferred bytes and resumed verification with sha256"
+}

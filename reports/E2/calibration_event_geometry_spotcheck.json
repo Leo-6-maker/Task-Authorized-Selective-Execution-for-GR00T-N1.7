@@ -1,0 +1,43 @@
+{
+  "scope": "EXECUTOR_NUMERIC_AND_RENDERED_FRAME_SPOTCHECK_NOT_INDEPENDENT_ANNOTATION",
+  "rows": [
+    {
+      "run_id": "e2-calib-0010",
+      "first_step": 62,
+      "object": "alphabet_soup_1",
+      "authorized_target": "cream_cheese_1",
+      "height_above_baseline_m": 0.03563952348147379,
+      "relative_motion_m": 8.557292885291852e-05,
+      "both_pads_at_previous_and_first_frame": true
+    },
+    {
+      "run_id": "e2-calib-0012",
+      "first_step": 148,
+      "object": "alphabet_soup_1",
+      "authorized_target": "cream_cheese_1",
+      "height_above_baseline_m": 0.03389223813627113,
+      "relative_motion_m": 0.00017056682905722663,
+      "both_pads_at_previous_and_first_frame": true
+    },
+    {
+      "run_id": "e2-calib-0014",
+      "first_step": 61,
+      "object": "alphabet_soup_1",
+      "authorized_target": "cream_cheese_1",
+      "height_above_baseline_m": 0.032514166913648716,
+      "relative_motion_m": 2.297855047030496e-05,
+      "both_pads_at_previous_and_first_frame": true
+    },
+    {
+      "run_id": "e2-calib-0016",
+      "first_step": 61,
+      "object": "alphabet_soup_1",
+      "authorized_target": "cream_cheese_1",
+      "height_above_baseline_m": 0.029720336748474414,
+      "relative_motion_m": 0.00012602232250433576,
+      "both_pads_at_previous_and_first_frame": true
+    }
+  ],
+  "full_trace_oracle_replay": "normal/-O calibration_audit.json; these20 exported frames are a subset",
+  "wrist_view_partly_occluded": true
+}

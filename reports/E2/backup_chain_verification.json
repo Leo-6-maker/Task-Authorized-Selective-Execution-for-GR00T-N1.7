@@ -1,0 +1,77 @@
+{
+  "status": "RAW_CHAIN_AND_IDENTITY_SUPPLEMENT_VERIFIED_AT_TWO_LOCATIONS",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "archives": [
+    {
+      "stage": "dev-complete-06",
+      "bytes": 643419493,
+      "sha256": "68410d4b365bffe2bd1bb9338402e6017f8b0bdd525610dc8c08a1bd0ef713b2",
+      "artifacts": 3291,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "scope": "TRUSTED_PRIVATE_RAW_EVIDENCE"
+    },
+    {
+      "stage": "calib-b0-07",
+      "bytes": 829962538,
+      "sha256": "86f4e8d45f7d12123c12736e0a7a686d71ee478db4b3301d42632fc8f1dff545",
+      "artifacts": 3136,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "base_archive": {
+        "stage": "dev-complete-06",
+        "bytes": 643419493,
+        "sha256": "68410d4b365bffe2bd1bb9338402e6017f8b0bdd525610dc8c08a1bd0ef713b2"
+      },
+      "scope": "TRUSTED_PRIVATE_RAW_EVIDENCE"
+    },
+    {
+      "stage": "calib-candidates-08",
+      "bytes": 2719421,
+      "sha256": "e59b5f889bc8376bef8f0e07c04377b2e5b4287f14ee6a904e1628f1d4501cc8",
+      "artifacts": 3002,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "base_archive": {
+        "stage": "calib-b0-07",
+        "bytes": 829962538,
+        "sha256": "86f4e8d45f7d12123c12736e0a7a686d71ee478db4b3301d42632fc8f1dff545"
+      },
+      "scope": "TRUSTED_PRIVATE_RAW_EVIDENCE"
+    },
+    {
+      "stage": "calib-final-09",
+      "bytes": 493874633,
+      "sha256": "69b1403787d2fe74b6c2891bc7d8dc11a70606248d77aa0a26d3d0667ff352f3",
+      "artifacts": 3249,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "base_archive": {
+        "stage": "calib-candidates-08",
+        "bytes": 2719421,
+        "sha256": "e59b5f889bc8376bef8f0e07c04377b2e5b4287f14ee6a904e1628f1d4501cc8"
+      },
+      "scope": "TRUSTED_PRIVATE_RAW_EVIDENCE"
+    },
+    {
+      "stage": "identity-metadata-10",
+      "bytes": 10986,
+      "sha256": "2e863468930183add0d904e5b85d979016173654ac4795aa90cf4be1693f7631",
+      "artifacts": 7,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "scope": "IDENTITY_METADATA_SUPPLEMENT_NOT_NEW_EXPERIMENT",
+      "raw_evidence_archive": {
+        "stage": "calib-final-09",
+        "sha256": "69b1403787d2fe74b6c2891bc7d8dc11a70606248d77aa0a26d3d0667ff352f3"
+      }
+    }
+  ],
+  "bytes_per_location": 1969987071,
+  "main_raw_snapshot_source_artifacts": 12675,
+  "locations": "Authorized remote storage and independent owner host; actual locations remain in private runtime map",
+  "verification": "Archive byte count and whole SHA256 plus every archive member verified on independent host; base identities linked; no pickle deserialization",
+  "models_and_environments": "Not embedded; official model identities, isolated environment receipts and source/runtime locks are preserved separately",
+  "independent_review": "NOT_PERFORMED"
+}

@@ -1,0 +1,34 @@
+{
+  "captured_at_sgt": "2026-10-21T18:38:52.583846+08:00",
+  "os": "Linux",
+  "kernel": "7.0.0-31-generic",
+  "python": "3.12.3",
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4080 SUPER",
+      "total_mib": 32760,
+      "used_mib": 10910,
+      "free_mib": 21850,
+      "utilization_percent": 59,
+      "driver": "580.173.02"
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA GeForce RTX 4080 SUPER",
+      "total_mib": 16376,
+      "used_mib": 6145,
+      "free_mib": 10231,
+      "utilization_percent": 65,
+      "driver": "580.173.02"
+    }
+  ],
+  "disk_total_bytes": 1905283825664,
+  "disk_free_bytes": 369689554944,
+  "egl_vendors": [
+    "10_nvidia.json",
+    "50_mesa.json"
+  ],
+  "gpu_context_created": false,
+  "allocation_claim": "NOT_ESTABLISHED_BY_PREFLIGHT"
+}

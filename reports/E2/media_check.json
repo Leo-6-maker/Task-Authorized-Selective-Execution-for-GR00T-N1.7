@@ -1,0 +1,103 @@
+{
+  "scope": "CPU_MEDIA_DECODE_AND_SAVED_OBSERVATION_DERIVATION_NO_MODEL_SIM",
+  "rows": [
+    {
+      "run_id": "e2-dev-0001",
+      "source_video_sha256": "c3b7eae2b7c41dbad832efc3019c7b888045dbe156453707d1864ab84d7badef",
+      "opened": true,
+      "decoded_frames": 143,
+      "expected_complete_controls": 143,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "COMPLETE_VIDEO_ALL_FRAMES_DECODED",
+      "selected_control_frames": [
+        1,
+        72,
+        143
+      ]
+    },
+    {
+      "run_id": "e2-dev-0002",
+      "source_video_sha256": "385bc1fa5710afeb46448d1e0ee0211040dc5111ab4fc4296152639aeb6a9db5",
+      "opened": true,
+      "decoded_frames": 138,
+      "expected_complete_controls": 138,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "COMPLETE_VIDEO_ALL_FRAMES_DECODED",
+      "selected_control_frames": [
+        1,
+        70,
+        138
+      ]
+    },
+    {
+      "run_id": "e2-dev-0003",
+      "source_video_sha256": "85ca4c9af25b1fbf9bc773602bf10864295ac44f9042bb25e25e3f003785a3ab",
+      "opened": true,
+      "decoded_frames": 128,
+      "expected_complete_controls": 128,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "COMPLETE_VIDEO_ALL_FRAMES_DECODED",
+      "selected_control_frames": [
+        1,
+        65,
+        128
+      ]
+    },
+    {
+      "run_id": "e2-dev-0004",
+      "source_video_sha256": "6a4d129624a1fe5e0b09c8cb0c7bfd87842331370e3adba60a49b9b3850b5352",
+      "opened": true,
+      "decoded_frames": 160,
+      "expected_complete_controls": 160,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "COMPLETE_VIDEO_ALL_FRAMES_DECODED",
+      "selected_control_frames": [
+        1,
+        81,
+        160
+      ]
+    },
+    {
+      "run_id": "e2-dev-0005",
+      "source_video_sha256": "bd086149180f7b0067a7d051b9fad3574bb356ab67fe70cb63fcb88fcd863fdd",
+      "opened": true,
+      "decoded_frames": 143,
+      "expected_complete_controls": 143,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "COMPLETE_VIDEO_ALL_FRAMES_DECODED",
+      "selected_control_frames": [
+        1,
+        72,
+        143
+      ]
+    },
+    {
+      "run_id": "e2-dev-0006",
+      "source_video_sha256": "902723ca1b74d8fa07f200bba0119c06e41861bef0bcb7832522b9eaff8b336f",
+      "opened": false,
+      "decoded_frames": 0,
+      "expected_complete_controls": null,
+      "original_video_modified": false,
+      "independent_reviewer": "NOT_PERFORMED",
+      "status": "PARTIAL_VIDEO_UNDECODABLE",
+      "derived_observation_decisions": [
+        0,
+        34,
+        67
+      ],
+      "derived_pre_action_controls": [
+        0,
+        272,
+        536
+      ],
+      "derived_media_scope": "Saved policy observations only, not continuous original video"
+    }
+  ],
+  "sheet_layout": "rows IDs0001..0006; columns first/middle/last; last row uses pre-action observations if interrupted video cannot decode",
+  "model_requests": 0
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "operation": "backbone-access-preflight-01",
+    "exit_code": 0,
+    "wall_seconds": 0.8909999999996217,
+    "completed_utc": "2026-10-21T10:30:22.128016+00:00"
+  },
+  {
+    "operation": "bootstrap-source-01",
+    "exit_code": 0,
+    "wall_seconds": 20.938000000000102,
+    "completed_utc": "2026-10-21T10:15:33.244951+00:00"
+  },
+  {
+    "operation": "clone-course-01",
+    "exit_code": 0,
+    "wall_seconds": 1.5779999999995198,
+    "completed_utc": "2026-10-21T10:24:52.062978+00:00"
+  },
+  {
+    "operation": "collect-identity-01",
+    "exit_code": 0,
+    "wall_seconds": 2.5,
+    "completed_utc": "2026-10-21T10:36:26.483441+00:00"
+  },
+  {
+    "operation": "download-model-01",
+    "exit_code": 0,
+    "wall_seconds": 509.4220000000005,
+    "completed_utc": "2026-10-21T10:27:53.975672+00:00"
+  },
+  {
+    "operation": "environment-probe-01",
+    "exit_code": 1,
+    "wall_seconds": 10.438000000000102,
+    "completed_utc": "2026-10-21T10:32:02.904950+00:00"
+  },
+  {
+    "operation": "extra-environment-probes-01",
+    "exit_code": 0,
+    "wall_seconds": 21.281999999999243,
+    "completed_utc": "2026-10-21T10:35:16.703747+00:00"
+  },
+  {
+    "operation": "final-resource-inventory-01",
+    "exit_code": 0,
+    "wall_seconds": 2.57799999999952,
+    "completed_utc": "2026-10-21T10:38:54.300628+00:00"
+  },
+  {
+    "operation": "install-server-01",
+    "exit_code": 0,
+    "wall_seconds": 389.1409999999996,
+    "completed_utc": "2026-10-21T10:23:27.857058+00:00"
+  },
+  {
+    "operation": "install-sim-01",
+    "exit_code": 0,
+    "wall_seconds": 686.3279999999995,
+    "completed_utc": "2026-10-21T10:30:40.893712+00:00"
+  },
+  {
+    "operation": "network-probe-01",
+    "exit_code": 0,
+    "wall_seconds": 8.156999999999243,
+    "completed_utc": "2026-10-21T10:26:50.627867+00:00"
+  },
+  {
+    "operation": "repair-sim-and-probe-02",
+    "exit_code": 0,
+    "wall_seconds": 14.953000000001339,
+    "completed_utc": "2026-10-21T10:33:21.157868+00:00"
+  },
+  {
+    "operation": "server-launch-01",
+    "exit_code": 0,
+    "wall_seconds": 18.60899999999856,
+    "completed_utc": "2026-10-21T10:29:09.393642+00:00"
+  },
+  {
+    "operation": "source-audit-01",
+    "exit_code": 2,
+    "wall_seconds": 2.7809999999990396,
+    "completed_utc": "2026-10-21T10:27:37.311336+00:00"
+  },
+  {
+    "operation": "operator-local-quoting-01",
+    "exit_code": 1,
+    "stage": "local transport preparation",
+    "runtime_started": false,
+    "provenance": "agent tool transcript; corrected before remote launch"
+  },
+  {
+    "operation": "source-file-discovery-01",
+    "http_status": 404,
+    "stage": "upstream wrapper path discovery",
+    "runtime_started": false,
+    "provenance": "GitHub connector; corrected wrappers/ to wrapper/"
+  }
+]
