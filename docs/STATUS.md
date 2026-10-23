@@ -1,18 +1,20 @@
 # 当前状态索引
 
-更新时间：2026-10-23（Asia/Singapore）。当前执行：Issue #8 / E2；最新适用范围决定为 [R004](reviews/R004-fresh-epoch-progress-decision.md)，它不是新结果验收。历史 R003 仍仅绑定其所审提交。
+更新时间：2026-10-24（Asia/Singapore）。当前执行：Issue #8 / E2；最新适用范围决定为 [R004](reviews/R004-fresh-epoch-progress-decision.md)，它不是新结果验收。历史 R003 仍仅绑定其所审提交。
 
 ## 当前 E2 入口（优先于历史索引）
 
-- 按 [E2 START HERE](work_packages/E2-START-HERE.md) 从 PR #7 实时 head `bb9b4346037441b220d03c26737002748856dc23` 建立 `codex/8-e2-gate`，正常整合 main；保留 PR #5 的运行实现与旧交接成果。原本地14个修改/未跟踪文件继续保全，未覆盖。
-- `E2 / TASE-002-v1.0`：新 DEV 上限24、独立短一致性96；满足工作包前置条件后 CALIB48。TEST 待 R2，未授权；不训练、不接WBC、不上实机、不自动合并。
-- 新工作区和独立双环境已通过依赖/CPU导入，真实模型已加载并执行；Object7/7与Cosmos10/10固定文件大小/SHA256一致，且有独立E2副本，无需token。[模型清单](../reports/E2/model_file_verification.json)、[实际双环境](../configs/runtime_lock_E2.json)与[双备份收据](../reports/E2/setup_backup_verification.json)。
-- 新代码已实现 scenario reset/seed、实际语言与TaskSpec分离、接触前兆Gate、唯一执行边界、完整快照采集、安全数值审计和有界验证/备份入口。**IMPLEMENTED，不等于 RUNTIME_VALIDATED 或 REVIEWED。**
-- 最新[普通CPU39项](../reports/E2/cpu/07a8a49a/normal.json)与[-O39项](../reports/E2/cpu/07a8a49a/optimized.json)均exit0；真实数据普通/-O安全审计也一致，非GPT验收。
-- [六格真实baseline](../reports/E2/baseline_report.md)已完成场景覆盖：5 SUCCESS、1满720步TIME_LIMIT；另保留原0006的537步中断/SIGTERM143，共[7个attempt](../reports/E2/baseline.csv)。唯一诊断0019退出0，68动作/观测和537控制/完整状态摘要与原重叠前缀一致；关闭接口修复真实退出0。当前DEV7/24，一致性0/96，CALIB0；TEST未授权。
-- 新增六个C2 B0全部结束：4 SUCCESS、2 TIME_LIMIT；cream cheese两初态首次wrong lift为60/67控制步，实际272个请求的指令/seed已核对。[C2与shadow报告](../reports/E2/shadow_validation_report.md)：16个不同快照、32/32真实短比较PASS，252预测控制、0模型调用；普通/-O原件复算一致，所有controller/worker退出0。当前总DEV13/24、短一致性32/96、CALIB0，TEST未授权。下一步为六个已声明DEV G配对格；当前结果未由GPT独立验收。
-- [六个真实DEV Gate配对](../reports/E2/gate_dev_report.md)已结束，所有主动作/完整快照/RNG及实际状态前缀一致；5 SUCCESS、1 SEMANTIC_ABORT。cream cheese C2在56步后拒绝下一候选、候选主执行0，B0首次事件60步。当前DEV19/24、短一致性32/96；117个功能预测不混入独立短验证分母。条件CALIB初态/候选规则正在冻结，TEST仍待R2；无GPT独立结果验收。
-- 检查下载时已定位旧项目缓存入口；旧结果仍 `NOT_INDEPENDENTLY_VERIFIED`，未恢复/重审旧账本，后续消费 UNKNOWN。下面 Issue #6 的恢复阻塞已由 R004 取代，不能用来停止 E2。
+执行者已完成 Issue #8 的原生 baseline、DEV Gate 和条件 CALIB，当前为 **READY_FOR_R2_REVIEW / NOT_GPT_APPROVED**。范围决定仍为 [R004](reviews/R004-fresh-epoch-progress-decision.md)；没有新的独立结果审核，也没有合并 PR。
+
+- 分支 `codex/8-e2-gate` 从 PR #7 `bb9b4346037441b220d03c26737002748856dc23` 接续 PR #5 `7e73108fd87a711b4cdc339d93749cc4add3628f`，正常整合 main。原工作树修改与旧交接保留，未修改其他研究 checkout。
+- 固定原生 GR00T/LIBERO 双环境与 Object/Cosmos 权重：[runtime lock](../configs/runtime_lock_E2.json)、[最新17文件复核](../reports/E2/model_file_recheck.json)。Cosmos来自既有项目缓存，已建立独立E2副本；不需要重复下载或新token。
+- [67个attempt完整对账](../reports/E2/ledger_reconciliation.json)：DEV19/24、独立短验证32/96、CALIB48/48、TEST0且未授权。包括原0006中断、537控制步/exit143/缺result和不可解码视频；不以诊断0019替换它。总1920次真实模型请求、15126主控制步。52 SUCCESS、9 TIME_LIMIT、5 SEMANTIC_ABORT、1原中断只是账本分类，不是混合效果分母。
+- [新baseline](../reports/E2/baseline_report.md)覆盖六格，5成功/1满720步timeout；[新C2与shadow](../reports/E2/shadow_validation_report.md)有两次主要事件、16不同快照/32短比较PASS；[DEV Gate](../reports/E2/gate_dev_report.md)六格5成功/1拒绝，危险配对在56步后拒绝下一前缀，B0首次wrong lift60步，候选主执行0。
+- [CALIB结果](../reports/E2/calibration_report.md)：24B0+24G全部完成，24组主状态/RNG、原动作及实际控制前缀一致，普通/-O原件审计一致退出0。C0成功11/12对11/12；C2成功8/12对8/12，主要wrong lift4/12对0/12、G4次拒绝终止。488个固定B0功能预测按预声明并列规则选k3，0/4首次事件候选漏放、0/286 C0局部拒绝。**同一CALIB数据选点与评价，不是独立TEST、自然错误率或安全认证。**
+- [CPU46项普通](../reports/E2/cpu/03653db1/normal.json)与[-O](../reports/E2/cpu/03653db1/optimized.json)均通过，明确合成；真实短比较、DEV/CALIB数据审计和实际模型不能相互替代。模型/仿真已全部退出，当前没有本项目活动native任务。
+- [可实际获取的最小数值/媒体包](../reports/E2/review/README.md)含119个原件派生文件；[CALIB四个新主要事件窗口](../reports/E2/calibration_first_event_windows.json)及[双视角图](../reports/E2/calibration-first-event-contact-sheet.png)补充全部新阳性。66个完整结果的视频覆盖全部主控制步；原中断视频仍保留。完整可信pickle/原件留私有备份，未声称GPT已读取。
+- CPU失败回溯曾带本机路径，当前文件已脱敏并保留原始私有hash；历史提交未改写，未发现凭据。[实际说明](../reports/E2/public_log_redaction.json)。原件与失败结果未修改。
+- 唯一下一步：GPT集中R2审核 [E2交接/审核包](../reports/E2/R2_REVIEW_PACKET.md) 和 [提议冻结](../configs/e2_protocol_lock.json)。120个TEST格仅为未授权提案；当前runner拒绝TEST，不自动开始新GPU任务、训练、WBC、实机或merge。旧原件仍未独立核验，旧后续预算UNKNOWN，不再主动恢复旧目录。
 
 ## 历史 Issue #6 接手状态（其恢复前置条件已由 R004 取代）
 

@@ -18,7 +18,16 @@ LIBERO observation + task instruction
       └─ REJECT / ERROR → withhold prefix → end autonomous episode + record
 ```
 
-## 当前状态
+## 当前状态（E2，2026-10-24）
+
+Issue #8 的新环境、原生baseline、真实Gate及48次条件CALIB已完成，**READY_FOR_R2_REVIEW；无GPT结果批准、无自动merge、TEST未启动**。当前依据为[R004](docs/reviews/R004-fresh-epoch-progress-decision.md)，取代旧目录恢复门槛。不要重跑已完成ID或把下面历史M2额度当当前余额。
+
+- [接手状态](reports/E2/TAKEOVER_STATUS.md) · [集中R2包](reports/E2/R2_REVIEW_PACKET.md) · [CALIB结果](reports/E2/calibration_report.md) · [67项完整账本](reports/E2/attempt_identity_ledger.csv)
+- DEV19/24、独立短检查32/96、CALIB48/48、TEST0。1920次实际模型请求已对账，全部失败保留。Object7/7、Cosmos10/10重新核验完整，[无需重复下载](reports/E2/model_file_recheck.json)。
+- [真实DEV Gate](reports/E2/gate_dev_report.md)及24组CALIB配对均核对同一主状态/RNG/动作前缀。C0成功11/12对11/12；C2实际wrong lift4/12对0/12，G以4次拒绝终止换取拦截，成功均8/12。CALIB同数据选k3和评价，不能当独立TEST或自然错误率。
+- [可实际获取的最小数值/媒体材料](reports/E2/review/README.md)、[新CALIB事件图](reports/E2/calibration-first-event-contact-sheet.png)、[双地点归档核验](reports/E2/backup_chain_verification.json)。模型/仿真均已退出。下一步仅为GPT一次R2审核；[120格TEST只是未授权提案](configs/e2_protocol_lock.json)。
+
+## 历史M2交付（以下是当时状态，当前入口以E2为准）
 
 **M2 READY_FOR_REVIEW：24快照、74次shadow比较及原始重算已交付。PR #3/#5保持未合并，M3尚未授权。**
 
