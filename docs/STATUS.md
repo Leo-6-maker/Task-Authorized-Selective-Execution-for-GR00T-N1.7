@@ -1,8 +1,18 @@
 # 当前状态索引
 
-更新时间：2026-10-23（Asia/Singapore）。Codex executor 更新接手事实；最新 GPT 审核为 [R003](reviews/R003-M2-shadow-oracle-review.md)，仅绑定其所审提交。最新接手交付：[Issue #6 状态](../reports/takeover/TAKEOVER_STATUS.md)。
+更新时间：2026-10-23（Asia/Singapore）。当前执行：Issue #8 / E2；最新适用范围决定为 [R004](reviews/R004-fresh-epoch-progress-decision.md)，它不是新结果验收。历史 R003 仍仅绑定其所审提交。
 
-## 最新接手状态（优先于下方历史索引）
+## 当前 E2 入口（优先于历史索引）
+
+- 按 [E2 START HERE](work_packages/E2-START-HERE.md) 从 PR #7 实时 head `bb9b4346037441b220d03c26737002748856dc23` 建立 `codex/8-e2-gate`，正常整合 main；保留 PR #5 的运行实现与旧交接成果。原本地14个修改/未跟踪文件继续保全，未覆盖。
+- `E2 / TASE-002-v1.0`：新 DEV 上限24、独立短一致性96；满足工作包前置条件后 CALIB48。TEST 待 R2，未授权；不训练、不接WBC、不上实机、不自动合并。
+- 已建立新的合法可写 workspace；隔离双环境安装继续进行，失败/超时留存。Object 固定版本7个文件已下载，独立复算大小及SHA256全部一致。发现先前项目专用缓存中的固定 Cosmos 版本，正在校验并建立独立 E2 副本，不要求恢复旧账本。
+- 新代码已实现 scenario reset/seed、实际语言与TaskSpec分离、接触前兆Gate、唯一执行边界、完整快照采集、安全数值审计和有界验证/备份入口。**IMPLEMENTED，不等于 RUNTIME_VALIDATED 或 REVIEWED。**
+- [E2 CPU收据](../reports/E2/cpu/normal.json)及[-O收据](../reports/E2/cpu/optimized.json)：31项纯合成测试 exit0，绑定各自 source commit；不替代真实模型/仿真验收。
+- 当前六格 baseline 尚未完成；真实运行、账本和审核状态将在 [E2 setup](../reports/E2/setup.md) 持续记录。下一项关键交付仍是新环境真实 baseline，随后关键 shadow 与可运行 Gate。
+- 旧原件保持 `TEMPORARILY_UNAVAILABLE / NOT_INDEPENDENTLY_VERIFIED`；旧预算后续消费 UNKNOWN。下面 Issue #6 的恢复阻塞已由 R004 取代，不能用来停止 E2。
+
+## 历史 Issue #6 接手状态（其恢复前置条件已由 R004 取代）
 
 - 工作包：`TAKEOVER-RECOVERY-001`，发布于 `origin/main` 的 `9a7c9bd6ade46cbe92704270b068b9126c733953`。
 - 实时 PR #5 head：`7e73108fd87a711b4cdc339d93749cc4add3628f`；base：`codex/2-native-baseline` / `3e214c0b761d0639bf73948356a92a03bf2ddedc`。两 PR 保持未合并；旧 PR 正文不是当前 head 来源。
