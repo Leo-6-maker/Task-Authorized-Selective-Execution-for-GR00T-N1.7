@@ -82,6 +82,31 @@ def gate_fixture(root,folder):
 
 
 class E2AuditTests(unittest.TestCase):
+    def test_pinned_native_720_step_timeout_uses_done_not_truncated(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);folder=build(root);result=json.loads((folder/'result.json').read_text())
+            result.update(status='TIME_LIMIT',official_success=False,inner_steps=720,policy_calls=90,policy_requests_attempted=90);write(folder/'result.json',result)
+            first=json.loads((folder/'physical_frames.jsonl').read_text());base={k:v for k,v in first.items() if k not in ['oracle','control_input']};base['official_success']=False
+            spec=TaskSpec(**json.loads((folder/'task_spec.json').read_text()));oracle=EventOracle(spec,{name:[0.,0.,0.] for name in spec.objects})
+            frames=[];gates=[];decisions=[];snapshots=[];requests=[]
+            initial_request=json.loads((folder/'actual_requests.jsonl').read_text())
+            with np.load(folder/'observation-000.npz',allow_pickle=False) as data:observation={k:np.array(data[k]) for k in data.files}
+            for step in range(1,721):
+                frame=copy.deepcopy(base);frame['step']=step;frame['oracle']=oracle.consume(copy.deepcopy(frame));frame['control_input']=first['control_input'];frames.append(frame)
+            for index in range(90):
+                np.savez(folder/f'action-{index:03d}.npz',**{'action.'+key:np.zeros((1,16,1),np.float32) for key in ['x','y','z','roll','pitch','yaw','gripper']})
+                np.savez_compressed(folder/f'observation-{index:03d}.npz',**observation)
+                path=folder/f'snapshot-{index:03d}.pkl';path.write_bytes(b'SYNTHETIC_NOT_PICKLE')
+                snapshots.append({'decision':index,'completed_controls':index*8,'file_sha256':sha256(path)})
+                gates.append({'index':index,'decision':'ACCEPT','completed_controls_before':index*8,'completed_controls_after':(index+1)*8})
+                decisions.append({'index':index,'inner_steps':8,'native_baseline':True,'official_success':False,'terminated':index==89,'truncated':False})
+                requests.append({**initial_request,'index':index})
+            for name,rows in [('physical_frames.jsonl',frames),('gate_decisions.jsonl',gates),('decisions.jsonl',decisions),('snapshots.jsonl',snapshots),('actual_requests.jsonl',requests)]:
+                (folder/name).write_text(''.join(json.dumps(row)+'\n' for row in rows))
+            np.savez(folder/'control_trace.npz',states=np.zeros((720,2)),converted_actions=np.array([first['control_input']]*720))
+            seal(root,folder);self.assertEqual(module.audit(root,REPO/'configs/e2_dev.json')['rows'][0]['status'],'TIME_LIMIT')
+            decisions[-1]['terminated']=False;(folder/'decisions.jsonl').write_text(''.join(json.dumps(row)+'\n' for row in decisions));seal(root,folder)
+            with self.assertRaises(ValueError):module.audit(root,REPO/'configs/e2_dev.json')
     def test_missing_result_keeps_actual_process_exit_and_budget_slot(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);folder=build(root);(folder/'result.json').unlink();seal(root,folder)

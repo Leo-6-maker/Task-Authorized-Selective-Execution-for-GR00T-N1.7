@@ -82,7 +82,9 @@ def audit(workspace,config):
                 require(decision['inner_steps']==gate['completed_controls_after']-gate['completed_controls_before'] and
                         decision['native_baseline']==(result['system']=='B0'),'native decision/control binding')
             if result['status']=='TIME_LIMIT':
-                require(result['inner_steps']==cfg['max_inner_steps'] and decisions[-1]['truncated'] is True,'time limit stopped early')
+                # Pinned MultiStepWrapper sets done=True at its own control cap;
+                # it leaves the inner LIBERO truncated flag unchanged (False).
+                require(result['inner_steps']==cfg['max_inner_steps'] and decisions[-1]['terminated'] is True,'time limit stopped early')
             if result['status']=='SUCCESS':
                 require(decisions[-1]['terminated'] is True and decisions[-1]['official_success'] is True,'success not terminal')
             if result['status']=='SEMANTIC_ABORT':require(gates[-1]['decision']=='REJECT','semantic abort is not a reject')
