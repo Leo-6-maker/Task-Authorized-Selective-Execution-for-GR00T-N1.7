@@ -253,7 +253,11 @@ def main(argv=None):
         if not state_unchanged or not all(equal_streams.values()):
             raise ValueError('fixed-reset native observation/state parity mismatch')
         from .e2_context import E2Context
-        m2 = E2Context(raw, wrapped, client, folder, cell, config)
+        context_type=E2Context
+        if split=='TEST':
+            from .test_context import TestContext
+            context_type=TestContext
+        m2 = context_type(raw, wrapped, client, folder, cell, config)
         if split=='TEST':
             from .test_authorization import validate_identity
             validate_identity(cell,json.loads((folder/'task_spec.json').read_text()),

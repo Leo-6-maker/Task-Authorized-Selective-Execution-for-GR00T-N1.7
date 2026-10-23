@@ -61,7 +61,8 @@ def audit(workspace,config, *, test_audit=False):
                 if result['status'] in ['SUCCESS','TIME_LIMIT','SEMANTIC_ABORT']:
                     worker=read(folder/'shadow_worker_exit.json')
                     require(type(worker['worker_pid']) is int and worker['worker_returncode']==0,'CALIB Gate worker failed exit')
-        names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name not in ['artifact_manifest.json','supervisor_exit.json']}
+        excluded={'artifact_manifest.json'}|({'supervisor_exit.json'} if split=='TEST' else set())
+        names={p.relative_to(workspace).as_posix() for p in folder.iterdir() if p.is_file() and p.name not in excluded}
         verify_manifest(workspace,read(folder/'artifact_manifest.json'),required=names,source_run=folder.name)
         exit_file=workspace/'runs'/f'{folder.name}.exit.json'
         start_file=workspace/'runs'/f'{folder.name}.exit.started.json'
@@ -147,6 +148,9 @@ def audit(workspace,config, *, test_audit=False):
             if result['system']=='G' and prediction_file.exists() and gate['decision']!='ERROR':
                 views=next(r for r in lines(folder/'gate_contact_views.jsonl') if r['index']==index)
                 prediction=read(prediction_file);snapshot=next(s for s in snapshots if s['decision']==index)
+                if split=='TEST':
+                    from tase.test_context import validate_prediction_envelope
+                    validate_prediction_envelope(prediction,snapshot['snapshot_hash'],before)
                 require(prediction['status']=='PASS' and 1<=prediction['steps']==len(prediction['frames'])<=8,'invalid prediction length/status')
                 require(prediction['source_snapshot_hash']==prediction['restored_snapshot_hash']==snapshot['snapshot_hash'],'prediction snapshot binding')
                 require(views['views']==[contact_view(frame,spec.objects) for frame in prediction['frames']],'Gate view differs from actual prediction')

@@ -240,6 +240,21 @@ class TestFreezeTests(unittest.TestCase):
         decision,_=boundary.execute(prefix,lambda p:{'decision':'ACCEPT','checked_controls':8},steps.append)
         self.assertEqual(decision['decision'],'ERROR');self.assertEqual(len(steps),1)
 
+    def test_invalid_prediction_lengths_snapshot_sequence_and_terminal_flags(self):
+        from tase.test_context import validate_prediction_envelope
+        normal=dict(status='PASS',steps=8,frames=[dict(step=i) for i in range(57,65)],
+            source_snapshot_hash='1'*64,restored_snapshot_hash='1'*64,terminated=False,truncated=False)
+        validate_prediction_envelope(normal,'1'*64,56)
+        for key,value in [('steps',7),('steps',True),('frames',[]),('status','ERROR'),
+                          ('restored_snapshot_hash','2'*64),('terminated',1),
+                          ('frames',[dict(step=i) for i in range(1,9)])]:
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                validate_prediction_envelope(dict(normal,**{key:value}),'1'*64,56)
+        short=dict(normal,steps=1,frames=[dict(step=57)])
+        with self.assertRaises(ValueError):validate_prediction_envelope(short,'1'*64,56)
+        validate_prediction_envelope(dict(short,terminated=True),'1'*64,56)
+        with self.assertRaises(ValueError):validate_prediction_envelope(normal,'1'*64,720)
+
     def test_unopened_audit_keeps120_unknowns_and_no_zero_event_claim(self):
         with tempfile.TemporaryDirectory() as tmp:
             report=audit_test(Path(tmp),REPO)

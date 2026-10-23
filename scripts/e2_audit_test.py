@@ -128,9 +128,12 @@ def audit(workspace,repo):
                 require(result['authorization']==auth, 'TEST result grant differs')
                 if 'init_hash' in result:
                     require(result['init_hash']==cell['init_hash'],'TEST actual init content differs')
+                if (folder/'benchmark_init.npy').exists():
+                    require(sha256(folder/'benchmark_init.npy')==cell['init_hash'],'TEST actual init array bytes differ')
                 if (folder/'task_spec.json').exists():
                     validate_identity(cell,read(folder/'task_spec.json'),read(folder/'e2_identity.json'))
                 known=result['status'] in FULL and raw_rows.get(cell['run_id'],{}).get('complete',False)
+                if known:require((folder/'benchmark_init.npy').is_file(),'complete TEST missing actual initialization bytes')
                 if cell['system']=='G' and known:
                     worker=read(folder/'shadow_worker_exit.json')
                     require(worker['worker_returncode']==0,'TEST Gate worker failed')
