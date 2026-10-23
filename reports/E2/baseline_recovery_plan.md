@@ -1,6 +1,6 @@
 # First baseline batch and exact bounded continuation
 
-Executor: Codex. E2 / TASE-002-v1.0. Original execution code: `0b00464` (full SHA is in each reservation/result and process receipts). Runtime-lock SHA256: `889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e`.
+Executor: Codex. E2 / TASE-002-v1.0. Original execution code: `0b00464eacd8a5e8d6be78de7044584ab9a3ef8b`. Runtime-lock SHA256: `889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e`.
 
 The first five predeclared C0 B0 cells completed SUCCESS, exit0: alphabet soup init0/1, cream cheese init0/1 and ketchup init0. Controls:143,138,128,160,143; policy decisions:18,18,16,20,18. The first source additionally made one explicit reset/repeatability model request; its action output was exactly equal. These are executor runtime observations, not independent GPT review or Gate effectiveness.
 

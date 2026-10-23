@@ -13,7 +13,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.evidence import sha256,write_json,now_sgt
 
 
-def stage(root,cache,operation):
+def stage(root,cache,operation,resume=False):
     root=root.resolve(strict=True);cache=cache.resolve(strict=True)
     owner=json.loads((cache/'e2-cache-ownership.json').read_text())
     if owner['epoch']!='E2' or Path(owner['workspace']).resolve()!=root:raise ValueError('not the task-owned cache')
@@ -30,14 +30,23 @@ def stage(root,cache,operation):
         except OSError:continue
         if str(root) in command and ('tase.server' in command or 'tase.epoch_runner' in command or 'e2_run_baseline.py' in command):
             raise RuntimeError('owned native execution still active; stage only after process exits')
-    folder=root/'operator'/operation;folder.mkdir()
+    folder=root/'operator'/operation
+    if not resume:folder.mkdir()
     destination=cache/operation;retained=root/('runs.network-copy-'+operation)
-    if destination.exists() or retained.exists():raise FileExistsError('staging paths must be new')
+    if retained.exists() or (destination.exists() and not resume):raise FileExistsError('staging paths must be new')
     paths=sorted(p for p in source.rglob('*') if p.is_file())
     if any(p.is_symlink() for p in paths):raise ValueError('unexpected symlink inside run evidence')
-    before={str(p.relative_to(source)):{'bytes':p.stat().st_size,'sha256':sha256(p)} for p in paths}
-    write_json(folder/'source-manifest.json',{'created_at_sgt':now_sgt(),'artifacts':before})
-    subprocess.run(['cp','-a','--reflink=auto',str(source),str(destination)],check=True,timeout=300)
+    if resume:
+        before=json.loads((folder/'source-manifest.json').read_text())['artifacts']
+        if not destination.is_dir():raise ValueError('resume requires the retained partial copy')
+    else:
+        before={str(p.relative_to(source)):{'bytes':p.stat().st_size,'sha256':sha256(p)} for p in paths}
+        write_json(folder/'source-manifest.json',{'created_at_sgt':now_sgt(),'artifacts':before})
+        # NFS ACL metadata cannot always be copied to node storage. Preserve
+        # scientific bytes and use private task-local modes, not foreign ACLs.
+        previous_umask=os.umask(0o077)
+        try:subprocess.run(['cp','-R','--reflink=auto','--no-preserve=mode,ownership,xattr',str(source),str(destination)],check=True,timeout=300)
+        finally:os.umask(previous_umask)
     copied=sorted(p for p in destination.rglob('*') if p.is_file())
     if {str(p.relative_to(destination)) for p in copied}!=set(before):raise ValueError('copied file set differs')
     for path in copied:
@@ -56,6 +65,7 @@ def stage(root,cache,operation):
         if not source.exists() and not source.is_symlink():retained.rename(source)
         raise
     receipt={'status':'ALL_RUN_FILES_VERIFIED_LOCAL_STAGE_NFS_COPY_RETAINED','artifacts':len(before),
+        'resumed_existing_copy':resume,'source_acl_preservation_required':False,
         'dev_reservations':len(list((source/'DEV').glob('*/reservation.json'))),
         'source_retained':str(retained),'local_evidence':str(destination),'completed_at_sgt':now_sgt()}
     write_json(folder/'result.json',receipt)
@@ -65,4 +75,5 @@ def stage(root,cache,operation):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True)
     p.add_argument('--local-cache',type=Path,required=True);p.add_argument('--operation',required=True)
-    a=p.parse_args();print(json.dumps(stage(a.workspace,a.local_cache,a.operation),indent=2))
+    p.add_argument('--resume-verified-copy',action='store_true')
+    a=p.parse_args();print(json.dumps(stage(a.workspace,a.local_cache,a.operation,a.resume_verified_copy),indent=2))
