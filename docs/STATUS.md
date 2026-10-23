@@ -1,6 +1,19 @@
 # 当前状态索引
 
-更新时间：2026-10-22（Asia/Singapore）。最新适用审核：[R002](reviews/R002-R1-native-baseline-conditional.md)。
+更新时间：2026-10-23（Asia/Singapore）。Codex executor 更新接手事实；最新 GPT 审核为 [R003](reviews/R003-M2-shadow-oracle-review.md)，仅绑定其所审提交。最新接手交付：[Issue #6 状态](../reports/takeover/TAKEOVER_STATUS.md)。
+
+## 最新接手状态（优先于下方历史索引）
+
+- 工作包：`TAKEOVER-RECOVERY-001`，发布于 `origin/main` 的 `9a7c9bd6ade46cbe92704270b068b9126c733953`。
+- 实时 PR #5 head：`7e73108fd87a711b4cdc339d93749cc4add3628f`；base：`codex/2-native-baseline` / `3e214c0b761d0639bf73948356a92a03bf2ddedc`。两 PR 保持未合并；旧 PR 正文不是当前 head 来源。
+- R003 审阅 PR #5 的 `d64cb1002980738f170e3206d004b4a882166543`。当前已有 oracle 输入修复、旧动作补验和 CPU 审计脚本；新 head 尚待 GPT 审核，执行者不自签批准。
+- 新建本地接手 worktree，原修改和 14 个文件保存在 repo 外且原工作树不动。未修改执行代码、历史审核或原账本。
+- **本轮 CPU：24/24 normal 与 24/24 `-O`，均 exit 0**；独立本地 Python 3.12.14 / NumPy 1.26.4，纯合成 fixtures。[命令与收据](../reports/takeover/issue6-cpu/normal.json)和[优化模式](../reports/takeover/issue6-cpu/optimized.json)另存。这不是远端物理验证或原件审核。
+- 双跳节点、UID/GID、真实 HOME 和挂载已核对；同名 HOME 的真实路径不同。两轮有界定位后，原工作区、原件和共享账本仍未恢复，部分候选根权限拒绝。未找到不能解释为不存在。
+- **`BLOCKED_EXACT_ACCESS_REQUEST` / `CURRENT_LEDGER_UNKNOWN`**：历史 DEV18/shadow74 不是当前余额。未取得 reservation/result/start/exit，不能判定补验未执行；不重跑、不换 ID。
+- 唯一下一步为原执行者/项目目录所有者提供项目专属上下文与完整账本导出；私有精确请求已准备。真实运行继续暂挂；保留六次 DEV、M3/CALIB/TEST、训练/WBC/实机均不在本轮可执行范围。
+
+## 历史 R002/M2 交付索引（以下保留旧记录，不代表当前运行余额或新授权）
 
 ## 范围与版本
 

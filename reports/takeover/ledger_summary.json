@@ -1,0 +1,29 @@
+{
+  "classification": "DERIVED_PUBLIC_SUMMARY_NOT_AUTHORITATIVE_RUNTIME_LEDGER",
+  "historical_public_claims": {
+    "dev_used": 18,
+    "dev_cap": 24,
+    "shadow_used": 74,
+    "shadow_cap": 80,
+    "source_commit": "7e73108fd87a711b4cdc339d93749cc4add3628f"
+  },
+  "actual_authoritative_consumption": {
+    "dev_used": null,
+    "shadow_used": null,
+    "shadow_remaining": null,
+    "r003_started": null,
+    "r003_complete": null
+  },
+  "original_reservations_results_start_exit_recovered": false,
+  "expected_id_index_counts": {
+    "DEV_historical": 18,
+    "SHADOW_historical": 74,
+    "SHADOW_supplement_planned": 6,
+    "R003_driver": 1
+  },
+  "status": "BLOCKED_EXACT_ACCESS_REQUEST",
+  "runtime_permission": "SUSPENDED",
+  "new_real_runs_this_work_package": 0,
+  "no_slots_released": true,
+  "deduplication_or_conflict_checks_possible": false
+}

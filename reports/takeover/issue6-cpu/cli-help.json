@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "<CPU_PYTHON>",
+      "scripts/supplement_m2_r003.py",
+      "--help"
+    ],
+    "exit_code": 0,
+    "source_sha256": "4180fdcf7298880d0375d16fedf27ea114833e4d743c5c54989272907833b42b",
+    "stdout": "usage: supplement_m2_r003.py [-h] --workspace WORKSPACE [--run-id RUN_ID]\n\nR003 bounded saved-action DEV diagnostic. No policy imports or requests. Only\nuse the task's trusted hash-bound original snapshot, never attachments. Every\nshadow attempt is reserved in the original shared 80-case ledger. An error\nstops the diagnostic; outputs and reservations remain append-only.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --run-id RUN_ID\n",
+    "stderr": "",
+    "scope": "ARGPARSE_HELP_ONLY_NO_DIAGNOSTIC_OR_AUDIT_RUN"
+  },
+  {
+    "command": [
+      "<CPU_PYTHON>",
+      "scripts/audit_m2_r003.py",
+      "--help"
+    ],
+    "exit_code": 0,
+    "source_sha256": "c2a0d658a37df26e14500351825052593ea459e6b7071805b81b6672603b8237",
+    "stdout": "usage: audit_m2_r003.py [-h] --original ORIGINAL --supplement SUPPLEMENT\n                        --output OUTPUT\n\nCPU re-audit of executor-created, hash-verified R003 DEV originals only. This\nreads trusted local pickles; never use on an untrusted attachment. No MuJoCo,\nGPU or policy invocation. Original M2 and supplement remain separate.\n\noptions:\n  -h, --help            show this help message and exit\n  --original ORIGINAL\n  --supplement SUPPLEMENT\n  --output OUTPUT\n",
+    "stderr": "",
+    "scope": "ARGPARSE_HELP_ONLY_NO_DIAGNOSTIC_OR_AUDIT_RUN"
+  }
+]
