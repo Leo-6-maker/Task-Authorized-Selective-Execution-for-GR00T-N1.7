@@ -1,0 +1,15 @@
+{
+  "server_session": "test-server-r009-01",
+  "actual_server_requests": 34,
+  "bindings": [
+    {
+      "run_id": "e2-test-0011",
+      "requests": 17
+    },
+    {
+      "run_id": "e2-test-0012",
+      "requests": 17
+    }
+  ],
+  "scope": "REQUEST_IDENTITY_ONLY_NO_INTERIM_EFFECT_SELECTION"
+}

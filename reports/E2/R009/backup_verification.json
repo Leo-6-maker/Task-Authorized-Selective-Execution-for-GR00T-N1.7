@@ -1,0 +1,72 @@
+{
+  "status": "ALL14_ORIGINALS_AND_DERIVATIVES_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue18-test-cluster-03",
+      "bytes": 68407999,
+      "sha256": "522b47cdfcf09cf6b3a64c3c59941aeb577ec34c1243237d9139e16114b57bf5",
+      "artifacts": 442,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue18-stopped-full-01",
+      "bytes": 254951092,
+      "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+      "artifacts": 1611,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue18-review-supplement-01",
+      "bytes": 9178225,
+      "sha256": "b763ce796ebbd75d3b2dc3f557013bde4aa7181b133ae4d5a71994d4f0e3e192",
+      "artifacts": 261,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    }
+  ],
+  "prior_old_archives_preserved_and_reverified": {
+    "status": "LOCAL_SECOND_COPY_WHOLE_AND_EVERY_MEMBER_REVERIFIED",
+    "checked_at_sgt": "2026-10-24T16:04:36.341761+08:00",
+    "archives": [
+      {
+        "stage": "issue16-stopped-full-01",
+        "bytes": 178122020,
+        "sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+        "members": 1130
+      },
+      {
+        "stage": "issue12-incident-01",
+        "bytes": 17082,
+        "sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+        "members": 34
+      }
+    ],
+    "actual_process_exit": 0
+  },
+  "public_source_crosscheck": {
+    "status": "ALL_PUBLIC_SOURCE_IDENTITIES_MATCH_COMPLETE1611_MEMBER_RAW_INDEX",
+    "public_originals_checked": 350,
+    "full_archive_members": 1611,
+    "full_archive_sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+    "review_manifest_sha256": "bb24d8e4303dafd8ca2e1f7c3b75a8fa2b6b2788a39bb476a7c6bc88abfb9ce2"
+  },
+  "raw_and_derived_hashes_are_separate": true,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR",
+  "private_local_operator_and_CPU_metadata_snapshot": {
+    "status": "PRIVATE_METADATA_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+    "bytes": 52168,
+    "sha256": "559cf68a4f6844b66851aeb6d7c04f803d718f410204a2ae80cd7ceda791f432",
+    "members": 85,
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ]
+  },
+  "final_state_second_location": {
+    "status": "IDENTICAL_SANITIZED_FINAL_STATE_SAVED_REMOTE_AND_LOCAL",
+    "sha256": "41a60b59afc33816d41a475937f9f08ea6807bf39c935469db9ef12a54f05cdb",
+    "scope": "Additional post-backup read-only state, not a new experiment"
+  }
+}

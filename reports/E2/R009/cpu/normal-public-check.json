@@ -1,0 +1,106 @@
+{
+  "status": "PUBLIC_R009_DERIVATIVE_CPU_CHECK_NOT_GPT_R3_APPROVAL",
+  "planned": 120,
+  "reserved": 14,
+  "normal_outcomes": 12,
+  "cleanup_error": 2,
+  "unstarted": 106,
+  "files_verified": 250,
+  "selected_actual_episodes": [
+    {
+      "run_id": "e2-test-0001",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 129,
+      "oracle_replayed": true,
+      "k3_contacts_checked": false
+    },
+    {
+      "run_id": "e2-test-0002",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 129,
+      "oracle_replayed": true,
+      "k3_contacts_checked": true
+    },
+    {
+      "run_id": "e2-test-0009",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 120,
+      "oracle_replayed": true,
+      "k3_contacts_checked": false
+    },
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "controls": 120,
+      "oracle_replayed": true,
+      "k3_contacts_checked": true
+    },
+    {
+      "run_id": "e2-test-0011",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 136,
+      "oracle_replayed": true,
+      "k3_contacts_checked": false
+    },
+    {
+      "run_id": "e2-test-0012",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 136,
+      "oracle_replayed": true,
+      "k3_contacts_checked": true
+    },
+    {
+      "run_id": "e2-test-0013",
+      "status": "SUCCESS",
+      "actual_child_exit": 0,
+      "controls": 148,
+      "oracle_replayed": true,
+      "k3_contacts_checked": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "controls": 148,
+      "oracle_replayed": true,
+      "k3_contacts_checked": true
+    }
+  ],
+  "selected_actual_pairs": [
+    {
+      "B0": "e2-test-0001",
+      "G": "e2-test-0002",
+      "observed_prefix_exact": true,
+      "cleanup_outcome_not_overridden": false
+    },
+    {
+      "B0": "e2-test-0009",
+      "G": "e2-test-0010",
+      "observed_prefix_exact": true,
+      "cleanup_outcome_not_overridden": true
+    },
+    {
+      "B0": "e2-test-0011",
+      "G": "e2-test-0012",
+      "observed_prefix_exact": true,
+      "cleanup_outcome_not_overridden": false
+    },
+    {
+      "B0": "e2-test-0013",
+      "G": "e2-test-0014",
+      "observed_prefix_exact": true,
+      "cleanup_outcome_not_overridden": true
+    }
+  ],
+  "unavailable_predeclared_controls": [
+    "E2-TEST-cream_cheese-i6-C0",
+    "E2-TEST-ketchup-i6-C0"
+  ],
+  "GPU_model_sim_TEST_calls": 0
+}

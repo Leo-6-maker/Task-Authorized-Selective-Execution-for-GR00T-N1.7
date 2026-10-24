@@ -1,0 +1,26 @@
+{
+  "status": "REMOTE_R009_PREFLIGHT_ALL_PASS",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "TEST_reserved": 10,
+  "full_outcomes": 9,
+  "CLEANUP_ERROR": 1,
+  "not_started": 110,
+  "next_run": "e2-test-0011",
+  "old_worker_PID_absent": true,
+  "old_server_PID_absent": true,
+  "active_runtime_processes": 0,
+  "GPU_free_mib": 31749,
+  "port": 5564,
+  "model_GPU_sim_TEST_calls": 0,
+  "source_files": {
+    "launch.local.json": "90c48d0609b1b3c6f712de5a2648e4d538920790ccb016ac946d9a18f42337fe",
+    "preflight.exit.started.json": "bce4cbe0a782abf600f76dde6dd0bfc744ae4e09c3a137459ce6296ff5026526",
+    "grant-admission.json": "4cce141d9fe3675c0e419ba368a46ebbec4a24b2bc45fe9b259c9f37e1d81218",
+    "fixed-resource-identities.json": "8022bffe59aafca964d03a14d7a46c8ef45c9502f4291e3879faeab8ec55455f",
+    "live-test-audit.json": "c4c89a469ca9e770d3169a772385be9e6099ee381cda627ffd006bc7aeb51605",
+    "originals-recheck.json": "d6f73b3502193c3e584918ec87e17f6003436de1ffea90abe5858853ee01cfec",
+    "task-init-identities.json": "22b5604f73ed94729198c590f74c84ec14616699d635a217458ba8d52bbd5b53",
+    "gpu-allocation.local.json": "6d8ffa8c347e947e6fe3c0efbd590f46128a9df2a39a44cb7005ac7139982253",
+    "live-state.local.json": "ac77b5493d7a19425310654bca64db473cb33fd83ec322d6e7dbe4a9b41b8a7c"
+  }
+}

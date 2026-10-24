@@ -1,3 +1,7 @@
+# Current status: STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW
+
+14 consumed =12 SUCCESS +2 CLEANUP_ERROR (0010,0014);106 unstarted;0015 unopened. Native server0,launcher0,operator1;no GPU compute remains. See [current handoff](R3_HANDOFF.md), [new incident](ISSUE18-INCIDENT-003.md), [backups](backup_verification.json) and [safe review](review/manifest.json). No resume or runtime repair after recurrence. Below is retained activation/checkpoint history.
+
 # Issue18 / R009 continuation execution evidence
 
 Fresh LIVE R009 preflight passed before new model/server/TEST. Exact runtime remains `a1c6424bd348b36c55a20d38750a269e9551a698`; R008 machine grant remains `f084723cb1d00cb7675fa7394dc1b03c0ce3dcac:docs/reviews/R008-E2-TEST-AUTHORIZED.json`. R009 reviewer clearance is `fd8a2d1a8ab3c1b55e05e1b4c55724e2d657ae02:docs/reviews/R009-TEST-RESUME-CLEARANCE.json`.

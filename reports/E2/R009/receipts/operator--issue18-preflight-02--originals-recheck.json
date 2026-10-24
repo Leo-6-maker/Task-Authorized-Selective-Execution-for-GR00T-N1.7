@@ -1,0 +1,26 @@
+{
+  "status": "REMOTE_WHOLE_AND_ALL_MEMBERS_AND_LIVE_SOURCES_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue16-stopped-full-01",
+      "bytes": 178122020,
+      "sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+      "members": 1130,
+      "all_live_sources_match": true
+    },
+    {
+      "stage": "issue12-incident-01",
+      "bytes": 17082,
+      "sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+      "members": 34,
+      "all_live_sources_match": true
+    }
+  ],
+  "failed_original_receipts": {
+    "result.json": "460bc0843de66bc629e8d48d9e5811284185f5d6c38d08b55226523046795c11",
+    "reservation.json": "321a9b1f99fe73c2b4ae9e8beff8817a1b2bcffdde5e04571f2addc40a9769b0",
+    "supervisor_exit.json": "56f53835b69b4bdfc3adda5fabd4efdc9de87117686fe0320ceecdcd03eb0879",
+    "cleanup_errors.json": "89312c6e69dc9c453365a80121daaa27338f5df2c8a15d815a6e91397a49d8a3",
+    "shadow_worker_exit.json": "04270c170fa6f9b0cce9e9c40206fb12f7b56616dcc97a6209bb233be0ade6a2"
+  }
+}

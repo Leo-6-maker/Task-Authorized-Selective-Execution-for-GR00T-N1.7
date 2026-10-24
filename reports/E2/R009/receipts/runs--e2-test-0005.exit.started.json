@@ -1,0 +1,33 @@
+{
+  "started_at_sgt": "2026-10-24T14:41:32.589306+08:00",
+  "wrapper_pid": 3621746,
+  "child_pid": 3621747,
+  "command": [
+    "<PRIVATE>/me6401-e2-package-cache-20261023/envs/sim/bin/python",
+    "-u",
+    "-m",
+    "tase.epoch_runner",
+    "--workspace",
+    "<PRIVATE>",
+    "--run-id",
+    "e2-test-0005",
+    "--task",
+    "alphabet_soup",
+    "--init-index",
+    "7",
+    "--condition",
+    "C0",
+    "--system",
+    "B0",
+    "--config",
+    "<PRIVATE>/operator/issue16-frozen-code/configs/e2_test.json",
+    "--allocation-record",
+    "<PRIVATE>/operator/issue16-preflight-01/gpu-allocation.local.json",
+    "--port",
+    "5564",
+    "--test-review-commit",
+    "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+    "--test-review-path",
+    "docs/reviews/R008-E2-TEST-AUTHORIZED.json"
+  ]
+}
