@@ -1,3 +1,9 @@
+# Issue16 / R008 — STOPPED_FOR_INCIDENT_REVIEW
+
+R008激活前置条件已在live原环境核验，真实模型server已正常加载/监听。按冻结顺序预留10个单元后，0010出现CLEANUP_ERROR/exit1，立即停止并正常关闭server。9 SUCCESS+1清理错误、110 NOT_STARTED均留在120分母；不重跑/换ID，不改代码或标签。原件已两处完整核验。详见[R008 handoff](R008/R3_HANDOFF.md)。唯一下一步为GPT事故评估；本报告不是完整TEST/R3通过。
+
+下方旧Issue14/12交接是历史，不覆盖当前状态。
+
 # Issue #14 — READY_FOR_R007_FIX_REVIEW / TEST_EXECUTION_SUSPENDED
 
 R007 已允许小范围 CPU 工程修复，R006 当前main许可已暂停。本轮从事故PR#13 exact61e1b97接续，仅更改 TEST server launcher 的独占目录/授权收据交接及新增18项CPU检查；native server及全部科学冻结不变。最终代码 `a904e2678a3c511e36580a173e77b9c72521e093` 的普通／`-O` 各89/89、实际suite退出0。没有启动GPU、模型、仿真或真实TEST。

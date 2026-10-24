@@ -1,0 +1,10 @@
+{
+  "started_at_sgt": "2026-10-24T14:36:18.443431+08:00",
+  "wrapper_pid": 3615897,
+  "child_pid": 3615901,
+  "command": [
+    "<PRIVATE_PATH>",
+    "-c",
+    "from pathlib import Path\nimport json,sys,subprocess,os,hashlib\nfrom tase.test_authorization import authorize\nfrom tase.test_runtime import verify\nfrom tase.e2_evidence import storage\nfrom tase.evidence import write_json\nr=Path.home()/\"Projects/me6401-e2\";repo=Path.cwd();op=r/\"operator/issue16-preflight-01\"\na=authorize(repo,\"f084723cb1d00cb7675fa7394dc1b03c0ce3dcac\",\"docs/reviews/R008-E2-TEST-AUTHORIZED.json\")\nwrite_json(op/\"grant-admission.json\",dict(identity=a[2],cell_count=len(a[1]),activation_conditions_checked_by_operator_separately=True))\nbase=Path(json.loads((r/\"operator/environment-copy-05/launch.json\").read_text())[\"derived_environments\"])\nv=verify(r,repo,base/\"server/bin/python\",base/\"sim/bin/python\");storage(r)\nwrite_json(op/\"fixed-resource-identities.json\",v)\nprint(json.dumps(dict(grant=\"VALID\",cells=len(a[1]),models_files=len(v[\"files\"]),GPU_model_started=False)))"
+  ]
+}

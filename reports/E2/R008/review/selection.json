@@ -1,0 +1,15 @@
+{
+  "unavailable_predeclared_controls": [
+    "E2-TEST-cream_cheese-i6-C0",
+    "E2-TEST-ketchup-i6-C0"
+  ],
+  "rule": "All observed wrong-lift/abort/error scenarios plus each task C0/init6 plus lexicographic first timeout; include both arms. Declared before first TEST reservation.",
+  "scenarios": [
+    "E2-TEST-alphabet_soup-i6-C0",
+    "E2-TEST-alphabet_soup-i8-C0",
+    "E2-TEST-cream_cheese-i6-C0",
+    "E2-TEST-ketchup-i6-C0"
+  ],
+  "pairs": 4,
+  "selected_from_all120_without_changing_results": true
+}

@@ -1,0 +1,32 @@
+{
+  "head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "checkout_clean": true,
+  "planned": 120,
+  "reserved": 10,
+  "results": 10,
+  "next_ID_not_reserved": true,
+  "server_actual_exit": {
+    "completed_at_sgt": "2026-10-24T14:44:48.005196+08:00",
+    "child_pid": 3618243,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "operator_actual_exit": {
+    "completed_at_sgt": "2026-10-24T14:44:48.254257+08:00",
+    "child_pid": 3618160,
+    "child_returncode": 1,
+    "exit_code": 1,
+    "signal": null
+  },
+  "GPU_compute_processes": "",
+  "failure_record": {
+    "failure": {
+      "type": "RuntimeError",
+      "message": "TEST entry failed; retain original ID and stop: e2-test-0010"
+    },
+    "closed_units": 9,
+    "head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+    "remaining_planned": 111
+  }
+}

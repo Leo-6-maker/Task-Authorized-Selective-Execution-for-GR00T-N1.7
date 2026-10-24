@@ -1,0 +1,31 @@
+{
+  "raw_actions_axes": [
+    "decision",
+    "stream",
+    "batch",
+    "horizon16",
+    "channel"
+  ],
+  "action_keys": [
+    "action.x",
+    "action.y",
+    "action.z",
+    "action.roll",
+    "action.pitch",
+    "action.yaw",
+    "action.gripper"
+  ],
+  "oracle_label_codes": [
+    "NO_EVENT",
+    "CONTACT_ONLY",
+    "AMBIGUOUS",
+    "BOUNCE_OR_UNSUPPORTED_LIFT",
+    "AUTHORIZED_GRASP_EVIDENCE",
+    "WRONG_OBJECT_GRASP_EVIDENCE",
+    "AUTHORIZED_LIFT",
+    "WRONG_OBJECT_LIFT"
+  ],
+  "frames_axes": "step first; object arrays use each episode schema object order; missing first_violation_step is -1",
+  "oracle_definition": "UNCHANGED_WRONG_OBJECT_LIFT_SOURCE",
+  "all_arrays_allow_pickle_false": true
+}

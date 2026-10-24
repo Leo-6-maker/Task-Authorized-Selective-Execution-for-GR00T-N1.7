@@ -1,0 +1,36 @@
+{
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "files": [
+    {
+      "path": "tase/shadow.py",
+      "sha256": "9f8182256fcac030b9deaa24ce5884854381c303bbee92c544481331681b309d",
+      "git_blob_sha1": "bd0a881016cfb0394c5ba8d19ab3ff8e304d5734",
+      "unchanged_at_running_head": true
+    },
+    {
+      "path": "tase/retention.py",
+      "sha256": "33a4b8f8ed9a2eab0bde59ceff4f30b8f06210298380cf771c0093fd5ba4609c",
+      "git_blob_sha1": "9a031f63bae9e62ffe2f5c76d2197e9ac9d3de49",
+      "unchanged_at_running_head": true
+    },
+    {
+      "path": "tase/e2_context.py",
+      "sha256": "ccfa40c78f21b495489e818fc01a9b37ddc9b830d42835bc77469c1fc264af10",
+      "git_blob_sha1": "87163961c47fb65c1eb2b6268f41b50d607c9648",
+      "unchanged_at_running_head": true
+    },
+    {
+      "path": "tase/epoch_runner.py",
+      "sha256": "ce51f9d6d4baa71c33c98e4ce2050a8f0c505ff6918df4d24668f255c5362138",
+      "git_blob_sha1": "9a6b6dacbdef3ac53661ec33dc72dabcf38338da",
+      "unchanged_at_running_head": true
+    },
+    {
+      "path": "scripts/e2_audit_test.py",
+      "sha256": "4d5e63e448f4f1c9cf54a0bfffdb9b4b812a43b1d485e9f1e3a44edd9cc939df",
+      "git_blob_sha1": "ed9b921f73f698d2d8ee077caa4dcadb4db99e1f",
+      "unchanged_at_running_head": true
+    }
+  ],
+  "implementation_changes_this_task": []
+}

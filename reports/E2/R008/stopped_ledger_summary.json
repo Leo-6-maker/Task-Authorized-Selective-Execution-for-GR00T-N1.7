@@ -1,0 +1,91 @@
+{
+  "planned": 120,
+  "reserved": 10,
+  "full_outcomes": 9,
+  "statuses": {
+    "SUCCESS": 9,
+    "CLEANUP_ERROR": 1,
+    "NOT_STARTED": 110
+  },
+  "observed_controls": 1314,
+  "observed_policy_requests": 168,
+  "paired_statuses": {
+    "PAIRED_PREFIX_EXACT": 4,
+    "ERROR_PAIR_NOT_EXCLUDED": 1,
+    "INCOMPLETE_PAIR_NOT_EXCLUDED": 55
+  },
+  "actual_server_get_action_records": 168,
+  "server_and_episode_request_counts_equal": true,
+  "per_run_actual_request_bindings": [
+    {
+      "run_id": "e2-test-0001",
+      "actual_server_requests": 17,
+      "request_first": 1,
+      "request_last": 17
+    },
+    {
+      "run_id": "e2-test-0002",
+      "actual_server_requests": 17,
+      "request_first": 18,
+      "request_last": 34
+    },
+    {
+      "run_id": "e2-test-0003",
+      "actual_server_requests": 18,
+      "request_first": 35,
+      "request_last": 52
+    },
+    {
+      "run_id": "e2-test-0004",
+      "actual_server_requests": 18,
+      "request_first": 53,
+      "request_last": 70
+    },
+    {
+      "run_id": "e2-test-0005",
+      "actual_server_requests": 18,
+      "request_first": 71,
+      "request_last": 88
+    },
+    {
+      "run_id": "e2-test-0006",
+      "actual_server_requests": 18,
+      "request_first": 89,
+      "request_last": 106
+    },
+    {
+      "run_id": "e2-test-0007",
+      "actual_server_requests": 16,
+      "request_first": 107,
+      "request_last": 122
+    },
+    {
+      "run_id": "e2-test-0008",
+      "actual_server_requests": 16,
+      "request_first": 123,
+      "request_last": 138
+    },
+    {
+      "run_id": "e2-test-0009",
+      "actual_server_requests": 15,
+      "request_first": 139,
+      "request_last": 153
+    },
+    {
+      "run_id": "e2-test-0010",
+      "actual_server_requests": 15,
+      "request_first": 154,
+      "request_last": 168
+    }
+  ],
+  "inference_status_counts": {
+    "PASS": 168
+  },
+  "server_actual_exit": 0,
+  "outer_operator_actual_exit": 1,
+  "cleanup_error_original_ID": "e2-test-0010",
+  "failed_ID_counted_in120": true,
+  "remaining_unstarted": 110,
+  "remaining_not_normal_closed": 111,
+  "not_full_TEST_or_R3": true
+}

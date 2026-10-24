@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "authorized_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "selected_k": 3,
+    "maximum_attempts": 120,
+    "test_config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+    "test_cells_sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+    "protocol_lock_sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "splits_sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+    "selection_sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+    "review_id": "R008-2026-10-24-E2-TEST-LAUNCHER-FIX",
+    "review_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+    "review_path": "docs/reviews/R008-E2-TEST-AUTHORIZED.json",
+    "review_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e"
+  },
+  "cell_count": 120,
+  "activation_conditions_checked_by_operator_separately": true
+}

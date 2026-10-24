@@ -1,0 +1,73 @@
+{
+  "status": "ALL_STOPPED_RUN_AND_EXPORT_ARCHIVES_TWO_LOCATIONS_WHOLE_AND_MEMBER_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue16-test-cluster-01",
+      "bytes": 73718282,
+      "sha256": "7445ba7f38c29435fe62ecbfb79f8e848fb917315cde8d386ec023ee73da081a",
+      "artifacts": 464,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue16-test-cluster-02",
+      "bytes": 72273112,
+      "sha256": "1a75e578ea52293ab9fe42dc7bce8226ffc1d854d9745263d6e6603f74873af3",
+      "artifacts": 429,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue16-stopped-full-01",
+      "bytes": 178122020,
+      "sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+      "artifacts": 1130,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue16-export-supplement-01",
+      "bytes": 4511021,
+      "sha256": "1acfbd8413b2a57232d13df49c0b8f946152619fc12143cd685de0d8671836c9",
+      "artifacts": 136,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    }
+  ],
+  "cpu_precondition": {
+    "status": "TWO_AUTHORIZED_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "bytes": 164711,
+    "sha256": "0115637d34a8c4e4afd0ba9268dcc79733a4323252c207c916093bae18325b47",
+    "members": 1468,
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ],
+    "model_GPU_sim_TEST_calls": 0
+  },
+  "source_origin_crosscheck": {
+    "status": "ALL_PUBLIC_ORIGIN_HASHES_MATCH_COMPLETE_STOPPED_RAW_ARCHIVE",
+    "source_files": 181,
+    "raw_index": 1130,
+    "mismatches": [],
+    "raw_archive_sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+    "ordinary_optimized_raw_audit_equal": true
+  },
+  "review_transfer": {
+    "scope": "SAFE_STOPPED_TEST_DERIVATIVE_TRANSFER_VERIFIED",
+    "archive_bytes": 4503492,
+    "archive_sha256": "c3080e8df84e649fe5e027a41ca10f9e47ccf9ee4068fdb310c727db78a6a3df",
+    "manifest_sha256": "451a8d14febefb4b76954d63feea6ccc6bc1d82b2ba125ac1c7f5d5ccedb153d",
+    "exported_files": 129,
+    "planned_units": 120,
+    "actual_reserved": 10,
+    "source_has_cleanup_error": true
+  },
+  "private_operator_CPU_metadata": {
+    "status": "TWO_AUTHORIZED_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "bytes": 30955,
+    "sha256": "9c650cbcfda5099f732ad7daefd06c4247451385d5b75777648be15574b530d0",
+    "members": 45,
+    "scope": "PRIVATE_R008_OPERATOR_CPU_AND_TRANSFER_METADATA_NO_MODELS"
+  }
+}

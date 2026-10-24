@@ -1,5 +1,7 @@
 # 当前状态索引
 
+当前 Issue #16：R008真实激活后，在原e2-test-0010的shadow清理阶段返回CLEANUP_ERROR/exit1，已按STOP规则关闭服务器。120计划保留：10已预留（9正常+1清理错误）、110未启动。运行代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，未改动。普通/-O live停止审计均exit0；原件两处核验完成。详见[事件交接](../reports/E2/R008/R3_HANDOFF.md)。下一步仅GPT事故评估；不重跑0010、不自动继续0011。下方Issue14状态保留为历史。
+
 ## Issue #14 — READY_FOR_R007_FIX_REVIEW / TEST_EXECUTION_SUSPENDED
 
 R007 允许 TEST server launcher 目录与 admission 交接的 CPU 修复；旧 R006 已由 main 暂停。修改仅涉及 launcher 与新增 CPU 集成测试，native server/scientific configs 保持不变。最终固定代码 `a904e2678a3c511e36580a173e77b9c72521e093` 普通与 `-O` **89/89、真实suite子进程退出0**，包括原71项和18项新检查。未启动GPU、模型、仿真或真实TEST；上次已核验TEST0/120，本轮新增消耗0。
