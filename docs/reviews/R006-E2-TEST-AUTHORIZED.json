@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R006-2026-10-24-E2-TEST",
-  "disposition": "TEST_AUTHORIZED",
+  "disposition": "TEST_SUSPENDED_AFTER_INCIDENT",
   "authorized_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
   "epoch": "E2",
   "protocol_id": "TASE-002-v1.0",
@@ -138,5 +138,11 @@
   "review_report": "docs/reviews/R006-E2-TEST-authorization-review.md",
   "resource_boundary": "Subject to separate currently valid owner GPU allocation and exact frozen model/source/processor; no access elevation.",
   "stop_boundary": "Stop on structural/monitor/system mismatch, unresolved partial receipt or resource anomaly; preserve original TEST run ID, do not retry, replace or tune.",
-  "result_boundary": "TEST results require later independent R3 review; this grant authorizes acquisition, not a performance or real-world safety claim."
+  "result_boundary": "TEST results require later independent R3 review; this grant authorizes acquisition, not a performance or real-world safety claim.",
+  "suspended_by": "GPT R007",
+  "suspended_on": "2026-10-24 (Asia/Singapore)",
+  "suspension_reason": "ISSUE12-INCIDENT-001: deterministic FileExistsError in R006 exact-head server startup before torch/model; no TEST reservations; requires independently reviewed new code and new exact-head grant",
+  "suspension_review": "docs/reviews/R007-TEST-server-startup-incident.md",
+  "original_authorized_grant_commit": "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+  "restart_old_R006_approved": false
 }
