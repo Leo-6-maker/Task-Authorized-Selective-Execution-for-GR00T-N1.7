@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R009-2026-10-24-E2-TEST-CLEANUP-INCIDENT",
-  "disposition": "TEST_RESUME_AUTHORIZED_SAME_HEAD_CONDITIONAL",
+  "disposition": "SUPERSEDED_BY_R010_REPEATED_CLEANUP",
   "reviewed_report_head": "ec0ffc7f335642abddf1b10063070a61fa1b8b32",
   "authorized_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
   "preexisting_grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
@@ -30,5 +30,9 @@
   "stop_condition": "Stop immediately on any additional CLEANUP_ERROR or program/monitor/worker/ledger/state/RNG/resources/evidence anomaly; preserve the original consumed run ID, do not retry; request bounded code-fix and new exact SHA/grant.",
   "allowed_continuation": "Only existing fixed TEST cells0011..0120 in immutable order, first complete0011-0012 then mandatory structural audit/checkpoint and two-copy backup before remainder; no code/science changes.",
   "scope": "Reviewer clearance of a prior mandatory R008 stop, not a new TEST grant, physical rerun, approval of effects or claim of full private original verification",
-  "review_report": "docs/reviews/R009-TEST-cleanup-incident-continuation.md"
+  "review_report": "docs/reviews/R009-TEST-cleanup-incident-continuation.md",
+  "superseded_by": "docs/reviews/R010-repeated-cleanup-and-autonomous-engineering.md",
+  "original_clearance_historical_commit": "fd8a2d1a8ab3c1b55e05e1b4c55724e2d657ae02",
+  "continuation_under_this_clearance_allowed": false,
+  "reason": "e2-test-0014 repeat CLEANUP_ERROR after e2-test-0010; CPU engineering only until new signed code grant"
 }
