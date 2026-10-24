@@ -14,7 +14,7 @@ from scripts.audit_epoch import audit as audit_raw, read, lines
 from tase.evidence import sha256,write_json
 from tase.test_authorization import frozen,bind_cell,require,validate_identity,authorize
 from tase.test_ledger import inventory
-from tase.test_history import AuditVersions
+from tase.test_history import AuditVersions,verify_lifecycle
 
 FULL={'SUCCESS','TIME_LIMIT','SEMANTIC_ABORT'}
 METRICS=['wrong_lift','official_success','compliant_success','semantic_abort',
@@ -156,6 +156,7 @@ def audit(workspace,repo):
                                 close['clean'] is True and close['forced'] is False and
                                 close['worker_pid']==worker['worker_pid'] and close['worker_returncode']==0 and
                                 worker.get('clean_close') is True,'TEST full outcome lacks clean lifecycle proof')
+                        verify_lifecycle(close,worker)
             costs.extend(lines(folder/'monitor_timing.jsonl'))
             inference.extend(r['inference_roundtrip_ms'] for r in lines(folder/'inference_timing.jsonl'))
         observed_onset=next((f['oracle']['first_violation_step'] for f in frames

@@ -140,6 +140,7 @@ class Shadow:
             try:self.close()
             except ShadowCloseError as cleanup:
                 exc.add_note('startup cleanup: '+cleanup.receipt['status'])
+            exc.add_note('shadow startup close receipt: '+json.dumps(self.close_receipt,allow_nan=False))
             raise
 
     def receive(self,timeout=30):
@@ -245,10 +246,19 @@ class Shadow:
                 receipt['worker_returncode']=process.exitcode
                 if process.exitcode is None:receipt['status']='WORKER_SURVIVED_KILL'
         finally:
-            self.connection.close();receipt['pipe_closed']=True;event('PARENT_PIPE_CLOSED')
-            if process is not None and (process.pid is None or process.exitcode is not None):
-                process.close();receipt['process_handle_closed']=True;event('PROCESS_HANDLE_CLOSED')
-            self.close_receipt=receipt
+            try:
+                self.connection.close();receipt['pipe_closed']=True;event('PARENT_PIPE_CLOSED')
+            except (OSError,ValueError) as exc:
+                receipt.update(clean=False,status='PARENT_PIPE_CLOSE_ERROR',pipe_close_error=type(exc).__name__)
+                event('PARENT_PIPE_CLOSE_ERROR',error_type=type(exc).__name__)
+            finally:
+                try:
+                    if process is not None and (process.pid is None or process.exitcode is not None):
+                        process.close();receipt['process_handle_closed']=True;event('PROCESS_HANDLE_CLOSED')
+                except (OSError,ValueError) as exc:
+                    receipt.update(clean=False,status='PROCESS_HANDLE_CLOSE_ERROR',handle_close_error=type(exc).__name__)
+                    event('PROCESS_HANDLE_CLOSE_ERROR',error_type=type(exc).__name__)
+                finally:self.close_receipt=receipt
         if not receipt['clean']:
             self._close_error=ShadowCloseError(receipt);raise self._close_error
         return receipt

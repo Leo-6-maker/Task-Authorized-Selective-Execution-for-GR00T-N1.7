@@ -34,6 +34,13 @@ def epochs(root):
 
 
 class HistoricalAuditTests(unittest.TestCase):
+    def test_reformatted_main_grant_is_not_active_admission(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo,rev,path,grant=fixture(Path(tmp));cfg,cells,identity=authorize(repo,rev,path);head=identity['authorized_head']
+            git(repo,'checkout','-q','--detach',rev);(repo/path).write_text(json.dumps(grant,separators=(',',':')));git(repo,'add','.');git(repo,'commit','-qm','SYNTHETIC changed grant bytes');main=git(repo,'rev-parse','HEAD');git(repo,'update-ref','refs/remotes/origin/main',main);git(repo,'checkout','-q','--detach',head)
+            res=dict(cells[0],authorization=identity,repo_sha=head,config_hash=identity['test_config_sha256'],runtime_lock_hash=identity['runtime_lock_sha256'])
+            with self.assertRaises(ValueError):authorize(repo,rev,path)
+            with self.assertRaises(ValueError):AuditVersions(repo,cfg,cells).resolve(res,Path(tmp)/'UNEXECUTED')
     def test_old_suspended_grant_checks_only_anchored_original_not_admission(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo,rev,path,identity,res,folder,cfg,cells,new=epochs(Path(tmp));versions=AuditVersions(repo,cfg,cells)

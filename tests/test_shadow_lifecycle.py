@@ -7,8 +7,10 @@ import signal
 import time
 import unittest
 import struct
+import copy
 from unittest.mock import patch
 from tase.shadow import Shadow,ShadowCloseError,finish_worker_close,send_close_receipt
+from tase.test_history import verify_lifecycle
 
 
 class NativeProxy:
@@ -64,6 +66,8 @@ class ShadowLifecycleTests(unittest.TestCase):
         self.assertFalse((Path('/proc')/str(pid)).exists())
         self.assertNotIn(pid,[p.pid for p in mp.active_children()])
         json.dumps(s.close_receipt,allow_nan=False)
+        if s.close_receipt['status']=='CLEAN':
+            verify_lifecycle(s.close_receipt,dict(worker_pid=pid,worker_returncode=0,clean_close=True))
         directory=os.environ.get('TASE_CPU_LIFECYCLE_RECEIPTS')
         if directory:
             folder=Path(directory);folder.mkdir(parents=True,exist_ok=True)
@@ -135,7 +139,8 @@ class ShadowLifecycleTests(unittest.TestCase):
     def test_startup_error_preserved_and_owned_worker_closed(self):
         s=Shadow.__new__(Shadow)
         with patch('tase.shadow.worker',startup_failure_worker):
-            with self.assertRaisesRegex(RuntimeError,'SYNTHETIC_STARTUP_FAILURE'):Shadow.__init__(s,'SYNTHETIC',0,{})
+            with self.assertRaisesRegex(RuntimeError,'SYNTHETIC_STARTUP_FAILURE') as error:Shadow.__init__(s,'SYNTHETIC',0,{})
+        self.assertTrue(any('shadow startup close receipt:' in n for n in error.exception.__notes__))
         self.assertEqual(s.close_receipt['status'],'CLEAN');self.check_reaped(s,s.close_receipt['worker_pid'])
     def test_backpressured_close_request_cannot_block_parent_send(self):
         s,pid=make_shadow('no_read');os.set_blocking(s.connection.fileno(),False)
@@ -145,3 +150,17 @@ class ShadowLifecycleTests(unittest.TestCase):
         os.set_blocking(s.connection.fileno(),True);started=time.monotonic()
         with self.assertRaises(ShadowCloseError):self.close(s)
         self.assertLess(time.monotonic()-started,2);self.assertEqual(s.close_receipt['initial_failure'],'PIPE_SEND_ERROR');self.check_reaped(s,pid)
+    def test_forged_clean_receipt_cannot_hide_force_missing_ack_or_bad_time(self):
+        s,pid=make_shadow();r=self.close(s);worker=dict(worker_pid=pid,worker_returncode=0,clean_close=True)
+        for mode in ['term','kill','missing_ack','bad_token','nan_time','wrong_pid','missing_exit']:
+            with self.subTest(mode=mode):
+                bad=copy.deepcopy(r)
+                if mode=='term':bad['term_sent']=True
+                elif mode=='kill':bad['kill_sent']=True
+                elif mode=='missing_ack':bad['worker_receipts'].pop()
+                elif mode=='bad_token':bad['worker_receipts'][1]['close_token']='0'*32
+                elif mode=='nan_time':bad['worker_receipts'][1]['finalizer_finished_monotonic']=float('nan')
+                elif mode=='wrong_pid':bad['worker_pid']+=1
+                else:bad['events']=[e for e in bad['events'] if e['event']!='PROCESS_EXIT_OBSERVED']
+                with self.assertRaises(ValueError):verify_lifecycle(bad,worker)
+        self.check_reaped(s,pid)

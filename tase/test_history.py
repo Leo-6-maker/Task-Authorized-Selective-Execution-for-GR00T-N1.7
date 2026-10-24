@@ -9,12 +9,47 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import math
 import subprocess
 from .test_authorization import require,git,bind_cell
 from .evidence import sha256
 
 ENGINEERING={'tase/shadow.py','tase/e2_context.py'}
 HEX=re.compile(r'[0-9a-f]{40}')
+
+
+def verify_lifecycle(receipt,worker):
+    """Static proof for future full G outcomes, never changes old eligibility."""
+    require(receipt.get('protocol')=='SHADOW_CLOSE_V1' and receipt.get('status')=='CLEAN' and
+        receipt.get('clean') is True and receipt.get('forced') is False and
+        receipt.get('term_sent') is False and receipt.get('kill_sent') is False and
+        receipt.get('pipe_closed') is True and receipt.get('process_handle_closed') is True,
+        'missing/forced/incomplete clean lifecycle')
+    pid=receipt.get('worker_pid');require(type(pid) is int and pid>0 and pid==worker.get('worker_pid') and
+        type(receipt.get('worker_returncode')) is int and receipt['worker_returncode']==0 and
+        worker.get('worker_returncode')==0 and worker.get('clean_close') is True,
+        'lifecycle actual worker identity/exit differs')
+    messages=receipt.get('worker_receipts')
+    require(isinstance(messages,list) and len(messages)==2 and all(isinstance(m,dict) for m in messages),
+        'incomplete lifecycle handshake')
+    ack,closed=messages;token=ack.get('close_token')
+    require(ack.get('status')=='CLOSING' and closed.get('status')=='CLOSED' and
+        isinstance(token,str) and re.fullmatch('[0-9a-f]{32}',token) is not None and
+        closed.get('close_token')==token and ack.get('worker_pid')==closed.get('worker_pid')==pid and
+        closed.get('native_finalized') is True,'invalid native-finalizer completion proof')
+    stamps=[closed.get(k) for k in ['received_monotonic','finalizer_started_monotonic','finalizer_finished_monotonic']]
+    require(all(type(s) in [int,float] and math.isfinite(s) for s in stamps) and
+        stamps==sorted(stamps) and ack.get('received_monotonic')==stamps[0], 'invalid finalizer chronology')
+    events=receipt.get('events',[]);names=[e.get('event') for e in events]
+    required=['CLOSE_REQUEST','CLOSE_ACKNOWLEDGED','NATIVE_FINALIZER_COMPLETED','PARENT_PIPE_CLOSED','PROCESS_HANDLE_CLOSED']
+    exits=[e for e in events if e.get('event')=='PROCESS_EXIT_OBSERVED']
+    require([n for n in names if n!='PROCESS_EXIT_OBSERVED']==required and exits and
+        events[0].get('close_token')==token and all(e.get('exit_code')==0 for e in exits),
+        'lifecycle parent process exit/cleanup chronology differs')
+    clocks=[e.get('parent_monotonic') for e in events]
+    require(all(type(t) in [int,float] and math.isfinite(t) for t in clocks) and clocks==sorted(clocks) and
+        clocks[0]<=stamps[0] and stamps[-1]<=next(e['parent_monotonic'] for e in events if e['event']=='NATIVE_FINALIZER_COMPLETED') and
+        all(stamps[-1]<=e['parent_monotonic'] for e in exits), 'invalid parent/worker close chronology')
 
 
 class AuditVersions:
@@ -75,7 +110,7 @@ class AuditVersions:
                 review_blob=git(self.repo,'rev-parse',review+':'+path))
             require(auth==expected and all(type(auth[k]) is type(v) for k,v in expected.items()),'historical authorization receipt differs')
             current=git(self.repo,'rev-parse','HEAD');main_bytes=subprocess.run(['git','-C',str(self.repo),'show','refs/remotes/origin/main:'+path],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
-            active=main_bytes.returncode==0 and json.loads(main_bytes.stdout)==grant
+            active=main_bytes.returncode==0 and main_bytes.stdout.strip()==self.blob(review,path).strip()
             anchor=None
             if head!=current or not active:
                 found=[a for a in self.anchors if a['execution_head']==head and a['grant_commit']==review and a['grant_path']==path]
