@@ -1,5 +1,7 @@
 # Task-Authorized Selective Execution for GR00T N1.7
 
+当前 Issue #16 / R008：**STOPPED_FOR_INCIDENT_REVIEW**。已完成激活并实际执行10个TEST单元（9 SUCCESS、1 CLEANUP_ERROR），其余110未启动；原0010已消耗且不重跑。见 [停止事件与交接](reports/E2/R008/R3_HANDOFF.md)。无新执行代码或自动merge。
+
 当前 Issue #14 / R007：**READY_FOR_R007_FIX_REVIEW，TEST暂停**。launcher 交接修复已完成CPU普通／`-O` 各89项回归；无新模型/仿真/TEST。旧R006不可重用，等待新的R008。见 [修复交接与远端访问限制](reports/E2/R007/R007_FIX_HANDOFF.md)。
 
 Issue #12：R006 已授权，但首个冻结 server 启动在模型加载前发现程序错误，已按停止规则保全现场。**TEST仍0/120**。见 [事件与下一步](reports/E2/TEST/INCIDENT-001.md)；执行代码未改，无自动重试。下方Issue10状态保留为历史。

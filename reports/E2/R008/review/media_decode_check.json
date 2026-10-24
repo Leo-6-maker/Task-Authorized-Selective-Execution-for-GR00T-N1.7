@@ -1,0 +1,75 @@
+{
+  "status": "ALL_ORIGINAL_VIDEOS_DECODED_TO_OBSERVED_CONTROLS",
+  "rows": [
+    {
+      "run_id": "e2-test-0001",
+      "decoded_frames": 129,
+      "actual_main_controls": 129,
+      "complete": true,
+      "original_video_sha256": "0945c8e3ddbad8b5473081752323d741a6804a26f12344a8898f621450affbf4"
+    },
+    {
+      "run_id": "e2-test-0002",
+      "decoded_frames": 129,
+      "actual_main_controls": 129,
+      "complete": true,
+      "original_video_sha256": "0945c8e3ddbad8b5473081752323d741a6804a26f12344a8898f621450affbf4"
+    },
+    {
+      "run_id": "e2-test-0003",
+      "decoded_frames": 139,
+      "actual_main_controls": 139,
+      "complete": true,
+      "original_video_sha256": "7e68b33d246ec00db789b5e2022adc5a99e1401f7a27e411f3a000fe0689caa3"
+    },
+    {
+      "run_id": "e2-test-0004",
+      "decoded_frames": 139,
+      "actual_main_controls": 139,
+      "complete": true,
+      "original_video_sha256": "7e68b33d246ec00db789b5e2022adc5a99e1401f7a27e411f3a000fe0689caa3"
+    },
+    {
+      "run_id": "e2-test-0005",
+      "decoded_frames": 141,
+      "actual_main_controls": 141,
+      "complete": true,
+      "original_video_sha256": "fb5225587a626359ced6e03ef3c5d0e5120ea0b9e069a4dcaed6fdba3549fcbb"
+    },
+    {
+      "run_id": "e2-test-0006",
+      "decoded_frames": 141,
+      "actual_main_controls": 141,
+      "complete": true,
+      "original_video_sha256": "fb5225587a626359ced6e03ef3c5d0e5120ea0b9e069a4dcaed6fdba3549fcbb"
+    },
+    {
+      "run_id": "e2-test-0007",
+      "decoded_frames": 128,
+      "actual_main_controls": 128,
+      "complete": true,
+      "original_video_sha256": "6a6a8aabc27f709a02db88628b3b3a44b00b2ffb0a6e6957cf70f68d322de838"
+    },
+    {
+      "run_id": "e2-test-0008",
+      "decoded_frames": 128,
+      "actual_main_controls": 128,
+      "complete": true,
+      "original_video_sha256": "6a6a8aabc27f709a02db88628b3b3a44b00b2ffb0a6e6957cf70f68d322de838"
+    },
+    {
+      "run_id": "e2-test-0009",
+      "decoded_frames": 120,
+      "actual_main_controls": 120,
+      "complete": true,
+      "original_video_sha256": "2ca63d2a98fe44d85ecf344cc22e843dcd74be058b337868a4de52f12f6d0eae"
+    },
+    {
+      "run_id": "e2-test-0010",
+      "decoded_frames": 120,
+      "actual_main_controls": 120,
+      "complete": true,
+      "original_video_sha256": "2ca63d2a98fe44d85ecf344cc22e843dcd74be058b337868a4de52f12f6d0eae"
+    }
+  ]
+}

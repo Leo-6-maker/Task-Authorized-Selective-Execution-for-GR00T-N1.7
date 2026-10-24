@@ -1,3 +1,7 @@
+# Current status: STOPPED_FOR_INCIDENT_REVIEW
+
+The activation/first-cluster progress below is retained history. Original e2-test-0010 later returned CLEANUP_ERROR/exit1, so execution stopped with10 reserved and110 unstarted. See [incident](ISSUE16-INCIDENT-002.md) and [handoff](R3_HANDOFF.md). No resume or retry.
+
 # Issue16 — R008 activated / TEST_STARTED
 
 Running checkout remains exact `a1c6424bd348b36c55a20d38750a269e9551a698`, clean and immutable; grant `f084723cb1d00cb7675fa7394dc1b03c0ce3dcac`, path `docs/reviews/R008-E2-TEST-AUTHORIZED.json`. Reporting is isolated here; no new execution code/config or merge.

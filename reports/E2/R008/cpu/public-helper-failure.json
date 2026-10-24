@@ -1,0 +1,6 @@
+{
+  "scope": "CPU_PUBLIC_RECEIPT_EXPORT_HELPER_ONLY",
+  "actual_shell_exit": 1,
+  "reason": "Helper compared batched server language list against scalar; original protocol correctly records [actual_language]. CPU helper corrected to exact expected singleton-list comparison, no model rerun or source/config/status changes.",
+  "new_model_sim_calls": 0
+}

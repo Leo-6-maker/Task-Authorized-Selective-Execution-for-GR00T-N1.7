@@ -1,0 +1,34 @@
+{
+  "status": "STOPPED_FOR_INCIDENT_REVIEW_NOT_COMPLETE_TEST_OR_R3",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+  "runtime_source_config_changes": [],
+  "public_derivative_files_verified": 129,
+  "public_process_receipts_verified": 32,
+  "original_source_hash_crosscheck": {
+    "status": "ALL_PUBLIC_ORIGIN_HASHES_MATCH_COMPLETE_STOPPED_RAW_ARCHIVE",
+    "source_files": 181,
+    "raw_index": 1130,
+    "mismatches": [],
+    "raw_archive_sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+    "ordinary_optimized_raw_audit_equal": true
+  },
+  "planned": 120,
+  "reserved": 10,
+  "normal_full_outcomes": 9,
+  "CLEANUP_ERROR_units": 1,
+  "NOT_STARTED_units": 110,
+  "failed_original_ID": "e2-test-0010",
+  "failed_ID_rerun": false,
+  "model_get_action_records": 168,
+  "observed_main_controls": 1314,
+  "post_stop_new_model_or_sim_calls": 0,
+  "privacy": {
+    "text_files_scanned": 152,
+    "known_private_marker_matches": [],
+    "credential_pattern_matches": [],
+    "scope": "CURRENT_DELTA_BYTES_ONLY_NOT_PARENT_GIT_HISTORY"
+  },
+  "statistical_limit": "All120 planned retained; cleanup-error and110 unopened remain missing/censored for valid outcome analysis. No final effect/TSR/UAR claim.",
+  "new_source_reader_scope": "reports/E2/R008/check_safe_review.py: CPU artifact reader only; never policy/Gate/runtime source"
+}
