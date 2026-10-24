@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "REVIEWED_CLOSED_TEST_EPOCHS_READ_ONLY_NOT_LAUNCH_AUTHORIZATION",
+  "epochs": [
+    {
+      "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+      "grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+      "grant_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
+      "review_commit": "28686e51476a1c2c5937b306cfc2189f38ce643c",
+      "review_path": "docs/reviews/R012-E2-early-sentinel-exit-review.md",
+      "report_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+      "ledger_path": "reports/E2/R011/review/attempt_ledger_120.json",
+      "manifest_path": "reports/E2/R011/review/manifest.json",
+      "receipt_origins_path": "reports/E2/R011/receipt_origins.json",
+      "backup_proof_path": "reports/E2/R011/backup_verification.json",
+      "consumed_count": 16,
+      "original_archive_sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6"
+    }
+  ]
+}
