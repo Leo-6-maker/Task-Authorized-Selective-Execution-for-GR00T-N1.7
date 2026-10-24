@@ -1,0 +1,42 @@
+{
+  "status": "ACTIVATION_PREREQUISITES_VERIFIED_BEFORE_LAUNCH",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "grant_review_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+  "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "planned_TEST_units": 120,
+  "live_TEST_reserved": 0,
+  "live_TEST_outcomes": 0,
+  "all120_live_NOT_STARTED": true,
+  "old_incident_source_members_verified": 34,
+  "CPU_original_archive_backup": {
+    "status": "TWO_AUTHORIZED_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "bytes": 164711,
+    "sha256": "0115637d34a8c4e4afd0ba9268dcc79733a4323252c207c916093bae18325b47",
+    "members": 1468,
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ],
+    "model_GPU_sim_TEST_calls": 0
+  },
+  "source_and_environment_model_identity_check": "PASS_EXISTING17_FILES_AND_FIXED_SOURCES_DUAL_ENV",
+  "official_TEST_init_contents_verified": 30,
+  "task_assets_verified": 6,
+  "active_owned_native_jobs": 0,
+  "allocation_valid": true,
+  "GPU_free_mib": 31749,
+  "reserved_port": 5564,
+  "loopback": "127.0.0.1",
+  "no_model_server_sim_TEST_started_yet": true,
+  "checked_at_sgt": "2026-10-24T14:37:25.144327+08:00",
+  "evidence_sha256": {
+    "grant-admission.json": "4ac9f24323c7ea930b8f4f9d3e33296709195d1df1101905d04e531ba788dc6d",
+    "live-test-audit.json": "b052ebcb6fb0a09f5925aaf2b15bfe6b2d8e53f9cd9973c8d1b7a4b7db6c07bb",
+    "fixed-resource-identities.json": "8022bffe59aafca964d03a14d7a46c8ef45c9502f4291e3879faeab8ec55455f",
+    "task-init-identities.json": "699e651f8f7d8f343a207b9bfe4a69da24f5ed2081faf3ecfe14b3a9b22f0e34",
+    "incident-recheck.json": "166fd1969155132c18473950d46d0a07670a0f762dff945e7b0c6b78d626a786",
+    "gpu-allocation.local.json": "8eaec8d97df46451f87972b7fd474847ba36bf240e4bc38aec3031067c8a4a06"
+  }
+}
