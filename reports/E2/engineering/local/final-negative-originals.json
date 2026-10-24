@@ -1,0 +1,61 @@
+{
+  "scope": "CPU_NEGATIVE_TRUSTED_ORIGINAL_COPY_ONLY_NO_MODEL_OR_SIM",
+  "cases": [
+    {
+      "case": "frame_bytes",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "artifact content mismatch: runs/TEST/e2-test-0001/physical_frames.jsonl"
+    },
+    {
+      "case": "missing_video",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: '[CPU_TEMP]/runs/TEST/e2-test-0001/rollout.mp4'"
+    },
+    {
+      "case": "forged_config",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "historical reservation code/config differs"
+    },
+    {
+      "case": "rewritten_manifest",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "closed epoch original hash differs: runs/TEST/e2-test-0001/artifact_manifest.json"
+    },
+    {
+      "case": "missing_child_exit",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "closed epoch actual process receipt differs"
+    },
+    {
+      "case": "forged_grant",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "historical authorization receipt differs"
+    },
+    {
+      "case": "lost_consumed_tail",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "reviewed historically consumed TEST unit missing"
+    },
+    {
+      "case": "duplicate_unknown_ID",
+      "status": "REJECTED_READ_ONLY_NO_NEW_ADMISSION",
+      "error_type": "ValueError",
+      "message": "unknown, duplicate, noncontiguous or reordered ledger entries; retain and investigate"
+    },
+    {
+      "case": "old_grant_active_admission",
+      "status": "REJECTED_BEFORE_ANY_PROCESS_OR_RESERVATION",
+      "message": "TEST grant binding: authorized_head"
+    }
+  ],
+  "all_rejected": true,
+  "original_source_changed": false,
+  "new_TEST_reservations": 0
+}

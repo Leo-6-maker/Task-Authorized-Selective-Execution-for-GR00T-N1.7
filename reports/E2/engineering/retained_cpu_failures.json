@@ -1,0 +1,24 @@
+{
+  "scope": "CPU_ITERATIONS_PRESERVED_NO_EXPERIMENT_FAILURE_RELABELED",
+  "failures": [
+    {
+      "stage": "history-first",
+      "actual_exit": 1,
+      "original_stderr_sha256": "fd355df3743f59294b8252ed1dbbb611fd12bf7bfb27b5a7a9211d25ff0e36fb",
+      "reason": "temporary synthetic fixture used exclusive writer for existing grant"
+    },
+    {
+      "stage": "original14-first",
+      "actual_exit": 1,
+      "original_stderr_sha256": "249a70d65a9f03e2e6b641272b1432ba51e5c469f121ba44d31a3c48b7e86ac1",
+      "reason": "checker incorrectly required unmerged code commit ancestry of main grant; corrected to explicit signed-head binding"
+    },
+    {
+      "stage": "corelab-source4bf-normal",
+      "actual_exit": 1,
+      "reason": "real CPU SIGINT/TERM cleanup race; original trace retained separately",
+      "model_sim_TEST_calls": 0
+    }
+  ],
+  "all_original_logs_retained_in_two_copy_private_metadata": true
+}

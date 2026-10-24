@@ -1,0 +1,409 @@
+{
+  "status": "R010_CPU_ENGINEERING_FINAL_SOURCE_VERIFIED_NO_NEW_TEST",
+  "tested_code_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
+  "regular_tests": 118,
+  "optimized_tests": 118,
+  "regular_exit": 0,
+  "optimized_exit": 0,
+  "original14_regular_audit_exit": 0,
+  "original14_optimized_audit_exit": 0,
+  "old_primary_rows_statistics_and_intervals_identical": true,
+  "version_rows": 14,
+  "TEST_planned": 120,
+  "TEST_reserved": 14,
+  "SUCCESS": 12,
+  "CLEANUP_ERROR": 2,
+  "NOT_STARTED": 106,
+  "next0015_absent": true,
+  "new_model_sim_TEST_calls": 0,
+  "GPU_compute_on_allocated_device": 0,
+  "old_worker_PIDs_absent": true,
+  "CPU_workers_reaped": 64,
+  "CPU_worker_results": [
+    {
+      "mode": "normal",
+      "pid": 3757522,
+      "status": "NONZERO_EXIT",
+      "exit_code": 7
+    },
+    {
+      "mode": "normal",
+      "pid": 3757582,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "normal",
+      "pid": 3757590,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757591,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757593,
+      "status": "PIPE_EOF",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757650,
+      "status": "PIPE_SEND_ERROR",
+      "exit_code": 7
+    },
+    {
+      "mode": "normal",
+      "pid": 3757655,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "normal",
+      "pid": 3757657,
+      "status": "FINALIZER_ERROR",
+      "exit_code": 1
+    },
+    {
+      "mode": "normal",
+      "pid": 3757659,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757665,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "normal",
+      "pid": 3757669,
+      "status": "FORCED_KILL",
+      "exit_code": -9
+    },
+    {
+      "mode": "normal",
+      "pid": 3757678,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757680,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757682,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757684,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757690,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757692,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757694,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757696,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757698,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757701,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757706,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757708,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757710,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "normal",
+      "pid": 3757717,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757810,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757812,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757818,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757820,
+      "status": "PIPE_SEND_ERROR",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757822,
+      "status": "PIPE_EOF",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757828,
+      "status": "INVALID_CLOSE_RECEIPT",
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "pid": 3757829,
+      "status": "INVALID_CLOSE_RECEIPT",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757584,
+      "status": "NONZERO_EXIT",
+      "exit_code": 7
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757589,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757592,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757594,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757654,
+      "status": "PIPE_EOF",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757656,
+      "status": "PIPE_SEND_ERROR",
+      "exit_code": 7
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757658,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757660,
+      "status": "FINALIZER_ERROR",
+      "exit_code": 1
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757666,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757667,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757673,
+      "status": "FORCED_KILL",
+      "exit_code": -9
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757679,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757681,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757683,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757685,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757691,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757693,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757695,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757697,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757699,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757705,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757707,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757709,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757711,
+      "status": "FORCED_TERM",
+      "exit_code": -15
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757718,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757811,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757817,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757819,
+      "status": "CLEAN",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757821,
+      "status": "PIPE_SEND_ERROR",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757827,
+      "status": "PIPE_EOF",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757830,
+      "status": "INVALID_CLOSE_RECEIPT",
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "pid": 3757886,
+      "status": "INVALID_CLOSE_RECEIPT",
+      "exit_code": 0
+    }
+  ],
+  "checked_at_sgt": "2026-10-24T17:43:13.408685+08:00"
+}

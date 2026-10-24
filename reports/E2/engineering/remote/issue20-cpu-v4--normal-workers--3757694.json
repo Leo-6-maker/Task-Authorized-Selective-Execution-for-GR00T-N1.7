@@ -1,0 +1,62 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 3757694,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2603888.300849462,
+        "close_token": "57c48a33670a414890a8671da85cc59a"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2603888.300925791
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2603888.307230858
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2603888.319026321,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2603888.319045716
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2603888.319059607
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "57c48a33670a414890a8671da85cc59a",
+        "worker_pid": 3757694,
+        "received_monotonic": 2603888.300877828
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "57c48a33670a414890a8671da85cc59a",
+        "worker_pid": 3757694,
+        "native_finalized": true,
+        "received_monotonic": 2603888.300877828,
+        "finalizer_started_monotonic": 2603888.300901795,
+        "finalizer_finished_monotonic": 2603888.306963678
+      }
+    ],
+    "initial_failure": null
+  }
+}

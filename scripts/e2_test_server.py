@@ -186,11 +186,18 @@ def _run_owned_server(workspace,repo,server_python,session,admission,command,env
     finally:
         try:
             if process is not None and process.poll() is None:
-                process.terminate()
-                try:process.wait(timeout=shutdown_timeout)
-                except subprocess.TimeoutExpired:
-                    # Only the new session/process group created by this launcher.
-                    forced=True;os.killpg(process.pid,signal.SIGKILL);process.wait(timeout=shutdown_timeout)
+                # The handler already forwarded the original signal. Give that
+                # owned wrapper a bounded exit window before escalating; an
+                # immediate TERM here used to overwrite forwarded INT receipts.
+                if received is not None:
+                    try:process.wait(timeout=shutdown_timeout)
+                    except subprocess.TimeoutExpired:forced=True
+                if process.poll() is None:
+                    process.terminate()
+                    try:process.wait(timeout=shutdown_timeout)
+                    except subprocess.TimeoutExpired:
+                        # Only the new session/process group created by this launcher.
+                        forced=True;os.killpg(process.pid,signal.SIGKILL);process.wait(timeout=shutdown_timeout)
             # A failed wrapper may leave its own child. Target only a still-matching
             # PID/start-ticks/command; never signal an unrelated or reused PID.
             if identity is not None:

@@ -1,0 +1,51 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "operator/test-server-cpu/launcher_started.json",
+      "bytes": 577,
+      "sha256": "395d8cadcc8cdbbf2c59804b1cee7a31376b937e6f78394fd4053a96dc65033e"
+    },
+    {
+      "path": "operator/test-server-cpu/stderr.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/supervisor_exit.json",
+      "bytes": 272,
+      "sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "path": "operator/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/foreign-proxy-dir/keep",
+      "bytes": 12,
+      "sha256": "927461c383dd1c8d7e3159920138b1c72941314f8b3cc637d7c9d99e2146c20f"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.json",
+      "bytes": 148,
+      "sha256": "43b4c37d310faaa2498e48ff15bb3617f5cea25d0a28d52d5065e9b0c2175efb"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.started.json",
+      "bytes": 526,
+      "sha256": "f4d4ceb8f02971360e324e7c1aa8f06252fad8d93dc5a0c7ec53009a1ae2f07c"
+    }
+  ],
+  "TEST_reservations": 0
+}

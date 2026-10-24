@@ -1,0 +1,47 @@
+{
+  "scope": "OLD_ORIGINAL_RECORDED_FACTS_ONLY_NO_BACKFILLED_TIMING",
+  "rows": [
+    {
+      "run_id": "e2-test-0010",
+      "result_started_at_sgt": "2026-10-24T14:44:17.252885+08:00",
+      "last_control_attempt_at_sgt": "2026-10-24T14:44:32.335358+08:00",
+      "result_completed_at_sgt": "2026-10-24T14:44:43.686195+08:00",
+      "native_exit_completed_at_sgt": "2026-10-24T14:44:44.426968+08:00",
+      "actual_native_exit": 1,
+      "main_controls": 120,
+      "policy_calls": 15,
+      "official_success_observation": true,
+      "saved_worker": {
+        "worker_pid": 3625607,
+        "worker_returncode": 0,
+        "scope": "ACTUAL_OWNED_WORKER_JOIN"
+      },
+      "close_send_time": "UNKNOWN",
+      "native_finalizer_start_end": "UNKNOWN",
+      "first_join_return_and_is_alive": "UNKNOWN",
+      "terminate_syscall_delivery_time": "UNKNOWN",
+      "exact_root_cause": "UNPROVEN"
+    },
+    {
+      "run_id": "e2-test-0014",
+      "result_started_at_sgt": "2026-10-24T16:09:39.192038+08:00",
+      "last_control_attempt_at_sgt": "2026-10-24T16:09:55.795086+08:00",
+      "result_completed_at_sgt": "2026-10-24T16:10:09.146320+08:00",
+      "native_exit_completed_at_sgt": "2026-10-24T16:10:09.903200+08:00",
+      "actual_native_exit": 1,
+      "main_controls": 148,
+      "policy_calls": 19,
+      "official_success_observation": true,
+      "saved_worker": {
+        "worker_pid": 3689554,
+        "worker_returncode": 0,
+        "scope": "ACTUAL_OWNED_WORKER_JOIN"
+      },
+      "close_send_time": "UNKNOWN",
+      "native_finalizer_start_end": "UNKNOWN",
+      "first_join_return_and_is_alive": "UNKNOWN",
+      "terminate_syscall_delivery_time": "UNKNOWN",
+      "exact_root_cause": "UNPROVEN"
+    }
+  ]
+}

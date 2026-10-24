@@ -1,0 +1,51 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "operator/test-server-cpu/launcher_started.json",
+      "bytes": 574,
+      "sha256": "054eb7619a279d39f4f0af2bd229231c42aff1f016bc6a1d23e46f91c92118d4"
+    },
+    {
+      "path": "operator/test-server-cpu/stderr.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/supervisor_exit.json",
+      "bytes": 272,
+      "sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "path": "operator/test-server-cpu/test_admission.json",
+      "bytes": 23,
+      "sha256": "7f99f2c00b1d011a701a5df6e970008e2152db2926cef1c7aac345d4d08b8999"
+    },
+    {
+      "path": "runs/test-server-cpu/creation.json",
+      "bytes": 107,
+      "sha256": "1f376d3f3c847719086e08f6425d2e9dbdb5bd890dbbece7436515359c280c57"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.json",
+      "bytes": 148,
+      "sha256": "580c293b5ada3ced11679acce6fbce3ae3366d275b225ac32d6abf6e0073b923"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.started.json",
+      "bytes": 523,
+      "sha256": "fd464503f911155b8b43c768b5ae063e2e49d78da56efd8d1e0c47b1b70d0329"
+    }
+  ],
+  "TEST_reservations": 0
+}

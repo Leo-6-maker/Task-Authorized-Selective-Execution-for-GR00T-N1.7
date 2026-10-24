@@ -1,0 +1,61 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "operator/test-server-cpu/launcher_started.json",
+      "bytes": 585,
+      "sha256": "7d3be82f10d01e9bcc783ab12cdd56e09d39f4137a2fbe0bf418eba8e91580b1"
+    },
+    {
+      "path": "operator/test-server-cpu/stderr.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/supervisor_exit.json",
+      "bytes": 277,
+      "sha256": "28eb0e6d19d6c5e026daadebc89b70805e8827e890b40b1fc6b8ae9bfc9c65d3"
+    },
+    {
+      "path": "operator/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu/creation.json",
+      "bytes": 107,
+      "sha256": "48f0591646b1e4fa7860f383688b8d084745ec303f94dcb0584633b38ea9a490"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.json",
+      "bytes": 26,
+      "sha256": "390438d4611788f261dcbc373703eba4c36021930352d3ed4c14ab1b2b1053b2"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.publish-source.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.json",
+      "bytes": 148,
+      "sha256": "e2e0790d60966c0f330303bba560eb4a109c13ec68b6b53e121b0f4a85698eed"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.started.json",
+      "bytes": 534,
+      "sha256": "a2c9ebb633966c36e575bb098d06a130f08ba27104714af34d89b9efa9e010c8"
+    }
+  ],
+  "TEST_reservations": 0
+}

@@ -117,5 +117,9 @@ class E2Context:
         if self.shadow is not None:
             try:self.shadow.close()
             finally:
-                write_json(self.folder/'shadow_worker_exit.json',{'worker_pid':self.shadow.process.pid,
-                    'worker_returncode':self.shadow.process.exitcode,'scope':'ACTUAL_OWNED_WORKER_JOIN'})
+                receipt=self.shadow.close_receipt
+                write_json(self.folder/'shadow_close.json',receipt)
+                write_json(self.folder/'shadow_worker_exit.json',{'worker_pid':receipt['worker_pid'],
+                    'worker_returncode':receipt['worker_returncode'],'scope':'ACTUAL_OWNED_WORKER_JOIN',
+                    'close_protocol':receipt['protocol'],'close_status':receipt['status'],
+                    'clean_close':receipt['clean']})

@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T17:38:51.422504+08:00",
+  "wrapper_pid": 3756014,
+  "child_pid": 3756015,
+  "command": [
+    "<PRIVATE>/me6401-e2-package-cache-20261023/envs/sim/bin/python",
+    "-u",
+    "<PRIVATE>/Projects/me6401-e2/operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/cpu_proxy.py",
+    "--output",
+    "<PRIVATE>/Projects/me6401-e2/operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/runs/test-server-cpu",
+    "--port",
+    "5562",
+    "--mode",
+    "die_after_mkdir"
+  ]
+}

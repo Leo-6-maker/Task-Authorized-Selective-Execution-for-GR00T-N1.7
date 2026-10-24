@@ -20,7 +20,7 @@ def read(path):return json.loads(path.read_text())
 def lines(path):return [json.loads(s) for s in path.read_text().splitlines()] if path.exists() else []
 
 
-def audit(workspace,config, *, test_audit=False):
+def audit(workspace,config, *, test_audit=False,test_versions=None):
     cfg=read(config);require(cfg['run_epoch']=='E2' and cfg['protocol_id']=='TASE-002-v1.0','wrong epoch')
     split=cfg['split'];require(split in ['DEV','CALIB'] or (split=='TEST' and test_audit),'TEST audit requires independent TEST auditor')
     root=workspace/'runs'/split;folders=sorted(p for p in root.iterdir() if p.is_dir() and p.name!='.reservation-lock')
@@ -28,6 +28,11 @@ def audit(workspace,config, *, test_audit=False):
     rows=[];ordinals=[]
     for folder in folders:
         reservation=read(folder/'reservation.json');ordinals.append(reservation['budget_ordinal'])
+        episode_cfg=cfg;config_digest=sha256(config);runtime_digest=sha256(config.parent/'runtime_lock_E2.json')
+        if test_versions is not None:
+            require(split=='TEST' and test_audit,'historical verifier is TEST-read-only')
+            episode_cfg,identity=test_versions.resolve(reservation,folder)
+            config_digest=identity['test_config_sha256'];runtime_digest=identity['runtime_lock_sha256']
         result_file=folder/'result.json'
         if not result_file.exists():
             start_file=workspace/'runs'/f'{folder.name}.exit.started.json'
@@ -43,9 +48,10 @@ def audit(workspace,config, *, test_audit=False):
         result=read(result_file)
         for key in ['run_id','repo_sha','config_hash','runtime_lock_hash','epoch','protocol_id','task','init_index','condition','system','scenario_id','policy_seed','environment_seed']:
             require(result[key]==reservation[key],'reservation/result mismatch: '+key)
-        require(result['config_hash']==sha256(config),'config changed')
-        require(result['runtime_lock_hash']==sha256(config.parent/'runtime_lock_E2.json'),'runtime identity changed')
-        gate_k=cfg['gate_k']
+        require(result['config_hash']==config_digest,'config changed')
+        require(result['runtime_lock_hash']==runtime_digest,'runtime identity changed')
+        # Only engineering hashes may differ; all science was checked identical.
+        gate_k=episode_cfg['gate_k']
         if split=='CALIB':
             for key in ['splits_hash','calibration_plan_hash','planned_init_hash']:
                 require(result[key]==reservation[key],'CALIB reservation mismatch: '+key)

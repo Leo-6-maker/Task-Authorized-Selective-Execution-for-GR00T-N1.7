@@ -1,3 +1,5 @@
+当前 Issue #20 / R010：Shadow合作清理、必要server信号清理wrapper和跨版本只读TEST审计已完成；本机与Corelab普通/-O各118/118实际exit0，原14原件审计统计完全一致，原件与新CPU证明均两处验哈希。状态READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW，execution_authorized=false。旧R008暂停/R009失效；需GPT绑定最终完整新Head签新grant后，才可从0015继续，0016强制检查点。真实账本仍14已消耗（12SUCCESS，0010/0014 CLEANUP_ERROR）/106未执行。课程15页草稿与源码ZIP已准备，R3与最终提交未完成。不逐CPU错误请求批准，不自签、不重跑、不merge。见 reports/E2/engineering/RUNTIME_DELTA_HANDOFF.md 与 reports/E2/automation/AUTONOMOUS_STATUS.json。
+
 当前 Issue #18 / R009：0011/0012及强制检查点通过后，0014再次CLEANUP_ERROR/exit1，已强制停止并关闭服务器。120计划=14已消耗（12SUCCESS+0010/0014两次清理故障）+106未启动；0015未预留。代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，无修复/重跑/merge。普通/-O停止审计与公开数值CPU核验均实际exit0，原件两处验哈希保全。当前STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW，下一步仅GPT事故审核及有界CPU生命周期修复授权，新代码须新grant后才能继续。详见 reports/E2/R009/R3_HANDOFF.md。
 
 # Task-Authorized Selective Execution for GR00T N1.7

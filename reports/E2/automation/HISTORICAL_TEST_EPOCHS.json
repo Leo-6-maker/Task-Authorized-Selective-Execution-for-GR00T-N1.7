@@ -1,0 +1,19 @@
+{
+  "scope": "READ_ONLY_CLOSED_TEST_PREFIX_PROVENANCE_NEVER_A_LAUNCH_GRANT",
+  "epochs": [
+    {
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_path": "docs/reviews/R008-E2-TEST-AUTHORIZED.json",
+      "review_commit": "8e43b0c528e6dd7b2ef2ee609bdd317ea68487fd",
+      "review_path": "docs/reviews/R010-repeated-cleanup-and-autonomous-engineering.md",
+      "report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
+      "ledger_path": "reports/E2/R009/review/attempt_ledger_120.json",
+      "manifest_path": "reports/E2/R009/review/manifest.json",
+      "receipt_origins_path": "reports/E2/R009/receipt_origins.json",
+      "backup_proof_path": "reports/E2/R009/backup_verification.json",
+      "consumed_count": 14,
+      "original_archive_sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f"
+    }
+  ]
+}

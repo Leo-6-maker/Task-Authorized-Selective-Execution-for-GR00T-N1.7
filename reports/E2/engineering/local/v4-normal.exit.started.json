@@ -1,0 +1,14 @@
+{
+  "started_at_sgt": "2026-10-24T17:34:19.560846+08:00",
+  "wrapper_pid": 1826178,
+  "child_pid": 1826179,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

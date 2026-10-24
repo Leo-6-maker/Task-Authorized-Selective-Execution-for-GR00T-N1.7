@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T17:45:03.971354+08:00",
+  "wrapper_pid": 1836271,
+  "child_pid": 1836272,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-O",
+    "<PRIVATE>/ME6401-PROJ2/e2-lifecycle-autonomous/scripts/e2_audit_test.py",
+    "--workspace",
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue20/original_workspace",
+    "--repo",
+    "<PRIVATE>/ME6401-PROJ2/e2-lifecycle-autonomous",
+    "--output",
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue20/v4-original14-optimized.json"
+  ]
+}

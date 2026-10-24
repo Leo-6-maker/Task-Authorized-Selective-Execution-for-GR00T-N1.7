@@ -1,0 +1,44 @@
+{
+  "status": "PRELIMINARY_COURSE_DRAFT_NOT_FINAL_SUBMISSION",
+  "source_candidate_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
+  "slides": 15,
+  "cover": 1,
+  "content": 13,
+  "references": 1,
+  "editable_native_tables": 3,
+  "rendered_and_visually_inspected_slides": 15,
+  "presentation_structure_font_layout_and_first_party_import_checked": true,
+  "final_presentation_sha256": "9bc1c2b40be9152be565bccec27b81e78d12086a95646925c6a072199900cbbc",
+  "TEST_reserved": 14,
+  "NOT_STARTED": 106,
+  "R3_approved": false,
+  "owner_identity_and_final_submission_confirmation": "PENDING_OWNER",
+  "artifacts": [
+    {
+      "path": "CLAIMS_AND_LIMITS.md",
+      "bytes": 1857,
+      "sha256": "b01df49ad904b3c42141959af43801071c09dd1caad94bf31dfc8026fcbedab5"
+    },
+    {
+      "path": "ME6401-preliminary-v2.pptx",
+      "bytes": 406209,
+      "sha256": "9bc1c2b40be9152be565bccec27b81e78d12086a95646925c6a072199900cbbc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1775,
+      "sha256": "9570a9b6ad6123bc514d8a557dcc3c58139d8bfdcd0122f85b16a20e7b5b97fe"
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "bytes": 2550,
+      "sha256": "af2049bf12610dc690f2cb3be1ba538b6f1fbb388075a159cab4696ecee44579"
+    },
+    {
+      "path": "SOURCE_CANDIDATE.zip",
+      "bytes": 254730,
+      "sha256": "4d708db16b199bdcad709502af9f0d08efe03a4f3ae86b33d3702b40502c0a30"
+    }
+  ],
+  "independent_docs_head": "15375451a9947f000f08c4f1769d24a8913f5e4d"
+}

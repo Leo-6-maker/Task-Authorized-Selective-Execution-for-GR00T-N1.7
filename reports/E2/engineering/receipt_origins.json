@@ -1,0 +1,2166 @@
+{
+  "scope": "PUBLIC_REDACTED_CPU_EVIDENCE_KEEP_ORIGINAL_AND_DERIVED_SHA_SEPARATE",
+  "artifacts": [
+    {
+      "public_path": "local/v4-normal.exit.json",
+      "public_sha256": "2673eed124a82416114bff4f7f6141fdc679f055b1d65af131f1f958e15de683",
+      "original_id": "LOCAL_CPU/v4-normal.exit.json",
+      "original_sha256": "2673eed124a82416114bff4f7f6141fdc679f055b1d65af131f1f958e15de683"
+    },
+    {
+      "public_path": "local/v4-normal.exit.started.json",
+      "public_sha256": "33e9bd1e995ec7b0a793218ee33c7dc7646cbc3c958902eb43a099a365eb11ea",
+      "original_id": "LOCAL_CPU/v4-normal.exit.started.json",
+      "original_sha256": "87691498b9c50da169ecb2c7d3ad9e8c4b44d538afb2f7462ddc42a804c46177"
+    },
+    {
+      "public_path": "local/v4-optimized.exit.json",
+      "public_sha256": "830677304ecc7fb49ab355e5efa225ddf35cf419e5724eb20ff8c2dc80260b54",
+      "original_id": "LOCAL_CPU/v4-optimized.exit.json",
+      "original_sha256": "830677304ecc7fb49ab355e5efa225ddf35cf419e5724eb20ff8c2dc80260b54"
+    },
+    {
+      "public_path": "local/v4-optimized.exit.started.json",
+      "public_sha256": "f2a6597af575568865aac4d12af05acca4703bd9f83c4462f1183286c08ca18f",
+      "original_id": "LOCAL_CPU/v4-optimized.exit.started.json",
+      "original_sha256": "ce302c8fb063f4bd973f6ac684ffc8158823a87f453c4ecc95740ccf1d3355ab"
+    },
+    {
+      "public_path": "local/v4-original14-normal.exit.json",
+      "public_sha256": "4a0414259130debc7195b645bad70360ba8f712ac2a3bfa52fa60f8837703c0c",
+      "original_id": "LOCAL_CPU/v4-original14-normal.exit.json",
+      "original_sha256": "4a0414259130debc7195b645bad70360ba8f712ac2a3bfa52fa60f8837703c0c"
+    },
+    {
+      "public_path": "local/v4-original14-normal.exit.started.json",
+      "public_sha256": "32dc3dfa349b6a077c6720ce61ffec2375ab2e2254e5f67269259ae98c4f820c",
+      "original_id": "LOCAL_CPU/v4-original14-normal.exit.started.json",
+      "original_sha256": "5ba4afeac8bbb4110153512198cf4e26d91cdb8a10b0da3d865946908e5c292c"
+    },
+    {
+      "public_path": "local/v4-original14-optimized.exit.json",
+      "public_sha256": "66f7bf8551ed5c86f86de22067653a50c708bbd25954c1640a2a5705b7b9b0d1",
+      "original_id": "LOCAL_CPU/v4-original14-optimized.exit.json",
+      "original_sha256": "66f7bf8551ed5c86f86de22067653a50c708bbd25954c1640a2a5705b7b9b0d1"
+    },
+    {
+      "public_path": "local/v4-original14-optimized.exit.started.json",
+      "public_sha256": "498f439eebb803373e84fd109df5282df3b8b44d8af4abd847b91822efe1a7b4",
+      "original_id": "LOCAL_CPU/v4-original14-optimized.exit.started.json",
+      "original_sha256": "c1fc21a330b7561e3786ff3baa4b6784cae3434de2d5347e7291b4f25a804ff5"
+    },
+    {
+      "public_path": "local/v4-original14-normal.json",
+      "public_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+      "original_id": "LOCAL_CPU/v4-original14-normal.json",
+      "original_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d"
+    },
+    {
+      "public_path": "local/v4-original14-optimized.json",
+      "public_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+      "original_id": "LOCAL_CPU/v4-original14-optimized.json",
+      "original_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d"
+    },
+    {
+      "public_path": "local/final-negative-originals.json",
+      "public_sha256": "bd3a8b88062cd0345d5eb43aa94c9cbe8e01aef31f0f2794a448fa8ede0c4a52",
+      "original_id": "LOCAL_CPU/final-negative-originals.json",
+      "original_sha256": "bd3a8b88062cd0345d5eb43aa94c9cbe8e01aef31f0f2794a448fa8ede0c4a52"
+    },
+    {
+      "public_path": "local/final-negative-originals.exit.json",
+      "public_sha256": "a7d22d7f5102c04b85f6083172584eeb510f03d15dff3e58cae73c361d7c9f82",
+      "original_id": "LOCAL_CPU/final-negative-originals.exit.json",
+      "original_sha256": "a7d22d7f5102c04b85f6083172584eeb510f03d15dff3e58cae73c361d7c9f82"
+    },
+    {
+      "public_path": "local/final-negative-originals.exit.started.json",
+      "public_sha256": "d8e67be3bb2452dbf5b8394f525338869a4a2b7374c4b58b9213f3a02150e3a5",
+      "original_id": "LOCAL_CPU/final-negative-originals.exit.started.json",
+      "original_sha256": "b164ad72f94bfb9508d6661b865eb450f0878cbdda5f1fd6a98f3b27f50d72b1"
+    },
+    {
+      "public_path": "local/local-original-recheck.json",
+      "public_sha256": "9776ad1e0b1f2627a71a604a45c5ef715e2d851e4020509070b0d0fc2174ea93",
+      "original_id": "LOCAL_CPU/local-original-recheck.json",
+      "original_sha256": "9776ad1e0b1f2627a71a604a45c5ef715e2d851e4020509070b0d0fc2174ea93"
+    },
+    {
+      "public_path": "local/final_scientific_checks.json",
+      "public_sha256": "b97c5f13849ecc26c950d195cea139319fa5c30c6ebcc89831c1d0ab8dc5c0dc",
+      "original_id": "LOCAL_CPU/final_scientific_checks.json",
+      "original_sha256": "b97c5f13849ecc26c950d195cea139319fa5c30c6ebcc89831c1d0ab8dc5c0dc"
+    },
+    {
+      "public_path": "local/history-first.exit.json",
+      "public_sha256": "415246bb0f24b94140d0010ad2410bd30ce873917e9853c869bc7e0d613b34ff",
+      "original_id": "LOCAL_CPU/history-first.exit.json",
+      "original_sha256": "415246bb0f24b94140d0010ad2410bd30ce873917e9853c869bc7e0d613b34ff"
+    },
+    {
+      "public_path": "local/history-second.exit.json",
+      "public_sha256": "7a77e5e2f29fb0caa565392278a1939ac6df52a6e99eeb92e7ac4083ae30f130",
+      "original_id": "LOCAL_CPU/history-second.exit.json",
+      "original_sha256": "7a77e5e2f29fb0caa565392278a1939ac6df52a6e99eeb92e7ac4083ae30f130"
+    },
+    {
+      "public_path": "local/original14-first.exit.json",
+      "public_sha256": "4cc1612c973cc1335d85ac4dfea63f8e536e3fb487115cf81f4a7af337c3425a",
+      "original_id": "LOCAL_CPU/original14-first.exit.json",
+      "original_sha256": "4cc1612c973cc1335d85ac4dfea63f8e536e3fb487115cf81f4a7af337c3425a"
+    },
+    {
+      "public_path": "local/original14-second.exit.json",
+      "public_sha256": "74c35660b425861b2c527b39b9293841163bf01ccaa230ddb2b95802845bcfe1",
+      "original_id": "LOCAL_CPU/original14-second.exit.json",
+      "original_sha256": "74c35660b425861b2c527b39b9293841163bf01ccaa230ddb2b95802845bcfe1"
+    },
+    {
+      "public_path": "local/workers/normal-1826832.json",
+      "public_sha256": "3ffc75b592c18989b7c036657f24e08c8a205dd6ef4b9ead2b2afab0effd433a",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1826832.json",
+      "original_sha256": "3fb41c38e48b92505179fe5fae488f5aac825f15c0e88a6a425b5c2cfb5c5221"
+    },
+    {
+      "public_path": "local/workers/normal-1826833.json",
+      "public_sha256": "654f3eddc0331f897ed70f39971fbd26f6bb6c177dade9896788c20e4c322ea6",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1826833.json",
+      "original_sha256": "5b43b306e10425928f5d7cb7af2cb904dd897224077abd11c2c8ac47ae3ec47a"
+    },
+    {
+      "public_path": "local/workers/normal-1827002.json",
+      "public_sha256": "97f0262e4ed43d20a37739f338038e2f84761066e4f50fca7660a56b717728e2",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827002.json",
+      "original_sha256": "da0dfcb2068d7e08a83c0e352cd95c24d313c8c3950112e0f94216b9fe615a6a"
+    },
+    {
+      "public_path": "local/workers/normal-1827055.json",
+      "public_sha256": "d246400bb8edee102ca30e35a30be68d57a5858e54c5f31e66129bfc017dd34f",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827055.json",
+      "original_sha256": "3dcfa3586f39532d8cfa1284abd1075d28071cf5577114e67af83ed3291996d9"
+    },
+    {
+      "public_path": "local/workers/normal-1827097.json",
+      "public_sha256": "db2c87e780a7bfa240c761666ac9eae0b0da765e5bbc571a00196a737e3539fc",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827097.json",
+      "original_sha256": "25f13d8e3de8337e6466dd9e3aa38a37be370709ad0b5ad9cc6f97ac9ea7838f"
+    },
+    {
+      "public_path": "local/workers/normal-1827131.json",
+      "public_sha256": "3595dd67ec4e502baa7f7a7aa5d7f419f91eee3923902e47fc1486378e544850",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827131.json",
+      "original_sha256": "57bf6199f6b2923abf122834d9df6313c54fbed18c23028eef74ec1b3cd9072d"
+    },
+    {
+      "public_path": "local/workers/normal-1827177.json",
+      "public_sha256": "4b3c1b49984a295f71a3f9771d416c203f7b643d3c321a3d29b9d70e99025f36",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827177.json",
+      "original_sha256": "97375887e63c913deedf33aac118dbd9bbd05d7e943222e9bb03169b1b796266"
+    },
+    {
+      "public_path": "local/workers/normal-1827211.json",
+      "public_sha256": "149ec447759617e47baeb9277258d5999d850f253bea0f8abfc39af1b3d814f5",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827211.json",
+      "original_sha256": "d6f1ef01622658ecf473e94bd1e73fe2774df81c566025ff6731b21a0594e344"
+    },
+    {
+      "public_path": "local/workers/normal-1827212.json",
+      "public_sha256": "6a037e07ee3e7c494acd63b6a6e40f7c9d9cf12b310f5a84bf60d47ac2b366f7",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827212.json",
+      "original_sha256": "b0ad11b8f01b6e51f30ee2ae6afa201eb60e168e49f3aff411a607e2302e7eb6"
+    },
+    {
+      "public_path": "local/workers/normal-1827215.json",
+      "public_sha256": "74d86f95c226ef61fff66cf5a182628457e90e21659f6b0c59f94088c9620fbe",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827215.json",
+      "original_sha256": "2a82462fbb2b43c197f403a3d16a414de04a0402963078476107f78529879aca"
+    },
+    {
+      "public_path": "local/workers/normal-1827226.json",
+      "public_sha256": "9ae9275f29ca14951fa48312efcd21d6ffcb5df0b01a04064780d21fe89828ed",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827226.json",
+      "original_sha256": "b2a26721c48465b21eac054e4e39fbff2b18ab9d4e08acdf2c412d53a7ec788f"
+    },
+    {
+      "public_path": "local/workers/normal-1827239.json",
+      "public_sha256": "a8b25df0123d1d9c3f56aee64cce6ee7fea1ab7f16ad73f8b883fa44719f0009",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827239.json",
+      "original_sha256": "f1636d6f0f83eb5feb42617ace7addd3b4bee785af068674d6fe5c735673649f"
+    },
+    {
+      "public_path": "local/workers/normal-1827240.json",
+      "public_sha256": "bf350abaa03023d28d5f37087524866b3ee0a06b8f92e84282f7fb4fb20fa7c0",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827240.json",
+      "original_sha256": "f277f320461d82c95c1e4fb22cedcf5c1c8d5661ea904a4ea392dc02014ecc74"
+    },
+    {
+      "public_path": "local/workers/normal-1827241.json",
+      "public_sha256": "f8fa7480877ac7839c9a8e05036e64106248d3fbd0e085c6c077162ca44685bb",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827241.json",
+      "original_sha256": "461ed4991f6d46a77c16a7e9feb8ab3a2413fff8878ce0deac783cc181021208"
+    },
+    {
+      "public_path": "local/workers/normal-1827243.json",
+      "public_sha256": "661e72063246a1cc1fe526d549fa8cdeab47f07558d0667378f8b17d5eabfe1c",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827243.json",
+      "original_sha256": "546e67d898c5fbd9eb069dba2d22280c30fd575d2e0d0f2e2b46b7b1bf243ae1"
+    },
+    {
+      "public_path": "local/workers/normal-1827244.json",
+      "public_sha256": "64171eb20216335ed5f617b9bf19848c56ed405b0d3bf795e51f114c0abc3064",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827244.json",
+      "original_sha256": "77cf03d95413297ce0c1b382811290703282e7b8fb8e6e4fa7d242fe1bf99b6a"
+    },
+    {
+      "public_path": "local/workers/normal-1827246.json",
+      "public_sha256": "60e58662bfb756c9344c6f6497f9e2ad53df076e39527d94eeea747ad5a9143a",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827246.json",
+      "original_sha256": "00d23ef7a64e7e5aa5594c54651c3ea9da768213694a452997b9a45cead637e6"
+    },
+    {
+      "public_path": "local/workers/normal-1827247.json",
+      "public_sha256": "979b053e473e3f8e5563fe1ea782d3311498087b76665bc0dd851cc4dfdc66af",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827247.json",
+      "original_sha256": "db370a34baf23658cfad2307d79cc0dd2f70a1338b1b64ecd016d6bb81636bbc"
+    },
+    {
+      "public_path": "local/workers/normal-1827248.json",
+      "public_sha256": "c8d62ba29bd8dbfaaa90629dd3a7443238afafa68723869dd8a2cf7afdfce4e0",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827248.json",
+      "original_sha256": "e228540794a5efdadc9358821cc7c2b0c5f5cbd29b7f9d32688996ebec4483db"
+    },
+    {
+      "public_path": "local/workers/normal-1827249.json",
+      "public_sha256": "ee630324f301498e91be00b35403c92525e460bab918a2a195efff0dafc5ff85",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827249.json",
+      "original_sha256": "b6789481ab54e68e26be7c7a5e89f2a1a2fbaf923e6dc34369babcf9e33e88fe"
+    },
+    {
+      "public_path": "local/workers/normal-1827254.json",
+      "public_sha256": "b1e6171be7d5599c90a047f87edd5ce87e8978792b70d15df8388d03cd1b5c86",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827254.json",
+      "original_sha256": "8c77e40b38344947578330a0e21dc76c2fb31a5cebf0a94e14cbb792ce22578f"
+    },
+    {
+      "public_path": "local/workers/normal-1827256.json",
+      "public_sha256": "679b7280b5794b8192af04ac38af817a818e50044a813de8d3c52d5b651ed5e5",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827256.json",
+      "original_sha256": "310e66f26a8cc309a517a83f8ea64c3f7b7de9dba4b17a365c295b400f3b0436"
+    },
+    {
+      "public_path": "local/workers/normal-1827257.json",
+      "public_sha256": "4c6256db976739c5c2581fd86179757e964a90eac4d5254bba97a90b7a85850f",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827257.json",
+      "original_sha256": "dac663a303403ae1b5ee6c00a7ea6de86f33c0591c05cb52c39e3f7fdaa6f968"
+    },
+    {
+      "public_path": "local/workers/normal-1827259.json",
+      "public_sha256": "38ee029950314f511e1478fe2643e518b9399a480e9ef2115b41b7480ae36f86",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827259.json",
+      "original_sha256": "464fa491e2275607a699de7c05b6d9c476ee7371b0026ad15655d7a522e8ebfa"
+    },
+    {
+      "public_path": "local/workers/normal-1827274.json",
+      "public_sha256": "9fa6497d985147ecb3a10bea0177e03761a8c56c8f474aed20975d599bdc6c7b",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827274.json",
+      "original_sha256": "bc784caed0d03a930001e2a9cbbef472325dd69d48ab072ae8030cd6d9eee90c"
+    },
+    {
+      "public_path": "local/workers/normal-1827399.json",
+      "public_sha256": "7eae7cf2cdc9d83787127217654b9aeb351c075d7e89cd3a02f46e7f594e5541",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827399.json",
+      "original_sha256": "63c6d3b55f054a7c75d62267f9e95f617788c8e755069462a9affeb82aae33a4"
+    },
+    {
+      "public_path": "local/workers/normal-1827400.json",
+      "public_sha256": "086a9123c856f7582e72a146a195194252d57a2dce790653e38a894830a02e7b",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827400.json",
+      "original_sha256": "233f6bf7a531077625a4fca0c940f6e9d3160daeacf467671d657e1683e5263a"
+    },
+    {
+      "public_path": "local/workers/normal-1827402.json",
+      "public_sha256": "cbdb6bcef32d7e320a853f9330ecfa54f9041ee3fbad663f670e753f45516801",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827402.json",
+      "original_sha256": "62140eae41f36efbd6bd78c2b37d8fb4e8dddf4d530d8d2871c95597d34e0751"
+    },
+    {
+      "public_path": "local/workers/normal-1827407.json",
+      "public_sha256": "c7482ffa255ca8db0c013d606c97e86ec4ccc9d6749b284c9059a4fbdad9d214",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827407.json",
+      "original_sha256": "ba52f28a18f878736e5db0b16d869f10f3b09b7aaf310690fbc589a164f40df7"
+    },
+    {
+      "public_path": "local/workers/normal-1827408.json",
+      "public_sha256": "ae5a39692f8818ef4eac95143a7bfab1dc9a542eab0e7ac0957adeecdbd84a15",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827408.json",
+      "original_sha256": "87e4fb9dacaf3e4fa6e32a7d42348e84dccc458edefd06fc4a41e92e1467d697"
+    },
+    {
+      "public_path": "local/workers/normal-1827409.json",
+      "public_sha256": "e512963947bb4c5e9625f53ee27b9a5561381d17b342ede4b652f54921ccbb61",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827409.json",
+      "original_sha256": "5df953f31c042b2a490e5e6cb194e1e3ea199f8ed99c875e286a4bdea243b9e6"
+    },
+    {
+      "public_path": "local/workers/normal-1827410.json",
+      "public_sha256": "0c8e89876e322c6d17cd0780e86459daf168af44c21ae778b24ec508f52079a3",
+      "original_id": "LOCAL_CPU/v4-normal-workers/1827410.json",
+      "original_sha256": "d432886b8d7707fead8ad7713551f48a0b3f7ae2ee68c9d601989900a90418e2"
+    },
+    {
+      "public_path": "local/normal-suite-log.json",
+      "public_sha256": "0ae6d46ada4022bfb2b32010156a060e9b9a1773b28c41f66a12f079808ac6e7",
+      "original_id": "LOCAL_CPU/v4-normal.stderr.private.txt",
+      "original_sha256": "891e26c8e3aeefdb4068dec375f5ebf652586cbefbdd5d37dd39db3b1e3ce46a"
+    },
+    {
+      "public_path": "local/workers/optimized-1827214.json",
+      "public_sha256": "275a38549304297053f2ce7bbfcab3a201b4539d74d066058ffa70641ccee980",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827214.json",
+      "original_sha256": "b384fe2f5a03343d25843c0fd1fbac07c4dbe2dfa0d7ee6d376d1d283e7a2ba3"
+    },
+    {
+      "public_path": "local/workers/optimized-1827216.json",
+      "public_sha256": "236117d6b303d88cc0f2f71885e20ad51c13199defd9b15f19842454c746791a",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827216.json",
+      "original_sha256": "6aabe0ef942a82613a8a9965a65909313228bcc8a9ce232eb5f46405b3f1ace3"
+    },
+    {
+      "public_path": "local/workers/optimized-1827218.json",
+      "public_sha256": "0813fa256e0a37b5ce01a5a4e695bdc805398c4a06aebfb3ba39d767e711eb36",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827218.json",
+      "original_sha256": "0e9c7d1c066590b93b5df6ebf16c2db65c7fb91b848ae04420d1505c61e78940"
+    },
+    {
+      "public_path": "local/workers/optimized-1827219.json",
+      "public_sha256": "98d413f75974c0af5c69760a38b70d5942ca34c0e153d410ac3ae04199da5570",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827219.json",
+      "original_sha256": "1020dd785d8ae428cb26728e163d2e3a236dd8130ebce4aaa12ce644fb4b604e"
+    },
+    {
+      "public_path": "local/workers/optimized-1827225.json",
+      "public_sha256": "63ea7ae6d10dcaaafcd7056f669b4df348e7f0f79001baf63d0791b952ee68ed",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827225.json",
+      "original_sha256": "2909985f44346a574a4b5ed2a6ca6834b5a5e21233fb0b2b3ac9c4a7e814f55e"
+    },
+    {
+      "public_path": "local/workers/optimized-1827227.json",
+      "public_sha256": "022654d58326164fc37e28e3d3e2aecd47aed829063e1ec63c82bf3c1281fd48",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827227.json",
+      "original_sha256": "27dbb247ebcbc223f5c0c07b12fee80bf402b941fd37156f5f07587e9c22c5d8"
+    },
+    {
+      "public_path": "local/workers/optimized-1827228.json",
+      "public_sha256": "a57842a80a6b318fdda9e81c925f80847c091bb2d6d7ae1b227fa454cf32a5e8",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827228.json",
+      "original_sha256": "894cd23adbaee1589795b001db28758f2da0135ec7757d282d4186c0f9055885"
+    },
+    {
+      "public_path": "local/workers/optimized-1827229.json",
+      "public_sha256": "ffd875eaf498798482a7500f9fd2efaa0eea3b53d09e65e5bff0bfe9a646dc3a",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827229.json",
+      "original_sha256": "d9d96a6f7f7cf6aa6d02ae63dbe2d4eec234ea9d9d0af2d2cc79bd41f8fd6b36"
+    },
+    {
+      "public_path": "local/workers/optimized-1827230.json",
+      "public_sha256": "66c828e0e907c7f2e10abe6ce80fd2a86a537aa789ea1e71b34975f36eab77eb",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827230.json",
+      "original_sha256": "0fffeb02757d4fd688b2547d269f40abe0565db43d990519461ef6f8a9eb0d06"
+    },
+    {
+      "public_path": "local/workers/optimized-1827232.json",
+      "public_sha256": "c1efa391b35309ab9f4947061cfde5237809c17348651dc0c80db4dac45f6942",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827232.json",
+      "original_sha256": "15c7092db877d601ed2a9a15fe8b1963d51a89f1d97a51ec8300917f19cecd84"
+    },
+    {
+      "public_path": "local/workers/optimized-1827242.json",
+      "public_sha256": "f15fa60e8445a7b737a1192995c6bae59c2b0d1c31f38258831b8bf3e85d05ee",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827242.json",
+      "original_sha256": "fb73a4c61747778d79dd069935bc45dab1595138e1414722452d0e1cf1438a8e"
+    },
+    {
+      "public_path": "local/workers/optimized-1827258.json",
+      "public_sha256": "c95e0681404f102f68c9de90fb45ceb7da03ab0d96567ea05f3193d019225ff0",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827258.json",
+      "original_sha256": "3525848aeca1b3f0a716dcfa317ca108de281ce15b1628e42a44bd5bb28da611"
+    },
+    {
+      "public_path": "local/workers/optimized-1827260.json",
+      "public_sha256": "2a8d1e8145cab035acafa37543a73d18f4c89181254124704c56621ea7987823",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827260.json",
+      "original_sha256": "9295b5c655c41e035bc1096cad18e7120dc4f24f971e3b1987febf252c940057"
+    },
+    {
+      "public_path": "local/workers/optimized-1827261.json",
+      "public_sha256": "55f254ce6885f565fec810afd6191c3eb73a1af471fd458143b91d9352379dfd",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827261.json",
+      "original_sha256": "88e643bed34c3f959610eb236fbbe7b56e6771d3b8d4a9a758c25969ff46aba4"
+    },
+    {
+      "public_path": "local/workers/optimized-1827263.json",
+      "public_sha256": "6881002fd6481a9d300b21ecc0efb279f19e3a754233b958d2c6dfbf629bab1c",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827263.json",
+      "original_sha256": "14a8bc21eefcaea2e45c1d9888f0397061d9b6c634d930cee47acfb4f080cb8f"
+    },
+    {
+      "public_path": "local/workers/optimized-1827264.json",
+      "public_sha256": "61a24db5f4bb4918c3dc1dbb252aa239d790eab590d9165f966a6147d19fd7e0",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827264.json",
+      "original_sha256": "47ef37ab253c8a01bed4acaaa490b7d9f95e02a3b7ba31df4e15ad3e476085c2"
+    },
+    {
+      "public_path": "local/workers/optimized-1827265.json",
+      "public_sha256": "89641ac257a9c6944a10ca06e885e6d541af976eb4cca9027ecbf514f908ecf0",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827265.json",
+      "original_sha256": "b96595cb0b554c487cf79bcf97176b74a770cdf9d3522f92e6c5131a01193a5e"
+    },
+    {
+      "public_path": "local/workers/optimized-1827267.json",
+      "public_sha256": "619bce2cc0164edea70e388807e81e8d1639589a7c86f342b8262198f533b306",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827267.json",
+      "original_sha256": "657c409ab395055124ddd6a3f221a3c2ca02547afc1657a2e933a9b49d4f0779"
+    },
+    {
+      "public_path": "local/workers/optimized-1827272.json",
+      "public_sha256": "dd20ee0f51711fed6b2c894480acfa66d9bccb805b0711ecf3421a8e9f238308",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827272.json",
+      "original_sha256": "bd469efd4867e70321b4803d894fd279e6387744d4192a76cfe26bd5af510a48"
+    },
+    {
+      "public_path": "local/workers/optimized-1827275.json",
+      "public_sha256": "8a18597086b30ef6105884daafad244a0bacce39b06eb26a4c12a55b954999c4",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827275.json",
+      "original_sha256": "e08088ca3a3068d8298ef4992ece8637b208bd3fc55f1a2ae8189cc795a0cf71"
+    },
+    {
+      "public_path": "local/workers/optimized-1827276.json",
+      "public_sha256": "14b04aa5136a2d5e8adffd782d94006978ebeb312269d0a949b5b7948d2f4d2a",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827276.json",
+      "original_sha256": "6547a54505b6039f3c54b848eb784924018b0c2d94eee759abcb98114723edb6"
+    },
+    {
+      "public_path": "local/workers/optimized-1827277.json",
+      "public_sha256": "4b2370cda4cc170ca11665ca30d429b811c914cc14b64966c7bb21d8307c9526",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827277.json",
+      "original_sha256": "4210fe143f88a3272dd8798d5e2c591dd2e7cc18f68a7c4b5dec745005b4151c"
+    },
+    {
+      "public_path": "local/workers/optimized-1827278.json",
+      "public_sha256": "c6472e2967c42dc64d15dff1694ce5eeec4751cdf828449e0912959a0d2d5aa9",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827278.json",
+      "original_sha256": "f6a3936caebe697c219bce399d7885327cb6ba25b004548a66f69e8950f46721"
+    },
+    {
+      "public_path": "local/workers/optimized-1827279.json",
+      "public_sha256": "0dbbfbeb74875fb73532b9427f25bddd69eaa3a29a2f08bc314f0fc74dffac0a",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827279.json",
+      "original_sha256": "65e8386a0748c2347863c4c35d79ae8070323a7ed33f916f1ecc1762b221b845"
+    },
+    {
+      "public_path": "local/workers/optimized-1827286.json",
+      "public_sha256": "3165ec4c93f02714eef47fe105a84b7f537ed58892ac1c847c2f9eae7d249e71",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827286.json",
+      "original_sha256": "94ba81c2aeb3a7fac0bc781ca97812fe90dc0e81a16b78bc8942355581de12b0"
+    },
+    {
+      "public_path": "local/workers/optimized-1827467.json",
+      "public_sha256": "34f06e8e766dfc12116a49e0607bf77eed1520a880578b2f044a8f2bb2ac381b",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827467.json",
+      "original_sha256": "15c6b958843cc1c24eba16738de3cdb88bbc608545324ef78fb6e1a702b2a60e"
+    },
+    {
+      "public_path": "local/workers/optimized-1827622.json",
+      "public_sha256": "ce00bf8924b27a0030ca1b6414b46a5c8c8ac484bc510e2b45688e44a198af1c",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827622.json",
+      "original_sha256": "a4298a231f52413f4b87a224b21b4974ce0fa4e2eb447f8d4f2422a6a5cddedc"
+    },
+    {
+      "public_path": "local/workers/optimized-1827735.json",
+      "public_sha256": "2ec49236e9b79acee570da4c0210aee7292f59c12776bc328a54c9096ce35cc0",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827735.json",
+      "original_sha256": "fdec5ad002c896a97975ee9ae6b0bcc80059a4a1206e5793a49d4872fb13008d"
+    },
+    {
+      "public_path": "local/workers/optimized-1827787.json",
+      "public_sha256": "08cfae7508a0a4cf798aeb506470041b10ded639e08e99819cdc6a38e8d0393a",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827787.json",
+      "original_sha256": "bd9156f3af584789a1e00f6184616d720a2223629598183108dc2817b1ca0b87"
+    },
+    {
+      "public_path": "local/workers/optimized-1827830.json",
+      "public_sha256": "0abbf732cc136eb4c6a0dd8cabd4d31e3a2f449747156f2ef2f0b8dd92e6d1e1",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827830.json",
+      "original_sha256": "9ea0a5af5a162cf0ef83fd10f6585c8b80a590a58f0e440e88457d24e7cd6723"
+    },
+    {
+      "public_path": "local/workers/optimized-1827878.json",
+      "public_sha256": "205ed85905aeb73958511bb1d317bb97010232205aa990ee860ad25195f01686",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827878.json",
+      "original_sha256": "830824e6e6b8d1882ecbe2e176ffd4a29a44b4b424a0794627cf9388398b3838"
+    },
+    {
+      "public_path": "local/workers/optimized-1827920.json",
+      "public_sha256": "7c214d539d3d50b7798e7beee15ffe1cf494a28c9091f4b04508e58ac4e9c014",
+      "original_id": "LOCAL_CPU/v4-optimized-workers/1827920.json",
+      "original_sha256": "9d66e5c0c7faf188ef97a70920d5098b0d80c357a58fb2a576f50d36a402b354"
+    },
+    {
+      "public_path": "local/optimized-suite-log.json",
+      "public_sha256": "08d536be4222f09520b33f93b4b2df942d1d925546fad2882f403c7dea6f0a4f",
+      "original_id": "LOCAL_CPU/v4-optimized.stderr.private.txt",
+      "original_sha256": "0701732101f7bcb5acd1aec06ece8feea8b1fe11e1643747b1dd6ca81365aea0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--summary.json",
+      "public_sha256": "c2e7b7d726e99152cef9257fee127c00ee7f04021c843c875fab2571d3156ed3",
+      "original_id": "operator/issue20-cpu-v4/summary.json",
+      "original_sha256": "c2e7b7d726e99152cef9257fee127c00ee7f04021c843c875fab2571d3156ed3"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal.exit.json",
+      "public_sha256": "ea6657cea6ad3af47f61971934a8dbe0cc100b770b9e3749fc92de7db434125d",
+      "original_id": "operator/issue20-cpu-v4/normal.exit.json",
+      "original_sha256": "ea6657cea6ad3af47f61971934a8dbe0cc100b770b9e3749fc92de7db434125d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal.exit.started.json",
+      "public_sha256": "07ec8900c90e9281b9faeadbb263c57afddc87801d711c5a85fe0e150bd2680c",
+      "original_id": "operator/issue20-cpu-v4/normal.exit.started.json",
+      "original_sha256": "5c40295ba161ba52c819673cd3c52e6d5738da2a123387c455860bb790748fb8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized.exit.json",
+      "public_sha256": "649a2e8beb80a0782af574a3cd793fb3c385c30f9c6ede6a12c50d9519b22494",
+      "original_id": "operator/issue20-cpu-v4/optimized.exit.json",
+      "original_sha256": "649a2e8beb80a0782af574a3cd793fb3c385c30f9c6ede6a12c50d9519b22494"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized.exit.started.json",
+      "public_sha256": "6d208cf108c62f7afff1923ba071e794214543477bdf0aedac252c745249af58",
+      "original_id": "operator/issue20-cpu-v4/optimized.exit.started.json",
+      "original_sha256": "ecb5854d240ecf26d66828b6097e0d7e7790e7baadb3d7dd0066f6e694374361"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-normal.exit.json",
+      "public_sha256": "161039acb9656c5ed267f6f875cdb512981032a5463253295cdaa4b4b72e262f",
+      "original_id": "operator/issue20-cpu-v4/audit-normal.exit.json",
+      "original_sha256": "161039acb9656c5ed267f6f875cdb512981032a5463253295cdaa4b4b72e262f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-normal.exit.started.json",
+      "public_sha256": "0311cb9d3173cb3846e96d1e5e955a20d98ddbd423b255ea410f259d70628fc4",
+      "original_id": "operator/issue20-cpu-v4/audit-normal.exit.started.json",
+      "original_sha256": "bd6663eaac46a40534ef5512037158c7004f6fc7b4366c85a56e6ccf69b8ac91"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-optimized.exit.json",
+      "public_sha256": "41cfd37d86a55011e115ab86dc78dd67bde3775888423f7eaae7ed54bd112cbd",
+      "original_id": "operator/issue20-cpu-v4/audit-optimized.exit.json",
+      "original_sha256": "41cfd37d86a55011e115ab86dc78dd67bde3775888423f7eaae7ed54bd112cbd"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-optimized.exit.started.json",
+      "public_sha256": "4ccd8cdfcf1b44628e4cda3711ba0e76576410af796f4665c79aae19c38c552a",
+      "original_id": "operator/issue20-cpu-v4/audit-optimized.exit.started.json",
+      "original_sha256": "5db277fbd8210c5c635b849b2d0bf16c74e32642658c42dc694562a757669350"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-normal.json",
+      "public_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+      "original_id": "operator/issue20-cpu-v4/audit-normal.json",
+      "original_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--audit-optimized.json",
+      "public_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+      "original_id": "operator/issue20-cpu-v4/audit-optimized.json",
+      "original_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--old-grant-negative.json",
+      "public_sha256": "104465959d6aea324f77272aefa3f54c83a07e5b510439082a01236734ff0766",
+      "original_id": "operator/issue20-cpu-v4/old-grant-negative.json",
+      "original_sha256": "104465959d6aea324f77272aefa3f54c83a07e5b510439082a01236734ff0766"
+    },
+    {
+      "public_path": "remote/issue20-cpu-01--normal.exit.json",
+      "public_sha256": "e1b7748700243ef54e880c2b7b5b971a6cd15292a5f160c8729afc0fc4dc5353",
+      "original_id": "operator/issue20-cpu-01/normal.exit.json",
+      "original_sha256": "e1b7748700243ef54e880c2b7b5b971a6cd15292a5f160c8729afc0fc4dc5353"
+    },
+    {
+      "public_path": "remote/issue20-cpu-01--normal.exit.started.json",
+      "public_sha256": "78bfb1779fd5ff60b335e548147afaf05e6b6889dba75a8c104c44755d026d56",
+      "original_id": "operator/issue20-cpu-01/normal.exit.started.json",
+      "original_sha256": "8b3cf902a5de17ce55b4a5a81e717018273e2a9cc759ff339a2ebb318ecb3ced"
+    },
+    {
+      "public_path": "remote/issue20-cpu-01--optimized.exit.json",
+      "public_sha256": "cc5843e6c966bfdadcc4ea177436f024de0f026632224773a8fdebabe4f54dbb",
+      "original_id": "operator/issue20-cpu-01/optimized.exit.json",
+      "original_sha256": "cc5843e6c966bfdadcc4ea177436f024de0f026632224773a8fdebabe4f54dbb"
+    },
+    {
+      "public_path": "remote/issue20-cpu-01--optimized.exit.started.json",
+      "public_sha256": "7058475793e2c1647bb0b1b5898c5b0e09c5bba4082ebdbd3402d0b45f379402",
+      "original_id": "operator/issue20-cpu-01/optimized.exit.started.json",
+      "original_sha256": "a21e16dece3d62ccaf1270860ffaac9e883646105153f4d9d2fd323314a64b5b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-preflight-01--originals-recheck.json",
+      "public_sha256": "801378501832c36d83522175e3bf3be6ef871614a95873b92c5d7883122c8b93",
+      "original_id": "operator/issue20-cpu-preflight-01/originals-recheck.json",
+      "original_sha256": "801378501832c36d83522175e3bf3be6ef871614a95873b92c5d7883122c8b93"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757522.json",
+      "public_sha256": "a4b13424024b0180555389891efb183eeb0bc3ad972dd850651a36c005f7cc76",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757522.json",
+      "original_sha256": "704c8f640b092cc825159b68b17bfec629ae9b306331aa52bccbb7f939bd8efc"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757582.json",
+      "public_sha256": "5431f74c6a741f098174de3b508d67c6f4c2e8f40463c1110553d5f1210e05ed",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757582.json",
+      "original_sha256": "fe7bc290f783050db59df6bc78e88ed79d62a1e53af32e0e317509c5ed83292e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757590.json",
+      "public_sha256": "ce114da84a5eac5cf05d5736c043a95645e212ef50191fc67a24a949f84fc1dc",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757590.json",
+      "original_sha256": "69a0d8fa819a75d1bb0938be1a8e2325047e74a0f9748d58815346efc393c9cc"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757591.json",
+      "public_sha256": "e2aafab0354f4f4b607ebb1c83d5cc713d67b7a81a2408c1b92e5eb696e8eb67",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757591.json",
+      "original_sha256": "09aa41529157ad8b97dac23ae1503fa1f533950de2efb4eab3bf21f6b294dc1d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757593.json",
+      "public_sha256": "5dcd47ac0af47e1e902de301ed61456a4451f416cf83bacbfd290562f1c8c712",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757593.json",
+      "original_sha256": "c8666d6e4e2e8197960f16114d913772f85e1aecd2445300db80d45388efae7f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757650.json",
+      "public_sha256": "1b257bad17c759b5bfc1295823971937cc88c85e68d3f85ae22df895ab2447a7",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757650.json",
+      "original_sha256": "06fbb16b2753b936b3b348e3a69723fa9bf26188a04a8b4f58e00a16e4ea36e8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757655.json",
+      "public_sha256": "dedff554ac1d48094e072053ade74068c6e5db934b7da5502bf771c766cf4d0c",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757655.json",
+      "original_sha256": "e6be1311f6e375edda9f20a3303e5a9d4c34cbf23ef7384aa88d8dd12b7ad7bc"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757657.json",
+      "public_sha256": "5c2b9b50cbb6fc6c1985743bd4d4b338dd35463c0f42e48c46d08f021509712d",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757657.json",
+      "original_sha256": "48f881e3ab21e28619a0b266db5c93a9978a45a75dd334b02d9d648d1d9ac913"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757659.json",
+      "public_sha256": "4e1d35b2dc95e457cc9afea9c900115a75be5587c9a5a7f597b19336cfb23bf6",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757659.json",
+      "original_sha256": "aff5d263e918b44ddf9a3a7b8babc9903e2414908f6b0f99f4a0fa4e60fc9c44"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757665.json",
+      "public_sha256": "38fbd12bb3b92df72ba90a9219b82dc70498c42db1989bffef392e5884cc8bb1",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757665.json",
+      "original_sha256": "5f02220ba7b3703fd86375b285d5e5b41772b9e16d8a936584ed9107792e1865"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757669.json",
+      "public_sha256": "4f05744c75979cec181577df49e129d806e325c1406ec76c6924108e7d236807",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757669.json",
+      "original_sha256": "84bd81b632cab9a8b313ed302efcda9c6a2ffdbd6605390b328f693883307db5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757678.json",
+      "public_sha256": "2d7deda9b8ff2fb19b4fb31e4532e588fa75e40c13d76d1890fbd7a76cfd856a",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757678.json",
+      "original_sha256": "e2af991d8a800a35b12362d94c7f4b470554d28a7010233d6d9e2426c0c4ebe6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757680.json",
+      "public_sha256": "457ca857802effe596ddcd13e7edba1c889e0f6933c3e2ca3807fddd44a45576",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757680.json",
+      "original_sha256": "c554c77c680e2a55e0aa94f0ace8ad25bf12e6e590c8621c1d5b40928f6ee932"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757682.json",
+      "public_sha256": "86f6bd074a8d97baa21047276db8100877319ee4c7c20832e5de1c365bb751a4",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757682.json",
+      "original_sha256": "fbadb3d5760ac96fa2b025209c5dce0750dd9faafa843ea4306607b3c328ce1b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757684.json",
+      "public_sha256": "5f2202b0595d8cf995346265f57db5bb8ff05b601004d9d874d972d88049a184",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757684.json",
+      "original_sha256": "10112134acdc42a8bd0166fd7b1cbf6f5989f1636fbf100532018d807bb06a12"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757690.json",
+      "public_sha256": "7e81403708737ac78212812077495116fbe08f4fea8ffebe7a9fbbb25baf1f03",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757690.json",
+      "original_sha256": "f6c5d5532c77d31641b72e0e6233640b49aecf135200742160404196d8555049"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757692.json",
+      "public_sha256": "dc2381e9d8e21e09cda60b50a99f90aec67e55147018298839e2f02c43520840",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757692.json",
+      "original_sha256": "9b4aa8dbca19f4a47ffa587cd639bf535bfa0c71ecc90ea1069e346f134da538"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757694.json",
+      "public_sha256": "fbd7c5521d473de9c321fa188479a3ff2b627da369275a0e08ff6101943e5916",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757694.json",
+      "original_sha256": "36c578a2ab8ea18494212b3216ca6849879b917d23ac54fde85f8618c9c55e23"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757696.json",
+      "public_sha256": "3feb96d7bd6c39aecf7a567d5b62841a0aaf2eb0f591ed800963d1c18ca6f1e2",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757696.json",
+      "original_sha256": "82dd2d7833604945b4f16deff612443b06228a7f8bbb2f429ac238ab1c70f3c8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757698.json",
+      "public_sha256": "62227ba8bd073023dee07d268d096d9189204592058deeb53bf267a6241c793d",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757698.json",
+      "original_sha256": "a1859ebfd941533417a2a9dd3eedf74aa66501b1ec622a8e8358756f60022fc1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757701.json",
+      "public_sha256": "9ca819aad5ed3fe451944e3af8359679e6ca57dbf261e76924cbae91dd036e17",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757701.json",
+      "original_sha256": "49acc81f918a82dcf7499de9913be2eff9d5241b4856ceb4a7dfe1c51edd3b12"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757706.json",
+      "public_sha256": "fcad45709709a73809511724861211692484afacb8368b4b73af33d0198b706f",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757706.json",
+      "original_sha256": "85d01d08aff275f53ee5f3c57ab46556235b22a65976b4a90028235763aea4fa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757708.json",
+      "public_sha256": "a2a54408f0d0a0fe0d6873f6b6e9c787081895713f8d10022691254e4892af65",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757708.json",
+      "original_sha256": "a0444d0b5fe042d8c734c8f32db7a26728543cddaacb4f7dc27316a4dbc92a57"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757710.json",
+      "public_sha256": "e131d36e4316384dfe5dcb228b618c1ef6c7fb82820cffe154913167213f2d12",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757710.json",
+      "original_sha256": "528c31b20f6de18279ad7e8af164f068d976a242c62226bca0559648eaa9687e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757717.json",
+      "public_sha256": "263963fc2c0f0c9058cc0f17e36f1398dd1ae6b235b77f2d8025223a12d1ceb0",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757717.json",
+      "original_sha256": "930035b9e7d6645c1607f796833506150b79273d9cdcbf73da478bb4d2fb4f05"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757810.json",
+      "public_sha256": "5e9450a168f544e2ba810b8bda8859eb67d40142b09169c488c65aabd4e85b22",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757810.json",
+      "original_sha256": "71bfbef0c727d0b5f3e521bbbe1bb71738d9f2664ebc283dfea6fb0f3e238c21"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757812.json",
+      "public_sha256": "8ce75f8e5fa84e1d22aef989931f0d53daaae7b0596f93d6b17d0aab17ce5786",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757812.json",
+      "original_sha256": "8db667c4564cafb1e21a7c9e465d291a53ce3944a14779cc9c3d23b28468b51e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757818.json",
+      "public_sha256": "9c2eb16be3a8d564385d473acc8e8026981136d22400dc08a85a1cb39250a4bc",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757818.json",
+      "original_sha256": "ee13b7daf2c9d3bccb8a86652bb93ff4f6c98a0def9d7620eb5416cd84f3ac27"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757820.json",
+      "public_sha256": "f8a4cfd40eabe1fc4ba671974b497fd2b0614d02c720502740636b951e025789",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757820.json",
+      "original_sha256": "1b58c3d91f489a1755d0c59c2ada92ca592410a9ecc8e84e11833a1635fa3103"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757822.json",
+      "public_sha256": "39029076c8fb6ff92d9bfd0487ab4fb223eb2817b8b80c502c8489d0c6fb7d94",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757822.json",
+      "original_sha256": "e89de56449a17a5f3ec546f670fe835e31d2d03eba33764a5fbc705b2375cb6e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757828.json",
+      "public_sha256": "3f6665640248ab5536075427ff08ef04b83527d276068745ae400fc1cf8c2729",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757828.json",
+      "original_sha256": "089f312f0e0d4655fc6c0f4a6b0dcde716bb61c89753df6c2d38f682735989ba"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-workers--3757829.json",
+      "public_sha256": "cc148bde43057355b2895f77031488e45f8f63e4508e6890f104f585021b736f",
+      "original_id": "operator/issue20-cpu-v4/normal-workers/3757829.json",
+      "original_sha256": "c550dcfacdf69b56a6f707eceb542639ac7e710303a594700ed04e22cf582db0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757584.json",
+      "public_sha256": "79f4132a031bc613e14b84ef27e4bf58c51cb7fb50abb866eb74a92fcbadd134",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757584.json",
+      "original_sha256": "32fa82d1579c0668eefa4d6a62295815451038f9b71fc5e80adb3f77a1449477"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757589.json",
+      "public_sha256": "a6d063b00780f7196bb4a08ca7af8dce17d417c79e2d86abdb20a636ce375cbe",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757589.json",
+      "original_sha256": "d0c99613f077071844a862fdc041783593fc7fcdde0e3472e15c876117bf0786"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757592.json",
+      "public_sha256": "055777b3a2ca0fcd39d0bdb88f0a7df9012038111338fb2ece7a052324584563",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757592.json",
+      "original_sha256": "6d96921690d50c6f29cb98833dadbd874211f063e8cdf1cbc07ee2181648ae95"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757594.json",
+      "public_sha256": "a321ad0bbd791a2818c31941179f66d5a80532d11edb7906217de85c45d78cbc",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757594.json",
+      "original_sha256": "a0c49e8c3741e8e2d06df6f75d14f44bef341176854d413da70ca3366752903f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757654.json",
+      "public_sha256": "3080b6404d7863e364cc3e687265f4fb467fd355c707fc5ea0dbd3f1ff7ad36c",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757654.json",
+      "original_sha256": "464997287b32daf86e864bb0e2969fcb83ab43f7a5a20d52683a1a90886d8997"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757656.json",
+      "public_sha256": "3b61d9007a753d31123fdac9cd092ad435e8351bdd054faba5cd4fd730c4e017",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757656.json",
+      "original_sha256": "6112e2842339df8d2f95d13b2ddafa567f465de0d33e1bb77f2798cf119fabec"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757658.json",
+      "public_sha256": "b07f3bba7dd877c129ab57aebddf8f98d1291248ba549d52719c79519c00a929",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757658.json",
+      "original_sha256": "0be017089b9215ff0ca712a310dafeb34b9d709b8661e22b1c155ddd5e56fac9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757660.json",
+      "public_sha256": "5dd29064abc9f90ffe11b0af73e8e1fde537235a83edfa4252a131296aef7d1d",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757660.json",
+      "original_sha256": "ccf9479f3b9af5cc1e8536e9278c4c8f2122db88552eb989bcdd29b49141ba4b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757666.json",
+      "public_sha256": "ee7b51345fc413b93c4ac6da75f3677e7ebf9181fbe8f874d5eb11fe55508997",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757666.json",
+      "original_sha256": "9ead3b84a441a85caab51eccea9e2b698345786397ba0c897d974e4d6b780777"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757667.json",
+      "public_sha256": "3b0d2b7e93245a59bec71c57a9597b2e3df5e527a55e0630f01c0efec47fb016",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757667.json",
+      "original_sha256": "bdf4ba8fe7bf594202b330460c80347f59581ee73ac3b669044b38a336ba2d7d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757673.json",
+      "public_sha256": "149fbfb16fd1e315edc1a175a5b116ac8e3ba6f797fe91115b3c3635891de7ef",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757673.json",
+      "original_sha256": "23cc467475766cf87198a33e4f21389ac6109317ae115f69073d142bed213b6c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757679.json",
+      "public_sha256": "d13b35f56255476f3b45e7740ac1ba5e166675fbef658128b8f41f97cdf01fce",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757679.json",
+      "original_sha256": "284474cc4bd4b4d5d75e8b0da392775d6ff036e2d8865608f611be1984875d2b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757681.json",
+      "public_sha256": "88f5bc270b71e2f7accb837efb7e6b85c55aa091293d1ac0bc9b70b6aaca1edc",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757681.json",
+      "original_sha256": "7185ef255f8f241ec2a3d8304dcc0921be8e8bcfc74b8fbe2fdbfb6c2a742995"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757683.json",
+      "public_sha256": "f29428c961c4a4d08e06649392bcd13bee4f6c257dddc24029b8999e78e9a93b",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757683.json",
+      "original_sha256": "c81765b50ce7e23e03087d9df79f1de85e2fb40ae8aad48aa51c167d0569999b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757685.json",
+      "public_sha256": "0dee73bfd2b484d56c36314d7186b0d07b9d5071b7bf4a107d4f926e2fb45811",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757685.json",
+      "original_sha256": "9e11dac0bc1a9e572ed056d5d43df205ef81a0e781bf6ab3c5ce4624fb563752"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757691.json",
+      "public_sha256": "ed1d0a9165ff5b645ea0026485862e27e7faf9c727321a4d47936f1543ba039b",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757691.json",
+      "original_sha256": "780940f90b634f88a5591367a8d55db88ad9876d486004486fc0ee872cb42f87"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757693.json",
+      "public_sha256": "7cafd17de581e8165452fc32b8945a0ffbc481f4c90f56cea7b3cfa83e233f25",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757693.json",
+      "original_sha256": "52009da79be55a555bf7133d19b2db4e7a05dd70ab715715b10683c313417aa8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757695.json",
+      "public_sha256": "d166bc89f8d3878ab5e0361f9e5291e2e9aef6db53629f06b13997825f932756",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757695.json",
+      "original_sha256": "40cbc8a5e1b0c6f01eca7171790d43090948b9377a9ef170d1a28b24f8cf1aca"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757697.json",
+      "public_sha256": "2cb41809ba8a3e07de69a65373bb13cc59454d116c394e4f09df455266fc5de4",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757697.json",
+      "original_sha256": "c9b1f6a659dfd52dcfd6449ce066984b64ba6a3022fd7ff7a1c037633162cc5d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757699.json",
+      "public_sha256": "a356756f67aec5d016fa94391bc0aa2c574378ea7c6acc3dfa1e02ccd8b3b499",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757699.json",
+      "original_sha256": "a8d1cd3be007813edd22725c51618dcf856b3f5ca6a445a548d5c887c140c370"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757705.json",
+      "public_sha256": "e9d7cda3838fb0fb5d1e0094fa50bde6f0217d0340345507b83e5837b6b05450",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757705.json",
+      "original_sha256": "9481c88b31b6eddf29bf9d1626b273b24c6f9e616ee43f5fbc1543a22d5d89de"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757707.json",
+      "public_sha256": "e9475300001192b812883d795c383dc2e90b8b8cb25b245084f9df4c365c75c4",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757707.json",
+      "original_sha256": "5f156226fd689b779f69874271e10c111a219d574340cba470dee13b29f0b688"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757709.json",
+      "public_sha256": "78a540ab31a4f920fff9240f7852fcad008598ab4c84acd2e4cbce74ee13bb93",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757709.json",
+      "original_sha256": "a416f76590994f36c3941ae0056b483119276f10da8fa1274e047dccef6b4401"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757711.json",
+      "public_sha256": "d7b0c4c405a82be23498142ad4bf75876ce23d07b007f69df1a4fc3c5df8f8e1",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757711.json",
+      "original_sha256": "fe30c17d3e4061409660f9d3a39de653487c92af91cc1b4e2b423ee5cb9b3ed9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757718.json",
+      "public_sha256": "0dbf98a527717943b14474d1f9adefc96bc66d036063615496ca5529ddaffed1",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757718.json",
+      "original_sha256": "20fce4c6991e34e0dcc31cf145a1a5ecbfd2775cee468ee39deee9010e40fd87"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757811.json",
+      "public_sha256": "b3cee38c7906842bfa2c42d4d43e49528cf71d925c09955924f44c554ccc387c",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757811.json",
+      "original_sha256": "cdf01f72c1133552aa7aad03042d180edfb9d6beb748a330e7383645f3c93bdf"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757817.json",
+      "public_sha256": "0282ae4eb5c917fb3c6a3ad1efd40aa38c74c29ab7a09d474e469f490c469316",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757817.json",
+      "original_sha256": "9b4e352bd04a9a582a9d96be6129c3bdd9f0a27fc27d1381e1973a0f65af29d7"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757819.json",
+      "public_sha256": "211921566755147c1f825ccefdbd922947402e022b97831728df5bb776adce2f",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757819.json",
+      "original_sha256": "6923e89c5d4a779a3515562e3cfaae89f3a7bfe6b0e1b9f716b169cfcde9b91e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757821.json",
+      "public_sha256": "164ee2caf2a03eb51fda825f00f7d0a9cd9bb0f056363ed2a017e79f453b919e",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757821.json",
+      "original_sha256": "087e77cb48299c8cdfe43db214612e83723bd4a85557f38264dc031345b99b20"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757827.json",
+      "public_sha256": "07dfe9a01aaf495fa75ee6cdda465ea77227da93a587b763ed5e7a031f960382",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757827.json",
+      "original_sha256": "7e1a8a083868aa7f3eb536a21de1688b41e2136ebe56f46c35da9ee549b504af"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757830.json",
+      "public_sha256": "2fc0c3e629267e82ac1b43388656c8428e64cb1602cd89ea9f2784e869534d89",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757830.json",
+      "original_sha256": "9a9544908e177ac9b44af058cc1e8a5dba9bfe55850873713f264af7b2f61f3c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-workers--3757886.json",
+      "public_sha256": "94f6c30f14cf21fe20fdb53698df9b00c3c07b5cbc4908c179abf3c615af5b65",
+      "original_id": "operator/issue20-cpu-v4/optimized-workers/3757886.json",
+      "original_sha256": "7d0699c8cd28fcf5bd9484318f988c972f7375cc88271f59ed68971531d0e4ff"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-child_pid--cpu_case_manifest.json",
+      "public_sha256": "329d5d521732b83d7429efc36ce42313fa595c5f466294819dbf2bb873b1562a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-child_pid/cpu_case_manifest.json",
+      "original_sha256": "329d5d521732b83d7429efc36ce42313fa595c5f466294819dbf2bb873b1562a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-child_pid--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-child_pid/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-child_pid--runs--test-server-cpu.exit.json",
+      "public_sha256": "93f6217e792d4bc4f5d2acdbb35e4240e4990f33908d798162ba6f6a3cbed711",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-child_pid/runs/test-server-cpu.exit.json",
+      "original_sha256": "93f6217e792d4bc4f5d2acdbb35e4240e4990f33908d798162ba6f6a3cbed711"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-child_pid--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "9ced7de240ba1ca51c0e2b769055a6087d7b2d5c948de46d4b93a33fbb973df1",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-child_pid/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "39263bfa014940f9227b8cc52e2e1a39e09885d807c4418b4892b5bca970d346"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-command--cpu_case_manifest.json",
+      "public_sha256": "4addf82e3ea93e4f7f8da59a0709d1fd4d34bb6a0c317c2e6e615f03b675fbc4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-command/cpu_case_manifest.json",
+      "original_sha256": "4addf82e3ea93e4f7f8da59a0709d1fd4d34bb6a0c317c2e6e615f03b675fbc4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-command--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-command/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-command--runs--test-server-cpu.exit.json",
+      "public_sha256": "15d0e8db02fb182d13c0491b8fe7d8a5839a8c53b0ebb905084d39b31f2adb54",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-command/runs/test-server-cpu.exit.json",
+      "original_sha256": "15d0e8db02fb182d13c0491b8fe7d8a5839a8c53b0ebb905084d39b31f2adb54"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-command--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "8a21581266cdf49b0d9a1fc99ed504d679f6291ec82b6f87740ef6db862428e2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-command/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "4a9296ca8a54a2f15bfb01445f6e20467e487698844c6667d15f2aa35408af42"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-output-path--cpu_case_manifest.json",
+      "public_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-output-path/cpu_case_manifest.json",
+      "original_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-wrapper_pid--cpu_case_manifest.json",
+      "public_sha256": "aaeef23e1e59d92ae5e2bad4e7fbe8c2dd8c1031c089bfb48d79b65fb028960d",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-wrapper_pid/cpu_case_manifest.json",
+      "original_sha256": "aaeef23e1e59d92ae5e2bad4e7fbe8c2dd8c1031c089bfb48d79b65fb028960d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-wrapper_pid--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-wrapper_pid/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-wrapper_pid--runs--test-server-cpu.exit.json",
+      "public_sha256": "89fb342f0481f7c3b7bcaaec85bb69e9759635c75ebe22eb01562999d36e96f6",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-wrapper_pid/runs/test-server-cpu.exit.json",
+      "original_sha256": "89fb342f0481f7c3b7bcaaec85bb69e9759635c75ebe22eb01562999d36e96f6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--bad-wrapper_pid--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "838b60e6802fa05760aa1c7b79ac1199d9f348486dd708856d7f81f0a6f78ec0",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/bad-wrapper_pid/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "848b53eb2d154feea13e42d7eb84f72b00f9a47e0b91d11b6d53079dd266dba0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--changed-stage--cpu_case_manifest.json",
+      "public_sha256": "7243694ba57bde5c40f645cc3c4b68091954bd2cfc483f33f7ad647ad2abf96d",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/changed-stage/cpu_case_manifest.json",
+      "original_sha256": "7243694ba57bde5c40f645cc3c4b68091954bd2cfc483f33f7ad647ad2abf96d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--changed-stage--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/changed-stage/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--changed-stage--runs--test-server-cpu.exit.json",
+      "public_sha256": "fc063d6f5f438051a3f562862704951d3529c28eceae601686c452f40271c44a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/changed-stage/runs/test-server-cpu.exit.json",
+      "original_sha256": "fc063d6f5f438051a3f562862704951d3529c28eceae601686c452f40271c44a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--changed-stage--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "7fe19e98425735f4184bce81fb0a254996fc3b78de5fca74e95b000a4843b697",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/changed-stage/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "2c680613e5c65f755cbb451d2cdbbe92d42897b5f173483db07f9802074ceac6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--child-symlink--cpu_case_manifest.json",
+      "public_sha256": "2b1405d422540d44a56d662f5a5139ecbf9792b2dc39f72faa83bac30334adba",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/child-symlink/cpu_case_manifest.json",
+      "original_sha256": "2b1405d422540d44a56d662f5a5139ecbf9792b2dc39f72faa83bac30334adba"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--child-symlink--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/child-symlink/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--child-symlink--runs--test-server-cpu.exit.json",
+      "public_sha256": "a0de243a73ade9f1e48c7dfdf7ba42d33dd793a7b85dfd062e46b9a35b288d39",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/child-symlink/runs/test-server-cpu.exit.json",
+      "original_sha256": "a0de243a73ade9f1e48c7dfdf7ba42d33dd793a7b85dfd062e46b9a35b288d39"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--child-symlink--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "31e5daede598fe8f46b0a0f8f0237069755485b6506dde03a935fd7adf01ee8c",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/child-symlink/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "707517b3a0b0c036ea42152e548445e957a04f6b44e8b429aee695af771a93c2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--cross-filesystem-publication--cpu_case_manifest.json",
+      "public_sha256": "a49deced0931dd14048505fe6f93c49d044a6ca20f3107889088d565981a2347",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/cross-filesystem-publication/cpu_case_manifest.json",
+      "original_sha256": "a49deced0931dd14048505fe6f93c49d044a6ca20f3107889088d565981a2347"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-admission--cpu_case_manifest.json",
+      "public_sha256": "371226637b9139ef402db6b5e580ca87ebbc5d3630767a2bba8dfbb67a2c5405",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-admission/cpu_case_manifest.json",
+      "original_sha256": "371226637b9139ef402db6b5e580ca87ebbc5d3630767a2bba8dfbb67a2c5405"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-admission--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "28eb0e6d19d6c5e026daadebc89b70805e8827e890b40b1fc6b8ae9bfc9c65d3",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-admission/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "28eb0e6d19d6c5e026daadebc89b70805e8827e890b40b1fc6b8ae9bfc9c65d3"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-admission--runs--test-server-cpu.exit.json",
+      "public_sha256": "e2e0790d60966c0f330303bba560eb4a109c13ec68b6b53e121b0f4a85698eed",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-admission/runs/test-server-cpu.exit.json",
+      "original_sha256": "e2e0790d60966c0f330303bba560eb4a109c13ec68b6b53e121b0f4a85698eed"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-admission--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "dbc6e87a09808f5fecf5c6da78b83ba84771bdd2d3a670360243b74696949994",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-admission/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "a2c9ebb633966c36e575bb098d06a130f08ba27104714af34d89b9efa9e010c8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-session--cpu_case_manifest.json",
+      "public_sha256": "493d986fc0ef0ffe529c663f79ef835dbd8c3f5d0ac21a6706892b0a3bb22ae1",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-session/cpu_case_manifest.json",
+      "original_sha256": "493d986fc0ef0ffe529c663f79ef835dbd8c3f5d0ac21a6706892b0a3bb22ae1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-session--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-session/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-session--runs--test-server-cpu.exit.json",
+      "public_sha256": "7568d5d687dc42ae527be450cea10422e9eda727876933c62197db1f127f883b",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-session/runs/test-server-cpu.exit.json",
+      "original_sha256": "7568d5d687dc42ae527be450cea10422e9eda727876933c62197db1f127f883b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--duplicate-session--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "fe5fed63a3b522eca9ecb2fb5b2b61d5f9e716303e384bbb12212ea770eb185c",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/duplicate-session/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "ecc7a4b34ca71bde502dbd488ca588b76cbfd3e621e3421e6eec8a00f8412b4b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--early-exit--cpu_case_manifest.json",
+      "public_sha256": "8999862adbdaab4d8db414a4c9a8e682cad0e04a6650106b1cb09afd7cc68004",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/early-exit/cpu_case_manifest.json",
+      "original_sha256": "8999862adbdaab4d8db414a4c9a8e682cad0e04a6650106b1cb09afd7cc68004"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--early-exit--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "f83666f4ea48454a9ba9aa854fc79f771fad255d0df044cb1eb9d5a4daf0ba4c",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/early-exit/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "f83666f4ea48454a9ba9aa854fc79f771fad255d0df044cb1eb9d5a4daf0ba4c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--early-exit--runs--test-server-cpu.exit.json",
+      "public_sha256": "72689a8401ae2ca861a20e8880d9d1e6ef90632c61a5619174763a9b6acb5fb2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/early-exit/runs/test-server-cpu.exit.json",
+      "original_sha256": "72689a8401ae2ca861a20e8880d9d1e6ef90632c61a5619174763a9b6acb5fb2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--early-exit--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "84cbb531fdd3a03415293cfd41177f8f3e11a3ed7a0c71db893339e288b75406",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/early-exit/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "019913a7b9edb4ba0d6022ac76e398837dde5c09a4102bdb84f90ff2a78a3713"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--foreign-owner--cpu_case_manifest.json",
+      "public_sha256": "c4bc609881a5db13e967dd69c9048a73c15d72cf2f6770716173d3ed2fbd0247",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/foreign-owner/cpu_case_manifest.json",
+      "original_sha256": "c4bc609881a5db13e967dd69c9048a73c15d72cf2f6770716173d3ed2fbd0247"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--foreign-owner--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/foreign-owner/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--foreign-owner--runs--test-server-cpu.exit.json",
+      "public_sha256": "34e526005597474acff591c0e3c27c6f979e555c803554dcaa4e3c2bc8e3534f",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/foreign-owner/runs/test-server-cpu.exit.json",
+      "original_sha256": "34e526005597474acff591c0e3c27c6f979e555c803554dcaa4e3c2bc8e3534f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--foreign-owner--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "e6a6aa0376855275d6afef88d67bd409412c63a779fc511a8945b5e8905ddc7a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/foreign-owner/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "7eb1bfe09daddb2fbe4a5b9da8a693d4c8edbdf9985955f35691376732f92074"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--ignored-signal--cpu_case_manifest.json",
+      "public_sha256": "de14cad3f5118b4daa135c1abc82ee3a8dc5eb13f5e4ec265ff54758f4d73e2f",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/ignored-signal/cpu_case_manifest.json",
+      "original_sha256": "de14cad3f5118b4daa135c1abc82ee3a8dc5eb13f5e4ec265ff54758f4d73e2f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--ignored-signal--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "a23d7de5126bc4bce3bbd6d97eaa024dda075995c7ec8de3c1db9c2bf4354037",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/ignored-signal/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "a23d7de5126bc4bce3bbd6d97eaa024dda075995c7ec8de3c1db9c2bf4354037"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--ignored-signal--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "6148a19e032eaaa425787f6ec9f505195d46b0f0822e889b9a27342bfb74d80e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/ignored-signal/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "3d46fb46c324f7e9ecfec954a20563e9e943a0144599af8a6ed888163edcaaac"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--normal--cpu_case_manifest.json",
+      "public_sha256": "35caf7abfbb4f68ff7e4c9da6a2e10e8dc3799a25c29513387c8edcb4e01dbca",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/normal/cpu_case_manifest.json",
+      "original_sha256": "35caf7abfbb4f68ff7e4c9da6a2e10e8dc3799a25c29513387c8edcb4e01dbca"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--normal--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/normal/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--normal--runs--test-server-cpu.exit.json",
+      "public_sha256": "9351143fdf62285f19b16719eef17e64233caa0d60610560c92967322524af70",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/normal/runs/test-server-cpu.exit.json",
+      "original_sha256": "9351143fdf62285f19b16719eef17e64233caa0d60610560c92967322524af70"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--normal--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "4c4118a22248735195d97cbaaf5c4125b01ef1f6663cb1ae2e012c7ed6861a2e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/normal/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "fd4c5f559874712c58fbbcea797692b91f4b90ad2ec74b63c3c3f3f0b5b20404"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--partial-loaded-json--cpu_case_manifest.json",
+      "public_sha256": "22a29f865a7834cc1419499bbff8919d0dd4cd38682fabf664265bc46cd95281",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/partial-loaded-json/cpu_case_manifest.json",
+      "original_sha256": "22a29f865a7834cc1419499bbff8919d0dd4cd38682fabf664265bc46cd95281"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--partial-loaded-json--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/partial-loaded-json/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--partial-loaded-json--runs--test-server-cpu.exit.json",
+      "public_sha256": "836990a64b99dba99c59d55bb9cb1f3b6218ad2ec8a95322e8871bcaccfe6ae0",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/partial-loaded-json/runs/test-server-cpu.exit.json",
+      "original_sha256": "836990a64b99dba99c59d55bb9cb1f3b6218ad2ec8a95322e8871bcaccfe6ae0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--partial-loaded-json--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "57934e948d2390165754ef38feea979d95b2ffb5dae1bc17a058dce09fc68b14",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/partial-loaded-json/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "e693d7efc5b53945c9a9d21ed2eebb67d694b32667a790ee3fb0e0b3ef9ceff8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--post-mkdir-failure--cpu_case_manifest.json",
+      "public_sha256": "4e94e03c5f32cb6a12c20460864f07bad9fbb629299429e7fda83dd00eb6ea5f",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/post-mkdir-failure/cpu_case_manifest.json",
+      "original_sha256": "4e94e03c5f32cb6a12c20460864f07bad9fbb629299429e7fda83dd00eb6ea5f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--post-mkdir-failure--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "aeb79500f9b60e5c60910a2ada6f5a72e4c695b5c9e2ad47b0562614b0e1be3f",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/post-mkdir-failure/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "aeb79500f9b60e5c60910a2ada6f5a72e4c695b5c9e2ad47b0562614b0e1be3f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--post-mkdir-failure--runs--test-server-cpu.exit.json",
+      "public_sha256": "1e9294545e83e362f3b563a25f6d5b8ffa58c21e462546fcb23fee4005efee5e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/post-mkdir-failure/runs/test-server-cpu.exit.json",
+      "original_sha256": "1e9294545e83e362f3b563a25f6d5b8ffa58c21e462546fcb23fee4005efee5e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--post-mkdir-failure--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "5e4ba09d3fc409e29d51e50a9686ebeec3b72cae7b86a50d0e850d53151b88f6",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/post-mkdir-failure/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "975dcccbcbc25064dc110ed8ea857c84bd23469b6227cbd0926f176bb3aa8736"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--preexisting--cpu_case_manifest.json",
+      "public_sha256": "1654daf7f0b77d20f2e95362f37f88677f987bfc8be48eb4d618859b07ee8c00",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/preexisting/cpu_case_manifest.json",
+      "original_sha256": "1654daf7f0b77d20f2e95362f37f88677f987bfc8be48eb4d618859b07ee8c00"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--preexisting-symlink--cpu_case_manifest.json",
+      "public_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/preexisting-symlink/cpu_case_manifest.json",
+      "original_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--process-identity-changed--cpu_case_manifest.json",
+      "public_sha256": "bf4bb9823fe74038297400e1743ed35b1a9575bf308e1c108678f5feb1984a7e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/process-identity-changed/cpu_case_manifest.json",
+      "original_sha256": "bf4bb9823fe74038297400e1743ed35b1a9575bf308e1c108678f5feb1984a7e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--process-identity-changed--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/process-identity-changed/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--process-identity-changed--runs--test-server-cpu.exit.json",
+      "public_sha256": "319cd46d1f1db054dc7be3c03636543e68a974a60083d7c3ef0fc344c7816830",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/process-identity-changed/runs/test-server-cpu.exit.json",
+      "original_sha256": "319cd46d1f1db054dc7be3c03636543e68a974a60083d7c3ef0fc344c7816830"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--process-identity-changed--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "d22c85a5240be195929364230b057add8307436630449fde872de01e9d710031",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/process-identity-changed/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "5c8c40763160f170bebd2a1c856e33be7497ef05b8bc8b7cde376faaccb8317b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--replaced-directory--cpu_case_manifest.json",
+      "public_sha256": "1f38ee4d8e582bc6c0f626b3f7eb4c2f1b5449e9a10a7d8abea7e75e87f4258e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/replaced-directory/cpu_case_manifest.json",
+      "original_sha256": "1f38ee4d8e582bc6c0f626b3f7eb4c2f1b5449e9a10a7d8abea7e75e87f4258e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--replaced-directory--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/replaced-directory/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--replaced-directory--runs--test-server-cpu.exit.json",
+      "public_sha256": "ce6931b5c08a6cbd8af78c8dc28a9017b6e8b3a74adcc1acb907fb9d8c64d90f",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/replaced-directory/runs/test-server-cpu.exit.json",
+      "original_sha256": "ce6931b5c08a6cbd8af78c8dc28a9017b6e8b3a74adcc1acb907fb9d8c64d90f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--replaced-directory--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "5391d8ba85d6cc348f1fcf8af9255fbf6005bf6c580ec693b2fc4a161667cbd0",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/replaced-directory/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "0f8323b48fd546f8cb80af60ec7e5de513eae7209700c18020f3910a66590998"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-15--cpu_case_manifest.json",
+      "public_sha256": "dcd30a5a5de7ea87f1c36c12bcda26b4edb249031a2352e85f540db7cd36ac25",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-15/cpu_case_manifest.json",
+      "original_sha256": "dcd30a5a5de7ea87f1c36c12bcda26b4edb249031a2352e85f540db7cd36ac25"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-15--driver.actual_exit.json",
+      "public_sha256": "faaf2060c31bfc319b4bf5a7f50e6fbdf7bf5b59c193528c97a38e0ed4c5c1d2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-15/driver.actual_exit.json",
+      "original_sha256": "106557b734a9117f0ca5ffc56e30eafdb43c291f2465cfaf1b1d98256a4021b9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-15--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-15/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-15--runs--test-server-cpu.exit.json",
+      "public_sha256": "625f1f3cf5a7e388e4112146a5d7b88b9e00c4b017aaee45d527d9dfd2113b99",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-15/runs/test-server-cpu.exit.json",
+      "original_sha256": "625f1f3cf5a7e388e4112146a5d7b88b9e00c4b017aaee45d527d9dfd2113b99"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-15--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "bef80e241f4d28a8cb84e76fed17a0e7e87ebde548474d8d2ffb39912121edfd",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-15/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "0246d72e4a44c68e9661bc6b848d41aae5a2cb57f26ab160c997643d5b89ba9e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-2--cpu_case_manifest.json",
+      "public_sha256": "63f6f4c9da540d8e1572b4b4b55f04a40915f5afa643daa057b8887a59b5339c",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-2/cpu_case_manifest.json",
+      "original_sha256": "63f6f4c9da540d8e1572b4b4b55f04a40915f5afa643daa057b8887a59b5339c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-2--driver.actual_exit.json",
+      "public_sha256": "ed0ccbd91049f3e7aa0c732b1474f2378902b1dd500b01e782d4e1432f9ec488",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-2/driver.actual_exit.json",
+      "original_sha256": "c61962050b5968a28d960f5ef5e4b397eb5850a0105f0ffd4abf1eaad27507aa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-2--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-2/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-2--runs--test-server-cpu.exit.json",
+      "public_sha256": "5e3bf9e5269a3025d5d0657126c3219ab2420b77ae7ee92f6bb8bc2291bc022a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-2/runs/test-server-cpu.exit.json",
+      "original_sha256": "5e3bf9e5269a3025d5d0657126c3219ab2420b77ae7ee92f6bb8bc2291bc022a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--signal-2--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "7be351c50a01e3468f65eb50a9f5899d3da6b7356433262fbf160ab88e995eaf",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/signal-2/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "460185bbd4d78af3456aa7d1348b7129d46eb466a16c637429a5e98452994624"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-15--cpu_case_manifest.json",
+      "public_sha256": "27e93050cc62b9aac719220c1cdc347abb71aba477b2bff5d52d052bb72c14d6",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-15/cpu_case_manifest.json",
+      "original_sha256": "27e93050cc62b9aac719220c1cdc347abb71aba477b2bff5d52d052bb72c14d6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-15--driver.actual_exit.json",
+      "public_sha256": "faaf2060c31bfc319b4bf5a7f50e6fbdf7bf5b59c193528c97a38e0ed4c5c1d2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-15/driver.actual_exit.json",
+      "original_sha256": "106557b734a9117f0ca5ffc56e30eafdb43c291f2465cfaf1b1d98256a4021b9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-15--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-15/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-15--runs--test-server-cpu.exit.json",
+      "public_sha256": "4a7d5f243f01a875413c6a704a91df1939e8017556869f27786f8bf722e9e56e",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-15/runs/test-server-cpu.exit.json",
+      "original_sha256": "4a7d5f243f01a875413c6a704a91df1939e8017556869f27786f8bf722e9e56e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-15--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "e0bcd79a69deadba654c55965752fdc9db33674313a524afc56465ba263fda55",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-15/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "81b171fa9cd2799b6a9e721c5d58ea3e0a1ba46a767ae79ec93500f04767bd64"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-2--cpu_case_manifest.json",
+      "public_sha256": "9987f38b2b64111724cdf2f013cc910c3b407a155957651cde8e150adaa66875",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-2/cpu_case_manifest.json",
+      "original_sha256": "9987f38b2b64111724cdf2f013cc910c3b407a155957651cde8e150adaa66875"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-2--driver.actual_exit.json",
+      "public_sha256": "ed0ccbd91049f3e7aa0c732b1474f2378902b1dd500b01e782d4e1432f9ec488",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-2/driver.actual_exit.json",
+      "original_sha256": "c61962050b5968a28d960f5ef5e4b397eb5850a0105f0ffd4abf1eaad27507aa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-2--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-2/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-2--runs--test-server-cpu.exit.json",
+      "public_sha256": "3bee2273cfb1794089bb564b8b52c6f80edfe6e1f12e27a7d6387161b6e1ceb2",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-2/runs/test-server-cpu.exit.json",
+      "original_sha256": "3bee2273cfb1794089bb564b8b52c6f80edfe6e1f12e27a7d6387161b6e1ceb2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--slow-signal-2--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "5830ae811fbda85c77cf046d2c985e0b121a80611886a7616a53e64423e2468d",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/slow-signal-2/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "808daafd213327be6fe6d96803afd3c07a354598ba185fbc0f6efb79cf535b55"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_loaded--cpu_case_manifest.json",
+      "public_sha256": "926dc76644379f4bea73d7dd3252a73234f2c162ccba564b6f74b587fbd78a2d",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_loaded/cpu_case_manifest.json",
+      "original_sha256": "926dc76644379f4bea73d7dd3252a73234f2c162ccba564b6f74b587fbd78a2d"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_loaded--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "032f3b2b3fc8831a912675005f97ebc0682afcf947d452a2424258a04633f84a",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_loaded/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "032f3b2b3fc8831a912675005f97ebc0682afcf947d452a2424258a04633f84a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_loaded--runs--test-server-cpu.exit.json",
+      "public_sha256": "600ed40f8530beb8af9763becbe5d8ee3615f3bddcb0f0ba64e0e5605f777d57",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_loaded/runs/test-server-cpu.exit.json",
+      "original_sha256": "600ed40f8530beb8af9763becbe5d8ee3615f3bddcb0f0ba64e0e5605f777d57"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_loaded--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "81f8aa8dcef37e97a3b532b905a1fd45da6c52dab252b178003786a220f34e27",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_loaded/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "71233e8c52a5e61440402a559b045227acbcc53e413c0a9de1e1bf854d13114e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_mkdir--cpu_case_manifest.json",
+      "public_sha256": "54fb6db49ccb8202d9751e57cd3a57aa7d9323cc6cabd8cd1017ac2f45d0ac40",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_mkdir/cpu_case_manifest.json",
+      "original_sha256": "54fb6db49ccb8202d9751e57cd3a57aa7d9323cc6cabd8cd1017ac2f45d0ac40"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_mkdir--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "cb393adca0857cbf9c7498ce371247e2d7511e4b0cf801ac97d157321f3501b0",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_mkdir/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "cb393adca0857cbf9c7498ce371247e2d7511e4b0cf801ac97d157321f3501b0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_mkdir--runs--test-server-cpu.exit.json",
+      "public_sha256": "1dc756fc6354335ede2d9e2402c3a615a7952f861e5970c9027c7343587885dd",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_mkdir/runs/test-server-cpu.exit.json",
+      "original_sha256": "1dc756fc6354335ede2d9e2402c3a615a7952f861e5970c9027c7343587885dd"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--timeout-no_mkdir--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "e339cc64e31140dc5be0607cdd0a42a30d5288237949d871c0f542e517accd91",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/timeout-no_mkdir/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "82deef82b4fd5360c07f8d44409de1e5162f7c5ec33f81466cf66078f66464b3"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--wrong-loaded-identity--cpu_case_manifest.json",
+      "public_sha256": "6a2f8672c122093e930ac1fc0b89487956451c9048b05a6b5a117b9569ffeb3c",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/cpu_case_manifest.json",
+      "original_sha256": "6a2f8672c122093e930ac1fc0b89487956451c9048b05a6b5a117b9569ffeb3c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--wrong-loaded-identity--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "a5b6f80a14060cfebe50e36bd2fc850e58bc7a7a1a37674d49d617eaccc1c499",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "a5b6f80a14060cfebe50e36bd2fc850e58bc7a7a1a37674d49d617eaccc1c499"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--wrong-loaded-identity--runs--test-server-cpu.exit.json",
+      "public_sha256": "d8f60b24ee5317eaffe3318f1f5849e0c066ed572b469f74ef91722ffaa4df2b",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/runs/test-server-cpu.exit.json",
+      "original_sha256": "d8f60b24ee5317eaffe3318f1f5849e0c066ed572b469f74ef91722ffaa4df2b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--normal-startup--wrong-loaded-identity--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "e70752ad0cbf2df89f588339f706ad5e31274bd3d51d16806ad2564b8e6bbdac",
+      "original_id": "operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "e4c080cc23b878ae09e1a4ad2e4c3ec3b7829bfd89db5fd0c70352d0970daad5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-child_pid--cpu_case_manifest.json",
+      "public_sha256": "0fdad9f8cf3701f9196d26e580dcad4ef946485020c70e833726b41a0f747aef",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-child_pid/cpu_case_manifest.json",
+      "original_sha256": "0fdad9f8cf3701f9196d26e580dcad4ef946485020c70e833726b41a0f747aef"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-child_pid--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-child_pid/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-child_pid--runs--test-server-cpu.exit.json",
+      "public_sha256": "2ff2f6a31c6b352fc1f2fe4b29558614a93faed2acfd9f944be7454cad45c14a",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-child_pid/runs/test-server-cpu.exit.json",
+      "original_sha256": "2ff2f6a31c6b352fc1f2fe4b29558614a93faed2acfd9f944be7454cad45c14a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-child_pid--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "95ce62ee8951df1795a074f539e129418ad7a7cd0887acb79de91cfbba0033c7",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-child_pid/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "4c8246779504f264710f74e4b68c3e465f8989f866832f9cce0060e083dd30a5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-command--cpu_case_manifest.json",
+      "public_sha256": "83fc3ba538a01a1f729ae1b357e44148d3d8e400ca27acc3d50a5d8a201ee1c5",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-command/cpu_case_manifest.json",
+      "original_sha256": "83fc3ba538a01a1f729ae1b357e44148d3d8e400ca27acc3d50a5d8a201ee1c5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-command--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-command/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-command--runs--test-server-cpu.exit.json",
+      "public_sha256": "020a0409d4c2fc12769df1d70bacd19a97d766b90290008ea5d4ac3ec3866ff2",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-command/runs/test-server-cpu.exit.json",
+      "original_sha256": "020a0409d4c2fc12769df1d70bacd19a97d766b90290008ea5d4ac3ec3866ff2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-command--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "2d831f3cca03f7d42b878972a7bfba691c10ff1b3d9ae9296b81f10e119221b5",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-command/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "1f8c47bf93a008126d11fea1cfc9b8e39227641cb6cce5b862585c322ed9036e"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-output-path--cpu_case_manifest.json",
+      "public_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-output-path/cpu_case_manifest.json",
+      "original_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-wrapper_pid--cpu_case_manifest.json",
+      "public_sha256": "52f626e981c5b33cb7d68618c7b135bfe831721271a3d2267e0ac0101c216376",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-wrapper_pid/cpu_case_manifest.json",
+      "original_sha256": "52f626e981c5b33cb7d68618c7b135bfe831721271a3d2267e0ac0101c216376"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-wrapper_pid--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-wrapper_pid/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-wrapper_pid--runs--test-server-cpu.exit.json",
+      "public_sha256": "657d24f740ffb7a364293c50d8ee7b2b8c7888ca2a12779dd9166910bcbe1963",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-wrapper_pid/runs/test-server-cpu.exit.json",
+      "original_sha256": "657d24f740ffb7a364293c50d8ee7b2b8c7888ca2a12779dd9166910bcbe1963"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--bad-wrapper_pid--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "8617e0f2c52f1022edc99880a21d0fd877b4cdfef47e548fdfb8e8b9678351ce",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/bad-wrapper_pid/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "723324b5e8deaad43254636937abb34fa376a0f82574e065afb14bd07df9292b"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--changed-stage--cpu_case_manifest.json",
+      "public_sha256": "a08fbcbefa0595576a183b8a124abc86fd72920f6ac81eb20e2e0c6bd4d71b92",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/changed-stage/cpu_case_manifest.json",
+      "original_sha256": "a08fbcbefa0595576a183b8a124abc86fd72920f6ac81eb20e2e0c6bd4d71b92"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--changed-stage--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/changed-stage/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--changed-stage--runs--test-server-cpu.exit.json",
+      "public_sha256": "580c293b5ada3ced11679acce6fbce3ae3366d275b225ac32d6abf6e0073b923",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/changed-stage/runs/test-server-cpu.exit.json",
+      "original_sha256": "580c293b5ada3ced11679acce6fbce3ae3366d275b225ac32d6abf6e0073b923"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--changed-stage--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "ba79ddf76463afbbddd0a63546f58a777304867f6761ce2306d7b220ebe49547",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/changed-stage/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "fd464503f911155b8b43c768b5ae063e2e49d78da56efd8d1e0c47b1b70d0329"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--child-symlink--cpu_case_manifest.json",
+      "public_sha256": "84f4b1134f00e525f69abb52106016598ff3f10741be017ba06de91c89eb248f",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/child-symlink/cpu_case_manifest.json",
+      "original_sha256": "84f4b1134f00e525f69abb52106016598ff3f10741be017ba06de91c89eb248f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--child-symlink--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/child-symlink/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--child-symlink--runs--test-server-cpu.exit.json",
+      "public_sha256": "43b4c37d310faaa2498e48ff15bb3617f5cea25d0a28d52d5065e9b0c2175efb",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/child-symlink/runs/test-server-cpu.exit.json",
+      "original_sha256": "43b4c37d310faaa2498e48ff15bb3617f5cea25d0a28d52d5065e9b0c2175efb"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--child-symlink--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "847cef93e652469bc83224f95fa2a7653c36af58ffb3dd01193959017fef3c0d",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/child-symlink/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "f4d4ceb8f02971360e324e7c1aa8f06252fad8d93dc5a0c7ec53009a1ae2f07c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--cross-filesystem-publication--cpu_case_manifest.json",
+      "public_sha256": "a49deced0931dd14048505fe6f93c49d044a6ca20f3107889088d565981a2347",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/cross-filesystem-publication/cpu_case_manifest.json",
+      "original_sha256": "a49deced0931dd14048505fe6f93c49d044a6ca20f3107889088d565981a2347"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-admission--cpu_case_manifest.json",
+      "public_sha256": "02e2d267ccb6f00daf3e84e6f4457cc004a57dea6912aa48ebc4622158470d14",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-admission/cpu_case_manifest.json",
+      "original_sha256": "02e2d267ccb6f00daf3e84e6f4457cc004a57dea6912aa48ebc4622158470d14"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-admission--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "28eb0e6d19d6c5e026daadebc89b70805e8827e890b40b1fc6b8ae9bfc9c65d3",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-admission/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "28eb0e6d19d6c5e026daadebc89b70805e8827e890b40b1fc6b8ae9bfc9c65d3"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-admission--runs--test-server-cpu.exit.json",
+      "public_sha256": "2fe30cb4ce08f5a94fd4c16afd65b13b382946122215e964f1a4040a55692465",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-admission/runs/test-server-cpu.exit.json",
+      "original_sha256": "2fe30cb4ce08f5a94fd4c16afd65b13b382946122215e964f1a4040a55692465"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-admission--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "384c09a575b29bb001104d4f6012742a0e5a4a6dee46005774497ecb261d9f0f",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-admission/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "085e9c5ec9d0a74e5d9e8fbfe737f647dc6acff85459c0c68194baca93caac71"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-session--cpu_case_manifest.json",
+      "public_sha256": "7c4c7a01eac56ec22503a3da20a1fe6ff9d3f29c1491c601c5fae280873cbb56",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-session/cpu_case_manifest.json",
+      "original_sha256": "7c4c7a01eac56ec22503a3da20a1fe6ff9d3f29c1491c601c5fae280873cbb56"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-session--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-session/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-session--runs--test-server-cpu.exit.json",
+      "public_sha256": "056ad97fc82482949ff2776cbfd3f3c6efc402188b087bda7c900857a008d50f",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-session/runs/test-server-cpu.exit.json",
+      "original_sha256": "056ad97fc82482949ff2776cbfd3f3c6efc402188b087bda7c900857a008d50f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--duplicate-session--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "41ac45d69eebf88290706fe91f63b4521a3e07a980d375f57291822e9f76773f",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/duplicate-session/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "5fbb73e628d69b6fa21912b97383acec7e05e83facacd0fb479bd7ab94cfa76a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--early-exit--cpu_case_manifest.json",
+      "public_sha256": "361e3924f89b936d476ae5067794d78d88bc3903eaeb5a346b71a588731821dc",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/early-exit/cpu_case_manifest.json",
+      "original_sha256": "361e3924f89b936d476ae5067794d78d88bc3903eaeb5a346b71a588731821dc"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--early-exit--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "f83666f4ea48454a9ba9aa854fc79f771fad255d0df044cb1eb9d5a4daf0ba4c",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/early-exit/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "f83666f4ea48454a9ba9aa854fc79f771fad255d0df044cb1eb9d5a4daf0ba4c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--early-exit--runs--test-server-cpu.exit.json",
+      "public_sha256": "e2824e947f9ad347d42254ad47d1081c2c06fc0193f4b64e68f5b229d8546f95",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/early-exit/runs/test-server-cpu.exit.json",
+      "original_sha256": "e2824e947f9ad347d42254ad47d1081c2c06fc0193f4b64e68f5b229d8546f95"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--early-exit--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "88a8b0ba0da47ba007e1b8fc834ab02f6d4abbd859586f0f2d977a267e3b0da9",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/early-exit/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "4aa9e9c285e9c1e33dda22a5ac113b2aa841c1ef9bc67a6faf150ffe5a49738f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--foreign-owner--cpu_case_manifest.json",
+      "public_sha256": "832e94fa6d3be138377a2e6a66cd7e7b6405814d29b9ca1c0c7302f440e5f9d8",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/foreign-owner/cpu_case_manifest.json",
+      "original_sha256": "832e94fa6d3be138377a2e6a66cd7e7b6405814d29b9ca1c0c7302f440e5f9d8"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--foreign-owner--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/foreign-owner/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--foreign-owner--runs--test-server-cpu.exit.json",
+      "public_sha256": "2777c760bce27e699872a314bebb2f173435d7cc704df4f3b798a3e3a8a83642",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/foreign-owner/runs/test-server-cpu.exit.json",
+      "original_sha256": "2777c760bce27e699872a314bebb2f173435d7cc704df4f3b798a3e3a8a83642"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--foreign-owner--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "fda499652e5241d47bc8f70a49bd880f5a81af4a6240fede1b7fddce48d69d4e",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/foreign-owner/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "7f8e9b22489c4e051d0cd99a34784d25f771cc31383fe92aaa870945b5a3b2f0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--ignored-signal--cpu_case_manifest.json",
+      "public_sha256": "d6ccf2d7d85cbe9143f71e3a1987a5c1d85a2ebcbe85c8adb5c12b0aed98c5a1",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/ignored-signal/cpu_case_manifest.json",
+      "original_sha256": "d6ccf2d7d85cbe9143f71e3a1987a5c1d85a2ebcbe85c8adb5c12b0aed98c5a1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--ignored-signal--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "a23d7de5126bc4bce3bbd6d97eaa024dda075995c7ec8de3c1db9c2bf4354037",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/ignored-signal/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "a23d7de5126bc4bce3bbd6d97eaa024dda075995c7ec8de3c1db9c2bf4354037"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--ignored-signal--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "da0a85ea4a27292d9d234c395474e6409f179b564a177da427c4f022b54064cd",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/ignored-signal/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "3b2925e89d9d67e7e62fbf97772e978b959d6aaf88294c709ffe9faf57be44a2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--normal--cpu_case_manifest.json",
+      "public_sha256": "3b1b7864557c80dce159963dd1f16d6d3a59a1e35e26f9dee5298c382746f0dd",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/normal/cpu_case_manifest.json",
+      "original_sha256": "3b1b7864557c80dce159963dd1f16d6d3a59a1e35e26f9dee5298c382746f0dd"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--normal--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/normal/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--normal--runs--test-server-cpu.exit.json",
+      "public_sha256": "648f543c7f110fb1f0a0a83fdd508afe3960fc64083c4025e6f303a41ab8d727",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/normal/runs/test-server-cpu.exit.json",
+      "original_sha256": "648f543c7f110fb1f0a0a83fdd508afe3960fc64083c4025e6f303a41ab8d727"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--normal--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "65c7543953317138749d785e29cc4bf46d35fd78cb902aca4817868bd5d215ff",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/normal/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "aed06502c1fd203609381e216ededbc6c1773a4ff13049c9c60c3cb95cea0fd3"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--partial-loaded-json--cpu_case_manifest.json",
+      "public_sha256": "aca1971bfe3b9285ee74108b12212c545012f24cd6407a8cb5df16df90aa0b3c",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/partial-loaded-json/cpu_case_manifest.json",
+      "original_sha256": "aca1971bfe3b9285ee74108b12212c545012f24cd6407a8cb5df16df90aa0b3c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--partial-loaded-json--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/partial-loaded-json/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--partial-loaded-json--runs--test-server-cpu.exit.json",
+      "public_sha256": "9fd34e2cbb2e0e9e67c65d57802724423ccb9b823a6f246258c2d77b813e8a84",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/partial-loaded-json/runs/test-server-cpu.exit.json",
+      "original_sha256": "9fd34e2cbb2e0e9e67c65d57802724423ccb9b823a6f246258c2d77b813e8a84"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--partial-loaded-json--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "d149abc7c8ad9873f30cfc22a69120bfa981bd1a93fe97d325f4e57edc8d899a",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/partial-loaded-json/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "b013fe949fb1ac54c786d0007360c84e53de78b59de5f0cba79c38d11c7434c6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--post-mkdir-failure--cpu_case_manifest.json",
+      "public_sha256": "afd8e6de00dd30693076c3842311d485801a139acc77d8bd61841da1e2e12278",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/cpu_case_manifest.json",
+      "original_sha256": "afd8e6de00dd30693076c3842311d485801a139acc77d8bd61841da1e2e12278"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--post-mkdir-failure--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "ead10143544cbffa7edc7442ef9836f357987af8da0398f18c037801d14b5aaa",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "ead10143544cbffa7edc7442ef9836f357987af8da0398f18c037801d14b5aaa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--post-mkdir-failure--runs--test-server-cpu.exit.json",
+      "public_sha256": "7ae00770036e223ef49a1ecc8bb2b28b4277d8a17b0e319f4270ec463ef44290",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/runs/test-server-cpu.exit.json",
+      "original_sha256": "7ae00770036e223ef49a1ecc8bb2b28b4277d8a17b0e319f4270ec463ef44290"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--post-mkdir-failure--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "9ddf7eb83104bc8d07cf443aa0ce2f0e6807e3e2303e3f0df71709dea325a2a4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/post-mkdir-failure/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "f5d395ac7bcaf7563547beadbfff79a3e599f6c2543da0c7e0a920479d7a24a7"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--preexisting--cpu_case_manifest.json",
+      "public_sha256": "1654daf7f0b77d20f2e95362f37f88677f987bfc8be48eb4d618859b07ee8c00",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/preexisting/cpu_case_manifest.json",
+      "original_sha256": "1654daf7f0b77d20f2e95362f37f88677f987bfc8be48eb4d618859b07ee8c00"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--preexisting-symlink--cpu_case_manifest.json",
+      "public_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/preexisting-symlink/cpu_case_manifest.json",
+      "original_sha256": "32e3dcd25325f1e2f29d32325c136382b6f409bf5e63881e5184bb45964c608a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--process-identity-changed--cpu_case_manifest.json",
+      "public_sha256": "3a8fbce8677fec1dd7b9b0c824f17f5a3fe7fd1749f57272900aa97f6e907099",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/process-identity-changed/cpu_case_manifest.json",
+      "original_sha256": "3a8fbce8677fec1dd7b9b0c824f17f5a3fe7fd1749f57272900aa97f6e907099"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--process-identity-changed--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/process-identity-changed/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--process-identity-changed--runs--test-server-cpu.exit.json",
+      "public_sha256": "effe5b33186bdb05490c862a65ef356c2a5a8df8502b5bc05ff8a331aebbecce",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/process-identity-changed/runs/test-server-cpu.exit.json",
+      "original_sha256": "effe5b33186bdb05490c862a65ef356c2a5a8df8502b5bc05ff8a331aebbecce"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--process-identity-changed--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "87787d9f3498ea455192298cb2bfa424ed9a564f892af6ef4b661be9560a2bee",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/process-identity-changed/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "16f27a23df08383a8526d6b47ec7f08f89584ecc400926049fdc80100b6f9656"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--replaced-directory--cpu_case_manifest.json",
+      "public_sha256": "6d469198359aff1e2ca00832ca4445cd6949d08b1aa1b2e01a19ad1ca55864a7",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/replaced-directory/cpu_case_manifest.json",
+      "original_sha256": "6d469198359aff1e2ca00832ca4445cd6949d08b1aa1b2e01a19ad1ca55864a7"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--replaced-directory--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/replaced-directory/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "d63335ca378e324e4aaa02f60e801f4386154b521794ce2513bc1c80241881f4"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--replaced-directory--runs--test-server-cpu.exit.json",
+      "public_sha256": "750f8f61bf6d18dab13cae44dc99cd458608f7e177f6e5677d0fe52d1cffbc56",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/replaced-directory/runs/test-server-cpu.exit.json",
+      "original_sha256": "750f8f61bf6d18dab13cae44dc99cd458608f7e177f6e5677d0fe52d1cffbc56"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--replaced-directory--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "07ad97f941ef7024507faf78dc715a4ad9610d139de495958460b63e6e9b1c14",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/replaced-directory/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "d4f5d9352591c8c1fb9d60131de8048256f84a10dc88ab7dd7337cbc9d20db9c"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-15--cpu_case_manifest.json",
+      "public_sha256": "602966ca06b17bfb888908a7940810e3b6840e143b5924cb34745f3bcf047042",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-15/cpu_case_manifest.json",
+      "original_sha256": "602966ca06b17bfb888908a7940810e3b6840e143b5924cb34745f3bcf047042"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-15--driver.actual_exit.json",
+      "public_sha256": "faaf2060c31bfc319b4bf5a7f50e6fbdf7bf5b59c193528c97a38e0ed4c5c1d2",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-15/driver.actual_exit.json",
+      "original_sha256": "106557b734a9117f0ca5ffc56e30eafdb43c291f2465cfaf1b1d98256a4021b9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-15--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-15/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-15--runs--test-server-cpu.exit.json",
+      "public_sha256": "721dc44e0361bb326e39a28bba9458bedd2f71b9ecac86d59856354bbbc1bc59",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-15/runs/test-server-cpu.exit.json",
+      "original_sha256": "721dc44e0361bb326e39a28bba9458bedd2f71b9ecac86d59856354bbbc1bc59"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-15--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "6782f96069b93b29cf6a08348c0442180b8bb92dcb9520c19f0d57ddabef99a7",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-15/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "2d6d62e0bc0ca2518c2a572e97cf4317611fc6d91299e2de6224d7a8f07cfe36"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-2--cpu_case_manifest.json",
+      "public_sha256": "dd72d63f731a72966fa14c258a5d76a0c65d458a88e016e5a50d9ce73e40fb30",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-2/cpu_case_manifest.json",
+      "original_sha256": "dd72d63f731a72966fa14c258a5d76a0c65d458a88e016e5a50d9ce73e40fb30"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-2--driver.actual_exit.json",
+      "public_sha256": "ed0ccbd91049f3e7aa0c732b1474f2378902b1dd500b01e782d4e1432f9ec488",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-2/driver.actual_exit.json",
+      "original_sha256": "c61962050b5968a28d960f5ef5e4b397eb5850a0105f0ffd4abf1eaad27507aa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-2--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-2/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-2--runs--test-server-cpu.exit.json",
+      "public_sha256": "bf7072f9d1e23abb9ccf318bb4efb9b8a56116c63f28cb9a179b4825d9538ba5",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-2/runs/test-server-cpu.exit.json",
+      "original_sha256": "bf7072f9d1e23abb9ccf318bb4efb9b8a56116c63f28cb9a179b4825d9538ba5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--signal-2--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "58196d690e6bf0dbfe27d297e0bc609d660dba5189f8cd112d4d39d841f4e02c",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/signal-2/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "34c500a8bbb561ca09d5e70268b15221f69cea90bbebac5a96b3df11da54eac5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-15--cpu_case_manifest.json",
+      "public_sha256": "feb819bf18b1c989e2fcfd3ac26067ca8684d50ae9e449a8a59e2e6c8f9b4547",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-15/cpu_case_manifest.json",
+      "original_sha256": "feb819bf18b1c989e2fcfd3ac26067ca8684d50ae9e449a8a59e2e6c8f9b4547"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-15--driver.actual_exit.json",
+      "public_sha256": "faaf2060c31bfc319b4bf5a7f50e6fbdf7bf5b59c193528c97a38e0ed4c5c1d2",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-15/driver.actual_exit.json",
+      "original_sha256": "106557b734a9117f0ca5ffc56e30eafdb43c291f2465cfaf1b1d98256a4021b9"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-15--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-15/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "3250dcb0976bcc91613b5b617fe95fead9641b22cf0cf73b5fddf1d7920b3bd2"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-15--runs--test-server-cpu.exit.json",
+      "public_sha256": "6b0eb5b9c19afb05b2624072d207f8e6a8b5fa7ddb04013fa21fba3211059e31",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-15/runs/test-server-cpu.exit.json",
+      "original_sha256": "6b0eb5b9c19afb05b2624072d207f8e6a8b5fa7ddb04013fa21fba3211059e31"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-15--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "4a7bb69a9dbdc17d946d83067f9ae42449f477df672ad115fe4807efecbf62c4",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-15/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "293c731ec63d33638ef38024ef17fd38abf221e367912ea4044356fd5a60183a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-2--cpu_case_manifest.json",
+      "public_sha256": "4bd8681e8b793d0f4845eb5bbdd364419a337445c055471f644071fb95cd2784",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-2/cpu_case_manifest.json",
+      "original_sha256": "4bd8681e8b793d0f4845eb5bbdd364419a337445c055471f644071fb95cd2784"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-2--driver.actual_exit.json",
+      "public_sha256": "ed0ccbd91049f3e7aa0c732b1474f2378902b1dd500b01e782d4e1432f9ec488",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-2/driver.actual_exit.json",
+      "original_sha256": "c61962050b5968a28d960f5ef5e4b397eb5850a0105f0ffd4abf1eaad27507aa"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-2--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-2/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "1de535f4c36233f9a00e3097bca6d6cf61d7293545e86673a09975e782abdca5"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-2--runs--test-server-cpu.exit.json",
+      "public_sha256": "6d3bf589809ec090daf36c6632d8deb20d8084ad7990c724290d1bd7f7a19f9f",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-2/runs/test-server-cpu.exit.json",
+      "original_sha256": "6d3bf589809ec090daf36c6632d8deb20d8084ad7990c724290d1bd7f7a19f9f"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--slow-signal-2--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "d2e7ba64439b875029e322be8b239cccd6c911256bb3530bb53ee62d56f1a8fa",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/slow-signal-2/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "e5bf3fc42e9a4f43e713cd9ceb45c4c45d5c8eaea233a4dfbae11e1daaa5af31"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_loaded--cpu_case_manifest.json",
+      "public_sha256": "f0d0e1a29228eee7d54e74fc4dcc1a051f11268083a3c4712389b58d1a80c9a6",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_loaded/cpu_case_manifest.json",
+      "original_sha256": "f0d0e1a29228eee7d54e74fc4dcc1a051f11268083a3c4712389b58d1a80c9a6"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_loaded--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "032f3b2b3fc8831a912675005f97ebc0682afcf947d452a2424258a04633f84a",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_loaded/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "032f3b2b3fc8831a912675005f97ebc0682afcf947d452a2424258a04633f84a"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_loaded--runs--test-server-cpu.exit.json",
+      "public_sha256": "5b15901f55d2f98064cfab1d2d42a00ac172c5e2b585c545755c3e6a70a0d905",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_loaded/runs/test-server-cpu.exit.json",
+      "original_sha256": "5b15901f55d2f98064cfab1d2d42a00ac172c5e2b585c545755c3e6a70a0d905"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_loaded--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "3c313d46d4e5da36f85ccbf26626ea43a683dfec32dd62f805aca3ffd05fb94d",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_loaded/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "37009e14aff0dfb227f74ab8d0a6da052d155fba908b71065163535beb2ea703"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_mkdir--cpu_case_manifest.json",
+      "public_sha256": "4458b65c1b38882fcb19339d5ea72598e45188ce23fbee5f83293f4f225a2e07",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_mkdir/cpu_case_manifest.json",
+      "original_sha256": "4458b65c1b38882fcb19339d5ea72598e45188ce23fbee5f83293f4f225a2e07"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_mkdir--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "cb393adca0857cbf9c7498ce371247e2d7511e4b0cf801ac97d157321f3501b0",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_mkdir/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "cb393adca0857cbf9c7498ce371247e2d7511e4b0cf801ac97d157321f3501b0"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_mkdir--runs--test-server-cpu.exit.json",
+      "public_sha256": "8e05f6514334989e030ecf2d8208fbd271fca7b48f44155205d0cc6edd37a5db",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_mkdir/runs/test-server-cpu.exit.json",
+      "original_sha256": "8e05f6514334989e030ecf2d8208fbd271fca7b48f44155205d0cc6edd37a5db"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--timeout-no_mkdir--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "5d707029cee810ff62e029b58fe2390916c85a103e53639b2132533fae57d5e9",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/timeout-no_mkdir/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "8194907e57f9a7c2cee2563222fc22783d425e00a3c2756cd0d5d97fea2da230"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--wrong-loaded-identity--cpu_case_manifest.json",
+      "public_sha256": "f8a24b8a67c6abedd859566283824cef81503198dab4e1ab491352296b2db9fc",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/wrong-loaded-identity/cpu_case_manifest.json",
+      "original_sha256": "f8a24b8a67c6abedd859566283824cef81503198dab4e1ab491352296b2db9fc"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--wrong-loaded-identity--operator--test-server-cpu--supervisor_exit.json",
+      "public_sha256": "a5b6f80a14060cfebe50e36bd2fc850e58bc7a7a1a37674d49d617eaccc1c499",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/wrong-loaded-identity/operator/test-server-cpu/supervisor_exit.json",
+      "original_sha256": "a5b6f80a14060cfebe50e36bd2fc850e58bc7a7a1a37674d49d617eaccc1c499"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--wrong-loaded-identity--runs--test-server-cpu.exit.json",
+      "public_sha256": "436a2c3189d96f550b0e1167b0e7ba0b731e1c2858bf2c4c7e69a36bc85939d7",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/wrong-loaded-identity/runs/test-server-cpu.exit.json",
+      "original_sha256": "436a2c3189d96f550b0e1167b0e7ba0b731e1c2858bf2c4c7e69a36bc85939d7"
+    },
+    {
+      "public_path": "remote/issue20-cpu-v4--optimized-startup--wrong-loaded-identity--runs--test-server-cpu.exit.started.json",
+      "public_sha256": "b0628a459fafbe2a6c573430454e1e4ff6a5525d65b63e330f1e1183e9e02fd8",
+      "original_id": "operator/issue20-cpu-v4/optimized-startup/wrong-loaded-identity/runs/test-server-cpu.exit.started.json",
+      "original_sha256": "9992d46246b0868056b8d9902a166212f04bd5d875f5e44211a25822b12fe86b"
+    },
+    {
+      "public_path": "remote/normal-suite-log.json",
+      "public_sha256": "47edbc79d71644e0be5869f81dbf8d2e1614bdd997e06bfa0963a26e37ebed55",
+      "original_id": "operator/issue20-cpu-v4/normal.stderr.private.txt",
+      "original_sha256": "68bbed5c5a4e27d15b586b90278e41af55a4d9e6af6f4c1be24906f0bf84ac4e"
+    },
+    {
+      "public_path": "remote/optimized-suite-log.json",
+      "public_sha256": "e327684d22c9cdc7b488ef270e3adb7c7c1dcd16d9062d489d9b13323d7f478a",
+      "original_id": "operator/issue20-cpu-v4/optimized.stderr.private.txt",
+      "original_sha256": "29476efc71166d613703b83614d1786a4a653f715967c8e7cd10d268974c0ec9"
+    },
+    {
+      "public_path": "failures/corelab-v1-signal-race.json",
+      "public_sha256": "1e01f96b53b946731e9e97c05285722859adbdda2ad086019e1057daf529003b",
+      "original_id": "operator/issue20-cpu-01/normal.stderr.private.txt",
+      "original_sha256": "cf81f31caf4f49c120b81697782f3acc173527029b9f86c52c9a2c6b7df45a51"
+    },
+    {
+      "public_path": "remote_summary.json",
+      "public_sha256": "c2e7b7d726e99152cef9257fee127c00ee7f04021c843c875fab2571d3156ed3",
+      "original_id": "operator/issue20-cpu-v4/summary.json",
+      "original_sha256": "c2e7b7d726e99152cef9257fee127c00ee7f04021c843c875fab2571d3156ed3"
+    }
+  ],
+  "tested_code_head": "4d46e7550596263df35fa8cc1a5419b492e8a067"
+}

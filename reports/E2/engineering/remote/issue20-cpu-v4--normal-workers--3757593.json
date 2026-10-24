@@ -1,0 +1,49 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_duplicate_success_and_failure_close_are_idempotent",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "PIPE_EOF",
+    "worker_pid": 3757593,
+    "worker_returncode": 0,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2603882.95815725,
+        "close_token": "31f159fdba26420b8ffdfd1bd3cac7a8"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2603882.95825924
+      },
+      {
+        "event": "EOF",
+        "parent_monotonic": 2603882.958274227,
+        "partial_bytes": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2603882.969618562
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2603882.969634772
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "31f159fdba26420b8ffdfd1bd3cac7a8",
+        "worker_pid": 3757593,
+        "received_monotonic": 2603882.958184876
+      }
+    ],
+    "initial_failure": "PIPE_EOF"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ignored_term_requires_kill_and_remains_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_KILL",
+    "worker_pid": 1827242,
+    "worker_returncode": -9,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": true,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 187698.782405339,
+        "close_token": "24fafaf66f454f7690b5ea499d44ad86"
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 187699.082782019
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 187699.483252893
+      },
+      {
+        "event": "KILL_SENT",
+        "parent_monotonic": 187699.633528245
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 187699.634949983
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 187699.634966801
+      }
+    ],
+    "worker_receipts": [],
+    "initial_failure": "FINALIZER_TIMEOUT"
+  }
+}

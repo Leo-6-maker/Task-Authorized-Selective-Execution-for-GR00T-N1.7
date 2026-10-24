@@ -1,0 +1,58 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_finalizer_failure_preserves_nonzero_exit_and_receipt",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FINALIZER_ERROR",
+    "worker_pid": 1827229,
+    "worker_returncode": 1,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 187697.801786338,
+        "close_token": "77fd6a7042a6494f86de1d98663f4065"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 187697.80187604
+      },
+      {
+        "event": "FINALIZER_ERROR",
+        "parent_monotonic": 187697.802006153
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 187697.815064317
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 187697.81508045
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "77fd6a7042a6494f86de1d98663f4065",
+        "worker_pid": 1827229,
+        "received_monotonic": 187697.801820125
+      },
+      {
+        "status": "CLOSE_ERROR",
+        "close_token": "77fd6a7042a6494f86de1d98663f4065",
+        "worker_pid": 1827229,
+        "native_finalized": false,
+        "error_type": "RuntimeError",
+        "received_monotonic": 187697.801820125,
+        "finalizer_started_monotonic": 187697.80184314,
+        "finalizer_finished_monotonic": 187697.801898872
+      }
+    ],
+    "initial_failure": "FINALIZER_ERROR"
+  }
+}

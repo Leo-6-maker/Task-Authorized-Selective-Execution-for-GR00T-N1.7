@@ -1,0 +1,42 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_backpressured_close_request_cannot_block_parent_send",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_TERM",
+    "worker_pid": 3757589,
+    "worker_returncode": -15,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2603882.246925015,
+        "close_token": "aca9b450e63e4da1b849e94b0a6073bb"
+      },
+      {
+        "event": "SEND_ERROR",
+        "parent_monotonic": 2603882.246948366,
+        "error_type": "BlockingIOError"
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 2603882.647047842
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2603882.648735816
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2603882.648752898
+      }
+    ],
+    "worker_receipts": [],
+    "initial_failure": "PIPE_SEND_ERROR"
+  }
+}
