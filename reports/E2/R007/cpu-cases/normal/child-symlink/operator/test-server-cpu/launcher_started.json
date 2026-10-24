@@ -1,0 +1,16 @@
+{
+  "wrapper_pid": 1655950,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-u",
+    "<PRIVATE>/cpu-a904e267/normal/cases/child-symlink/cpu_proxy.py",
+    "--output",
+    "<PRIVATE>/cpu-a904e267/normal/cases/child-symlink/runs/test-server-cpu",
+    "--port",
+    "5562",
+    "--mode",
+    "symlink"
+  ],
+  "staged_admission_sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6",
+  "output_absent_at_spawn": true
+}

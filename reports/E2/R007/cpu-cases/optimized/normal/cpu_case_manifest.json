@@ -1,0 +1,76 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "operator/test-server-cpu/admission_published.json",
+      "bytes": 363,
+      "sha256": "3e7c4d4073808231f78e044b1dd285c8768f056e3235cb4e3dfc743e41115bc8"
+    },
+    {
+      "path": "operator/test-server-cpu/launcher_started.json",
+      "bytes": 607,
+      "sha256": "109260affb554bc754392f992d40bdfa02033faa2f658861cc7145f51fb00454"
+    },
+    {
+      "path": "operator/test-server-cpu/server_ready.json",
+      "bytes": 345,
+      "sha256": "15e2f143cc74f65ef19937e13c6cf70810ee46010ab14cb6f7b5c801abe16305"
+    },
+    {
+      "path": "operator/test-server-cpu/stderr.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/supervisor_exit.json",
+      "bytes": 260,
+      "sha256": "e26b4723c7694f197c973ad8f4e5001d6a034b6aa8b4d8b56c34421dce0a46d1"
+    },
+    {
+      "path": "operator/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu/creation.json",
+      "bytes": 107,
+      "sha256": "73f100fe7426b73c28977c8082269ab59d08fc99b46410fe3743e015476d9629"
+    },
+    {
+      "path": "runs/test-server-cpu/loaded.json",
+      "bytes": 103,
+      "sha256": "b15dd63206c5e3fcc91da84945f27c7f3aa5769f371d7211c5e158c367f9ccd3"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.publish-source.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.json",
+      "bytes": 146,
+      "sha256": "18b9b8d210fe7eb7339a5acb2259fb7c8ef549202de7deaf0d576490a6d628e5"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.started.json",
+      "bytes": 556,
+      "sha256": "53181dee7f260a029dc5fcc08b4b89062f987104d97d964daeab62788f8fde30"
+    }
+  ],
+  "TEST_reservations": 0
+}

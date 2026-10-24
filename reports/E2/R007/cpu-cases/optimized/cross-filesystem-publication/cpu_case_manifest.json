@@ -1,0 +1,21 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.json",
+      "bytes": 36,
+      "sha256": "db5cf80118d7eebb0bba115bfc0565918aabf8cf54925ea54f3cbeffcea8a532"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.publish-source.json",
+      "bytes": 36,
+      "sha256": "db5cf80118d7eebb0bba115bfc0565918aabf8cf54925ea54f3cbeffcea8a532"
+    }
+  ],
+  "TEST_reservations": 0
+}

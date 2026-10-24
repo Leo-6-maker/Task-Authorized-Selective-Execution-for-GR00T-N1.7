@@ -1,5 +1,12 @@
 # 当前状态索引
 
+## Issue #14 — READY_FOR_R007_FIX_REVIEW / TEST_EXECUTION_SUSPENDED
+
+R007 允许 TEST server launcher 目录与 admission 交接的 CPU 修复；旧 R006 已由 main 暂停。修改仅涉及 launcher 与新增 CPU 集成测试，native server/scientific configs 保持不变。最终固定代码 `a904e2678a3c511e36580a173e77b9c72521e093` 普通与 `-O` **89/89、真实suite子进程退出0**，包括原71项和18项新检查。未启动GPU、模型、仿真或真实TEST；上次已核验TEST0/120，本轮新增消耗0。
+
+[修复交接](../reports/E2/R007/R007_FIX_HANDOFF.md)列出精确代码/收据、保全hash及限制：当前Corelab SSH超时，最新远端现场刷新和新CPU原件远端副本尚未完成；保留快照审计不是新远端核验。唯一下一步为GPT审核新Head并决定是否签发R008；任何将来真实运行之前必须恢复只读现场核对。下方R006/Issue12原授权文字均为历史，不覆盖暂停决定。
+
+
 ## Issue #12 — R006 authorized, execution stopped before model load
 
 R006/grant commit `6c5d6c69e9abecf66999eab318b6d8c8a1b676a6` authorizes exact execution Head `3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964`; PR #11 stays open/unmerged. Current grant admission/resource/source/model/official-init checks passed. The first frozen server launch hit a directory-ownership contract conflict and exited1 before torch/model load. R006's stop rule was applied: **TEST0/120 reserved, all120 unstarted, no model requests/simulation**. Runtime code and scientific freeze remain unchanged. No new name, retry, bypass or grant edit.

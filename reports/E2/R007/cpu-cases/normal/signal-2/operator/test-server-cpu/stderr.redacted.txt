@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<PRIVATE>/cpu-a904e267/normal/cases/signal-2/cpu_proxy.py", line 28, in <module>
+    if a.mode in ['hold','ignore_signal']:time.sleep(30)
+                                          ^^^^^^^^^^^^^^
+KeyboardInterrupt

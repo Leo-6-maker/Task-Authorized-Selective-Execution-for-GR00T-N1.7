@@ -1,0 +1,18 @@
+{
+  "mode": "normal",
+  "source_sha": "08c6e8dd00e2b597c152ab03aa922323c40d8a6d",
+  "wrapper_exit": 0,
+  "actual_suite_child_exit": 0,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "scope": "CPU_SYNTHETIC_PROXY_AND_EXISTING_REGRESSION_NO_GPU_MODEL_SIM_TEST",
+  "stderr_sha256": "e3a81ae872a5cf0b9066a780c34e8602fc46f8ab562ff989611a8e93f2c43cfb",
+  "suite_receipt_sha256": "9a4dd9876c88be8f3fadf984b7dd8a87f29af442f1cfb53a35ad9e58aef1e444"
+}

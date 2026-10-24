@@ -2,6 +2,10 @@
 
 本文件约束在本仓库工作的 Codex 或其他实现 agent。先阅读 `docs/STATUS.md`、`docs/CODEX_HANDOFF.md`、当前执行 issue 和 `docs/REVIEW_WORKFLOW.md`。更高优先级的用户及安全指令始终优先。
 
+## 当前 Issue #14 / R007（优先于历史入口）
+
+R007=`SCOPED_CPU_REPAIR_AUTHORIZED / TEST_EXECUTION_SUSPENDED`。仅修改 TEST server launcher 的目录/授权收据交接及 CPU 集成测试；native server 独占 mkdir、全部科学与120格冻结保持不变。当前 main 的 R006 已暂停，不使用历史 grant 重启。交付 `READY_FOR_R007_FIX_REVIEW`，新完整 Head 必须由 GPT 审核并另签 R008 后才可启动 GPU/模型/仿真/TEST。保留原失败目录/收据，不 merge、不自签批准。详见 `reports/E2/R007/R007_FIX_HANDOFF.md`。
+
 ## 当前 Issue #10（优先于下方历史入口）
 
 main/R005 条件科学冻结，TEST 未授权。Issue #10 从 PR #9 实时 head 建独立 stacked 分支，只实现固定120格 TEST 软件路径、CPU负测试及既有 CALIB 原件的 CPU 导出。不得重跑模型/CALIB或下载权重，不改冻结 k3/TaskSpec/oracle/C0/C2/split/seed/16-8-720。交付 `READY_FOR_R2_DELTA_REVIEW`，等待独立 GPT exact-head TEST 放行；许可协议见 `docs/work_packages/E2-TEST-ENTRY.md`。不伪造审核、不自动merge。

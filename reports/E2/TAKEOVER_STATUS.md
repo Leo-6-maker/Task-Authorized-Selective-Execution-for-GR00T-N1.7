@@ -1,3 +1,11 @@
+# Issue #14 — READY_FOR_R007_FIX_REVIEW / TEST_EXECUTION_SUSPENDED
+
+R007 已允许小范围 CPU 工程修复，R006 当前main许可已暂停。本轮从事故PR#13 exact61e1b97接续，仅更改 TEST server launcher 的独占目录/授权收据交接及新增18项CPU检查；native server及全部科学冻结不变。最终代码 `a904e2678a3c511e36580a173e77b9c72521e093` 的普通／`-O` 各89/89、实际suite退出0。没有启动GPU、模型、仿真或真实TEST。
+
+[修复交接](R007/R007_FIX_HANDOFF.md)给出实际退出、case原件hash和原事故保全核验。本轮Corelab SSH超时，最新远端账本复核和新CPU原件远端备份明确为PENDING；既有已核验TEST0/120与本轮新增0分开报告，不冒充新远端核验。等待GPT新Head审核/R008，再做运行前只读核对；不重用R006、自动合并或自签放行。
+
+以下保留Issue12/10历史；旧有效R006文字不代表当前权限。
+
 # Issue #12 — STOPPED_BEFORE_MODEL_LOAD / READY_FOR_INCIDENT_REVIEW
 
 R006's valid grant was read from main and admitted at exact code `3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964`. Fixed environment/model/assets/init and legal resources passed. Frozen TEST launcher precreates the output directory that native server exclusively creates; actual server and launcher exits1 before model load. **TEST0 reservations/outcomes; all120 remain unrun.** No model/sim request, new weights/install, code/threshold/split change, old-record deletion or automatic retry. Both-location raw/CPU receipts preserved. [Incident](TEST/INCIDENT-001.md) and [handoff](TEST/R3_HANDOFF.md) request a scoped GPT assessment before any executable repair/new grant/launch. This is not completed TEST or an R3 performance approval.
