@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R011-2026-10-24-E2-LIFECYCLE-MIXED-HEAD",
-  "disposition": "TEST_AUTHORIZED",
+  "disposition": "TEST_SUSPENDED_AFTER_0016_CLEANUP",
   "authorized_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
   "epoch": "E2",
   "protocol_id": "TASE-002-v1.0",
@@ -154,5 +154,17 @@
     "Any genuine lifecycle/monitor/state/authorization/ledger/resource anomaly stops physical TEST and requires independent new-grant approval for any changed executable"
   ],
   "reviewer_scope": "GitHub source and exact source SHA review plus executor-submitted 118 normal/-O local/Corelab CPU proof and first14 historic equivalence, not independent GPU/MuJoCo or private raw rehash",
-  "review_report": "docs/reviews/R011-E2-shadow-lifecycle-runtime-delta-review.md"
+  "review_report": "docs/reviews/R011-E2-shadow-lifecycle-runtime-delta-review.md",
+  "incident_id": "ISSUE23-INCIDENT-001",
+  "suspension_review": "docs/reviews/R012-E2-early-sentinel-exit-review.md",
+  "prior_authorized_grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+  "reviewed_historical_registry_commit": "8aa1faa5215597da3ca1f51394aa93cfd1964929",
+  "past_consumed_ids_preserved": 16,
+  "past_cleanup_error_ids": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "next_unopened_id": "e2-test-0017",
+  "authorizes_further_execution": false
 }
