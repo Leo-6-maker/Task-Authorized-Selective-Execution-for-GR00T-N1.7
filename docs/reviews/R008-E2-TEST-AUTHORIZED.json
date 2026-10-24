@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R008-2026-10-24-E2-TEST-LAUNCHER-FIX",
-  "disposition": "TEST_AUTHORIZED",
+  "disposition": "TEST_SUSPENDED_AFTER_REPEATED_CLEANUP",
   "authorized_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
   "epoch": "E2",
   "protocol_id": "TASE-002-v1.0",
@@ -147,5 +147,16 @@
     "After fresh authorized server start, confirm true native loaded.json, live process, and noninvasive loopback readiness before e2-test-0001 reservation; errors STOP, no unapproved attempts."
   ],
   "execution_limitations": "Only 120 fixed E2 simulated TEST cells, exact ordered IDs, no retry/replacement; no CALIB/training/WBC/hardware or TEST-driven tuning.",
-  "reviewer_scope": "Source-based independent R008 review, operator CPU 89/89 receipts inspected; current Corelab SSH/outcome/backup not verified by GPT. No real TEST results have been reviewed."
+  "reviewer_scope": "Source-based independent R008 review, operator CPU 89/89 receipts inspected; current Corelab SSH/outcome/backup not verified by GPT. No real TEST results have been reviewed.",
+  "suspension_review": "docs/reviews/R010-repeated-cleanup-and-autonomous-engineering.md",
+  "incident_id": "ISSUE18-INCIDENT-003",
+  "incident_run_ids": [
+    "e2-test-0010",
+    "e2-test-0014"
+  ],
+  "existing_consumed_ids_preserved": true,
+  "next_unopened_run_id": "e2-test-0015",
+  "old_grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+  "new_runtime_execution_authorized": false,
+  "new_authorization_required": "Independent GPT exact-HEAD machine TEST_AUTHORIZED after CPU lifecycle/mixed-head auditor repair"
 }
