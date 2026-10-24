@@ -1,0 +1,57 @@
+{
+  "status_schema": "R010_AUTONOMOUS_E2_V1",
+  "source_scope": "PR19 public original-derived evidence; not independently rerun by GPT on Corelab",
+  "source_report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
+  "scientific_protocol": "TASE-002-v1.0",
+  "phase": "P1_AUTONOMOUS_CPU_SHADOW_LIFECYCLE_REPAIR",
+  "scientific_parameters_frozen": true,
+  "actual_old_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "newly_authorized_executable_head": null,
+  "runtime_execution_authorized": false,
+  "old_r008_current_main_disposition": "TEST_SUSPENDED_AFTER_REPEATED_CLEANUP",
+  "old_r009_current_main_disposition": "SUPERSEDED_BY_R010_REPEATED_CLEANUP",
+  "machine_grant_for_new_runtime": null,
+  "planned_test_attempts": 120,
+  "consumed_run_ids_count": 14,
+  "complete_frozen_outcomes_count": 12,
+  "status_counts": {
+    "SUCCESS": 12,
+    "CLEANUP_ERROR": 2,
+    "NOT_STARTED": 106
+  },
+  "consumed_cleanup_error_ids": [
+    "e2-test-0010",
+    "e2-test-0014"
+  ],
+  "first_unopened_run_id": "e2-test-0015",
+  "actual_main_controls_from_submitted_ledger": 1882,
+  "actual_policy_requests_from_submitted_ledger": 240,
+  "full_originals_reported_backed_up_twice": {
+    "source": "reports/E2/R009/backup_verification.json on PR19",
+    "size_bytes": 254951092,
+    "member_count": 1611,
+    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+    "independently_rehashed_by_GPT": false
+  },
+  "verified_current_Corelab_after_R010_by_GPT": false,
+  "normal_CPU_tests_new_code": null,
+  "optimized_CPU_tests_new_code": null,
+  "engineering_work_package": "docs/work_packages/AUTONOMOUS-E2-ENGINEERING-TO-SUBMISSION.md",
+  "review": "docs/reviews/R010-repeated-cleanup-and-autonomous-engineering.md",
+  "authorized_without_micro_approval": [
+    "CPU-only lifecycle repair and stress tests",
+    "CPU-only mixed-head historical audit with strict admission",
+    "Original evidence-preserving backups and status/docs",
+    "After new exact-head signed grant, fixed TEST order and per-cluster integrity checks"
+  ],
+  "stop_conditions": [
+    "No valid signed exact-head grant for future model/GPU/sim/test",
+    "Unknown/changed scientific protocol or evidence identity",
+    "Any new real TEST system/worker/state/monitor error",
+    "Resource/permission mismatch",
+    "Missing or inconsistent original reservation/exit/backup"
+  ],
+  "next_action": "Use Issue #20; self-direct CPU shadow lifecycle and historical audit compatibility; request independent NEW code-head grant once complete",
+  "last_review_date_sgt": "2026-10-24",
+  "operator_details_private": true
+}
