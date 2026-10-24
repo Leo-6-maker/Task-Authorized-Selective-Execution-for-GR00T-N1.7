@@ -234,9 +234,14 @@ class StartupTests(unittest.TestCase):
                 self.assertFalse(self.supervisor(root)['model_ready'])
                 self.assertFalse((root/'runs/test-server-cpu/loaded.json').exists())
 
-    def test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts(self):
+    def test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts(self,*,delayed_int=False):
         for sig in [signal.SIGTERM,signal.SIGINT]:
-            with self.subTest(signal=sig),self.fixture('signal-'+str(sig)) as (root,proxy,env):
+            with self.subTest(signal=sig),self.fixture(('slow-signal-' if delayed_int else 'signal-')+str(sig)) as (root,proxy,env):
+                if delayed_int and sig==signal.SIGINT:
+                    # Deterministic cooperative signal latency. Old finally sent
+                    # TERM immediately, replacing this actual INT exit with -15.
+                    handler="def slow_int(s,f):\n time.sleep(.2);signal.signal(s,signal.SIG_DFL);os.kill(os.getpid(),s)\nsignal.signal(signal.SIGINT,slow_int)\n"
+                    proxy.write_text(PROXY.replace("a.output.mkdir(parents=True,exist_ok=False)",handler+"a.output.mkdir(parents=True,exist_ok=False)"))
                 # A separate CPU launcher process permits real OS signal delivery.
                 driver=root/'driver.py'
                 driver.write_text('import sys,os\nfrom pathlib import Path\nsys.path.insert(0,'+repr(str(REPO))+')\nfrom scripts.e2_test_server import _run_owned_server\nr=Path('+repr(str(root))+')\n_run_owned_server(r,Path('+repr(str(REPO))+'),Path(sys.executable),"test-server-cpu",dict(scope="SYNTHETIC_CPU_ADMISSION",port=5562),[sys.executable,"-u",str(r/"cpu_proxy.py"),"--output",str(r/"runs/test-server-cpu"),"--port","5562","--mode","hold"],os.environ.copy(),startup_timeout=3.,shutdown_timeout=1.)\n')
@@ -256,6 +261,9 @@ class StartupTests(unittest.TestCase):
                 self.assertEqual(self.receipt(root)['child_returncode'],-sig if sig==signal.SIGTERM else -sig)
                 self.assertEqual(self.receipt(root)['exit_code'],128+sig)
                 if EVIDENCE:(root/'driver.actual_exit.json').write_text(json.dumps(dict(actual_driver_exit=code,signal_sent=sig))+'\n')
+
+    def test_delayed_cooperative_int_is_not_overwritten_by_cleanup_term(self):
+        self.test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts(delayed_int=True)
 
     def test_signal_ignoring_child_is_boundedly_closed_without_fake_exit_receipt(self):
         with self.fixture('ignored-signal') as (root,proxy,env):
