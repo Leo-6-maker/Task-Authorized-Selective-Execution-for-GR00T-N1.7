@@ -1,0 +1,42 @@
+{
+  "scope": "EXECUTOR_CONSOLIDATED_DELIVERY_CHECK_NOT_GPT_APPROVAL",
+  "tested_source_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
+  "executable_config_test_drift_since_verified_tests": [],
+  "source_changes": [
+    "configs/e2_test.json",
+    "scripts/audit_epoch.py",
+    "scripts/e2_audit_test.py",
+    "scripts/e2_test_server.py",
+    "tase/e2_context.py",
+    "tase/shadow.py",
+    "tase/test_history.py",
+    "tests/test_e2_server_startup.py",
+    "tests/test_shadow_lifecycle.py",
+    "tests/test_test_history.py"
+  ],
+  "science_contract_unchanged": true,
+  "old14_primary_outputs_exactly_equal": true,
+  "new_model_sim_TEST_calls": 0,
+  "new_TEST_reservations": 0,
+  "actual_reserved14_preserved": true,
+  "ordinary_tests": {
+    "local": 118,
+    "Corelab": 118,
+    "all_actual_exit": 0
+  },
+  "optimized_tests": {
+    "local": 118,
+    "Corelab": 118,
+    "all_actual_exit": 0
+  },
+  "candidate_zip_tests": 118,
+  "candidate_zip_actual_exit": 0,
+  "public_text_files_checked": 393,
+  "private_marker_hits": [],
+  "credential_hits": [],
+  "old_grant_not_valid_for_new_admission": true,
+  "local_and_remote_originals_whole_member_reverified": true,
+  "new_CPU_and_course_metadata_two_locations_verified": true,
+  "execution_authorized": false,
+  "status": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW"
+}

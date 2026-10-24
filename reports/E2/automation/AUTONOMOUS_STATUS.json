@@ -1,7 +1,7 @@
 {
-  "phase": "P1_CPU_REPAIR",
+  "phase": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW",
   "execution_authorized": false,
-  "current_code_head": null,
+  "current_code_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
   "base_report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
   "historical_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
   "independent_review_grant": null,
@@ -14,22 +14,79 @@
   ],
   "next_unopened_id": "e2-test-0015",
   "current_incident": "ISSUE18-INCIDENT-003",
-  "cpu_test_regular": null,
-  "cpu_test_optimized": null,
+  "cpu_test_regular": {
+    "local": {
+      "tests": 118,
+      "exit": 0
+    },
+    "Corelab": {
+      "tests": 118,
+      "exit": 0
+    }
+  },
+  "cpu_test_optimized": {
+    "local": {
+      "tests": 118,
+      "exit": 0
+    },
+    "Corelab": {
+      "tests": 118,
+      "exit": 0
+    }
+  },
   "live_corelab_last_verified": "2026-10-24 live read-only check; exact14,old grant suspended,GPU compute0,0015 absent",
   "raw_two_copy_verification": {
-    "status": "PREVIOUSLY_VERIFIED_CURRENT_REHASH_PENDING",
+    "status": "CURRENT_BOTH_ARCHIVES_EVERY_MEMBER_AND_REMOTE_LIVE_ORIGINALS_REVERIFIED",
+    "bytes": 254951092,
+    "members": 1611,
     "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f"
   },
   "missing_evidence": [],
-  "next_action": "Cooperative bounded observable shutdown; immutable historical-grant auditor; full CPU regressions",
-  "stop_reason": "R010 suspends R008; no model/GPU/MuJoCo/TEST until new independent exact-head grant",
+  "next_action": "Independent GPT review of complete final PR Head and a NEW exact-head TEST_AUTHORIZED grant; then LIVE preflight and0015/0016 checkpoint",
+  "stop_reason": "R010 Gate B: new exact-head independent TEST_AUTHORIZED is absent",
   "phases": {
-    "P0": "LIVE_BASELINE_VERIFIED_BACKUP_REHASH_PENDING",
-    "P1": "IN_PROGRESS",
-    "P2": "IN_PROGRESS",
-    "P3": "NOT_READY",
-    "P4": "NOT_AUTHORIZED",
-    "P5": "PRELIMINARY_DOCUMENTATION_ALLOWED_FINAL_RESULTS_NOT_EXECUTED"
-  }
+    "P0": "COMPLETE_READ_ONLY",
+    "P1": "COMPLETE_CPU_VALIDATED_ONLY",
+    "P2": "COMPLETE_ORIGINAL14_NORMAL_OPTIMIZED_EQUIVALENT",
+    "P3": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW",
+    "P4": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "P5": "PRELIMINARY_MATERIALS_COMPLETE_FINAL_R3_NOT_EXECUTED"
+  },
+  "code_head_meaning": "CPU-tested executable/config/test commit; final report PR Head must bind an identical executable tree",
+  "historical_original14_audit": {
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "primary_outputs_exactly_equal": true,
+    "actual_new_execution_epochs": 0
+  },
+  "new_compute_evidence_backup": {
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "bytes": 392054,
+    "members": 758,
+    "sha256": "df40f1497c9f10bdf1b7d85bee6879e1fd0f972ab3e56e53ef06f6313d143ead"
+  },
+  "course_materials": {
+    "status": "PRELIMINARY_VALIDATED_NOT_R3_OR_FINAL_SUBMISSION",
+    "separate_branch": "codex/20-course-draft",
+    "slides_total": 15,
+    "content_slides": 13,
+    "source_candidate_head": "4d46e7550596263df35fa8cc1a5419b492e8a067"
+  },
+  "local_new_proof_two_copy": {
+    "status": "LOCAL_CPU_AND_COURSE_PROOF_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+    "bytes": 4233318,
+    "sha256": "51f36905b6e4920dd9527592c26dcd34241fea74e8a1b4deb8e7cb4a4cc3dda7",
+    "members": 1065,
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ],
+    "new_model_sim_TEST_calls": 0
+  },
+  "unexecuted": [
+    "Native GPU/GL validation of repaired lifecycle",
+    "TEST0015..0120",
+    "Final complete R3 statistics/review",
+    "Owner final course submission"
+  ]
 }

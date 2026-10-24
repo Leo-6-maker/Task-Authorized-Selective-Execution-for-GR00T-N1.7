@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T17:39:14.396706+08:00",
+  "wrapper_pid": 3756441,
+  "child_pid": 3756442,
+  "command": [
+    "<PRIVATE>/me6401-e2-package-cache-20261023/envs/sim/bin/python",
+    "-u",
+    "<PRIVATE>/Projects/me6401-e2/operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/cpu_proxy.py",
+    "--output",
+    "<PRIVATE>/Projects/me6401-e2/operator/issue20-cpu-v4/normal-startup/wrong-loaded-identity/runs/test-server-cpu",
+    "--port",
+    "5562",
+    "--mode",
+    "wrong_loaded"
+  ]
+}

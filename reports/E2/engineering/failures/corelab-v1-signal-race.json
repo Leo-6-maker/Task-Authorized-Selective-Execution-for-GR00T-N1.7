@@ -1,0 +1,6 @@
+{
+  "scope": "RETAINED_CPU_FAILURE_NOT_TEST_CONSUMPTION",
+  "stderr": "\n======================================================================\nFAIL: test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts (test_e2_server_startup.StartupTests.test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts) (signal=<Signals.SIGINT: 2>)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<PRIVATE>/Projects/me6401-e2/operator/issue20-engineering-code/tests/test_e2_server_startup.py\", line 256, in test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts\n    self.assertEqual(self.receipt(root)['child_returncode'],-sig if sig==signal.SIGTERM else -sig)\nAssertionError: -15 != -2\n\n----------------------------------------------------------------------\nRan 114 tests in 36.411s\n\nFAILED (failures=1)\n",
+  "actual_suite_exit": 1,
+  "root": "forwarded SIGINT raced with unconditional finally TERM; fixed in shutdown wrapper only"
+}

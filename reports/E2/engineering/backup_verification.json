@@ -1,0 +1,37 @@
+{
+  "status": "ALL_NEW_CPU_ORIGINALS_AND_COURSE_PROOF_TWO_LOCATIONS_VERIFIED",
+  "new_compute_cpu_archive": {
+    "stage": "issue20-cpu-proof-01",
+    "bytes": 392054,
+    "sha256": "df40f1497c9f10bdf1b7d85bee6879e1fd0f972ab3e56e53ef06f6313d143ead",
+    "artifacts": 758,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  },
+  "old_original_archive": {
+    "status": "R010_LOCAL_ARCHIVE_AND_ALL1611_MEMBERS_REVERIFIED",
+    "bytes": 254951092,
+    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+    "members": 1611,
+    "model_sim_TEST_calls": 0
+  },
+  "remote_originals_recheck": {
+    "status": "R010_REMOTE_ARCHIVE_AND_ALL1611_MEMBERS_AND_LIVE_ORIGINALS_REVERIFIED",
+    "bytes": 254951092,
+    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+    "members": 1611,
+    "TEST_reserved": 14,
+    "model_sim_TEST_calls": 0
+  },
+  "local_original_CPU_and_course_metadata": {
+    "status": "LOCAL_CPU_AND_COURSE_PROOF_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+    "bytes": 4233318,
+    "sha256": "51f36905b6e4920dd9527592c26dcd34241fea74e8a1b4deb8e7cb4a4cc3dda7",
+    "members": 1065,
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ],
+    "new_model_sim_TEST_calls": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "runs/test-server-cpu/original",
+      "bytes": 4,
+      "sha256": "1dd17190a2f261044d8e04d099db4ebe2754ff402e5c2b8b759498176ddd343a"
+    }
+  ],
+  "TEST_reservations": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "ORIGINAL14_PRIMARY_OUTPUTS_EXACTLY_EQUAL_INCLUDING_ROWS_PAIRS_STATS_COSTS_AND_INTERVALS",
+  "baseline_preserved_audit_sha256": "3f1f159fd757708c3bf69331ca5854510f28dfae56331106b6e6ce678d92ed92",
+  "new_normal_json_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+  "new_optimized_json_sha256": "1c5f4bd8bb4b6fb439b2efcf2823891e4caed837da542ee2ac5ff6e5f3584a2d",
+  "new_only_top_level_field": "code_epochs",
+  "historical_version_rows": 14,
+  "planned": 120,
+  "reserved": 14,
+  "full_outcomes": 12,
+  "cleanup_errors": 2,
+  "unstarted": 106,
+  "old_rows_or_labels_rewritten": false
+}

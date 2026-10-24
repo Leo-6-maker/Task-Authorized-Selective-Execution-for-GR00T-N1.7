@@ -1,0 +1,14 @@
+{
+  "started_at_sgt": "2026-10-24T17:38:39.632344+08:00",
+  "wrapper_pid": 3755819,
+  "child_pid": 3755825,
+  "command": [
+    "<PRIVATE>/me6401-e2-package-cache-20261023/envs/sim/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

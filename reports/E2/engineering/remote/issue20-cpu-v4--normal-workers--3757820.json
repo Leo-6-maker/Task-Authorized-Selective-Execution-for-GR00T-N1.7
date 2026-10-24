@@ -1,0 +1,38 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "PIPE_SEND_ERROR",
+    "worker_pid": 3757820,
+    "worker_returncode": 0,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2603902.371572484,
+        "close_token": "73122fc6ce734f9eb4bc7cdcc610c084"
+      },
+      {
+        "event": "SEND_ERROR",
+        "parent_monotonic": 2603902.371601926,
+        "error_type": "BrokenPipeError"
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2603902.385106881
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2603902.385122996
+      }
+    ],
+    "worker_receipts": [],
+    "initial_failure": "PIPE_SEND_ERROR"
+  }
+}

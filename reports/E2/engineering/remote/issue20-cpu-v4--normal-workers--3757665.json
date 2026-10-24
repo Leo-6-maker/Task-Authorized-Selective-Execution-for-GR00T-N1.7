@@ -1,0 +1,52 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_hung_native_requires_term_and_remains_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_TERM",
+    "worker_pid": 3757665,
+    "worker_returncode": -15,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2603884.557186333,
+        "close_token": "231a4e43be9548b1a52ff5dd63a14218"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2603884.557271922
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 2603884.857608766
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 2603885.25808407
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2603885.259837555
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2603885.259856052
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "231a4e43be9548b1a52ff5dd63a14218",
+        "worker_pid": 3757665,
+        "received_monotonic": 2603884.557215465
+      }
+    ],
+    "initial_failure": "FINALIZER_TIMEOUT"
+  }
+}

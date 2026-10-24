@@ -1,0 +1,49 @@
+{
+  "scope": "STATIC_ENGINEERING_DELTA_BOUNDARY_NOT_RUNTIME_VALIDATION",
+  "baseline_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "tested_code_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
+  "all_frozen_semantic_functions_equal": {
+    "tase/shadow.py:predict": true,
+    "tase/shadow.py:receive": true,
+    "tase/e2_context.py:__init__": true,
+    "tase/e2_context.py:frame": true,
+    "tase/e2_context.py:capture": true,
+    "tase/e2_context.py:check": true,
+    "scripts/e2_audit_test.py:bounds": true,
+    "scripts/e2_audit_test.py:statistics": true,
+    "scripts/e2_audit_test.py:paired_prefix": true,
+    "worker_prediction_try_block_identical": true,
+    "server:serve": true,
+    "server:_owned_directory": true,
+    "server:_absent": true,
+    "server:_output_argument": true,
+    "server:_complete_json": true,
+    "server:_process_identity": true,
+    "server:_publish_admission": true,
+    "server_creation_and_admission_try_body_identical": true
+  },
+  "unchanged_whole_files": [
+    "tase/gate_features.py",
+    "tase/event_oracle.py",
+    "tase/task_spec.py",
+    "tase/execution_gate.py",
+    "tase/epoch_runner.py",
+    "tase/m2_native.py",
+    "tase/snapshot.py",
+    "tase/test_authorization.py",
+    "tase/test_ledger.py",
+    "scripts/e2_run_test.py",
+    "configs/runtime_lock_E2.json",
+    "configs/e2_splits.json",
+    "configs/e2_protocol_lock.json",
+    "configs/e2_calib_selection.json",
+    "configs/e2_test_cells.proposed.json"
+  ],
+  "scientific_config_semantics_equal": true,
+  "changed_hash_bindings_only": [
+    "tase/e2_context.py",
+    "tase/shadow.py"
+  ],
+  "old_grant_not_modified_by_executor": true,
+  "model_sim_TEST_calls": 0
+}
