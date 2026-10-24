@@ -1,0 +1,19 @@
+{
+  "status": "LOCAL_SECOND_COPY_WHOLE_AND_EVERY_MEMBER_REVERIFIED",
+  "checked_at_sgt": "2026-10-24T16:04:36.341761+08:00",
+  "archives": [
+    {
+      "stage": "issue16-stopped-full-01",
+      "bytes": 178122020,
+      "sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+      "members": 1130
+    },
+    {
+      "stage": "issue12-incident-01",
+      "bytes": 17082,
+      "sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+      "members": 34
+    }
+  ],
+  "actual_process_exit": 0
+}

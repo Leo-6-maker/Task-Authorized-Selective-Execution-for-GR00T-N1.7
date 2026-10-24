@@ -1,3 +1,5 @@
+当前 Issue #18 / R009：独立审核解除0010事故后的停止条件；现场前置核验通过。仅同一冻结a1c6424…代码和原R008 grant，0011起一次顺序执行，0012后强制检查点。任何新清理/程序异常立即停止；0010永久CLEANUP_ERROR不重跑。见 reports/E2/R009/README.md。下方保留历史状态。
+
 # Agent execution contract
 
 本文件约束在本仓库工作的 Codex 或其他实现 agent。先阅读 `docs/STATUS.md`、`docs/CODEX_HANDOFF.md`、当前执行 issue 和 `docs/REVIEW_WORKFLOW.md`。更高优先级的用户及安全指令始终优先。

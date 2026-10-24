@@ -1,0 +1,70 @@
+{
+  "status": "R009_CONTINUATION_ACTIVATION_PREREQUISITES_VERIFIED",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "reviewer_clearance_commit": "fd8a2d1a8ab3c1b55e05e1b4c55724e2d657ae02",
+  "reviewer_clearance_path": "docs/reviews/R009-TEST-RESUME-CLEARANCE.json",
+  "machine_grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+  "machine_grant_path": "docs/reviews/R008-E2-TEST-AUTHORIZED.json",
+  "machine_grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+  "reserved": 10,
+  "SUCCESS": 9,
+  "CLEANUP_ERROR": 1,
+  "not_started": 110,
+  "next_run": "e2-test-0011",
+  "mandatory_checkpoint_after": "e2-test-0012",
+  "failed_run_never_replayed_or_relabeled": true,
+  "live_fixed_model_files": 17,
+  "official_TEST_initializations": 30,
+  "active_runtime_processes": 0,
+  "old_server_and_worker_PID_absent": true,
+  "GPU_free_mib": 31749,
+  "actual_remote_preflight_exit": 0,
+  "two_location_originals_rechecked": true,
+  "archives": [
+    {
+      "stage": "issue16-stopped-full-01",
+      "bytes": 178122020,
+      "sha256": "6d2697b7b0e226daef18d1a203bb63d19f9d98ca639c19fae0adf67e32b22324",
+      "members": 1130
+    },
+    {
+      "stage": "issue12-incident-01",
+      "bytes": 17082,
+      "sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+      "members": 34
+    }
+  ],
+  "no_new_model_server_sim_TEST_started_yet": true,
+  "checked_at_sgt": "2026-10-24T16:06:37.448023+08:00",
+  "source_sha256": {
+    "preflight.py": "4203042c8341b2eb0d784d4c10b26a78cb0cae58da4172e3646f212d7bc9e358",
+    "preflight.stdout.private.txt": "86447ffbf252945582a2cb491fb71e8d30bd4b639355cef0c828a781372b847e",
+    "preflight.stderr.private.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "launch.local.json": "90c48d0609b1b3c6f712de5a2648e4d538920790ccb016ac946d9a18f42337fe",
+    "preflight.exit.started.json": "bce4cbe0a782abf600f76dde6dd0bfc744ae4e09c3a137459ce6296ff5026526",
+    "grant-admission.json": "4cce141d9fe3675c0e419ba368a46ebbec4a24b2bc45fe9b259c9f37e1d81218",
+    "fixed-resource-identities.json": "8022bffe59aafca964d03a14d7a46c8ef45c9502f4291e3879faeab8ec55455f",
+    "live-test-audit.json": "c4c89a469ca9e770d3169a772385be9e6099ee381cda627ffd006bc7aeb51605",
+    "originals-recheck.json": "d6f73b3502193c3e584918ec87e17f6003436de1ffea90abe5858853ee01cfec",
+    "task-init-identities.json": "22b5604f73ed94729198c590f74c84ec14616699d635a217458ba8d52bbd5b53",
+    "gpu-allocation.local.json": "6d8ffa8c347e947e6fe3c0efbd590f46128a9df2a39a44cb7005ac7139982253",
+    "live-state.local.json": "ac77b5493d7a19425310654bca64db473cb33fd83ec322d6e7dbe4a9b41b8a7c",
+    "preflight-checks.json": "e64b66f7ceb0332aa4cc220b833bf005359cbd677d2cff9da1a020f1454a44a2",
+    "preflight.exit.json": "d9985ecb40a242ae2725b50f74e4270fa2ca5c7f83810180e4731f461610c0b0",
+    "local-second-copy-recheck.json": "c751d6d67d32e75e6002a7927f4fdab960a13fcb5ca4d49d263ca17c1b1aabd1",
+    "run_frozen_continuation.py": "00d2b57dc0b2dabae42e80ce57ae7c00aaae87bc4a75d59dc879465de3548948",
+    "backup_closed_cluster.py": "01e3b08f5f5373de949ea7f0dbdfbb8236ca439de41c75da94227fb4b9b6922c"
+  },
+  "data_only_orchestration_sha256": {
+    "run_frozen_continuation.py": "00d2b57dc0b2dabae42e80ce57ae7c00aaae87bc4a75d59dc879465de3548948",
+    "backup_closed_cluster.py": "01e3b08f5f5373de949ea7f0dbdfbb8236ca439de41c75da94227fb4b9b6922c"
+  },
+  "preflight_helper_failure": {
+    "type": "RESTRICTED_OFFICIAL_INIT_NUMPY_ALLOWLIST_INCOMPLETE",
+    "actual_exit": 1,
+    "record_retained": true,
+    "correction": "CPU checker explicit NumPy reconstruct/ndarray/dtype/float64 dtype allowlist; weights_only stays true",
+    "runtime_source_changed": false,
+    "TEST_calls": 0
+  }
+}
