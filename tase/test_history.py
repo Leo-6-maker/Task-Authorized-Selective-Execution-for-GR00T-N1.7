@@ -57,6 +57,23 @@ class AuditVersions:
         self.repo=Path(repo);self.cfg=cfg;self.cells=cells;self.objects={};self.epochs={};self.rows={}
         path=self.repo/'reports/E2/automation/HISTORICAL_TEST_EPOCHS.json'
         self.anchors=json.loads(path.read_text())['epochs'] if path.exists() else []
+        # A later reviewer can close a newly consumed epoch on main without
+        # changing the already frozen executable again. This is read-only
+        # provenance, never imported by admission or a source of launch rights.
+        registry=subprocess.run(['git','-C',str(self.repo),'show',
+            'refs/remotes/origin/main:docs/reviews/E2-HISTORICAL-TEST-EPOCHS.json'],
+            stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
+        if registry.returncode==0:
+            value=json.loads(registry.stdout)
+            require(value.get('schema_version')==1 and isinstance(value.get('epochs'),list),
+                'invalid main historical epoch registry')
+            for anchor in value['epochs']:
+                require(isinstance(anchor,dict),'invalid main historical epoch record')
+                key=lambda a:tuple(a.get(k) for k in ['execution_head','grant_commit','grant_path'])
+                matching=[a for a in self.anchors if key(a)==key(anchor)]
+                require(not matching or all(a==anchor for a in matching),
+                    'conflicting main historical epoch record')
+                if not matching:self.anchors.append(anchor)
 
     def blob(self,commit,path):
         require(HEX.fullmatch(commit) is not None and not Path(path).is_absolute() and

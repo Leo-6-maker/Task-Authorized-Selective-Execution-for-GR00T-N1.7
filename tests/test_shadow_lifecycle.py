@@ -61,7 +61,7 @@ def cpu_worker(connection,mode,delay):
         if mode=='early_sentinel_hung':
             signal.signal(signal.SIGTERM,signal.SIG_IGN)
             while True:time.sleep(.01)
-        time.sleep(.08)
+        time.sleep(.15)
         if mode=='early_sentinel_nonzero':raise SystemExit(7)
 
 
@@ -100,6 +100,9 @@ class ShadowLifecycleTests(unittest.TestCase):
     def test_early_ready_sentinel_then_real_waitpid_zero_is_clean(self):
         s,pid=make_shadow('early_sentinel_zero');r=self.close(s)
         self.assertTrue(r['clean']);self.assertEqual(r['worker_returncode'],0)
+        self.assertIsNone(r['exit_observations'][0]['initial_returncode'])
+        self.assertGreater(r['exit_observations'][0]['polls'],1)
+        self.assertEqual(r['exit_observations'][0]['returncode'],0)
         self.check_reaped(s,pid)
     def test_early_ready_sentinel_then_real_nonzero_is_error(self):
         s,pid=make_shadow('early_sentinel_nonzero')

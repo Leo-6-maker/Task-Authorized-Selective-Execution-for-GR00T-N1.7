@@ -1,5 +1,6 @@
 """Temporary Git-only SYNTHETIC epochs. Never a real GPT grant or TEST run."""
 import copy
+import subprocess
 import json
 from pathlib import Path
 import tempfile
@@ -85,6 +86,32 @@ class HistoricalAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             repo,rev,path,identity,res,folder,cfg,cells,new=epochs(Path(tmp));p=repo/'reports/E2/automation/HISTORICAL_TEST_EPOCHS.json';a=json.loads(p.read_text());a['epochs'][0]['original_archive_sha256']='b'*64;p.write_text(json.dumps(a))
             with self.assertRaises(ValueError):AuditVersions(repo,cfg,cells).resolve(res,folder)
+    def test_main_reviewed_registry_authenticates_revoked_epoch_without_new_runtime_edit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo,rev,path,identity,res,folder,cfg,cells,new=epochs(Path(tmp))
+            anchors=repo/'reports/E2/automation/HISTORICAL_TEST_EPOCHS.json'
+            record=json.loads(anchors.read_text())['epochs'][0]
+            anchors.write_text(json.dumps(dict(epochs=[])));git(repo,'add','.');git(repo,'commit','-qm','SYNTHETIC freeze before later reviewer metadata');frozen_head=git(repo,'rev-parse','HEAD')
+            git(repo,'checkout','-q','--detach','refs/remotes/origin/main')
+            registry=repo/'docs/reviews/E2-HISTORICAL-TEST-EPOCHS.json'
+            write_json(registry,dict(schema_version=1,epochs=[record]));git(repo,'add','.');git(repo,'commit','-qm','SYNTHETIC reviewer publishes immutable closed provenance');main=git(repo,'rev-parse','HEAD');git(repo,'update-ref','refs/remotes/origin/main',main);git(repo,'checkout','-q','--detach',frozen_head)
+            versions=AuditVersions(repo,cfg,cells);self.assertEqual(versions.resolve(res,folder)[1],identity)
+            self.assertTrue(versions.rows[res['run_id']]['closed_prefix_anchored'])
+            self.assertEqual(git(repo,'rev-parse','HEAD'),frozen_head);self.assertEqual(git(repo,'status','--porcelain'),'')
+            with self.assertRaises(ValueError):authorize(repo,rev,path)
+            extra=copy.deepcopy(res);extra.update(cells[1])
+            with self.assertRaises(ValueError):versions.resolve(extra,folder)
+    def test_main_registry_malformed_conflicting_or_unreviewed_provenance_fails(self):
+        for mode in ['malformed','conflict','unreviewed','bad_backup']:
+            with self.subTest(mode=mode),tempfile.TemporaryDirectory() as tmp:
+                repo,rev,path,identity,res,folder,cfg,cells,new=epochs(Path(tmp));record=json.loads((repo/'reports/E2/automation/HISTORICAL_TEST_EPOCHS.json').read_text())['epochs'][0]
+                git(repo,'checkout','-q','--detach','refs/remotes/origin/main')
+                if mode=='conflict':record['original_archive_sha256']='b'*64
+                elif mode=='unreviewed':record['review_path']='docs/reviews/NOT_REVIEWED.md'
+                elif mode=='bad_backup':record['report_head']='0'*40
+                write_json(repo/'docs/reviews/E2-HISTORICAL-TEST-EPOCHS.json',dict(schema_version=999 if mode=='malformed' else 1,epochs=[record]));git(repo,'add','.');git(repo,'commit','-qm','SYNTHETIC corrupt registry');main=git(repo,'rev-parse','HEAD');git(repo,'update-ref','refs/remotes/origin/main',main);git(repo,'checkout','-q','--detach',new)
+                with self.assertRaises((ValueError,subprocess.CalledProcessError)):
+                    AuditVersions(repo,cfg,cells).resolve(res,folder)
     def test_fresh_synthetic_current_grant_and_old_epoch_coexist(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo,rev,path,identity,res,folder,cfg,cells,new=epochs(Path(tmp));oldcheck=AuditVersions(repo,cfg,cells);oldcheck.resolve(res,folder)
