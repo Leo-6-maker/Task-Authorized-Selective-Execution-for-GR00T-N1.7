@@ -1,0 +1,63 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_partial_transport_frame_cannot_block_parent_recv",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_TERM",
+    "worker_pid": 1945220,
+    "worker_returncode": -15,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198612.976739424,
+        "close_token": "56af2d389c2b4d32a01c0fc5b3cf4daa"
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 198613.277170793
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 198613.677249443
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198613.679499356
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198613.679532448
+      }
+    ],
+    "worker_receipts": [],
+    "exit_observations": [
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 198613.277174755,
+        "deadline_monotonic": 198613.677174151,
+        "initial_returncode": null,
+        "polls": 186,
+        "finished_monotonic": 198613.677238919,
+        "returncode": null,
+        "timed_out": true
+      },
+      {
+        "phase": "TERM_EXIT",
+        "started_monotonic": 198613.677266412,
+        "deadline_monotonic": 198613.827265959,
+        "initial_returncode": null,
+        "polls": 2,
+        "finished_monotonic": 198613.679470764,
+        "returncode": -15,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "FINALIZER_TIMEOUT"
+  }
+}

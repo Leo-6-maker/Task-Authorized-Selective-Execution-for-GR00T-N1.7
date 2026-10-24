@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T20:36:36.889214+08:00",
+  "wrapper_pid": 3883083,
+  "child_pid": 3883147,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "-O",
+    "<E2_WORKSPACE>/operator/issue23-cpu-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue23-cpu-code",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue23-cpu-final/audit-optimized.json"
+  ]
+}

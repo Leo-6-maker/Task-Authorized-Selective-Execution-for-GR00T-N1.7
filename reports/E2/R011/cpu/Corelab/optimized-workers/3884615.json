@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 3884615,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614542.695916444,
+        "close_token": "751667be3dc04c66803f71e5afd9756a"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614542.696007033
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2614542.699072502
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2614542.710868318,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614542.710880011
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614542.710895573
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "751667be3dc04c66803f71e5afd9756a",
+        "worker_pid": 3884615,
+        "received_monotonic": 2614542.695946576
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "751667be3dc04c66803f71e5afd9756a",
+        "worker_pid": 3884615,
+        "native_finalized": true,
+        "received_monotonic": 2614542.695946576,
+        "finalizer_started_monotonic": 2614542.695970322,
+        "finalizer_finished_monotonic": 2614542.699011852
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2614542.710813431,
+        "deadline_monotonic": 2614543.099072034,
+        "initial_returncode": null,
+        "polls": 1,
+        "finished_monotonic": 2614542.710865643,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}

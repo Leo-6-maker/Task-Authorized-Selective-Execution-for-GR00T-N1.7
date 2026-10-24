@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_startup_error_preserved_and_owned_worker_closed",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 3884806,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614557.302714576,
+        "close_token": "a67b3038f44f421c8e78fe7e8c3429f8"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614557.302807208
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2614557.302869468
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2614557.316929595,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614557.316942585
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614557.316959675
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "a67b3038f44f421c8e78fe7e8c3429f8",
+        "worker_pid": 3884806,
+        "received_monotonic": 2614557.302750346
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "a67b3038f44f421c8e78fe7e8c3429f8",
+        "worker_pid": 3884806,
+        "native_finalized": true,
+        "received_monotonic": 2614557.302750346,
+        "finalizer_started_monotonic": 2614557.302781376,
+        "finalizer_finished_monotonic": 2614557.30283538
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2614557.316886102,
+        "deadline_monotonic": 2614559.302869241,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 2614557.316925901,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "DELIVERY_INTEGRITY_AND_PRIVACY_CHECKS_PASS",
+  "planned": 120,
+  "reserved": 16,
+  "full_outcomes": 13,
+  "CLEANUP_ERROR": 3,
+  "NOT_STARTED": 104,
+  "source_identity_rows_checked": 16,
+  "original_manifest_sources_checked": 358,
+  "public_derivatives_checked": 252,
+  "operator_receipts_checked": 194,
+  "text_files_scanned": 393,
+  "private_marker_hits": 0,
+  "config_semantics_equal_to_R011": true,
+  "changed_config_hash_binding_only": [
+    "tase/shadow.py"
+  ],
+  "executable_drift_from_tested_c08a34c": [],
+  "all_original_video_decode_rows": 16,
+  "actual_exit": 0
+}

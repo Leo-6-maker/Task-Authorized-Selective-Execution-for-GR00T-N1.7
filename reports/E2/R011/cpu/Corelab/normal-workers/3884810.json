@@ -1,0 +1,47 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "INVALID_CLOSE_RECEIPT",
+    "worker_pid": 3884810,
+    "worker_returncode": 0,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614557.584968607,
+        "close_token": "7749c540093f431b910e3b51a49e70ad"
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614557.597540691
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614557.597555889
+      }
+    ],
+    "worker_receipts": [
+      "NOT_A_RECEIPT"
+    ],
+    "exit_observations": [
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 2614557.585030733,
+        "deadline_monotonic": 2614557.9850305547,
+        "initial_returncode": null,
+        "polls": 7,
+        "finished_monotonic": 2614557.597527568,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "INVALID_CLOSE_RECEIPT"
+  }
+}

@@ -1,0 +1,16 @@
+test_corrupt_reservation_result_manifest_video_receipts_fail_closed (test_test_history.HistoricalAuditTests.test_corrupt_reservation_result_manifest_video_receipts_fail_closed) ... ok
+test_forged_grant_blob_or_code_or_config_identity_fails (test_test_history.HistoricalAuditTests.test_forged_grant_blob_or_code_or_config_identity_fails) ... ok
+test_fresh_synthetic_current_grant_and_old_epoch_coexist (test_test_history.HistoricalAuditTests.test_fresh_synthetic_current_grant_and_old_epoch_coexist) ... ok
+test_main_registry_malformed_conflicting_or_unreviewed_provenance_fails (test_test_history.HistoricalAuditTests.test_main_registry_malformed_conflicting_or_unreviewed_provenance_fails) ... ok
+test_main_reviewed_registry_authenticates_revoked_epoch_without_new_runtime_edit (test_test_history.HistoricalAuditTests.test_main_reviewed_registry_authenticates_revoked_epoch_without_new_runtime_edit) ... ok
+test_missing_reviewed_two_copy_proof_or_prefix_anchor_fails (test_test_history.HistoricalAuditTests.test_missing_reviewed_two_copy_proof_or_prefix_anchor_fails) ... ok
+test_new_science_or_other_frozen_source_is_not_a_maintenance_delta (test_test_history.HistoricalAuditTests.test_new_science_or_other_frozen_source_is_not_a_maintenance_delta) ... ok
+test_old_grant_cannot_extend_closed_prefix_to_unstarted_id (test_test_history.HistoricalAuditTests.test_old_grant_cannot_extend_closed_prefix_to_unstarted_id) ... ok
+test_old_suspended_grant_checks_only_anchored_original_not_admission (test_test_history.HistoricalAuditTests.test_old_suspended_grant_checks_only_anchored_original_not_admission) ... ok
+test_reformatted_main_grant_is_not_active_admission (test_test_history.HistoricalAuditTests.test_reformatted_main_grant_is_not_active_admission) ... ok
+test_still_active_old_identity_can_be_audited_on_cpu_repair_head_only (test_test_history.HistoricalAuditTests.test_still_active_old_identity_can_be_audited_on_cpu_repair_head_only) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.441s
+
+OK

@@ -1,0 +1,17 @@
+{
+  "unavailable_predeclared_controls": [
+    "E2-TEST-cream_cheese-i6-C0",
+    "E2-TEST-ketchup-i6-C0"
+  ],
+  "rule": "Original PR17 rule: all observed wrong-lift/abort/error scenarios plus each task C0/init6 plus lexicographic first timeout; include both arms. Add mandatory0015/0016 checkpoint pair required by R011 before resumption. No result-based replacement.",
+  "scenarios": [
+    "E2-TEST-alphabet_soup-i6-C0",
+    "E2-TEST-alphabet_soup-i8-C0",
+    "E2-TEST-alphabet_soup-i9-C0",
+    "E2-TEST-alphabet_soup-i9-C2",
+    "E2-TEST-cream_cheese-i6-C0",
+    "E2-TEST-ketchup-i6-C0"
+  ],
+  "pairs": 6,
+  "selected_from_all120_without_changing_results": true
+}

@@ -1,0 +1,166 @@
+{
+  "shadow_close.json": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "NONZERO_EXIT",
+    "worker_pid": 3866804,
+    "worker_returncode": 0,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2613713.497204514,
+        "close_token": "673952df897b4a24a64e5e51325072b2"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2613713.49747699
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2613713.572065412
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2613713.954271104,
+        "exit_code": null
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2613713.95435354
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2613713.954373119
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "673952df897b4a24a64e5e51325072b2",
+        "worker_pid": 3866804,
+        "received_monotonic": 2613713.497386207
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "673952df897b4a24a64e5e51325072b2",
+        "worker_pid": 3866804,
+        "native_finalized": true,
+        "received_monotonic": 2613713.497386207,
+        "finalizer_started_monotonic": 2613713.497442257,
+        "finalizer_finished_monotonic": 2613713.571844954
+      }
+    ],
+    "initial_failure": "NONZERO_EXIT"
+  },
+  "shadow_worker_exit.json": {
+    "worker_pid": 3866804,
+    "worker_returncode": 0,
+    "scope": "ACTUAL_OWNED_WORKER_JOIN",
+    "close_protocol": "SHADOW_CLOSE_V1",
+    "close_status": "NONZERO_EXIT",
+    "clean_close": false
+  },
+  "cleanup_errors.json": [
+    {
+      "resource": "m2_shadow",
+      "error_type": "ShadowCloseError",
+      "traceback": "Traceback (most recent call last):\n  File \"<E2_WORKSPACE>/operator/issue23-frozen-code/tase/retention.py\", line 46, in cleanup_resources\n    close()\n  File \"<E2_WORKSPACE>/operator/issue23-frozen-code/tase/e2_context.py\", line 118, in close\n    try:self.shadow.close()\n        ^^^^^^^^^^^^^^^^^^^\n  File \"<E2_WORKSPACE>/operator/issue23-frozen-code/tase/shadow.py\", line 263, in close\n    self._close_error=ShadowCloseError(receipt);raise self._close_error\n                                                ^^^^^^^^^^^^^^^^^^^^^^^\ntase.shadow.ShadowCloseError: shadow lifecycle NONZERO_EXIT\n"
+    }
+  ],
+  "result.json": {
+    "run_id": "e2-test-0016",
+    "task": "alphabet_soup",
+    "init_index": 9,
+    "split": "TEST",
+    "repo_sha": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "config_hash": "7468d82722143124dcf730e2ac2af0634124ce8347d073087726e0cba7d08004",
+    "runtime_lock_hash": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "status": "CLEANUP_ERROR",
+    "official_success": true,
+    "policy_calls": 17,
+    "policy_requests_attempted": 17,
+    "inner_steps": 134,
+    "settling_steps": 10,
+    "exit_code": 1,
+    "started_at_sgt": "2026-10-24T20:23:10.503793+08:00",
+    "init_hash": "d99f2b3e9a047a09e61960abe3d25b771318380a274d1e8f62d30df433b59514",
+    "condition": "C2",
+    "system": "G",
+    "scenario_id": "E2-TEST-alphabet_soup-i9-C2",
+    "policy_seed": 640419,
+    "environment_seed": 640420,
+    "policy_target": "butter",
+    "splits_hash": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+    "calibration_selection_hash": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+    "planned_init_hash": "d99f2b3e9a047a09e61960abe3d25b771318380a274d1e8f62d30df433b59514",
+    "authorization": {
+      "authorized_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+      "epoch": "E2",
+      "protocol_id": "TASE-002-v1.0",
+      "selected_k": 3,
+      "maximum_attempts": 120,
+      "test_config_sha256": "7468d82722143124dcf730e2ac2af0634124ce8347d073087726e0cba7d08004",
+      "test_cells_sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+      "protocol_lock_sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+      "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+      "splits_sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+      "selection_sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+      "review_id": "R011-2026-10-24-E2-LIFECYCLE-MIXED-HEAD",
+      "review_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+      "review_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
+      "review_blob": "8b18a1d6e84e3466f4ca112aeb9b4940ccb667d8"
+    },
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "init_file_sha256": "b9023e5546b239cacb2aaa3c76df3b73c3de6f97500fea5e27a0db9827002a19",
+    "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+    "full_task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+    "native_language": "pick up the alphabet soup and place it in the basket",
+    "settled_state_hash": "8fb452fdcdb29566bc599a8f8ca6dbd067bfddb4549394d90807dd10c188c52e",
+    "scene_xml_hash": "e553b4493be04a4a62b38804e2ffa9132ba5cd0f089d033a522e3711ebdb4230",
+    "control_hz": 20,
+    "task_objects": [
+      "alphabet_soup_1",
+      "basket_1"
+    ],
+    "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+    "gl_vendor": "NVIDIA Corporation",
+    "egl_process_gpu_indices": [
+      0
+    ],
+    "egl_binding_check": "MATCH",
+    "cleanup_errors": 1,
+    "first_wrong_lift_step": null,
+    "wall_seconds": 16.44518682314083,
+    "completed_at_sgt": "2026-10-24T20:23:26.948893+08:00"
+  },
+  "supervisor_exit.json": {
+    "run_id": "e2-test-0016",
+    "completed_at_sgt": "2026-10-24T20:23:27.678488+08:00",
+    "wrapper_returncode": 1,
+    "signal_received": null,
+    "failure_type": "ValueError",
+    "complete_child_receipt": true
+  },
+  "exit": {
+    "completed_at_sgt": "2026-10-24T20:23:27.665340+08:00",
+    "child_pid": 3866691,
+    "child_returncode": 1,
+    "exit_code": 1,
+    "signal": null
+  },
+  "server_exit": {
+    "completed_at_sgt": "2026-10-24T20:23:30.845499+08:00",
+    "child_pid": 3865948,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "0017_absent": true,
+  "traceback": {}
+}

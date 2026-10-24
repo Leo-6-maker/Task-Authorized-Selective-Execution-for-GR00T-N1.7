@@ -1,0 +1,77 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ignored_term_requires_kill_and_remains_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_KILL",
+    "worker_pid": 1945178,
+    "worker_returncode": -9,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": true,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198610.435509819,
+        "close_token": "eb9106ce54a44120b3e98f8b7cd0cbf0"
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 198610.736079811
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 198611.136178195
+      },
+      {
+        "event": "KILL_SENT",
+        "parent_monotonic": 198611.286298209
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198611.288461917
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198611.288477365
+      }
+    ],
+    "worker_receipts": [],
+    "exit_observations": [
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 198610.736090058,
+        "deadline_monotonic": 198611.136088383,
+        "initial_returncode": null,
+        "polls": 189,
+        "finished_monotonic": 198611.136168591,
+        "returncode": null,
+        "timed_out": true
+      },
+      {
+        "phase": "TERM_EXIT",
+        "started_monotonic": 198611.136185877,
+        "deadline_monotonic": 198611.286185617,
+        "initial_returncode": null,
+        "polls": 71,
+        "finished_monotonic": 198611.286293053,
+        "returncode": null,
+        "timed_out": true
+      },
+      {
+        "phase": "KILL_EXIT",
+        "started_monotonic": 198611.286310228,
+        "deadline_monotonic": 198611.536309774,
+        "initial_returncode": null,
+        "polls": 2,
+        "finished_monotonic": 198611.288449039,
+        "returncode": -9,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "FINALIZER_TIMEOUT"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-24T20:36:36.889109+08:00",
+  "wrapper_pid": 3883081,
+  "child_pid": 3883148,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

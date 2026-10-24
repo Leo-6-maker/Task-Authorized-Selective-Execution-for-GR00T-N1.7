@@ -1,0 +1,84 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_nonzero_is_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "NONZERO_EXIT",
+    "worker_pid": 1945151,
+    "worker_returncode": 7,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198608.753965618,
+        "close_token": "cfc5bc7faa9542d88d9ef5da012651af"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198608.754152046
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198608.754158335
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 198608.923781043,
+        "exit_code": 7
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198608.923798116
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198608.923814435
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "cfc5bc7faa9542d88d9ef5da012651af",
+        "worker_pid": 1945151,
+        "received_monotonic": 198608.753995499
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "cfc5bc7faa9542d88d9ef5da012651af",
+        "worker_pid": 1945151,
+        "native_finalized": true,
+        "received_monotonic": 198608.753995499,
+        "finalizer_started_monotonic": 198608.754022909,
+        "finalizer_finished_monotonic": 198608.754077217
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 198608.754175405,
+        "deadline_monotonic": 198609.154157981,
+        "initial_returncode": null,
+        "polls": 80,
+        "finished_monotonic": 198608.923777668,
+        "returncode": 7,
+        "timed_out": false
+      },
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 198608.923783488,
+        "deadline_monotonic": 198609.323783225,
+        "initial_returncode": 7,
+        "polls": 1,
+        "finished_monotonic": 198608.923786025,
+        "returncode": 7,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "NONZERO_EXIT"
+  }
+}

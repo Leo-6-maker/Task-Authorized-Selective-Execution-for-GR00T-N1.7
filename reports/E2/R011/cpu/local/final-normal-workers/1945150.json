@@ -1,0 +1,84 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_nonzero_is_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "NONZERO_EXIT",
+    "worker_pid": 1945150,
+    "worker_returncode": 7,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198608.746225896,
+        "close_token": "cde509bf3bb247a0b5cfb0d9bb004755"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198608.746303561
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198608.74636683
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 198608.917737178,
+        "exit_code": 7
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198608.917758208
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198608.917775007
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "cde509bf3bb247a0b5cfb0d9bb004755",
+        "worker_pid": 1945150,
+        "received_monotonic": 198608.746255399
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "cde509bf3bb247a0b5cfb0d9bb004755",
+        "worker_pid": 1945150,
+        "native_finalized": true,
+        "received_monotonic": 198608.746255399,
+        "finalizer_started_monotonic": 198608.746280653,
+        "finalizer_finished_monotonic": 198608.746335387
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 198608.746415046,
+        "deadline_monotonic": 198609.146366525,
+        "initial_returncode": null,
+        "polls": 82,
+        "finished_monotonic": 198608.917732765,
+        "returncode": 7,
+        "timed_out": false
+      },
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 198608.917739996,
+        "deadline_monotonic": 198609.317739656,
+        "initial_returncode": 7,
+        "polls": 1,
+        "finished_monotonic": 198608.917743382,
+        "returncode": 7,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "NONZERO_EXIT"
+  }
+}

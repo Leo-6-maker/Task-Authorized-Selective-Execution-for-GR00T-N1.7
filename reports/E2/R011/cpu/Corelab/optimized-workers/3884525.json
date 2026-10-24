@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_hung_native_requires_term_and_remains_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_TERM",
+    "worker_pid": 3884525,
+    "worker_returncode": -15,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614540.346966189,
+        "close_token": "6d3f0992eb9b48bdad85baadc3f20b65"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614540.34708469
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 2614540.647522857
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 2614541.047586622
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614541.049702773
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614541.049718559
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "6d3f0992eb9b48bdad85baadc3f20b65",
+        "worker_pid": 3884525,
+        "received_monotonic": 2614540.346995326
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 2614540.647527168,
+        "deadline_monotonic": 2614541.0475263977,
+        "initial_returncode": null,
+        "polls": 194,
+        "finished_monotonic": 2614541.047581916,
+        "returncode": null,
+        "timed_out": true
+      },
+      {
+        "phase": "TERM_EXIT",
+        "started_monotonic": 2614541.047598013,
+        "deadline_monotonic": 2614541.197597772,
+        "initial_returncode": null,
+        "polls": 2,
+        "finished_monotonic": 2614541.049692745,
+        "returncode": -15,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "FINALIZER_TIMEOUT"
+  }
+}

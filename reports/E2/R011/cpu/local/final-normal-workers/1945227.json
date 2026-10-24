@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_real_ten_second_boundary_finalizer_ack_then_exit",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 1945227,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198613.759433156,
+        "close_token": "8593bd38ee3c4f6facdd4ed68c2f9cd3"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198613.759684879
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198623.65996291
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 198623.936284165,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198623.936309146
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198623.936330243
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "8593bd38ee3c4f6facdd4ed68c2f9cd3",
+        "worker_pid": 1945227,
+        "received_monotonic": 198613.759510473
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "8593bd38ee3c4f6facdd4ed68c2f9cd3",
+        "worker_pid": 1945227,
+        "native_finalized": true,
+        "received_monotonic": 198613.759510473,
+        "finalizer_started_monotonic": 198613.759572798,
+        "finalizer_finished_monotonic": 198623.659687407
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 198623.936210649,
+        "deadline_monotonic": 198625.659960091,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 198623.936278227,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}

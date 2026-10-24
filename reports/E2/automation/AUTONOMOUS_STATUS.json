@@ -1,69 +1,114 @@
 {
-  "phase": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW",
+  "phase": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW_AFTER_R011_0016",
   "execution_authorized": false,
-  "current_code_head": "4d46e7550596263df35fa8cc1a5419b492e8a067",
+  "current_code_head": "c08a34cf6dce61b48bfcd93c313d34826d955522",
   "base_report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
   "historical_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
-  "independent_review_grant": null,
+  "independent_review_grant": {
+    "review_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+    "review_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
+    "review_id": "R011-2026-10-24-E2-LIFECYCLE-MIXED-HEAD"
+  },
   "total_planned": 120,
-  "reserved_count": 14,
-  "normal_full_outcomes": 12,
+  "reserved_count": 16,
+  "normal_full_outcomes": 13,
   "cleanup_errors": [
     "e2-test-0010",
-    "e2-test-0014"
+    "e2-test-0014",
+    "e2-test-0016"
   ],
-  "next_unopened_id": "e2-test-0015",
-  "current_incident": "ISSUE18-INCIDENT-003",
+  "next_unopened_id": "e2-test-0017",
+  "current_incident": "ISSUE23-0016-EXIT_STATUS_RACE",
   "cpu_test_regular": {
     "local": {
-      "tests": 118,
+      "tests": 123,
       "exit": 0
     },
     "Corelab": {
-      "tests": 118,
+      "tests": 123,
       "exit": 0
     }
   },
   "cpu_test_optimized": {
     "local": {
-      "tests": 118,
+      "tests": 123,
       "exit": 0
     },
     "Corelab": {
-      "tests": 118,
+      "tests": 123,
       "exit": 0
     }
   },
-  "live_corelab_last_verified": "2026-10-24 live read-only check; exact14,old grant suspended,GPU compute0,0015 absent",
+  "live_corelab_last_verified": "2026-10-24 post-stop: exact16,worker/server absent,GPU compute0,all1900 original members unchanged,0017 absent; no new runtime after incident",
   "raw_two_copy_verification": {
-    "status": "CURRENT_BOTH_ARCHIVES_EVERY_MEMBER_AND_REMOTE_LIVE_ORIGINALS_REVERIFIED",
-    "bytes": 254951092,
-    "members": 1611,
-    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f"
+    "stage": "issue23-stopped-full-01",
+    "bytes": 291390525,
+    "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
+    "artifacts": 1900,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
   },
-  "missing_evidence": [],
-  "next_action": "Independent GPT review of complete final PR Head and a NEW exact-head TEST_AUTHORIZED grant; then LIVE preflight and0015/0016 checkpoint",
-  "stop_reason": "R010 Gate B: new exact-head independent TEST_AUTHORIZED is absent",
+  "missing_evidence": [
+    "New independent exact final-head grant",
+    "Native validation of repaired waitpid lifecycle",
+    "104 unstarted frozen TEST units",
+    "Final independent R3 result review"
+  ],
+  "next_action": "Independent new exact COMPLETE PR head review/grant and reviewed closed R011 provenance; then LIVE preflight and unopened0017/0018 proposed checkpoint",
+  "stop_reason": "R0110016 CLEANUP_ERROR exit1: mandatory checkpoint failed. New CPU executable has no TEST grant.",
   "phases": {
     "P0": "COMPLETE_READ_ONLY",
-    "P1": "COMPLETE_CPU_VALIDATED_ONLY",
-    "P2": "COMPLETE_ORIGINAL14_NORMAL_OPTIMIZED_EQUIVALENT",
-    "P3": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW",
-    "P4": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "P1": "FOLLOWUP_WAITPID_REPAIR_COMPLETE_CPU_VALIDATED",
+    "P2": "ORIGINAL16_LOCAL_CORELAB_NORMAL_OPTIMIZED_EXACT_EQUIVALENCE",
+    "P3": "NEW_COMPLETE_DELTA_READY_FOR_INDEPENDENT_REVIEW",
+    "P4": "STOPPED_AT0016_NO0017_CHECKPOINT_FAILED",
     "P5": "PRELIMINARY_MATERIALS_COMPLETE_FINAL_R3_NOT_EXECUTED"
   },
-  "code_head_meaning": "CPU-tested executable/config/test commit; final report PR Head must bind an identical executable tree",
+  "code_head_meaning": "Latest CPU-tested executable/config/test source only; last actual runtime remains76 and candidate is NOT TEST authorized",
   "historical_original14_audit": {
     "normal_exit": 0,
     "optimized_exit": 0,
     "primary_outputs_exactly_equal": true,
-    "actual_new_execution_epochs": 0
+    "actual_new_execution_epochs": 0,
+    "original14_preserved_after_R011": true
   },
   "new_compute_evidence_backup": {
-    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-    "bytes": 392054,
-    "members": 758,
-    "sha256": "df40f1497c9f10bdf1b7d85bee6879e1fd0f972ab3e56e53ef06f6313d143ead"
+    "status": "ALL16_ORIGINAL_AND_CPU_PROOFS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+    "archives": [
+      {
+        "stage": "issue18-stopped-full-01",
+        "bytes": 254951092,
+        "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+        "artifacts": 1611,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue23-stopped-full-01",
+        "bytes": 291390525,
+        "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
+        "artifacts": 1900,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue23-cpu-review-proof-01",
+        "bytes": 37936108,
+        "sha256": "11d389cdf117244d07577806f849be427eb4ffcabf6d61097ab7c56d28abf0fc",
+        "artifacts": 1643,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue23-local-cpu-proof-01",
+        "bytes": 380533,
+        "sha256": "f2dffe84afde3651a18dcb34b4388a5203b3b3b271a5b5110721d32e547b23f9",
+        "artifacts": 1528,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED"
+      }
+    ],
+    "reviewer_original_access": "NOT_INDEPENDENTLY_REHASHED_BY_GPT",
+    "no_original_mutations": true
   },
   "course_materials": {
     "status": "PRELIMINARY_VALIDATED_NOT_R3_OR_FINAL_SUBMISSION",
@@ -88,5 +133,11 @@
     "TEST0015..0120",
     "Final complete R3 statistics/review",
     "Owner final course submission"
-  ]
+  ],
+  "runtime_activation_passed": true,
+  "updated_at_sgt": "2026-10-24T20:42:26.507694+08:00",
+  "last_runtime_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "current_code_head_meaning": "CPU repair candidate only; NOT TEST authorized",
+  "actual_new_execution_epochs": 1,
+  "unstarted_count": 104
 }

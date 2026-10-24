@@ -1,0 +1,10 @@
+{
+  "failure": {
+    "type": "RuntimeError",
+    "message": "TEST entry failed; retain original ID and stop: e2-test-0016"
+  },
+  "closed_units": 1,
+  "head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "remaining_planned": 105,
+  "consumed_before_resume": 14
+}

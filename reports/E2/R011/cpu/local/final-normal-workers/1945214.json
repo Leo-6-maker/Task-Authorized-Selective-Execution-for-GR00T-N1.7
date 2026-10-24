@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 1945214,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198612.663789739,
+        "close_token": "290357e57a2d4f2b9fc177dae054682c"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198612.663879485
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198612.670174828
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 198612.687792115,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198612.687805975
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198612.687821009
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "290357e57a2d4f2b9fc177dae054682c",
+        "worker_pid": 1945214,
+        "received_monotonic": 198612.663822432
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "290357e57a2d4f2b9fc177dae054682c",
+        "worker_pid": 1945214,
+        "native_finalized": true,
+        "received_monotonic": 198612.663822432,
+        "finalizer_started_monotonic": 198612.663846059,
+        "finalizer_finished_monotonic": 198612.67000934
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 198612.687753351,
+        "deadline_monotonic": 198613.070174274,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 198612.687788368,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}
