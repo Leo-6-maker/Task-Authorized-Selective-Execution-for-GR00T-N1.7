@@ -36,6 +36,13 @@ def _output_argument(command, folder):
             command[command.index('--output')+1]==str(folder), 'native child output command differs')
 
 
+def _complete_json(path):
+    # Native write_json opens exclusively before its buffered JSON is flushed.
+    # Incomplete bytes may be observed; never accept them or wait past deadline.
+    try:return json.loads(path.read_text())
+    except json.JSONDecodeError:return None
+
+
 def _process_identity(start, process, command, previous=None):
     require(type(start.get('child_pid')) is int and start['child_pid']>0 and
             start.get('wrapper_pid')==process.pid and start.get('command')==command,
@@ -107,7 +114,7 @@ def _run_owned_server(workspace,repo,server_python,session,admission,command,env
     staged_hash=sha256(staged)
     wrapper=[str(server_python),'-u',str(repo/'scripts/record_process.py'),
              '--receipt',str(receipt),'--',*command]
-    process=None;received=None;failure=None;published=False;ready=False;identity=None;forced=False
+    process=None;received=None;failure=None;published=False;ready=False;identity=None;forced=False;output_inode=None
     def forward(signum,frame):
         nonlocal received
         received=signum
@@ -124,16 +131,23 @@ def _run_owned_server(workspace,repo,server_python,session,admission,command,env
             def live():
                 require(received is None, 'server launcher interrupted during startup')
                 require(not receipt.exists() and process.poll() is None, 'native child exited during startup')
+                if output_inode is not None:
+                    st=_owned_directory(folder)
+                    require((st.st_dev,st.st_ino)==output_inode,'native output directory changed after handoff')
+                if published:
+                    target=folder/'test_admission.json'
+                    require(not target.is_symlink() and sha256(target)==staged_hash,
+                            'published admission changed after handoff')
                 return _process_identity(json.loads(started.read_text()),process,command,identity)
             while True:
                 require(received is None, 'server launcher interrupted during startup')
                 require(not receipt.exists() and process.poll() is None, 'native child exited before output handoff')
-                if started.exists():
+                if started.exists() and _complete_json(started) is not None:
                     identity=live()
                     if os.path.lexists(folder):
                         st=_owned_directory(folder)
-                        inode=(st.st_dev,st.st_ino)
-                        _publish_admission(folder,staged,staged_hash,inode,live)
+                        output_inode=(st.st_dev,st.st_ino)
+                        _publish_admission(folder,staged,staged_hash,output_inode,live)
                         published=True
                         # Record publication even if the following liveness check detects a failure.
                         write_json(op/'admission_published.json',dict(**identity,
@@ -149,13 +163,14 @@ def _run_owned_server(workspace,repo,server_python,session,admission,command,env
                 if os.path.lexists(loaded):
                     require(not loaded.is_symlink() and loaded.is_file() and loaded.stat().st_uid==os.getuid(),
                             'native loaded receipt is not an owned regular file')
-                    value=json.loads(loaded.read_text())
-                    require(value.get('status')=='MODEL_LOADED' and value.get('host')=='127.0.0.1' and
-                            value.get('port')==admission['port'], 'native loaded loopback/port differs')
-                    live();ready=True
-                    write_json(op/'server_ready.json',dict(**identity,loaded_sha256=sha256(loaded),
-                               admission_sha256=sha256(staged)))
-                    break
+                    value=_complete_json(loaded)
+                    if value is not None:
+                        require(value.get('status')=='MODEL_LOADED' and value.get('host')=='127.0.0.1' and
+                                value.get('port')==admission['port'], 'native loaded loopback/port differs')
+                        live();ready=True
+                        write_json(op/'server_ready.json',dict(**identity,loaded_sha256=sha256(loaded),
+                                   admission_sha256=staged_hash))
+                        break
                 if time.monotonic()>=deadline:raise TimeoutError('native child never produced valid loaded receipt')
                 time.sleep(.02)
             code=process.wait()

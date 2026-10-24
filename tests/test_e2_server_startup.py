@@ -36,6 +36,13 @@ while not (a.output/'test_admission.json').exists():time.sleep(.01)
 v=json.loads((a.output/'test_admission.json').read_text())
 if v.get('scope')!='SYNTHETIC_CPU_ADMISSION':raise SystemExit(9)
 if a.mode=='no_loaded':time.sleep(30)
+if a.mode=='wrong_loaded':
+ with (a.output/'loaded.json').open('x') as f:json.dump(dict(status='MODEL_LOADED',host='foreign-host.invalid',port=a.port),f)
+ time.sleep(30)
+if a.mode=='partial_loaded':
+ with (a.output/'loaded.json').open('x') as f:
+  f.write('{');f.flush();time.sleep(.1);f.write('"status":"MODEL_LOADED","host":"127.0.0.1","port":'+str(a.port)+'}');f.flush()
+ time.sleep(.2);raise SystemExit(0)
 with (a.output/'loaded.json').open('x') as f:json.dump(dict(status='MODEL_LOADED',host='127.0.0.1',port=a.port,scope='SYNTHETIC_CPU_PROXY_NOT_MODEL'),f)
 if a.mode=='hold':time.sleep(30)
 time.sleep(.2)
@@ -183,6 +190,24 @@ class StartupTests(unittest.TestCase):
             with patch.object(server,'_process_identity',side_effect=changed),self.assertRaises(ValueError):
                 self.run_server(root,proxy,env,'hold')
             self.assertFalse(self.supervisor(root)['admission_published'])
+
+    def test_partial_native_loaded_write_waits_boundedly_then_wrong_identity_refuses(self):
+        with self.fixture('partial-loaded-json') as (root,proxy,env):
+            self.assertEqual(self.run_server(root,proxy,env,'partial_loaded'),0)
+            self.assertTrue(self.supervisor(root)['model_ready'])
+        with self.fixture('wrong-loaded-identity') as (root,proxy,env):
+            with self.assertRaises(ValueError):self.run_server(root,proxy,env,'wrong_loaded')
+            self.assertFalse(self.supervisor(root)['model_ready'])
+
+    def test_staged_and_published_admission_can_cross_filesystems(self):
+        if not Path('/dev/shm').is_dir():self.skipTest('Linux shared-memory filesystem absent')
+        with self.fixture('cross-filesystem-publication') as (root,proxy,env),tempfile.TemporaryDirectory(dir='/dev/shm') as staging:
+            folder=root/'runs/test-server-cpu';folder.mkdir()
+            staged=Path(staging)/'test_admission.json';data=b'{"scope":"SYNTHETIC_CPU_ADMISSION"}\n';staged.write_bytes(data)
+            if staged.stat().st_dev==folder.stat().st_dev:self.skipTest('fixture mounts are identical')
+            st=folder.stat()
+            server._publish_admission(folder,staged,hashlib.sha256(data).hexdigest(),(st.st_dev,st.st_ino),lambda:None)
+            self.assertEqual((folder/'test_admission.json').read_bytes(),data)
 
     def test_duplicate_admission_never_overwrites_original(self):
         with self.fixture('duplicate-admission') as (root,proxy,env):
