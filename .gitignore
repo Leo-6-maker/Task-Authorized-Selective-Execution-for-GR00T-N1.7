@@ -46,3 +46,6 @@ dist/
 /ME6401_*.zip
 
 # Do not assume .gitignore replaces secret or asset/license review.
+
+# Private presentation authoring and QA intermediates
+.course-build/
