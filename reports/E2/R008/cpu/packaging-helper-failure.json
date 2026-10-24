@@ -1,0 +1,8 @@
+{
+  "scope": "REPORT_PACKAGING_ONLY_NO_EXPERIMENT_RERUN",
+  "manifest_helper_actual_exit": 1,
+  "reason": "Selected short MP4 derivatives matched the repository-wide raw-video ignore rule and were absent from the staged index; explicit narrow add of the four authorized reviewer clips corrected delivery. Original derivative files/hashes unchanged.",
+  "git_add_failed_command_exit": "NOT_SEPARATELY_CAPTURED",
+  "first_report_commit_preserved": "1be22658c568180644e0058aa99f60f3091bf6cd",
+  "runtime_or_scientific_code_changed": false
+}
