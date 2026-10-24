@@ -1,0 +1,16 @@
+{
+  "scope": "ISSUE16_PRE_REGISTERED_R3_DERIVATIVE_ONLY_NO_PROTOCOL_OR_EXECUTION_CHANGE",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "review_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+  "planned_denominator": "All120 frozen cells including unstarted, interrupted, errors, timeout and semantic abort",
+  "numeric_pair_rule": "Union of all scenarios in which either arm has an observed actual wrong-object-lift, semantic abort or monitor/system error, plus C0/init_index6 for each of the three tasks, plus the lexicographically first timeout scenario if any. Include both arms and missing receipts explicitly; no replacing a selected missing artifact.",
+  "numeric_contents": "Complete actual physical/contact/oracle sequences, control_trace and all raw16 actions, identity/TaskSpec/actual instruction/reset, Gate decisions and contact inputs/guards/snapshot digests, actual child/worker exits; selected prediction windows are first, last and every non-ACCEPT decision, plus the B0 first-event-containing window from saved raw if available. No new model or simulator call; no unsafe pickle loading.",
+  "media_rule": "For each selected scenario, both cameras from saved rollout frames in one labeled short derivative: first4 policy seconds; additionally event onset minus1 second through plus1 second for any actual event, and final1 second for semantic abort or timeout. Keep exact control-frame indices and source video hash; unavailable or corrupt source stays flagged.",
+  "statistics": "Use frozen e2_audit_test.py unchanged; task-stratified init-cluster paired bootstrap2000 seed640500. Never use outcomes to alter protocol, k3, cells, sample size or run order.",
+  "privacy": "No weights, private operator paths/logs, source XML or pickle bytes; publish finite numeric allow_pickleFalse NPZ/JSON and source-relative SHA256 lineage. Full originals backed up at two authorized locations.",
+  "selected_after_results_by_fixed_rule": true,
+  "declared_before_first_TEST_reservation": true,
+  "reviewer_approval": "NOT_CLAIMED_BY_EXECUTOR",
+  "prior_sampling_plan_sha256": "189e4b1226381f051c278c3008489937590e745aaa907067e6f5ba7fe037bfdc",
+  "prior_sampling_plan_head": "6991e7b0d271bd34ced365608e38da20b310547f"
+}
