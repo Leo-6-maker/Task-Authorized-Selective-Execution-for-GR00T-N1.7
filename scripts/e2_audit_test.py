@@ -14,6 +14,7 @@ from scripts.audit_epoch import audit as audit_raw, read, lines
 from tase.evidence import sha256,write_json
 from tase.test_authorization import frozen,bind_cell,require,validate_identity,authorize
 from tase.test_ledger import inventory
+from tase.test_history import AuditVersions
 
 FULL={'SUCCESS','TIME_LIMIT','SEMANTIC_ABORT'}
 METRICS=['wrong_lift','official_success','compliant_success','semantic_abort',
@@ -116,8 +117,9 @@ def audit(workspace,repo):
     cfg,cells=frozen(repo)
     root=workspace/'runs/TEST'
     entries=inventory(root,cells)
+    versions=AuditVersions(repo,cfg,cells)
     incomplete_reservations=[p.name for p in entries if not (p/'reservation.json').is_file()]
-    raw=audit_raw(workspace,repo/'configs/e2_test.json',test_audit=True) if entries and not incomplete_reservations else {'rows':[]}
+    raw=audit_raw(workspace,repo/'configs/e2_test.json',test_audit=True,test_versions=versions) if entries and not incomplete_reservations else {'rows':[]}
     raw_rows={r['run_id']:r for r in raw['rows']}
     rows=[];costs=[];inference=[]
     for cell in cells:
@@ -126,9 +128,9 @@ def audit(workspace,repo):
         if present and (folder/'reservation.json').exists():
             res=read(folder/'reservation.json');bind_cell(cells,cell['run_id'],res)
             auth=res['authorization']
-            _,_,expected=authorize(repo,auth['review_commit'],auth['review_path'])
+            _,expected=versions.resolve(res,folder)
             require(auth==expected and res['repo_sha']==auth['authorized_head'] and
-                    res['config_hash']==sha256(repo/'configs/e2_test.json') and
+                    res['config_hash']==expected['test_config_sha256'] and
                     res['runtime_lock_hash']==auth['runtime_lock_sha256'], 'TEST reservation identity/grant differs')
             if (folder/'result.json').exists():
                 result=read(folder/'result.json');bind_cell(cells,cell['run_id'],result)
@@ -144,6 +146,16 @@ def audit(workspace,repo):
                 if cell['system']=='G' and known:
                     worker=read(folder/'shadow_worker_exit.json')
                     require(worker['worker_returncode']==0,'TEST Gate worker failed')
+                    # Legacy14 are source-anchored, pre-protocol originals. Future
+                    # full G outcomes need BOTH close handshake and actual exit0.
+                    legacy_context='ccfa40c78f21b495489e818fc01a9b37ddc9b830d42835bc77469c1fc264af10'
+                    historical_cfg,_=versions.resolve(res,folder)
+                    if historical_cfg['frozen_sha256']['tase/e2_context.py']!=legacy_context:
+                        close=read(folder/'shadow_close.json')
+                        require(close['protocol']=='SHADOW_CLOSE_V1' and close['status']=='CLEAN' and
+                                close['clean'] is True and close['forced'] is False and
+                                close['worker_pid']==worker['worker_pid'] and close['worker_returncode']==0 and
+                                worker.get('clean_close') is True,'TEST full outcome lacks clean lifecycle proof')
             costs.extend(lines(folder/'monitor_timing.jsonl'))
             inference.extend(r['inference_roundtrip_ms'] for r in lines(folder/'inference_timing.jsonl'))
         observed_onset=next((f['oracle']['first_violation_step'] for f in frames
@@ -154,6 +166,7 @@ def audit(workspace,repo):
             first_wrong_lift_step=observed_onset,official_success=result.get('official_success'),
             observed_controls=len(frames),policy_requests_observed=result.get('policy_requests_attempted',
                 len(lines(folder/'actual_requests.jsonl'))),actual_child_exit=raw_rows.get(cell['run_id'],{}).get('exit_code')))
+    versions.validate_inventory(entries)
     def timing(values):
         return dict(n=len(values),median=None if not values else float(np.median(values)),
                     p95=None if not values else float(np.percentile(values,95)),sum=float(sum(values)))
@@ -167,6 +180,7 @@ def audit(workspace,repo):
         timing_scope='recorded component boundaries; no20Hz wall-time claim; errors/missing costs not zero',
         experiment_status='UNRECONCILED' if incomplete_reservations else 'UNOPENED' if not entries else 'INCOMPLETE' if not all(r['outcome_known'] for r in rows) else 'COMPLETE_PENDING_GPT_REVIEW',
         independent_review='NOT_PERFORMED')
+    result['code_epochs']=sorted(versions.rows.values(),key=lambda r:r['run_id'])
     return result
 
 

@@ -1,0 +1,35 @@
+{
+  "phase": "P1_CPU_REPAIR",
+  "execution_authorized": false,
+  "current_code_head": null,
+  "base_report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
+  "historical_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "independent_review_grant": null,
+  "total_planned": 120,
+  "reserved_count": 14,
+  "normal_full_outcomes": 12,
+  "cleanup_errors": [
+    "e2-test-0010",
+    "e2-test-0014"
+  ],
+  "next_unopened_id": "e2-test-0015",
+  "current_incident": "ISSUE18-INCIDENT-003",
+  "cpu_test_regular": null,
+  "cpu_test_optimized": null,
+  "live_corelab_last_verified": "2026-10-24 live read-only check; exact14,old grant suspended,GPU compute0,0015 absent",
+  "raw_two_copy_verification": {
+    "status": "PREVIOUSLY_VERIFIED_CURRENT_REHASH_PENDING",
+    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f"
+  },
+  "missing_evidence": [],
+  "next_action": "Cooperative bounded observable shutdown; immutable historical-grant auditor; full CPU regressions",
+  "stop_reason": "R010 suspends R008; no model/GPU/MuJoCo/TEST until new independent exact-head grant",
+  "phases": {
+    "P0": "LIVE_BASELINE_VERIFIED_BACKUP_REHASH_PENDING",
+    "P1": "IN_PROGRESS",
+    "P2": "IN_PROGRESS",
+    "P3": "NOT_READY",
+    "P4": "NOT_AUTHORIZED",
+    "P5": "PRELIMINARY_DOCUMENTATION_ALLOWED_FINAL_RESULTS_NOT_EXECUTED"
+  }
+}
