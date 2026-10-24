@@ -1,7 +1,7 @@
 """Read-only historical provenance. NEVER imported by TEST admission/runner.
 
     Immutable Git grant/code/config bindings authenticate acquisition identity.
-    Revoked/changed-head epochs additionally require a reviewed closed-prefix
+    Revoked epochs additionally require a reviewed closed-prefix
     anchor: old permission must never expand into unstarted historical IDs.
     Existing admission authorize() remains strict and is not relaxed here.
 """
@@ -112,7 +112,7 @@ class AuditVersions:
             current=git(self.repo,'rev-parse','HEAD');main_bytes=subprocess.run(['git','-C',str(self.repo),'show','refs/remotes/origin/main:'+path],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
             active=main_bytes.returncode==0 and main_bytes.stdout.strip()==self.blob(review,path).strip()
             anchor=None
-            if head!=current or not active:
+            if not active:
                 found=[a for a in self.anchors if a['execution_head']==head and a['grant_commit']==review and a['grant_path']==path]
                 require(len(found)==1,'closed historical epoch requires one reviewed prefix anchor')
                 anchor=self._anchor(found[0])

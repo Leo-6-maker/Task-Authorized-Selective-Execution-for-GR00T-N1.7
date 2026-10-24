@@ -34,6 +34,14 @@ def epochs(root):
 
 
 class HistoricalAuditTests(unittest.TestCase):
+    def test_still_active_old_identity_can_be_audited_on_cpu_repair_head_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);repo,rev,path,grant=fixture(root);cfg,cells,identity=authorize(repo,rev,path)
+            with (repo/'tase/shadow.py').open('a') as f:f.write('\n# SYNTHETIC maintenance-only comment\n')
+            cfg['frozen_sha256']['tase/shadow.py']=sha256(repo/'tase/shadow.py');(repo/'configs/e2_test.json').write_text(json.dumps(cfg));git(repo,'add','.');git(repo,'commit','-qm','SYNTHETIC CPU maintenance')
+            res=dict(cells[0],authorization=identity,repo_sha=identity['authorized_head'],config_hash=identity['test_config_sha256'],runtime_lock_hash=identity['runtime_lock_sha256'])
+            self.assertEqual(AuditVersions(repo,cfg,cells).resolve(res,root/'UNEXECUTED')[1],identity)
+            with self.assertRaises(ValueError):authorize(repo,rev,path)
     def test_reformatted_main_grant_is_not_active_admission(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo,rev,path,grant=fixture(Path(tmp));cfg,cells,identity=authorize(repo,rev,path);head=identity['authorized_head']
