@@ -1,0 +1,15 @@
+{
+  "status": "LOCAL_ORIGINAL_ARCHIVE_AND_EVERY_MEMBER_VERIFIED_REMOTE_COPY_NOT_PERFORMED_SSH_UNAVAILABLE",
+  "bytes": 164711,
+  "sha256": "0115637d34a8c4e4afd0ba9268dcc79733a4323252c207c916093bae18325b47",
+  "artifacts": 1468,
+  "contains": "Actual CPU suite/proxy process receipts and raw logs; no credentials/model weights",
+  "remote_copy": "PENDING_CONNECTIVITY_NOT_CLAIMED",
+  "prior_incident_archive": {
+    "stage": "issue12-incident-01",
+    "sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+    "prior_two_locations_verified": true,
+    "all34_members_reverified_locally": true,
+    "current_remote_read": "NOT_VERIFIED_SSH_UNAVAILABLE"
+  }
+}

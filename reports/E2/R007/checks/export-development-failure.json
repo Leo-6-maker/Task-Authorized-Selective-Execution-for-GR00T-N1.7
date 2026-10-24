@@ -1,0 +1,9 @@
+{
+  "scope": "CPU_REPORT_EXPORT_HELPER_ONLY",
+  "actual_shell_exit": 1,
+  "reason": "Negative-test corrupt admission JSON encountered; exporter now preserves intentionally invalid fixture as text/hash without reinterpreting it as a valid receipt",
+  "runtime_code_unchanged": true,
+  "model_sim_TEST_calls": 0,
+  "second_helper_actual_shell_exit": 1,
+  "second_helper_reason": "Report-only output folder already existed after interrupted export; resume existing generated derivative folder; original CPU fixtures and runtime code untouched"
+}

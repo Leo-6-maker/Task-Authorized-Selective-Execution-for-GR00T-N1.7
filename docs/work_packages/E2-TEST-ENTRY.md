@@ -1,5 +1,13 @@
 # Issue #10 TEST entry — execution is still NOT_AUTHORIZED
 
+## R007 current boundary — TEST_EXECUTION_SUSPENDED
+
+Issue #14 implements only CPU-tested launcher directory/admission handoff repair. R007 on main (`b24db4982790e862fe8d8ec71fbd3ebaec5a4e4c`) supersedes the historical R006 execution permission; current R006 JSON is `TEST_SUSPENDED_AFTER_INCIDENT`. Do not use its old commit or attempt any server/model/sim/TEST launch. A future independently signed R008 must bind the full new delivery Head after this repair review. Existing native exclusive mkdir and scientific files remain unchanged.
+
+Launcher bookkeeping now stages admission exclusively in `operator/<new-session>/` with the native output absent. It invokes the same `record_process` and exact native command, verifies recorded child/wrapper PID plus actual Linux `/proc` owner/parent/command/start identity, waits boundedly for owned non-symlink output, and atomically publishes exactly the staged admission through an exclusive same-output link. The temporary publish-source file is retained as evidence; staging can be on a different filesystem. Startup errors/signals and absent child-exit receipts remain explicit, never synthesized as success. Duplicate sessions, old failed directories, changed staging/output or existing admission are refused without deletion.
+
+For any **future R008-authorized session only**, wait for the launcher's `operator/<session>/server_ready.json` **and** the real `runs/<session>/loaded.json` plus a live matching native child/no exit receipt before invoking the unchanged per-cell entry. Admission alone is not model readiness. This source has CPU proxy coverage only, not new native runtime validation. Read [R007_FIX_HANDOFF](../../reports/E2/R007/R007_FIX_HANDOFF.md) and its unverified network/remote-refresh limits first. The historical commands below are documentation, not an active launch instruction.
+
 This delta follows main's R005 at `e00f40cea298ce67159007d619dbf5e2747cb178` and stacks on PR #9's live head `fc38e816ff3e75e87c29da3aa18009dcc0542f02`. It implements software and CPU checks; it supplies no GPT approval. Existing proposed protocol/cell files stay byte-identical and their false authorization fields remain false.
 
 ## Grant contract (for independent GPT review)

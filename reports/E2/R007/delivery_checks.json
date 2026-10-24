@@ -1,0 +1,263 @@
+{
+  "status": "READY_FOR_R007_FIX_REVIEW_CPU_ONLY_NOT_RUNTIME_APPROVAL",
+  "parent_head": "61e1b976924ee9b162a9a933d9b9a755934cce8f",
+  "scientific_baseline_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "final_tested_code_sha": "a904e2678a3c511e36580a173e77b9c72521e093",
+  "changed_runtime_paths": [
+    "scripts/e2_test_server.py",
+    "tests/test_e2_server_startup.py"
+  ],
+  "unchanged_scientific_and_native_files": [
+    {
+      "path": "configs/dev_baseline.json",
+      "sha256": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_calib.json",
+      "sha256": "a7513168ead71a39415ffa123b1ce24d39268c7674d70795deb07c6c9d1119e4",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_calib_cells.json",
+      "sha256": "ea5dbe867b51310b6fa939af9d0607edc03625495dc47b5884b7c9cfd7d16503",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_calib_export_plan.json",
+      "sha256": "b56dba703d924cc32a43bc3bed6f3382ed1d5e4224b841ef6af04603d82d729c",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_calib_selection.json",
+      "sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_calibration_plan.json",
+      "sha256": "6c7150c206a7981a78c821889b5aba781ee8071db17d4e179360e45d54d77eec",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_dev.json",
+      "sha256": "5e2c469568d5e82c5f70d38e086fc179240a8607ff738e636bfeb181e7f573a5",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_dev_cells.json",
+      "sha256": "e70bc047d1bc84858e654ff410c40def81c3e6b5a2a681b856f576d3c5ddfae6",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_protocol_lock.json",
+      "sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_shadow_plan.json",
+      "sha256": "06aa02596fabb16a5196836e99c392bec67a65d1d9efa8bfe3afe78ea0263387",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_splits.json",
+      "sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_test.json",
+      "sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "unchanged": true
+    },
+    {
+      "path": "configs/e2_test_cells.proposed.json",
+      "sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+      "unchanged": true
+    },
+    {
+      "path": "configs/m2_dev_cells.json",
+      "sha256": "f06696d46e4d9cffdd6e20e66a79a2a8bab26e1ca36ff0d9c11bef01a5b75e81",
+      "unchanged": true
+    },
+    {
+      "path": "configs/m2_supplement_r003.json",
+      "sha256": "8ecd980ca5e70194d9fcc8e6c16305cda6091cffbc9ab81f6b23a8a25a72ab03",
+      "unchanged": true
+    },
+    {
+      "path": "configs/m2_validation.json",
+      "sha256": "f56f1dc7be7ff7becc1b62ff4327948e6f44ef2272f97f459151f60098917dc0",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runtime_lock.json",
+      "sha256": "9783e72f673626aba84c2ac63bf40db4247e6cad98ec73e1a21215c0dd80fcb2",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runtime_lock_E2.json",
+      "sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runtime_lock_m2.json",
+      "sha256": "fb73e0b4e5d6723ca0425030f0e25eeaca61b322d9fd8b7988a092b60c5f7bda",
+      "unchanged": true
+    },
+    {
+      "path": "configs/runtime_lock_resume.json",
+      "sha256": "5666660bfb7ba215912b774bf546fbddc1c7b34d1c07f52689f5ab8c5d9ce29d",
+      "unchanged": true
+    },
+    {
+      "path": "configs/sim_constraints.txt",
+      "sha256": "da550cad6e13dacbab6e645681465d7dde7f74c33118a4ac878431c003bf4658",
+      "unchanged": true
+    },
+    {
+      "path": "tase/__init__.py",
+      "sha256": "4bb6548fa2617bddf9545923e13410be86ed4c3bd4f4fdb3336582b79438af10",
+      "unchanged": true
+    },
+    {
+      "path": "tase/audit_contract.py",
+      "sha256": "0567a9f5579547e782002f539687bcdf29a4385418cc8d42a409b11f2e0ffefe",
+      "unchanged": true
+    },
+    {
+      "path": "tase/baseline.py",
+      "sha256": "9b75f729d67477dfcdb17ab648b798eb62542cd484301cadbaeeca58dbeea6b8",
+      "unchanged": true
+    },
+    {
+      "path": "tase/calibration.py",
+      "sha256": "29c5a3ebf2e62562f25b638d9f1283bbda17d6a4d585df2462dd6d385604a3b0",
+      "unchanged": true
+    },
+    {
+      "path": "tase/e2_context.py",
+      "sha256": "ccfa40c78f21b495489e818fc01a9b37ddc9b830d42835bc77469c1fc264af10",
+      "unchanged": true
+    },
+    {
+      "path": "tase/e2_evidence.py",
+      "sha256": "80f86b311549b28e2155ba8422cabb792c565762bd6776014a2448b00604324d",
+      "unchanged": true
+    },
+    {
+      "path": "tase/e2_ledger.py",
+      "sha256": "681f7d8135fb267caf78606b2536724866966c9ef6de49bb570a29517b8ebc75",
+      "unchanged": true
+    },
+    {
+      "path": "tase/epoch_runner.py",
+      "sha256": "ce51f9d6d4baa71c33c98e4ce2050a8f0c505ff6918df4d24668f255c5362138",
+      "unchanged": true
+    },
+    {
+      "path": "tase/event_oracle.py",
+      "sha256": "9aceedda605ec944bea795d5f48cfcef2b51e2f6b17e3be085524b9695afaff9",
+      "unchanged": true
+    },
+    {
+      "path": "tase/evidence.py",
+      "sha256": "e17868e4d57c9749814dcd425cdb7d9f27477f05e79088989614b08ba047e4c0",
+      "unchanged": true
+    },
+    {
+      "path": "tase/execution_gate.py",
+      "sha256": "919e7bef69580cdecef7ac3e60af611db2dded5cdfad05c1621d377fffe92bbe",
+      "unchanged": true
+    },
+    {
+      "path": "tase/gate_features.py",
+      "sha256": "4ecefd7bc4a381bf624ee84a2f16538fefe5305d15d65c5e46ce458d7972afec",
+      "unchanged": true
+    },
+    {
+      "path": "tase/m2_context.py",
+      "sha256": "dfd99dfb4947f0ae709709a30fa06b6b7d7ddae46ad91f71120f7dd192db9cb5",
+      "unchanged": true
+    },
+    {
+      "path": "tase/m2_native.py",
+      "sha256": "22dc1e8a99edb88acb8ab1663a929abf496fb18529f24c07d7bf081c8e136f4d",
+      "unchanged": true
+    },
+    {
+      "path": "tase/preflight.py",
+      "sha256": "198799d2f6c48a49af8fd9e10031e519c88b3c7831de9ab6818be13197fffcfd",
+      "unchanged": true
+    },
+    {
+      "path": "tase/retention.py",
+      "sha256": "33a4b8f8ed9a2eab0bde59ceff4f30b8f06210298380cf771c0093fd5ba4609c",
+      "unchanged": true
+    },
+    {
+      "path": "tase/server.py",
+      "sha256": "ec85cf11daf223a5e1959cf833d3e85b0855bcab06fdb781cf04d9ddcad05031",
+      "unchanged": true
+    },
+    {
+      "path": "tase/shadow.py",
+      "sha256": "9f8182256fcac030b9deaa24ce5884854381c303bbee92c544481331681b309d",
+      "unchanged": true
+    },
+    {
+      "path": "tase/snapshot.py",
+      "sha256": "8e184a6ce2b126f334f4f965896b4b32ee8efdd5764206111aa5eec5eb1cf1bb",
+      "unchanged": true
+    },
+    {
+      "path": "tase/task_spec.py",
+      "sha256": "8bd892311bdaa2b01c6ab500d88bac94f6e53aa741d3c7752ef675e51883348c",
+      "unchanged": true
+    },
+    {
+      "path": "tase/test_authorization.py",
+      "sha256": "b12c5099faed72abdbfd11b90aacffac1698dad872dfa1c2454ded5fa6c87757",
+      "unchanged": true
+    },
+    {
+      "path": "tase/test_context.py",
+      "sha256": "a01125743a5997aa2769d68ba8dc0c21610a59b4c4c04777333447dcd6cfb96f",
+      "unchanged": true
+    },
+    {
+      "path": "tase/test_execution.py",
+      "sha256": "77dcc7c121a97efc4ae44cb0a998564899a6defe4ac439cfb43f298ed126a41a",
+      "unchanged": true
+    },
+    {
+      "path": "tase/test_ledger.py",
+      "sha256": "6ac5507bb0cc867791d6c6380945330d589547d5f3e27ec8b8d79ebd0981dc03",
+      "unchanged": true
+    },
+    {
+      "path": "tase/test_runtime.py",
+      "sha256": "2459859be68e19ab3ee42c01ae1862b7924ab4715a5fac50849d2eea03d9d4e8",
+      "unchanged": true
+    }
+  ],
+  "unchanged_existing_test_files": 15,
+  "existing_tests": 71,
+  "new_tests": 18,
+  "ordinary_tests": 89,
+  "optimized_tests": 89,
+  "actual_suite_child_exits": {
+    "normal": 0,
+    "optimized": 0
+  },
+  "public_derivative_hashes_verified": 502,
+  "privacy_current_delta": {
+    "text_files_scanned": 513,
+    "known_private_marker_matches": [],
+    "credential_pattern_matches": []
+  },
+  "R006_disposition": "TEST_SUSPENDED_AFTER_INCIDENT",
+  "new_gpu_model_sim_TEST_calls": 0,
+  "remote_live_refresh": "NOT_VERIFIED_SSH_UNAVAILABLE",
+  "new_private_remote_backup": "NOT_PERFORMED_SSH_UNAVAILABLE",
+  "prior_verified_TEST_reserved": 0,
+  "new_real_TEST_attempts": 0
+}

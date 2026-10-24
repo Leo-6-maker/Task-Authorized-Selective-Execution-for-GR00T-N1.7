@@ -1,5 +1,7 @@
 # Task-Authorized Selective Execution for GR00T N1.7
 
+当前 Issue #14 / R007：**READY_FOR_R007_FIX_REVIEW，TEST暂停**。launcher 交接修复已完成CPU普通／`-O` 各89项回归；无新模型/仿真/TEST。旧R006不可重用，等待新的R008。见 [修复交接与远端访问限制](reports/E2/R007/R007_FIX_HANDOFF.md)。
+
 Issue #12：R006 已授权，但首个冻结 server 启动在模型加载前发现程序错误，已按停止规则保全现场。**TEST仍0/120**。见 [事件与下一步](reports/E2/TEST/INCIDENT-001.md)；执行代码未改，无自动重试。下方Issue10状态保留为历史。
 
 当前 Issue #10：**READY_FOR_R2_DELTA_REVIEW，TEST 未授权**。新增 TEST 软件门与既有 CALIB CPU 派生包，见 [R2 delta 交接](reports/E2/R2_DELTA_HANDOFF.md)；R005 不是执行许可，下方 Issue #8 运行记录保留。

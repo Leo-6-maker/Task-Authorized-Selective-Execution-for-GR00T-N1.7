@@ -1,0 +1,66 @@
+{
+  "scope": "SYNTHETIC_CPU_PROXY_NO_MODEL_SIM_TEST",
+  "artifacts": [
+    {
+      "path": "cpu_proxy.py",
+      "bytes": 1901,
+      "sha256": "301f2c6abdd115be24fbf6118f6e70c1d452a952296b736931499a44bcf285da"
+    },
+    {
+      "path": "operator/test-server-cpu/admission_published.json",
+      "bytes": 363,
+      "sha256": "d423dc1c69b799025c7793b55101a5f8306558e545e2dc195c968fb8390aefd3"
+    },
+    {
+      "path": "operator/test-server-cpu/launcher_started.json",
+      "bytes": 631,
+      "sha256": "6b29675c067253911b0681b7daa8ccdf8b1a2c420849be5894f35fa1dd9ccf3a"
+    },
+    {
+      "path": "operator/test-server-cpu/stderr.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/test-server-cpu/supervisor_exit.json",
+      "bytes": 273,
+      "sha256": "032f3b2b3fc8831a912675005f97ebc0682afcf947d452a2424258a04633f84a"
+    },
+    {
+      "path": "operator/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu/creation.json",
+      "bytes": 107,
+      "sha256": "5c4fe5796d32be8ea9df8567592f9bbe30965cca748123358f2209163ebccdd3"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu/test_admission.publish-source.json",
+      "bytes": 57,
+      "sha256": "47c9ec8c425ad331923682bfa46f041a16d606da222f2036b5723e6772d6c8e6"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.json",
+      "bytes": 148,
+      "sha256": "845316d6b35bcac7e56fa1ee853bf3846414b25b0bd625ea11a1294b06ab5ba4"
+    },
+    {
+      "path": "runs/test-server-cpu.exit.started.json",
+      "bytes": 580,
+      "sha256": "e8c6f6ed5fedfb97024b7c1c0372e014903f4225519e383539aec4c1b51c80b6"
+    }
+  ],
+  "TEST_reservations": 0
+}

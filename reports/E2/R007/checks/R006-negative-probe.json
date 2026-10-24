@@ -1,0 +1,8 @@
+{
+  "scope": "CPU_NEGATIVE_AUTHORIZATION_PROBE_NO_SERVER_OR_TEST",
+  "checked_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "fetched_main": "b24db4982790e862fe8d8ec71fbd3ebaec5a4e4c",
+  "R006_historical_commit_rejected": true,
+  "reason": "TEST grant changed on main",
+  "model_gpu_sim_TEST_calls": 0
+}

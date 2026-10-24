@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<PRIVATE>/cpu-a904e267/optimized/cases/signal-2/driver.py", line 6, in <module>
+    _run_owned_server(r,Path('<PRIVATE>'),Path(sys.executable),"test-server-cpu",dict(scope="SYNTHETIC_CPU_ADMISSION",port=5562),[sys.executable,"-u",str(r/"cpu_proxy.py"),"--output",str(r/"runs/test-server-cpu"),"--port","5562","--mode","hold"],os.environ.copy(),startup_timeout=3.,shutdown_timeout=1.)
+  File "<PRIVATE>/scripts/e2_test_server.py", line 180, in _run_owned_server
+    require(code==0, 'native server exited with an error after readiness')
+  File "<PRIVATE>/tase/test_authorization.py", line 16, in require
+    raise ValueError(message)
+ValueError: native server exited with an error after readiness

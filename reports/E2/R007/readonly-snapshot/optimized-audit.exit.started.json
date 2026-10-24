@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T13:46:57.472773+08:00",
+  "wrapper_pid": 1658199,
+  "child_pid": 1658200,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-O",
+    "<PRIVATE>/scripts/e2_audit_test.py",
+    "--workspace",
+    "<PRIVATE>/retained-incident-snapshot",
+    "--repo",
+    "<PRIVATE>",
+    "--output",
+    "<PRIVATE>/optimized-retained-test-audit.json"
+  ]
+}

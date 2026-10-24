@@ -1,0 +1,18 @@
+test_absent_output_child_exclusive_creation_then_atomic_identical_admission (test_e2_server_startup.StartupTests.test_absent_output_child_exclusive_creation_then_atomic_identical_admission) ... ok
+test_child_exits_before_output_no_admission_and_actual_exit7 (test_e2_server_startup.StartupTests.test_child_exits_before_output_no_admission_and_actual_exit7) ... ok
+test_child_mkdir_then_fails_before_loaded_is_not_success (test_e2_server_startup.StartupTests.test_child_mkdir_then_fails_before_loaded_is_not_success) ... ok
+test_child_output_symlink_refuses_publication_keeps_target (test_e2_server_startup.StartupTests.test_child_output_symlink_refuses_publication_keeps_target) ... ok
+test_duplicate_admission_never_overwrites_original (test_e2_server_startup.StartupTests.test_duplicate_admission_never_overwrites_original) ... ok
+test_foreign_output_owner_refuses_publication_without_chown (test_e2_server_startup.StartupTests.test_foreign_output_owner_refuses_publication_without_chown) ... ok
+test_mismatched_output_argument_rejected_before_process (test_e2_server_startup.StartupTests.test_mismatched_output_argument_rejected_before_process) ... ok
+test_mismatched_pid_wrapper_and_recorded_command_refused (test_e2_server_startup.StartupTests.test_mismatched_pid_wrapper_and_recorded_command_refused) ... ok
+test_preexisting_or_broken_symlink_refuses_before_popen (test_e2_server_startup.StartupTests.test_preexisting_or_broken_symlink_refuses_before_popen) ... ok
+test_preexisting_output_refuses_before_popen_and_keeps_original (test_e2_server_startup.StartupTests.test_preexisting_output_refuses_before_popen_and_keeps_original) ... ok
+test_session_and_process_receipts_cannot_be_reused (test_e2_server_startup.StartupTests.test_session_and_process_receipts_cannot_be_reused) ... ok
+test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts (test_e2_server_startup.StartupTests.test_term_and_int_forward_only_to_owned_cpu_child_with_actual_receipts) ... ok
+test_timeout_before_mkdir_and_before_loaded_preserves_actual_exits (test_e2_server_startup.StartupTests.test_timeout_before_mkdir_and_before_loaded_preserves_actual_exits) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 2.474s
+
+OK

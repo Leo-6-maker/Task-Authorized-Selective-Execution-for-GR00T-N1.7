@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T13:44:45.483741+08:00",
+  "wrapper_pid": 1655988,
+  "child_pid": 1655989,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-u",
+    "<PRIVATE>/cpu-a904e267/normal/cases/partial-loaded-json/cpu_proxy.py",
+    "--output",
+    "<PRIVATE>/cpu-a904e267/normal/cases/partial-loaded-json/runs/test-server-cpu",
+    "--port",
+    "5562",
+    "--mode",
+    "partial_loaded"
+  ]
+}

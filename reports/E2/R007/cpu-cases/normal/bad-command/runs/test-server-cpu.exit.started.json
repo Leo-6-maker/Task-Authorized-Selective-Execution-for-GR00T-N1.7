@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-24T13:44:45.458625+08:00",
+  "wrapper_pid": 1655986,
+  "child_pid": 1655987,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-u",
+    "<PRIVATE>/cpu-a904e267/normal/cases/bad-command/cpu_proxy.py",
+    "--output",
+    "<PRIVATE>/cpu-a904e267/normal/cases/bad-command/runs/test-server-cpu",
+    "--port",
+    "5562",
+    "--mode",
+    "hold"
+  ]
+}
