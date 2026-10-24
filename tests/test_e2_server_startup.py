@@ -19,11 +19,13 @@ from scripts import e2_test_server as server
 
 REPO=Path(__file__).resolve().parents[1]
 EVIDENCE=os.environ.get('TASE_CPU_STARTUP_EVIDENCE')
-PROXY='''import argparse,json,time,os
+PROXY='''import argparse,json,time,os,signal
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--port',type=int,required=True);p.add_argument('--mode',required=True);a=p.parse_args()
 if a.mode=='early_exit':raise SystemExit(7)
 if a.mode=='no_mkdir':time.sleep(30)
+if a.mode=='ignore_signal':
+ signal.signal(signal.SIGTERM,signal.SIG_IGN);signal.signal(signal.SIGINT,signal.SIG_IGN)
 if a.mode=='symlink':
  target=a.output.parent/'foreign-proxy-dir';target.mkdir();(target/'keep').write_text('DO NOT TOUCH');a.output.symlink_to(target,target_is_directory=True);time.sleep(30)
 a.output.mkdir(parents=True,exist_ok=False)
@@ -44,7 +46,7 @@ if a.mode=='partial_loaded':
   f.write('{');f.flush();time.sleep(.1);f.write('"status":"MODEL_LOADED","host":"127.0.0.1","port":'+str(a.port)+'}');f.flush()
  time.sleep(.2);raise SystemExit(0)
 with (a.output/'loaded.json').open('x') as f:json.dump(dict(status='MODEL_LOADED',host='127.0.0.1',port=a.port,scope='SYNTHETIC_CPU_PROXY_NOT_MODEL'),f)
-if a.mode=='hold':time.sleep(30)
+if a.mode in ['hold','ignore_signal']:time.sleep(30)
 time.sleep(.2)
 '''
 
@@ -254,6 +256,27 @@ class StartupTests(unittest.TestCase):
                 self.assertEqual(self.receipt(root)['child_returncode'],-sig if sig==signal.SIGTERM else -sig)
                 self.assertEqual(self.receipt(root)['exit_code'],128+sig)
                 if EVIDENCE:(root/'driver.actual_exit.json').write_text(json.dumps(dict(actual_driver_exit=code,signal_sent=sig))+'\n')
+
+    def test_signal_ignoring_child_is_boundedly_closed_without_fake_exit_receipt(self):
+        with self.fixture('ignored-signal') as (root,proxy,env):
+            original=server._complete_json
+            sent=False
+            def stop_after_ready(path):
+                nonlocal sent
+                value=original(path)
+                if path.name=='loaded.json' and value is not None and not sent:
+                    # Signal handler will forward to only the owned wrapper; the
+                    # CPU child ignores TERM, exercising bounded group cleanup.
+                    sent=True;signal.getsignal(signal.SIGTERM)(signal.SIGTERM,None)
+                return value
+            with patch.object(server,'_complete_json',side_effect=stop_after_ready),self.assertRaises(ValueError):
+                self.run_server(root,proxy,env,'ignore_signal')
+            closed=self.supervisor(root)
+            self.assertEqual(closed['signal_received'],signal.SIGTERM)
+            self.assertTrue(closed['forced_owned_cleanup'])
+            self.assertEqual(closed['wrapper_returncode'],-signal.SIGKILL)
+            self.assertFalse(closed['actual_child_exit_receipt_present'])
+            self.assertFalse((root/'runs/test-server-cpu.exit.json').exists())
 
 
 if __name__=='__main__':unittest.main()

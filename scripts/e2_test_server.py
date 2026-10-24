@@ -173,6 +173,9 @@ def _run_owned_server(workspace,repo,server_python,session,admission,command,env
                         break
                 if time.monotonic()>=deadline:raise TimeoutError('native child never produced valid loaded receipt')
                 time.sleep(.02)
+            while process.poll() is None:
+                require(received is None, 'server launcher interrupted')
+                time.sleep(.02)
             code=process.wait()
             require(code==0, 'native server exited with an error after readiness')
             require(received is None, 'server launcher interrupted')
