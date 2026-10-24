@@ -1,0 +1,20 @@
+{
+  "status": "LIVE_FINAL_STATE_VERIFIED_STOPPED_NO_FURTHER_TEST",
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "checkout_clean": true,
+  "planned": 120,
+  "reserved": 14,
+  "SUCCESS": 12,
+  "CLEANUP_ERROR": 2,
+  "NOT_STARTED": 106,
+  "next0015_absent": true,
+  "original0010_unchanged": true,
+  "allocated_GPU_compute": 0,
+  "active_owned_native_jobs": 0,
+  "server_native_exit": 0,
+  "launcher_exit": 0,
+  "operator_exit": 1,
+  "main_grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+  "other_E2_course_checkout_head": "fc38e816ff3e75e87c29da3aa18009dcc0542f02",
+  "checked_at_sgt": "2026-10-24T16:20:40.142098+08:00"
+}

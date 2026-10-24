@@ -1,3 +1,5 @@
+当前 Issue #18 / R009：0011/0012及强制检查点通过后，0014再次CLEANUP_ERROR/exit1，已强制停止并关闭服务器。120计划=14已消耗（12SUCCESS+0010/0014两次清理故障）+106未启动；0015未预留。代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，无修复/重跑/merge。普通/-O停止审计与公开数值CPU核验均实际exit0，原件两处验哈希保全。当前STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW，下一步仅GPT事故审核及有界CPU生命周期修复授权，新代码须新grant后才能继续。详见 reports/E2/R009/R3_HANDOFF.md。
+
 # Task-Authorized Selective Execution for GR00T N1.7
 
 当前 Issue #16 / R008：**STOPPED_FOR_INCIDENT_REVIEW**。已完成激活并实际执行10个TEST单元（9 SUCCESS、1 CLEANUP_ERROR），其余110未启动；原0010已消耗且不重跑。见 [停止事件与交接](reports/E2/R008/R3_HANDOFF.md)。无新执行代码或自动merge。

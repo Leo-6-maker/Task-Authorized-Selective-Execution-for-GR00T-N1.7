@@ -1,0 +1,176 @@
+{
+  "scope": "ACTUAL_R009_STOP_AFTER_SECOND_CLEANUP_ERROR_NOT_RESULT_APPROVAL",
+  "planned": 120,
+  "reserved": 14,
+  "full_outcomes": 12,
+  "status_counts": {
+    "CLEANUP_ERROR": 2,
+    "NOT_STARTED": 106,
+    "SUCCESS": 12
+  },
+  "unstarted": 106,
+  "next_unopened": "e2-test-0015",
+  "observed_controls": 1882,
+  "policy_requests": 240,
+  "new_session_requests": 72,
+  "frozen_audit_normal_exit": 0,
+  "frozen_audit_optimized_exit": 0,
+  "normal_and_optimized_identical": true,
+  "original0010_unchanged": true,
+  "observed_operational_failures": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    }
+  ],
+  "frozen_system_error_mapping": "RUNTIME_ERROR only; lower0 MUST NOT mean zero operational failure",
+  "server_sessions": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    }
+  },
+  "failed_worker_and_episode_PIDs_absent": true,
+  "GPU_compute_processes_on_allocated_device": 0,
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "review_status": "STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW",
+  "operator_non_success_remaining_field_is_not_unused_budget": {
+    "original_field": 107,
+    "meaning": "120 minus prior10 minus3 newly normal closed; includes failed0014",
+    "actual_unopened": 106
+  },
+  "recorded_at_sgt": "2026-10-24T16:11:39.773067+08:00",
+  "actual_server_request_reconciliation": [
+    {
+      "session": "test-server-r008-01",
+      "get_actions": 168,
+      "inference_PASS": 168,
+      "source_request_sha256": "2b9d8c3162e975672a194ad0099d2e190acd50a65164a78f935e597f8064bfdb",
+      "source_inference_sha256": "5cecab134c64836c2a75f632ae01232465c7a6a67f1ec52beef0c4776c231fc0"
+    },
+    {
+      "session": "test-server-r009-01",
+      "get_actions": 72,
+      "inference_PASS": 72,
+      "source_request_sha256": "5aa5202020954ee1c940ec55ada71f8c2c5de6e1f84d380b61cc594143fbec5e",
+      "source_inference_sha256": "72b0b9dbbe0fb2d28a61975cd01be884a54c41c205e9cda04e4752076d6eac77"
+    }
+  ],
+  "per_run_actual_request_bindings": [
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0001",
+      "requests": 17,
+      "first_session_request": 1,
+      "last_session_request": 17
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0002",
+      "requests": 17,
+      "first_session_request": 18,
+      "last_session_request": 34
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0003",
+      "requests": 18,
+      "first_session_request": 35,
+      "last_session_request": 52
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0004",
+      "requests": 18,
+      "first_session_request": 53,
+      "last_session_request": 70
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0005",
+      "requests": 18,
+      "first_session_request": 71,
+      "last_session_request": 88
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0006",
+      "requests": 18,
+      "first_session_request": 89,
+      "last_session_request": 106
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0007",
+      "requests": 16,
+      "first_session_request": 107,
+      "last_session_request": 122
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0008",
+      "requests": 16,
+      "first_session_request": 123,
+      "last_session_request": 138
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0009",
+      "requests": 15,
+      "first_session_request": 139,
+      "last_session_request": 153
+    },
+    {
+      "server_session": "test-server-r008-01",
+      "run_id": "e2-test-0010",
+      "requests": 15,
+      "first_session_request": 154,
+      "last_session_request": 168
+    },
+    {
+      "server_session": "test-server-r009-01",
+      "run_id": "e2-test-0011",
+      "requests": 17,
+      "first_session_request": 1,
+      "last_session_request": 17
+    },
+    {
+      "server_session": "test-server-r009-01",
+      "run_id": "e2-test-0012",
+      "requests": 17,
+      "first_session_request": 18,
+      "last_session_request": 34
+    },
+    {
+      "server_session": "test-server-r009-01",
+      "run_id": "e2-test-0013",
+      "requests": 19,
+      "first_session_request": 35,
+      "last_session_request": 53
+    },
+    {
+      "server_session": "test-server-r009-01",
+      "run_id": "e2-test-0014",
+      "requests": 19,
+      "first_session_request": 54,
+      "last_session_request": 72
+    }
+  ],
+  "all_actual_server_requests_equal_saved240": true,
+  "all14_original_videos_decode_to_observed_controls": true,
+  "repeat_cleanup_run": "e2-test-0014"
+}

@@ -1,3 +1,5 @@
+当前 Issue #18 / R009：0011/0012及强制检查点通过后，0014再次CLEANUP_ERROR/exit1，已强制停止并关闭服务器。120计划=14已消耗（12SUCCESS+0010/0014两次清理故障）+106未启动；0015未预留。代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，无修复/重跑/merge。普通/-O停止审计与公开数值CPU核验均实际exit0，原件两处验哈希保全。当前STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW，下一步仅GPT事故审核及有界CPU生命周期修复授权，新代码须新grant后才能继续。详见 reports/E2/R009/R3_HANDOFF.md。
+
 # Issue16 / R008 — STOPPED_FOR_INCIDENT_REVIEW
 
 R008激活前置条件已在live原环境核验，真实模型server已正常加载/监听。按冻结顺序预留10个单元后，0010出现CLEANUP_ERROR/exit1，立即停止并正常关闭server。9 SUCCESS+1清理错误、110 NOT_STARTED均留在120分母；不重跑/换ID，不改代码或标签。原件已两处完整核验。详见[R008 handoff](R008/R3_HANDOFF.md)。唯一下一步为GPT事故评估；本报告不是完整TEST/R3通过。

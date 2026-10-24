@@ -1,0 +1,7 @@
+{
+  "stage": "CPU_LOCAL_BACKUP_RECHECK_BEFORE_ANY_MODEL_LAUNCH",
+  "exit_code": 1,
+  "error": "system Python lacks hashlib.file_digest",
+  "originals_changed": false,
+  "TEST_calls": 0
+}

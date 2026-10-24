@@ -1,0 +1,57 @@
+{
+  "scope": "ACTUAL_R009_STOP_AFTER_SECOND_CLEANUP_ERROR_NOT_RESULT_APPROVAL",
+  "planned": 120,
+  "reserved": 14,
+  "full_outcomes": 12,
+  "status_counts": {
+    "CLEANUP_ERROR": 2,
+    "NOT_STARTED": 106,
+    "SUCCESS": 12
+  },
+  "unstarted": 106,
+  "next_unopened": "e2-test-0015",
+  "observed_controls": 1882,
+  "policy_requests": 240,
+  "new_session_requests": 72,
+  "frozen_audit_normal_exit": 0,
+  "frozen_audit_optimized_exit": 0,
+  "normal_and_optimized_identical": true,
+  "original0010_unchanged": true,
+  "observed_operational_failures": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    }
+  ],
+  "frozen_system_error_mapping": "RUNTIME_ERROR only; lower0 MUST NOT mean zero operational failure",
+  "server_sessions": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    }
+  },
+  "failed_worker_and_episode_PIDs_absent": true,
+  "GPU_compute_processes_on_allocated_device": 0,
+  "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "review_status": "STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW",
+  "operator_non_success_remaining_field_is_not_unused_budget": {
+    "original_field": 107,
+    "meaning": "120 minus prior10 minus3 newly normal closed; includes failed0014",
+    "actual_unopened": 106
+  },
+  "recorded_at_sgt": "2026-10-24T16:11:39.773067+08:00"
+}

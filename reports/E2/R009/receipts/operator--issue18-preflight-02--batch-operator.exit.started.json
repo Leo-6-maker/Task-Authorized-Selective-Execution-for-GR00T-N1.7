@@ -1,0 +1,10 @@
+{
+  "started_at_sgt": "2026-10-24T16:07:47.017684+08:00",
+  "wrapper_pid": 3686389,
+  "child_pid": 3686400,
+  "command": [
+    "<PRIVATE>/me6401-e2-package-cache-20261023/envs/sim/bin/python",
+    "-u",
+    "<PRIVATE>/operator/issue18-preflight-02/run_frozen_continuation.py"
+  ]
+}

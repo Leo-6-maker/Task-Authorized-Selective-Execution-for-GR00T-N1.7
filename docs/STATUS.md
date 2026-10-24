@@ -1,3 +1,5 @@
+当前 Issue #18 / R009：0011/0012及强制检查点通过后，0014再次CLEANUP_ERROR/exit1，已强制停止并关闭服务器。120计划=14已消耗（12SUCCESS+0010/0014两次清理故障）+106未启动；0015未预留。代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，无修复/重跑/merge。普通/-O停止审计与公开数值CPU核验均实际exit0，原件两处验哈希保全。当前STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW，下一步仅GPT事故审核及有界CPU生命周期修复授权，新代码须新grant后才能继续。详见 reports/E2/R009/R3_HANDOFF.md。
+
 # 当前状态索引
 
 当前 Issue #16：R008真实激活后，在原e2-test-0010的shadow清理阶段返回CLEANUP_ERROR/exit1，已按STOP规则关闭服务器。120计划保留：10已预留（9正常+1清理错误）、110未启动。运行代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，未改动。普通/-O live停止审计均exit0；原件两处核验完成。详见[事件交接](../reports/E2/R008/R3_HANDOFF.md)。下一步仅GPT事故评估；不重跑0010、不自动继续0011。下方Issue14状态保留为历史。

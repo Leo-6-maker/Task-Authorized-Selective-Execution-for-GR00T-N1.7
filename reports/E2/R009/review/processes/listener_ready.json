@@ -1,0 +1,11 @@
+{
+  "scope": "NONINVASIVE_PROC_KERNEL_LISTENER_AND_NATIVE_OWNED_FD_CHECK",
+  "native_pid": 3686448,
+  "port": 5564,
+  "loopback": "127.0.0.1",
+  "model_requests_from_check": 0,
+  "observed_unix": 1792829283.867056,
+  "admission_sha256": "e8522934a0e1dd51356d42d0ace2b05faf4ca3bde094c3ffda95cae0d6fe6b92",
+  "loaded_sha256": "00b5d026ce43f0dd407432bb5440e1de8632241796c7a9c223222ad799a13f0b",
+  "launcher_ready_sha256": "5697204a8dd18b741ece93585e4632148ddc158d95e3aae3380b4eb8c19355d8"
+}

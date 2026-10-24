@@ -1,0 +1,13 @@
+{
+  "started_at_sgt": "2026-10-24T16:16:42.277388+08:00",
+  "wrapper_pid": 1755883,
+  "child_pid": 1755886,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "<PRIVATE>/ME6401-PROJ2/e2-r008-test/reports/E2/R009/check_safe_review.py",
+    "--package",
+    "<PRIVATE>/ME6401-PROJ2/e2-r008-test/reports/E2/R009/review",
+    "--output",
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue18/normal-public-check.json"
+  ]
+}
