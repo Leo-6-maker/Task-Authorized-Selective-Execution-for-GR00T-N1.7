@@ -1,0 +1,60 @@
+{
+  "scope": "CPU_SYNTHETIC_REPRODUCTION_EXPECTED_FAILURE_NOT_TEST",
+  "results": [
+    {
+      "mode": "normal",
+      "source_sha": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+      "actual_child_exit": 1,
+      "actual_wrapper_exit": 1,
+      "expected_failure_reproduced": true,
+      "model_present": false,
+      "CUDA_visible_devices": "-1",
+      "TEST_reservations_created": 0,
+      "stderr_original_sha256": "8ebbbe8639dc95bde1ea0357139c99f073b68a3381677542177c6d5f853f4137",
+      "command": [
+        "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+        "-m",
+        "tase.server",
+        "--model",
+        "/tmp/tmpz3cqrnuf/no-model-present",
+        "--output",
+        "/tmp/tmpz3cqrnuf/precreated-server-output",
+        "--allocation-record",
+        "/tmp/tmpz3cqrnuf/allocation.json",
+        "--audit-rng",
+        "--epoch",
+        "E2",
+        "--port",
+        "5562"
+      ]
+    },
+    {
+      "mode": "optimized",
+      "source_sha": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+      "actual_child_exit": 1,
+      "actual_wrapper_exit": 1,
+      "expected_failure_reproduced": true,
+      "model_present": false,
+      "CUDA_visible_devices": "-1",
+      "TEST_reservations_created": 0,
+      "stderr_original_sha256": "84eb7b58a01012381a12438b54e2afdbaa63518f0d63e809d817dfc985ddd4ef",
+      "command": [
+        "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+        "-O",
+        "-m",
+        "tase.server",
+        "--model",
+        "/tmp/tmpya3uakgt/no-model-present",
+        "--output",
+        "/tmp/tmpya3uakgt/precreated-server-output",
+        "--allocation-record",
+        "/tmp/tmpya3uakgt/allocation.json",
+        "--audit-rng",
+        "--epoch",
+        "E2",
+        "--port",
+        "5562"
+      ]
+    }
+  ]
+}

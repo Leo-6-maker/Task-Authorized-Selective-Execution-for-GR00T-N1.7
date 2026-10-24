@@ -1,0 +1,39 @@
+{
+  "head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "files": [
+    {
+      "path": "scripts/e2_test_server.py",
+      "sha256": "f013f0e378194ecf6b2b5c1235855c63145a8433353fb7a735b907f9c91779b2",
+      "git_blob": "33338fd1ff070108618013b601d62457fcc35d72",
+      "excerpts": [
+        {
+          "line": 34,
+          "text": "    folder=workspace/'runs'/session;folder.mkdir()"
+        },
+        {
+          "line": 36,
+          "text": "    write_json(folder/'test_admission.json',dict(authorization=identity,preflight=verified,port=port,"
+        },
+        {
+          "line": 47,
+          "text": "        '--model',str(workspace/'checkpoints/libero_object'),'--output',str(folder),"
+        }
+      ]
+    },
+    {
+      "path": "tase/server.py",
+      "sha256": "ec85cf11daf223a5e1959cf833d3e85b0855bcab06fdb781cf04d9ddcad05031",
+      "git_blob": "f2ecb32df712f73a5e157c9e3bc46a09bff68038",
+      "excerpts": [
+        {
+          "line": 24,
+          "text": "    a.output.mkdir(parents=True, exist_ok=False)"
+        },
+        {
+          "line": 27,
+          "text": "    import torch"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "PREDECLARED_TEST_REVIEW_DERIVATIVE_ONLY_NO_EXECUTION_OR_SELECTION_CHANGE",
+  "execution_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "review_commit": "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+  "planned_denominator": "All120 frozen cells including unstarted, interrupted, errors, timeout and semantic abort",
+  "numeric_pair_rule": "Union of all scenarios in which either arm has an observed actual wrong-object-lift, semantic abort or monitor/system error, plus C0/init_index6 for each of the three tasks, plus the lexicographically first timeout scenario if any. Include both arms and missing receipts explicitly; no replacing a selected missing artifact.",
+  "numeric_contents": "Complete actual physical/contact/oracle sequences, control_trace and all raw16 actions, identity/TaskSpec/actual instruction/reset, Gate decisions and contact inputs/guards/snapshot digests, actual child/worker exits; selected prediction windows are first, last and every non-ACCEPT decision, plus the B0 first-event-containing window from saved raw if available. No new model or simulator call; no unsafe pickle loading.",
+  "media_rule": "For each selected scenario, both cameras from saved rollout frames in one labeled short derivative: first4 policy seconds; additionally event onset minus1 second through plus1 second for any actual event, and final1 second for semantic abort or timeout. Keep exact control-frame indices and source video hash; unavailable or corrupt source stays flagged.",
+  "statistics": "Use frozen e2_audit_test.py unchanged; task-stratified init-cluster paired bootstrap2000 seed640500. Never use outcomes to alter protocol, k3, cells, sample size or run order.",
+  "privacy": "No weights, private operator paths/logs, source XML or pickle bytes; publish finite numeric allow_pickleFalse NPZ/JSON and source-relative SHA256 lineage. Full originals backed up at two authorized locations.",
+  "selected_after_results_by_fixed_rule": true,
+  "declared_before_first_TEST_reservation": true,
+  "reviewer_approval": "NOT_CLAIMED_BY_EXECUTOR"
+}

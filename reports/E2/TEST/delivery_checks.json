@@ -1,0 +1,20 @@
+{
+  "scope": "REPORT_ONLY_INCIDENT_DELTA_NO_EXECUTION_CHANGES_OR_GPT_APPROVAL",
+  "execution_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "frozen_source_config_changed": [],
+  "TEST_reserved": 0,
+  "TEST_completed": 0,
+  "planned_ledger_rows": 120,
+  "safe_derivative_hashes_verified": 32,
+  "public_text_files_scanned": 46,
+  "known_private_markers_or_credential_matches": [],
+  "new_execution_code_sha": null,
+  "source_server_error": "OUTPUT_DIRECTORY_CREATED_BY_LAUNCHER_BUT_NATIVE_SERVER_REQUIRES_ABSENT_PATH",
+  "native_server_child_exit": 1,
+  "post_stop_frozen_audit_child_exit": 0,
+  "CPU_reproduction_child_exits": {
+    "normal": 1,
+    "optimized": 1
+  },
+  "CPU_reproduction_expected_failure": true
+}

@@ -1,0 +1,35 @@
+{
+  "execution_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "review_commit": "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+  "review_path": "docs/reviews/R006-E2-TEST-AUTHORIZED.json",
+  "review_grant_blob_sha1": "49c04284f1e61198ee323868180b0707800d0c54",
+  "main_verified_same": true,
+  "grant_admission": {
+    "identity": {
+      "authorized_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+      "epoch": "E2",
+      "protocol_id": "TASE-002-v1.0",
+      "selected_k": 3,
+      "maximum_attempts": 120,
+      "test_config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "test_cells_sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+      "protocol_lock_sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+      "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+      "splits_sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+      "selection_sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+      "review_id": "R006-2026-10-24-E2-TEST",
+      "review_commit": "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+      "review_path": "docs/reviews/R006-E2-TEST-AUTHORIZED.json",
+      "review_blob": "49c04284f1e61198ee323868180b0707800d0c54"
+    },
+    "cell_count": 120
+  },
+  "actual_tests_this_task": {
+    "GPU_model_loads": 0,
+    "TEST_reservations": 0,
+    "CPU_expected_failure_reproductions": 2,
+    "native_server_actual_exit": 1,
+    "TEST_auditor_actual_exit": 0
+  },
+  "limitation": "No actual TEST evidence, prediction or media exists. All120 remain unstarted; no result claim."
+}

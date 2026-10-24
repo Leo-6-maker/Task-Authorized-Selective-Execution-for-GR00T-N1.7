@@ -1,5 +1,12 @@
 # 当前状态索引
 
+## Issue #12 — R006 authorized, execution stopped before model load
+
+R006/grant commit `6c5d6c69e9abecf66999eab318b6d8c8a1b676a6` authorizes exact execution Head `3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964`; PR #11 stays open/unmerged. Current grant admission/resource/source/model/official-init checks passed. The first frozen server launch hit a directory-ownership contract conflict and exited1 before torch/model load. R006's stop rule was applied: **TEST0/120 reserved, all120 unstarted, no model requests/simulation**. Runtime code and scientific freeze remain unchanged. No new name, retry, bypass or grant edit.
+
+[Incident and proposed bounded repair](../reports/E2/TEST/INCIDENT-001.md) · [Issue12 handoff](../reports/E2/TEST/R3_HANDOFF.md). Only next step is GPT incident assessment / exact-head repair authorization. Below is retained Issue10/history; its pre-R006 authorization status is historical.
+
+
 ## Issue #10 — READY_FOR_R2_DELTA_REVIEW / TEST NOT_AUTHORIZED
 
 当前依据为 main [R005](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/blob/e00f40cea298ce67159007d619dbf5e2747cb178/docs/reviews/R005-R2-E2-conditional-freeze.md)：条件科学冻结，不是 TEST 放行。独立 stacked `codex/10-test-freeze` 接续 PR #9 `fc38e816ff3e75e87c29da3aa18009dcc0542f02`；保留原交付，不重写/rebase父PR。

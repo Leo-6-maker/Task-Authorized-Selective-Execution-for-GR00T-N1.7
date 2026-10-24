@@ -1,0 +1,30 @@
+{
+  "started_at_sgt": "2026-10-24T11:43:48.620143+08:00",
+  "wrapper_pid": 3503782,
+  "child_pid": 3503783,
+  "command": [
+    "<PRIVATE_PATH>",
+    "-u",
+    "<PRIVATE>/operator/issue12-frozen-code/scripts/e2_test_server.py",
+    "--workspace",
+    "<PRIVATE>",
+    "--repo",
+    "<PRIVATE>/operator/issue12-frozen-code",
+    "--review-commit",
+    "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+    "--review-path",
+    "docs/reviews/R006-E2-TEST-AUTHORIZED.json",
+    "--allocation-record",
+    "<PRIVATE>/operator/issue12-preflight-01/gpu-allocation.local.json",
+    "--server-python",
+    "<PRIVATE_PATH>",
+    "--sim-python",
+    "<PRIVATE_PATH>",
+    "--session",
+    "test-server-r006-01",
+    "--gpu-index",
+    "0",
+    "--port",
+    "5562"
+  ]
+}
