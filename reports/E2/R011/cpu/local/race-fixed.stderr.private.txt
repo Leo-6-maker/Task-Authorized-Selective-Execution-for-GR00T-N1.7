@@ -1,0 +1,20 @@
+.........Process SpawnProcess-11:
+Traceback (most recent call last):
+  File "<LOCAL_PROJECT>/.takeover-recovery-private/issue6-20261023/cpu_environment/interpreters/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "<LOCAL_PROJECT>/.takeover-recovery-private/issue6-20261023/cpu_environment/interpreters/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "<LOCAL_PROJECT>/e2-r011-report/tests/test_shadow_lifecycle.py", line 44, in cpu_worker
+    finish_worker_close(connection,NativeProxy(mode,delay),token,received)
+  File "<LOCAL_PROJECT>/e2-r011-report/tase/shadow.py", line 102, in finish_worker_close
+    if native is not None:native.close()
+                          ^^^^^^^^^^^^^^
+  File "<LOCAL_PROJECT>/e2-r011-report/tests/test_shadow_lifecycle.py", line 22, in close
+    if self.mode=='finalizer_error':raise RuntimeError('SYNTHETIC_NATIVE_FINALIZER_ERROR')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: SYNTHETIC_NATIVE_FINALIZER_ERROR
+.............
+----------------------------------------------------------------------
+Ran 22 tests in 17.351s
+
+OK

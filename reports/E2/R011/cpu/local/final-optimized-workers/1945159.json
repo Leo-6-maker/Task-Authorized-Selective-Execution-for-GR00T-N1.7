@@ -1,0 +1,77 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_exit_deadline_even_with_good_ack_is_error",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FORCED_TERM",
+    "worker_pid": 1945159,
+    "worker_returncode": -15,
+    "clean": false,
+    "forced": true,
+    "term_sent": true,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198609.289014656,
+        "close_token": "4fa25dcc6e9449af96ac59d3ac0ab03d"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198609.289232855
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198609.289239349
+      },
+      {
+        "event": "DEADLINE_EXPIRED",
+        "parent_monotonic": 198609.319370424
+      },
+      {
+        "event": "TERM_SENT",
+        "parent_monotonic": 198609.31938105
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198609.321552866
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198609.321570838
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "4fa25dcc6e9449af96ac59d3ac0ab03d",
+        "worker_pid": 1945159,
+        "received_monotonic": 198609.289046669
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "4fa25dcc6e9449af96ac59d3ac0ab03d",
+        "worker_pid": 1945159,
+        "native_finalized": true,
+        "received_monotonic": 198609.289046669,
+        "finalizer_started_monotonic": 198609.289072235,
+        "finalizer_finished_monotonic": 198609.289126758
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "TERM_EXIT",
+        "started_monotonic": 198609.319392964,
+        "deadline_monotonic": 198609.469392448,
+        "initial_returncode": null,
+        "polls": 2,
+        "finished_monotonic": 198609.321539579,
+        "returncode": -15,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "PROCESS_EXIT_TIMEOUT"
+  }
+}

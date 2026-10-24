@@ -1,0 +1,44 @@
+{
+  "status": "FINAL_CPU_REPAIR_VALIDATED_NO_NEW_TEST",
+  "tested_code_head": "c08a34cf6dce61b48bfcd93c313d34826d955522",
+  "suites_and_audits": [
+    {
+      "mode": "normal",
+      "actual_exit": 0,
+      "tests": 123,
+      "seconds": 57.943
+    },
+    {
+      "mode": "optimized",
+      "actual_exit": 0,
+      "tests": 123,
+      "seconds": 58.478
+    },
+    {
+      "mode": "audit-normal",
+      "actual_exit": 0,
+      "tests": null,
+      "seconds": null
+    },
+    {
+      "mode": "audit-optimized",
+      "actual_exit": 0,
+      "tests": null,
+      "seconds": null
+    }
+  ],
+  "actual_CPU_worker_receipts": 70,
+  "all_CPU_worker_pids_absent": true,
+  "original16_audits_exactly_equal": true,
+  "raw16_all1900_source_members_unchanged": true,
+  "planned": 120,
+  "reserved": 16,
+  "full_outcomes": 13,
+  "CLEANUP_ERROR": 3,
+  "NOT_STARTED": 104,
+  "next0017_absent": true,
+  "original_runtime_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "new_model_sim_TEST_calls_after_incident": 0,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR",
+  "timestamp": "2026-10-24T12:38:00.420792+00:00"
+}

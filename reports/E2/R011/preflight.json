@@ -1,0 +1,28 @@
+{
+  "status": "REMOTE_R011_PREFLIGHT_ALL_PASS",
+  "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "TEST_reserved": 14,
+  "full_outcomes": 12,
+  "CLEANUP_ERROR": 2,
+  "not_started": 106,
+  "next_run": "e2-test-0015",
+  "old_worker_PID_absent": true,
+  "old_server_PID_absent": true,
+  "active_runtime_processes": 0,
+  "GPU_free_mib": 31749,
+  "model_GPU_sim_TEST_calls": 0,
+  "actual_preflight_exit": 0,
+  "grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+  "grant_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
+  "fixed_model_files": 17,
+  "fixed_initializations": 30,
+  "local_original14_backup": {
+    "status": "LOCAL_SECOND_COPY_WHOLE_AND_EVERY_MEMBER_REVERIFIED",
+    "bytes": 254951092,
+    "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+    "members": 1611,
+    "checked_at": "2026-10-24T12:17:21.380361+00:00",
+    "actual_exit": 0
+  },
+  "executing_role": "Codex executor, not independent reviewer"
+}

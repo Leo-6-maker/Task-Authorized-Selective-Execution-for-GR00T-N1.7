@@ -1,0 +1,53 @@
+{
+  "status": "ALL16_ORIGINAL_AND_CPU_PROOFS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue18-stopped-full-01",
+      "bytes": 254951092,
+      "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+      "artifacts": 1611,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue23-stopped-full-01",
+      "bytes": 291390525,
+      "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
+      "artifacts": 1900,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue23-cpu-review-proof-01",
+      "bytes": 37936108,
+      "sha256": "11d389cdf117244d07577806f849be427eb4ffcabf6d61097ab7c56d28abf0fc",
+      "artifacts": 1643,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue23-local-cpu-proof-01",
+      "bytes": 380533,
+      "sha256": "f2dffe84afde3651a18dcb34b4388a5203b3b3b271a5b5110721d32e547b23f9",
+      "artifacts": 1528,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED"
+    }
+  ],
+  "reviewer_original_access": "NOT_INDEPENDENTLY_REHASHED_BY_GPT",
+  "no_original_mutations": true,
+  "private_metadata_two_copy_verification": {
+    "status": "FINAL_PRIVATE_METADATA_TWO_LOCATIONS_IDENTICAL",
+    "files": [
+      {
+        "name": "runtime-map.local.yaml",
+        "bytes": 2830,
+        "sha256": "37a2a5c08745b8be50e11d7eb207aa6f136844dc3e5b7655fd9f4bd9b8b0a004"
+      },
+      {
+        "name": "code_epoch_ledger.json",
+        "bytes": 94190,
+        "sha256": "3a2b5b5eb9c5563f3bc0562f6c3edef0ae40600bcdb84feca46e1cef061c06c6"
+      }
+    ]
+  }
+}

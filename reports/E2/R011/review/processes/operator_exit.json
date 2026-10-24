@@ -1,0 +1,11 @@
+{
+  "closed_new_units": 1,
+  "consumed_before_resume": 14,
+  "failure": {
+    "type": "RuntimeError",
+    "message": "TEST entry failed; retain original ID and stop: e2-test-0016"
+  },
+  "server_launcher_returncode": 0,
+  "head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "completed_unix": 1792844611.0036592
+}

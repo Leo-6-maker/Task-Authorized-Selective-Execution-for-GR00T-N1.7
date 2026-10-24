@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-24T20:36:36.889104+08:00",
+  "wrapper_pid": 3883082,
+  "child_pid": 3883149,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue23-cpu-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue23-cpu-code",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue23-cpu-final/audit-normal.json"
+  ]
+}

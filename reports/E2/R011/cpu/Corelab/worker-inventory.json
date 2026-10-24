@@ -1,0 +1,492 @@
+[
+  {
+    "receipt_sha256": "58a1ff6732faf2771c259d99109e6de652220809e260bf688d46b1ec4bde6bd0",
+    "pid_absent": true,
+    "status": "NONZERO_EXIT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ack_then_nonzero_exit_never_clean"
+  },
+  {
+    "receipt_sha256": "076c0f45a5780ab35cc38fb9feeb66e3a864c7b1a7d3951f6aaa4d19ce52476e",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_backpressured_close_request_cannot_block_parent_send"
+  },
+  {
+    "receipt_sha256": "24f12c26b4d0cbeb5b1b0c348861a74c0c58a2d7531400357c2771ae826ac2f2",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_clean_zero_actual_worker_and_native_completion"
+  },
+  {
+    "receipt_sha256": "b7eccdf6f34ab9bf499b98b825df7986e58cafba369f729adc7bdacbf6f516d9",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_duplicate_success_and_failure_close_are_idempotent"
+  },
+  {
+    "receipt_sha256": "32b5b583ebae8a191465e6dbfa615122e1f7c27c534e7d227910f31a968dc7b0",
+    "pid_absent": true,
+    "status": "PIPE_EOF",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_duplicate_success_and_failure_close_are_idempotent"
+  },
+  {
+    "receipt_sha256": "84f3022b3fb7a3d0c46a2382bbfc3f90462dc1e4fad51945c6f88f3d2c87d743",
+    "pid_absent": true,
+    "status": "PIPE_SEND_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_nonzero_and_eof_retains_actual_exit"
+  },
+  {
+    "receipt_sha256": "4635a356174ef69d8f44b48ed375fd4fd2b127231fe92c0f8c7d4e57ae5c397b",
+    "pid_absent": true,
+    "status": "FORCED_KILL",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_still_alive_cannot_block_or_skip_kill"
+  },
+  {
+    "receipt_sha256": "ae826ff2fd4d79bb72c688ff94cf2a570eb66b201f039ab480fc2b9de36df408",
+    "pid_absent": true,
+    "status": "NONZERO_EXIT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_nonzero_is_error"
+  },
+  {
+    "receipt_sha256": "1611182c82fea482881051a08ea0048500d8f06cb7500fc83bae8e449f986340",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_waitpid_zero_is_clean"
+  },
+  {
+    "receipt_sha256": "83a58dccad5abf97d27426335bf62094ef4af2a9c831d0bd7246df1538d9f994",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_exit_deadline_even_with_good_ack_is_error"
+  },
+  {
+    "receipt_sha256": "b1364e83b02e7b53c3aade738f86c7308a7591a5b75d8b2e4150b0c93bfd5a37",
+    "pid_absent": true,
+    "status": "FINALIZER_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_finalizer_failure_preserves_nonzero_exit_and_receipt"
+  },
+  {
+    "receipt_sha256": "a7de466bc1176f8c5d0d132f3211b19f7c4102936e9e1b2a29f5203492bfc2ce",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_forged_clean_receipt_cannot_hide_force_missing_ack_or_bad_time"
+  },
+  {
+    "receipt_sha256": "e8917b9ac064e55291106c4241b80839d55ed30410b6934d106dfe712c54c5fb",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_hung_native_requires_term_and_remains_error"
+  },
+  {
+    "receipt_sha256": "eada458f917b87c48d8a961dd279c0c495eccb55837a5fac210ef1afb0723d27",
+    "pid_absent": true,
+    "status": "FORCED_KILL",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ignored_term_requires_kill_and_remains_error"
+  },
+  {
+    "receipt_sha256": "40d5e420e0b696447e66004f8823d7219eff716ee011738445169d7fedebad10",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "b96330f1a3d315a9be08628292901e9c6da4a4f43edd203843e79fda8d5f6331",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "3e7518e202eff180cff22915220974f841cdfcde71fe7dc8cb217a9823b73a9d",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "0fd95e681db7c8c032730d90ab492046785d01714d345f4c99abc69ede523fea",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "f37020066e251f3f8eb6e9249381050455a066ab2d8dad4e2ee01d0580d32109",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "c68f6febeb8630c70ceaff5167d662c347f111ac73511c46b10a512869dd9918",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "c079b7f8143b2e74abfa8c894f7b833cb3c9bbcd110b9a4fefd8045ddccb3672",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "9dd6e99018dc1e8bc3571770b1986316172bbc4a02f17ce7b23c7c8b37e3a1db",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "30a5672f74bdec819f2c68bdf404f04d5bda30ee353339fb7115ee0b9c446c78",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "142b67cb2e471c412ef0857e9df576b48f8005ced386c85ca16bbd6b0ddf7bbe",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "d91973d667802bdb61f7c4059b04c0710e2f9d04938a6acae55db74ae50b0d97",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "f73358ff4357114989ca8b694f993eac7d6aa4a35efe9bfb47577c89e0f2c40c",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "5f44436804a6e6700c18a2be4328ea6d17d59afbeb17274d0203f08461603dd3",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_partial_transport_frame_cannot_block_parent_recv"
+  },
+  {
+    "receipt_sha256": "b01a7e43b395e762b5a6b0d5819f1e087c25c2fd3ce8770d7aa7ef09fb56b7aa",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_real_ten_second_boundary_finalizer_ack_then_exit"
+  },
+  {
+    "receipt_sha256": "5aff66b482b6745e9c935f05fbe63f253a97df9a7981aa78c6c9410f27bde726",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_receipt_does_not_mean_process_exit"
+  },
+  {
+    "receipt_sha256": "f01d4ee0c1833e96234c144833273c398e609b28c566376fa295d727de367812",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_slow_native_finalizer_is_cooperative_not_force"
+  },
+  {
+    "receipt_sha256": "94175a8bbf803307ba6eeccb1dfc4f2e75d1f11d953facdb1123dc45addd6053",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_startup_error_preserved_and_owned_worker_closed"
+  },
+  {
+    "receipt_sha256": "60c3e732b1324c8bfe5745ffb7972e01720b25ff2849d80e7122c82671a96943",
+    "pid_absent": true,
+    "status": "PIPE_SEND_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "811987df746b2a7c5725d7a5f535d9619bf2d867ebee9855f418c1d4f4174165",
+    "pid_absent": true,
+    "status": "PIPE_EOF",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "ea2632ce700ff44307176412d9973bceab21e2fec36fd413ae86cf4b72d4c799",
+    "pid_absent": true,
+    "status": "INVALID_CLOSE_RECEIPT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "f2f6ad6ae4a346176b92b46b26b97071010cd812f79bfc4c76f543f8c9422fe7",
+    "pid_absent": true,
+    "status": "INVALID_CLOSE_RECEIPT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "d694999b7861c9ebd33a204de2884ed862f6f4bda531445774ecf8649a68dedf",
+    "pid_absent": true,
+    "status": "NONZERO_EXIT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ack_then_nonzero_exit_never_clean"
+  },
+  {
+    "receipt_sha256": "4ad7f248092cef7611ba715ffd54d2efba1fc041b8cb8cf650a37fd0b31910be",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_backpressured_close_request_cannot_block_parent_send"
+  },
+  {
+    "receipt_sha256": "088a262dd7ece9a2230348cb326e0b90727ed0c8eabd5673d03014e40a7658f0",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_clean_zero_actual_worker_and_native_completion"
+  },
+  {
+    "receipt_sha256": "1dcc4eca4c029d68d38433b997226f52b32de45e56a9fc6ddad37562c019f3a6",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_duplicate_success_and_failure_close_are_idempotent"
+  },
+  {
+    "receipt_sha256": "d06002fdc0d4bbaba86427bdf80761806f2e9c43e9383c4283c8bba2e910b5b5",
+    "pid_absent": true,
+    "status": "PIPE_EOF",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_duplicate_success_and_failure_close_are_idempotent"
+  },
+  {
+    "receipt_sha256": "a088e946e4823b7d95be4947743ac20b7d0d0cadeaac54b6972e8f89fd7a4d27",
+    "pid_absent": true,
+    "status": "PIPE_SEND_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_nonzero_and_eof_retains_actual_exit"
+  },
+  {
+    "receipt_sha256": "cd82c954afae5f7bd449c09aa6add5ed6aa1d5385881505bf4f9dec44a050ae1",
+    "pid_absent": true,
+    "status": "FORCED_KILL",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_still_alive_cannot_block_or_skip_kill"
+  },
+  {
+    "receipt_sha256": "a41c2f26eb1661f00d1ab9235b752e4f5c1ec2d82317aba98949fffabd5bd2aa",
+    "pid_absent": true,
+    "status": "NONZERO_EXIT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_nonzero_is_error"
+  },
+  {
+    "receipt_sha256": "51fc79346dc70bd9103e3bd6e2b01f0c40de2c6a58a5c4632a69d93fe2502837",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_waitpid_zero_is_clean"
+  },
+  {
+    "receipt_sha256": "3fe5fa9c566fa9b3ae733567b852eb4b9480c3d6c5bd0a8ae53aaed5e1e631ec",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_exit_deadline_even_with_good_ack_is_error"
+  },
+  {
+    "receipt_sha256": "05e6054979d76b0c6965bd5b75f3c88f6857c644d01a15ce7ecd593402cd9b11",
+    "pid_absent": true,
+    "status": "FINALIZER_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_finalizer_failure_preserves_nonzero_exit_and_receipt"
+  },
+  {
+    "receipt_sha256": "771048665b13a06a897c98304a1b448a6b55dc88ed758e7a30383b735f41c5e9",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_forged_clean_receipt_cannot_hide_force_missing_ack_or_bad_time"
+  },
+  {
+    "receipt_sha256": "987ea454c20f9276cf762f4757d9c26f6e96b9efee3a1393b518ea7ffdbf02ad",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_hung_native_requires_term_and_remains_error"
+  },
+  {
+    "receipt_sha256": "c21620a620e5c3b29bf8e24c23abaf28b9078aa68d87dc91d680b0849c825580",
+    "pid_absent": true,
+    "status": "FORCED_KILL",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_ignored_term_requires_kill_and_remains_error"
+  },
+  {
+    "receipt_sha256": "9393d2ea3ab237154390273ffceefedd057a5c6c785aecbda953f4f7db576fc8",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "e1732f8a8288c46fcd648ab22232e9980993f6c84d8846be9cdae8ffdb70f24d",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "13829a8e1e592f65477c86eb66f65826f805430c809db68c9fa29fbdfb1c2c36",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "0ed6ded288e89ba1ed11e4bac3dc5480c58a7802573898f7db7da9413e43bbb5",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "f39165cf9b20d84a5fb1a42d659d33dad607cc6862988dcb89f2fcbc912db95d",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "f499110f70bfc3c21cfb823921343e8941ba0f8d731ae0960532ece8d8c15fc0",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "583c0392a130108358461409844b3e6a271141b72e7d3e95c9fe8c3b256805f7",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "afc546abe4603bd2eb0f73ff903c2c0603424d2c9ed21803801c18c9c8a7829e",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "80c35591cf41bebccb8175b55e5b69b5468851f0a2eb60367c8b1ff85a86c9f9",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "5860a45623e583c18a52375118db75df70ed0aee47edcc91f01ecfbc2fd9877f",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "7db7ee9dfff3dd129ecefd5d676298ac806106dc4b6d6fe7aae80e1d9f37fa88",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "28be5f1e46397f2f7be3cfb02742319de368af46153c350b0e03bb6612c76dde",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans"
+  },
+  {
+    "receipt_sha256": "b3085af3fcfdadf29f3e59934212cd29554341a8ddf6088c07f1beb863cc98f7",
+    "pid_absent": true,
+    "status": "FORCED_TERM",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_partial_transport_frame_cannot_block_parent_recv"
+  },
+  {
+    "receipt_sha256": "ad4d2790f4fd7ab32ead7aaf5aa550f704fd94344e0a3d27488947eee21fcd0c",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_real_ten_second_boundary_finalizer_ack_then_exit"
+  },
+  {
+    "receipt_sha256": "56fd990f4edc02a99cc4fae2d4112cef550a440804da1366311ef64fe515c5ac",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_receipt_does_not_mean_process_exit"
+  },
+  {
+    "receipt_sha256": "383cd39822004d03acde24f1dcc20099b45387ececd4fb8226f95ee7ed456e28",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_slow_native_finalizer_is_cooperative_not_force"
+  },
+  {
+    "receipt_sha256": "82b038a40e969f06bdd34110afec3a3a8103431ac33b3b53721cdc1fa1b3dc32",
+    "pid_absent": true,
+    "status": "CLEAN",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_startup_error_preserved_and_owned_worker_closed"
+  },
+  {
+    "receipt_sha256": "3b8cab5baa1858d764a947f8152427f70ff9f1f200c65a17bc23cef3db50c07d",
+    "pid_absent": true,
+    "status": "PIPE_SEND_ERROR",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "c85a5d1c7a073de5f6f6fb6c405408ad2aabb7e36efd8e39bf30e17b83d73589",
+    "pid_absent": true,
+    "status": "PIPE_EOF",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "cbcfbb476793b21df2457df8f3019debd5f2f933f679b31bf5bd053fc0820b42",
+    "pid_absent": true,
+    "status": "INVALID_CLOSE_RECEIPT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  },
+  {
+    "receipt_sha256": "fb12fefde806d2c6bd6cb9c4f5cbb8b16a734d6f43f5a69013e2ce61bbbdf9a7",
+    "pid_absent": true,
+    "status": "INVALID_CLOSE_RECEIPT",
+    "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+    "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_zero_exit_without_complete_receipt_is_error"
+  }
+]

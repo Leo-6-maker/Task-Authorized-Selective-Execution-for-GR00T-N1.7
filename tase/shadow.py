@@ -169,6 +169,23 @@ class Shadow:
             pipe_closed=False,process_handle_closed=False,events=[],worker_receipts=[])
         def event(name,**extra):receipt['events'].append(dict(event=name,parent_monotonic=time.monotonic(),**extra))
         error=None;process=self.process;token=uuid.uuid4().hex
+        def reap_until(deadline,phase):
+            # POSIX spawn sentinel EOF can precede waitpid availability. A
+            # positive Process.join(timeout) may use blocking waitpid after
+            # that EOF, so ONLY nonblocking joins/polls are used here.
+            observation=dict(phase=phase,started_monotonic=time.monotonic(),
+                deadline_monotonic=deadline,initial_returncode=process.exitcode,polls=0)
+            receipt.setdefault('exit_observations',[]).append(observation)
+            while True:
+                process.join(0);code=process.exitcode;observation['polls']+=1
+                remaining=deadline-time.monotonic()
+                if code is not None or remaining<=0:
+                    observation.update(finished_monotonic=time.monotonic(),
+                        returncode=code,timed_out=code is None)
+                    return code
+                # An early-ready sentinel stays readable; don't busy-spin or
+                # treat readability as proof the actual process is dead.
+                time.sleep(min(.002,remaining))
         try:
             if process is None or process.pid is None:
                 receipt.update(status='NOT_STARTED',clean=True);event('NO_WORKER_STARTED')
@@ -208,7 +225,11 @@ class Shadow:
                                     closed=True;deadline=time.monotonic()+exit_seconds;event('NATIVE_FINALIZER_COMPLETED')
                             else:error='INVALID_CLOSE_RECEIPT'
                     if process.sentinel in ready:
-                        process.join(0);event('PROCESS_EXIT_OBSERVED',exit_code=process.exitcode)
+                        code=reap_until(deadline,'COOPERATIVE_EXIT')
+                        if code is None:
+                            error=error or 'EXIT_STATUS_TIMEOUT';event('EXIT_STATUS_TIMEOUT')
+                            break
+                        event('PROCESS_EXIT_OBSERVED',exit_code=code)
                         # Drain a completion receipt delivered concurrently with sentinel readiness.
                         if channel_open and self.connection.poll(0) and error is None:continue
                         if process.exitcode!=0:error=error or 'NONZERO_EXIT'
@@ -218,12 +239,12 @@ class Shadow:
                         error=error or ('PROCESS_EXIT_TIMEOUT' if closed else 'FINALIZER_TIMEOUT');event('DEADLINE_EXPIRED')
                 # A reported finalizer/protocol error gets a bounded chance to exit
                 # on its own; retain the error even if that exit is zero.
-                if error is not None and error!='PROCESS_EXIT_TIMEOUT':process.join(exit_seconds)
-                # Sentinel, not a cached is_alive result, is the final pre-signal recheck.
-                if not wait([process.sentinel],0):
-                    receipt.update(forced=True,term_sent=True);event('TERM_SENT');process.terminate();process.join(terminate_seconds)
-                    if not wait([process.sentinel],0):
-                        receipt['kill_sent']=True;event('KILL_SENT');process.kill();process.join(kill_seconds)
+                if error is not None and error not in ['PROCESS_EXIT_TIMEOUT','EXIT_STATUS_TIMEOUT']:reap_until(time.monotonic()+exit_seconds,'ERROR_EXIT')
+                # Actual nonblocking waitpid, not sentinel EOF, is the pre-signal recheck.
+                if process.exitcode is None:
+                    receipt.update(forced=True,term_sent=True);event('TERM_SENT');process.terminate();reap_until(time.monotonic()+terminate_seconds,'TERM_EXIT')
+                    if process.exitcode is None:
+                        receipt['kill_sent']=True;event('KILL_SENT');process.kill();reap_until(time.monotonic()+kill_seconds,'KILL_EXIT')
                 else:process.join(0)
                 receipt['worker_returncode']=process.exitcode
                 if process.exitcode is None:receipt['status']='WORKER_SURVIVED_KILL'
@@ -236,12 +257,12 @@ class Shadow:
             receipt.update(status='PARENT_CLOSE_ERROR',parent_error=type(exc).__name__)
             event('PARENT_CLOSE_ERROR',error_type=type(exc).__name__)
             if process is not None and process.pid is not None:
-                if not wait([process.sentinel],0):
+                if process.exitcode is None:
                     receipt.update(forced=True,term_sent=True);event('TERM_SENT_AFTER_PARENT_ERROR')
-                    process.terminate();process.join(terminate_seconds)
-                    if not wait([process.sentinel],0):
+                    process.terminate();reap_until(time.monotonic()+terminate_seconds,'TERM_EXIT')
+                    if process.exitcode is None:
                         receipt['kill_sent']=True;event('KILL_SENT_AFTER_PARENT_ERROR')
-                        process.kill();process.join(kill_seconds)
+                        process.kill();reap_until(time.monotonic()+kill_seconds,'KILL_EXIT')
                 else:process.join(0)
                 receipt['worker_returncode']=process.exitcode
                 if process.exitcode is None:receipt['status']='WORKER_SURVIVED_KILL'

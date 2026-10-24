@@ -1,0 +1,43 @@
+{
+  "scope": "CPU_PREPARATION_AND_ORIGINAL_RUNTIME_FAILURES_RETAINED",
+  "failures": [
+    {
+      "id": "source-fetch-origin",
+      "scope": "CPU_SETUP",
+      "actual_transport_exit": 1,
+      "reason": "task checkout origin had no main ref; explicit canonical URL succeeded",
+      "TEST_consumed": 0
+    },
+    {
+      "id": "premature-cpu-preflight",
+      "scope": "CPU_SETUP",
+      "transport_exit": 0,
+      "child_exit": "UNKNOWN_NOT_CAPTURED",
+      "reason": "record_process.py not populated during checkout; original stderr retained; no model or TEST",
+      "TEST_consumed": 0
+    },
+    {
+      "id": "cpu-no-checkout-index",
+      "scope": "CPU_SETUP",
+      "actual_transport_exit": 1,
+      "reason": "new CPU sparse checkout index initially empty; populated previously empty owned checkout, no data discarded",
+      "TEST_consumed": 0
+    },
+    {
+      "id": "race-before",
+      "scope": "REAL_CPU_PROXY_ON_UNMODIFIED_SHADOW",
+      "actual_exit": 1,
+      "reason": "early-ready kernel sentinel followed by actual exit0 reproduces NONZERO_EXIT classification",
+      "TEST_consumed": 0
+    },
+    {
+      "id": "e2-test-0016",
+      "scope": "ACTUAL_FROZEN_TEST",
+      "actual_exit": 1,
+      "status": "CLEANUP_ERROR",
+      "official_success_observation": true,
+      "permanently_consumed": true
+    }
+  ],
+  "transient_or_operator_remaining_field": "105 means120 minus prior14 minus1 newly normal completed; actual unreserved104 from inventory; source receipts unchanged"
+}

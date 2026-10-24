@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_forged_clean_receipt_cannot_hide_force_missing_ack_or_bad_time",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 3884524,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614540.084126986,
+        "close_token": "4367a581de834ea9bff33998b7c03e6b"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614540.084212613
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2614540.084272921
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2614540.099721104,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614540.099733831
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614540.099752548
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "4367a581de834ea9bff33998b7c03e6b",
+        "worker_pid": 3884524,
+        "received_monotonic": 2614540.084156986
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "4367a581de834ea9bff33998b7c03e6b",
+        "worker_pid": 3884524,
+        "native_finalized": true,
+        "received_monotonic": 2614540.084156986,
+        "finalizer_started_monotonic": 2614540.084184332,
+        "finalizer_finished_monotonic": 2614540.084238643
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2614540.099672387,
+        "deadline_monotonic": 2614540.484272644,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 2614540.099716719,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-24T20:36:43.826901+08:00",
+  "wrapper_pid": 1948346,
+  "child_pid": 1948349,
+  "command": [
+    "<LOCAL_PROJECT>/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "scripts/e2_audit_test.py",
+    "--workspace",
+    "<LOCAL_PROJECT>/.takeover-recovery-private/issue23/original16_workspace",
+    "--repo",
+    "<LOCAL_PROJECT>/e2-r011-report",
+    "--output",
+    "<LOCAL_PROJECT>/.takeover-recovery-private/issue23/final-audit-normal.json"
+  ]
+}

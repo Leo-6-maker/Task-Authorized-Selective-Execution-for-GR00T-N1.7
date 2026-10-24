@@ -1,0 +1,20 @@
+E
+======================================================================
+ERROR: test_early_ready_sentinel_then_real_waitpid_zero_is_clean (tests.test_shadow_lifecycle.ShadowLifecycleTests.test_early_ready_sentinel_then_real_waitpid_zero_is_clean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<LOCAL_PROJECT>/e2-r011-report/tests/test_shadow_lifecycle.py", line 101, in test_early_ready_sentinel_then_real_waitpid_zero_is_clean
+    s,pid=make_shadow('early_sentinel_zero');r=self.close(s)
+                                               ^^^^^^^^^^^^^
+  File "<LOCAL_PROJECT>/e2-r011-report/tests/test_shadow_lifecycle.py", line 84, in close
+    def close(self,s,**extra):return s.close(grace_seconds=.3,exit_seconds=.4,terminate_seconds=.15,kill_seconds=.25,**extra)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_PROJECT>/e2-r011-report/tase/shadow.py", line 263, in close
+    self._close_error=ShadowCloseError(receipt);raise self._close_error
+                                                ^^^^^^^^^^^^^^^^^^^^^^^
+tase.shadow.ShadowCloseError: shadow lifecycle NONZERO_EXIT
+
+----------------------------------------------------------------------
+Ran 1 test in 0.205s
+
+FAILED (errors=1)

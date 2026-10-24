@@ -8,6 +8,8 @@ import time
 import unittest
 import struct
 import copy
+import stat
+import fcntl
 from unittest.mock import patch
 from tase.shadow import Shadow,ShadowCloseError,finish_worker_close,send_close_receipt
 from tase.test_history import verify_lifecycle
@@ -42,6 +44,25 @@ def cpu_worker(connection,mode,delay):
     finish_worker_close(connection,NativeProxy(mode,delay),token,received)
     if mode=='nonzero_after_ack':raise SystemExit(7)
     if mode=='exit_delay':time.sleep(.25)
+    if mode.startswith('early_sentinel_'):
+        # Linux real-process fixture: deliberately close the inherited completion
+        # writer before the process becomes waitpid-reapable. No exit status is
+        # mocked. This fixes the kernel-observation order seen in original0016.
+        from multiprocessing import resource_tracker
+        tracker=resource_tracker.getfd();writers=[]
+        for item in os.listdir('/proc/self/fd'):
+            fd=int(item)
+            if fd<=2 or fd==tracker:continue
+            try:
+                if stat.S_ISFIFO(os.fstat(fd).st_mode) and fcntl.fcntl(fd,fcntl.F_GETFL)&os.O_ACCMODE==os.O_WRONLY:writers.append(fd)
+            except OSError:continue
+        if len(writers)!=1:raise RuntimeError('CPU sentinel fixture descriptor identity ambiguous')
+        os.close(writers[0])
+        if mode=='early_sentinel_hung':
+            signal.signal(signal.SIGTERM,signal.SIG_IGN)
+            while True:time.sleep(.01)
+        time.sleep(.15)
+        if mode=='early_sentinel_nonzero':raise SystemExit(7)
 
 
 def startup_failure_worker(connection,*args):
@@ -76,6 +97,26 @@ class ShadowLifecycleTests(unittest.TestCase):
     def test_clean_zero_actual_worker_and_native_completion(self):
         s,pid=make_shadow();r=self.close(s);self.assertTrue(r['clean']);self.assertEqual(r['worker_returncode'],0)
         self.assertEqual([x['status'] for x in r['worker_receipts']],['CLOSING','CLOSED']);self.check_reaped(s,pid)
+    def test_early_ready_sentinel_then_real_waitpid_zero_is_clean(self):
+        s,pid=make_shadow('early_sentinel_zero');r=self.close(s)
+        self.assertTrue(r['clean']);self.assertEqual(r['worker_returncode'],0)
+        self.assertIsNone(r['exit_observations'][0]['initial_returncode'])
+        self.assertGreater(r['exit_observations'][0]['polls'],1)
+        self.assertEqual(r['exit_observations'][0]['returncode'],0)
+        self.check_reaped(s,pid)
+    def test_early_ready_sentinel_then_real_nonzero_is_error(self):
+        s,pid=make_shadow('early_sentinel_nonzero')
+        with self.assertRaises(ShadowCloseError):self.close(s)
+        self.assertEqual(s.close_receipt['worker_returncode'],7)
+        self.assertEqual(s.close_receipt['status'],'NONZERO_EXIT');self.check_reaped(s,pid)
+    def test_early_ready_sentinel_still_alive_cannot_block_or_skip_kill(self):
+        s,pid=make_shadow('early_sentinel_hung');began=time.monotonic()
+        with self.assertRaises(ShadowCloseError):self.close(s)
+        self.assertLess(time.monotonic()-began,2)
+        r=s.close_receipt;self.assertEqual(r['status'],'FORCED_KILL')
+        self.assertEqual(r['initial_failure'],'EXIT_STATUS_TIMEOUT')
+        self.assertEqual(r['worker_returncode'],-signal.SIGKILL)
+        self.check_reaped(s,pid)
     def test_slow_native_finalizer_is_cooperative_not_force(self):
         s,pid=make_shadow(delay=.12);r=self.close(s);self.assertEqual(r['status'],'CLEAN');self.assertFalse(r['forced']);self.check_reaped(s,pid)
     def test_receipt_does_not_mean_process_exit(self):

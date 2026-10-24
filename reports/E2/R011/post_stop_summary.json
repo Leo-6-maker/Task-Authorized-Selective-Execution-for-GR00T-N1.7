@@ -1,0 +1,68 @@
+{
+  "scope": "ACTUAL_R011_STOP_AFTER_NEW_LIFECYCLE_ERROR_NOT_RESULT_APPROVAL",
+  "planned": 120,
+  "reserved": 16,
+  "full_outcomes": 13,
+  "status_counts": {
+    "CLEANUP_ERROR": 3,
+    "NOT_STARTED": 104,
+    "SUCCESS": 13
+  },
+  "unstarted": 104,
+  "next_unopened": "e2-test-0017",
+  "observed_controls": 2150,
+  "policy_requests": 274,
+  "new_session_requests": 34,
+  "frozen_audit_normal_exit": 0,
+  "frozen_audit_optimized_exit": 0,
+  "normal_and_optimized_identical": true,
+  "original14_all_bytes_unchanged": true,
+  "observed_operational_failures": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0016",
+      "status": "CLEANUP_ERROR",
+      "actual_child_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    }
+  ],
+  "frozen_system_error_mapping": "RUNTIME_ERROR only; lower0 MUST NOT mean zero operational failure",
+  "server_sessions": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r011-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    }
+  },
+  "failed_worker_and_episode_PIDs_absent": true,
+  "GPU_compute_processes_on_allocated_device": 0,
+  "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "review_status": "STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW",
+  "operator_non_success_remaining_field_is_not_unused_budget": {
+    "original_field": 105,
+    "meaning": "operator counts only completed normal additions; includes failed0016; actual inventory16",
+    "actual_unopened": 104
+  },
+  "recorded_at_sgt": "2026-10-24T20:25:48.873358+08:00"
+}

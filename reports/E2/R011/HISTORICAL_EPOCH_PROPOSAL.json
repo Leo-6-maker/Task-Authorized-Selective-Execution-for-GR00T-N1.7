@@ -1,0 +1,18 @@
+{
+  "status": "EXECUTOR_PROPOSAL_NOT_A_GRANT_NOT_REVIEWED",
+  "reviewer_instructions": "After independently reviewing fixed final PR head, first commit a main markdown review binding that full report head and execution76, then add this closed-prefix record to docs/reviews/E2-HISTORICAL-TEST-EPOCHS.json schema_version1; use the actual review commit. Suspend R011 for new acquisition and sign NEW exact candidate-head grant in a subsequent main commit. No executor permission is granted by this proposal.",
+  "record": {
+    "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+    "grant_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
+    "review_commit": "REVIEWER_FILL_COMMITTED_INDEPENDENT_REVIEW_SHA",
+    "review_path": "REVIEWER_FILL_MAIN_MARKDOWN_REVIEW_PATH",
+    "report_head": "REVIEWER_FILL_COMPLETE_FINAL_PR_HEAD",
+    "ledger_path": "reports/E2/R011/review/attempt_ledger_120.json",
+    "manifest_path": "reports/E2/R011/review/manifest.json",
+    "receipt_origins_path": "reports/E2/R011/receipt_origins.json",
+    "backup_proof_path": "reports/E2/R011/backup_verification.json",
+    "consumed_count": 16,
+    "original_archive_sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6"
+  }
+}

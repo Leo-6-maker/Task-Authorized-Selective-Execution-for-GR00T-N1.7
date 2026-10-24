@@ -1,0 +1,207 @@
+{
+  "status": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW_NOT_TEST_AUTHORIZED",
+  "last_runtime_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+  "tested_code_head": "c08a34cf6dce61b48bfcd93c313d34826d955522",
+  "test_config_sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17",
+  "changed_source_files": [
+    {
+      "path": "configs/e2_test.json",
+      "bytes": 2454,
+      "sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17"
+    },
+    {
+      "path": "tase/shadow.py",
+      "bytes": 16873,
+      "sha256": "c29aec977a8d97eb34a34e4c08f3108d97579c6c3e5e5e2fda19e25dcc76e04b"
+    },
+    {
+      "path": "tase/test_history.py",
+      "bytes": 14200,
+      "sha256": "4c4d81e5b55fa6e002ca36b578fb69feb7f92fc1dcf4ce8e09fd4e7b632fd884"
+    },
+    {
+      "path": "tests/test_shadow_lifecycle.py",
+      "bytes": 13537,
+      "sha256": "d3e2a5564c233f4274e54cf1f18042d3eb394b830b7f94c020f77177dc8c5073"
+    },
+    {
+      "path": "tests/test_test_history.py",
+      "bytes": 13048,
+      "sha256": "3d1cd4767d04c936c3b9f2c0062cf0dbf8f43087afbc8971f4b44cffd0c3ee85"
+    }
+  ],
+  "actual_acquisition_epochs": [
+    {
+      "run_id": "e2-test-0001",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0002",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0003",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0004",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0005",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0006",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0007",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0008",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0009",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0010",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0011",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0012",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0013",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0014",
+      "execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "config_sha256": "fe3ccf69640a4441209a3eee03b77ed7c0586f5bea870ee8e5b79deac70654b5",
+      "grant_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac",
+      "grant_blob": "44bb4b617c69c575d9041277ef373f7bd5291f3e",
+      "historical_only": true,
+      "grant_currently_active": false,
+      "closed_prefix_anchored": true
+    },
+    {
+      "run_id": "e2-test-0015",
+      "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+      "config_sha256": "7468d82722143124dcf730e2ac2af0634124ce8347d073087726e0cba7d08004",
+      "grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+      "grant_blob": "8b18a1d6e84e3466f4ca112aeb9b4940ccb667d8",
+      "historical_only": true,
+      "grant_currently_active": true,
+      "closed_prefix_anchored": false
+    },
+    {
+      "run_id": "e2-test-0016",
+      "execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+      "config_sha256": "7468d82722143124dcf730e2ac2af0634124ce8347d073087726e0cba7d08004",
+      "grant_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+      "grant_blob": "8b18a1d6e84e3466f4ca112aeb9b4940ccb667d8",
+      "historical_only": true,
+      "grant_currently_active": true,
+      "closed_prefix_anchored": false
+    }
+  ],
+  "reserved": 16,
+  "normal_full_outcomes": 13,
+  "cleanup_error_ids": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "not_started": 104,
+  "next_unopened": "e2-test-0017",
+  "new_candidate_TEST_calls": 0,
+  "request": "Independent new exact COMPLETE report PR HEAD grant; first17/18 and native Gate lifecycle checkpoint before19 proposed; no extra IDs, reruns or science changes",
+  "reviewer_scope": "CPU real-process fix and safe original16 evidence. Native repaired code not executed. Final R3/results not approved."
+}

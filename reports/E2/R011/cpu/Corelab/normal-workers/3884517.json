@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_forged_clean_receipt_cannot_hide_force_missing_ack_or_bad_time",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 3884517,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614539.54696266,
+        "close_token": "cca579a6f6934e2c9f561f24de75ee7e"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614539.547044499
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2614539.54710427
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2614539.560679635,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614539.560693944
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614539.560711119
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "cca579a6f6934e2c9f561f24de75ee7e",
+        "worker_pid": 3884517,
+        "received_monotonic": 2614539.546990785
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "cca579a6f6934e2c9f561f24de75ee7e",
+        "worker_pid": 3884517,
+        "native_finalized": true,
+        "received_monotonic": 2614539.546990785,
+        "finalizer_started_monotonic": 2614539.547019176,
+        "finalizer_finished_monotonic": 2614539.547073229
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2614539.560611213,
+        "deadline_monotonic": 2614539.94710405,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 2614539.560676109,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}

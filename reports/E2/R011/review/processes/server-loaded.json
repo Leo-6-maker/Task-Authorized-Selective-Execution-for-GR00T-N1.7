@@ -1,0 +1,17 @@
+{
+  "status": "MODEL_LOADED",
+  "started_at_sgt": "2026-10-24T20:22:52.621855+08:00",
+  "load_seconds": 8.701124611776322,
+  "policy_seed": 640100,
+  "peak_allocated_bytes": 6307177984,
+  "peak_reserved_bytes": 6392119296,
+  "device_name": "NVIDIA GeForce RTX 4080 SUPER",
+  "dtype": "bfloat16",
+  "torch": "2.9.0+cu128",
+  "torch_cuda": "12.8",
+  "free_vram_before_load_bytes": 33024770048,
+  "allocator_fraction_cap": 0.55,
+  "mode": "eval/no_training",
+  "host": "127.0.0.1",
+  "port": 5564
+}

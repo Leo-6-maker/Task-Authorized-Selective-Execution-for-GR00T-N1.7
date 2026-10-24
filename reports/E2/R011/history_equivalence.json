@@ -1,0 +1,14 @@
+{
+  "scope": "CPU_ONLY_NO_RELABELING",
+  "local_normal_optimized_equal": true,
+  "local_Corelab_equal": true,
+  "frozen76_candidate_code_audit_exact_equal": true,
+  "rows120_equal": true,
+  "statistics_pairs_timings_and_code_epochs_all_equal": true,
+  "raw_old14_unchanged": true,
+  "all1900_raw16_members_live_unchanged": true,
+  "actual_exit_codes": {
+    "final-audit-normal": 0,
+    "final-audit-optimized": 0
+  }
+}

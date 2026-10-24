@@ -1,0 +1,70 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_finalizer_failure_preserves_nonzero_exit_and_receipt",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "FINALIZER_ERROR",
+    "worker_pid": 3884518,
+    "worker_returncode": 1,
+    "clean": false,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2614539.804502257,
+        "close_token": "d1f79151775645baa6821f4464cf7e0d"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2614539.804586439
+      },
+      {
+        "event": "FINALIZER_ERROR",
+        "parent_monotonic": 2614539.804647803
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2614539.903661459
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2614539.903676946
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "d1f79151775645baa6821f4464cf7e0d",
+        "worker_pid": 3884518,
+        "received_monotonic": 2614539.804532706
+      },
+      {
+        "status": "CLOSE_ERROR",
+        "close_token": "d1f79151775645baa6821f4464cf7e0d",
+        "worker_pid": 3884518,
+        "native_finalized": false,
+        "error_type": "RuntimeError",
+        "received_monotonic": 2614539.804532706,
+        "finalizer_started_monotonic": 2614539.804559444,
+        "finalizer_finished_monotonic": 2614539.804614827
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "ERROR_EXIT",
+        "started_monotonic": 2614539.804649411,
+        "deadline_monotonic": 2614540.204649217,
+        "initial_returncode": null,
+        "polls": 49,
+        "finished_monotonic": 2614539.903649301,
+        "returncode": 1,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": "FINALIZER_ERROR"
+  }
+}

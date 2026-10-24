@@ -1,0 +1,74 @@
+{
+  "scope": "REAL_CPU_PROXY_NOT_MODEL_OR_SIM",
+  "test": "test_shadow_lifecycle.ShadowLifecycleTests.test_jitter_repeated_real_spawn_exit_boundary_no_orphans",
+  "receipt": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 1945191,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 198611.632490848,
+        "close_token": "f5d95863ab0d4dd8a29753ba1276e8d3"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 198611.632623908
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 198611.638963639
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 198611.685856996,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 198611.685881418
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 198611.685906177
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "f5d95863ab0d4dd8a29753ba1276e8d3",
+        "worker_pid": 1945191,
+        "received_monotonic": 198611.632542941
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "f5d95863ab0d4dd8a29753ba1276e8d3",
+        "worker_pid": 1945191,
+        "native_finalized": true,
+        "received_monotonic": 198611.632542941,
+        "finalizer_started_monotonic": 198611.632584734,
+        "finalizer_finished_monotonic": 198611.638686483
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 198611.685784088,
+        "deadline_monotonic": 198612.03896193,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 198611.685851422,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  }
+}
