@@ -1,0 +1,13 @@
+{
+  "shared_gpu_inference_authorized": true,
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "authority": "Owner explicit Issue12/R006 execution request; existing legal E2 account and same project GPU; no exclusive claim or escalation",
+  "review_commit": "6c5d6c69e9abecf66999eab318b6d8c8a1b676a6",
+  "authorized_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-fef928e1-b12e-2f20-4b2e-a868e6e0faad",
+  "fresh_free_mib": 31749,
+  "exclusive_allocation": false,
+  "checked_at_sgt": "2026-10-24T11:43:47.114452+08:00"
+}

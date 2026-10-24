@@ -1,0 +1,48 @@
+{
+  "checked": [
+    {
+      "task": "alphabet_soup",
+      "kind": "bddl_sha256",
+      "sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+      "bytes": 2123,
+      "source_run": "e2-calib-0001"
+    },
+    {
+      "task": "alphabet_soup",
+      "kind": "init_file_sha256",
+      "sha256": "b9023e5546b239cacb2aaa3c76df3b73c3de6f97500fea5e27a0db9827002a19",
+      "bytes": 53039,
+      "source_run": "e2-calib-0001"
+    },
+    {
+      "task": "cream_cheese",
+      "kind": "bddl_sha256",
+      "sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2",
+      "bytes": 2114,
+      "source_run": "e2-calib-0009"
+    },
+    {
+      "task": "cream_cheese",
+      "kind": "init_file_sha256",
+      "sha256": "5ea5483bca8abd80a8f1935e2c60570d60eaaf6a985c283d62805b46fb76aa94",
+      "bytes": 53359,
+      "source_run": "e2-calib-0009"
+    },
+    {
+      "task": "ketchup",
+      "kind": "bddl_sha256",
+      "sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319",
+      "bytes": 2099,
+      "source_run": "e2-calib-0017"
+    },
+    {
+      "task": "ketchup",
+      "kind": "init_file_sha256",
+      "sha256": "b987f7b11e8f9b47353cd7882e1da38ecdf6ec9715ad8a84346583ea71049fd3",
+      "bytes": 53295,
+      "source_run": "e2-calib-0017"
+    }
+  ],
+  "status": "MATCH_EXISTING_CALIB_OFFICIAL_ASSETS",
+  "simulator_started": false
+}

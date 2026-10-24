@@ -1,0 +1,10 @@
+{
+  "closed_units": 0,
+  "failure": {
+    "type": "RuntimeError",
+    "message": "frozen server launcher failed before model loaded; inspect actual receipt"
+  },
+  "server_launcher_returncode": 1,
+  "head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "completed_unix": 1792813433.675092
+}

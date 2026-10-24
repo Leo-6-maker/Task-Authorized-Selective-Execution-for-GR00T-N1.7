@@ -1,0 +1,21 @@
+{
+  "started_at_sgt": "2026-10-24T11:44:55.196648+08:00",
+  "wrapper_pid": 1582079,
+  "child_pid": 1582081,
+  "command": [
+    "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-m",
+    "tase.server",
+    "--model",
+    "/tmp/tmpz3cqrnuf/no-model-present",
+    "--output",
+    "/tmp/tmpz3cqrnuf/precreated-server-output",
+    "--allocation-record",
+    "/tmp/tmpz3cqrnuf/allocation.json",
+    "--audit-rng",
+    "--epoch",
+    "E2",
+    "--port",
+    "5562"
+  ]
+}

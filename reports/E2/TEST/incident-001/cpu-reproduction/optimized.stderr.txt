@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<PRIVATE>/ME6401-PROJ2/e2-test-freeze/tase/server.py", line 130, in <module>
+    main()
+  File "<PRIVATE>/ME6401-PROJ2/e2-test-freeze/tase/server.py", line 24, in main
+    a.output.mkdir(parents=True, exist_ok=False)
+  File "<PRIVATE>/ME6401-PROJ2/.takeover-recovery-private/issue6-20261023/cpu_environment/interpreters/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '<SYNTHETIC_TEMP>'

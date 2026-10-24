@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-24T11:45:22.536653+08:00",
+  "wrapper_pid": 3505310,
+  "child_pid": 3505355,
+  "command": [
+    "<PRIVATE_PATH>",
+    "<PRIVATE>/operator/issue12-frozen-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<PRIVATE>",
+    "--repo",
+    "<PRIVATE>/operator/issue12-frozen-code",
+    "--output",
+    "<PRIVATE>/operator/issue12-incident-01/unopened_test_audit.json"
+  ]
+}

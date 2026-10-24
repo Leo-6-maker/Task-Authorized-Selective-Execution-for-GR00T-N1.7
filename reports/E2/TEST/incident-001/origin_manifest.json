@@ -1,0 +1,233 @@
+{
+  "scope": "REDACTED_ACTUAL_STARTUP_FAILURE_AND_CPU_SYNTHETIC_REPRODUCTION",
+  "execution_head": "3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964",
+  "raw_archive_sha256": "da962b24213b4472b799f20b6a90a2e7f120ccd3795cb9adf591563033e8ffac",
+  "artifacts": [
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/STOPPED.json",
+      "sha256": "badb91dba5b32d5469835c80c4a2a4494c597935564acd7d6f536f45c0e346ab",
+      "bytes": 245,
+      "origin_id": "operator/issue12-execution-01/STOPPED.json",
+      "original_private_sha256": "badb91dba5b32d5469835c80c4a2a4494c597935564acd7d6f536f45c0e346ab"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/operator_exit.json",
+      "sha256": "bb32162b6cd030e58f8317926d0b81aea79c00e20ff32b2d61f6bb347c8e581f",
+      "bytes": 291,
+      "origin_id": "operator/issue12-execution-01/operator_exit.json",
+      "original_private_sha256": "bb32162b6cd030e58f8317926d0b81aea79c00e20ff32b2d61f6bb347c8e581f"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/operator_started.json",
+      "sha256": "e55f3d6d3e5e1790cf952e88bf94df63b7826ba288479222a8080cceb676f4cc",
+      "bytes": 340,
+      "origin_id": "operator/issue12-execution-01/operator_started.json",
+      "original_private_sha256": "e55f3d6d3e5e1790cf952e88bf94df63b7826ba288479222a8080cceb676f4cc"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/server-launcher.exit.json",
+      "sha256": "7a296cef5472c658ca7ed1b3655316b65b5f70963b202541558a34630dd292fc",
+      "bytes": 146,
+      "origin_id": "operator/issue12-execution-01/server-launcher.exit.json",
+      "original_private_sha256": "7a296cef5472c658ca7ed1b3655316b65b5f70963b202541558a34630dd292fc"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/server-launcher.exit.started.json",
+      "sha256": "7f9cdea2facc8fed5517085c8ada257719f8d96b2f780a6ebe3873d10703c80a",
+      "bytes": 754,
+      "origin_id": "operator/issue12-execution-01/server-launcher.exit.started.json",
+      "original_private_sha256": "f96c519844a6bd319f4428ba07bd0d6613b0594171a8f7c5656cd45f63a2f704"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-execution-01/server-launcher.stderr.private.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "operator/issue12-execution-01/server-launcher.stderr.private.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-incident-01/audit.exit.json",
+      "sha256": "897bee1fce9fc3724b9733e6e7a377a4629b90f2939ffea4cf0de4faee809e36",
+      "bytes": 146,
+      "origin_id": "operator/issue12-incident-01/audit.exit.json",
+      "original_private_sha256": "897bee1fce9fc3724b9733e6e7a377a4629b90f2939ffea4cf0de4faee809e36"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-incident-01/audit.exit.started.json",
+      "sha256": "b86a238666124ba93c94256d2f28a96f703979d5ea002c2232d36495ce73195e",
+      "bytes": 404,
+      "origin_id": "operator/issue12-incident-01/audit.exit.started.json",
+      "original_private_sha256": "85099b42a0452a5cb86744790cf14f0b6995d55f8d7f037f58232273a56f4f3c"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-incident-01/audit.stderr.private.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "operator/issue12-incident-01/audit.stderr.private.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-incident-01/state.json",
+      "sha256": "2cfbb4081952287a5eeb6963a5fca65a565d86d4b9ea5e7805e9402131dc9955",
+      "bytes": 506,
+      "origin_id": "operator/issue12-incident-01/state.json",
+      "original_private_sha256": "2cfbb4081952287a5eeb6963a5fca65a565d86d4b9ea5e7805e9402131dc9955"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-incident-01/unopened_test_audit.json",
+      "sha256": "b052ebcb6fb0a09f5925aaf2b15bfe6b2d8e53f9cd9973c8d1b7a4b7db6c07bb",
+      "bytes": 141661,
+      "origin_id": "operator/issue12-incident-01/unopened_test_audit.json",
+      "original_private_sha256": "b052ebcb6fb0a09f5925aaf2b15bfe6b2d8e53f9cd9973c8d1b7a4b7db6c07bb"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/gpu-allocation.local.json",
+      "sha256": "7fa44a5fd19b97136a43259f8f0127cc05dca82a7ae30c6aeefc114b6311a496",
+      "bytes": 563,
+      "origin_id": "operator/issue12-preflight-01/gpu-allocation.local.json",
+      "original_private_sha256": "172d56017c760afea6c634f7c5ceb7189272dc6ad2c4de537c7bba7d40d0040c"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/grant-admission.json",
+      "sha256": "4b350da332cea1fb9fe03c7249c510be0deb6d174ef23de7f72f86436f17e5ec",
+      "bytes": 1011,
+      "origin_id": "operator/issue12-preflight-01/grant-admission.json",
+      "original_private_sha256": "4b350da332cea1fb9fe03c7249c510be0deb6d174ef23de7f72f86436f17e5ec"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/grant.stderr.private.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "operator/issue12-preflight-01/grant.stderr.private.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/init-contents.json",
+      "sha256": "ba785be09ad69d49ef88f59a97cb3133576737bc2b41400571e076b5239a436e",
+      "bytes": 4580,
+      "origin_id": "operator/issue12-preflight-01/init-contents.json",
+      "original_private_sha256": "4be14c854e2025640d1ea05db87829634314c58d995fcf757e22167c32451c1b"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/init.stderr.private.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "operator/issue12-preflight-01/init.stderr.private.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/operator.stderr.private.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "operator/issue12-preflight-01/operator.stderr.private.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/operator-issue12-preflight-01/task-assets.json",
+      "sha256": "d61b9b53ca8b093d79d2d895e1906c5b048728e8439d1b86e3b1ee2306813d42",
+      "bytes": 1392,
+      "origin_id": "operator/issue12-preflight-01/task-assets.json",
+      "original_private_sha256": "d61b9b53ca8b093d79d2d895e1906c5b048728e8439d1b86e3b1ee2306813d42"
+    },
+    {
+      "public_path": "incident-001/operator-test-server-r006-01/stderr.private.txt",
+      "sha256": "02f4979ffb9395b9e66e7cfb22ec7af94edce78bda3836dbf6d8361ac7bc5aa2",
+      "bytes": 584,
+      "origin_id": "operator/test-server-r006-01/stderr.private.txt",
+      "original_private_sha256": "68fb6eb543ed29edab5c0076a48aa351eda99f7344003b8a1e858512da95f00e"
+    },
+    {
+      "public_path": "incident-001/operator-test-server-r006-01/supervisor_exit.json",
+      "sha256": "4df002634a64e2b26561f73aff3f5a73b0a1d5d5440ef72f28a070bc40e72092",
+      "bytes": 77,
+      "origin_id": "operator/test-server-r006-01/supervisor_exit.json",
+      "original_private_sha256": "4df002634a64e2b26561f73aff3f5a73b0a1d5d5440ef72f28a070bc40e72092"
+    },
+    {
+      "public_path": "incident-001/runs-test-server-r006-01.exit.json",
+      "sha256": "bb78d7364090790a3d009d695f0f93faef41e651d6ae50e8dfe2395a1dae8c42",
+      "bytes": 146,
+      "origin_id": "runs/test-server-r006-01.exit.json",
+      "original_private_sha256": "bb78d7364090790a3d009d695f0f93faef41e651d6ae50e8dfe2395a1dae8c42"
+    },
+    {
+      "public_path": "incident-001/runs-test-server-r006-01.exit.started.json",
+      "sha256": "35eae238ba1333127b76c840d84674eb80f50f8380c1b392aab99a517b6d3430",
+      "bytes": 475,
+      "origin_id": "runs/test-server-r006-01.exit.started.json",
+      "original_private_sha256": "5fb24ba5b6aa8ec552c31638074f8115a7027b9e40d29384c137bfe1ba50f8ce"
+    },
+    {
+      "public_path": "incident-001/runs-test-server-r006-01/test_admission.json",
+      "sha256": "61777e73950e9d615b52d599ab2a37c85d5d3b0152e56e2d34056126869e8d38",
+      "bytes": 5097,
+      "origin_id": "runs/test-server-r006-01/test_admission.json",
+      "original_private_sha256": "61777e73950e9d615b52d599ab2a37c85d5d3b0152e56e2d34056126869e8d38"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/normal.exit.json",
+      "sha256": "517cdc9153dda6c16b35a4984652b4669a9e4493f632533d50313bba55a3507e",
+      "bytes": 146,
+      "origin_id": "CPU_SYNTHETIC/normal.exit.json",
+      "original_private_sha256": "517cdc9153dda6c16b35a4984652b4669a9e4493f632533d50313bba55a3507e"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/normal.exit.started.json",
+      "sha256": "ae6f18fd3694c40878faba1aebd6a50ddd2a563912443fac84bc233e61b865f0",
+      "bytes": 520,
+      "origin_id": "CPU_SYNTHETIC/normal.exit.started.json",
+      "original_private_sha256": "e79aef8939623842eba30e49d426299fca0c49af51ff2c3f81052070b5a42b8b"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/normal.stderr.txt",
+      "sha256": "94082947379f8ff9ae3cfbd73d6cedcebf0a14bda01c23d8d9d23fc05376424b",
+      "bytes": 634,
+      "origin_id": "CPU_SYNTHETIC/normal.stderr.raw.txt",
+      "original_private_sha256": "8ebbbe8639dc95bde1ea0357139c99f073b68a3381677542177c6d5f853f4137"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/normal.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "CPU_SYNTHETIC/normal.stdout.raw.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/optimized.exit.json",
+      "sha256": "c0e9f404b54d0131baaf5215ca9ba961c5b5de6eb29db3d8f13a750e5c43ee86",
+      "bytes": 146,
+      "origin_id": "CPU_SYNTHETIC/optimized.exit.json",
+      "original_private_sha256": "c0e9f404b54d0131baaf5215ca9ba961c5b5de6eb29db3d8f13a750e5c43ee86"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/optimized.exit.started.json",
+      "sha256": "323b301211c0212e5ba1c563a783c5f908eaf0c49cdb01604c486e9772757bba",
+      "bytes": 530,
+      "origin_id": "CPU_SYNTHETIC/optimized.exit.started.json",
+      "original_private_sha256": "5cbfcd7e16296aaab14617a87e904dc24c7c9b4d56a48d9e55ebc50c71e4963c"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/optimized.stderr.txt",
+      "sha256": "94082947379f8ff9ae3cfbd73d6cedcebf0a14bda01c23d8d9d23fc05376424b",
+      "bytes": 634,
+      "origin_id": "CPU_SYNTHETIC/optimized.stderr.raw.txt",
+      "original_private_sha256": "84eb7b58a01012381a12438b54e2afdbaa63518f0d63e809d817dfc985ddd4ef"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/optimized.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin_id": "CPU_SYNTHETIC/optimized.stdout.raw.txt",
+      "original_private_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "public_path": "incident-001/cpu-reproduction/reproduction.local.json",
+      "sha256": "9d283b14920bc82346d983301f686d8f1381605f9705a9c294c7e81b682acd72",
+      "bytes": 1874,
+      "origin_id": "CPU_SYNTHETIC/reproduction.local.json",
+      "original_private_sha256": "d2310504d077f44d64e2e2cf97eb4e2ecfc417e652231e3c8f935d1996c91a48"
+    }
+  ],
+  "excluded": "Concrete runtime map, full resource/account context, private operator implementation and raw logs remain in verified private archive",
+  "TEST_executed": 0
+}

@@ -1,3 +1,9 @@
+# Issue #12 — STOPPED_BEFORE_MODEL_LOAD / READY_FOR_INCIDENT_REVIEW
+
+R006's valid grant was read from main and admitted at exact code `3e2cb7ff0b98ac82564e0b7a60523a29cb4c8964`. Fixed environment/model/assets/init and legal resources passed. Frozen TEST launcher precreates the output directory that native server exclusively creates; actual server and launcher exits1 before model load. **TEST0 reservations/outcomes; all120 remain unrun.** No model/sim request, new weights/install, code/threshold/split change, old-record deletion or automatic retry. Both-location raw/CPU receipts preserved. [Incident](TEST/INCIDENT-001.md) and [handoff](TEST/R3_HANDOFF.md) request a scoped GPT assessment before any executable repair/new grant/launch. This is not completed TEST or an R3 performance approval.
+
+Below is the retained Issue10 history, superseded only as to current workflow status.
+
 # Issue #10 接续状态 — READY_FOR_R2_DELTA_REVIEW
 
 R005 已条件冻结研究配置，明确未授权 TEST。当前独立分支 `codex/10-test-freeze` 从 PR #9 exact parent `fc38e816ff3e75e87c29da3aa18009dcc0542f02` 接续。已交付独立 TEST 准入/120格 ledger/CPU审计与配对统计，以及既有CALIB的488行和8组完整安全数值配对。无新模型、真实仿真、CALIB、TEST或下载；原course checkout保留。详见 [R2_DELTA_HANDOFF](R2_DELTA_HANDOFF.md)。唯一下一步为独立GPT对新head的delta-review；不得把本状态视为TEST许可。
