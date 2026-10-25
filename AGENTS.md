@@ -1,3 +1,5 @@
+Issue25/R012 最新课程状态（2026-10-25）：84/120 已消耗（61 SUCCESS、10 TIME_LIMIT、10 SEMANTIC_ABORT、0010/0014/0016三次历史 CLEANUP_ERROR），36未启动；GPU资源变化在0085预留前触发停止，执行源码仍exact908bef373eedf8d008ad8d9a91478e3f719eecfb。submission/R3-review-draft 是新的源码复现草稿，106源文件普通/-O各123/123实际exit0；原15页preliminary幻灯片及其历史计数保留，不冒充最终R3。最终36格、独立R3、最终slides/课程提交仍未完成。不自行停其他任务、不重跑、不自签、不merge。
+
 当前 Issue #18 / R009：0011/0012及强制检查点通过后，0014再次CLEANUP_ERROR/exit1，已强制停止并关闭服务器。120计划=14已消耗（12SUCCESS+0010/0014两次清理故障）+106未启动；0015未预留。代码仍exact a1c6424bd348b36c55a20d38750a269e9551a698，无修复/重跑/merge。普通/-O停止审计与公开数值CPU核验均实际exit0，原件两处验哈希保全。当前STOPPED_FOR_REPEATED_CLEANUP_INCIDENT_REVIEW，下一步仅GPT事故审核及有界CPU生命周期修复授权，新代码须新grant后才能继续。详见 reports/E2/R009/R3_HANDOFF.md。
 
 # Agent execution contract
