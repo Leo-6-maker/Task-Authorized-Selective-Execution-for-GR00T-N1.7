@@ -1,5 +1,5 @@
 {
-  "phase": "P4_R012_RESOURCE_STOP_BEFORE0085",
+  "phase": "P4_R012_GPU1_OWNER_ASSIGNED_PRECONDITION_BLOCKED",
   "execution_authorized": false,
   "current_code_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
   "current_code_head_meaning": "Exact R012 authorized runtime; clean, unchanged; report/source ZIP are separate",
@@ -298,8 +298,8 @@
     "Final independent R3 review",
     "Final course materials and owner submission"
   ],
-  "next_action": "Retain resource stop and all84 originals; complete CPU-only review/custody. When owner-authorized sufficient resources are verified, fresh full preflight of84/120 and a new unique908/R012 server may precede original0085; never rerun acquired IDs. Any executable change needs a fresh independent grant.",
-  "stop_reason": "New unrelated GPU process, insufficient free VRAM on both inspected devices; stopped before0085 reservation",
+  "next_action": "Owner assigned GPU1. Exact frozen launcher requires16384MiB but GPU1 total is16376MiB and currently free10121MiB; no native start is possible with unchanged908. Submit resource-only entry restriction for independent review and arrange sufficient GPU1 availability. Any executable change needs a new exact-head independent grant; no old ID may be retried.",
+  "stop_reason": "GPU1 current free memory and physical total cannot meet frozen launcher predicate; source is unchanged",
   "science_and_executable_drift": [],
   "independent_R3": "NOT_COMPLETED",
   "course_materials": {
@@ -311,7 +311,7 @@
     "content_slides": 13,
     "independent_R3": "NOT_COMPLETED"
   },
-  "updated_at_sgt": "2026-10-25T10:19:32.381290+08:00",
+  "updated_at_sgt": "2026-10-25T11:11:41.721316+08:00",
   "local_cpu_and_course_proof": {
     "stage": "issue25-local-cpu-course84-01",
     "bytes": 8223932,
@@ -324,5 +324,41 @@
     ],
     "independent_review": "NOT_PERFORMED",
     "new_model_sim_TEST_calls": 0
+  },
+  "owner_requested_next_gpu_index": 1,
+  "actual_acquisition_gpu_index": 0,
+  "requested_GPU1_precheck": {
+    "status": "GPU1_OWNER_AUTHORIZED_BUT_FROZEN_LAUNCHER_PRECONDITION_UNMET",
+    "assigned_gpu_index": 1,
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "free_mib": 10121,
+    "total_mib": 16376,
+    "frozen_minimum_free_mib": 16384,
+    "minimum_exceeds_device_total": true,
+    "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+    "checkout_clean": true,
+    "source_file": "scripts/e2_test_server.py",
+    "memory_guard_line": 235,
+    "source_sha256": "e2d755cc251d348930312fe86720b1f580a8526ebfc07563df5cc391186ff8c2",
+    "owner_receipt_sha256": "35c886b47f3104c05df9d2b9f9e982c8c5d6d09d990ba3bc123592f2597be471",
+    "existing_gpu1_process_count": 1,
+    "reserved": 84,
+    "next0085_absent": true,
+    "new_model_sim_TEST_calls": 0,
+    "foreign_tasks_untouched": true,
+    "source_or_configuration_changes": false,
+    "recorded_at_sgt": "2026-10-25T11:11:41.721316+08:00",
+    "inspection_actual_exit": 0,
+    "pure_CPU_frozen_guard_actual_exit": 1,
+    "native_launcher_started": false,
+    "whole_frozen_serve_function_called": false
+  },
+  "GPU1_resource_check_two_copy": {
+    "stage": "issue25-gpu1-resource-request-01",
+    "bytes": 3521,
+    "sha256": "7cb8f94d33fa7d8fa16594fd331b426899524a6952d24266cc8ee6c86f5491e8",
+    "artifacts": 10,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
   }
 }

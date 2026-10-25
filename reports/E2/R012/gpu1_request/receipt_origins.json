@@ -1,0 +1,50 @@
+{
+  "scope": "SOURCE_IDENTITY_GPU1_RESOURCE_CHECK_NO_NATIVE_START",
+  "artifacts": [
+    {
+      "export_path": "resource_precheck.json",
+      "export_bytes": 1023,
+      "export_sha256": "1fc0c459b077078e16145d449bbfc0e1141124d4afd7f53be2a2da85f5fba096",
+      "original_path": "operator/issue25-gpu1-owner-precheck-01/resource_precheck.json",
+      "original_bytes": 923,
+      "original_sha256": "a5bb18eedb333b8544843ea6c1091affb206b6bb0b38130bea97667b81759bb2",
+      "transformation": "Semantic resource status derivative; raw computed indicator separated from real recorded CPU process exit"
+    },
+    {
+      "export_path": "owner_authorization.json",
+      "export_bytes": 255,
+      "export_sha256": "35c886b47f3104c05df9d2b9f9e982c8c5d6d09d990ba3bc123592f2597be471",
+      "original_path": "operator/issue25-gpu1-owner-precheck-01/owner-GPU1-authorization.json",
+      "original_bytes": 255,
+      "original_sha256": "35c886b47f3104c05df9d2b9f9e982c8c5d6d09d990ba3bc123592f2597be471",
+      "transformation": "UTF8_JSON_REPRESENTATION_SAME_FIELDS"
+    },
+    {
+      "export_path": "cpu_guard_result.json",
+      "export_bytes": 857,
+      "export_sha256": "1cf4b289338413ec0d05de802e24c4fb4e70b64f435f5bdc8f9234f9b293a396",
+      "original_path": "operator/issue25-gpu1-owner-precheck-01/guard-result.json",
+      "original_bytes": 857,
+      "original_sha256": "1cf4b289338413ec0d05de802e24c4fb4e70b64f435f5bdc8f9234f9b293a396",
+      "transformation": "UTF8_JSON_REPRESENTATION_SAME_FIELDS"
+    },
+    {
+      "export_path": "cpu-memory-guard.exit.json",
+      "export_bytes": 145,
+      "export_sha256": "20d53e7c132e39068bd17d65e0362c5cc8ca399aace95f8c6fb9faf4bf8eac41",
+      "original_path": "operator/issue25-gpu1-owner-precheck-01/cpu-memory-guard.exit.json",
+      "original_bytes": 145,
+      "original_sha256": "20d53e7c132e39068bd17d65e0362c5cc8ca399aace95f8c6fb9faf4bf8eac41",
+      "transformation": "PRIVATE_PATH_REDACTION_OF_ACTUAL_PROCESS_RECEIPT"
+    },
+    {
+      "export_path": "cpu-memory-guard.exit.started.json",
+      "export_bytes": 263,
+      "export_sha256": "9a8760b73f582a712f1b3b621deb671de8025eb54487298071f971cda64b7c53",
+      "original_path": "operator/issue25-gpu1-owner-precheck-01/cpu-memory-guard.exit.started.json",
+      "original_bytes": 324,
+      "original_sha256": "e5d5a42c9613420376bd9df4e9d53bf49fda2c7912200d7fd55f34b0495c4545",
+      "transformation": "PRIVATE_PATH_REDACTION_OF_ACTUAL_PROCESS_RECEIPT"
+    }
+  ]
+}

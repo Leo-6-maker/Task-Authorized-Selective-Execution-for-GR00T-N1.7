@@ -1,5 +1,5 @@
 {
-  "scope": "REPORT_ONLY_PARTIAL84_CURRENT_STATUS_AND_SOURCE_BOUND_DERIVATIVES_NOT_REVIEW_APPROVAL",
+  "scope": "REPORT_ONLY_PARTIAL84_AND_OWNER_GPU1_RESOURCE_REQUEST_NOT_REVIEW_APPROVAL",
   "runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
   "planned": 120,
   "reserved": 84,
@@ -8,18 +8,18 @@
   "artifacts": [
     {
       "repository_path": "AGENTS.md",
-      "bytes": 9315,
-      "sha256": "c014bb0d444d3837ebb0c06394725174ddd1358bced9f1af938e9409aafc10d9"
+      "bytes": 9902,
+      "sha256": "5d0a5d4bf52f1734603ae117cad7962529a93b66f38178801dc82851ef573703"
     },
     {
       "repository_path": "docs/CODEX_HANDOFF.md",
-      "bytes": 5580,
-      "sha256": "15c686f57aa898f25d5e538a15b82d8c0a5b7497e9a4c37bce46dda46cdd1954"
+      "bytes": 6167,
+      "sha256": "e4f6d4c2378dac7b1f52e21ebb389f9dc4c61f0a0040a34bc28065c6afb22e0e"
     },
     {
       "repository_path": "docs/STATUS.md",
-      "bytes": 15670,
-      "sha256": "4b81733b2eefcb16fc714014cb0db8438794da5d31ef4e0a1f308e783eaee4d4"
+      "bytes": 16257,
+      "sha256": "03fb096f2a01680f5b44ffd4cf819b2b31d163ea4d98db500e015478e7f1363e"
     },
     {
       "repository_path": "reports/E2/R012/MANDATORY0018_CHECKPOINT.json",
@@ -8797,6 +8797,46 @@
       "sha256": "de2539908fa29ab882dbccb5e7175c56508be989a7a0c58dc8caa5812147da43"
     },
     {
+      "repository_path": "reports/E2/R012/gpu1_request/GPU1_RESOURCE_ENTRY_REQUEST.md",
+      "bytes": 3376,
+      "sha256": "60a44552a4ee6b4c32a37fa1654a025495fe6a0f37d85fd8941934f9a3567a62"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/backup_verification.json",
+      "bytes": 277,
+      "sha256": "8f8f6fab2958898690cd1470eb8140fe8ce321768868bba947c25eb624676ba4"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/cpu-memory-guard.exit.json",
+      "bytes": 145,
+      "sha256": "20d53e7c132e39068bd17d65e0362c5cc8ca399aace95f8c6fb9faf4bf8eac41"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/cpu-memory-guard.exit.started.json",
+      "bytes": 263,
+      "sha256": "9a8760b73f582a712f1b3b621deb671de8025eb54487298071f971cda64b7c53"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/cpu_guard_result.json",
+      "bytes": 857,
+      "sha256": "1cf4b289338413ec0d05de802e24c4fb4e70b64f435f5bdc8f9234f9b293a396"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/owner_authorization.json",
+      "bytes": 255,
+      "sha256": "35c886b47f3104c05df9d2b9f9e982c8c5d6d09d990ba3bc123592f2597be471"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/receipt_origins.json",
+      "bytes": 2479,
+      "sha256": "b496c8f7b201c2a6b35c57a9a154edb117e68ce57bc8c425397b5f15059c2d82"
+    },
+    {
+      "repository_path": "reports/E2/R012/gpu1_request/resource_precheck.json",
+      "bytes": 1023,
+      "sha256": "1fc0c459b077078e16145d449bbfc0e1141124d4afd7f53be2a2da85f5fba096"
+    },
+    {
       "repository_path": "reports/E2/R012/initial_resource_block/audit-optimized.exit.json",
       "bytes": 145,
       "sha256": "5c500ff361515f6d3e1f78e6ab3fcf88fadeec9d13d03be2a8d34acf57f39290"
@@ -8868,8 +8908,8 @@
     },
     {
       "repository_path": "reports/E2/automation/AUTONOMOUS_STATUS.json",
-      "bytes": 12455,
-      "sha256": "1714dd6ee062877a4f53091d31d07896ce94fc95e33d6737642655f19ef53f72"
+      "bytes": 14024,
+      "sha256": "a1fe471f8c28da4d35a45b2247ee7592e895ed70993815956f1f73ee4710d83a"
     }
   ]
 }

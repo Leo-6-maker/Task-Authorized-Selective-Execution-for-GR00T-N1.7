@@ -1,0 +1,9 @@
+{
+  "started_at_sgt": "2026-10-25T11:12:59.107452+08:00",
+  "wrapper_pid": 403732,
+  "child_pid": 403733,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue25-gpu1-owner-precheck-01/exact-frozen-memory-guard.py"
+  ]
+}
