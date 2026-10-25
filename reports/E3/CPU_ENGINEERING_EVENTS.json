@@ -1,0 +1,26 @@
+{
+  "scope": "CPU development and bounded file discovery only; no model/simulation/GPU calls",
+  "observed_nonzero_commands": [
+    {
+      "actual_exit": 128,
+      "description": "Initial default working directory was not the project Git checkout; selected known ME6401 project worktree without changing other research files."
+    },
+    {
+      "actual_exit": 2,
+      "description": "Bounded source reads found nonexistent guessed old script names; used actual directory inventory and existing epoch runner instead."
+    },
+    {
+      "actual_exit": 2,
+      "description": "Git whitespace check flagged intentional Markdown hard breaks in byte-exact upstream charter copy. Preserved charter and checked all other changes separately; no commit was created by the rejected check."
+    },
+    {
+      "actual_exit": 1,
+      "description": "Corelab proof export requested before CPU checkout/regression receipts existed; no outputs fabricated. Kept failed export and waited for real completion."
+    },
+    {
+      "actual_exit": 1,
+      "description": "Only the owned new E3 NFS CPU checkout was interrupted due slow inode writes, with exact PID/command/cwd/UID checks. Source fetch had succeeded. Preserved partial CPU checkout and moved new CPU clone into existing owner-marked local cache; no original E2 checkout/environment or foreign job changed."
+    }
+  ],
+  "regression_attempts": "Every recorded full/local test suite exited0. Expected synthetic child finalizer/nonzero/timeout traces are retained by existing lifecycle tests and never classified as real TEST."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "CORELAB_CPU187_NORMAL_AND_OPTIMIZED_PASS_NO_NATIVE_RUNTIME",
+  "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
+  "suite": {
+    "normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "log_sha256": "be1a871cfc55a1a19cbb25941ce7393571d85265182cd0fe0336db768b7da23e",
+      "receipt_sha256": "1c1e1d9323d36afa1b8ba023b18db4be0860001a04b02aa3a00efaa53d182f6e"
+    },
+    "optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "log_sha256": "0271e71bbcfb146ece263753b3f41821a2f7e497338cbac14eb7827c54aa932f",
+      "receipt_sha256": "7050b1d8166a0e52790b7463089d2144d5a186645a78fbdb399262d97176b89d"
+    }
+  },
+  "E3_model_calls": 0,
+  "MuJoCo_created": false
+}
