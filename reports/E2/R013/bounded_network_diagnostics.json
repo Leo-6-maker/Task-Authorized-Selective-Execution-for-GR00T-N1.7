@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "service": "AUTHORIZED_CORELAB_SSH",
+      "TCP_reachable": false,
+      "error_type": "TimeoutError",
+      "seconds": 8.0020281499892
+    },
+    {
+      "service": "EXISTING_GITHUB_SSH_REMOTE",
+      "TCP_reachable": true,
+      "seconds": 0.011385590012650937
+    }
+  ]
+}

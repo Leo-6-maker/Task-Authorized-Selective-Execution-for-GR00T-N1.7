@@ -1,0 +1,9 @@
+{
+  "status": "ALL_ORIGINAL_RESULTS_BYTES_AND_METRICS_IDENTICAL_ONLY_SIGNED_R012_CLOSURE_METADATA_CHANGED",
+  "changed_fields": [
+    "code_epochs[16:84].grant_currently_active:true->false",
+    "code_epochs[16:84].closed_prefix_anchored:false->true"
+  ],
+  "changed_fields_count": 136,
+  "ordinary_optimized_identical": true
+}

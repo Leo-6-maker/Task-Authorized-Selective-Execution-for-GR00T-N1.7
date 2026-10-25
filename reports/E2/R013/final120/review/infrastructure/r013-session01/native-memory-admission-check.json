@@ -1,0 +1,12 @@
+{
+  "status": "GENUINE_GPU1_MODEL_LOADED_FIXED_BUDGET_MATCH",
+  "free_vram_before_load_bytes": 10346823680,
+  "total_vram_bytes": 16709255168,
+  "allocator_fraction": 0.49070649466785377,
+  "load_peak_reserved_bytes": 6392119296,
+  "load_peak_allocated_bytes": 6307177984,
+  "minimum_free_bytes": 9663676416,
+  "reserved_free_bytes": 2147483648,
+  "gpu_index": 1,
+  "no_preflight_inference": true
+}

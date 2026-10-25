@@ -1,0 +1,7 @@
+[
+  {
+    "resource": "m2_shadow",
+    "error_type": "ShadowCloseError",
+    "traceback": "Traceback (most recent call last):\n  File \"<PRIVATE>/operator/issue23-frozen-code/tase/retention.py\", line 46, in cleanup_resources\n    close()\n  File \"<PRIVATE>/operator/issue23-frozen-code/tase/e2_context.py\", line 118, in close\n    try:self.shadow.close()\n        ^^^^^^^^^^^^^^^^^^^\n  File \"<PRIVATE>/operator/issue23-frozen-code/tase/shadow.py\", line 263, in close\n    self._close_error=ShadowCloseError(receipt);raise self._close_error\n                                                ^^^^^^^^^^^^^^^^^^^^^^^\ntase.shadow.ShadowCloseError: shadow lifecycle NONZERO_EXIT\n"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "status": "SUPERSEDED_INCOMPLETE_SUFFIX_VALIDATION",
+  "actual_exit": 0,
+  "confirmed_reserved": 88,
+  "confirmed_eligible": 85,
+  "current_remote_reserved": null,
+  "new_source_bound_runs": 4,
+  "derived_artifacts_verified": 307,
+  "numeric_allow_pickle_false_finite": 110,
+  "whole_archives_checked": 2,
+  "all_original_members_checked": 619,
+  "text_files_checked": 159,
+  "private_marker_hits": 0,
+  "mode": "normal",
+  "model_sim_TEST_calls": 0,
+  "scope": "SUPERSEDED_BY_FINAL_SUFFIX_ALLOWLIST_VALIDATION",
+  "reason": "The initial307-index included49 ignored private pickle snapshots. Their bytes were never committed; now owner-only and excluded. See final delivery check04.",
+  "initial_check_status": "CONFIRMED_SOURCE_CUSTODY_AND_HONEST_UNKNOWN_STATE_PASS"
+}

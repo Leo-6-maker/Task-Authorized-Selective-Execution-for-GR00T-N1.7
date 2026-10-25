@@ -1,0 +1,9 @@
+{
+  "started_at_sgt": "2026-10-25T15:15:59.653768+08:00",
+  "wrapper_pid": 632322,
+  "child_pid": 632326,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue28-final120-postprocessing-01/close_audit.py"
+  ]
+}

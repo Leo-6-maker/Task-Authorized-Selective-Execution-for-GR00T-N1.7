@@ -1,0 +1,71 @@
+{
+  "scope": "FULL120_COURSE_REVIEW_DRAFT_NOT_APPROVAL_OR_SUBMISSION",
+  "immutable_R3_data_snapshot": "d6bc26105ba511a03479b79863568c4de5ea7dd7",
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "presentation": {
+    "file": "ME6401-full120-review-v3.pptx",
+    "bytes": 236896,
+    "sha256": "9ace8d2172635c1fde1272eb69c7e5b7e29fa35cd9a2a6b9bf04a2647f7a9b00",
+    "slides": 15,
+    "native_editable_table_slides": [
+      4,
+      7,
+      8,
+      10,
+      11
+    ],
+    "package_integrity_exit": 0,
+    "layout_exit": 0,
+    "first_party_import_passed": true,
+    "native_PowerPoint_execution_verified": false,
+    "individual_slide_visual_review": "All15 final rendered image identities inspected at1280x720. Slides1\u20136 and8\u201315 are byte-identical to individually inspected v2; corrected slide7 inspected directly in v3. No observed clipping/overlap.",
+    "render_sha256": {
+      "1": "2161b8843779838ec3bb468b3f60b16cc4e4a7fa72d272e4665d07ffe40d0dda",
+      "2": "f446c25b3bd990a0d6156639f962e198442d45570e8d2d8f62521d5c7c7968b4",
+      "3": "8249db49491526722744964df93882dad3152595d6827434b0c39a769020d77d",
+      "4": "8abb2df88490516cb8244910d39c18720774b4f2211c14839badfcf598cdfd6d",
+      "5": "0c6cec5ad6651d95a77ed01b68a22d5149f58ed4db9aef971b42ab67e397394d",
+      "6": "3f538c6fc88b2e242eef42aee0d9ac5975588af5baf0078cbfa6b2ef15297e67",
+      "7": "fb80d4e920eaf8a857839bd2b275ad105141a5f048805373cae7297a1ca2c7b4",
+      "8": "dc99e8570adaabe949046985f7e9feaae3fcbeb51f5714787c2c80e6c759bd44",
+      "9": "f30bf98966e6a41b41b41e3215a393732bd10a792e06bd51bb81376ecd8cac85",
+      "10": "ef157248ddedbd4fff2c215f0b7f1faf0f0a17a2e3f0b9566a007ed82ce18871",
+      "11": "859d863148f7db6327f343cb259ae2bc9e672d6a7bd10d65548eb95052e7186f",
+      "12": "8d06b5fa774a5f83a60b48a2d8161468bdc58354cf745da2439bbff4d3e7c7fb",
+      "13": "e9b126b39b58e9461f9582a4dfe44f74fc6ac419ee1323d3bd70e4a2eea535dd",
+      "14": "4cedd274a01d22380131a277807a3833623d8209470e0168a11a5c7fc54ea71c",
+      "15": "e901db2bfcc310f6fa1ece0a5488a8836aaa4a8ceef5aa62cf2659fe1cdd0ca2"
+    },
+    "build_actual_exit": 0
+  },
+  "source_zip": {
+    "file": "SOURCE_R013_FINAL.zip",
+    "bytes": 259224,
+    "sha256": "e3553716d8cd01dc13d9963b9329e73bf38c13cc4c9f7e35dae2e7dd9c66e3d3",
+    "exact_runtime_Git_blob_files": 108,
+    "extracted_CPU_normal": {
+      "tests": 134,
+      "actual_exit": 0
+    },
+    "extracted_CPU_optimized": {
+      "tests": 134,
+      "actual_exit": 0
+    }
+  },
+  "acquisition": {
+    "planned": 120,
+    "consumed": 120,
+    "eligible_primary": 117,
+    "censored": 3,
+    "unstarted": 0,
+    "counts": {
+      "SUCCESS": 89,
+      "TIME_LIMIT": 18,
+      "SEMANTIC_ABORT": 10,
+      "CLEANUP_ERROR": 3
+    }
+  },
+  "independent_R3_review": "PENDING",
+  "owner_identity_course_policy_AI_disclosure_and_submission": "PENDING",
+  "raw_original_custody": "18070 original file identities covered at two locations through verified archive dependencies and closure delta. No standalone secondary compressed copy claimed."
+}

@@ -1,0 +1,426 @@
+{
+  "status": "PASS",
+  "frames": [
+    {
+      "step": 129,
+      "eef_pos": [
+        0.0020265513626955105,
+        0.26169958988239245,
+        0.19331672234570155
+      ],
+      "eef_quat": [
+        -0.020898119351055365,
+        0.8053324026076522,
+        0.592413384996359,
+        0.007026463899409889
+      ],
+      "gripper": [
+        0.0251943597941008,
+        -0.024903157020106693
+      ],
+      "objects": {
+        "cream_cheese_1": {
+          "pos": [
+            0.015683988329119554,
+            0.25724401018832344,
+            0.14048514874578363
+          ],
+          "quat": [
+            0.14969117790225278,
+            -0.010946455334956756,
+            -0.018758764633873253,
+            0.98849422614563
+          ]
+        },
+        "basket_1": {
+          "pos": [
+            0.005612899696754614,
+            0.256293725160841,
+            -0.004582345326536154
+          ],
+          "quat": [
+            0.7071047512840226,
+            -0.0016942118247029391,
+            0.0016940206643094018,
+            0.7071047522480977
+          ]
+        },
+        "alphabet_soup_1": {
+          "pos": [
+            -0.11909425574484636,
+            -0.23978121735108737,
+            0.03839291037244387
+          ],
+          "quat": [
+            -0.002259053096687742,
+            0.002257812776350694,
+            0.7077060816695565,
+            0.7064997529571369
+          ]
+        },
+        "milk_1": {
+          "pos": [
+            -0.15388124509715662,
+            0.06376398344524244,
+            0.06973547730149794
+          ],
+          "quat": [
+            0.49999991071210004,
+            0.5000000894755471,
+            0.4999999310313295,
+            0.5000000687809971
+          ]
+        },
+        "tomato_sauce_1": {
+          "pos": [
+            0.1002390490713704,
+            -0.19993920296124806,
+            0.038392596419837215
+          ],
+          "quat": [
+            -0.0022618491612833684,
+            0.0022622561508556893,
+            0.7076760641478537,
+            0.7065297972963939
+          ]
+        },
+        "butter_1": {
+          "pos": [
+            0.14864301844201586,
+            0.029762903133599517,
+            0.008695477418608112
+          ],
+          "quat": [
+            2.95380934991769e-32,
+            -2.1459654434272856e-17,
+            2.0337061442951267e-17,
+            1.0
+          ]
+        },
+        "orange_juice_1": {
+          "pos": [
+            -0.19999993479427164,
+            -0.08000162784607008,
+            0.06973547730149791
+          ],
+          "quat": [
+            0.5000000894755467,
+            0.4999999107120997,
+            0.5000000687809972,
+            0.49999993103132967
+          ]
+        }
+      },
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "official_success": false,
+      "oracle": {
+        "events": [
+          {
+            "object": "alphabet_soup_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 2.467935578120972e-12
+          },
+          {
+            "object": "basket_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 4.81906181626357e-14
+          },
+          {
+            "object": "butter_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 8.593820099989102e-15
+          },
+          {
+            "object": "cream_cheese_1",
+            "label": "BOUNCE_OR_UNSUPPORTED_LIFT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 0.13156367132717575
+          },
+          {
+            "object": "milk_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.0401112193747508e-09
+          },
+          {
+            "object": "orange_juice_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.040111205496963e-09
+          },
+          {
+            "object": "tomato_sauce_1",
+            "label": "NO_EVENT",
+            "step": 129,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.0408340855860843e-16
+          }
+        ],
+        "first_violation_step": null
+      },
+      "control_input": [
+        -0.17190201580524445,
+        -0.006835075560957193,
+        -0.5712890625,
+        0.029497768729925156,
+        0.013217074796557426,
+        0.003519807243719697,
+        1.0
+      ]
+    },
+    {
+      "step": 130,
+      "eef_pos": [
+        0.0008326075030778276,
+        0.2620785782855418,
+        0.1886513580112017
+      ],
+      "eef_quat": [
+        -0.0233683159447997,
+        0.8049504801325021,
+        0.592871640868711,
+        0.003444386447453106
+      ],
+      "gripper": [
+        0.024686285247401064,
+        -0.02448157828283696
+      ],
+      "objects": {
+        "cream_cheese_1": {
+          "pos": [
+            0.015912913365829742,
+            0.2576427454796004,
+            0.0825279854449511
+          ],
+          "quat": [
+            0.14969119119519264,
+            -0.010946450013916996,
+            -0.018758765549449052,
+            0.9884942241741825
+          ]
+        },
+        "basket_1": {
+          "pos": [
+            0.005612899696754614,
+            0.256293725160841,
+            -0.004582345326536154
+          ],
+          "quat": [
+            0.7071047512840226,
+            -0.0016942118247029387,
+            0.0016940206643094044,
+            0.7071047522480977
+          ]
+        },
+        "alphabet_soup_1": {
+          "pos": [
+            -0.11909425574484636,
+            -0.23978121735108737,
+            0.03839291037244387
+          ],
+          "quat": [
+            -0.002259053096687742,
+            0.002257812776350694,
+            0.7077060816695565,
+            0.7064997529571369
+          ]
+        },
+        "milk_1": {
+          "pos": [
+            -0.15388124509715662,
+            0.06376398344524209,
+            0.06973547730149794
+          ],
+          "quat": [
+            0.49999991071210004,
+            0.5000000894755471,
+            0.4999999310313295,
+            0.5000000687809971
+          ]
+        },
+        "tomato_sauce_1": {
+          "pos": [
+            0.1002390490713704,
+            -0.19993920296124806,
+            0.038392596419837215
+          ],
+          "quat": [
+            -0.0022618491612833793,
+            0.0022622561508556785,
+            0.7076760641478537,
+            0.7065297972963939
+          ]
+        },
+        "butter_1": {
+          "pos": [
+            0.14864301844201586,
+            0.029762903133599517,
+            0.008695477418608112
+          ],
+          "quat": [
+            3.015854596079125e-32,
+            -2.1627925334058074e-17,
+            2.254706705982485e-17,
+            1.0
+          ]
+        },
+        "orange_juice_1": {
+          "pos": [
+            -0.19999993479427164,
+            -0.08000162784606973,
+            0.06973547730149791
+          ],
+          "quat": [
+            0.5000000894755467,
+            0.4999999107120997,
+            0.5000000687809972,
+            0.49999993103132967
+          ]
+        }
+      },
+      "left_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "right_contacts": {
+        "cream_cheese_1": false,
+        "basket_1": false,
+        "alphabet_soup_1": false,
+        "milk_1": false,
+        "tomato_sauce_1": false,
+        "butter_1": false,
+        "orange_juice_1": false
+      },
+      "official_success": true,
+      "oracle": {
+        "events": [
+          {
+            "object": "alphabet_soup_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 2.467935578120972e-12
+          },
+          {
+            "object": "basket_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 4.81906181626357e-14
+          },
+          {
+            "object": "butter_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 8.593820099989102e-15
+          },
+          {
+            "object": "cream_cheese_1",
+            "label": "BOUNCE_OR_UNSUPPORTED_LIFT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 0.07360650802634322
+          },
+          {
+            "object": "milk_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.0401112193747508e-09
+          },
+          {
+            "object": "orange_juice_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.040111205496963e-09
+          },
+          {
+            "object": "tomato_sauce_1",
+            "label": "NO_EVENT",
+            "step": 130,
+            "new_lift": false,
+            "lift_counter": 0,
+            "grasp_counter": 0,
+            "lift_m": 1.0408340855860843e-16
+          }
+        ],
+        "first_violation_step": null
+      },
+      "control_input": [
+        -0.25710099935531616,
+        -0.021949123591184616,
+        -0.52734375,
+        0.011277727782726288,
+        0.014968609437346458,
+        0.015311799012124538,
+        1.0
+      ]
+    }
+  ],
+  "terminated": true,
+  "truncated": false,
+  "success": true,
+  "steps": 2,
+  "restored_snapshot_hash": "de090d3fe2fed2cfcaa31a02f658069c47fe8b2d5a491e34be6a1beb9bda4c57",
+  "source_snapshot_hash": "de090d3fe2fed2cfcaa31a02f658069c47fe8b2d5a491e34be6a1beb9bda4c57",
+  "history_replay_steps": 0
+}

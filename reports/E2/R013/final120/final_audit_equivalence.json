@@ -1,0 +1,18 @@
+{
+  "scope": "READ_ONLY_CPU_NO_MODEL_OR_SIM_REQUEST",
+  "ordinary_optimized_and_safe_export_equal": true,
+  "planned": 120,
+  "reserved": 120,
+  "eligible_full_outcomes": 117,
+  "censored_original_cleanup_errors": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "not_started": 0,
+  "frozen_experiment_status": "INCOMPLETE",
+  "meaning": "Acquisition120 complete;3 primary outcomes unknown, unchanged frozen auditor legitimately remains INCOMPLETE",
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 640500,
+  "candidate_UAR": null
+}

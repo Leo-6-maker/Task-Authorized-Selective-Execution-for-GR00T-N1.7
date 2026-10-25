@@ -1,0 +1,89 @@
+{
+  "scope": "EXECUTOR_CLOSED_TEST_RECONCILIATION_NOT_R3_APPROVAL",
+  "planned": 120,
+  "reserved": 120,
+  "full_outcomes": 117,
+  "status_counts": {
+    "SUCCESS": 89,
+    "CLEANUP_ERROR": 3,
+    "TIME_LIMIT": 18,
+    "SEMANTIC_ABORT": 10
+  },
+  "unstarted": 0,
+  "next_unopened": null,
+  "observed_controls": 26480,
+  "policy_requests": 3355,
+  "frozen_audit_normal_exit": 0,
+  "frozen_audit_optimized_exit": 0,
+  "normal_optimized_identical": true,
+  "original92_all_source_members_unchanged": true,
+  "observed_operational_errors": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0016",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    }
+  ],
+  "frozen_system_error_mapping": "RUNTIME_ERROR only; never interprets lower0 as no operational error",
+  "server_sessions": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r011-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r012-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r013-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r013-02": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    }
+  },
+  "all_owned_episode_and_worker_PIDs_absent": true,
+  "owned_worker_receipts": 60,
+  "remaining_preexisting_gpu_process_count": 1,
+  "existing_owner_approved_shared_tasks_untouched": true,
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "actual_code_epochs": [
+    "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+    "a1c6424bd348b36c55a20d38750a269e9551a698"
+  ],
+  "actual_grant_epochs": [
+    "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+    "377fe3b85989e6d1fd105002c3c0c09827598886",
+    "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+    "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac"
+  ],
+  "review_status": "R3_READY_FOR_INDEPENDENT_REVIEW",
+  "recorded_at_sgt": "2026-10-25T15:16:48.957544+08:00"
+}

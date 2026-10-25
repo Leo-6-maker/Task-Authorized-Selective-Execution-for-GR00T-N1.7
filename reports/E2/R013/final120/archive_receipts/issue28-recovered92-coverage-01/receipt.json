@@ -1,0 +1,35 @@
+{
+  "stage": "issue28-recovered92-coverage-01",
+  "bytes": 1104750,
+  "sha256": "5fb3eea76f6e1d584dcec9c2bbff0e51ef5a0a8ee25016d6b1dee554e2cc6595",
+  "artifacts": 64,
+  "complete_original92_members": 12441,
+  "delta_original_members": 60,
+  "dependencies": [
+    {
+      "stage": "issue25-resource84-full-01",
+      "bytes": 2246177125,
+      "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+      "artifacts": 11331
+    },
+    {
+      "stage": "issue28-test-checkpoint-0086",
+      "bytes": 37755942,
+      "sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
+      "artifacts": 266
+    },
+    {
+      "stage": "issue28-test-checkpoint-0088",
+      "bytes": 67976166,
+      "sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
+      "artifacts": 353
+    },
+    {
+      "stage": "issue28-test-checkpoint-0092",
+      "bytes": 73695611,
+      "sha256": "022c9a05ff4e7207cacd683190b90a216cb73f8a3b88e051aacf919723048aa6",
+      "artifacts": 445
+    }
+  ],
+  "status": "PRIMARY_WHOLE_AND_EVERY_MEMBER_VERIFIED_SECOND_COPY_REQUIRED"
+}

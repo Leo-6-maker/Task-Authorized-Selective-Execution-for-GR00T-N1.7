@@ -1,0 +1,161 @@
+{
+  "status": "R013_MANDATORY0086_NATIVE_LIFECYCLE_PHYSICS_AND_TWO_COPY_CHECKPOINT_PASS",
+  "reserved": 86,
+  "full_outcomes": 83,
+  "normal_audit_exit": 0,
+  "optimized_audit_exit": 0,
+  "normal_optimized_equal": true,
+  "pair0085_0086": {
+    "scenario_id": "E2-TEST-ketchup-i7-C0",
+    "status": "PAIRED_PREFIX_EXACT",
+    "g_controls": 136
+  },
+  "original_failures": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    },
+    {
+      "run_id": "e2-test-0016",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    }
+  ],
+  "clean_shadow_close": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 513142,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2674967.037569746,
+        "close_token": "b7dc84d0a9e84681a7def05f5e72697c"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2674967.037863463
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2674967.132413959
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2674967.59910945,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2674967.59912678
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2674967.599146965
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "b7dc84d0a9e84681a7def05f5e72697c",
+        "worker_pid": 513142,
+        "received_monotonic": 2674967.037665844
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "b7dc84d0a9e84681a7def05f5e72697c",
+        "worker_pid": 513142,
+        "native_finalized": true,
+        "received_monotonic": 2674967.037665844,
+        "finalizer_started_monotonic": 2674967.037703254,
+        "finalizer_finished_monotonic": 2674967.13228142
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2674967.596900176,
+        "deadline_monotonic": 2674969.132412994,
+        "initial_returncode": null,
+        "polls": 2,
+        "finished_monotonic": 2674967.599106129,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  },
+  "shadow_worker": {
+    "worker_pid": 513142,
+    "worker_returncode": 0,
+    "scope": "ACTUAL_OWNED_WORKER_JOIN",
+    "close_protocol": "SHADOW_CLOSE_V1",
+    "close_status": "CLEAN",
+    "clean_close": true
+  },
+  "worker_PID_absent": true,
+  "release": {
+    "released_after_structural_audit_and_two_copy_verification": true,
+    "closed_units": 86,
+    "backup_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
+    "no_interim_selection_or_threshold_change": true
+  },
+  "backup": {
+    "stage": "issue28-test-checkpoint-0086",
+    "bytes": 37755942,
+    "sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
+    "artifacts": 266,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  },
+  "requests": {
+    "server_session": "test-server-r013-01",
+    "actual_server_requests": 34,
+    "bindings": [
+      {
+        "run_id": "e2-test-0085",
+        "requests": 17
+      },
+      {
+        "run_id": "e2-test-0086",
+        "requests": 17
+      }
+    ],
+    "scope": "REQUEST_IDENTITY_ONLY_NO_INTERIM_EFFECT_SELECTION"
+  },
+  "acquisition_code_heads": [
+    "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+    "a1c6424bd348b36c55a20d38750a269e9551a698"
+  ],
+  "native_memory_admission": {
+    "status": "GENUINE_GPU1_MODEL_LOADED_FIXED_BUDGET_MATCH",
+    "free_vram_before_load_bytes": 10346823680,
+    "total_vram_bytes": 16709255168,
+    "allocator_fraction": 0.49070649466785377,
+    "load_peak_reserved_bytes": 6392119296,
+    "load_peak_allocated_bytes": 6307177984,
+    "minimum_free_bytes": 9663676416,
+    "reserved_free_bytes": 2147483648,
+    "gpu_index": 1,
+    "no_preflight_inference": true
+  },
+  "original84_all_source_members_unchanged": true,
+  "not_R3_result_approval": true
+}

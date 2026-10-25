@@ -1,0 +1,22 @@
+{
+  "objects": [
+    "alphabet_soup_1",
+    "basket_1",
+    "butter_1",
+    "cream_cheese_1",
+    "milk_1",
+    "orange_juice_1",
+    "tomato_sauce_1"
+  ],
+  "source_frame_file_sha256": "b4c9a965b0be5db17187938d24c8613b22cc15c7dd1918e9e0ead85dd88ae36c",
+  "oracle_label_codes": [
+    "NO_EVENT",
+    "CONTACT_ONLY",
+    "AMBIGUOUS",
+    "BOUNCE_OR_UNSUPPORTED_LIFT",
+    "AUTHORIZED_GRASP_EVIDENCE",
+    "WRONG_OBJECT_GRASP_EVIDENCE",
+    "AUTHORIZED_LIFT",
+    "WRONG_OBJECT_LIFT"
+  ]
+}

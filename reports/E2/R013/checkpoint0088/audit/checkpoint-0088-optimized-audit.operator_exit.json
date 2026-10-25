@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue28-frozen-code/scripts/record_process.py",
+    "--receipt",
+    "<E2_WORKSPACE>/operator/issue28-execution-01/checkpoint-0088.optimized.audit.exit.json",
+    "--",
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "-O",
+    "<E2_WORKSPACE>/operator/issue28-frozen-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue28-frozen-code",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue28-execution-01/checkpoint-0088.optimized.audit.json"
+  ],
+  "completed_unix": 1792905997.309178
+}

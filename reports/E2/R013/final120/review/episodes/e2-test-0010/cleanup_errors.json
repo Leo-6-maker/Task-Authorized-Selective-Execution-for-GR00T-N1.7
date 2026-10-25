@@ -1,0 +1,7 @@
+[
+  {
+    "resource": "m2_shadow",
+    "error_type": "RuntimeError",
+    "traceback": "Traceback (most recent call last):\n  File \"<PRIVATE>/operator/issue16-frozen-code/tase/retention.py\", line 46, in cleanup_resources\n    close()\n  File \"<PRIVATE>/operator/issue16-frozen-code/tase/e2_context.py\", line 118, in close\n    try:self.shadow.close()\n        ^^^^^^^^^^^^^^^^^^^\n  File \"<PRIVATE>/operator/issue16-frozen-code/tase/shadow.py\", line 83, in close\n    raise RuntimeError('owned shadow worker required termination')\nRuntimeError: owned shadow worker required termination\n"
+  }
+]

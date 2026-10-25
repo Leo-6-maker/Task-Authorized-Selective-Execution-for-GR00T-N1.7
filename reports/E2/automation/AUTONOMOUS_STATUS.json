@@ -1,397 +1,59 @@
 {
-  "phase": "P3_GPU1_RESOURCE_DELTA_READY_FOR_INDEPENDENT_REVIEW",
+  "status": "R3_READY_FOR_INDEPENDENT_REVIEW",
+  "phase": "P5_COMPLETE120_EXECUTOR_EVIDENCE_PENDING_GPT_R3",
   "execution_authorized": false,
-  "current_code_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
-  "current_code_head_meaning": "Exact R012 authorized runtime; clean, unchanged; report/source ZIP are separate",
-  "independent_review_grant": {
-    "review_commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
-    "review_path": "docs/reviews/R012-E2-TEST-AUTHORIZED.json",
-    "status": "SIGNED_CODE_PERMISSION_RETAINED_RESOURCE_ACTIVATION_NOT_MET"
-  },
+  "execution_permission_explanation": "Original120 budget exhausted; R013 grant file not edited or self-suspended",
+  "grant_currently_active": true,
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "review_commit": "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+  "review_path": "docs/reviews/R013-E2-TEST-AUTHORIZED.json",
+  "issue": 28,
   "total_planned": 120,
-  "reserved_count": 84,
-  "normal_full_outcomes": 81,
-  "unstarted_count": 36,
-  "next_unopened_id": "e2-test-0085",
-  "live_saved_status_counts": {
-    "SUCCESS": 61,
-    "TIME_LIMIT": 10,
-    "SEMANTIC_ABORT": 10,
+  "reserved_count": 120,
+  "normal_full_outcomes": 117,
+  "status_counts": {
+    "SUCCESS": 89,
     "CLEANUP_ERROR": 3,
-    "NOT_STARTED": 36
+    "TIME_LIMIT": 18,
+    "SEMANTIC_ABORT": 10
   },
+  "unstarted_count": 0,
+  "next_unopened_id": null,
+  "acquisition_complete": true,
+  "primary_outcomes_all_known": false,
+  "frozen_experiment_status": "INCOMPLETE",
   "cleanup_errors": [
     "e2-test-0010",
     "e2-test-0014",
     "e2-test-0016"
   ],
-  "actual_acquisition_epochs": [
+  "native_operator_actual_exit": 0,
+  "native_server_actual_exit": 0,
+  "all_native_and_worker_PIDs_absent": true,
+  "owned_worker_receipts": 60,
+  "observed_controls": 26480,
+  "policy_requests": 3355,
+  "raw_original_members": 18070,
+  "raw_two_copy_scope": "Exact complete original member coverage over individually whole/member-verified dependency archives and final closure delta; standalone second compressed archive not claimed",
+  "raw_complete_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+  "infrastructure_pauses": [
     {
-      "units": "0001-0014",
-      "head": "a1c6424bd348b36c55a20d38750a269e9551a698",
-      "review_commit": "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac"
+      "after_reserved": 84,
+      "operator_actual_exit": 1,
+      "server_actual_exit": 0,
+      "reason": "Pre-admission resource guard"
     },
     {
-      "units": "0015-0016",
-      "head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
-      "review_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc"
-    },
-    {
-      "units": "0017-0084",
-      "head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
-      "review_commit": "377fe3b85989e6d1fd105002c3c0c09827598886"
+      "after_reserved": 92,
+      "operator_actual_exit": 1,
+      "server_actual_exit": 0,
+      "reason": "Pre-admission checkpoint wait after SSH outage; resolved with full92 recheck and owner continuation; no new TEST error"
     }
   ],
-  "observed_controls": 16494,
-  "policy_requests": 2097,
-  "mandatory0018_checkpoint": "PASS_BEFORE0019",
-  "last_structural_checkpoint": {
-    "checkpoint": 84,
-    "closed_units": 84,
-    "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-    "archive_bytes": 73607568,
-    "backup_sha256": "a842924610c3afe9dc9fc71dcf6325a9634ad3e37465ef12dc6f68a621ba95b1"
-  },
-  "current_incident": {
-    "classification": "RESOURCE_CHANGE_PRE_ADMISSION_NO_NEW_TEST_ERROR",
-    "stop_message": "allocated GPU has unexpected process; no new reservation",
-    "old_operator_actual_exit": 1,
-    "native_server_actual_exit": 0,
-    "new_TEST_errors": 0,
-    "new_reservations_after0084": 0,
-    "all_owned_server_episode_worker_PIDs_absent": true,
-    "foreign_task_untouched": true,
-    "GPU0_free_MiB": 12670,
-    "GPU1_free_MiB": 10121,
-    "frozen_launcher_minimum_free_MiB": 16384
-  },
-  "owner_resource_decision": {
-    "date_sgt": "2026-10-25",
-    "source": "Direct human user instruction in executing chat",
-    "mode": "Concurrent GPU0 when sufficient free VRAM; GPU1 may be considered",
-    "measured_gpu0_free_mib": 25939,
-    "measured_gpu1_free_mib": 10121,
-    "selected_gpu_index": 0,
-    "no_existing_task_stopped": true,
-    "original_R012_no_competing_requirement_superseded_by_owner_for_resource_only": true,
-    "science_and_executable_unchanged": true
-  },
-  "runtime_activation_passed_previously": true,
-  "original16_all_source_members_unchanged": true,
-  "post_stop_frozen_audit": {
-    "normal_exit": 0,
-    "optimized_exit": 0,
-    "exactly_equal": true
-  },
-  "cpu_test_regular": {
-    "local": {
-      "tests": 123,
-      "exit": 0
-    },
-    "Corelab": {
-      "tests": 123,
-      "exit": 0
-    }
-  },
-  "cpu_test_optimized": {
-    "local": {
-      "tests": 123,
-      "exit": 0
-    },
-    "Corelab": {
-      "tests": 123,
-      "exit": 0
-    }
-  },
-  "unpacked_sourcezip_tests": {
-    "normal123_actual_exit": 0,
-    "optimized123_actual_exit": 0,
-    "source_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb"
-  },
-  "raw_two_copy_verification": {
-    "status": "ALL84_ORIGINAL_AND_EXECUTOR_PROOFS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
-    "archives": [
-      {
-        "stage": "issue18-stopped-full-01",
-        "bytes": 254951092,
-        "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
-        "artifacts": 1611,
-        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-        "independent_review": "NOT_PERFORMED"
-      },
-      {
-        "stage": "issue23-stopped-full-01",
-        "bytes": 291390525,
-        "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
-        "artifacts": 1900,
-        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-        "independent_review": "NOT_PERFORMED"
-      },
-      {
-        "stage": "issue25-preflight-resource-01",
-        "bytes": 105026,
-        "sha256": "33a25d02d1f4d27b8e61c9253659e68e24054d5c788784705ca82526306b94b5",
-        "artifacts": 25,
-        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-        "independent_review": "NOT_PERFORMED"
-      },
-      {
-        "stage": "issue25-resource84-full-01",
-        "bytes": 2246177125,
-        "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
-        "artifacts": 11331,
-        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-        "independent_review": "NOT_PERFORMED"
-      },
-      {
-        "stage": "issue25-resource84-proof-01",
-        "bytes": 42446560,
-        "sha256": "0c2aadb4b86508662d0a5d5d4dea326f19c9d4c9645cadd467dfa359f1db8e23",
-        "artifacts": 1767,
-        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-        "independent_review": "NOT_PERFORMED"
-      }
-    ],
-    "checkpoint_archives": [
-      {
-        "checkpoint": 18,
-        "closed_units": 18,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 36470133,
-        "backup_sha256": "2c39f2f6e4c940fcfc035e5589a8e39c9985f07c250ed666f2d0ae8c181798c5"
-      },
-      {
-        "checkpoint": 20,
-        "closed_units": 20,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 38303090,
-        "backup_sha256": "72c53d04dbdf81ca8f75e0d7cc39a0d7488434666601ff2da6ac97043ff42143"
-      },
-      {
-        "checkpoint": 24,
-        "closed_units": 24,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 71573094,
-        "backup_sha256": "8d395876a3b89b137266b92b44202e62fefac7c35994b5ccb38f309bf31584b1"
-      },
-      {
-        "checkpoint": 28,
-        "closed_units": 28,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 98114355,
-        "backup_sha256": "ec61a7a8a5333e4032f7b88abeb4af38690f8b2199f527bcd90e23135b7edad8"
-      },
-      {
-        "checkpoint": 32,
-        "closed_units": 32,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 78103805,
-        "backup_sha256": "a3feffcedf9b5db49c64d10d05bd52faf75f7a3547cf62ec3c449ea2092b1376"
-      },
-      {
-        "checkpoint": 36,
-        "closed_units": 36,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 71160755,
-        "backup_sha256": "9092c4b7cbece969a9808b129ba6073595644a469ca21c366266c64a059de113"
-      },
-      {
-        "checkpoint": 40,
-        "closed_units": 40,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 73891511,
-        "backup_sha256": "60fd7a680792d31950b19e9f80328aac4b1fa245cd13869e0ab089886f862838"
-      },
-      {
-        "checkpoint": 44,
-        "closed_units": 44,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 142086185,
-        "backup_sha256": "064cb2ec276ff7109ab9414a70454dadeafef5c32d2d16e532fd6f53e123b919"
-      },
-      {
-        "checkpoint": 48,
-        "closed_units": 48,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 141059077,
-        "backup_sha256": "bc3f2fad5b4daa5a2ded34e609f519fb6db4d7767f8b0cc43c2dd551d050bb5a"
-      },
-      {
-        "checkpoint": 52,
-        "closed_units": 52,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 136174354,
-        "backup_sha256": "539254ee919b69130e6e109250fce20e6ee8e4f2331c90f197c97d783e1879e4"
-      },
-      {
-        "checkpoint": 56,
-        "closed_units": 56,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 140116131,
-        "backup_sha256": "4907e0d3a83750c724b84e16186bbebfde092ae6a6d788f4c59ed3433b316ac5"
-      },
-      {
-        "checkpoint": 60,
-        "closed_units": 60,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 142104431,
-        "backup_sha256": "6d492a75ac76c3f2fbc4cc29c1b1c18c29c0dd041f729d936c89354e94b9f02d"
-      },
-      {
-        "checkpoint": 64,
-        "closed_units": 64,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 148231312,
-        "backup_sha256": "4053a28a06353817f7610d90a96478e3368dea0ce98bd66c39158ca365710210"
-      },
-      {
-        "checkpoint": 68,
-        "closed_units": 68,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 142352071,
-        "backup_sha256": "efe35a50ae4845d6176d867c171124e48bf488a2dad2ea71962583fc588e5fbb"
-      },
-      {
-        "checkpoint": 72,
-        "closed_units": 72,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 143013398,
-        "backup_sha256": "209d54e1e0ada65a1de8598af9c29c589515a9a0eb92bb105bfd4b6bb625c197"
-      },
-      {
-        "checkpoint": 76,
-        "closed_units": 76,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 141946293,
-        "backup_sha256": "395fff83100584d0438a9aea556d801b312b106fc70d46dfc43041d4feb692de"
-      },
-      {
-        "checkpoint": 80,
-        "closed_units": 80,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 137399967,
-        "backup_sha256": "2b7176790604260984362c5310e2ac5d5010d8bdf2fe5d777f4bdc566e325cc0"
-      },
-      {
-        "checkpoint": 84,
-        "closed_units": 84,
-        "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
-        "archive_bytes": 73607568,
-        "backup_sha256": "a842924610c3afe9dc9fc71dcf6325a9634ad3e37465ef12dc6f68a621ba95b1"
-      }
-    ],
-    "old16_all_members_unchanged": true,
-    "private_map_scope": "Final actual owner/node/workspace/shared allocation map and every source epoch remain owner-only",
-    "reviewer_access": "Operator member/whole verification; GPT has not independently downloaded/rehashed private originals"
-  },
-  "phases": {
-    "P0": "ORIGINAL16_PREFLIGHT_COMPLETE",
-    "P1": "R012_REPAIR_CPU_VALIDATED",
-    "P2": "MIXED_VERSION_HISTORY_VERIFIED",
-    "P3": "R012_INDEPENDENT_EXACT_HEAD_AUTHORIZED",
-    "P4": "84_ACQUIRED_36_UNSTARTED_RESOURCE_STOP",
-    "P5": "PARTIAL_REVIEW_EXPORT_AND_COURSE_SOURCE_REPRODUCTION"
-  },
-  "missing_evidence": [
-    "Sufficient owner-authorized GPU memory and fresh complete preflight before0085",
-    "Original fixed0085-0120 acquisitions",
-    "Final independent R3 review",
-    "Final course materials and owner submission"
-  ],
-  "next_action": "Independent review of complete GPU1 resource-only candidate Head and separate new TEST grant; then fresh complete84-prefix GPU1 preflight and original0085/0086 mandatory checkpoint. Current908 runtime stays stopped; no candidate model/sim/TEST permitted before that grant.",
-  "stop_reason": "GPU1 current free memory and physical total cannot meet frozen launcher predicate; source is unchanged",
-  "science_and_executable_drift": [],
-  "independent_R3": "NOT_COMPLETED",
-  "course_materials": {
-    "status": "PARTIAL84_EDITABLE15_SLIDE_AND_R012_SOURCE_REPRO_DRAFT",
-    "separate_branch": "codex/20-course-draft",
-    "source_zip_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
-    "report_head": "45a0e773c743a03867d5361e33178143d853498a",
-    "slides_total": 15,
-    "content_slides": 13,
-    "independent_R3": "NOT_COMPLETED"
-  },
-  "updated_at_sgt": "2026-10-25T12:20:30.833572+08:00",
-  "local_cpu_and_course_proof": {
-    "stage": "issue25-local-cpu-course84-01",
-    "bytes": 8223932,
-    "sha256": "6efdfeaec3d408ab27acaa28d6d156acdeaa386ff95168a10f411dbf599f9606",
-    "artifacts": 706,
-    "status": "LOCAL_CPU_COURSE84_PROOF_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
-    "locations": [
-      "OWNER_LOCAL_PRIVATE",
-      "AUTHORIZED_E2_REMOTE_BACKUP"
-    ],
-    "independent_review": "NOT_PERFORMED",
-    "new_model_sim_TEST_calls": 0
-  },
-  "owner_requested_next_gpu_index": 1,
-  "actual_acquisition_gpu_index": 0,
-  "requested_GPU1_precheck": {
-    "status": "GPU1_OWNER_AUTHORIZED_BUT_FROZEN_LAUNCHER_PRECONDITION_UNMET",
-    "assigned_gpu_index": 1,
-    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
-    "free_mib": 10121,
-    "total_mib": 16376,
-    "frozen_minimum_free_mib": 16384,
-    "minimum_exceeds_device_total": true,
-    "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
-    "checkout_clean": true,
-    "source_file": "scripts/e2_test_server.py",
-    "memory_guard_line": 235,
-    "source_sha256": "e2d755cc251d348930312fe86720b1f580a8526ebfc07563df5cc391186ff8c2",
-    "owner_receipt_sha256": "35c886b47f3104c05df9d2b9f9e982c8c5d6d09d990ba3bc123592f2597be471",
-    "existing_gpu1_process_count": 1,
-    "reserved": 84,
-    "next0085_absent": true,
-    "new_model_sim_TEST_calls": 0,
-    "foreign_tasks_untouched": true,
-    "source_or_configuration_changes": false,
-    "recorded_at_sgt": "2026-10-25T11:11:41.721316+08:00",
-    "inspection_actual_exit": 0,
-    "pure_CPU_frozen_guard_actual_exit": 1,
-    "native_launcher_started": false,
-    "whole_frozen_serve_function_called": false
-  },
-  "GPU1_resource_check_two_copy": {
-    "stage": "issue25-gpu1-resource-request-01",
-    "bytes": 3521,
-    "sha256": "7cb8f94d33fa7d8fa16594fd331b426899524a6952d24266cc8ee6c86f5491e8",
-    "artifacts": 10,
-    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
-    "independent_review": "NOT_PERFORMED"
-  },
-  "CPU_candidate_source_head": "d9e445cc693c4fc7284cfa54a83924e340f04360",
-  "CPU_candidate_has_TEST_grant": false,
-  "CPU_candidate_changed_source_paths": [
-    "scripts/e2_test_server.py",
-    "tase/server.py",
-    "tase/resource_memory.py",
-    "tests/test_resource_memory.py"
-  ],
-  "owner_parallel_GPU1_permission": true,
-  "candidate_CPU_regression": {
-    "local_normal": {
-      "tests": 134,
-      "actual_exit": 0
-    },
-    "local_optimized": {
-      "tests": 134,
-      "actual_exit": 0
-    },
-    "corelab_normal": {
-      "tests": 134,
-      "actual_exit": 0
-    },
-    "corelab_optimized": {
-      "tests": 134,
-      "actual_exit": 0
-    }
-  },
-  "candidate_original84_audits": {
-    "normal_exit": 0,
-    "optimized_exit": 0,
-    "all_complete_outputs_equal_to_original908": true,
-    "original16_all_members_unchanged": true
-  }
+  "independent_R3_review": "NOT_PERFORMED_BY_EXECUTOR",
+  "course_status": "Editable full12015-slide review draft and exact108-file source ZIP delivered in PR22@73ddec9790c8540ad2b1faec6c989c7172cc5078; all15 renders checked; independent R3 and owner submission pending",
+  "next_action": "Independent GPT R3 review of final report Head and source/ledger/uncertainty/custody; no extra TEST/model request or merge",
+  "updated_at_sgt": "2026-10-25T15:55:24.876162+08:00",
+  "course_report_head": "73ddec9790c8540ad2b1faec6c989c7172cc5078",
+  "course_pr": 22
 }

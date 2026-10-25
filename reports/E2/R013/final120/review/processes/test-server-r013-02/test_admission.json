@@ -1,0 +1,142 @@
+{
+  "authorization": {
+    "authorized_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "selected_k": 3,
+    "maximum_attempts": 120,
+    "test_config_sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17",
+    "test_cells_sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+    "protocol_lock_sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "splits_sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+    "selection_sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+    "review_id": "R013-2026-10-25-E2-GPU1-SHARED-MEMORY",
+    "review_commit": "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+    "review_path": "docs/reviews/R013-E2-TEST-AUTHORIZED.json",
+    "review_blob": "48573c7b35361c150a8961d35b1255cd502dbea7"
+  },
+  "preflight": {
+    "environments": {
+      "server": {
+        "python": "3.12.14",
+        "verified_packages": 138,
+        "marker_sha256": "5033aa07440889fce08e211362cfdd7f08807b96855b93b5a5d57a2c4155f32b"
+      },
+      "sim": {
+        "python": "3.12.14",
+        "verified_packages": 159,
+        "marker_sha256": "9266aee1d6f26e80cf9de0b4413f441b8fb9dd5893e8fe4a4e9028620a91d8f6"
+      }
+    },
+    "files": [
+      {
+        "model": "Object",
+        "path": "libero_object/config.json",
+        "bytes": 2266,
+        "sha256": "ce763f74ad1cda2ca9e67491229cbc5810d83cae675cb4dad839a69a9731fd97"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/embodiment_id.json",
+        "bytes": 2145,
+        "sha256": "abc4a749389837416a102d9455a8c089336f2e417afb18565703b9944974bc35"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/model-00001-of-00002.safetensors",
+        "bytes": 4990519232,
+        "sha256": "cfe3a25d809ac9558375e5e6ea3e2c550dce2fb51082dbcdb05395295e50183d"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/model-00002-of-00002.safetensors",
+        "bytes": 1919980184,
+        "sha256": "0c7e87f4c326564301e08751a2b61b9876f1062a041c5a90aae35fe8aac723de"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/model.safetensors.index.json",
+        "bytes": 104985,
+        "sha256": "407804ea5a62f4f8823f48811ae0edbb82fac101e9cf4d7273e6e2f692bb4d59"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/processor_config.json",
+        "bytes": 26935,
+        "sha256": "545bb44c7d8caaf5ac82df55b90831271a1469a4e48adcc9a5f469f064f4e121"
+      },
+      {
+        "model": "Object",
+        "path": "libero_object/statistics.json",
+        "bytes": 4298451,
+        "sha256": "193cbb84e44c6d53fe4736e5fcc80f5f5d35c1c0637b9b0c601d54b4cd610a69"
+      },
+      {
+        "model": "Cosmos",
+        "path": "chat_template.json",
+        "bytes": 5502,
+        "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+      },
+      {
+        "model": "Cosmos",
+        "path": "config.json",
+        "bytes": 1505,
+        "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b"
+      },
+      {
+        "model": "Cosmos",
+        "path": "generation_config.json",
+        "bytes": 269,
+        "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4"
+      },
+      {
+        "model": "Cosmos",
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "model": "Cosmos",
+        "path": "model.safetensors",
+        "bytes": 4877470304,
+        "sha256": "fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede"
+      },
+      {
+        "model": "Cosmos",
+        "path": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "model": "Cosmos",
+        "path": "tokenizer.json",
+        "bytes": 7032403,
+        "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+      },
+      {
+        "model": "Cosmos",
+        "path": "tokenizer_config.json",
+        "bytes": 10868,
+        "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+      },
+      {
+        "model": "Cosmos",
+        "path": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      {
+        "model": "Cosmos",
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e"
+  },
+  "port": 5565,
+  "gpu_uuid": "<PRIVATE>",
+  "egl_device_id": "1",
+  "allocation_sha256": "64862ce9df6df07b1ee967ba8e84d8910f142d505ab8402f757dcb16ae2f698e"
+}

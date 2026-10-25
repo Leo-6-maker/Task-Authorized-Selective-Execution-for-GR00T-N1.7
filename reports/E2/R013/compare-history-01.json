@@ -1,0 +1,685 @@
+{
+  "count": 136,
+  "differences": [
+    {
+      "path": "/code_epochs/16/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/16/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/17/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/17/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/18/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/18/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/19/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/19/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/20/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/20/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/21/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/21/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/22/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/22/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/23/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/23/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/24/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/24/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/25/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/25/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/26/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/26/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/27/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/27/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/28/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/28/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/29/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/29/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/30/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/30/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/31/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/31/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/32/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/32/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/33/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/33/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/34/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/34/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/35/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/35/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/36/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/36/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/37/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/37/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/38/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/38/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/39/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/39/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/40/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/40/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/41/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/41/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/42/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/42/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/43/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/43/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/44/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/44/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/45/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/45/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/46/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/46/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/47/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/47/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/48/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/48/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/49/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/49/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/50/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/50/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/51/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/51/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/52/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/52/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/53/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/53/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/54/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/54/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/55/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/55/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/56/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/56/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/57/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/57/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/58/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/58/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/59/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/59/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/60/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/60/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/61/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/61/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/62/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/62/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/63/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/63/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/64/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/64/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/65/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/65/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/66/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/66/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/67/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/67/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/68/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/68/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/69/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/69/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/70/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/70/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/71/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/71/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/72/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/72/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/73/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/73/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/74/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/74/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/75/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/75/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/76/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/76/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/77/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/77/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/78/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/78/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/79/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/79/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/80/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/80/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/81/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/81/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/82/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/82/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "/code_epochs/83/grant_currently_active",
+      "old": true,
+      "new": false
+    },
+    {
+      "path": "/code_epochs/83/closed_prefix_anchored",
+      "old": false,
+      "new": true
+    }
+  ]
+}

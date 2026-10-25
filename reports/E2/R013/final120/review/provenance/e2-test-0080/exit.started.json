@@ -1,0 +1,33 @@
+{
+  "started_at_sgt": "2026-10-25T09:51:54.064376+08:00",
+  "wrapper_pid": 326315,
+  "child_pid": 326316,
+  "command": [
+    "<PRIVATE>/envs/sim/bin/python",
+    "-u",
+    "-m",
+    "tase.epoch_runner",
+    "--workspace",
+    "<PRIVATE>",
+    "--run-id",
+    "e2-test-0080",
+    "--task",
+    "cream_cheese",
+    "--init-index",
+    "15",
+    "--condition",
+    "C2",
+    "--system",
+    "G",
+    "--config",
+    "<PRIVATE>/operator/issue25-frozen-code/configs/e2_test.json",
+    "--allocation-record",
+    "<PRIVATE>/operator/issue25-preflight-shared-02/gpu-allocation.local.json",
+    "--port",
+    "5565",
+    "--test-review-commit",
+    "377fe3b85989e6d1fd105002c3c0c09827598886",
+    "--test-review-path",
+    "docs/reviews/R012-E2-TEST-AUTHORIZED.json"
+  ]
+}

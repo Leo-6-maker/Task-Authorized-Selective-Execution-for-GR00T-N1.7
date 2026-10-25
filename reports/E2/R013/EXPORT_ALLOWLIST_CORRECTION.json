@@ -1,0 +1,13 @@
+{
+  "status": "PRIVATE_PREDICTION_PICKLES_EXCLUDED_BEFORE_PUBLIC_BYTES_COMMIT",
+  "cause": "Data-only exporter selected prediction prefix without requiring JSON suffix",
+  "excluded_files": 49,
+  "public_original_derivatives": 258,
+  "unsafe_bytes_ever_committed": false,
+  "unsafe_objects_loaded": false,
+  "raw_originals_untouched": true,
+  "private_copies_retained": true,
+  "repair": "Require prediction suffix .json and fail validation on any public pickle/weights/XML",
+  "first_report_commit": "dcb6fde829ea6368c99911de687c652d7d428e88",
+  "first_report_issue": "Manifest referenced ignored pickle paths but Git ignore kept bytes out of commit; corrected manifest and origin list now exclude them"
+}

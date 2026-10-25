@@ -1,0 +1,205 @@
+{
+  "scope": "RETAIN_FAILURES_AND_EXPLICIT_MODE_NO_EXTRA_TEST",
+  "receipts": [
+    {
+      "receipt_id": "normal-delivery-check.exit.json",
+      "actual_exit": 1,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "2a652b7e1e19a7c61c0c2b2d0cbfd0c1c0b7f58c35dea003066cf5aeb0229a93"
+    },
+    {
+      "receipt_id": "normal-delivery-check02.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "d9b1b579e88153b4e023218f041cc32ecf632f6580dd1929881ad07bed0c3c2a"
+    },
+    {
+      "receipt_id": "normal-delivery-check03.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "4d41a3f151f14bd6ced53d4e7a65c2e5ac55eee46e5994b03a0d96dca96103ea"
+    },
+    {
+      "receipt_id": "optimized-delivery-check02.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "6945f0961ed8fd2342bef57e1955b315ab3c49342211f1256a6d5b1c14de4b8d"
+    },
+    {
+      "receipt_id": "optimized-delivery-check03.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "f3ae7d9ca87a1a7c47df5d456d302c842bdf7cf0a7f14807649e0a9a089dc29a"
+    },
+    {
+      "receipt_id": "private-runtime-copy.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "124fd50cb6d223cdd18fedc166d00af7254199b6e6dedf9be82f71db87af6d01"
+    },
+    {
+      "receipt_id": "sourcezip-normal.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "75d2ff8cb5c7c1c6f1c34c9b1cce438c97d5dac33aa8a214a8b46de510e59900"
+    },
+    {
+      "receipt_id": "sourcezip-optimized.exit.json",
+      "actual_exit": 0,
+      "scope": "CPU_SOURCE_OR_DELIVERY_REPRODUCTION",
+      "original_receipt_sha256": "6225e05802361160bc202e8fbbd052bd88aa1fcbc369b3cca84feeadb842de2e"
+    },
+    {
+      "receipt_id": "activate-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "6408a296aa74e7855378f1e9ef1a1757acc563b759b229f63f5d704d43834fbd"
+    },
+    {
+      "receipt_id": "checkpoint86-proof-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "5e1b8438000b4bc46f098ca6b813c07e4d20a99bbe0faaa1abd5123e1d2efced"
+    },
+    {
+      "receipt_id": "compare-history-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "440b35d94420659356186bfae100573f9c0d638e2fca1945c41c1195fa2a1c63"
+    },
+    {
+      "receipt_id": "preflight-activity-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "650f38afda3b00122f3b6bc29c96b9d3202eed1c3e9cb60945841cafc20e3022"
+    },
+    {
+      "receipt_id": "preflight-poll-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "6ec7e6cf32720a2d333be2c19b1926619a3d9af38a5ee63704fe2d4f33def7b9"
+    },
+    {
+      "receipt_id": "preflight-poll-02.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "da8d299d7b0cdcb7e777bef5058f418ef636c9f62986e458e597ae651574c056"
+    },
+    {
+      "receipt_id": "preflight-poll-03.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "e8559ab365955d8f1c8c0f933227742d63bd5dec6a19f37ec0fa363f58bb7065"
+    },
+    {
+      "receipt_id": "preflight-poll-04.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "7fc20012fb4857cfb78bd5834c9f41f843a2f6f5ceaa7f80dc54959fd5f3aef7"
+    },
+    {
+      "receipt_id": "preflight-poll-05.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "fba75772bc186e1ff74ab16ed5a35fb93541df63e4110eedb3565a38c7a4b762"
+    },
+    {
+      "receipt_id": "preflight-poll-06.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "76844222a8aa1f909f1ca87cd3b22e045477c8849e327dc46a2ff011f12d32e0"
+    },
+    {
+      "receipt_id": "preflight-poll-07.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "1c4ab9f979a1d9a6c85534ab769644444387f3615aa2d9d199efc0e6cd4a4a79"
+    },
+    {
+      "receipt_id": "preflight-poll-08.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "117cba341ce4d777d2927d33da1ae9755e9116f0a1f7453f5f0cd4fa16d7ee6d"
+    },
+    {
+      "receipt_id": "prepare-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "09835be59ffcac38178175216d13d59c2e29aaf022e7402baaf6c87a5990031b"
+    },
+    {
+      "receipt_id": "private-runtime-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "6a437372c553213a340cab2a97bcab7bc8d03d3ab662ada15eb97b0a9fb2ce41"
+    },
+    {
+      "receipt_id": "progress-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "78660acd5542b521f3e4ab40876a57bd0376cbf0314ce936a007fde6fb4bc83f"
+    },
+    {
+      "receipt_id": "progress-02.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "5b7f2052b8b4e599c6bddd67f4cf75f55493a2ed038820ed87312db176a91bed"
+    },
+    {
+      "receipt_id": "progress-03.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "6a105367618a3c7e93b66b908154fdcd6d5d3f56fdb3b775451b5435a15c7e6c"
+    },
+    {
+      "receipt_id": "progress-04.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "a22c4fd9578e03d45d90cb0a8c469f85f4d8e02efb7f9d90787efdb2edded665"
+    },
+    {
+      "receipt_id": "progress-05.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "eb0d5bc32b953d42fe0289827cdec741cbba06f81b07928dc004592f639e72fa"
+    },
+    {
+      "receipt_id": "progress-06.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "ead3e8724c410b56d885d73f24f48a7704560b3450ce000f2e73c5b93ce0d29d"
+    },
+    {
+      "receipt_id": "progress-07.transport-exit.json",
+      "actual_exit": 255,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "534fe219342e48e2050f30f344860abfa2b72561fb86698db1239ed762980b4e"
+    },
+    {
+      "receipt_id": "progress-08.transport-exit.json",
+      "actual_exit": 255,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "db47f3e5b8238541b674810b45b9f0a6f5dc1f979e11b9e48f4ce371cb5c6d60"
+    },
+    {
+      "receipt_id": "recovery-stop-01.transport-exit.json",
+      "actual_exit": 255,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "4b727b5ee02343dccd8285b170456cb85d22fb6bad9649dfaf39169b29ea57c5"
+    },
+    {
+      "receipt_id": "start-preflight-01.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "41d671a9ef36f3288e151ecf6b3bbd4f5a1b6e7cd7073d36233316a70c809640"
+    },
+    {
+      "receipt_id": "start-preflight-02.transport-exit.json",
+      "actual_exit": 0,
+      "scope": "SSH_TRANSPORT",
+      "original_receipt_sha256": "b2390e0d7667ff442a19199df166d544cfd503e0a6191464c74ee30c973fdf9a"
+    }
+  ],
+  "controller_actual_exit": 1,
+  "remote_native_server_exit": "UNKNOWN"
+}

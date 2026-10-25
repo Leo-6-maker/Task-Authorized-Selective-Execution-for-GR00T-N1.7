@@ -1,0 +1,60 @@
+{
+  "cell": {
+    "run_id": "e2-test-0022",
+    "task": "alphabet_soup",
+    "init_index": 11,
+    "init_hash": "65e40563e61e1432a034c3938631b4fa8e71149d903e59de7a979b86ecabc285",
+    "condition": "C0",
+    "system": "G",
+    "scenario_id": "E2-TEST-alphabet_soup-i11-C0",
+    "policy_seed": 640422,
+    "environment_seed": 640423,
+    "policy_target": "alphabet_soup"
+  },
+  "actual_policy_language": "pick up the alphabet soup and place it in the basket",
+  "true_task_target": "alphabet_soup_1",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "baseline_positions": {
+    "alphabet_soup_1": [
+      -0.11909425574469136,
+      -0.23978121735098315,
+      0.038392910369975934
+    ],
+    "basket_1": [
+      0.003510785038701254,
+      0.2534092446624844,
+      -0.0045823453265843445
+    ],
+    "salad_dressing_1": [
+      0.05000070616610802,
+      -0.0999912974457114,
+      0.0727054492797662
+    ],
+    "cream_cheese_1": [
+      -0.14981532605968978,
+      0.05898871865392672,
+      0.008921477418607878
+    ],
+    "milk_1": [
+      0.1029308869279381,
+      -0.19938195965544347,
+      0.0697354762613867
+    ],
+    "tomato_sauce_1": [
+      0.15023904907137045,
+      0.030060797038751762,
+      0.03839259641983711
+    ],
+    "butter_1": [
+      -0.1988759533993882,
+      -0.07785892510620997,
+      0.008695477418599518
+    ]
+  },
+  "oracle_parameters": {
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_control_steps": 2,
+    "oracle_relative_motion_tolerance_m": 0.01
+  }
+}

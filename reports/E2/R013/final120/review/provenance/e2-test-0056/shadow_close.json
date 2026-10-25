@@ -1,0 +1,70 @@
+{
+  "protocol": "SHADOW_CLOSE_V1",
+  "status": "CLEAN",
+  "worker_pid": 293241,
+  "worker_returncode": 0,
+  "clean": true,
+  "forced": false,
+  "term_sent": false,
+  "kill_sent": false,
+  "pipe_closed": true,
+  "process_handle_closed": true,
+  "events": [
+    {
+      "event": "CLOSE_REQUEST",
+      "parent_monotonic": 2661213.843162885,
+      "close_token": "5d79c5aa576740deae659119ec8629f4"
+    },
+    {
+      "event": "CLOSE_ACKNOWLEDGED",
+      "parent_monotonic": 2661213.843493498
+    },
+    {
+      "event": "NATIVE_FINALIZER_COMPLETED",
+      "parent_monotonic": 2661213.92254008
+    },
+    {
+      "event": "PROCESS_EXIT_OBSERVED",
+      "parent_monotonic": 2661214.354494158,
+      "exit_code": 0
+    },
+    {
+      "event": "PARENT_PIPE_CLOSED",
+      "parent_monotonic": 2661214.354512768
+    },
+    {
+      "event": "PROCESS_HANDLE_CLOSED",
+      "parent_monotonic": 2661214.354531688
+    }
+  ],
+  "worker_receipts": [
+    {
+      "status": "CLOSING",
+      "close_token": "5d79c5aa576740deae659119ec8629f4",
+      "worker_pid": 293241,
+      "received_monotonic": 2661213.843242151
+    },
+    {
+      "status": "CLOSED",
+      "close_token": "5d79c5aa576740deae659119ec8629f4",
+      "worker_pid": 293241,
+      "native_finalized": true,
+      "received_monotonic": 2661213.843242151,
+      "finalizer_started_monotonic": 2661213.843279631,
+      "finalizer_finished_monotonic": 2661213.922412788
+    }
+  ],
+  "exit_observations": [
+    {
+      "phase": "COOPERATIVE_EXIT",
+      "started_monotonic": 2661214.352305843,
+      "deadline_monotonic": 2661215.922538918,
+      "initial_returncode": null,
+      "polls": 2,
+      "finished_monotonic": 2661214.354490237,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "initial_failure": null
+}

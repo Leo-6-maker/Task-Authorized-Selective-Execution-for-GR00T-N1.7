@@ -1,0 +1,23 @@
+{
+  "server_session": "test-server-r013-01",
+  "actual_server_requests": 98,
+  "bindings": [
+    {
+      "run_id": "e2-test-0085",
+      "requests": 17
+    },
+    {
+      "run_id": "e2-test-0086",
+      "requests": 17
+    },
+    {
+      "run_id": "e2-test-0087",
+      "requests": 32
+    },
+    {
+      "run_id": "e2-test-0088",
+      "requests": 32
+    }
+  ],
+  "scope": "REQUEST_IDENTITY_ONLY_NO_INTERIM_EFFECT_SELECTION"
+}

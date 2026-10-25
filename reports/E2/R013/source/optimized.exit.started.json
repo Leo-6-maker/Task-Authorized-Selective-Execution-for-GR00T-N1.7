@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-25T13:37:54.265959+08:00",
+  "wrapper_pid": 2575024,
+  "child_pid": 2575026,
+  "command": [
+    "<LOCAL_PROJECT>/.takeover-recovery-private/issue6-20261023/cpu_environment/venv/bin/python",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

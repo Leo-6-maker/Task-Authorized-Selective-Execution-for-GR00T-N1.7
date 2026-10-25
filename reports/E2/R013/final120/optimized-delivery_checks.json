@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE_DELIVERY_SOURCE_IDENTITY_PRIVACY_AND_FROZEN_CONTRACT_CHECKS_PASS",
+  "planned": 120,
+  "reserved": 120,
+  "full_outcomes": 117,
+  "unknown_operational_errors": 3,
+  "not_started": 0,
+  "status_counts": {
+    "SUCCESS": 89,
+    "CLEANUP_ERROR": 3,
+    "TIME_LIMIT": 18,
+    "SEMANTIC_ABORT": 10
+  },
+  "all_source_epochs_verified": 4,
+  "critical_provenance_rows_checked": 120,
+  "source_files_checked": 3148,
+  "exported_artifacts_checked": 2372,
+  "finite_pickle_disabled_numeric_files_checked": 144,
+  "operator_source_origin_records_checked": 3998,
+  "source_video_complete_rows": 120,
+  "text_files_scanned": 2147,
+  "private_marker_hits": 0,
+  "executable_science_drift": [],
+  "actual_exit": 0,
+  "independent_scientific_review": "NOT_PERFORMED_BY_EXECUTOR"
+}
