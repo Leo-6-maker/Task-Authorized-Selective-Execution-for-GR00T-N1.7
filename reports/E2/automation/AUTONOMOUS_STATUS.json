@@ -1,67 +1,73 @@
 {
   "status_schema": "R010_AUTONOMOUS_E2_V1",
-  "source_scope": "R012 reviewer check of PR24 public source/raw-derived evidence; live Corelab future preflight and full private archive checks remain operator-responsibility",
-  "source_report_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "source_scope": "R013 reviewer independent GitHub code/hash/ledger review plus operator PR26/PR27 CPU and backup receipts; no GPT live Corelab GPU1 or private raw bytes rehash",
+  "source_report_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
   "scientific_protocol": "TASE-002-v1.0",
-  "phase": "P4_R012_TEST_CODE_AUTHORIZED_AWAITING_LIVE_PREFLIGHT",
+  "phase": "P4_R013_GPU1_TEST_CODE_AUTHORIZED_AWAITING_LIVE_PREFLIGHT",
   "scientific_parameters_frozen": true,
   "actual_old_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
-  "newly_authorized_executable_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "newly_authorized_executable_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
   "runtime_execution_authorized": true,
   "old_r008_current_main_disposition": "TEST_SUSPENDED_AFTER_REPEATED_CLEANUP",
   "old_r009_current_main_disposition": "SUPERSEDED_BY_R010_REPEATED_CLEANUP",
   "machine_grant_for_new_runtime": {
-    "review_id": "R012-2026-10-24-E2-EXITCODE-REAP",
-    "commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
-    "path": "docs/reviews/R012-E2-TEST-AUTHORIZED.json",
-    "exact_code_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb"
+    "review_id": "R013-2026-10-25-E2-GPU1-SHARED-MEMORY",
+    "commit": "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+    "path": "docs/reviews/R013-E2-TEST-AUTHORIZED.json",
+    "exact_code_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "physical_gpu_index": 1,
+    "minimum_free_gib": 9,
+    "max_process_fraction": 0.55,
+    "arithmetic_reserved_gib": 2
   },
   "planned_test_attempts": 120,
-  "consumed_run_ids_count": 16,
-  "complete_frozen_outcomes_count": 13,
+  "consumed_run_ids_count": 84,
+  "complete_frozen_outcomes_count": 81,
   "status_counts": {
-    "SUCCESS": 13,
+    "SUCCESS": 61,
+    "TIME_LIMIT": 10,
+    "SEMANTIC_ABORT": 10,
     "CLEANUP_ERROR": 3,
-    "NOT_STARTED": 104
+    "NOT_STARTED": 36
   },
   "consumed_cleanup_error_ids": [
     "e2-test-0010",
     "e2-test-0014",
     "e2-test-0016"
   ],
-  "first_unopened_run_id": "e2-test-0017",
-  "actual_main_controls_from_submitted_ledger": 2150,
-  "actual_policy_requests_from_submitted_ledger": 274,
+  "first_unopened_run_id": "e2-test-0085",
+  "actual_main_controls_from_submitted_ledger": null,
+  "actual_policy_requests_from_submitted_ledger": null,
   "full_originals_reported_backed_up_twice": {
-    "source": "reports/E2/R011/backup_verification.json on PR24",
-    "size_bytes": 291390525,
-    "member_count": 1900,
-    "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
+    "source": "reports/E2/R012/checkpoint0084/backup_verification.json on PR26",
+    "size_bytes": 2246177125,
+    "member_count": 11331,
+    "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
     "independently_rehashed_by_GPT": false
   },
   "verified_current_Corelab_after_R010_by_GPT": false,
   "normal_CPU_tests_new_code": {
     "local": {
-      "tests": 123,
+      "tests": 134,
       "actual_exit": 0
     },
     "Corelab": {
-      "tests": 123,
+      "tests": 134,
       "actual_exit": 0
     }
   },
   "optimized_CPU_tests_new_code": {
     "local": {
-      "tests": 123,
+      "tests": 134,
       "actual_exit": 0
     },
     "Corelab": {
-      "tests": 123,
+      "tests": 134,
       "actual_exit": 0
     }
   },
   "engineering_work_package": "docs/work_packages/AUTONOMOUS-E2-ENGINEERING-TO-SUBMISSION.md",
-  "review": "docs/reviews/R012-E2-early-sentinel-exit-review.md",
+  "review": "docs/reviews/R013-GPU1-parallel-resource-delta-review.md",
   "authorized_without_micro_approval": [
     "CPU-only lifecycle repair and stress tests",
     "CPU-only mixed-head historical audit with strict admission",
@@ -75,12 +81,14 @@
     "Resource/permission mismatch",
     "Missing or inconsistent original reservation/exit/backup"
   ],
-  "next_action": "Issue #25: fresh LIVE Corelab mixed-head 16-reservation audit and preflight, then 0017/0018 once, mandatory 0018 lifecycle/paired/backups checkpoint, then 0019..0120 autonomous if clear",
-  "last_review_date_sgt": "2026-10-24",
+  "next_action": "Issue #28: fresh GPU1 live preflight, new R013 granted server, fixed 0085/0086 only, full GPU1/physics/worker/paired/two-backup checkpoint before 0087",
+  "last_review_date_sgt": "2026-10-25",
   "operator_details_private": true,
   "reviewed_intermediate_execution_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
   "runtime_execution_activated": false,
-  "activation_condition": "Current Corelab live ledger/old16 source hashes/2 archived copies/host and legal GPU/source/model identity and genuine server readiness must pass before 0017",
+  "activation_condition": "Issue28: fresh LIVE Corelab GPU1-only legal parallel allocation/UUID/EGL, free >=9GiB both entry checks, cap55%/reserve2GiB, old84 historic versioned audit, true model ready, and two verified raw backup locations",
   "old_r011_current_main_disposition": "TEST_SUSPENDED_AFTER_0016_CLEANUP",
-  "stop_reason": null
+  "stop_reason": null,
+  "reviewed_previous_execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "old_r012_current_main_disposition": "TEST_SUSPENDED_AFTER_0084_GPU1_RESOURCE_CHANGE"
 }
