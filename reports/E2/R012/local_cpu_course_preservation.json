@@ -1,0 +1,65 @@
+{
+  "scope": "CPU_ONLY_SOURCE_REPRODUCTION_COURSE_AUTHORING_AND_PRIVATE_MAP84_SNAPSHOT_NOT_TEST_AUTHORIZATION",
+  "archive": {
+    "stage": "issue25-local-cpu-course84-01",
+    "bytes": 8223932,
+    "sha256": "6efdfeaec3d408ab27acaa28d6d156acdeaa386ff95168a10f411dbf599f9606",
+    "artifacts": 706,
+    "status": "LOCAL_CPU_COURSE84_PROOF_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+    "locations": [
+      "OWNER_LOCAL_PRIVATE",
+      "AUTHORIZED_E2_REMOTE_BACKUP"
+    ],
+    "independent_review": "NOT_PERFORMED",
+    "new_model_sim_TEST_calls": 0
+  },
+  "snapshot_report_head": "8ca4ef83181ea42049417ba26ed1d3efb8532297",
+  "course_head": "45a0e773c743a03867d5361e33178143d853498a",
+  "runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "unpacked_CPU": {
+    "normal_tests": 123,
+    "normal_actual_exit": 0,
+    "optimized_tests": 123,
+    "optimized_actual_exit": 0
+  },
+  "presentation_attempts": [
+    {
+      "attempt": 1,
+      "actual_exit": 1,
+      "reason": "Finalizer required explicit native-table layout policies"
+    },
+    {
+      "attempt": 2,
+      "actual_exit": 1,
+      "reason": "Nested first-party import required bundled module-path variable"
+    },
+    {
+      "attempt": 3,
+      "actual_exit": 0,
+      "reason": "Validated intermediate; subsequent whitespace readability polish"
+    },
+    {
+      "attempt": 4,
+      "actual_exit": 0,
+      "reason": "Final15-slide partial84 draft validated and individually visually inspected"
+    }
+  ],
+  "transport_attempts": [
+    {
+      "kind": "Owned chunk file copy intentionally interrupted for same-file resumption",
+      "actual_exit": 1
+    },
+    {
+      "kind": "Continuous same-source resumed transfer",
+      "actual_exit": 0
+    },
+    {
+      "kind": "Local CPU/course proof upload",
+      "actual_exit": 0
+    }
+  ],
+  "final_course_pptx_sha256": "1297de1422c99005ba8bbc66dd6ea1723fd148e2b84468b20db6517879bc6dd9",
+  "no_model_sim_TEST_calls_during_CPU_postprocessing": true,
+  "private_failures_and_source_hashes_retained": true,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR"
+}

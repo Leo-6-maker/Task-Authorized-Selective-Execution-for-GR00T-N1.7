@@ -1,0 +1,147 @@
+{
+  "status": "R012_MANDATORY0018_NATIVE_LIFECYCLE_PHYSICS_AND_TWO_COPY_CHECKPOINT_PASS",
+  "reserved": 18,
+  "full_outcomes": 15,
+  "normal_audit_exit": 0,
+  "optimized_audit_exit": 0,
+  "normal_optimized_equal": true,
+  "pair0017_0018": {
+    "scenario_id": "E2-TEST-alphabet_soup-i10-C0",
+    "status": "PAIRED_PREFIX_EXACT",
+    "g_controls": 133
+  },
+  "original_failures": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    },
+    {
+      "run_id": "e2-test-0016",
+      "status": "CLEANUP_ERROR",
+      "outcome_known": false,
+      "actual_child_exit": 1
+    }
+  ],
+  "clean_shadow_close": {
+    "protocol": "SHADOW_CLOSE_V1",
+    "status": "CLEAN",
+    "worker_pid": 250220,
+    "worker_returncode": 0,
+    "clean": true,
+    "forced": false,
+    "term_sent": false,
+    "kill_sent": false,
+    "pipe_closed": true,
+    "process_handle_closed": true,
+    "events": [
+      {
+        "event": "CLOSE_REQUEST",
+        "parent_monotonic": 2659894.122629451,
+        "close_token": "8253fbd190064a15ae9d1aa0d9423079"
+      },
+      {
+        "event": "CLOSE_ACKNOWLEDGED",
+        "parent_monotonic": 2659894.122807082
+      },
+      {
+        "event": "NATIVE_FINALIZER_COMPLETED",
+        "parent_monotonic": 2659894.210426892
+      },
+      {
+        "event": "PROCESS_EXIT_OBSERVED",
+        "parent_monotonic": 2659894.624804634,
+        "exit_code": 0
+      },
+      {
+        "event": "PARENT_PIPE_CLOSED",
+        "parent_monotonic": 2659894.624824601
+      },
+      {
+        "event": "PROCESS_HANDLE_CLOSED",
+        "parent_monotonic": 2659894.624846522
+      }
+    ],
+    "worker_receipts": [
+      {
+        "status": "CLOSING",
+        "close_token": "8253fbd190064a15ae9d1aa0d9423079",
+        "worker_pid": 250220,
+        "received_monotonic": 2659894.122727201
+      },
+      {
+        "status": "CLOSED",
+        "close_token": "8253fbd190064a15ae9d1aa0d9423079",
+        "worker_pid": 250220,
+        "native_finalized": true,
+        "received_monotonic": 2659894.122727201,
+        "finalizer_started_monotonic": 2659894.122769138,
+        "finalizer_finished_monotonic": 2659894.210070349
+      }
+    ],
+    "exit_observations": [
+      {
+        "phase": "COOPERATIVE_EXIT",
+        "started_monotonic": 2659894.624709882,
+        "deadline_monotonic": 2659896.210424754,
+        "initial_returncode": 0,
+        "polls": 1,
+        "finished_monotonic": 2659894.624801316,
+        "returncode": 0,
+        "timed_out": false
+      }
+    ],
+    "initial_failure": null
+  },
+  "shadow_worker": {
+    "worker_pid": 250220,
+    "worker_returncode": 0,
+    "scope": "ACTUAL_OWNED_WORKER_JOIN",
+    "close_protocol": "SHADOW_CLOSE_V1",
+    "close_status": "CLEAN",
+    "clean_close": true
+  },
+  "worker_PID_absent": true,
+  "release": {
+    "released_after_structural_audit_and_two_copy_verification": true,
+    "closed_units": 18,
+    "backup_sha256": "2c39f2f6e4c940fcfc035e5589a8e39c9985f07c250ed666f2d0ae8c181798c5",
+    "no_interim_selection_or_threshold_change": true
+  },
+  "backup": {
+    "stage": "issue25-test-checkpoint-0018",
+    "bytes": 36470133,
+    "sha256": "2c39f2f6e4c940fcfc035e5589a8e39c9985f07c250ed666f2d0ae8c181798c5",
+    "artifacts": 258,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  },
+  "requests": {
+    "server_session": "test-server-r012-01",
+    "actual_server_requests": 34,
+    "bindings": [
+      {
+        "run_id": "e2-test-0017",
+        "requests": 17
+      },
+      {
+        "run_id": "e2-test-0018",
+        "requests": 17
+      }
+    ],
+    "scope": "REQUEST_IDENTITY_ONLY_NO_INTERIM_EFFECT_SELECTION"
+  },
+  "acquisition_code_heads": [
+    "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+    "a1c6424bd348b36c55a20d38750a269e9551a698"
+  ],
+  "not_R3_result_approval": true
+}

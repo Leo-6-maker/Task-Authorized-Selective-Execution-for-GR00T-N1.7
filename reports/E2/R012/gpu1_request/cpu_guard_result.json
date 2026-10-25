@@ -1,0 +1,15 @@
+{
+  "status": "EXACT_FROZEN_GPU1_MEMORY_GUARD_REJECTED_WITHOUT_NATIVE_START",
+  "wrapper_actual_exit": 1,
+  "child_actual_exit": 1,
+  "source_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "source_sha256": "e2d755cc251d348930312fe86720b1f580a8526ebfc07563df5cc391186ff8c2",
+  "extracted_guard_sha256": "9a916b177f146a05cda15b68298838ab32f813c1d80b25f3657991829fe997a0",
+  "actual_stderr_sha256": "5c0d3e8bf02802b2e43b66711a05590b5db3d0564d8c54782c5354cc08409216",
+  "reserved": 84,
+  "new_reservations": 0,
+  "new_model_sim_TEST_calls": 0,
+  "first_inventory_transport_actual_exit": 0,
+  "clarification": "The initial resource_precheck.precheck_exit=1 is its computed unmet-condition indicator; actual inspection transport was0. This separate receipt records an actual CPU subprocess exit1.",
+  "recorded_at_sgt": "2026-10-25T11:12:59.448373+08:00"
+}

@@ -1,0 +1,101 @@
+{
+  "scope": "EXECUTOR_CLOSED_TEST_RECONCILIATION_NOT_R3_APPROVAL",
+  "planned": 120,
+  "reserved": 84,
+  "full_outcomes": 81,
+  "status_counts": {
+    "SUCCESS": 61,
+    "CLEANUP_ERROR": 3,
+    "TIME_LIMIT": 10,
+    "SEMANTIC_ABORT": 10,
+    "NOT_STARTED": 36
+  },
+  "unstarted": 36,
+  "next_unopened": "e2-test-0085",
+  "observed_controls": 16494,
+  "policy_requests": 2097,
+  "frozen_audit_normal_exit": 0,
+  "frozen_audit_optimized_exit": 0,
+  "normal_optimized_identical": true,
+  "original16_all_source_members_unchanged": true,
+  "observed_operational_errors": [
+    {
+      "run_id": "e2-test-0010",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0014",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    },
+    {
+      "run_id": "e2-test-0016",
+      "status": "CLEANUP_ERROR",
+      "actual_exit": 1,
+      "official_success_observation": true,
+      "outcome_known": false
+    }
+  ],
+  "frozen_system_error_mapping": "RUNTIME_ERROR only; never interprets lower0 as no operational error",
+  "server_sessions": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r011-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    },
+    "test-server-r012-01": {
+      "actual_exit": 0,
+      "native_PID_absent": true
+    }
+  },
+  "all_owned_episode_and_worker_PIDs_absent": true,
+  "owned_worker_receipts": 42,
+  "remaining_foreign_gpu_process_count": 2,
+  "resource_stop": {
+    "status": "STOPPED_BEFORE_0085_RESOURCE_UNAVAILABLE",
+    "unexpected_process_count": 1,
+    "no_foreign_process_signalled": true,
+    "gpu_memory": [
+      {
+        "index": 0,
+        "free_mib": 12670,
+        "total_mib": 32760
+      },
+      {
+        "index": 1,
+        "free_mib": 10121,
+        "total_mib": 16376
+      }
+    ],
+    "new_reservations_after0084": 0,
+    "new_TEST_errors": 0,
+    "stop_receipt_sha256": "ac06afc1e7ce6c1dd458e37feea817cab1d475f5a62c71abdb517627d5be7865",
+    "actual_outer_operator_exit": 1
+  },
+  "existing_owner_approved_shared_tasks_untouched": true,
+  "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "actual_code_epochs": [
+    "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+    "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+    "a1c6424bd348b36c55a20d38750a269e9551a698"
+  ],
+  "actual_grant_epochs": [
+    "377fe3b85989e6d1fd105002c3c0c09827598886",
+    "89fdbb690aaeab24c928bfbb46d6595a628928bc",
+    "f084723cb1d00cb7675fa7394dc1b03c0ce3dcac"
+  ],
+  "review_status": "ACQUISITION_INCOMPLETE_RESOURCE_STOP_BEFORE0085",
+  "recorded_at_sgt": "2026-10-25T10:03:37.331877+08:00"
+}

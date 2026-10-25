@@ -1,0 +1,14 @@
+{
+  "stage": "issue25-test-checkpoint-0064",
+  "bytes": 148231312,
+  "sha256": "4053a28a06353817f7610d90a96478e3368dea0ce98bd66c39158ca365710210",
+  "artifacts": 635,
+  "run_ids": [
+    "e2-test-0061",
+    "e2-test-0062",
+    "e2-test-0063",
+    "e2-test-0064"
+  ],
+  "reserved": 64,
+  "status": "PRIMARY_WHOLE_AND_EVERY_MEMBER_VERIFIED_SECOND_COPY_REQUIRED"
+}
