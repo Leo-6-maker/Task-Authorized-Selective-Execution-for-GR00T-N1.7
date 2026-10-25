@@ -1,0 +1,79 @@
+{
+  "repo": "nvidia/Cosmos-Reason2-2B",
+  "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+  "files": [
+    {
+      "path": "chat_template.json",
+      "bytes": 5502,
+      "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
+      "upstream_bytes": 5502,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "config.json",
+      "bytes": 1505,
+      "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
+      "upstream_bytes": 1505,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 269,
+      "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
+      "upstream_bytes": 269,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "merges.txt",
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "upstream_bytes": 1671839,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 4877470304,
+      "sha256": "fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede",
+      "upstream_bytes": 4877470304,
+      "upstream_lfs_sha256": "fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "upstream_bytes": 390,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+      "upstream_bytes": 7032403,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 10868,
+      "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+      "upstream_bytes": 10868,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "video_preprocessor_config.json",
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "upstream_bytes": 385,
+      "upstream_lfs_sha256": null
+    },
+    {
+      "path": "vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "upstream_bytes": 2776833,
+      "upstream_lfs_sha256": null
+    }
+  ],
+  "seconds": 183.20386529527605,
+  "status": "VERIFIED_AGAINST_PINNED_UPSTREAM_SIZE_AND_LFS_SHA256",
+  "resolution": "native main resolved offline to this immutable snapshot"
+}

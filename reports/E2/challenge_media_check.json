@@ -1,0 +1,782 @@
+{
+  "media": {
+    "scope": "EXECUTOR_DECODE_AND_SELECTION_NOT_INDEPENDENT_GPT_MEDIA_REVIEW",
+    "actual_model_requests": 272,
+    "all_language_scenario_seed_contracts_verified": true,
+    "rows": [
+      {
+        "run_id": "e2-dev-0007",
+        "decoded_frames": 128,
+        "physical_controls": 128,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": null
+      },
+      {
+        "run_id": "e2-dev-0008",
+        "decoded_frames": 132,
+        "physical_controls": 132,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": null
+      },
+      {
+        "run_id": "e2-dev-0009",
+        "decoded_frames": 720,
+        "physical_controls": 720,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": 60,
+        "selected_controls": [
+          {
+            "step": 52,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.467935578120972e-12
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401113581526289e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 52,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": null
+            },
+            "decoded_image_sha256": "887ffc5456b7aec6258b298d6f4c28b8a8dc9954cba0ab36fe1c6128ec51f06a"
+          },
+          {
+            "step": 59,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_GRASP_EVIDENCE",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 1,
+                  "grasp_counter": 4,
+                  "lift_m": 0.025630773052061913
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401113581526289e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": null
+            },
+            "decoded_image_sha256": "0d41a289b8395d9ed943f24178b802d5847f2379595b4259656c2c3d19c2953f"
+          },
+          {
+            "step": 60,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 60,
+                  "new_lift": true,
+                  "lift_counter": 2,
+                  "grasp_counter": 5,
+                  "lift_m": 0.03523722819657881
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401113581526289e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 60,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 60
+            },
+            "decoded_image_sha256": "580c5204f282414ef539d13ede361a3cf1572e1c1068867ff81704784e9b59a5"
+          },
+          {
+            "step": 61,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 3,
+                  "grasp_counter": 6,
+                  "lift_m": 0.045935268591787724
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401113581526289e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 61,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 60
+            },
+            "decoded_image_sha256": "6046f7a50aba938efa917aed9bc9a207eb205e26d3f2e5c550f2c9d3961123bd"
+          },
+          {
+            "step": 68,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 10,
+                  "grasp_counter": 13,
+                  "lift_m": 0.12982588293020136
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401113581526289e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 60
+            },
+            "decoded_image_sha256": "6549e39f2d48128087c1cb09e394b72c67ef3c51afe5a8ac53e44ad4bbf6558d"
+          }
+        ]
+      },
+      {
+        "run_id": "e2-dev-0010",
+        "decoded_frames": 720,
+        "physical_controls": 720,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": 67,
+        "selected_controls": [
+          {
+            "step": 59,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "CONTACT_ONLY",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": -0.000113467175193116
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.040111205496963e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 59,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": null
+            },
+            "decoded_image_sha256": "943825731e9b16159c7c6a40d1fd861eb1b971b2797de1bdf1114e86669611cf"
+          },
+          {
+            "step": 66,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_GRASP_EVIDENCE",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 1,
+                  "grasp_counter": 7,
+                  "lift_m": 0.02565072337024358
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.040111205496963e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 66,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": null
+            },
+            "decoded_image_sha256": "36b7c7fd2a1d7949294c128f812bef606058222107f157a8216351c318aae8c8"
+          },
+          {
+            "step": 67,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 67,
+                  "new_lift": true,
+                  "lift_counter": 2,
+                  "grasp_counter": 8,
+                  "lift_m": 0.036251545321076
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.040111205496963e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 67,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 67
+            },
+            "decoded_image_sha256": "057294e3fe7b3541346c864e381393cbcb1147fda3ef60f8298100d2fe46190a"
+          },
+          {
+            "step": 68,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 3,
+                  "grasp_counter": 9,
+                  "lift_m": 0.047391841604559885
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.040111205496963e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 68,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 67
+            },
+            "decoded_image_sha256": "c2adff96a92baf34145820a4d561e3abf7d34d60d138bef84e95f594996d9e16"
+          },
+          {
+            "step": 75,
+            "oracle": {
+              "events": [
+                {
+                  "object": "alphabet_soup_1",
+                  "label": "WRONG_OBJECT_LIFT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 10,
+                  "grasp_counter": 16,
+                  "lift_m": 0.12903526435750476
+                },
+                {
+                  "object": "basket_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 4.81906181626357e-14
+                },
+                {
+                  "object": "butter_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 8.593820099989102e-15
+                },
+                {
+                  "object": "cream_cheese_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 2.3245294578089215e-16
+                },
+                {
+                  "object": "milk_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0401112193747508e-09
+                },
+                {
+                  "object": "orange_juice_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.040111205496963e-09
+                },
+                {
+                  "object": "tomato_sauce_1",
+                  "label": "NO_EVENT",
+                  "step": 75,
+                  "new_lift": false,
+                  "lift_counter": 0,
+                  "grasp_counter": 0,
+                  "lift_m": 1.0408340855860843e-16
+                }
+              ],
+              "first_violation_step": 67
+            },
+            "decoded_image_sha256": "6a3aff66f70e9707cf4dbe465a4890534ba6068038470fcbfc2248bed541b3e2"
+          }
+        ]
+      },
+      {
+        "run_id": "e2-dev-0011",
+        "decoded_frames": 321,
+        "physical_controls": 321,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": null
+      },
+      {
+        "run_id": "e2-dev-0012",
+        "decoded_frames": 141,
+        "physical_controls": 141,
+        "actual_instruction_verified": true,
+        "first_wrong_lift_step": null
+      }
+    ]
+  },
+  "child_exit": {
+    "completed_at_sgt": "2026-10-23T22:55:52.239634+08:00",
+    "child_pid": 2895043,
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  }
+}

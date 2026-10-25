@@ -1,0 +1,7 @@
+task,init_index,split,condition,run_id,status,official_success
+alphabet_soup,0,DEV,C0,dev-policy-007,SUCCESS,True
+alphabet_soup,1,DEV,C0,dev-policy-008,SUCCESS,True
+cream_cheese,0,DEV,C0,dev-policy-009,SUCCESS,True
+cream_cheese,1,DEV,C0,dev-policy-010,SUCCESS,True
+ketchup,0,DEV,C0,dev-policy-011,SUCCESS,True
+ketchup,1,DEV,C0,dev-policy-012,TIME_LIMIT,False

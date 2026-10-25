@@ -1,0 +1,18 @@
+{
+  "source_commit": "03653db11bfb0f570b5e3e6ab78b1a37ef2c9b57",
+  "classification": "SYNTHETIC_CPU_ONLY_NOT_RUNTIME",
+  "command": [
+    "<CPU_PYTHON>",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests": 46,
+  "log_sha256": "c84d6e386f708d1a3bbf6c580c50d96fa55c4f53ae32d052bc1ad1faa15c0d90",
+  "model_or_sim_runs": 0
+}

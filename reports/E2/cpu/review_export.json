@@ -1,0 +1,41 @@
+{
+  "classification": "SYNTHETIC_CPU_ONLY_NOT_RUNTIME",
+  "base_commit": "270b760e0a8557307259aae3495a6dca7d272d32",
+  "tested_uncommitted_source_sha256": {
+    "scripts/e2_export_review.py": "a487a32846d09296590f74951604a33cdcc1bce48918a9148175bc27f780fb8b",
+    "tests/test_e2_export.py": "6b11a6cf64543e547edb62f46283ed78465901f47e9f7b8a9234cbcf2a9987b9"
+  },
+  "commands": [
+    [
+      "<CPU_PYTHON>",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    [
+      "<CPU_PYTHON>",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ]
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "test_counts": [
+    33,
+    33
+  ],
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "evidence": "Observed command output; source files hashed before commit; no elapsed-time or full-log hash claimed",
+  "model_or_sim_runs": 0
+}

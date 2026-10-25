@@ -1,0 +1,32 @@
+{
+  "issue": 6,
+  "protocol_id": "TASE-001-v1.0",
+  "work_package": "TAKEOVER-RECOVERY-001",
+  "observed_on_sgt": "2026-10-23",
+  "origin_main_sha": "9a7c9bd6ade46cbe92704270b068b9126c733953",
+  "pr5": {
+    "state": "open",
+    "merged": false,
+    "head_ref": "codex/4-m2-shadow-oracle",
+    "head_sha": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+    "base_ref": "codex/2-native-baseline",
+    "base_sha": "3e214c0b761d0639bf73948356a92a03bf2ddedc",
+    "body_references_old_sha": "d64cb1002980738f170e3206d004b4a882166543"
+  },
+  "latest_GPT_review": {
+    "file": "docs/reviews/R003-M2-shadow-oracle-review.md",
+    "reviewed_sha": "d64cb1002980738f170e3206d004b4a882166543",
+    "read_from_origin_main_sha": "9a7c9bd6ade46cbe92704270b068b9126c733953",
+    "file_sha256": "a3cc9f37fa39f7e2455c949c51090cd587f1acc1944c19388e1f1bf9c0472f1a",
+    "applies_automatically_to_current_head": false
+  },
+  "tested_code_commit": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+  "delivery_branch": "codex/6-takeover-recovery",
+  "delivery_branch_parent": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+  "implementation_modifications": false,
+  "source_of_ref_observations": [
+    "GitHub connector PR metadata",
+    "git ls-remote",
+    "git fetch origin"
+  ]
+}

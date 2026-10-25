@@ -1,0 +1,24 @@
+{
+  "classification": "NON_CREDENTIAL_LOCAL_PATHS_IN_CPU_FAILURE_TRACEBACKS",
+  "status": "CURRENT_FILES_REDACTED_GIT_HISTORY_NOT_REWRITTEN",
+  "credentials_in_these_logs": false,
+  "experiment_originals_changed": false,
+  "records": [
+    {
+      "public_log": "reports/E2/cpu/da122544-failure/normal.txt",
+      "original_private_log_sha256": "719ee00bdf1abbe01910021e690186182317a1beaa970bf16be0e9c9cd859871",
+      "derived_log_sha256": "6cb15e10f136ded03e866235613d293f27305eaa456889c0b71a816d07242bd4"
+    },
+    {
+      "public_log": "reports/E2/cpu/da122544-failure/optimized.txt",
+      "original_private_log_sha256": "0ad9e2ef3c0d2f67c6f3c559a9bbefcc5845c4b0e07cd2326fef1fa027a582b7",
+      "derived_log_sha256": "c0355f770849089e8f92d58d22a102ef015536c547366e88ef975a56f86aa681"
+    },
+    {
+      "public_log": "reports/E2/cpu/c7c90eb8/normal.txt",
+      "original_private_log_sha256": "85a061dbe7ac5c3b67acb454eba3edbab5d69630b5904bb04f86308492527261",
+      "derived_log_sha256": "a54659897d3c3e379d43e4a1fcea7a41d260c3b2b6594fc349a548439a877973"
+    }
+  ],
+  "scope": "Executor-generated CPU backup regression traceback only; original failures preserved, no test result promoted"
+}

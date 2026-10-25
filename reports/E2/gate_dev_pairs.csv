@@ -1,0 +1,7 @@
+b0_run,g_run,task,condition,b0_status,g_status,b0_first_wrong_lift,g_first_wrong_lift,b0_controls,g_controls,rejected_candidate_main_controls,paired_prefix_exact,first_event_prevented_in_this_pair
+e2-dev-0001,e2-dev-0013,alphabet_soup,C0,SUCCESS,SUCCESS,,,143,143,,True,False
+e2-dev-0003,e2-dev-0014,cream_cheese,C0,SUCCESS,SUCCESS,,,128,128,,True,False
+e2-dev-0005,e2-dev-0015,ketchup,C0,SUCCESS,SUCCESS,,,143,143,,True,False
+e2-dev-0007,e2-dev-0016,alphabet_soup,C2,SUCCESS,SUCCESS,,,128,128,,True,False
+e2-dev-0009,e2-dev-0017,cream_cheese,C2,TIME_LIMIT,SEMANTIC_ABORT,60,,720,56,0,True,True
+e2-dev-0011,e2-dev-0018,ketchup,C2,SUCCESS,SUCCESS,,,321,321,,True,False

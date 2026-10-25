@@ -1,0 +1,20 @@
+{
+  "stage": "baseline-final-04",
+  "bytes": 244515238,
+  "sha256": "a913d913fb69c01aa2c13971d2e10351e7dc11e72e0ef7cd2442934ce77942b3",
+  "artifacts": 1229,
+  "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_VERIFIED",
+  "artifacts_verified": 1229,
+  "transport_resume_chunks": [
+    {
+      "start": 234160128,
+      "end": 242548736,
+      "returncode": 0
+    },
+    {
+      "start": 242548736,
+      "end": 244515238,
+      "returncode": 0
+    }
+  ]
+}

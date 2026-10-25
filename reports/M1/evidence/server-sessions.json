@@ -1,0 +1,70 @@
+{
+  "server-01": {
+    "status": "GATED_BACKBONE_HTTP401",
+    "exit_code": "NOT_CAPTURED",
+    "model_forwards": 0
+  },
+  "server-02": {
+    "status": "OFFLINE_TOKENIZER_METADATA_QUERY_FAILED",
+    "exit_code": 1,
+    "model_forwards": 0
+  },
+  "server-03": {
+    "status": "MODEL_LOADED_AND_NATIVE_EPISODES_COMPLETED",
+    "exit_code": 0,
+    "validation_rejected_requests": 1,
+    "model_forwards": 181,
+    "request_run_map": [
+      {
+        "run_id": "dev-policy-006",
+        "first_request": 1,
+        "last_request": 1,
+        "successful_forwards": 0,
+        "runner_repo_sha": "5c8d8136b6e52a50ebcaf243f713a4c1a16bbda1"
+      },
+      {
+        "run_id": "dev-policy-007",
+        "first_request": 2,
+        "last_request": 19,
+        "successful_forwards": 18,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      },
+      {
+        "run_id": "dev-policy-008",
+        "first_request": 20,
+        "last_request": 37,
+        "successful_forwards": 18,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      },
+      {
+        "run_id": "dev-policy-009",
+        "first_request": 38,
+        "last_request": 53,
+        "successful_forwards": 16,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      },
+      {
+        "run_id": "dev-policy-010",
+        "first_request": 54,
+        "last_request": 74,
+        "successful_forwards": 21,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      },
+      {
+        "run_id": "dev-policy-011",
+        "first_request": 75,
+        "last_request": 92,
+        "successful_forwards": 18,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      },
+      {
+        "run_id": "dev-policy-012",
+        "first_request": 93,
+        "last_request": 182,
+        "successful_forwards": 90,
+        "runner_repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c"
+      }
+    ]
+  },
+  "episode_budget_note": "Server startup errors are retained separately from DEV reset/episode reservations; no environment was created by either failed server startup."
+}
