@@ -1,5 +1,5 @@
 {
-  "status": "PARTIAL84_REPRODUCIBILITY_DRAFT_NOT_FINAL_SUBMISSION_OR_REVIEW",
+  "status": "PARTIAL84_REPRODUCIBILITY_AND_EDITABLE_DECK_DRAFT_NOT_FINAL_SUBMISSION_OR_REVIEW",
   "artifacts": [
     {
       "path": "CPU_REPRODUCTION.json",
@@ -7,9 +7,14 @@
       "sha256": "cf48a48e74387705fa0385f5c86c4757a9c5372b970081e49ce22ed43d179532"
     },
     {
+      "path": "ME6401-partial84-review-v4.pptx",
+      "bytes": 235730,
+      "sha256": "1297de1422c99005ba8bbc66dd6ea1723fd148e2b84468b20db6517879bc6dd9"
+    },
+    {
       "path": "README.md",
-      "bytes": 2691,
-      "sha256": "62d4a75f06314a11d93e59994015ab2cd046bc43d473d46e1c790b50e1cfa08f"
+      "bytes": 2900,
+      "sha256": "7dedd9b211aa5b3c2a4ea55f1069e720c369b7f7ea75537c81e9085deaed3c3f"
     },
     {
       "path": "SOURCE_R012.zip",
