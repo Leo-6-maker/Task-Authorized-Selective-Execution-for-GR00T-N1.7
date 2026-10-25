@@ -1,5 +1,5 @@
 {
-  "status": "CONFIRMED_SOURCE_CUSTODY_AND_HONEST_UNKNOWN_STATE_PASS",
+  "status": "SUPERSEDED_INCOMPLETE_SUFFIX_VALIDATION",
   "actual_exit": 0,
   "confirmed_reserved": 88,
   "confirmed_eligible": 85,
@@ -12,5 +12,8 @@
   "text_files_checked": 173,
   "private_marker_hits": 0,
   "mode": "optimized",
-  "model_sim_TEST_calls": 0
+  "model_sim_TEST_calls": 0,
+  "scope": "SUPERSEDED_BY_FINAL_SUFFIX_ALLOWLIST_VALIDATION",
+  "reason": "The initial307-index included49 ignored private pickle snapshots. Their bytes were never committed; now owner-only and excluded. See final delivery check04.",
+  "initial_check_status": "CONFIRMED_SOURCE_CUSTODY_AND_HONEST_UNKNOWN_STATE_PASS"
 }

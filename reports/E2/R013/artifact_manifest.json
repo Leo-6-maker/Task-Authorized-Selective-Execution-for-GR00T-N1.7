@@ -8,6 +8,11 @@
       "sha256": "aac01bbfacdd0ed10ed3208d077ea97964eb61b0fb0f06bdf4b038c71e45f0f2"
     },
     {
+      "path": "reports/E2/R013/EXPORT_ALLOWLIST_CORRECTION.json",
+      "bytes": 707,
+      "sha256": "544de1a460cee20f5080ad8a40015c97cf4ee6e328c87a5767e85b5c1a32cae0"
+    },
+    {
       "path": "reports/E2/R013/LOCAL_EXIT_INVENTORY.json",
       "bytes": 7838,
       "sha256": "f464364704f366d11b378106e26e5ef65fb86181f32d30c0c6ad455885ab8a80"
@@ -19,8 +24,8 @@
     },
     {
       "path": "reports/E2/R013/R013_HANDOFF.md",
-      "bytes": 6082,
-      "sha256": "e626ad20478a7eb4237d3114bef7fa0f7ff4a9d357448a0f33f007bdb726c1bc"
+      "bytes": 6447,
+      "sha256": "f54623851ba088f0910fec8fd87873abeb51402af8d7651f758dfbef318f97e7"
     },
     {
       "path": "reports/E2/R013/TRANSPORT_INCIDENT.json",
@@ -453,19 +458,9 @@
       "sha256": "ebbdbc8fb1f6a90541a219cdc43085b6c378d4ef89b6b2bda710f5e77bb88440"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-000.pkl",
-      "bytes": 11778,
-      "sha256": "1e4cad83555f4402748b281b50aeb3670eaec05c81afdff4fc5039241af8333c"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-001.json",
       "bytes": 43081,
       "sha256": "00901c78440cff4be218868953fda4e76a0370d36c0bea41f06d9cfbe99e80be"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-001.pkl",
-      "bytes": 11778,
-      "sha256": "3a4c88e3beea9dcd9e3aa736d7461001e3ee050f55199974d988aecd6138a2d6"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-002.json",
@@ -473,19 +468,9 @@
       "sha256": "e153e5a833251cac0e0bc05c4092e6a67ac36d2d223db576200e54bbaffc8496"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-002.pkl",
-      "bytes": 11778,
-      "sha256": "742df51a899af9e184f8b4b7562a0be5aee9c747921c68d1a2a3ceab22573cf8"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-003.json",
       "bytes": 43115,
       "sha256": "39a244b042cb45654d0bca5432d6e944c56405ba6753a1260e48bf115a7c4f3e"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-003.pkl",
-      "bytes": 11778,
-      "sha256": "39d3cc737eb3e0542f63c4b00d1521d0c7af5c68901c3075200c1ffe673bf25b"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-004.json",
@@ -493,19 +478,9 @@
       "sha256": "ae610d5cce714f4d92988a8cbcc87c2aaf4f5cadcc6373f1b564b1a434f4dc7f"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-004.pkl",
-      "bytes": 11778,
-      "sha256": "b64459d1e3f2ed222fa04c557feb496cb1ab58dc96f6a99479955e6e30fe0d3a"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-005.json",
       "bytes": 43123,
       "sha256": "51ab88f479a11ba6be66c717a8aa2f3fabbca4be9ee00effd4b47f5b8512ad17"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-005.pkl",
-      "bytes": 11778,
-      "sha256": "97c8970b9d8401467b52d1879924ff429e6dc31baa5b387fe786d971551b94bf"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-006.json",
@@ -513,19 +488,9 @@
       "sha256": "b5511717a9f6b07e032ce3230cd465ff95b1eb7bc37b5a4c5942f72b268da588"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-006.pkl",
-      "bytes": 11778,
-      "sha256": "3354db2b27cc8b1d899f20ca2ce893f0e27014b0459664d828a3b565b24f9311"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-007.json",
       "bytes": 43172,
       "sha256": "dabe67b1f14e12d1e1a22d23548ed61d5659c325f698309f3860545e36468558"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-007.pkl",
-      "bytes": 11811,
-      "sha256": "402d798019c4425ab8ca492a449c4c3d2c19a60ac810871a4e64613221a2589a"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-008.json",
@@ -533,19 +498,9 @@
       "sha256": "2bc20142cb96458fd3604754715da99f14f6940e175b2ce0b68dcc313f57c334"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-008.pkl",
-      "bytes": 11815,
-      "sha256": "487fed3b30f4fa9ce3ef664dc22b11e75d935ed0692b4e5d8012a0dfff8a0f42"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-009.json",
       "bytes": 43087,
       "sha256": "1d187b0527aa41972edecd7f75d27ab60a2f225e55aa3c3d953239baa229c8cd"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-009.pkl",
-      "bytes": 11788,
-      "sha256": "9125712e5b3b444b78831fae2a87cf30b8b201e844da04d4b523b7b11cbb3ad5"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-010.json",
@@ -553,19 +508,9 @@
       "sha256": "ccd0028a1fe4c0c438dc68e322d9e8ff7ef2c9dbc3b989f5ffe0ee794a6cd889"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-010.pkl",
-      "bytes": 11788,
-      "sha256": "047f1cec844a615ecee396fbcacba73d5274e656cfd34ea4af89c83054eb47e7"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-011.json",
       "bytes": 43129,
       "sha256": "045090306fecfef52e025167143927d2b7d3ff922d711efe9fb92980a4acd4b1"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-011.pkl",
-      "bytes": 11788,
-      "sha256": "e580bb7f0e9e591b047bb1331dc8d309830a6a136557ab750c02d7ea98db5a44"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-012.json",
@@ -573,19 +518,9 @@
       "sha256": "bd53e72e2a4af27270ee746a0d79d33d7d511e75b50dbe7dcb3633d5fb54fbb7"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-012.pkl",
-      "bytes": 11788,
-      "sha256": "5aea935fd0a185c9a703048b6a3f85f3603c5af3635b8b788a16d0ca9fbd6a79"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-013.json",
       "bytes": 43192,
       "sha256": "710fe926ad95fd08d3bbceafc9b56b6a19c005c596529e911546c2c388d68a92"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-013.pkl",
-      "bytes": 11832,
-      "sha256": "d968c88e554be118e14fbf0479ccee85bf114958120ab1493f6a749f04ebcbcf"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-014.json",
@@ -593,29 +528,14 @@
       "sha256": "4bb9987e28710788f4477674d7f73880575516c320f9c3d9870c4e4be7f75ea0"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-014.pkl",
-      "bytes": 11826,
-      "sha256": "3c6f2d8cbb6ca5cc7f5057c1b39dbd8fb1d553132c4a560d43aa63a127e4f6f8"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-015.json",
       "bytes": 43173,
       "sha256": "c1cc7aabf56370d1b51729a461fea2b0df29245d2cc96f1022f04e4b32ced2c5"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-015.pkl",
-      "bytes": 11794,
-      "sha256": "652d71171d6b5ffe4fad90c9c6dd19d855d539898a088030c43d3185c941f2b8"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-016.json",
       "bytes": 43218,
       "sha256": "f9ef4f7cf747a0ccd00a0f83f4953e9d12e4a5664e169891c3c4b45e985dcbc6"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/prediction-016.pkl",
-      "bytes": 11846,
-      "sha256": "fe71b940d3302f4945e95114a78e9b4f922dd34616c750ea1b32cdfc1e9900ff"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0086/reservation.json",
@@ -1148,19 +1068,9 @@
       "sha256": "4b5a5b91a263268d2b9877b42fc242cc4c64ed656df3fb2e519fe10ec1c529c5"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-000.pkl",
-      "bytes": 11778,
-      "sha256": "8c7d495ec098157c0f6491077d81f1ad8ebad4522ae7a31d167d81a193e631fb"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-001.json",
       "bytes": 43097,
       "sha256": "0b7769c20d8e1e1b154facfae85ba916516c38f5e77926743f7531d35c0789b7"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-001.pkl",
-      "bytes": 11778,
-      "sha256": "7fc89a6e5fdef6d3bc25c403bf29fbec4fb85baea49ef6916f25b152247ef157"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-002.json",
@@ -1168,19 +1078,9 @@
       "sha256": "ead38d1fa3f9a32038e14e5d2cf5dff21f35ace89cf94c13a6b4ed3dc74aab01"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-002.pkl",
-      "bytes": 11778,
-      "sha256": "a0f4a15c4c918317ad1d6d1156a02577fe8d09460e796f4070fa10934009db78"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-003.json",
       "bytes": 43135,
       "sha256": "3c42833af57c330cd1d136b590a23ef6b8f361a76e4d3039ddf7e45bbd69712f"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-003.pkl",
-      "bytes": 11778,
-      "sha256": "95120fd62e164c5d82662e28e1182c1ebff32fa7ce066dc8e2e08a9f8e39b46e"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-004.json",
@@ -1188,19 +1088,9 @@
       "sha256": "9e89f86995ab764334cb6d642db952f8854035231c0c0ee062f07dcc5f5d3b63"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-004.pkl",
-      "bytes": 11778,
-      "sha256": "146c0382fd51f330d031182a97fc77761f413da1a669ce794ef4dfe4fb45a868"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-005.json",
       "bytes": 43162,
       "sha256": "fb5a5eb853dc23935f944557ca5e094b49e04585729fdb022797a102bffae5de"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-005.pkl",
-      "bytes": 11778,
-      "sha256": "c2073c9ac41a093e0d99d1ca98740fa9a7ac690347ae8ed9f9c28ea42d24c058"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-006.json",
@@ -1208,19 +1098,9 @@
       "sha256": "466277a2b28ddaa67dc03aa2458e2fcf2fcd8f0615f991a872e159f95cc3e34e"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-006.pkl",
-      "bytes": 11778,
-      "sha256": "db999357eb2766744a237414708c9fa7c226e708b3db9d2d44c74ba7a5412b9c"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-007.json",
       "bytes": 43094,
       "sha256": "9c0294a4baf3696b41206ed941f00a04c0f33a4f8129b91573c45144ac1eacf0"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-007.pkl",
-      "bytes": 11778,
-      "sha256": "3302b752896e00c2d29072d88c2667e39c515174a6e8d4157eacaa7e6998c86b"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-008.json",
@@ -1228,19 +1108,9 @@
       "sha256": "d0917740a6e9e1c7c1a92a22ff009b3ff5cfaa59fca332f90fa14d3df2a138b9"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-008.pkl",
-      "bytes": 11778,
-      "sha256": "f20452a31dd6d63cd5dcbad7b7f3cf2cfe26a27e34f7f3d1ded0998b7641c583"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-009.json",
       "bytes": 43126,
       "sha256": "695e20219219a08ccfada7eac76e77daf52e1e2d18558cf7207e9ab9d93f2951"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-009.pkl",
-      "bytes": 11778,
-      "sha256": "64ff449575dcbde455fa5b781b0454e3ffc918fe050252f4d38cc7fa7982ce0e"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-010.json",
@@ -1248,19 +1118,9 @@
       "sha256": "a15d59e665b01f070629ce8753f50acadc95e68fff502ce8c3e763b63b7d10d6"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-010.pkl",
-      "bytes": 11778,
-      "sha256": "39a4ed8fead34a755bef19d72c15487dc7c413f1373a8940e9aaed601f599d6f"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-011.json",
       "bytes": 43120,
       "sha256": "6a5ea8f98c21a48d298036a03b254dda500e5deffdbc47218119daaa8f7d6c39"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-011.pkl",
-      "bytes": 11791,
-      "sha256": "206b0c625d856e56862533f49e814e7430c5c151c76037e7c2e9fbec45b12d67"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-012.json",
@@ -1268,19 +1128,9 @@
       "sha256": "be6a4003bfdf7ad2eb0c56ee69441d51b9ed26510210344b79e6e0c49190cb44"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-012.pkl",
-      "bytes": 11778,
-      "sha256": "5a79830a25e148c41d79e5cce60bb53bdaf7a10c6232395b378e0bcbb92d3c75"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-013.json",
       "bytes": 43221,
       "sha256": "3aa45ccaec399ff4941c7a0f5bc0e696035fcc45dca96d5bae5d6b867647f4be"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-013.pkl",
-      "bytes": 11778,
-      "sha256": "6bd95698bb389e9138cf930a7a83fdb2df35bd3474088f167088cd58f0b7fda5"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-014.json",
@@ -1288,19 +1138,9 @@
       "sha256": "67db742668f576a8eb674c4f94f1ddbf24143858a9595d00b1f78f5addf750dc"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-014.pkl",
-      "bytes": 11778,
-      "sha256": "5c18075543d7ad5987f82c62355c4418910779d02e8ffd5cdb5cc903339efe23"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-015.json",
       "bytes": 43233,
       "sha256": "ef9f892e3e822c9d2e4611c6e4ab31d04862f09be3d8991e4fe125d613a38dea"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-015.pkl",
-      "bytes": 11817,
-      "sha256": "8546ff65e04037744f20ff362f7a8c3913993b5b1083c8cc3b999259f7daa94b"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-016.json",
@@ -1308,19 +1148,9 @@
       "sha256": "f4e9f4f2c940ca2dcc8aef8e5708546460cc9b0e9acbc14f3f6cd0c5a9ff2662"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-016.pkl",
-      "bytes": 11804,
-      "sha256": "08173229540fcceb056e91e925ee6b989a7e30722fe4961024c814b95e0524e8"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-017.json",
       "bytes": 43187,
       "sha256": "9f6a556649477b47c0e7fdc17ce5e89ec29a533535e0647cce4baac7a95839f2"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-017.pkl",
-      "bytes": 11794,
-      "sha256": "37d67922c9e76a0fa94c09775f8516a2fa68bf98266866e9bde89a1bb5ab4b36"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-018.json",
@@ -1328,19 +1158,9 @@
       "sha256": "653ceb256163b0d9c031858546831810cc5a0320f48c75c9d1868e9a022d19f9"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-018.pkl",
-      "bytes": 11794,
-      "sha256": "3b7c5305056624261f957909693e18b0161df85404a9388be0cbfc6b0d58a07c"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-019.json",
       "bytes": 43227,
       "sha256": "c941eed0089e1830c1a5a26d5b6fadda5f54fd142ae12d242c4d5ac7abbc4a75"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-019.pkl",
-      "bytes": 11794,
-      "sha256": "8025ebe4ec8b909e7b9d75c29374290b6c9c5ff8cf3c534a27f6d9a277637186"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-020.json",
@@ -1348,19 +1168,9 @@
       "sha256": "6a1cc0860ec61b80955abc770b03fbcc66dfa31f3695265cbe75b7ca4fcc004b"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-020.pkl",
-      "bytes": 11794,
-      "sha256": "ce8271afaa11874ef2164d1067f088c0bf2409879caf4081c49fa84a2dda9743"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-021.json",
       "bytes": 43260,
       "sha256": "1ef8b8f9746f324bcfba66c9260655289f65f9caf2daeb5da90c373cfbcae419"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-021.pkl",
-      "bytes": 11794,
-      "sha256": "c5541e10a3cfb4c0fc85ed366bd61db806c51e794a8b0b1f21a5178ad6987eb9"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-022.json",
@@ -1368,19 +1178,9 @@
       "sha256": "c32afeece472d2b9b9028b3f8e6ef0c5f16a45a2e5662a3a5eeb41da69fbbae3"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-022.pkl",
-      "bytes": 11794,
-      "sha256": "74625f2e30ca7e797b9ab24dffcd04c6a95c4193a5df80f1af5827e41c561c04"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-023.json",
       "bytes": 43171,
       "sha256": "f25978ba80585e8b6741ffb995604b3ea898bce45c7d6a9ee385aee29d05dd97"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-023.pkl",
-      "bytes": 11788,
-      "sha256": "939c48895912f988167e1d56890daec13c434045f20b9bbb55e8be34f3ed3227"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-024.json",
@@ -1388,19 +1188,9 @@
       "sha256": "fb1e69e7aafd8b6f650eb2b4f55cee08100275a79161cf0a0c998391d5b2cc8e"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-024.pkl",
-      "bytes": 11788,
-      "sha256": "3d1433a2ae89c81cca7503f29bfd1816c8a9a5fff5d347023e58dcf8ea282f38"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-025.json",
       "bytes": 43239,
       "sha256": "8282bc0b664b1417cdbcfdb4620afda5ebe889d2cae7a07b86ae9d0e2a2c9451"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-025.pkl",
-      "bytes": 11832,
-      "sha256": "0f539f3a5b786b0ae8de4273e09293a47876c6a26e9bdf37f19afbdc85600ff7"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-026.json",
@@ -1408,19 +1198,9 @@
       "sha256": "acae2e57937b2c0579be08a67d8c05fb4b2b140d4d89a9ac4a23a1d2cf9751fd"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-026.pkl",
-      "bytes": 11794,
-      "sha256": "9b7db4aa8ce59ffa6573551584bb5ae393d9a12993043499e133aa49438d3745"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-027.json",
       "bytes": 43286,
       "sha256": "0bfc3fda27b1db07509cb254c2214e0b3cbcebdfe887d61119dcfc8dcd154fb4"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-027.pkl",
-      "bytes": 11794,
-      "sha256": "6ce64a3c4a756cf814763e74575e68fd851099f1ae525d361cb2bcb3674b4590"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-028.json",
@@ -1428,19 +1208,9 @@
       "sha256": "e222cbba2ac6ad5a726361fd8ebc783baac1ce4b3f87464486e8eb62121cb98c"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-028.pkl",
-      "bytes": 11794,
-      "sha256": "e53ba047732f28ffd4f3a7f92da5c018a650c1dc1b24268354bd211c2706690f"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-029.json",
       "bytes": 43266,
       "sha256": "44e5d258ac5f7deeed9cd68089b86a8b217206befdc83f1a8ced9f28d0deb439"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-029.pkl",
-      "bytes": 11794,
-      "sha256": "c87b2fc82bbdd6acb3a3057fbd2ae732992ae37a3b597d50d32a3b4654239c37"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-030.json",
@@ -1448,19 +1218,9 @@
       "sha256": "e5147a56fdc30e1940b12311717d5c332634b80a69846c85462a5b2dd357bc26"
     },
     {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-030.pkl",
-      "bytes": 11794,
-      "sha256": "6d6de62c14a506752669155f6afb459cd738a41438ba872f3a74d114845a8971"
-    },
-    {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-031.json",
       "bytes": 43317,
       "sha256": "4e0dbfd8bf06e51517c521d7893709f54268b7de9dead335bbadb0446e72e4c5"
-    },
-    {
-      "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/prediction-031.pkl",
-      "bytes": 11844,
-      "sha256": "8849791e16f8bc453bc1deef4f1a9e2b8ff2377cb027802393d8af29578f0245"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/episodes/e2-test-0088/reservation.json",
@@ -1549,13 +1309,13 @@
     },
     {
       "path": "reports/E2/R013/checkpoint0088/receipt_origins.json",
-      "bytes": 179226,
-      "sha256": "842fff0b43371fece65d95ed56452d59d22701b543d629b15323d6c6ca1b2a5c"
+      "bytes": 150512,
+      "sha256": "8acdd6dcadd9bef5573edc6827d659d8a54efd9be6ee3ff5b28988026f74c0d3"
     },
     {
       "path": "reports/E2/R013/checkpoint0088/source_manifest.json",
-      "bytes": 54155,
-      "sha256": "51951e44ed2e9702f6d15c8eadedf3251a83b673b72f05bb7425c7d3328e5e70"
+      "bytes": 45482,
+      "sha256": "cb7136c30447c46cec9b88a563bb1bcfbd6cb2ca252af9fe861e54f2cd757d57"
     },
     {
       "path": "reports/E2/R013/checkpoints/issue28-test-checkpoint-0086/second-copy-verification.json",
@@ -1579,23 +1339,33 @@
     },
     {
       "path": "reports/E2/R013/normal-delivery-check02.json",
-      "bytes": 471,
-      "sha256": "087bfe9144ec82b243134fe49dc1d5dc4becda383bd3451b7a021d91356cde9d"
+      "bytes": 774,
+      "sha256": "3d40133fddaac787577d8243c3421e21d33f1c00ea93dd28748fec949a62d745"
     },
     {
       "path": "reports/E2/R013/normal-delivery-check03.json",
+      "bytes": 774,
+      "sha256": "dc18c52663ce2c8b784280daee2ee3806fa4442fe23e0aa71635a6b25aa94230"
+    },
+    {
+      "path": "reports/E2/R013/normal-delivery-check04.json",
       "bytes": 471,
-      "sha256": "42a801e27d586da6d2037398e30e1715334599acf1456ac3bf4850e8200e5e6c"
+      "sha256": "775fd0d52ed0e1423a1f62ca9ea003d9762d69a93cf3b067ededc4a495f154af"
     },
     {
       "path": "reports/E2/R013/optimized-delivery-check02.json",
-      "bytes": 474,
-      "sha256": "ba061402caab8c5961b7338e199c06d08f125cf81845e45e377c1962ac2fdd6f"
+      "bytes": 777,
+      "sha256": "b68592030910cbbb01d9a26e96a924f261cac021627d1ce1e638cb09563a5749"
     },
     {
       "path": "reports/E2/R013/optimized-delivery-check03.json",
+      "bytes": 777,
+      "sha256": "473231cb8c12f73822d3169ff42e5b0e27bea995ef23fd26ac8ef3418f222558"
+    },
+    {
+      "path": "reports/E2/R013/optimized-delivery-check04.json",
       "bytes": 474,
-      "sha256": "b841068101872851b93bac3ccd18ecb0debea8a585c47896c40f1088d584f550"
+      "sha256": "81842a7f171ebcf2879c3187a93c10fe2a25afd6e7085b84e6181e583a915c1b"
     },
     {
       "path": "reports/E2/R013/original84_local_backup_recheck.json",
@@ -1660,5 +1430,13 @@
   ],
   "executable_scientific_diff": [],
   "current_remote_state": "UNKNOWN",
-  "independent_result_review": "NOT_PERFORMED"
+  "independent_result_review": "NOT_PERFORMED",
+  "banned_private_extensions": [
+    ".pkl",
+    ".pickle",
+    ".pt",
+    ".bin",
+    ".safetensors",
+    ".xml"
+  ]
 }

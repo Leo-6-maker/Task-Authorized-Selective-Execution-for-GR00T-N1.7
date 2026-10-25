@@ -838,34 +838,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-000.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-000.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "1e4cad83555f4402748b281b50aeb3670eaec05c81afdff4fc5039241af8333c",
-      "export_bytes": 11778,
-      "export_sha256": "1e4cad83555f4402748b281b50aeb3670eaec05c81afdff4fc5039241af8333c",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-001.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-001.json",
       "original_bytes": 43081,
       "original_sha256": "00901c78440cff4be218868953fda4e76a0370d36c0bea41f06d9cfbe99e80be",
       "export_bytes": 43081,
       "export_sha256": "00901c78440cff4be218868953fda4e76a0370d36c0bea41f06d9cfbe99e80be",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-001.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-001.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "3a4c88e3beea9dcd9e3aa736d7461001e3ee050f55199974d988aecd6138a2d6",
-      "export_bytes": 11778,
-      "export_sha256": "3a4c88e3beea9dcd9e3aa736d7461001e3ee050f55199974d988aecd6138a2d6",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -882,34 +860,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-002.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-002.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "742df51a899af9e184f8b4b7562a0be5aee9c747921c68d1a2a3ceab22573cf8",
-      "export_bytes": 11778,
-      "export_sha256": "742df51a899af9e184f8b4b7562a0be5aee9c747921c68d1a2a3ceab22573cf8",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-003.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-003.json",
       "original_bytes": 43115,
       "original_sha256": "39a244b042cb45654d0bca5432d6e944c56405ba6753a1260e48bf115a7c4f3e",
       "export_bytes": 43115,
       "export_sha256": "39a244b042cb45654d0bca5432d6e944c56405ba6753a1260e48bf115a7c4f3e",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-003.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-003.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "39d3cc737eb3e0542f63c4b00d1521d0c7af5c68901c3075200c1ffe673bf25b",
-      "export_bytes": 11778,
-      "export_sha256": "39d3cc737eb3e0542f63c4b00d1521d0c7af5c68901c3075200c1ffe673bf25b",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -926,34 +882,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-004.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-004.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "b64459d1e3f2ed222fa04c557feb496cb1ab58dc96f6a99479955e6e30fe0d3a",
-      "export_bytes": 11778,
-      "export_sha256": "b64459d1e3f2ed222fa04c557feb496cb1ab58dc96f6a99479955e6e30fe0d3a",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-005.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-005.json",
       "original_bytes": 43123,
       "original_sha256": "51ab88f479a11ba6be66c717a8aa2f3fabbca4be9ee00effd4b47f5b8512ad17",
       "export_bytes": 43123,
       "export_sha256": "51ab88f479a11ba6be66c717a8aa2f3fabbca4be9ee00effd4b47f5b8512ad17",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-005.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-005.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "97c8970b9d8401467b52d1879924ff429e6dc31baa5b387fe786d971551b94bf",
-      "export_bytes": 11778,
-      "export_sha256": "97c8970b9d8401467b52d1879924ff429e6dc31baa5b387fe786d971551b94bf",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -970,34 +904,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-006.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-006.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "3354db2b27cc8b1d899f20ca2ce893f0e27014b0459664d828a3b565b24f9311",
-      "export_bytes": 11778,
-      "export_sha256": "3354db2b27cc8b1d899f20ca2ce893f0e27014b0459664d828a3b565b24f9311",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-007.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-007.json",
       "original_bytes": 43172,
       "original_sha256": "dabe67b1f14e12d1e1a22d23548ed61d5659c325f698309f3860545e36468558",
       "export_bytes": 43172,
       "export_sha256": "dabe67b1f14e12d1e1a22d23548ed61d5659c325f698309f3860545e36468558",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-007.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-007.pkl",
-      "original_bytes": 11811,
-      "original_sha256": "402d798019c4425ab8ca492a449c4c3d2c19a60ac810871a4e64613221a2589a",
-      "export_bytes": 11811,
-      "export_sha256": "402d798019c4425ab8ca492a449c4c3d2c19a60ac810871a4e64613221a2589a",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -1014,34 +926,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-008.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-008.pkl",
-      "original_bytes": 11815,
-      "original_sha256": "487fed3b30f4fa9ce3ef664dc22b11e75d935ed0692b4e5d8012a0dfff8a0f42",
-      "export_bytes": 11815,
-      "export_sha256": "487fed3b30f4fa9ce3ef664dc22b11e75d935ed0692b4e5d8012a0dfff8a0f42",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-009.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-009.json",
       "original_bytes": 43087,
       "original_sha256": "1d187b0527aa41972edecd7f75d27ab60a2f225e55aa3c3d953239baa229c8cd",
       "export_bytes": 43087,
       "export_sha256": "1d187b0527aa41972edecd7f75d27ab60a2f225e55aa3c3d953239baa229c8cd",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-009.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-009.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "9125712e5b3b444b78831fae2a87cf30b8b201e844da04d4b523b7b11cbb3ad5",
-      "export_bytes": 11788,
-      "export_sha256": "9125712e5b3b444b78831fae2a87cf30b8b201e844da04d4b523b7b11cbb3ad5",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -1058,34 +948,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-010.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-010.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "047f1cec844a615ecee396fbcacba73d5274e656cfd34ea4af89c83054eb47e7",
-      "export_bytes": 11788,
-      "export_sha256": "047f1cec844a615ecee396fbcacba73d5274e656cfd34ea4af89c83054eb47e7",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-011.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-011.json",
       "original_bytes": 43129,
       "original_sha256": "045090306fecfef52e025167143927d2b7d3ff922d711efe9fb92980a4acd4b1",
       "export_bytes": 43129,
       "export_sha256": "045090306fecfef52e025167143927d2b7d3ff922d711efe9fb92980a4acd4b1",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-011.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-011.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "e580bb7f0e9e591b047bb1331dc8d309830a6a136557ab750c02d7ea98db5a44",
-      "export_bytes": 11788,
-      "export_sha256": "e580bb7f0e9e591b047bb1331dc8d309830a6a136557ab750c02d7ea98db5a44",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -1102,34 +970,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-012.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-012.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "5aea935fd0a185c9a703048b6a3f85f3603c5af3635b8b788a16d0ca9fbd6a79",
-      "export_bytes": 11788,
-      "export_sha256": "5aea935fd0a185c9a703048b6a3f85f3603c5af3635b8b788a16d0ca9fbd6a79",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-013.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-013.json",
       "original_bytes": 43192,
       "original_sha256": "710fe926ad95fd08d3bbceafc9b56b6a19c005c596529e911546c2c388d68a92",
       "export_bytes": 43192,
       "export_sha256": "710fe926ad95fd08d3bbceafc9b56b6a19c005c596529e911546c2c388d68a92",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-013.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-013.pkl",
-      "original_bytes": 11832,
-      "original_sha256": "d968c88e554be118e14fbf0479ccee85bf114958120ab1493f6a749f04ebcbcf",
-      "export_bytes": 11832,
-      "export_sha256": "d968c88e554be118e14fbf0479ccee85bf114958120ab1493f6a749f04ebcbcf",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -1146,17 +992,6 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-014.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-014.pkl",
-      "original_bytes": 11826,
-      "original_sha256": "3c6f2d8cbb6ca5cc7f5057c1b39dbd8fb1d553132c4a560d43aa63a127e4f6f8",
-      "export_bytes": 11826,
-      "export_sha256": "3c6f2d8cbb6ca5cc7f5057c1b39dbd8fb1d553132c4a560d43aa63a127e4f6f8",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-015.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-015.json",
       "original_bytes": 43173,
@@ -1168,34 +1003,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0086/prediction-015.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-015.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "652d71171d6b5ffe4fad90c9c6dd19d855d539898a088030c43d3185c941f2b8",
-      "export_bytes": 11794,
-      "export_sha256": "652d71171d6b5ffe4fad90c9c6dd19d855d539898a088030c43d3185c941f2b8",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0086/prediction-016.json",
       "original_id": "runs/TEST/e2-test-0086/prediction-016.json",
       "original_bytes": 43218,
       "original_sha256": "f9ef4f7cf747a0ccd00a0f83f4953e9d12e4a5664e169891c3c4b45e985dcbc6",
       "export_bytes": 43218,
       "export_sha256": "f9ef4f7cf747a0ccd00a0f83f4953e9d12e4a5664e169891c3c4b45e985dcbc6",
-      "source_archive_stage": "issue28-test-checkpoint-0086",
-      "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0086/prediction-016.pkl",
-      "original_id": "runs/TEST/e2-test-0086/prediction-016.pkl",
-      "original_bytes": 11846,
-      "original_sha256": "fe71b940d3302f4945e95114a78e9b4f922dd34616c750ea1b32cdfc1e9900ff",
-      "export_bytes": 11846,
-      "export_sha256": "fe71b940d3302f4945e95114a78e9b4f922dd34616c750ea1b32cdfc1e9900ff",
       "source_archive_stage": "issue28-test-checkpoint-0086",
       "source_archive_sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
       "transformation": "BYTE_EXACT"
@@ -2543,34 +2356,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-000.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-000.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "8c7d495ec098157c0f6491077d81f1ad8ebad4522ae7a31d167d81a193e631fb",
-      "export_bytes": 11778,
-      "export_sha256": "8c7d495ec098157c0f6491077d81f1ad8ebad4522ae7a31d167d81a193e631fb",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-001.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-001.json",
       "original_bytes": 43097,
       "original_sha256": "0b7769c20d8e1e1b154facfae85ba916516c38f5e77926743f7531d35c0789b7",
       "export_bytes": 43097,
       "export_sha256": "0b7769c20d8e1e1b154facfae85ba916516c38f5e77926743f7531d35c0789b7",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-001.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-001.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "7fc89a6e5fdef6d3bc25c403bf29fbec4fb85baea49ef6916f25b152247ef157",
-      "export_bytes": 11778,
-      "export_sha256": "7fc89a6e5fdef6d3bc25c403bf29fbec4fb85baea49ef6916f25b152247ef157",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2587,34 +2378,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-002.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-002.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "a0f4a15c4c918317ad1d6d1156a02577fe8d09460e796f4070fa10934009db78",
-      "export_bytes": 11778,
-      "export_sha256": "a0f4a15c4c918317ad1d6d1156a02577fe8d09460e796f4070fa10934009db78",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-003.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-003.json",
       "original_bytes": 43135,
       "original_sha256": "3c42833af57c330cd1d136b590a23ef6b8f361a76e4d3039ddf7e45bbd69712f",
       "export_bytes": 43135,
       "export_sha256": "3c42833af57c330cd1d136b590a23ef6b8f361a76e4d3039ddf7e45bbd69712f",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-003.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-003.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "95120fd62e164c5d82662e28e1182c1ebff32fa7ce066dc8e2e08a9f8e39b46e",
-      "export_bytes": 11778,
-      "export_sha256": "95120fd62e164c5d82662e28e1182c1ebff32fa7ce066dc8e2e08a9f8e39b46e",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2631,34 +2400,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-004.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-004.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "146c0382fd51f330d031182a97fc77761f413da1a669ce794ef4dfe4fb45a868",
-      "export_bytes": 11778,
-      "export_sha256": "146c0382fd51f330d031182a97fc77761f413da1a669ce794ef4dfe4fb45a868",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-005.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-005.json",
       "original_bytes": 43162,
       "original_sha256": "fb5a5eb853dc23935f944557ca5e094b49e04585729fdb022797a102bffae5de",
       "export_bytes": 43162,
       "export_sha256": "fb5a5eb853dc23935f944557ca5e094b49e04585729fdb022797a102bffae5de",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-005.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-005.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "c2073c9ac41a093e0d99d1ca98740fa9a7ac690347ae8ed9f9c28ea42d24c058",
-      "export_bytes": 11778,
-      "export_sha256": "c2073c9ac41a093e0d99d1ca98740fa9a7ac690347ae8ed9f9c28ea42d24c058",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2675,34 +2422,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-006.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-006.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "db999357eb2766744a237414708c9fa7c226e708b3db9d2d44c74ba7a5412b9c",
-      "export_bytes": 11778,
-      "export_sha256": "db999357eb2766744a237414708c9fa7c226e708b3db9d2d44c74ba7a5412b9c",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-007.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-007.json",
       "original_bytes": 43094,
       "original_sha256": "9c0294a4baf3696b41206ed941f00a04c0f33a4f8129b91573c45144ac1eacf0",
       "export_bytes": 43094,
       "export_sha256": "9c0294a4baf3696b41206ed941f00a04c0f33a4f8129b91573c45144ac1eacf0",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-007.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-007.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "3302b752896e00c2d29072d88c2667e39c515174a6e8d4157eacaa7e6998c86b",
-      "export_bytes": 11778,
-      "export_sha256": "3302b752896e00c2d29072d88c2667e39c515174a6e8d4157eacaa7e6998c86b",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2719,34 +2444,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-008.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-008.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "f20452a31dd6d63cd5dcbad7b7f3cf2cfe26a27e34f7f3d1ded0998b7641c583",
-      "export_bytes": 11778,
-      "export_sha256": "f20452a31dd6d63cd5dcbad7b7f3cf2cfe26a27e34f7f3d1ded0998b7641c583",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-009.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-009.json",
       "original_bytes": 43126,
       "original_sha256": "695e20219219a08ccfada7eac76e77daf52e1e2d18558cf7207e9ab9d93f2951",
       "export_bytes": 43126,
       "export_sha256": "695e20219219a08ccfada7eac76e77daf52e1e2d18558cf7207e9ab9d93f2951",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-009.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-009.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "64ff449575dcbde455fa5b781b0454e3ffc918fe050252f4d38cc7fa7982ce0e",
-      "export_bytes": 11778,
-      "export_sha256": "64ff449575dcbde455fa5b781b0454e3ffc918fe050252f4d38cc7fa7982ce0e",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2763,34 +2466,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-010.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-010.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "39a4ed8fead34a755bef19d72c15487dc7c413f1373a8940e9aaed601f599d6f",
-      "export_bytes": 11778,
-      "export_sha256": "39a4ed8fead34a755bef19d72c15487dc7c413f1373a8940e9aaed601f599d6f",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-011.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-011.json",
       "original_bytes": 43120,
       "original_sha256": "6a5ea8f98c21a48d298036a03b254dda500e5deffdbc47218119daaa8f7d6c39",
       "export_bytes": 43120,
       "export_sha256": "6a5ea8f98c21a48d298036a03b254dda500e5deffdbc47218119daaa8f7d6c39",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-011.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-011.pkl",
-      "original_bytes": 11791,
-      "original_sha256": "206b0c625d856e56862533f49e814e7430c5c151c76037e7c2e9fbec45b12d67",
-      "export_bytes": 11791,
-      "export_sha256": "206b0c625d856e56862533f49e814e7430c5c151c76037e7c2e9fbec45b12d67",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2807,34 +2488,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-012.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-012.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "5a79830a25e148c41d79e5cce60bb53bdaf7a10c6232395b378e0bcbb92d3c75",
-      "export_bytes": 11778,
-      "export_sha256": "5a79830a25e148c41d79e5cce60bb53bdaf7a10c6232395b378e0bcbb92d3c75",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-013.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-013.json",
       "original_bytes": 43221,
       "original_sha256": "3aa45ccaec399ff4941c7a0f5bc0e696035fcc45dca96d5bae5d6b867647f4be",
       "export_bytes": 43221,
       "export_sha256": "3aa45ccaec399ff4941c7a0f5bc0e696035fcc45dca96d5bae5d6b867647f4be",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-013.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-013.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "6bd95698bb389e9138cf930a7a83fdb2df35bd3474088f167088cd58f0b7fda5",
-      "export_bytes": 11778,
-      "export_sha256": "6bd95698bb389e9138cf930a7a83fdb2df35bd3474088f167088cd58f0b7fda5",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2851,34 +2510,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-014.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-014.pkl",
-      "original_bytes": 11778,
-      "original_sha256": "5c18075543d7ad5987f82c62355c4418910779d02e8ffd5cdb5cc903339efe23",
-      "export_bytes": 11778,
-      "export_sha256": "5c18075543d7ad5987f82c62355c4418910779d02e8ffd5cdb5cc903339efe23",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-015.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-015.json",
       "original_bytes": 43233,
       "original_sha256": "ef9f892e3e822c9d2e4611c6e4ab31d04862f09be3d8991e4fe125d613a38dea",
       "export_bytes": 43233,
       "export_sha256": "ef9f892e3e822c9d2e4611c6e4ab31d04862f09be3d8991e4fe125d613a38dea",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-015.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-015.pkl",
-      "original_bytes": 11817,
-      "original_sha256": "8546ff65e04037744f20ff362f7a8c3913993b5b1083c8cc3b999259f7daa94b",
-      "export_bytes": 11817,
-      "export_sha256": "8546ff65e04037744f20ff362f7a8c3913993b5b1083c8cc3b999259f7daa94b",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2895,34 +2532,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-016.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-016.pkl",
-      "original_bytes": 11804,
-      "original_sha256": "08173229540fcceb056e91e925ee6b989a7e30722fe4961024c814b95e0524e8",
-      "export_bytes": 11804,
-      "export_sha256": "08173229540fcceb056e91e925ee6b989a7e30722fe4961024c814b95e0524e8",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-017.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-017.json",
       "original_bytes": 43187,
       "original_sha256": "9f6a556649477b47c0e7fdc17ce5e89ec29a533535e0647cce4baac7a95839f2",
       "export_bytes": 43187,
       "export_sha256": "9f6a556649477b47c0e7fdc17ce5e89ec29a533535e0647cce4baac7a95839f2",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-017.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-017.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "37d67922c9e76a0fa94c09775f8516a2fa68bf98266866e9bde89a1bb5ab4b36",
-      "export_bytes": 11794,
-      "export_sha256": "37d67922c9e76a0fa94c09775f8516a2fa68bf98266866e9bde89a1bb5ab4b36",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2939,34 +2554,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-018.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-018.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "3b7c5305056624261f957909693e18b0161df85404a9388be0cbfc6b0d58a07c",
-      "export_bytes": 11794,
-      "export_sha256": "3b7c5305056624261f957909693e18b0161df85404a9388be0cbfc6b0d58a07c",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-019.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-019.json",
       "original_bytes": 43227,
       "original_sha256": "c941eed0089e1830c1a5a26d5b6fadda5f54fd142ae12d242c4d5ac7abbc4a75",
       "export_bytes": 43227,
       "export_sha256": "c941eed0089e1830c1a5a26d5b6fadda5f54fd142ae12d242c4d5ac7abbc4a75",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-019.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-019.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "8025ebe4ec8b909e7b9d75c29374290b6c9c5ff8cf3c534a27f6d9a277637186",
-      "export_bytes": 11794,
-      "export_sha256": "8025ebe4ec8b909e7b9d75c29374290b6c9c5ff8cf3c534a27f6d9a277637186",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -2983,34 +2576,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-020.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-020.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "ce8271afaa11874ef2164d1067f088c0bf2409879caf4081c49fa84a2dda9743",
-      "export_bytes": 11794,
-      "export_sha256": "ce8271afaa11874ef2164d1067f088c0bf2409879caf4081c49fa84a2dda9743",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-021.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-021.json",
       "original_bytes": 43260,
       "original_sha256": "1ef8b8f9746f324bcfba66c9260655289f65f9caf2daeb5da90c373cfbcae419",
       "export_bytes": 43260,
       "export_sha256": "1ef8b8f9746f324bcfba66c9260655289f65f9caf2daeb5da90c373cfbcae419",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-021.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-021.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "c5541e10a3cfb4c0fc85ed366bd61db806c51e794a8b0b1f21a5178ad6987eb9",
-      "export_bytes": 11794,
-      "export_sha256": "c5541e10a3cfb4c0fc85ed366bd61db806c51e794a8b0b1f21a5178ad6987eb9",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -3027,34 +2598,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-022.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-022.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "74625f2e30ca7e797b9ab24dffcd04c6a95c4193a5df80f1af5827e41c561c04",
-      "export_bytes": 11794,
-      "export_sha256": "74625f2e30ca7e797b9ab24dffcd04c6a95c4193a5df80f1af5827e41c561c04",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-023.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-023.json",
       "original_bytes": 43171,
       "original_sha256": "f25978ba80585e8b6741ffb995604b3ea898bce45c7d6a9ee385aee29d05dd97",
       "export_bytes": 43171,
       "export_sha256": "f25978ba80585e8b6741ffb995604b3ea898bce45c7d6a9ee385aee29d05dd97",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-023.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-023.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "939c48895912f988167e1d56890daec13c434045f20b9bbb55e8be34f3ed3227",
-      "export_bytes": 11788,
-      "export_sha256": "939c48895912f988167e1d56890daec13c434045f20b9bbb55e8be34f3ed3227",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -3071,34 +2620,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-024.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-024.pkl",
-      "original_bytes": 11788,
-      "original_sha256": "3d1433a2ae89c81cca7503f29bfd1816c8a9a5fff5d347023e58dcf8ea282f38",
-      "export_bytes": 11788,
-      "export_sha256": "3d1433a2ae89c81cca7503f29bfd1816c8a9a5fff5d347023e58dcf8ea282f38",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-025.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-025.json",
       "original_bytes": 43239,
       "original_sha256": "8282bc0b664b1417cdbcfdb4620afda5ebe889d2cae7a07b86ae9d0e2a2c9451",
       "export_bytes": 43239,
       "export_sha256": "8282bc0b664b1417cdbcfdb4620afda5ebe889d2cae7a07b86ae9d0e2a2c9451",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-025.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-025.pkl",
-      "original_bytes": 11832,
-      "original_sha256": "0f539f3a5b786b0ae8de4273e09293a47876c6a26e9bdf37f19afbdc85600ff7",
-      "export_bytes": 11832,
-      "export_sha256": "0f539f3a5b786b0ae8de4273e09293a47876c6a26e9bdf37f19afbdc85600ff7",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -3115,34 +2642,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-026.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-026.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "9b7db4aa8ce59ffa6573551584bb5ae393d9a12993043499e133aa49438d3745",
-      "export_bytes": 11794,
-      "export_sha256": "9b7db4aa8ce59ffa6573551584bb5ae393d9a12993043499e133aa49438d3745",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-027.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-027.json",
       "original_bytes": 43286,
       "original_sha256": "0bfc3fda27b1db07509cb254c2214e0b3cbcebdfe887d61119dcfc8dcd154fb4",
       "export_bytes": 43286,
       "export_sha256": "0bfc3fda27b1db07509cb254c2214e0b3cbcebdfe887d61119dcfc8dcd154fb4",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-027.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-027.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "6ce64a3c4a756cf814763e74575e68fd851099f1ae525d361cb2bcb3674b4590",
-      "export_bytes": 11794,
-      "export_sha256": "6ce64a3c4a756cf814763e74575e68fd851099f1ae525d361cb2bcb3674b4590",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -3159,34 +2664,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-028.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-028.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "e53ba047732f28ffd4f3a7f92da5c018a650c1dc1b24268354bd211c2706690f",
-      "export_bytes": 11794,
-      "export_sha256": "e53ba047732f28ffd4f3a7f92da5c018a650c1dc1b24268354bd211c2706690f",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-029.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-029.json",
       "original_bytes": 43266,
       "original_sha256": "44e5d258ac5f7deeed9cd68089b86a8b217206befdc83f1a8ced9f28d0deb439",
       "export_bytes": 43266,
       "export_sha256": "44e5d258ac5f7deeed9cd68089b86a8b217206befdc83f1a8ced9f28d0deb439",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-029.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-029.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "c87b2fc82bbdd6acb3a3057fbd2ae732992ae37a3b597d50d32a3b4654239c37",
-      "export_bytes": 11794,
-      "export_sha256": "c87b2fc82bbdd6acb3a3057fbd2ae732992ae37a3b597d50d32a3b4654239c37",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
@@ -3203,34 +2686,12 @@
       "transformation": "BYTE_EXACT"
     },
     {
-      "export_path": "episodes/e2-test-0088/prediction-030.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-030.pkl",
-      "original_bytes": 11794,
-      "original_sha256": "6d6de62c14a506752669155f6afb459cd738a41438ba872f3a74d114845a8971",
-      "export_bytes": 11794,
-      "export_sha256": "6d6de62c14a506752669155f6afb459cd738a41438ba872f3a74d114845a8971",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
       "export_path": "episodes/e2-test-0088/prediction-031.json",
       "original_id": "runs/TEST/e2-test-0088/prediction-031.json",
       "original_bytes": 43317,
       "original_sha256": "4e0dbfd8bf06e51517c521d7893709f54268b7de9dead335bbadb0446e72e4c5",
       "export_bytes": 43317,
       "export_sha256": "4e0dbfd8bf06e51517c521d7893709f54268b7de9dead335bbadb0446e72e4c5",
-      "source_archive_stage": "issue28-test-checkpoint-0088",
-      "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
-      "transformation": "BYTE_EXACT"
-    },
-    {
-      "export_path": "episodes/e2-test-0088/prediction-031.pkl",
-      "original_id": "runs/TEST/e2-test-0088/prediction-031.pkl",
-      "original_bytes": 11844,
-      "original_sha256": "8849791e16f8bc453bc1deef4f1a9e2b8ff2377cb027802393d8af29578f0245",
-      "export_bytes": 11844,
-      "export_sha256": "8849791e16f8bc453bc1deef4f1a9e2b8ff2377cb027802393d8af29578f0245",
       "source_archive_stage": "issue28-test-checkpoint-0088",
       "source_archive_sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
       "transformation": "BYTE_EXACT"
