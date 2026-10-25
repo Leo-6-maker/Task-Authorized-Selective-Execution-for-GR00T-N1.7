@@ -1,3 +1,5 @@
+GPU1并行入口CPU候选完成：CPU源码d9e445cc693c4fc7284cfa54a83924e340f04360；启动器/原生server统一9GiB空闲下限，原55%/2GiB预算公式保留。普通/-O本机/Corelab各134/134实际0，原84完整审计与908输出完全一致。实际运行版本仍908、84已消耗/36未启动、0085 absent；候选无新TEST grant，不得启动模型/仿真/TEST。交付READY_FOR_INDEPENDENT_GPU1_RESOURCE_DELTA_REVIEW，需独立审核完整新Head、封存R012至84、签新grant后才可GPU1启动，0085/0086后强制检查点。不自签不merge。见 reports/E2/GPU1_ENTRY_DELTA/RESOURCE_DELTA_HANDOFF.md。
+
 GPU1 latest owner instruction（2026-10-25）：用户明确“你使用GPU1”。已绑定新的私有GPU1资源记录；GPU1空闲10121MiB/总16376MiB，exact908冻结入口要求空闲>=16384MiB，当前及全空闲均无法通过。实际CPU隔离原始guard退出1，未启动server/模型/仿真，无新TEST，仍84已消耗/36未启动，0085 absent。不能自动改回GPU0、降低冻结检查或停止其他任务。GPU1资源入口限制需独立工程审核；更改执行代码须新完整Head/newgrant。见 reports/E2/R012/gpu1_request/GPU1_RESOURCE_ENTRY_REQUEST.md。
 
 Issue25/R012 最新停止点（2026-10-25）：84已消耗=61 SUCCESS+10 TIME_LIMIT+10 SEMANTIC_ABORT+0010/0014/0016三次历史 CLEANUP_ERROR，36未启动。0084结构审计/双备份通过后，0085预留前发现另一项目GPU进程，显存低于冻结入口下限；operator实际exit1，native server实际exit0，所有本任务worker/server退出，无新增TEST错误。禁止重启旧operator或重跑任何旧ID。CPU保全/审核继续；只有资源充足并通过新的完整84前缀实时预检，才能使用仍有效的exact908/R012从0085继续；改执行代码需新独立grant。详见 reports/E2/R012/RESOURCE_STOP_HANDOFF.md。

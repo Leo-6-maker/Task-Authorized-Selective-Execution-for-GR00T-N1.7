@@ -1,0 +1,262 @@
+[
+  {
+    "path": "audit-normal.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "audit-optimized.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/memory/gpu1-idle/proxy.exit.json",
+    "actual_exit": 23,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/memory/gpu1-shared/proxy.exit.json",
+    "actual_exit": 23,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/memory/memory-decreased/proxy.exit.json",
+    "actual_exit": 17,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/bad-child_pid/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/bad-command/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/bad-wrapper_pid/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/changed-stage/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/child-symlink/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/duplicate-admission/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/duplicate-session/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/early-exit/runs/test-server-cpu.exit.json",
+    "actual_exit": 7,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/foreign-owner/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/normal/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/partial-loaded-json/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/post-mkdir-failure/runs/test-server-cpu.exit.json",
+    "actual_exit": 8,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/process-identity-changed/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/replaced-directory/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/signal-15/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/signal-2/runs/test-server-cpu.exit.json",
+    "actual_exit": 130,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/slow-signal-15/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/slow-signal-2/runs/test-server-cpu.exit.json",
+    "actual_exit": 130,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/timeout-no_loaded/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/timeout-no_mkdir/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal/startup/wrong-loaded-identity/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "normal.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/memory/gpu1-idle/proxy.exit.json",
+    "actual_exit": 23,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/memory/gpu1-shared/proxy.exit.json",
+    "actual_exit": 23,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/memory/memory-decreased/proxy.exit.json",
+    "actual_exit": 17,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/bad-child_pid/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/bad-command/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/bad-wrapper_pid/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/changed-stage/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/child-symlink/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/duplicate-admission/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/duplicate-session/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/early-exit/runs/test-server-cpu.exit.json",
+    "actual_exit": 7,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/foreign-owner/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/normal/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/partial-loaded-json/runs/test-server-cpu.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/post-mkdir-failure/runs/test-server-cpu.exit.json",
+    "actual_exit": 8,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/process-identity-changed/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/replaced-directory/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/signal-15/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/signal-2/runs/test-server-cpu.exit.json",
+    "actual_exit": 130,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/slow-signal-15/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/slow-signal-2/runs/test-server-cpu.exit.json",
+    "actual_exit": 130,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/timeout-no_loaded/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/timeout-no_mkdir/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized/startup/wrong-loaded-identity/runs/test-server-cpu.exit.json",
+    "actual_exit": 143,
+    "child_PID_absent": true
+  },
+  {
+    "path": "optimized.exit.json",
+    "actual_exit": 0,
+    "child_PID_absent": true
+  }
+]

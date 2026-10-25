@@ -1,0 +1,33 @@
+{
+  "status": "CPU_ONLY_GPU1_DELTA_PUBLIC_SOURCE_RECEIPTS_AND_PRIVACY_PASS",
+  "CPU_tested_source": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+  "actual_runtime": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "CPU_regressions": {
+    "local_normal": [
+      134,
+      0
+    ],
+    "local_optimized": [
+      134,
+      0
+    ],
+    "corelab_normal": [
+      134,
+      0
+    ],
+    "corelab_optimized": [
+      134,
+      0
+    ]
+  },
+  "original84_audits_normal_optimized_and_prior908_all_equal": true,
+  "frozen_config_unchanged": true,
+  "post_load_policy_seed_reset_AST_unchanged": true,
+  "old_grant_rejects_candidate": true,
+  "reserved": 84,
+  "not_started": 36,
+  "candidate_model_sim_TEST_calls": 0,
+  "safe_source_exports_checked": 21,
+  "private_marker_hits": 0,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR"
+}

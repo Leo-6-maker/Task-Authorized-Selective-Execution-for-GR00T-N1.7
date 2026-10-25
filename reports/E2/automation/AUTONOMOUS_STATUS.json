@@ -1,5 +1,5 @@
 {
-  "phase": "P4_R012_GPU1_OWNER_ASSIGNED_PRECONDITION_BLOCKED",
+  "phase": "P3_GPU1_RESOURCE_DELTA_READY_FOR_INDEPENDENT_REVIEW",
   "execution_authorized": false,
   "current_code_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
   "current_code_head_meaning": "Exact R012 authorized runtime; clean, unchanged; report/source ZIP are separate",
@@ -298,7 +298,7 @@
     "Final independent R3 review",
     "Final course materials and owner submission"
   ],
-  "next_action": "Owner assigned GPU1. Exact frozen launcher requires16384MiB but GPU1 total is16376MiB and currently free10121MiB; no native start is possible with unchanged908. Submit resource-only entry restriction for independent review and arrange sufficient GPU1 availability. Any executable change needs a new exact-head independent grant; no old ID may be retried.",
+  "next_action": "Independent review of complete GPU1 resource-only candidate Head and separate new TEST grant; then fresh complete84-prefix GPU1 preflight and original0085/0086 mandatory checkpoint. Current908 runtime stays stopped; no candidate model/sim/TEST permitted before that grant.",
   "stop_reason": "GPU1 current free memory and physical total cannot meet frozen launcher predicate; source is unchanged",
   "science_and_executable_drift": [],
   "independent_R3": "NOT_COMPLETED",
@@ -311,7 +311,7 @@
     "content_slides": 13,
     "independent_R3": "NOT_COMPLETED"
   },
-  "updated_at_sgt": "2026-10-25T11:11:41.721316+08:00",
+  "updated_at_sgt": "2026-10-25T12:20:30.833572+08:00",
   "local_cpu_and_course_proof": {
     "stage": "issue25-local-cpu-course84-01",
     "bytes": 8223932,
@@ -360,5 +360,38 @@
     "artifacts": 10,
     "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
     "independent_review": "NOT_PERFORMED"
+  },
+  "CPU_candidate_source_head": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+  "CPU_candidate_has_TEST_grant": false,
+  "CPU_candidate_changed_source_paths": [
+    "scripts/e2_test_server.py",
+    "tase/server.py",
+    "tase/resource_memory.py",
+    "tests/test_resource_memory.py"
+  ],
+  "owner_parallel_GPU1_permission": true,
+  "candidate_CPU_regression": {
+    "local_normal": {
+      "tests": 134,
+      "actual_exit": 0
+    },
+    "local_optimized": {
+      "tests": 134,
+      "actual_exit": 0
+    },
+    "corelab_normal": {
+      "tests": 134,
+      "actual_exit": 0
+    },
+    "corelab_optimized": {
+      "tests": 134,
+      "actual_exit": 0
+    }
+  },
+  "candidate_original84_audits": {
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "all_complete_outputs_equal_to_original908": true,
+    "original16_all_members_unchanged": true
   }
 }

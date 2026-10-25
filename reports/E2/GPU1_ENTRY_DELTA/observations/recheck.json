@@ -1,0 +1,20 @@
+{
+  "status": "GPU1_PARALLEL_OWNER_PERMISSION_RECORDED_RESOURCE_GUARD_STILL_UNMET",
+  "GPU1_name": "NVIDIA GeForce RTX 4080 SUPER",
+  "GPU1_free_mib": 10121,
+  "GPU1_total_mib": 16376,
+  "frozen_minimum_mib": 16384,
+  "parallel_permission": true,
+  "memory_guard_pass": false,
+  "runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "runtime_clean": true,
+  "current_main": "3b4be5bd833e23e3e65c201295b9e8cd167bbc9e",
+  "R012_current_matches_signed": true,
+  "R012_disposition": "TEST_AUTHORIZED",
+  "reserved": 84,
+  "unstarted": 36,
+  "next0085_absent": true,
+  "new_model_sim_TEST_calls": 0,
+  "foreign_jobs_untouched": true,
+  "recorded_at_sgt": "2026-10-25T12:03:42.613004+08:00"
+}

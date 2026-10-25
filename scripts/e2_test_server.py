@@ -18,6 +18,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from tase.test_authorization import authorize,require
 from tase.test_runtime import verify
 from tase.evidence import write_json,sha256
+from tase.resource_memory import require_free_memory
 
 
 def _owned_directory(path):
@@ -232,7 +233,7 @@ def serve(workspace,repo,review_commit,review_path,allocation_record,server_pyth
     verified=verify(workspace,repo,server_python,sim_python)
     inventory=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free','--format=csv,noheader,nounits'],text=True)
     selected=next(row.split(',') for row in inventory.splitlines() if int(row.split(',')[0])==gpu_index)
-    require(int(selected[2])>=16384,'insufficient free GPU memory; do not affect other tasks')
+    require_free_memory(int(selected[2])*1024**2)
     require(allocation.get('gpu_uuid')==selected[1].strip(),'allocated GPU UUID differs')
     with socket.socket() as sock:sock.bind(('127.0.0.1',port))
     folder=workspace/'runs'/session

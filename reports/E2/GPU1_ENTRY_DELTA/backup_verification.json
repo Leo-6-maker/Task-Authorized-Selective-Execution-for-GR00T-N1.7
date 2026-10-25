@@ -1,0 +1,47 @@
+{
+  "status": "ORIGINAL84_AND_NEW_CPU_PROOFS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue25-resource84-full-01",
+      "bytes": 2246177125,
+      "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+      "artifacts": 11331,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue25-resource84-proof-01",
+      "bytes": 42446560,
+      "sha256": "0c2aadb4b86508662d0a5d5d4dea326f19c9d4c9645cadd467dfa359f1db8e23",
+      "artifacts": 1767,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue25-gpu1-resource-request-01",
+      "bytes": 3521,
+      "sha256": "7cb8f94d33fa7d8fa16594fd331b426899524a6952d24266cc8ee6c86f5491e8",
+      "artifacts": 10,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue25-gpu1-cpu-proof-02",
+      "bytes": 393916,
+      "sha256": "141b71b0a242c7da95e838a70916914856e7917a270b104059c6cdcd2bc496ea",
+      "artifacts": 840,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue25-gpu1-local-proof-02",
+      "bytes": 144587,
+      "sha256": "99d5bfe221e05a9162c7a94e10f365163115acdbe166c9a89f678163575289fa",
+      "artifacts": 761,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED",
+      "new_model_sim_TEST_calls": 0
+    }
+  ],
+  "reviewer_raw_access": "NOT_INDEPENDENTLY_REHASHED_BY_GPT"
+}
