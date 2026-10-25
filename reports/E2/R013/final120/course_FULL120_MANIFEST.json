@@ -1,0 +1,28 @@
+{
+  "status": "FULL120_COURSE_REVIEW_DRAFT_CURRENT_FILE_IDENTITIES",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 5971,
+      "sha256": "0e3a2d6facba31478b8fb511aa2f497bc566956d815a32177014e78e744a0963"
+    },
+    {
+      "path": "FULL120_VERIFICATION.json",
+      "bytes": 3059,
+      "sha256": "ea0d2afe2c37e0da81193633c37a7e119b854657fa5de6cb7b3fed59437cf313"
+    },
+    {
+      "path": "ME6401-full120-review-v3.pptx",
+      "bytes": 236896,
+      "sha256": "9ace8d2172635c1fde1272eb69c7e5b7e29fa35cd9a2a6b9bf04a2647f7a9b00"
+    },
+    {
+      "path": "SOURCE_R013_FINAL.zip",
+      "bytes": 259224,
+      "sha256": "e3553716d8cd01dc13d9963b9329e73bf38c13cc4c9f7e35dae2e7dd9c66e3d3"
+    }
+  ],
+  "historical_manifest_note": "MANIFEST.json is preserved dated partial84 snapshot; its README hash refers to the previous README bytes in commit45a0e773c743a03867d5361e33178143d853498a, before the full120 update. FULL120_MANIFEST.json is the current delivery index.",
+  "independent_R3": "PENDING",
+  "course_submission": "PENDING"
+}
