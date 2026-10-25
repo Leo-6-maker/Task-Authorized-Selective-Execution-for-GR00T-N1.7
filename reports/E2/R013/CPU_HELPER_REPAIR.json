@@ -1,0 +1,10 @@
+{
+  "scope": "CPU_ONLY_EVIDENCE_VALIDATOR_FIELD_NAME_CORRECTION",
+  "first_actual_exit": 1,
+  "failure": "KeyError: current_remote_state; actual schema key is remote_current_state",
+  "repair": "Read the existing remote_current_state key; source/audit/evidence unchanged",
+  "subsequent_normal_actual_exit": 0,
+  "subsequent_optimized_actual_exit": 0,
+  "all_failure_receipts_retained_private": true,
+  "new_model_sim_TEST_calls": 0
+}

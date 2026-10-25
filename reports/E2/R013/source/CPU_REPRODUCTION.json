@@ -1,0 +1,21 @@
+{
+  "status": "EXACT_FROZEN_R013_SOURCEZIP_CPU_REPRO_VERIFIED",
+  "source_files": 108,
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "zip_sha256": "3232ae484d7b413907162dcba1d9ad64ef0319d0a92aeb9ff5bf5cccb20b8b86",
+  "tests": [
+    {
+      "mode": "normal",
+      "tests": 134,
+      "actual_exit": 0,
+      "log_sha256": "206ccb253b7aa744c7a1b837067594d5789c535718ef83de12a332f73f1a79e6"
+    },
+    {
+      "mode": "optimized",
+      "tests": 134,
+      "actual_exit": 0,
+      "log_sha256": "b91da46bf5602fecf43742c2c39853ee4cb6ad5a910e85f70d3b99564c8cabcc"
+    }
+  ],
+  "new_model_sim_TEST_calls": 0
+}

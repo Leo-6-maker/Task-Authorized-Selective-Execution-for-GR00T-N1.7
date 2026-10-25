@@ -1,0 +1,34 @@
+{
+  "status": "LOCAL_MONITOR_TRANSPORT_ERROR_REMOTE_STOP_AND_COUNT_NOT_YET_CONFIRMED",
+  "last_verified_checkpoint": 88,
+  "checkpoint_controller_actual_exit": 1,
+  "status_observation_actual_exits": [
+    255,
+    255
+  ],
+  "stop_marker_delivery_actual_exit": 255,
+  "last_verified_consumed": 88,
+  "last_verified_eligible": 85,
+  "last_verified_counts": {
+    "SUCCESS": 65,
+    "TIME_LIMIT": 10,
+    "SEMANTIC_ABORT": 10,
+    "CLEANUP_ERROR": 3,
+    "NOT_STARTED": 32
+  },
+  "current_remote_count": null,
+  "current_native_server_exit": null,
+  "current_0092_checkpoint": null,
+  "checkpoint_release_after0088": false,
+  "current_reservation_bounds_from_frozen_operator": [
+    88,
+    92
+  ],
+  "new_TEST_error": "UNKNOWN_NOT_INFERRED",
+  "foreign_tasks_signalled": false,
+  "resource_modified": false,
+  "bounded_local_operator_checkpoint_wait_seconds": 1800,
+  "scope": "At checkpoint0092 the native data-only operator cannot proceed without locally verified release; actual shutdown pending remote evidence",
+  "next_action": "Restore trusted SSH, write/retain CHECKPOINT_ERROR marker, reconcile all actual run IDs and exits, two-copy raw preservation, then independent incident/resume disposition; no automatic restart",
+  "recorded_at_sgt": "2026-10-25T13:38:09.622091+08:00"
+}

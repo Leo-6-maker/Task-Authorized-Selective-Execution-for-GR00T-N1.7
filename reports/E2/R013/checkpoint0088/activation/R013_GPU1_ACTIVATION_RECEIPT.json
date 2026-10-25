@@ -1,0 +1,50 @@
+{
+  "status": "R013_GPU1_ACTIVATION_PREREQUISITES_VERIFIED",
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "authorization": {
+    "authorized_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "epoch": "E2",
+    "protocol_id": "TASE-002-v1.0",
+    "selected_k": 3,
+    "maximum_attempts": 120,
+    "test_config_sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17",
+    "test_cells_sha256": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+    "protocol_lock_sha256": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "splits_sha256": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+    "selection_sha256": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+    "review_id": "R013-2026-10-25-E2-GPU1-SHARED-MEMORY",
+    "review_commit": "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+    "review_path": "docs/reviews/R013-E2-TEST-AUTHORIZED.json",
+    "review_blob": "48573c7b35361c150a8961d35b1255cd502dbea7"
+  },
+  "local_archives": {
+    "status": "LOCAL_SECOND_COPY_ALL_ARCHIVES_WHOLE_AND_EVERY_MEMBER_REVERIFIED",
+    "archives": [
+      {
+        "stage": "issue25-resource84-full-01",
+        "bytes": 2246177125,
+        "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+        "members": 11331
+      }
+    ],
+    "actual_exit": 0,
+    "checked_at": "2026-10-25T05:19:23.361268+00:00"
+  },
+  "remote_archives": [
+    {
+      "stage": "issue25-resource84-full-01",
+      "bytes": 2246177125,
+      "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+      "members": 11331,
+      "all_live_sources_match": true
+    }
+  ],
+  "original_consumed": 84,
+  "first_unopened": "e2-test-0085",
+  "mandatory_checkpoint": "e2-test-0086",
+  "orchestration_sha256": {
+    "run_frozen_continuation.py": "19ce7372708d87a392a5094cdb8257bd10166f518c0b59032d25977d75607a26",
+    "backup_checkpoint.py": "f322251586d3c0883286233a02164d81470aa3f5a837360e218c879887c1b3dd"
+  }
+}
