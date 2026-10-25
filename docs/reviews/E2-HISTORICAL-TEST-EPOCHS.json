@@ -15,6 +15,20 @@
       "backup_proof_path": "reports/E2/R011/backup_verification.json",
       "consumed_count": 16,
       "original_archive_sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6"
+    },
+    {
+      "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+      "grant_commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
+      "grant_path": "docs/reviews/R012-E2-TEST-AUTHORIZED.json",
+      "review_commit": "e43c3ef9a48320a3be52e4d48a43b85a2c1514f1",
+      "review_path": "docs/reviews/R013-GPU1-parallel-resource-delta-review.md",
+      "report_head": "9178913a10bd32fab9e2701a6a74e86c77d210fb",
+      "ledger_path": "reports/E2/R012/checkpoint0084/review/attempt_ledger_120.json",
+      "manifest_path": "reports/E2/R012/checkpoint0084/review/manifest.json",
+      "receipt_origins_path": "reports/E2/R012/checkpoint0084/receipt_origins.json",
+      "backup_proof_path": "reports/E2/R012/checkpoint0084/backup_verification.json",
+      "consumed_count": 84,
+      "original_archive_sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad"
     }
   ]
 }
