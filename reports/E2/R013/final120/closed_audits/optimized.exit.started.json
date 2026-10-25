@@ -1,0 +1,16 @@
+{
+  "started_at_sgt": "2026-10-25T15:16:22.362206+08:00",
+  "wrapper_pid": 632683,
+  "child_pid": 632684,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "-O",
+    "<E2_WORKSPACE>/operator/issue28-frozen-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue28-frozen-code",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue28-closed-audit-01/optimized.audit.json"
+  ]
+}

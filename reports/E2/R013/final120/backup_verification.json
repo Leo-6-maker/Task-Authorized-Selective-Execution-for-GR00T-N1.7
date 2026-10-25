@@ -1,0 +1,255 @@
+{
+  "status": "ALL120_ORIGINAL_AND_EXECUTOR_PROOFS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+  "archives": [
+    {
+      "stage": "issue25-resource84-full-01",
+      "bytes": 2246177125,
+      "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+      "artifacts": 11331,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-test-checkpoint-0086",
+      "bytes": 37755942,
+      "sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
+      "artifacts": 266,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-test-checkpoint-0088",
+      "bytes": 67976166,
+      "sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
+      "artifacts": 353,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-test-checkpoint-0092",
+      "bytes": 73695611,
+      "sha256": "022c9a05ff4e7207cacd683190b90a216cb73f8a3b88e051aacf919723048aa6",
+      "artifacts": 445,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-recovered92-coverage-01",
+      "bytes": 1104750,
+      "sha256": "5fb3eea76f6e1d584dcec9c2bbff0e51ef5a0a8ee25016d6b1dee554e2cc6595",
+      "artifacts": 64,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0096",
+      "bytes": 80236956,
+      "sha256": "9743e25f72b7d2c653f173ce21395c2cdff1f1d60f82527565ab55576210d099",
+      "artifacts": 503,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0100",
+      "bytes": 77692879,
+      "sha256": "9a8b5a9305a757cacc86adb8f84359bd04e3a3eb1ab7f2b138904bc21b9b33ba",
+      "artifacts": 461,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0104",
+      "bytes": 226522236,
+      "sha256": "82399c7ff4b09e222f3342c52325b9af6de7d606ac29a214d13ffb4baccf3ca9",
+      "artifacts": 1077,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0108",
+      "bytes": 71183608,
+      "sha256": "1e711049c6971a420baf2668957ab83c20a139440c608a2c806b2d0c8148db26",
+      "artifacts": 437,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0112",
+      "bytes": 237174974,
+      "sha256": "aacab7d35021a0c98ee066a9133bfefda96ad2327af721b4e9384ccd2268c825",
+      "artifacts": 1029,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0116",
+      "bytes": 224799146,
+      "sha256": "abb004e1888617188f7df08ec7ff58a2a7b248f07ea2571ba9a3527d7e3995cb",
+      "artifacts": 1037,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-resume92-test-checkpoint-0120",
+      "bytes": 243520604,
+      "sha256": "6a19a184c9506701bda841af0b7d24e3b7c74a1b3f7242442cff3dafcb28dc4f",
+      "artifacts": 1069,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-final120-original-coverage-01",
+      "bytes": 836321,
+      "sha256": "1c75486418dffaae40977fcd3a7f65d6c89b2f5855e34b5ae2d1b980a00cacd3",
+      "artifacts": 60,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-final120-review-proof-01",
+      "bytes": 45472580,
+      "sha256": "616cc772e0a1e1c97af977779b7178a728cb058c08d1534758b2490c13dff9ec",
+      "artifacts": 2461,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    },
+    {
+      "stage": "issue28-local-cpu-handoff-01",
+      "bytes": 498529,
+      "sha256": "4502711d2acaf7ae93d592e8f5419e9864c478ef3aa0ae8e8796f65202aa84f7",
+      "artifacts": 440,
+      "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "independent_review": "NOT_PERFORMED"
+    }
+  ],
+  "complete_member_coverage": {
+    "status": "COMPLETE120_ORIGINALS_TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_COVERAGE_VERIFIED",
+    "complete_original_members": 18070,
+    "canonical_complete120_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+    "archives": [
+      {
+        "stage": "issue25-resource84-full-01",
+        "bytes": 2246177125,
+        "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad",
+        "artifacts": 11331,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0086",
+        "bytes": 37755942,
+        "sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392",
+        "artifacts": 266,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0088",
+        "bytes": 67976166,
+        "sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283",
+        "artifacts": 353,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0092",
+        "bytes": 73695611,
+        "sha256": "022c9a05ff4e7207cacd683190b90a216cb73f8a3b88e051aacf919723048aa6",
+        "artifacts": 445,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-recovered92-coverage-01",
+        "bytes": 1104750,
+        "sha256": "5fb3eea76f6e1d584dcec9c2bbff0e51ef5a0a8ee25016d6b1dee554e2cc6595",
+        "artifacts": 64,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0096",
+        "bytes": 80236956,
+        "sha256": "9743e25f72b7d2c653f173ce21395c2cdff1f1d60f82527565ab55576210d099",
+        "artifacts": 503,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0100",
+        "bytes": 77692879,
+        "sha256": "9a8b5a9305a757cacc86adb8f84359bd04e3a3eb1ab7f2b138904bc21b9b33ba",
+        "artifacts": 461,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0104",
+        "bytes": 226522236,
+        "sha256": "82399c7ff4b09e222f3342c52325b9af6de7d606ac29a214d13ffb4baccf3ca9",
+        "artifacts": 1077,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0108",
+        "bytes": 71183608,
+        "sha256": "1e711049c6971a420baf2668957ab83c20a139440c608a2c806b2d0c8148db26",
+        "artifacts": 437,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0112",
+        "bytes": 237174974,
+        "sha256": "aacab7d35021a0c98ee066a9133bfefda96ad2327af721b4e9384ccd2268c825",
+        "artifacts": 1029,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0116",
+        "bytes": 224799146,
+        "sha256": "abb004e1888617188f7df08ec7ff58a2a7b248f07ea2571ba9a3527d7e3995cb",
+        "artifacts": 1037,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0120",
+        "bytes": 243520604,
+        "sha256": "6a19a184c9506701bda841af0b7d24e3b7c74a1b3f7242442cff3dafcb28dc4f",
+        "artifacts": 1069,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      },
+      {
+        "stage": "issue28-final120-original-coverage-01",
+        "bytes": 836321,
+        "sha256": "1c75486418dffaae40977fcd3a7f65d6c89b2f5855e34b5ae2d1b980a00cacd3",
+        "artifacts": 60,
+        "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+        "independent_review": "NOT_PERFORMED"
+      }
+    ],
+    "model_sim_TEST_calls": 0,
+    "actual_exit": 0,
+    "standalone_secondary120_copy_complete": false,
+    "prior_redundant92_pending_copy_preserved": true,
+    "standalone_secondary120_copy_not_attempted": true,
+    "method": "Exact path/bytes/SHA256 cover over all existing whole/member-verified two-location archives plus final closure delta; no claim of complete standalone secondary120 archive",
+    "checked_at_sgt": "2026-10-25T15:27:25.328743+08:00"
+  },
+  "primary_standalone_original": {
+    "stage": "issue28-final120-full-01",
+    "bytes": 3586598503,
+    "sha256": "45a1bd8309db17b2df177b9da4ac0d5d1224a033400042c8f61bc553755e0de3",
+    "artifacts": 18070,
+    "reserved": 120,
+    "unstarted": 0,
+    "status": "PRIMARY_WHOLE_AND_EVERY_MEMBER_VERIFIED_SECOND_COPY_REQUIRED"
+  },
+  "standalone_secondary_full120_copy_complete": false,
+  "explanation": "All original120 bytes are present in each of two locations via individually whole/member-verified archive dependencies and final closure delta. Do not confuse member-complete coverage with a duplicated standalone compressed archive.",
+  "reviewer_scope": "Operator verification; GPT has not independently rehashed private originals"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "READY",
+  "environment_instances": 1,
+  "explicit_native_resets": 1,
+  "settling_steps": 10,
+  "constructor_internal_initialization": true,
+  "hard_reset_rebuild": true,
+  "egl_gpu_indices": [
+    1
+  ],
+  "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2"
+}

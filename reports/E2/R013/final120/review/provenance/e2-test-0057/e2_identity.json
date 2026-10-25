@@ -1,0 +1,60 @@
+{
+  "cell": {
+    "run_id": "e2-test-0057",
+    "task": "cream_cheese",
+    "init_index": 10,
+    "init_hash": "857e679900c5c218fda28cc57730791f5c867916e7599c1ab8800a746797b5d2",
+    "condition": "C0",
+    "system": "B0",
+    "scenario_id": "E2-TEST-cream_cheese-i10-C0",
+    "policy_seed": 640520,
+    "environment_seed": 640521,
+    "policy_target": "cream_cheese"
+  },
+  "actual_policy_language": "pick up the cream cheese and place it in the basket",
+  "true_task_target": "cream_cheese_1",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "baseline_positions": {
+    "cream_cheese_1": [
+      0.05262693071995348,
+      -0.10060413484742439,
+      0.008921477418607878
+    ],
+    "basket_1": [
+      -0.007323722889961812,
+      0.2521845368018853,
+      -0.0045823453265843445
+    ],
+    "alphabet_soup_1": [
+      -0.11909425574469136,
+      -0.23978121735098315,
+      0.038392910369975934
+    ],
+    "milk_1": [
+      -0.14995842752747401,
+      0.0613622297512368,
+      0.06973547626138672
+    ],
+    "tomato_sauce_1": [
+      0.1002390490713704,
+      -0.19993920296124798,
+      0.03839259641983711
+    ],
+    "butter_1": [
+      0.15292572485452724,
+      0.028030096351727058,
+      0.008695477418599518
+    ],
+    "orange_juice_1": [
+      -0.19999993479424943,
+      -0.0800016278462105,
+      0.06973547626138668
+    ]
+  },
+  "oracle_parameters": {
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_control_steps": 2,
+    "oracle_relative_motion_tolerance_m": 0.01
+  }
+}

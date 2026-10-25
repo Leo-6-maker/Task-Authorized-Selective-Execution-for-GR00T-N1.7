@@ -1,3 +1,5 @@
+Issue28/R013 最新：120个原定TEST已全部采集，89SUCCESS+18TIME_LIMIT+10SEMANTIC_ABORT+原0010/0014/0016三次CLEANUP_ERROR；117主分析已知、3删失、0未启动。最终operator/server实际0，60worker及6server退出/PID核验通过。完整18,070原件两地逐成员/整包依赖覆盖核验通过；运行始终exact795，代码/科学冻结未改。R3_READY_FOR_INDEPENDENT_REVIEW，不代表GPT已审核；现有grant未由执行者改写，预算已耗尽不再调用模型/仿真。见 reports/E2/R013/final120/R3_HANDOFF.md。旧断网/失败收据及下方历史状态保留，不重跑、不merge。
+
 Issue28/R013 最新：0085–0088真实SUCCESS/exit0，强制0086及0088结构/双备份通过。随后本地checkpoint控制器SSH超时exit1，状态读取和远端停止标记交接均255；不再放行检查点。最后核实88已消耗=65SUCCESS+10TIME_LIMIT+10SEMANTIC_ABORT+历史3CLEANUP_ERROR/32当时未启动；当前远端数量、0089–0092和native退出均UNKNOWN。禁止推定退出或重启/重跑。唯一下一步恢复可信SSH、保留停止标记并逐原ID对账/保全，之后提交独立恢复决定。运行exact795与科学冻结未改；R3及课程最终结果未完成。见 reports/E2/R013/R013_HANDOFF.md。
 
 Issue28/R013: exact79510d9a302eeb7820f7ed35463c29bc649e1431、grant085b1dafcb53e069f8ad057e58646385a5f0bda1已获独立GPT授权GPU1 ONLY。实时预检实际exit0，原84/81有效+3清理错误及11331原件双副本全量核验通过；R012已封存仅历史。新唯一server启动中，无探测推理请求；按0085/0086一次执行、0086完整检查后再0087–0120。实际进度以 reports/E2/automation/AUTONOMOUS_STATUS.json 为准。科学冻结不变，不重跑、不自签R3、不merge。

@@ -1,0 +1,482 @@
+[
+  {
+    "run_id": "e2-test-0002",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0004",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0006",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0008",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0010",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "CLEANUP_ERROR"
+  },
+  {
+    "run_id": "e2-test-0012",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0014",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": null,
+    "close_status": null,
+    "status": "CLEANUP_ERROR"
+  },
+  {
+    "run_id": "e2-test-0016",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": false,
+    "close_status": "NONZERO_EXIT",
+    "status": "CLEANUP_ERROR"
+  },
+  {
+    "run_id": "e2-test-0018",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0020",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0022",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0024",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0026",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0028",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0030",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0032",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0034",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0036",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0038",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0040",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0042",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0044",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0046",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0048",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0050",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0052",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0054",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0056",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0058",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0060",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0062",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0064",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0066",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0068",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0070",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0072",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0074",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0076",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0078",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0080",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SEMANTIC_ABORT"
+  },
+  {
+    "run_id": "e2-test-0082",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0084",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0086",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0088",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0090",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0092",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0094",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0096",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0098",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0100",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0102",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "TIME_LIMIT"
+  },
+  {
+    "run_id": "e2-test-0104",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0106",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0108",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0110",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0112",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "TIME_LIMIT"
+  },
+  {
+    "run_id": "e2-test-0114",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0116",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "TIME_LIMIT"
+  },
+  {
+    "run_id": "e2-test-0118",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "SUCCESS"
+  },
+  {
+    "run_id": "e2-test-0120",
+    "actual_worker_exit": 0,
+    "PID_absent": true,
+    "clean_close": true,
+    "close_status": "CLEAN",
+    "status": "TIME_LIMIT"
+  }
+]

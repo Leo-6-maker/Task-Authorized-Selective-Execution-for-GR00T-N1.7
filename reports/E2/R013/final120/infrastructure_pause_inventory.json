@@ -1,0 +1,25 @@
+{
+  "not_TEST_status_relabels": true,
+  "pauses": [
+    {
+      "after_original": 84,
+      "reason": "Pre-admission GPU resource change;0085 not reserved at that stop",
+      "operator_actual_exit": 1,
+      "native_server_actual_exit": 0
+    },
+    {
+      "after_original": 92,
+      "reason": "SSH loss prevented local backup/release. Closed original0092 reached bounded checkpoint wait timeout",
+      "operator_actual_exit": 1,
+      "native_server_actual_exit": 0,
+      "new_TEST_errors": 0,
+      "resolution": "Owner explicitly continued; unchanged active R013, complete92 provenance/two-location checks and fresh GPU1 preflight passed before new session02 from0093"
+    }
+  ],
+  "permanently_censored_TEST_errors": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "frozen_system_error": "RUNTIME_ERROR only;lower0 never implies no operational/infrastructure failure"
+}

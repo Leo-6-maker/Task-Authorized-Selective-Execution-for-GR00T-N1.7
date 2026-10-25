@@ -1,0 +1,60 @@
+{
+  "cell": {
+    "run_id": "e2-test-0113",
+    "task": "ketchup",
+    "init_index": 14,
+    "init_hash": "dbb1d8bcc32712569e568291a29bbc7f98d6c84adcda5a669c089b31f44f4edc",
+    "condition": "C0",
+    "system": "B0",
+    "scenario_id": "E2-TEST-ketchup-i14-C0",
+    "policy_seed": 640628,
+    "environment_seed": 640629,
+    "policy_target": "ketchup"
+  },
+  "actual_policy_language": "pick up the ketchup and place it in the basket",
+  "true_task_target": "ketchup_1",
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "baseline_positions": {
+    "ketchup_1": [
+      -0.11999706998658925,
+      -0.2399975853602489,
+      0.07240547270045598
+    ],
+    "basket_1": [
+      0.007228784428788825,
+      0.27043692278831827,
+      -0.0045823453265843445
+    ],
+    "bbq_sauce_1": [
+      0.05751844579766012,
+      -0.10781548029072698,
+      0.0546254774182291
+    ],
+    "salad_dressing_1": [
+      -0.1499992938338919,
+      0.06000870255428862,
+      0.0727054492797662
+    ],
+    "alphabet_soup_1": [
+      0.10090574425530864,
+      -0.19978121735098317,
+      0.038392910369975934
+    ],
+    "cream_cheese_1": [
+      0.14848717727837385,
+      0.03232220439814361,
+      0.008921477418607878
+    ],
+    "milk_1": [
+      -0.20391839964564537,
+      -0.08168642261235358,
+      0.06973547626138672
+    ]
+  },
+  "oracle_parameters": {
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_control_steps": 2,
+    "oracle_relative_motion_tolerance_m": 0.01
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "started_at_sgt": "2026-10-25T13:23:17.593971+08:00",
+  "wrapper_pid": 511796,
+  "child_pid": 511797,
+  "command": [
+    "<PRIVATE>/envs/server/bin/python",
+    "-u",
+    "-m",
+    "tase.server",
+    "--model",
+    "<PRIVATE>/checkpoints/libero_object",
+    "--output",
+    "<PRIVATE>/runs/test-server-r013-01",
+    "--allocation-record",
+    "<PRIVATE>/operator/issue28-preflight-02/gpu-allocation.local.json",
+    "--audit-rng",
+    "--epoch",
+    "E2",
+    "--port",
+    "5565"
+  ]
+}

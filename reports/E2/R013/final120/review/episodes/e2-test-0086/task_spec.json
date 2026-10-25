@@ -1,0 +1,190 @@
+{
+  "target": "ketchup_1",
+  "basket": "basket_1",
+  "objects": {
+    "ketchup_1": {
+      "body_name": "ketchup_1_main",
+      "body_id": 19,
+      "geom_names": [
+        "ketchup_1_g1",
+        "ketchup_1_g2",
+        "ketchup_1_g3",
+        "ketchup_1_g4",
+        "ketchup_1_g5",
+        "ketchup_1_g6",
+        "ketchup_1_g7",
+        "ketchup_1_g8",
+        "ketchup_1_g9",
+        "ketchup_1_g10",
+        "ketchup_1_g11",
+        "ketchup_1_g12"
+      ],
+      "geoms": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    "basket_1": {
+      "body_name": "basket_1_main",
+      "body_id": 20,
+      "geom_names": [
+        "basket_1_g1",
+        "basket_1_g2",
+        "basket_1_g3",
+        "basket_1_g4",
+        "basket_1_g5"
+      ],
+      "geoms": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    "bbq_sauce_1": {
+      "body_name": "bbq_sauce_1_main",
+      "body_id": 21,
+      "geom_names": [
+        "bbq_sauce_1_g1",
+        "bbq_sauce_1_g2",
+        "bbq_sauce_1_g3"
+      ],
+      "geoms": [
+        92,
+        93,
+        94
+      ]
+    },
+    "salad_dressing_1": {
+      "body_name": "salad_dressing_1_main",
+      "body_id": 22,
+      "geom_names": [
+        "salad_dressing_1_g1",
+        "salad_dressing_1_g2",
+        "salad_dressing_1_g3",
+        "salad_dressing_1_g4",
+        "salad_dressing_1_g5",
+        "salad_dressing_1_g6",
+        "salad_dressing_1_g7",
+        "salad_dressing_1_g8",
+        "salad_dressing_1_g9",
+        "salad_dressing_1_g10",
+        "salad_dressing_1_g11",
+        "salad_dressing_1_g12",
+        "salad_dressing_1_g13",
+        "salad_dressing_1_g14",
+        "salad_dressing_1_g15"
+      ],
+      "geoms": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ]
+    },
+    "alphabet_soup_1": {
+      "body_name": "alphabet_soup_1_main",
+      "body_id": 23,
+      "geom_names": [
+        "alphabet_soup_1_g1",
+        "alphabet_soup_1_g2",
+        "alphabet_soup_1_g3",
+        "alphabet_soup_1_g4",
+        "alphabet_soup_1_g5",
+        "alphabet_soup_1_g6",
+        "alphabet_soup_1_g7",
+        "alphabet_soup_1_g8",
+        "alphabet_soup_1_g9",
+        "alphabet_soup_1_g10",
+        "alphabet_soup_1_g11",
+        "alphabet_soup_1_g12",
+        "alphabet_soup_1_g13",
+        "alphabet_soup_1_g14",
+        "alphabet_soup_1_g15",
+        "alphabet_soup_1_g16",
+        "alphabet_soup_1_g17",
+        "alphabet_soup_1_g18",
+        "alphabet_soup_1_g19",
+        "alphabet_soup_1_g20",
+        "alphabet_soup_1_g21"
+      ],
+      "geoms": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ]
+    },
+    "cream_cheese_1": {
+      "body_name": "cream_cheese_1_main",
+      "body_id": 24,
+      "geom_names": [
+        "cream_cheese_1_g1"
+      ],
+      "geoms": [
+        134
+      ]
+    },
+    "milk_1": {
+      "body_name": "milk_1_main",
+      "body_id": 25,
+      "geom_names": [
+        "milk_1_g1",
+        "milk_1_g2",
+        "milk_1_g3",
+        "milk_1_g4"
+      ],
+      "geoms": [
+        136,
+        137,
+        138,
+        139
+      ]
+    }
+  },
+  "left_geoms": [
+    68
+  ],
+  "right_geoms": [
+    71
+  ]
+}

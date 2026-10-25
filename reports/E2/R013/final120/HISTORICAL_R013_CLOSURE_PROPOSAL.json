@@ -1,0 +1,17 @@
+{
+  "status": "EXECUTOR_PROPOSAL_NOT_AN_AUTHORIZATION",
+  "execution_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "grant_commit": "085b1dafcb53e069f8ad057e58646385a5f0bda1",
+  "grant_path": "docs/reviews/R013-E2-TEST-AUTHORIZED.json",
+  "consumed_count": 120,
+  "ledger_path": "reports/E2/R013/final120/review/attempt_ledger_120.json",
+  "manifest_path": "reports/E2/R013/final120/review/manifest.json",
+  "receipt_origins_path": "reports/E2/R013/final120/receipt_origins.json",
+  "backup_proof_path": "reports/E2/R013/final120/backup_verification.json",
+  "original_archive_sha256": "1c75486418dffaae40977fcd3a7f65d6c89b2f5855e34b5ae2d1b980a00cacd3",
+  "original_archive_type": "COMPOSITE_COMPLETE_ORIGINAL_MEMBER_COVERAGE_ROOT_WITH_EXPLICIT_DEPENDENCIES_NOT_STANDALONE",
+  "review_commit": null,
+  "review_path": null,
+  "report_head": null,
+  "no_new_TEST_requested": true
+}
