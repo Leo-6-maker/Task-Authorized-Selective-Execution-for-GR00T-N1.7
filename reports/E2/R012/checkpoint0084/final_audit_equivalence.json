@@ -1,0 +1,18 @@
+{
+  "scope": "READ_ONLY_NO_MODEL_OR_SIM_REQUEST",
+  "ordinary_optimized_and_safe_export_exactly_equal": true,
+  "planned": 120,
+  "reserved": 84,
+  "full_outcomes": 81,
+  "censored_operational_errors": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "unstarted": 36,
+  "frozen_experiment_status": "INCOMPLETE",
+  "explanation": "Acquisition incomplete84/120,81 known outcomes and3 historical cleanup errors;36 genuinely unopened. Resource change stopped the operator before0085. No final efficacy approval is claimed.",
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 640500,
+  "candidate_UAR": null
+}

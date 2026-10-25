@@ -1,0 +1,11 @@
+{
+  "closed_new_units": 68,
+  "consumed_before_resume": 16,
+  "failure": {
+    "type": "RuntimeError",
+    "message": "allocated GPU has unexpected process; no new reservation"
+  },
+  "server_launcher_returncode": 0,
+  "head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "completed_unix": 1792893397.392506
+}

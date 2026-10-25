@@ -1,0 +1,21 @@
+{
+  "status": "STOPPED_BEFORE_0085_RESOURCE_UNAVAILABLE",
+  "unexpected_process_count": 1,
+  "no_foreign_process_signalled": true,
+  "gpu_memory": [
+    {
+      "index": 0,
+      "free_mib": 12670,
+      "total_mib": 32760
+    },
+    {
+      "index": 1,
+      "free_mib": 10121,
+      "total_mib": 16376
+    }
+  ],
+  "new_reservations_after0084": 0,
+  "new_TEST_errors": 0,
+  "stop_receipt_sha256": "ac06afc1e7ce6c1dd458e37feea817cab1d475f5a62c71abdb517627d5be7865",
+  "actual_outer_operator_exit": 1
+}

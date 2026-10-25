@@ -1,0 +1,210 @@
+{
+  "target": "alphabet_soup_1",
+  "basket": "basket_1",
+  "objects": {
+    "alphabet_soup_1": {
+      "body_name": "alphabet_soup_1_main",
+      "body_id": 19,
+      "geom_names": [
+        "alphabet_soup_1_g1",
+        "alphabet_soup_1_g2",
+        "alphabet_soup_1_g3",
+        "alphabet_soup_1_g4",
+        "alphabet_soup_1_g5",
+        "alphabet_soup_1_g6",
+        "alphabet_soup_1_g7",
+        "alphabet_soup_1_g8",
+        "alphabet_soup_1_g9",
+        "alphabet_soup_1_g10",
+        "alphabet_soup_1_g11",
+        "alphabet_soup_1_g12",
+        "alphabet_soup_1_g13",
+        "alphabet_soup_1_g14",
+        "alphabet_soup_1_g15",
+        "alphabet_soup_1_g16",
+        "alphabet_soup_1_g17",
+        "alphabet_soup_1_g18",
+        "alphabet_soup_1_g19",
+        "alphabet_soup_1_g20",
+        "alphabet_soup_1_g21"
+      ],
+      "geoms": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    "basket_1": {
+      "body_name": "basket_1_main",
+      "body_id": 20,
+      "geom_names": [
+        "basket_1_g1",
+        "basket_1_g2",
+        "basket_1_g3",
+        "basket_1_g4",
+        "basket_1_g5"
+      ],
+      "geoms": [
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    "salad_dressing_1": {
+      "body_name": "salad_dressing_1_main",
+      "body_id": 21,
+      "geom_names": [
+        "salad_dressing_1_g1",
+        "salad_dressing_1_g2",
+        "salad_dressing_1_g3",
+        "salad_dressing_1_g4",
+        "salad_dressing_1_g5",
+        "salad_dressing_1_g6",
+        "salad_dressing_1_g7",
+        "salad_dressing_1_g8",
+        "salad_dressing_1_g9",
+        "salad_dressing_1_g10",
+        "salad_dressing_1_g11",
+        "salad_dressing_1_g12",
+        "salad_dressing_1_g13",
+        "salad_dressing_1_g14",
+        "salad_dressing_1_g15"
+      ],
+      "geoms": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    "cream_cheese_1": {
+      "body_name": "cream_cheese_1_main",
+      "body_id": 22,
+      "geom_names": [
+        "cream_cheese_1_g1"
+      ],
+      "geoms": [
+        117
+      ]
+    },
+    "milk_1": {
+      "body_name": "milk_1_main",
+      "body_id": 23,
+      "geom_names": [
+        "milk_1_g1",
+        "milk_1_g2",
+        "milk_1_g3",
+        "milk_1_g4"
+      ],
+      "geoms": [
+        119,
+        120,
+        121,
+        122
+      ]
+    },
+    "tomato_sauce_1": {
+      "body_name": "tomato_sauce_1_main",
+      "body_id": 24,
+      "geom_names": [
+        "tomato_sauce_1_g1",
+        "tomato_sauce_1_g2",
+        "tomato_sauce_1_g3",
+        "tomato_sauce_1_g4",
+        "tomato_sauce_1_g5",
+        "tomato_sauce_1_g6",
+        "tomato_sauce_1_g7",
+        "tomato_sauce_1_g8",
+        "tomato_sauce_1_g9",
+        "tomato_sauce_1_g10",
+        "tomato_sauce_1_g11",
+        "tomato_sauce_1_g12",
+        "tomato_sauce_1_g13",
+        "tomato_sauce_1_g14",
+        "tomato_sauce_1_g15",
+        "tomato_sauce_1_g16",
+        "tomato_sauce_1_g17",
+        "tomato_sauce_1_g18",
+        "tomato_sauce_1_g19",
+        "tomato_sauce_1_g20",
+        "tomato_sauce_1_g21",
+        "tomato_sauce_1_g22",
+        "tomato_sauce_1_g23",
+        "tomato_sauce_1_g24"
+      ],
+      "geoms": [
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147
+      ]
+    },
+    "butter_1": {
+      "body_name": "butter_1_main",
+      "body_id": 25,
+      "geom_names": [
+        "butter_1_g1"
+      ],
+      "geoms": [
+        149
+      ]
+    }
+  },
+  "left_geoms": [
+    68
+  ],
+  "right_geoms": [
+    71
+  ]
+}

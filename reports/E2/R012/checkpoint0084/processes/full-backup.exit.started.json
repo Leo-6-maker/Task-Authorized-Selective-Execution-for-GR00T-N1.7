@@ -1,0 +1,9 @@
+{
+  "started_at_sgt": "2026-10-25T10:03:38.055701+08:00",
+  "wrapper_pid": 340881,
+  "child_pid": 340882,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue25-resource84-postprocessing-01/backup_closed.py"
+  ]
+}

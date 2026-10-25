@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-25T10:03:02.370625+08:00",
+  "wrapper_pid": 340116,
+  "child_pid": 340117,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue25-frozen-code/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue25-frozen-code",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue25-resource84-audit-01/normal.audit.json"
+  ]
+}

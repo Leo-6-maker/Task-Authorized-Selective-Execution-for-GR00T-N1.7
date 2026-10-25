@@ -1,3 +1,9 @@
+# Latest execution state — Issue25/R012,2026-10-25
+
+84/120 original IDs consumed:61 SUCCESS,10 TIME_LIMIT,10 SEMANTIC_ABORT,and original0010/0014/0016 CLEANUP_ERROR;36 NOT_STARTED,next0085. Mandatory0018 and all four-cell structural/two-copy checkpoints through0084 passed. A new unrelated GPU process triggered the pre-admission resource guard before0085;actual operator exit1,native server exit0,all owned episode/worker/server processes absent. No new TEST error or0085 reservation. Both inspected devices currently fail unchanged free-VRAM requirements. Exact908/R012 and all science stay fixed. CPU audit/export/preservation continues;fresh complete84-prefix preflight and sufficient owner-authorized resources are required before a new uniquely named same908/R012 server. Any executable change requires a fresh independent grant. No retries,self-signing or merge. See [resource-stop handoff](../reports/E2/R012/RESOURCE_STOP_HANDOFF.md) and [current status](../reports/E2/automation/AUTONOMOUS_STATUS.json). Final36/R3/course submission remain incomplete.
+
+---
+
 Issue25/R012：exact908bef373eedf8d008ad8d9a91478e3f719eecfb 已获377fe3b85989e6d1fd105002c3c0c09827598886授权。用户后续明确允许显存充足时GPU0并行，GPU1可考虑；已留证资源覆盖条件，未停止原任务。实时完整预检exit0，0017/0018均SUCCESS/exit0，0018真实MuJoCo关闭握手/实际worker0/句柄释放、配对状态动作/RNG、原16未改及两地备份全通过，开始自主0019–0120，每四格结构核验/备份。任何新异常立即停止并保留原ID；科学冻结/执行代码不改，不自签R3，不merge。详见 reports/E2/R012/PROGRESS.md 和 automation/AUTONOMOUS_STATUS.json。
 
 Issue23/R011：0015 SUCCESS/exit0，0016 CLEANUP_ERROR/exit1，真实执行按规则已停止；16已消耗=13SUCCESS+3CLEANUP_ERROR（0010/0014/0016），104未启动，0017 absent。原14原件全量未改，全16两地1900成员验哈希。真实CPU复现sentinel-ready/exitcodeNone误分类，已修复有界waitpid确认及未来撤销grant的只读历史registry；普通/-O本机及Corelab各123/123 exit0，原16审计完全一致。新CPU代码无TEST许可，READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW_AFTER_R011_0016。下一步独立GPT签新完整Head；不重跑、不merge。详见 reports/E2/R011/RUNTIME_DELTA_HANDOFF.md。

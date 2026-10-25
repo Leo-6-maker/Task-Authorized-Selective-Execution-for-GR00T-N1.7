@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_R012_SOURCEZIP_ALL_MEMBERS_AND_NORMAL_OPTIMIZED123_CPU_REPRO_VERIFIED",
+  "bytes": 255378,
+  "sha256": "be45c2c47db1ece78cb662657466770eb919610a01d4c0aa79fbd5e6786ef600",
+  "source_files": 106,
+  "runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "CPU_suites": [
+    {
+      "mode": "normal",
+      "tests": 123,
+      "actual_exit": 0,
+      "seconds": 29.512,
+      "raw_stderr_sha256": "d5496bc68b8d420d0e6ca74f66ed5f4df9855b0948013c34834566cb0e33e2c7"
+    },
+    {
+      "mode": "optimized",
+      "tests": 123,
+      "actual_exit": 0,
+      "seconds": 29.547,
+      "raw_stderr_sha256": "f7a994ac13f35bf0113200c7ebb9eb0e6e4b2b69825266247ef153bf148f101e"
+    }
+  ],
+  "new_model_MuJoCo_TEST_calls": 0
+}

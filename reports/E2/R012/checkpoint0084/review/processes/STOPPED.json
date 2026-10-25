@@ -1,0 +1,10 @@
+{
+  "failure": {
+    "type": "RuntimeError",
+    "message": "allocated GPU has unexpected process; no new reservation"
+  },
+  "closed_units": 68,
+  "head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "remaining_planned": 36,
+  "consumed_before_resume": 16
+}

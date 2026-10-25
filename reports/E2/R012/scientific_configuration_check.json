@@ -1,0 +1,25 @@
+{
+  "scope": "READ_ONLY_STATIC_SOURCE_BOUNDARY_NO_NEW_CPU_REGRESSION_NEEDED_FOR_REPORT_ONLY_CHANGE",
+  "runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "original_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+  "identical_frozen_science_native_admission_files": [
+    "tase/gate_features.py",
+    "tase/event_oracle.py",
+    "tase/task_spec.py",
+    "tase/execution_gate.py",
+    "tase/epoch_runner.py",
+    "tase/m2_native.py",
+    "tase/snapshot.py",
+    "tase/test_authorization.py",
+    "tase/test_ledger.py",
+    "scripts/e2_run_test.py",
+    "configs/runtime_lock_E2.json",
+    "configs/e2_splits.json",
+    "configs/e2_protocol_lock.json",
+    "configs/e2_calib_selection.json",
+    "configs/e2_test_cells.proposed.json"
+  ],
+  "report_branch_source_diff_from_authorized_runtime": [],
+  "config_sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17",
+  "extra_TEST_calls": 0
+}

@@ -1,3 +1,9 @@
+# Latest execution state — Issue25/R012,2026-10-25
+
+84/120 original IDs consumed:61 SUCCESS,10 TIME_LIMIT,10 SEMANTIC_ABORT,and original0010/0014/0016 CLEANUP_ERROR;36 NOT_STARTED,next0085. Mandatory0018 and all four-cell structural/two-copy checkpoints through0084 passed. A new unrelated GPU process triggered the pre-admission resource guard before0085;actual operator exit1,native server exit0,all owned episode/worker/server processes absent. No new TEST error or0085 reservation. Both inspected devices currently fail unchanged free-VRAM requirements. Exact908/R012 and all science stay fixed. CPU audit/export/preservation continues;fresh complete84-prefix preflight and sufficient owner-authorized resources are required before a new uniquely named same908/R012 server. Any executable change requires a fresh independent grant. No retries,self-signing or merge. See [resource-stop handoff](../reports/E2/R012/RESOURCE_STOP_HANDOFF.md) and [current status](../reports/E2/automation/AUTONOMOUS_STATUS.json). Final36/R3/course submission remain incomplete.
+
+---
+
 # Codex 首轮执行指令 — M0/M1 Native Baseline
 
 **当前任务：在不引入WBC、不训练模型的条件下，跑通官方GR00T N1.7 LIBERO-Object原生执行链，并交付可审核的基线证据。**
