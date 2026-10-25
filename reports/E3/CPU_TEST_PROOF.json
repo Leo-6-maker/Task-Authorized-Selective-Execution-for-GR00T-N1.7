@@ -1,0 +1,40 @@
+{
+  "scope": "SYNTHETIC_CPU_ONLY_134_UNCHANGED_BASELINE_PLUS53_E3_CASES",
+  "suite": {
+    "normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "log_sha256": "c8522b55e15a1ecac7c2a78ae914e35cdcb24066aaf1bb2388f45d5bf4f3155a",
+      "receipt_sha256": "4c2e9fd6f91f9e68de7ef6b6e835bb07b03728dd82d29bab18b33139eddd80a9",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    "optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "log_sha256": "f97df7b811e7d7e0917e465c78fae09b160dc257849f076ed7621dfb7f5483b6",
+      "receipt_sha256": "4e4ec2d1164652eaac617a5cb8d1d26d8097d19b7448d7468b68ed562260819d",
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    }
+  },
+  "real_CPU_subprocess_lifecycle_proxies": "Existing unchanged Shadow lifecycle and native-output handshake tests exercise actual spawn/abnormal exit/timeout/race/cleanup and no-orphan assertions. They do not create MuJoCo or model.",
+  "E3_native_runtime": "NOT_EXECUTED",
+  "new_model_calls": 0,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR"
+}

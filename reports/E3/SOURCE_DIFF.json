@@ -1,0 +1,30 @@
+{
+  "base": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "unchanged_E2_scientific_paths": [],
+  "E3_modules": [
+    "e3/reactive_gate.py",
+    "e3/physics_audit.py",
+    "e3/audit.py",
+    "e3/authorization.py",
+    "e3/manifest.py",
+    "e3/cli.py",
+    "e3/boundary.py",
+    "e3/ledger.py",
+    "e3/__init__.py",
+    "e3/checkpoint.py",
+    "e3/scene_probe.py",
+    "e3/offline.py",
+    "e3/statistics.py",
+    "e3/server_launcher.py",
+    "e3/server.py",
+    "e3/native_runner.py",
+    "e3/supervisor.py",
+    "e3/context.py",
+    "e3/discovery.py",
+    "e3/scene.py"
+  ],
+  "adapter_lineage": "context/native_runner/server are separate E3 adapters derived from pinned E2 files, with unchanged imported scorer/oracle/sampler/Shadow/snapshot/controller transforms. Not claimed native-validated. server_launcher reuses original exclusive native directory handoff helper.",
+  "active_LIBERO_tracked_diff": [],
+  "actual_upstream_head": "dac54b313160c201c450f97df0fd74ebd379c892",
+  "new_model_sim_GPU_calls": 0
+}

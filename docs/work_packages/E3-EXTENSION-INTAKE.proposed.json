@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "created_sgt_date": "2026-10-26",
+  "status": "PROPOSED_CPU_PLANNING_ONLY_NOT_FROZEN_NOT_TEST_AUTHORIZED",
+  "owner_request": "Create a detailed E3 goal plan on GitHub for an execution agent to read",
+  "work_package": "docs/work_packages/E3-EXPANSION-MASTER-PLAN-2026-10-26.md",
+  "project": "ME6401_TASE_E3",
+  "protocol_proposal_id": "E3-001-v1.0",
+  "unaffected_original_E2": {
+    "protocol_id": "TASE-002-v1.0",
+    "latest_runtime_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "R3_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+    "R3_pr_number": 30,
+    "R3_review_status": "PENDING_INDEPENDENT_GPT",
+    "planned": 120,
+    "consumed": 120,
+    "eligible": 117,
+    "censored_original_ids": [
+      "e2-test-0010",
+      "e2-test-0014",
+      "e2-test-0016"
+    ],
+    "unstarted": 0,
+    "mutable": false
+  },
+  "source_pins": {
+    "Isaac_GR00T": "dac54b313160c201c450f97df0fd74ebd379c892",
+    "LIBERO": "8f1084e3132a39270c3a13ebe37270a43ece2a01"
+  },
+  "E3A": {
+    "design": "all remaining 7 LIBERO-Object official tasks in pinned suite; C0/C2 x B0/G",
+    "proposed_run_ids": {
+      "prefix": "e3a-test-",
+      "start": 1,
+      "end": 112,
+      "width": 4
+    },
+    "task_count": 7,
+    "init_index_candidates": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "conditions": [
+      "C0",
+      "C2"
+    ],
+    "arms": [
+      "B0",
+      "G"
+    ],
+    "planned_total": 112,
+    "independent_task_init_clusters": 28,
+    "order": "listed task order, init ascending, C0 then C2, B0 then G",
+    "planned_pair_mappings": [
+      {
+        "A": "salad_dressing",
+        "B": "cream_cheese",
+        "pinned_bddl_git_blob": "f83758a229d7a098eaaa1b2c1bd33093aa7c8e33"
+      },
+      {
+        "A": "bbq_sauce",
+        "B": "ketchup",
+        "pinned_bddl_git_blob": "543355b1164f931cc6da9be8131e6b8924992397"
+      },
+      {
+        "A": "tomato_sauce",
+        "B": "milk",
+        "pinned_bddl_git_blob": "d48e7b34ce9325a9ba9f16aaf5bafb210ee1d028"
+      },
+      {
+        "A": "butter",
+        "B": "orange_juice",
+        "pinned_bddl_git_blob": "358024afc867808122cf9ea9dfbbdb82c86ad703"
+      },
+      {
+        "A": "milk",
+        "B": "chocolate_pudding",
+        "pinned_bddl_git_blob": "6b10f254cd992cdb1da1b2382b4dff396d43fc35"
+      },
+      {
+        "A": "chocolate_pudding",
+        "B": "alphabet_soup",
+        "pinned_bddl_git_blob": "1df6bc98ea2e209103a43d5dd2c23620fea4f12c"
+      },
+      {
+        "A": "orange_juice",
+        "B": "butter",
+        "pinned_bddl_git_blob": "517bb4eef4fb1ee89f85cfef4a200eb2a88d175a"
+      }
+    ],
+    "offline_upstream_bddl_object_membership_verified": true,
+    "runtime_objects_dict_verified": false,
+    "official_initializations_16_19_verified": false,
+    "model_call_count_to_date": 0
+  },
+  "E3B": {
+    "design": "closed-loop B0 vs reactive contact A0 vs predictive shadow G, at identical native8-control boundaries",
+    "proposed_run_ids": {
+      "prefix": "e3b-test-",
+      "start": 1,
+      "end": 48,
+      "width": 4
+    },
+    "tasks": [
+      {
+        "A": "cream_cheese",
+        "B": "alphabet_soup"
+      },
+      {
+        "A": "ketchup",
+        "B": "alphabet_soup"
+      }
+    ],
+    "init_index_candidates": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "conditions": [
+      "C0",
+      "C2"
+    ],
+    "arms": [
+      "B0",
+      "A0",
+      "G"
+    ],
+    "planned_total": 48,
+    "independent_task_init_clusters": 8,
+    "order": "cream_cheese then ketchup; init ascending; C0 then C2; B0 then A0 then G",
+    "reactive_A0_rule": "past actual continuous bilateral contact >=3 on non-authorized task object, checked only before next native8-control action prefix; no within-prefix interrupt and no future-shadow/oracle/condition input",
+    "runtime_A0_implemented": false,
+    "model_call_count_to_date": 0
+  },
+  "E3C": {
+    "kind": "CPU_READ_ONLY_POST_HOC",
+    "planned_new_model_calls": 0,
+    "analyses": [
+      "E2 baseline-trajectory reactive event and next-chunk boundary timing",
+      "per-task effects and leave-one-task-out",
+      "exploratory k1-k2-k3 sensitivity without retuning",
+      "prediction vs actual physical frames",
+      "paired prevention timeline and cost"
+    ]
+  },
+  "total_proposed_new_TEST": 160,
+  "total_proposed_independent_task_init_clusters": 36,
+  "proposed_frozen_science": {
+    "gate_k": 3,
+    "raw_chunk": 16,
+    "execution_prefix": 8,
+    "episode_controls_cap": 720,
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_controls": 2,
+    "oracle_relative_motion_tolerance_m": 0.01,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 641500,
+    "provisional_policy_seed_base": 641000,
+    "provisional_env_seed_base": 641001
+  },
+  "variant_decision": "Select one full/120/84/zero-GPU protocol before first E3 TEST reservation; NEVER shrink after observing E3 results.",
+  "variant_counts": {
+    "full": {
+      "E3A": 112,
+      "E3B": 48
+    },
+    "reduced": {
+      "E3A": 84,
+      "E3B": 36
+    },
+    "breadth_only": {
+      "E3A": 84,
+      "E3B": 0
+    },
+    "zero_GPU": {
+      "E3A": 0,
+      "E3B": 0
+    }
+  },
+  "authorization": {
+    "E3_protocol_frozen": false,
+    "E3_independent_scientific_review": null,
+    "E3_exact_head_machine_TEST_grant": null,
+    "actual_owner_GPU_permission": null,
+    "authorized_real_TEST": false
+  },
+  "schedule_sgt": {
+    "planning": "2026-10-26/2026-10-27",
+    "implementation_review": "2026-10-28/2026-10-29",
+    "E3A_if_granted": "2026-10-30/2026-11-01",
+    "E3B_if_granted": "2026-11-02/2026-11-03",
+    "independent_analysis": "2026-11-04",
+    "final_slides_and_zip": "2026-11-05",
+    "owner_submission": "2026-11-06",
+    "deadline": "2026-11-06T23:59:00+08:00"
+  },
+  "stop_conditions": [
+    "unverified authorized source/init/model/resource",
+    "no independent E3 protocol plus exact-head TEST grant",
+    "real episode failure or monitoring/inference/worker unexpected error",
+    "main state or policy RNG interference",
+    "code/head/asset/seed/ledger mismatch",
+    "predeclared resource cap failure or foreign GPU interference",
+    "raw original/backup discrepancy"
+  ],
+  "agent_start_action": "Read MD work package, perform P0/P1 and CPU-only P2 without micro-approval, create separate implementation PR and protocol proposal; submit a consolidated independent protocol+exact HEAD approval before any new GPU/model/sim/TEST."
+}

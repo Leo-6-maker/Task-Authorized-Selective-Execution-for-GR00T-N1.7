@@ -1,0 +1,55 @@
+{
+  "phase": "P0_P1_STATIC_P2_CPU_DELIVERY_PENDING_CONSOLIDATED_REVIEW",
+  "status": "CPU_READY",
+  "code_head": "RECORDED_BY_FINAL_DELIVERY_IDENTITY",
+  "original_E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "reviewer_grant": null,
+  "protocol_frozen": false,
+  "gpu_owner": "UNKNOWN",
+  "gpu_physical_index": "UNKNOWN",
+  "gpu_UUID": "PRIVATE_UNVERIFIED",
+  "initializations": "36_REAL_CONTENT_IDENTITIES_CPU_VERIFIED_NO_E2_BYTE_OVERLAP",
+  "planned": {
+    "A": 112,
+    "B": 48
+  },
+  "consumed": {
+    "A": 0,
+    "B": 0
+  },
+  "unstarted": {
+    "A": 112,
+    "B": 48
+  },
+  "primary_safe_violation_abort_unknown_counts": {
+    "A": {
+      "safe": 0,
+      "violation": 0,
+      "abort": 0,
+      "unknown": 112
+    },
+    "B": {
+      "safe": 0,
+      "violation": 0,
+      "abort": 0,
+      "unknown": 48
+    }
+  },
+  "E3_model_calls": 0,
+  "E3_GPU_or_MuJoCo_started": false,
+  "CPU_actual_exits": {
+    "normal": 0,
+    "optimized": 0
+  },
+  "last_two_location_receipt": null,
+  "last_checkpoint": "LOCAL187_NORMAL_OPTIMIZED_AND_E2_READ_ONLY_AUDIT_EQUIVALENCE",
+  "stop_reason": "Live compiled scene identity unverified; protocol not independently frozen; no E3 exact-Head TEST grant or current E3 GPU allocation. CPU work not blocked by ordinary implementation errors.",
+  "next_action": "Independent consolidated protocol/code review; separately authorize exact-Head bounded scene diagnostic and fresh resource permit before any MuJoCo. Then verify native mappings and freeze revised final protocol/Head before E3 TEST.",
+  "E2_R3": "PENDING_INDEPENDENT_GPT",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "course_submission": "NOT_SUBMITTED",
+  "protocol": "E3-001-v1.0_PROPOSED_FULL160_NOT_FROZEN",
+  "CPU_tests_per_mode": 187,
+  "E3_native_runtime": "NOT_EXECUTED",
+  "live_scene_binding": "UNKNOWN_MUJOCO_FORBIDDEN_UNDER_CURRENT_CPU_PERMISSION"
+}
