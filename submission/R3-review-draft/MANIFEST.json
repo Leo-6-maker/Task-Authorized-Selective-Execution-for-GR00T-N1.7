@@ -1,0 +1,21 @@
+{
+  "status": "PARTIAL84_REPRODUCIBILITY_DRAFT_NOT_FINAL_SUBMISSION_OR_REVIEW",
+  "artifacts": [
+    {
+      "path": "CPU_REPRODUCTION.json",
+      "bytes": 739,
+      "sha256": "cf48a48e74387705fa0385f5c86c4757a9c5372b970081e49ce22ed43d179532"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2691,
+      "sha256": "62d4a75f06314a11d93e59994015ab2cd046bc43d473d46e1c790b50e1cfa08f"
+    },
+    {
+      "path": "SOURCE_R012.zip",
+      "bytes": 255378,
+      "sha256": "be45c2c47db1ece78cb662657466770eb919610a01d4c0aa79fbd5e6786ef600"
+    }
+  ],
+  "independent_R3": "NOT_COMPLETED"
+}

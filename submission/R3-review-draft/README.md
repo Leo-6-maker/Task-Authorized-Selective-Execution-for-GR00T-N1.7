@@ -1,0 +1,13 @@
+# R012 reproducibility update — partial TEST, R3 pending
+
+This is a dated engineering/reproducibility draft, not the final course submission, a scientific approval, or a TEST permit. The earlier editable 15-slide preliminary deck and its original sources remain preserved in `../preliminary`; its historical counts are not current.
+
+As of 2026-10-25 SGT, the original 120-cell plan has 84 consumed identities: 61 SUCCESS,10 TIME_LIMIT,10 SEMANTIC_ABORT,3 historical CLEANUP_ERROR (0010/0014/0016), and36 NOT_STARTED (0085–0120). There are81 known primary outcomes; the3 cleanup outcomes remain unknown even where official task success was separately observed. No acquired identity was retried or relabeled. Execution stopped before0085 when GPU resources changed; the owned server exited0. Partial counts are acquisition facts, not a final efficacy result.
+
+`SOURCE_R012.zip` contains106 source/config/test files from exact authorized runtime Head `908bef373eedf8d008ad8d9a91478e3f719eecfb` and a separate source-identity note. SHA256:`be45c2c47db1ece78cb662657466770eb919610a01d4c0aa79fbd5e6786ef600`,255378bytes. Unpacked CPU regressions passed123/123 under ordinary Python and123/123 under `python -O`, actual exit0 each. See `CPU_REPRODUCTION.json`. No model,simulator,or extra TEST request was used for these checks. No weights,unsafe raw snapshots,credentials,private paths or signed launch grant are distributed in this ZIP.
+
+The snapshot has no Git history and cannot independently audit historical authorization or launch formal TEST. Full-history audit must authenticate three original acquisition epochs: R008/a1c6424… for0001–0014, R011/76a6fb13… for0015–0016, R012/908bef3… for0017–0084. The scientific contract remains Gate k3, fixed TaskSpec/wrong-object-lift oracle,C0/C2,initializations/seeds/model,16 raw/8 executed/720 maximum controls, and unchanged planned denominators/statistics.
+
+The [execution report PR26](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/pull/26) is the source for current receipts and custody checks. The remaining36 units, final120-cell analysis, independent R3 wording approval and final slides are incomplete. Timing under owner-authorized shared GPU use cannot establish dedicated-device performance. C2 is a controlled instruction mismatch, not evidence about general natural OOD safety. Candidate UAR remains N/A unless its denominator is independently audited.
+
+Course deadline:2026-11-06 23:59 SGT. Owner confirmation of student identity,course-policy and AI-assistance disclosure,final scientific wording and final CANVAS submission is still required. No automatic submission or PR merge.
