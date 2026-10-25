@@ -1,24 +1,24 @@
 {
-  "phase": "READY_FOR_INDEPENDENT_RUNTIME_DELTA_REVIEW_AFTER_R011_0016",
-  "execution_authorized": false,
-  "current_code_head": "c08a34cf6dce61b48bfcd93c313d34826d955522",
+  "phase": "P4_R012_FIXED_TEST_EXECUTING",
+  "execution_authorized": true,
+  "current_code_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
   "base_report_head": "29f50b36af25a8b76583308cf0e5fbbe22365f27",
   "historical_execution_head": "a1c6424bd348b36c55a20d38750a269e9551a698",
   "independent_review_grant": {
-    "review_commit": "89fdbb690aaeab24c928bfbb46d6595a628928bc",
-    "review_path": "docs/reviews/R011-E2-TEST-AUTHORIZED.json",
-    "review_id": "R011-2026-10-24-E2-LIFECYCLE-MIXED-HEAD"
+    "review_commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
+    "review_path": "docs/reviews/R012-E2-TEST-AUTHORIZED.json",
+    "review_id": "R012-2026-10-24-E2-EXITCODE-REAP"
   },
   "total_planned": 120,
-  "reserved_count": 16,
-  "normal_full_outcomes": 13,
+  "reserved_count": 18,
+  "normal_full_outcomes": 15,
   "cleanup_errors": [
     "e2-test-0010",
     "e2-test-0014",
     "e2-test-0016"
   ],
-  "next_unopened_id": "e2-test-0017",
-  "current_incident": "ISSUE23-0016-EXIT_STATUS_RACE",
+  "next_unopened_id": "e2-test-0019",
+  "current_incident": null,
   "cpu_test_regular": {
     "local": {
       "tests": 123,
@@ -39,7 +39,7 @@
       "exit": 0
     }
   },
-  "live_corelab_last_verified": "2026-10-24 post-stop: exact16,worker/server absent,GPU compute0,all1900 original members unchanged,0017 absent; no new runtime after incident",
+  "live_corelab_last_verified": "2026-10-25 LIVE original16 normal/-O audit and1900/1611 archive-member/live-source verification passed;17 model files/30 initializations match; GPU0 busy",
   "raw_two_copy_verification": {
     "stage": "issue23-stopped-full-01",
     "bytes": 291390525,
@@ -49,22 +49,22 @@
     "independent_review": "NOT_PERFORMED"
   },
   "missing_evidence": [
-    "New independent exact final-head grant",
-    "Native validation of repaired waitpid lifecycle",
-    "104 unstarted frozen TEST units",
-    "Final independent R3 result review"
+    "No competing process on legally allocated GPU for activation",
+    "Native0018 clean-close mandatory checkpoint",
+    "104 unopened TEST units",
+    "Final independent R3"
   ],
-  "next_action": "Independent new exact COMPLETE PR head review/grant and reviewed closed R011 provenance; then LIVE preflight and unopened0017/0018 proposed checkpoint",
-  "stop_reason": "R0110016 CLEANUP_ERROR exit1: mandatory checkpoint failed. New CPU executable has no TEST grant.",
+  "next_action": "Genuine server loaded/listening; fixed0017/0018 then mandatory full checkpoint before0019",
+  "stop_reason": null,
   "phases": {
     "P0": "COMPLETE_READ_ONLY",
     "P1": "FOLLOWUP_WAITPID_REPAIR_COMPLETE_CPU_VALIDATED",
     "P2": "ORIGINAL16_LOCAL_CORELAB_NORMAL_OPTIMIZED_EXACT_EQUIVALENCE",
-    "P3": "NEW_COMPLETE_DELTA_READY_FOR_INDEPENDENT_REVIEW",
-    "P4": "STOPPED_AT0016_NO0017_CHECKPOINT_FAILED",
+    "P3": "COMPLETE_R012_INDEPENDENT_EXACT_HEAD_TEST_AUTHORIZED",
+    "P4": "LIVE_SHARED_PREFLIGHT_PASS_SERVER_STARTING",
     "P5": "PRELIMINARY_MATERIALS_COMPLETE_FINAL_R3_NOT_EXECUTED"
   },
-  "code_head_meaning": "Latest CPU-tested executable/config/test source only; last actual runtime remains76 and candidate is NOT TEST authorized",
+  "code_head_meaning": "R012 reviewed exact runtime head. Separate report checkout never changes execution checkout.",
   "historical_original14_audit": {
     "normal_exit": 0,
     "optimized_exit": 0,
@@ -135,9 +135,27 @@
     "Owner final course submission"
   ],
   "runtime_activation_passed": true,
-  "updated_at_sgt": "2026-10-24T20:42:26.507694+08:00",
+  "updated_at_sgt": "2026-10-25T09:14:56.952418+08:00",
   "last_runtime_head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
   "current_code_head_meaning": "CPU repair candidate only; NOT TEST authorized",
   "actual_new_execution_epochs": 1,
-  "unstarted_count": 104
+  "unstarted_count": 102,
+  "owner_resource_decision": {
+    "date_sgt": "2026-10-25",
+    "source": "Direct human user instruction in executing chat",
+    "mode": "Concurrent GPU0 when sufficient free VRAM; GPU1 may be considered",
+    "measured_gpu0_free_mib": 25939,
+    "measured_gpu1_free_mib": 10121,
+    "selected_gpu_index": 0,
+    "no_existing_task_stopped": true,
+    "original_R012_no_competing_requirement_superseded_by_owner_for_resource_only": true,
+    "science_and_executable_unchanged": true
+  },
+  "last_structural_checkpoint": {
+    "checkpoint": 18,
+    "closed_units": 18,
+    "status": "STRUCTURE_AND_TWO_COPY_VERIFIED_CONTINUE_FIXED_ORDER",
+    "archive_bytes": 36470133,
+    "backup_sha256": "2c39f2f6e4c940fcfc035e5589a8e39c9985f07c250ed666f2d0ae8c181798c5"
+  }
 }

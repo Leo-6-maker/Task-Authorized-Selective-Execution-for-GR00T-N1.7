@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<E2_WORKSPACE>/operator/issue25-preflight-01/preflight.py", line 88, in <module>
+    require(not any(gpu[1] in line for line in jobs.splitlines()),'allocated GPU has active compute process')
+  File "<E2_WORKSPACE>/operator/issue25-frozen-code/tase/test_authorization.py", line 16, in require
+    raise ValueError(message)
+ValueError: allocated GPU has active compute process

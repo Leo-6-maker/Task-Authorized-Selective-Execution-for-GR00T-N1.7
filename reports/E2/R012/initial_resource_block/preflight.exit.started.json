@@ -1,0 +1,9 @@
+{
+  "started_at_sgt": "2026-10-25T09:07:35.281026+08:00",
+  "wrapper_pid": 244254,
+  "child_pid": 244268,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue25-preflight-01/preflight.py"
+  ]
+}

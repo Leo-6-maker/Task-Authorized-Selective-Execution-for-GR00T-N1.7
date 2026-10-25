@@ -1,0 +1,49 @@
+{
+  "scope": "LIVE_OWNER_RESOURCE_CONDITION_NOT_TEST_OR_SCIENTIFIC_FAILURE",
+  "phase": "R012_AUTHORIZED_CODE__NOT_YET_ACTIVATED",
+  "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "grant_commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
+  "main_sha": "3b4be5bd833e23e3e65c201295b9e8cd167bbc9e",
+  "reserved": 16,
+  "full_outcomes": 13,
+  "CLEANUP_ERROR": 3,
+  "not_started": 104,
+  "next_unopened": "e2-test-0017",
+  "original16_normal_optimized_audits_identical": true,
+  "historical_registry_closed_R011": true,
+  "original16_all1900_members_and_live_sources_unchanged": true,
+  "old14_all1611_members_and_live_sources_unchanged": true,
+  "fixed_model_files": 17,
+  "fixed_initializations": 30,
+  "preflight_actual_exit": 1,
+  "optimized_audit_actual_exit": 0,
+  "allocated_gpu_index": 0,
+  "competing_compute_process_count": 1,
+  "competing_compute_memory_mib": [
+    5804
+  ],
+  "storage_free_bytes": {
+    "runs": 256436449280,
+    "evidence_exports": 1516305907712
+  },
+  "old_servers": {
+    "test-server-r008-01": {
+      "actual_exit": 0,
+      "PID_absent": true
+    },
+    "test-server-r009-01": {
+      "actual_exit": 0,
+      "PID_absent": true
+    },
+    "test-server-r011-01": {
+      "actual_exit": 0,
+      "PID_absent": true
+    }
+  },
+  "new_server_started": false,
+  "new_model_MuJoCo_TEST_calls": 0,
+  "resource_status": "ALLOCATED_GPU_BUSY",
+  "stop_reason": "R012 no-competing-process startup precondition; no interference with existing task",
+  "minimum_next_action": "Owner-approved GPU0 free of competing compute, or explicit alternative allocation; then new complete LIVE preflight before model/0017",
+  "checked_at_sgt": "2026-10-25T09:09:35.659335+08:00"
+}

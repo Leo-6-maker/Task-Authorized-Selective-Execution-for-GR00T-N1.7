@@ -1,0 +1,19 @@
+{
+  "status": "REMOTE_R012_PREFLIGHT_ALL_PASS",
+  "execution_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "TEST_reserved": 16,
+  "full_outcomes": 13,
+  "CLEANUP_ERROR": 3,
+  "not_started": 104,
+  "next_run": "e2-test-0017",
+  "old_worker_PID_absent": true,
+  "old_server_PID_absent": true,
+  "active_runtime_processes": 0,
+  "resource_mode": "OWNER_AUTHORIZED_CONCURRENT_GPU0",
+  "allowed_preexisting_compute_count": 1,
+  "GPU_free_mib": 25939,
+  "port": 5565,
+  "model_GPU_sim_TEST_calls": 0,
+  "actual_preflight_exit": 0,
+  "resource_decision": "Subsequent direct owner instruction allows sufficient-VRAM GPU0 concurrency; existing foreign task untouched. GPU1 insufficient."
+}

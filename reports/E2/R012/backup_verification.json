@@ -1,0 +1,31 @@
+{
+  "status": "ORIGINALS_REVERIFIED_AND_NEW_PREFLIGHT_PROOF_TWO_LOCATIONS",
+  "original_archives_local": {
+    "status": "LOCAL_SECOND_COPY_ALL_ARCHIVES_WHOLE_AND_EVERY_MEMBER_REVERIFIED",
+    "archives": [
+      {
+        "stage": "issue23-stopped-full-01",
+        "bytes": 291390525,
+        "sha256": "864d0f77b0d4635a0eb712b44296884608021df8972ff00147c0e9d68724b6a6",
+        "members": 1900
+      },
+      {
+        "stage": "issue18-stopped-full-01",
+        "bytes": 254951092,
+        "sha256": "cfe5f8357d2b48b473e95015f46dad933b1a17afbe830f6d83e1a2a30e85a76f",
+        "members": 1611
+      }
+    ],
+    "actual_exit": 0,
+    "checked_at": "2026-10-25T01:07:24.415577+00:00"
+  },
+  "remote_originals_scope": "Same whole hashes and every member/live source matched in actual LIVE preflight before resource check",
+  "new_preflight_archive": {
+    "stage": "issue25-preflight-resource-01",
+    "bytes": 105026,
+    "sha256": "33a25d02d1f4d27b8e61c9253659e68e24054d5c788784705ca82526306b94b5",
+    "artifacts": 25,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  }
+}

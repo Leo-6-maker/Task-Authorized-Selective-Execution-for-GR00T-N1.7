@@ -1,0 +1,8 @@
+{
+  "authority": "Direct human user instruction in this Codex chat",
+  "instruction": "优先确认GPU0剩余显存，如果充足可以并行挂载，GPU1也可尝试",
+  "scope": "GPU0 concurrent inference when sufficient free VRAM; GPU1 may be considered; no existing process termination",
+  "received_date_sgt": "2026-10-25",
+  "science_or_executable_change": false,
+  "reviewer_grant_unchanged": true
+}
