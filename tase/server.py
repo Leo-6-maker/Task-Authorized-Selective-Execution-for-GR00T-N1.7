@@ -6,6 +6,8 @@ import hashlib
 import os
 from pathlib import Path
 from .evidence import append_json, now_sgt, write_json
+from .resource_memory import (allocator_fraction, MINIMUM_FREE_BYTES,
+                             RESERVED_FREE_BYTES, MAXIMUM_PROCESS_FRACTION)
 
 
 def main():
@@ -30,10 +32,8 @@ def main():
     torch.manual_seed(a.policy_seed)
     torch.cuda.manual_seed_all(a.policy_seed)
     free, total = torch.cuda.mem_get_info()
-    if free < 16 * 1024**3:
-        raise RuntimeError('less than 16 GiB free VRAM; do not share this device now')
     # Leave >=2 GiB of currently free memory and cap this process at 55% total.
-    fraction = min(0.55, (free - 2*1024**3) / total)
+    fraction = allocator_fraction(free, total)
     torch.cuda.set_per_process_memory_fraction(fraction)
     torch.cuda.reset_peak_memory_stats()
     start = time.perf_counter()
@@ -48,6 +48,10 @@ def main():
         'device_name': torch.cuda.get_device_name(0), 'dtype': 'bfloat16',
         'torch': torch.__version__, 'torch_cuda': torch.version.cuda,
         'free_vram_before_load_bytes': free, 'allocator_fraction_cap': fraction,
+        'total_vram_bytes': total,
+        'memory_admission': {'minimum_free_bytes': MINIMUM_FREE_BYTES,
+            'reserved_free_bytes': RESERVED_FREE_BYTES,
+            'maximum_process_fraction': MAXIMUM_PROCESS_FRACTION},
         'mode': 'eval/no_training', 'host': '127.0.0.1', 'port': a.port})
     original = policy.get_action
     calls = 0
