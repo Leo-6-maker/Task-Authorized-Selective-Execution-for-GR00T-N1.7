@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R012-2026-10-24-E2-EXITCODE-REAP",
-  "disposition": "TEST_AUTHORIZED",
+  "disposition": "TEST_SUSPENDED_AFTER_0084_GPU1_RESOURCE_CHANGE",
   "authorized_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
   "epoch": "E2",
   "protocol_id": "TASE-002-v1.0",
@@ -142,7 +142,7 @@
     "e2-test-0014",
     "e2-test-0016"
   ],
-  "first_unopened_run_id": "e2-test-0017",
+  "first_unopened_run_id": "e2-test-0085",
   "mandatory_checkpoint_after": "e2-test-0018",
   "review_report": "docs/reviews/R012-E2-early-sentinel-exit-review.md",
   "historical_R011": "SUSPENDED_FOR_FUTURE_EXECUTION_AUTHENTICATES_PAST_0015_0016_ONLY_ON_REVIEWED_MAIN_REGISTRY",
@@ -157,5 +157,11 @@
     "If clean continue only remaining original fixed IDs in order, per four-cell structure+backup; any unexpected runtime/monitor/cleanup/resource/state/authorization/evidence error consumes original ID and forces STOP and independent new grant for changed execution code."
   ],
   "authorization_scope": "Remaining 104 predeclared LIBERO simulation TEST cells only; does not grant reruns of previous16 or scientific parameter changes, R3 performance validity, hardware safety or additional resource permissions",
-  "reviewer_evidence_limit": "Source SHA/logic, public raw-derived evidence and executor 123/123 CPU logs reviewed; GPT has not run Corelab GPU/MuJoCo with candidate nor independently rehashed complete 1900-member private archive"
+  "reviewer_evidence_limit": "Source SHA/logic, public raw-derived evidence and executor 123/123 CPU logs reviewed; GPT has not run Corelab GPU/MuJoCo with candidate nor independently rehashed complete 1900-member private archive",
+  "review_closure": "docs/reviews/R013-GPU1-parallel-resource-delta-review.md",
+  "original_R012_authorization_commit": "377fe3b85989e6d1fd105002c3c0c09827598886",
+  "current_main_historical_epoch_registry_commit": "f36cca0b8a47bdcfc9771a8b56fb579c44a9133a",
+  "closed_consumed_test_count": 84,
+  "future_test_execution_allowed": false,
+  "historical_authentication_only": true
 }
