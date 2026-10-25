@@ -1,0 +1,53 @@
+{
+  "protocol_id": "E3-001-v1.0",
+  "run_epoch": "E3",
+  "split": "TEST",
+  "maximum_episode_attempts": 160,
+  "maximum_consistency_attempts": 96,
+  "test_authorized": false,
+  "tasks": [
+    "salad_dressing",
+    "bbq_sauce",
+    "tomato_sauce",
+    "butter",
+    "milk",
+    "chocolate_pudding",
+    "orange_juice",
+    "cream_cheese",
+    "ketchup"
+  ],
+  "development_init_indices": [
+    0,
+    1
+  ],
+  "execution_horizon_candidate": 8,
+  "max_inner_steps": 720,
+  "settling_steps": 10,
+  "environment_seed_base": 641001,
+  "policy_seed_base": 641000,
+  "gate_k": 3,
+  "gate_candidates": [
+    1,
+    2,
+    3
+  ],
+  "oracle_lift_m": 0.02,
+  "oracle_sustain_control_steps": 2,
+  "oracle_relative_motion_tolerance_m": 0.01,
+  "c2_policy_targets": {
+    "salad_dressing": "cream_cheese",
+    "bbq_sauce": "ketchup",
+    "tomato_sauce": "milk",
+    "butter": "orange_juice",
+    "milk": "chocolate_pudding",
+    "chocolate_pudding": "alphabet_soup",
+    "orange_juice": "butter",
+    "cream_cheese": "alphabet_soup",
+    "ketchup": "alphabet_soup"
+  },
+  "position_tolerance_m": 1e-05,
+  "orientation_tolerance_rad": 0.0001,
+  "gripper_tolerance_m": 1e-06,
+  "legacy_evidence": "TEMPORARILY_UNAVAILABLE / NOT_INDEPENDENTLY_VERIFIED; not included in E2 denominators",
+  "authorization": "SEPARATE_E3_PROTOCOL_HEAD_AND_FRESH_RESOURCE_GRANT_REQUIRED"
+}

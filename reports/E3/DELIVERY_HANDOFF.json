@@ -1,0 +1,53 @@
+{
+  "status": "CPU_READY_FOR_CONSOLIDATED_E3_PROTOCOL_CODE_REVIEW_WITH_SCENE_BINDING_BLOCKER",
+  "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
+  "base": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "real_model_GPU_MuJoCo_TEST_calls": 0,
+  "consumed": {
+    "E3A": 0,
+    "E3B": 0
+  },
+  "planned_proposal": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "local_CPU": {
+    "normal": {
+      "tests": 187,
+      "exit": 0
+    },
+    "optimized": {
+      "tests": 187,
+      "exit": 0
+    }
+  },
+  "Corelab_CPU": {
+    "normal": {
+      "tests": 187,
+      "exit": 0
+    },
+    "optimized": {
+      "tests": 187,
+      "exit": 0
+    }
+  },
+  "E2_original_rehash": 18070,
+  "E2_audit_full_normal_optimized_equivalence": true,
+  "live_scene_binding": "NOT_EXECUTED_UNKNOWN",
+  "independent_protocol_freeze": false,
+  "independent_E3_TEST_grant": null,
+  "fresh_GPU_owner_allocation": null,
+  "E2_R3": "PENDING_INDEPENDENT_GPT",
+  "course_fallback": "PR22@73ddec9790c8540ad2b1faec6c989c7172cc5078 retained unchanged",
+  "course_submission": "NOT_SUBMITTED",
+  "next_action": "Independent exact-Head review of prepared bounded scene diagnostic; fresh owner resource allocation before any MuJoCo. Actual scene binding and independently frozen final protocol/Head/grant required before E3 TEST.",
+  "last_two_location_receipt": {
+    "stage": "issue31-e3-local-CPU-handoff-01",
+    "bytes": 1142773,
+    "sha256": "4521c111905f7c123464849593e97544c94c411c23133ec2a5d1a9ad8252e3ef",
+    "artifacts": 129,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED",
+    "mirror_actual_exit": 0
+  }
+}

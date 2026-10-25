@@ -1,0 +1,69 @@
+{
+  "phase": "P0_COMPLETE_P1_STATIC_COMPLETE_P2_CPU_CANDIDATE_GATE_P_C_REVIEW_WITH_LIVE_SCENE_BLOCKER",
+  "status": "CPU_READY",
+  "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
+  "original_E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "reviewer_grant": null,
+  "protocol_frozen": false,
+  "gpu_owner": "UNKNOWN",
+  "gpu_physical_index": "UNKNOWN",
+  "gpu_UUID": "PRIVATE_UNVERIFIED",
+  "initializations": "36_REAL_CONTENT_IDENTITIES_CPU_VERIFIED_NO_E2_BYTE_OVERLAP",
+  "planned": {
+    "A": 112,
+    "B": 48
+  },
+  "consumed": {
+    "A": 0,
+    "B": 0
+  },
+  "unstarted": {
+    "A": 112,
+    "B": 48
+  },
+  "primary_safe_violation_abort_unknown_counts": {
+    "A": {
+      "safe": 0,
+      "violation": 0,
+      "abort": 0,
+      "unknown": 112
+    },
+    "B": {
+      "safe": 0,
+      "violation": 0,
+      "abort": 0,
+      "unknown": 48
+    }
+  },
+  "E3_model_calls": 0,
+  "E3_GPU_or_MuJoCo_started": false,
+  "CPU_actual_exits": {
+    "normal": 0,
+    "optimized": 0,
+    "Corelab_normal": 0,
+    "Corelab_optimized": 0
+  },
+  "last_two_location_receipt": {
+    "stage": "issue31-e3-local-CPU-handoff-01",
+    "bytes": 1142773,
+    "sha256": "4521c111905f7c123464849593e97544c94c411c23133ec2a5d1a9ad8252e3ef",
+    "artifacts": 129,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED",
+    "mirror_actual_exit": 0
+  },
+  "last_checkpoint": "187_LOCAL_NORMAL_OPTIMIZED_187_CORELAB_NORMAL_OPTIMIZED_ALL0_AND_E2_18070_UNCHANGED",
+  "stop_reason": "Live compiled scene identity unverified; protocol not independently frozen; no E3 exact-Head TEST grant or current E3 GPU allocation. CPU work not blocked by ordinary implementation errors.",
+  "next_action": "Independent consolidated protocol/code review; separately authorize exact-Head bounded scene diagnostic and fresh resource permit before any MuJoCo. Then verify native mappings and freeze revised final protocol/Head before E3 TEST.",
+  "E2_R3": "PENDING_INDEPENDENT_GPT",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "course_submission": "NOT_SUBMITTED",
+  "protocol": "E3-001-v1.0_PROPOSED_FULL160_NOT_FROZEN",
+  "CPU_tests_per_mode": 187,
+  "E3_native_runtime": "NOT_EXECUTED",
+  "live_scene_binding": "UNKNOWN_MUJOCO_FORBIDDEN_UNDER_CURRENT_CPU_PERMISSION",
+  "code_head_note": "Immutable CPU code snapshot; final PR delivery Head also includes report/custody-only commits. Real admission always requires the exact current full Head, not this historical snapshot.",
+  "reviewer_grant_SHA": null,
+  "reviewer_grant_path": null,
+  "review_request_PR": 32
+}

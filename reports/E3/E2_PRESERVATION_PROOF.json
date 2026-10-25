@@ -1,0 +1,19 @@
+{
+  "status": "ORIGINAL_E2_AND_COURSE_FALLBACK_IDENTITIES_UNCHANGED",
+  "E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "E2_manifest_entries_rehashed": 2725,
+  "E2_original_manifest_canonical_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+  "complete_live_E2_audit_equivalence": {
+    "status": "LIVE_COMPLETE_E2_READ_ONLY_AUDIT_EQUIVALENCE",
+    "normal_actual_exit": 0,
+    "optimized_actual_exit": 0,
+    "full_JSON_equals_final120": true,
+    "reserved": 120,
+    "full_outcomes": 117
+  },
+  "course_head": "73ddec9790c8540ad2b1faec6c989c7172cc5078",
+  "course_fallback_file_identities_rehashed": 4,
+  "original_scientific_source_changed": [],
+  "E2_R3": "PENDING_INDEPENDENT_GPT",
+  "course_submission": "NOT_SUBMITTED"
+}
