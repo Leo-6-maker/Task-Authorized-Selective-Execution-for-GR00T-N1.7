@@ -1,0 +1,45 @@
+{
+  "status": "GPU1_CPU_DELTA_REGRESSIONS_AND_HISTORICAL84_EXACT_EQUIVALENCE_PASS_NOT_TEST_AUTHORIZED",
+  "CPU_source_head": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+  "actual_runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "ordinary_tests": 134,
+  "optimized_tests": 134,
+  "ordinary_actual_exit": 0,
+  "optimized_actual_exit": 0,
+  "read_only_audit_normal_exit": 0,
+  "read_only_audit_optimized_exit": 0,
+  "all_three_full_audits_equal": true,
+  "original16_all_members_unchanged": true,
+  "reserved": 84,
+  "full_outcomes": 81,
+  "not_started": 36,
+  "status_counts": {
+    "SUCCESS": 61,
+    "CLEANUP_ERROR": 3,
+    "TIME_LIMIT": 10,
+    "SEMANTIC_ABORT": 10,
+    "NOT_STARTED": 36
+  },
+  "CPU_process_receipts": 52,
+  "all_recorded_CPU_child_PIDs_absent": true,
+  "source_checkouts": {
+    "issue16-frozen-code": {
+      "head": "a1c6424bd348b36c55a20d38750a269e9551a698",
+      "clean": true
+    },
+    "issue23-frozen-code": {
+      "head": "76a6fb13e1b2a650163f583c7384b349d1e6979c",
+      "clean": true
+    },
+    "issue25-frozen-code": {
+      "head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+      "clean": true
+    },
+    "issue25-gpu1-cpu-code-01": {
+      "head": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+      "clean": true
+    }
+  },
+  "new_model_sim_TEST_calls": 0,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR"
+}

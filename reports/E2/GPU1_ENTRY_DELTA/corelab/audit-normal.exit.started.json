@@ -1,0 +1,15 @@
+{
+  "started_at_sgt": "2026-10-25T12:14:10.789325+08:00",
+  "wrapper_pid": 456041,
+  "child_pid": 456052,
+  "command": [
+    "<E2_RUNTIME_CACHE>/envs/sim/bin/python",
+    "<E2_WORKSPACE>/operator/issue25-gpu1-cpu-code-01/scripts/e2_audit_test.py",
+    "--workspace",
+    "<E2_WORKSPACE>",
+    "--repo",
+    "<E2_WORKSPACE>/operator/issue25-gpu1-cpu-code-01",
+    "--output",
+    "<E2_WORKSPACE>/operator/issue25-gpu1-cpu-regression-01/audit-normal.json"
+  ]
+}

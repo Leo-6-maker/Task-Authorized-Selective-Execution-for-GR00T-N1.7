@@ -1,0 +1,12 @@
+{
+  "cpu_source_head": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+  "actual_runtime_head": "908bef373eedf8d008ad8d9a91478e3f719eecfb",
+  "CPU_candidate_has_TEST_grant": false,
+  "files": {
+    "scripts/e2_test_server.py": "f3122dec2e1877f9db4d92070a888d9f3a44f820c7a11317dcb963aef6873c94",
+    "tase/server.py": "ee48bbee42fd574e14cefdf92f59cccb742d1e987d2498e0223ebfc2ec7a0741",
+    "tase/resource_memory.py": "0f8f2ccafe88e62b203a33faa480c2f18aa652a17020bbae8ca9d5964e6a762d",
+    "tests/test_resource_memory.py": "00f19d8e14ebd5ea0672b76aacc0415a631a3d8f3906a06211b3664fa73b4925",
+    "configs/e2_test.json": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17"
+  }
+}

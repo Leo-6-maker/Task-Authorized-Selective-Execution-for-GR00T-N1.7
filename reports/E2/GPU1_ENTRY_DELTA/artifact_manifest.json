@@ -1,0 +1,182 @@
+{
+  "scope": "CURRENT_GPU1_CPU_DELTA_CODE_AND_REPORT_METADATA_SOURCE_IDENTITIES_NOT_TEST_GRANT",
+  "parent_report": "9178913a10bd32fab9e2701a6a74e86c77d210fb",
+  "CPU_source": "d9e445cc693c4fc7284cfa54a83924e340f04360",
+  "artifacts": [
+    {
+      "repository_path": "AGENTS.md",
+      "bytes": 10530,
+      "sha256": "e0f7534bfea7eea74a7f80abf71e83869ec7793df819e897a7cfced75a23043d"
+    },
+    {
+      "repository_path": "configs/e2_test.json",
+      "bytes": 2454,
+      "sha256": "69df8bae0fa52314c62815771802b129159419a95411325cf413b09d2d03fb17"
+    },
+    {
+      "repository_path": "docs/CODEX_HANDOFF.md",
+      "bytes": 6795,
+      "sha256": "e14044ef3a8946e6b350bf9032a474691e4c3e9696dec2ebeca16483c6ebb693"
+    },
+    {
+      "repository_path": "docs/STATUS.md",
+      "bytes": 16885,
+      "sha256": "fd6f8579765bbaf3297ed7588efaa1978cc56f5e3e62b17e0262eb2301b63e07"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/HISTORICAL_R012_EPOCH_PROPOSAL.json",
+      "bytes": 1092,
+      "sha256": "cd9a593aa2a568fb7647fbb45232cfbe9c4f2b950c6ee49b5cfb1caa4d5365b8"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/RESOURCE_DELTA_HANDOFF.md",
+      "bytes": 7679,
+      "sha256": "895d642c9b8da585dfa7e1502ad54ca5958d3818ec82a597c65d06bc9b0b952b"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/backup_verification.json",
+      "bytes": 1761,
+      "sha256": "afb64f98bd14d00876badd7acac3f83d47a429fcfaa4990fa1f6f59a93d1e5ac"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/audit-normal.exit.json",
+      "bytes": 145,
+      "sha256": "15ada0be38c06caab3d54cadfebaf1bf3cc2e041a21bca31918d1390e96d601a"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/audit-normal.exit.started.json",
+      "bytes": 460,
+      "sha256": "17ec5f4f71301d9d20452d3962f9e56d7c6df8bd361ca7d92041d32ad35fa591"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/audit-optimized.exit.json",
+      "bytes": 145,
+      "sha256": "678c19e72b6278c052dcdfd5c5cf51eb3fc23e1779aafe29c2bf5369506db502"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/audit-optimized.exit.started.json",
+      "bytes": 473,
+      "sha256": "fb12c1fb7ef4f823b700f54ef56dfea4e9f3f3ea12d46c0a7aa6effebd34294d"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/comparison.json",
+      "bytes": 1359,
+      "sha256": "5252ca6f79a9c36778efc62a462bfcc28cbd77b30ce934d17c2d9970eba53d26"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/normal.exit.json",
+      "bytes": 145,
+      "sha256": "b4a35c6838129d9d1fd3c6e9411771bf22cbcdae12bc8195c12b28a0318f9821"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/normal.exit.started.json",
+      "bytes": 247,
+      "sha256": "9e49f7fa8f717c9d412607acb96e427a333351b026a189cc86ccde222e9012a7"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/optimized.exit.json",
+      "bytes": 145,
+      "sha256": "3b0bf730d6ae5128a926d5b00bdcd306915c9fb576c7f71e9d96416115939ad8"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/optimized.exit.started.json",
+      "bytes": 257,
+      "sha256": "610c00838cddcb9a3b1d92d880e8f8eac14841931503d619f2fd81f9eb119f56"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/process_inventory.json",
+      "bytes": 6977,
+      "sha256": "af65c62c9fc4e5210fbdc01bae47bf79f5ce653da7bd8cb8744295dec8942b51"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/corelab/source-identities.json",
+      "bytes": 686,
+      "sha256": "9c3a3193031bfe563c2822b9b77fa597f6ed0caba54d1feaf3d7ef2c3587b79b"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/delivery_checks.json",
+      "bytes": 830,
+      "sha256": "5c36ad516717d72f93284395936019a8b604e562700ce854b344a83dec90b947"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/normal.exit.json",
+      "bytes": 146,
+      "sha256": "3587952f1065fd12230efe1f423f66947435598f98a2bb74a7ef33e5454b44ce"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/normal.exit.started.json",
+      "bytes": 301,
+      "sha256": "6cf929ec2de5226e008537a1b477b947a784e0c61e22d1f4b632acedd8df8313"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/normal.unittest.log",
+      "bytes": 22177,
+      "sha256": "eec7c4a789f48be7e3ec2631d76881ebea0bdff772c05b9cd4bab365264ec833"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/optimized.exit.json",
+      "bytes": 146,
+      "sha256": "64870cb6d56067f8833734dbcfd3c905b2ddc4c24f3c7e6faacac8f10cc7eb3e"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/optimized.exit.started.json",
+      "bytes": 311,
+      "sha256": "6aa32d60af36f59ad7ebfce7b176d679c9a4b847804a8c6c574b489dac7b68e1"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/local/optimized.unittest.log",
+      "bytes": 22177,
+      "sha256": "a500768d96d23a928ecf4e9378fd88f2adc89319b101f4b2e837a5f894593a93"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/observations/memory-evidence.json",
+      "bytes": 679,
+      "sha256": "4324271f3e1c69dac51605ccd4afa69af2057b2c753c146f9fd275bcf95bfd55"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/observations/owner-parallel-authorization.json",
+      "bytes": 263,
+      "sha256": "c54f23209e3b4deae1a71695ec34a175a8421aa6f576902aca6ec0f111b81d43"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/observations/recheck.json",
+      "bytes": 695,
+      "sha256": "ce5f6ad953c5f014dca5aeabf05cdffff68ff2198dec45d339cf1da5b66e80ad"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/receipt_origins.json",
+      "bytes": 9113,
+      "sha256": "e4c67ec6058a300a31442d9238be86ed614ce5bfdc44540283f6323921ee5e19"
+    },
+    {
+      "repository_path": "reports/E2/GPU1_ENTRY_DELTA/scientific_configuration_check.json",
+      "bytes": 745,
+      "sha256": "0c4395fabfc909b343f8a3bab02fcf4e7d1f2ae3356a80738a61cf2db62b5a9a"
+    },
+    {
+      "repository_path": "reports/E2/automation/AUTONOMOUS_STATUS.json",
+      "bytes": 14793,
+      "sha256": "3b4c2beae4d6e7bfa0d2a974becec013c71848b11f34b3dfc2cf8391a93ee00e"
+    },
+    {
+      "repository_path": "scripts/e2_test_server.py",
+      "bytes": 15285,
+      "sha256": "f3122dec2e1877f9db4d92070a888d9f3a44f820c7a11317dcb963aef6873c94"
+    },
+    {
+      "repository_path": "tase/resource_memory.py",
+      "bytes": 1153,
+      "sha256": "0f8f2ccafe88e62b203a33faa480c2f18aa652a17020bbae8ca9d5964e6a762d"
+    },
+    {
+      "repository_path": "tase/server.py",
+      "bytes": 6966,
+      "sha256": "ee48bbee42fd574e14cefdf92f59cccb742d1e987d2498e0223ebfc2ec7a0741"
+    },
+    {
+      "repository_path": "tests/test_resource_memory.py",
+      "bytes": 7834,
+      "sha256": "00f19d8e14ebd5ea0672b76aacc0415a631a3d8f3906a06211b3664fa73b4925"
+    }
+  ]
+}

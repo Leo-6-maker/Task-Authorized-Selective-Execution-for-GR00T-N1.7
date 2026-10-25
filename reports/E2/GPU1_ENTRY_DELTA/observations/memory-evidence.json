@@ -1,0 +1,13 @@
+{
+  "status": "READ_ONLY_PREVIOUS_GPU0_NATIVE_MEMORY_EVIDENCE_NOT_GPU1_STARTUP_VALIDATION",
+  "source_loaded_sha256": "13e470b914926e4eb8069058c8360e6113fb739c403c31b48bf57054085f6434",
+  "source_inference_sha256": "da0ddf851e0e79f79b43002ca0916f857645c6059924003a838a8f5910bb8f98",
+  "saved_policy_requests": 1823,
+  "loaded_peak_allocated_bytes": 6307177984,
+  "loaded_peak_reserved_bytes": 6392119296,
+  "maximum_inference_allocated_bytes": 6386141184,
+  "maximum_inference_reserved_bytes": 6482296832,
+  "minimum_required_free_if_peak_plus_existing2GiB_margin_bytes": 8629780480,
+  "no_GPU1_equivalence_or_launch_permission_inferred": true,
+  "new_model_sim_TEST_calls": 0
+}

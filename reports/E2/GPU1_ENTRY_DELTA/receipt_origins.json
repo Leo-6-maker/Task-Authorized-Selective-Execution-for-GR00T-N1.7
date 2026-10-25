@@ -1,0 +1,194 @@
+{
+  "scope": "ACTUAL_SOURCE_RECEIPTS_WITH_SEPARATE_DERIVATIVE_HASHES",
+  "artifacts": [
+    {
+      "export_path": "corelab/audit-normal.exit.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/audit-normal.exit.json",
+      "original_sha256": "15ada0be38c06caab3d54cadfebaf1bf3cc2e041a21bca31918d1390e96d601a",
+      "export_sha256": "15ada0be38c06caab3d54cadfebaf1bf3cc2e041a21bca31918d1390e96d601a",
+      "original_bytes": 145,
+      "export_bytes": 145,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/audit-normal.exit.started.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/audit-normal.exit.started.json",
+      "original_sha256": "dde8e1e9442837043b87703091a27aee7d5ffa26763962f6252eb5a05dd66c51",
+      "export_sha256": "17ec5f4f71301d9d20452d3962f9e56d7c6df8bd361ca7d92041d32ad35fa591",
+      "original_bytes": 581,
+      "export_bytes": 460,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "corelab/audit-optimized.exit.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/audit-optimized.exit.json",
+      "original_sha256": "678c19e72b6278c052dcdfd5c5cf51eb3fc23e1779aafe29c2bf5369506db502",
+      "export_sha256": "678c19e72b6278c052dcdfd5c5cf51eb3fc23e1779aafe29c2bf5369506db502",
+      "original_bytes": 145,
+      "export_bytes": 145,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/audit-optimized.exit.started.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/audit-optimized.exit.started.json",
+      "original_sha256": "3f77b4987a46bbec4b41a694dd0775527248e63b53717e723fd4fad9063e373a",
+      "export_sha256": "fb12c1fb7ef4f823b700f54ef56dfea4e9f3f3ea12d46c0a7aa6effebd34294d",
+      "original_bytes": 594,
+      "export_bytes": 473,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "corelab/comparison.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/comparison.json",
+      "original_sha256": "5252ca6f79a9c36778efc62a462bfcc28cbd77b30ce934d17c2d9970eba53d26",
+      "export_sha256": "5252ca6f79a9c36778efc62a462bfcc28cbd77b30ce934d17c2d9970eba53d26",
+      "original_bytes": 1359,
+      "export_bytes": 1359,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/normal.exit.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/normal.exit.json",
+      "original_sha256": "b4a35c6838129d9d1fd3c6e9411771bf22cbcdae12bc8195c12b28a0318f9821",
+      "export_sha256": "b4a35c6838129d9d1fd3c6e9411771bf22cbcdae12bc8195c12b28a0318f9821",
+      "original_bytes": 145,
+      "export_bytes": 145,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/normal.exit.started.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/normal.exit.started.json",
+      "original_sha256": "0e37a0d401bd74115e707ade990ad1b0f359db95d9667679dbcb268d1a0e7305",
+      "export_sha256": "9e49f7fa8f717c9d412607acb96e427a333351b026a189cc86ccde222e9012a7",
+      "original_bytes": 288,
+      "export_bytes": 247,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "corelab/optimized.exit.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/optimized.exit.json",
+      "original_sha256": "3b0bf730d6ae5128a926d5b00bdcd306915c9fb576c7f71e9d96416115939ad8",
+      "export_sha256": "3b0bf730d6ae5128a926d5b00bdcd306915c9fb576c7f71e9d96416115939ad8",
+      "original_bytes": 145,
+      "export_bytes": 145,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/optimized.exit.started.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/optimized.exit.started.json",
+      "original_sha256": "26614c4085a405a14c177dc5120df11258ace22d9ec6615fa33aecc834eb9b4d",
+      "export_sha256": "610c00838cddcb9a3b1d92d880e8f8eac14841931503d619f2fd81f9eb119f56",
+      "original_bytes": 298,
+      "export_bytes": 257,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "corelab/process_inventory.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/process_inventory.json",
+      "original_sha256": "af65c62c9fc4e5210fbdc01bae47bf79f5ce653da7bd8cb8744295dec8942b51",
+      "export_sha256": "af65c62c9fc4e5210fbdc01bae47bf79f5ce653da7bd8cb8744295dec8942b51",
+      "original_bytes": 6977,
+      "export_bytes": 6977,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "corelab/source-identities.json",
+      "source": "operator/issue25-gpu1-cpu-regression-01/source-identities.json",
+      "original_sha256": "9c3a3193031bfe563c2822b9b77fa597f6ed0caba54d1feaf3d7ef2c3587b79b",
+      "export_sha256": "9c3a3193031bfe563c2822b9b77fa597f6ed0caba54d1feaf3d7ef2c3587b79b",
+      "original_bytes": 686,
+      "export_bytes": 686,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "observations/memory-evidence.json",
+      "source": "operator/issue25-gpu1-parallel-recheck-02/memory-evidence.json",
+      "original_sha256": "4324271f3e1c69dac51605ccd4afa69af2057b2c753c146f9fd275bcf95bfd55",
+      "export_sha256": "4324271f3e1c69dac51605ccd4afa69af2057b2c753c146f9fd275bcf95bfd55",
+      "original_bytes": 679,
+      "export_bytes": 679,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "observations/owner-parallel-authorization.json",
+      "source": "operator/issue25-gpu1-parallel-recheck-02/owner-parallel-authorization.json",
+      "original_sha256": "c54f23209e3b4deae1a71695ec34a175a8421aa6f576902aca6ec0f111b81d43",
+      "export_sha256": "c54f23209e3b4deae1a71695ec34a175a8421aa6f576902aca6ec0f111b81d43",
+      "original_bytes": 263,
+      "export_bytes": 263,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "observations/recheck.json",
+      "source": "operator/issue25-gpu1-parallel-recheck-02/recheck.json",
+      "original_sha256": "ce5f6ad953c5f014dca5aeabf05cdffff68ff2198dec45d339cf1da5b66e80ad",
+      "export_sha256": "ce5f6ad953c5f014dca5aeabf05cdffff68ff2198dec45d339cf1da5b66e80ad",
+      "original_bytes": 695,
+      "export_bytes": 695,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "local/normal.exit.json",
+      "source": "LOCAL_CPU/gpu1-normal-regression01.exit.json",
+      "original_sha256": "3587952f1065fd12230efe1f423f66947435598f98a2bb74a7ef33e5454b44ce",
+      "export_sha256": "3587952f1065fd12230efe1f423f66947435598f98a2bb74a7ef33e5454b44ce",
+      "original_bytes": 146,
+      "export_bytes": 146,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "local/normal.exit.started.json",
+      "source": "LOCAL_CPU/gpu1-normal-regression01.exit.started.json",
+      "original_sha256": "11686d462b8cc83b17e46bc8bc3afacd1a74bd30e14488a73b953fe68f0d4abc",
+      "export_sha256": "6cf929ec2de5226e008537a1b477b947a784e0c61e22d1f4b632acedd8df8313",
+      "original_bytes": 310,
+      "export_bytes": 301,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "local/normal.unittest.log",
+      "source": "LOCAL_CPU/gpu1-normal-regression01.stderr.private.txt",
+      "original_sha256": "d1222e3cb0c062e6de06273abea3af55cdcbe01542b9ece85962758217743175",
+      "export_sha256": "eec7c4a789f48be7e3ec2631d76881ebea0bdff772c05b9cd4bab365264ec833",
+      "original_bytes": 22222,
+      "export_bytes": 22177,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "local/optimized.exit.json",
+      "source": "LOCAL_CPU/gpu1-optimized-regression01.exit.json",
+      "original_sha256": "64870cb6d56067f8833734dbcfd3c905b2ddc4c24f3c7e6faacac8f10cc7eb3e",
+      "export_sha256": "64870cb6d56067f8833734dbcfd3c905b2ddc4c24f3c7e6faacac8f10cc7eb3e",
+      "original_bytes": 146,
+      "export_bytes": 146,
+      "transformation": "BYTE_EXACT"
+    },
+    {
+      "export_path": "local/optimized.exit.started.json",
+      "source": "LOCAL_CPU/gpu1-optimized-regression01.exit.started.json",
+      "original_sha256": "6fc9e798e451a1ab8f3f43327d74c4a9fd782ae46b4e03e40f0605928d87db4f",
+      "export_sha256": "6aa32d60af36f59ad7ebfce7b176d679c9a4b847804a8c6c574b489dac7b68e1",
+      "original_bytes": 320,
+      "export_bytes": 311,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "local/optimized.unittest.log",
+      "source": "LOCAL_CPU/gpu1-optimized-regression01.stderr.private.txt",
+      "original_sha256": "8f3694cd10ff148863f5793d7951d6140bade66b2b984318b3be6761afeccce2",
+      "export_sha256": "a500768d96d23a928ecf4e9378fd88f2adc89319b101f4b2e837a5f894593a93",
+      "original_bytes": 22222,
+      "export_bytes": 22177,
+      "transformation": "PRIVATE_PATH_REDACTION"
+    },
+    {
+      "export_path": "scientific_configuration_check.json",
+      "source": "LOCAL_CPU/gpu1-scientific-static02.json",
+      "original_sha256": "0c4395fabfc909b343f8a3bab02fcf4e7d1f2ae3356a80738a61cf2db62b5a9a",
+      "export_sha256": "0c4395fabfc909b343f8a3bab02fcf4e7d1f2ae3356a80738a61cf2db62b5a9a",
+      "original_bytes": 745,
+      "export_bytes": 745,
+      "transformation": "BYTE_EXACT"
+    }
+  ]
+}
