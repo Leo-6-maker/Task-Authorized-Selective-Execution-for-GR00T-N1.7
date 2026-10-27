@@ -1,0 +1,11 @@
+{
+  "status": "REPORT_OPERATOR_EVIDENCE_ONLY_NATIVE_SOURCE_UNCHANGED",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "report_parent": "3536e8e4fcb0152e381e25fd3ba58cbf70fef193",
+  "runtime_config_tests_diff_from_authorized9599": [],
+  "external_launcher_report_source": "reports/E3/R015/R015_SCENE_LAUNCHER.py",
+  "external_launcher_sha256": "fdea61207243b716019a9750f3ad529433f2dc4810d11becaa154dab5f312e12",
+  "signed_R015_copies": "EXACT_GIT_BYTES_FROM_REVIEWER_MAIN",
+  "current_R014_copy": "EXACT_REVIEWER_MAIN_CONSUMED_MARKER_HISTORICAL_SIGNED_COMMIT_RETAINED",
+  "scientific_protocol_modified": false
+}

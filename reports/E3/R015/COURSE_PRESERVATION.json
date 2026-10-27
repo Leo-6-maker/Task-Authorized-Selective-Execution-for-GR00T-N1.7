@@ -1,0 +1,29 @@
+{
+  "status": "FINAL_E2_ONLY_COURSE_FALLBACK_BYTES_UNCHANGED",
+  "head": "73ddec9790c8540ad2b1faec6c989c7172cc5078",
+  "artifacts": [
+    {
+      "path": "submission/R3-review-draft/ME6401-full120-review-v3.pptx",
+      "bytes": 236896,
+      "sha256": "9ace8d2172635c1fde1272eb69c7e5b7e29fa35cd9a2a6b9bf04a2647f7a9b00"
+    },
+    {
+      "path": "submission/R3-review-draft/SOURCE_R013_FINAL.zip",
+      "bytes": 259224,
+      "sha256": "e3553716d8cd01dc13d9963b9329e73bf38c13cc4c9f7e35dae2e7dd9c66e3d3"
+    },
+    {
+      "path": "submission/R3-review-draft/FULL120_VERIFICATION.json",
+      "bytes": 3059,
+      "sha256": "ea0d2afe2c37e0da81193633c37a7e119b854657fa5de6cb7b3fed59437cf313"
+    },
+    {
+      "path": "submission/R3-review-draft/FULL120_MANIFEST.json",
+      "bytes": 1053,
+      "sha256": "e4f2da248bdeb650f5146ccc3184b6edf40afe28d9cff89fadaae783b4a44e34"
+    }
+  ],
+  "actual_exit": 0,
+  "submission": "NOT_SUBMITTED",
+  "deadline_sgt": "2026-11-06T23:59:00+08:00"
+}

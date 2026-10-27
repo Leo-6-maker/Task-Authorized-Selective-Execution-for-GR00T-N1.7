@@ -1,0 +1,41 @@
+{
+  "status": "PROCESS_COMPLETE_NO_REENTRY",
+  "reservation_count": 1,
+  "total_historical_diagnostic_ordinal": 2,
+  "prior_R014_child_exit": 1,
+  "prior_R014_original_sha256": "7cc204d1c0eed29788c8bd73ba6f5e9248cef2945d8c4d6ed6822f1835c353f7",
+  "prior_R014_unchanged": true,
+  "R015_child_exit": 0,
+  "R015_diagnostic_processes_remaining": 0,
+  "retries": 0,
+  "fixed_output": "operator/issue33-r015-scene-02/scene-probe-02",
+  "ledger_atomic_exclusive_create": true,
+  "launcher_source_sha256": "fdea61207243b716019a9750f3ad529433f2dc4810d11becaa154dab5f312e12",
+  "origins": [
+    {
+      "path": "operator/issue33-r015-scene-02/R015-one-shot-reservation.json",
+      "bytes": 1000,
+      "sha256": "5f1f8b06add1020a102b4a467cc27ca9641ef07aaf0ee4d6a0921ba63ea88f14"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/R015-one-shot-terminal.json",
+      "bytes": 302,
+      "sha256": "226065149f3f01001f24a1fb8b44e2665e46378ad93f7345fb41032d7186fc57"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/R015_launcher.py",
+      "bytes": 9046,
+      "sha256": "fdea61207243b716019a9750f3ad529433f2dc4810d11becaa154dab5f312e12"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/R015-launcher-call.exit.json",
+      "bytes": 68,
+      "sha256": "4156e763e2e17f7e85eb875307684434a5f3fc3887edece99903bcd31fb2aa1e"
+    }
+  ],
+  "E3_TEST_roots": {
+    "E3A_TEST": false,
+    "E3B_TEST": false
+  },
+  "E3_TEST_reservations": 0
+}
