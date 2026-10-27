@@ -1,12 +1,12 @@
 {
-  "status": "CPU_PROPOSED_E3_DELIVERY_PENDING_INDEPENDENT_REVIEW",
-  "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
+  "status": "R014_LOCAL_CPU_PRESERVED_NATIVE_SCENE_NOT_EXECUTED_BLOCKED_SSH",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 11115,
-      "sha256": "0ec2d015fe7cf2fdc2164d2601f9e8029be62f74fab17ef35043d488221b3222"
+      "bytes": 11764,
+      "sha256": "bc299420449e96d7c452117c46ade55f19cd667199127a897023f0bb19c75191"
     },
     {
       "path": "configs/e3_cells.proposed.json",
@@ -35,18 +35,28 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 7380,
-      "sha256": "1438ee75f17b7633d6363e53ced919aefee75b38c3a168b295b18cbc129e4131"
+      "bytes": 8029,
+      "sha256": "a09d7eef9aef4ee4741b501ad9ea08df3cee98df9852a861b676ae5938eed645"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 17470,
-      "sha256": "e1601c8ef74f22b41843ac1bcd78d3d84c40b2d34689ee185a41174b8bddaed9"
+      "bytes": 18119,
+      "sha256": "4a656a609956bc620db4ccd647f9b1770290816f313fabe8706e578cfcf4d012"
     },
     {
       "path": "docs/protocols/E3-001-v1.0-PROPOSED.md",
       "bytes": 7845,
       "sha256": "e565dbbc0aa122858387081e0e19498a08f3a1b9071ec1c8a97b6a37ef643010"
+    },
+    {
+      "path": "docs/reviews/R014-E3-CPU-scene-inspection-review.md",
+      "bytes": 10376,
+      "sha256": "24df17bbf10f46fb2a90d074012942bfc275db622f701a5058db6f1fd507c8f0"
+    },
+    {
+      "path": "docs/reviews/R014-E3-SCENE-INSPECTION-AUTHORIZED.json",
+      "bytes": 4188,
+      "sha256": "adddb3e67480c7f03c29b6313782fd46e3e084a5bd27e1a490eedc69be71b7f7"
     },
     {
       "path": "docs/work_packages/E3-EXPANSION-MASTER-PLAN-2026-10-26.md",
@@ -220,8 +230,8 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 2617,
-      "sha256": "a36614e1b417589b2653f375fa162b7226f4e08aeea4610bc74ffc8a3d80ab59"
+      "bytes": 3246,
+      "sha256": "b5e60f81b795354c3b372df9ee9ae59b76cabef17aa3413838f4654500da54f5"
     },
     {
       "path": "reports/E3/PLAN_BASELINE.md",
@@ -232,6 +242,46 @@
       "path": "reports/E3/PROPOSED_CELLS_160.csv",
       "bytes": 76490,
       "sha256": "7f688245ed81319c431326d0d5640e06b8002bcf4c51619b708e6efb42347624"
+    },
+    {
+      "path": "reports/E3/R014/CPU_REGRESSION.json",
+      "bytes": 1105,
+      "sha256": "ea00a4d2670f276ee1dd614459ee2682bfd0506da078a37cd3f8d74bce7efd19"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_BACKUP_VERIFICATION.json",
+      "bytes": 472,
+      "sha256": "cf273363405cbd154388502d03e7539e7c2e9b35ae60b7789e3571f1632f962f"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_E2_PRESERVATION.json",
+      "bytes": 590,
+      "sha256": "752793811388c1f49ea1adb3d66a9f6f4b55de72fbf8259114b9b1f92eb6e3f8"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_GRANT_SOURCE_CHECK.json",
+      "bytes": 569,
+      "sha256": "b4a2881b9ac2b6af6b741343c2705084a2c3e89e4ec83f895bc6586363ed85da"
+    },
+    {
+      "path": "reports/E3/R014/R014_STATUS.json",
+      "bytes": 3144,
+      "sha256": "2ef8144418e49f38d79f56181627a67a6a693a9af3e3a41dbfc8fcaff5ef695a"
+    },
+    {
+      "path": "reports/E3/R014/SOURCE_DIFF.json",
+      "bytes": 259,
+      "sha256": "53d5c175fdb49dade36522d459f9908b51000f03600d4086debaffafe5751eee"
+    },
+    {
+      "path": "reports/E3/R014/TAKEOVER_HANDOFF.md",
+      "bytes": 5310,
+      "sha256": "fff3384306454a6a5ca68fc96072d099218acc4b8cad474ae6b4c13b132d7299"
+    },
+    {
+      "path": "reports/E3/R014/TRANSPORT_RECEIPT_ORIGINS.json",
+      "bytes": 1449,
+      "sha256": "e6919a5caf7c20ce5e031a6234bbf825cfa0b9ac00737e0daf42bad29808b315"
     },
     {
       "path": "reports/E3/README.md",

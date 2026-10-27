@@ -1,0 +1,81 @@
+{
+  "status": "BLOCKED_SSH_CONNECTION_TIMEOUT_OWNER_REQUESTED_CPU_PRESERVATION",
+  "client_sgt_date": "2026-10-27",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "machine_grant_commit": "eac3d8edeb3de7a33727d462ea652d7719e03629",
+  "machine_grant_path": "docs/reviews/R014-E3-SCENE-INSPECTION-AUTHORIZED.json",
+  "grant_current_at_local_fetch": true,
+  "grant_independent_review_scope": "9 constructors/36 init loads/0 model/0 TEST/0 explicit main actions; no E3 protocol freeze",
+  "owner_GPU1_permission": "GRANTED_FRESH_FOR_THIS_R014_SCOPE_IN_THIS_CHAT",
+  "owner_permission_original_statement": "授权本轮使用 GPU1",
+  "owner_subsequent_steering": "先保全 CPU 交付",
+  "GPU_UUID_EGL_free_VRAM": "NOT_VERIFIED_NO_REMOTE_ACCESS",
+  "complete_allocation_JSON": "NOT_CREATED_PENDING_REAL_UUID_AND_RESOURCE_CHECK",
+  "bounded_SSH_attempts": 3,
+  "SSH_actual_exit_codes": [
+    255,
+    255,
+    255
+  ],
+  "remote_source_stage": "NOT_CONFIRMED; initial SSH connection timed out before a remote session was established",
+  "remote_106_XML_verify_inventory": "NOT_EXECUTED",
+  "remote_BDDL_init_source_recheck": "NOT_EXECUTED",
+  "Corelab_fresh_E2_audit": "NOT_EXECUTED_THIS_ROUND",
+  "scene_diagnostic": "NOT_EXECUTED",
+  "scene_environment_constructors": 0,
+  "scene_initialization_loads": 0,
+  "explicit_main_controls": 0,
+  "model_calls": 0,
+  "policy_servers_started": 0,
+  "Shadow_predictions": 0,
+  "E3_TEST_consumed": {
+    "A": 0,
+    "B": 0
+  },
+  "planned_PROPOSAL": {
+    "A": 112,
+    "B": 48
+  },
+  "E3_protocol_frozen": false,
+  "E3_TEST_authorized": false,
+  "new_native_code_changes": [],
+  "private_receipts_backup": "LOCAL_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED_REMOTE_COPY_PENDING",
+  "E2_R3": "PENDING_INDEPENDENT_GPT",
+  "course_fallback": "PR22@73ddec9790c8540ad2b1faec6c989c7172cc5078 preserved unchanged",
+  "deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "course_submission": "NOT_SUBMITTED",
+  "next_action": "When owner restores SSH and requests continuation, retain this same owner permission, verify current grant equality and exact9599 clean source, run fresh CPU verify_inventory106/BDDL/36 init and live GPU1 UUID/EGL/free>=9GiB/foreign-job preflight. Only then one R014 scene diagnostic; no model or TEST.",
+  "local_CPU_regression": {
+    "normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "original_exit_receipt_sha256": "8d3be7f42afedd6e3e29c7151c963fae1eaa01f1d0189b03fa255d027c290309",
+      "original_log_sha256": "7ce84d175b88df80b01060428cdc33e9e6af465c2ea870d72c6cf1f39381ca0e",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    "optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "original_exit_receipt_sha256": "9b8cd61222d4e19b240d178c3975eed5270171cc7229541e11119610b75bf97a",
+      "original_log_sha256": "5e7cd98f3e53e097c07490834e371bdd408efa9628904c0c1fa1d4a27321599e",
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    }
+  }
+}
