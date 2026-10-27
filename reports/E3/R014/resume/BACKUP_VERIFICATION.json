@@ -1,0 +1,21 @@
+{
+  "stage": "issue33-r014-failed-probe-01",
+  "bytes": 686340,
+  "sha256": "040396a5d5e44db42a8c554e1c91b0a659a11133f4b4421170b498adb5d8f7b1",
+  "artifacts": 60,
+  "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "scene_actual_exit": 1,
+  "CPU_actual_exits": {
+    "config-normal": 0,
+    "config-optimized": 0,
+    "CPU-full-normal": 0,
+    "CPU-full-optimized": 0,
+    "CPU-preflight": 0,
+    "E2-normal": 0,
+    "E2-optimized": 0
+  },
+  "independent_locations": 2,
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR",
+  "transfer_actual_exit": 0
+}

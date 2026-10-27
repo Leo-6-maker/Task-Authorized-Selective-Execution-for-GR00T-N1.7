@@ -1,0 +1,44 @@
+{
+  "status": "PINNED_UPSTREAM_AND_DUAL_ENVIRONMENT_MATCH",
+  "GPU_index": 1,
+  "free_MiB_before_scene": 15899,
+  "required_minimum_MiB": 9216,
+  "UUID_EGL_matching": "VERIFIED_PRIVATE_ORIGINAL",
+  "owner_permission": "EXPLICIT_GPU1_FOR_THIS_R014_9ENV36INIT_ZERO_MODEL_ZERO_TEST_SCOPE",
+  "upstream_source_files": 7,
+  "environment_versions": {
+    "server": {
+      "python": "3.12.14",
+      "matched_packages": 138
+    },
+    "sim": {
+      "python": "3.12.14",
+      "matched_packages": 159
+    }
+  },
+  "original_config_sha256": "5fefd0e212d29140bc34de34b4a30e36fe374207dd160a15076a413aefaad63a",
+  "original_config_unchanged": true,
+  "original_receipts": [
+    {
+      "path": "operator/issue33-r014-01/fixed-environment.private.json",
+      "bytes": 11505,
+      "sha256": "c93fed44da401ce234d77edc7e2d2dd2a16ea1404213f1784727bfce73c8f4e5"
+    },
+    {
+      "path": "operator/issue33-r014-01/gpu-allocation.private.json",
+      "bytes": 653,
+      "sha256": "a6636cf538b0df64d7024a3e98b7b8d82d78586842fb1b075f9bc7545bf1a0a4"
+    },
+    {
+      "path": "operator/issue33-r014-01/scene-activation.private.json",
+      "bytes": 677,
+      "sha256": "f8940ce481059c5c84d14170f1072ab69d53fc0c744040a00ccfa854c7b903e3"
+    },
+    {
+      "path": "operator/issue33-r014-01/owner-resource-approval.private.json",
+      "bytes": 576,
+      "sha256": "cb69e629c26796c44daa377b798bc9106cdce93651cb90b8b7355a3b4272b102"
+    }
+  ],
+  "model_loading": false
+}

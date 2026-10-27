@@ -1,0 +1,644 @@
+{
+  "status": "FRESH_XML106_BDDL_INIT36_CPU_VERIFIED",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "actual_exit": 0,
+  "XML_files": 106,
+  "tasks": 9,
+  "unique_initializations": 36,
+  "heldout_E2_overlap": 0,
+  "CUDA_initialized": false,
+  "simulator_created": false,
+  "source_inventory_sha256": "c10d2640e1176a3f19e19ee806e3703c6f55213f0d623dba872d65b8c0b58b37",
+  "files": [
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/basin_faucet/basin_faucet_base/basin_faucet_base.xml",
+      "bytes": 1678,
+      "sha256": "222415a2bf02d69c5983c29fb4d6bf4ecd0b73da46318cdf0115ba00740b713a"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/basin_faucet/basin_faucet_movable/basin_faucet_movable.xml",
+      "bytes": 1468,
+      "sha256": "69b216384753495ba02f15fdb0eb41ef773277847027013c4cf2426c86151de9"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/basin_faucet.xml",
+      "bytes": 3442,
+      "sha256": "94daf6b7cd27981af911d8364a4278586e3e1e5e945adcf8faa880c497e8f8ae"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/faucet.xml",
+      "bytes": 3128,
+      "sha256": "d4d9a435db7fdc4278fa6c0c75eff17feabb48ccadf3b877dd1fb6376f0275d0"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/flat_stove/stove_knob_base/stove_knob_base.xml",
+      "bytes": 4197,
+      "sha256": "ff762270a8befbe7186a43463ade9e5ee3fe96a0fa3088c9794be16cf7ad66f7"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/flat_stove/stove_knob_button/stove_knob_button.xml",
+      "bytes": 5154,
+      "sha256": "51f6fd5bc9356e035e85e95e7aba54705b20c17e9ba756fb3c2fa78d389003fa"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/flat_stove.xml",
+      "bytes": 7180,
+      "sha256": "046748f5543cdfc1500d74f8ca60a992ad6633717396a2d4f505eb79aa102cb1"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/microwave.xml",
+      "bytes": 4442,
+      "sha256": "d06c1e44acb830c529a843e566deedfc5693a6e11f68a3d1d59d49021890fbdf"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet/base/base.xml",
+      "bytes": 2236,
+      "sha256": "cf009448b3383bff2e24d7c66b7a75223aea42aa11f9e2aa13d69f7083572cef"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet/base/base_vis.xml",
+      "bytes": 2246,
+      "sha256": "ea55e822c1c013c713934f18512801a8f1cc7f8c33c24e7138cb79ae919f4403"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet/drawer_high/drawer_high.xml",
+      "bytes": 3206,
+      "sha256": "028cdef9fa7824998d676cf389ebbeb669412e8a064b4c0cdd4d69a3334c0a44"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet/drawer_low/drawer_low.xml",
+      "bytes": 3208,
+      "sha256": "932beea17232a5377bd97cefaf946906245804878316d55fc160535fd5044b49"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet/drawer_middle/drawer_middle.xml",
+      "bytes": 3226,
+      "sha256": "03145eb45141b68a8266d48e8806f3a7e715beebbca4b793aacba1644aed4f16"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_cabinet.xml",
+      "bytes": 11895,
+      "sha256": "410a5854aed734e046a092dbb54ad620abaad6c47ece3081e71afe0d11dc8f93"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_fridge/base/base.xml",
+      "bytes": 3628,
+      "sha256": "3a8593e4f6ffa4a1e3f8dde3ad07f2be19650496b9a5b2789f104562173ba95b"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_fridge/door/door.xml",
+      "bytes": 2204,
+      "sha256": "ef1f05aafed78d6a41e21d878719d0a21b95c01668102aebefca7a0774211085"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/short_fridge.xml",
+      "bytes": 6713,
+      "sha256": "4f928ee9c0dee7d14f2e95aef425a4f713c10c41a590a4407f501f0d5dc3376a"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/slide_cabinet.xml",
+      "bytes": 3738,
+      "sha256": "6b311ceba0cebb94777c92111b5cc977b65fbf2cbe7169867d29579261a16b8b"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/white_cabinet.xml",
+      "bytes": 14365,
+      "sha256": "b8ebf670ad0d5533d9fedbfdd7909d263792fc6725d4ca5d4df987660cee264a"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/window.xml",
+      "bytes": 6773,
+      "sha256": "9f3b37fd0c834b0ac5f7004b7a9672f76fba19bf80af523776e18eb11d9a338f"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_base/wooden_cabinet_base.xml",
+      "bytes": 3037,
+      "sha256": "3bf642de516e408bec7d8aa4cfbb9252d7f3a53ad17a79114a7037a90bbd3171"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_bottom/wooden_cabinet_bottom.xml",
+      "bytes": 2350,
+      "sha256": "a466dbada22f6766802daae274594a1cd274a2783a44961eee68798daa85fc13"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_bottom_handle/wooden_cabinet_bottom_handle.xml",
+      "bytes": 1704,
+      "sha256": "166ec7fd884e9119f2f13ae5f232ce0273b017770c16ad726b81e87e5b6fa7ca"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_middle/wooden_cabinet_middle.xml",
+      "bytes": 2350,
+      "sha256": "793356bcfba7fcaf76789d103887682bfe3ffe045aa45b085b41aefff8583b12"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_middle_handle/wooden_cabinet_middle_handle.xml",
+      "bytes": 1695,
+      "sha256": "aa06707477c7cb27bf66a2576079f46f8af6124a5e88a2f6b25c09f248227387"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_top/wooden_cabinet_top.xml",
+      "bytes": 2326,
+      "sha256": "34068772ecb0a277fd367203c8b34dc5dc587705b4e340bd2c845516cca41375"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet/wooden_cabinet_top_handle/wooden_cabinet_top_handle.xml",
+      "bytes": 1671,
+      "sha256": "eb7e584cfa8cafadaa9aeb86d0a33e9de1cfdd0f221b2f9cae3540e5acc14ed5"
+    },
+    {
+      "relative_path": "libero/libero/assets/articulated_objects/wooden_cabinet.xml",
+      "bytes": 14435,
+      "sha256": "eca251258c7ff6a05fa181a316c767508801812f4ea870921f3ce28fd82ea7af"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/black_book/black_book.xml",
+      "bytes": 1094,
+      "sha256": "545baee0e196261da00e96270b055bb91658988e25dc8a859e20750d17fcdfa5"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/coffee_table_seats/coffee_table_seats.xml",
+      "bytes": 1205,
+      "sha256": "a054e2190c18635a58193e8a49af140dc7f9fe7c570f30c3114216fff94ea624"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/desk/desk.xml",
+      "bytes": 2453,
+      "sha256": "2d2e9d4bcab289fdad9b35958634c9ffb6faba9ef3103f53dfe98222556b8834"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/floor_lamp/floor_lamp.xml",
+      "bytes": 1088,
+      "sha256": "e159e83b0d6db2cb79634c3c67e290cbf87f87012c6acf0f57669d6ca6d70141"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/fridge/fridge.xml",
+      "bytes": 1057,
+      "sha256": "1693356b04eb8a03e9a1e04a2707a052be72b2583088dc1e24489fb00bfcff58"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/kitchen_background/kitchen_background.xml",
+      "bytes": 1194,
+      "sha256": "75b39ca51105f7f20753acc398d7d336c61b3ca801b9af9b38085c77fa39c4f9"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/kitchen_background_hot_pot/kitchen_background_hot_pot.xml",
+      "bytes": 1278,
+      "sha256": "f9c219f2aa7712ccbf57a8b552b364c3e256d2a03f8574a57eacb2266b8a47d4"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/kitchen_background_pot/kitchen_background_pot.xml",
+      "bytes": 1242,
+      "sha256": "66707641ae01fd0754cf7c0e1a5131297bb914abde1219b2f3a3ffaa9aa74fce"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/kitchen_background_stove/kitchen_background_stove.xml",
+      "bytes": 1260,
+      "sha256": "7e837d229d8b1e297c9698f332691871afebdaa0381d0a661266c22c05796787"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_coffee_table_base_style.xml",
+      "bytes": 5888,
+      "sha256": "7fe7417a4eb449670d0b7a2cf3f770435b0e476e1aaf0dd34c91d4845805ffd7"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_coffee_table_blue_style.xml",
+      "bytes": 4855,
+      "sha256": "9cff2ac1b9cfe30134223361487999a32aab5c3026c97e5a1892e3b6b6df9809"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_coffee_table_warm_style.xml",
+      "bytes": 5410,
+      "sha256": "65b43df25770d396594c531e2ee1368c436a9886f4c93c621e0d9d10032873a3"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_floor_base_style.xml",
+      "bytes": 4216,
+      "sha256": "df092a7d8ac7a5c4d1ce48e9a6dacf2f7ebaa362580e20de46d9644f3d5d1039"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_floor_blue_style.xml",
+      "bytes": 3890,
+      "sha256": "c8568aaba852cb1c1baee619f9bd990ce5c36990491bd26ce3b5015c129511a5"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_floor_coffee_style.xml",
+      "bytes": 4122,
+      "sha256": "127ec02b0a0d40181094a9474ff8f4c4f71f25cc92675e2774a26ebbd14de36a"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_floor_warm_style.xml",
+      "bytes": 3910,
+      "sha256": "546cefa5d9ec0b368261214747b4e9372fab4b6b6fef26774034d48651cee0cd"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_kitchen_tabletop_base_style.xml",
+      "bytes": 7214,
+      "sha256": "f867e7cb59e8ef27aea10edb7c341eca5d3230da8c354aff2a072cc557fd2977"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_living_room_tabletop_base_style.xml",
+      "bytes": 6745,
+      "sha256": "e22de70abac444dc7602546c46931580a3f06753ce941d0921f4f145e8eec70c"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_study_base_style.xml",
+      "bytes": 9420,
+      "sha256": "dbc88d0ada642f99762ddd25b778981721fd1c010ad9c0cd114dade7c5b8f909"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_tabletop_base_style.xml",
+      "bytes": 4857,
+      "sha256": "bb118118e3e02a0f23295c072d77c5a7c6b44cc773032dc79c17070b4e133f86"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_tabletop_blue_style.xml",
+      "bytes": 4924,
+      "sha256": "4a1421361fa661f33e864bf77036b6dff65cd27eba8a64d2319b6fb18e46541a"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/libero_tabletop_warm_style.xml",
+      "bytes": 4655,
+      "sha256": "4ff0e2e91f884c42c0f956c1ff7f6687a502c100a8e4e71b10a3cc32b69352ec"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/living_room/living_room.xml",
+      "bytes": 1108,
+      "sha256": "b5ee3ca16c2c57fefb4118c8470367f2856479a50b88e2cc4aaefa090c8d6558"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/living_room_table/living_room_table.xml",
+      "bytes": 2331,
+      "sha256": "ea29b7ed138bd120d36a407c46bf7175ce551da94adf89852ec139813c4a892e"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/office_book_shelf/office_book_shelf.xml",
+      "bytes": 1160,
+      "sha256": "9384d6dcef48737224697b7eebc7d7f9fac383185afe1fa17264311c974d87a0"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/plant/plant.xml",
+      "bytes": 1034,
+      "sha256": "d53aa60b8544e01fb39da706d93af5abebd1b035d7522641b79c02e502bd13e6"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/short_coffee_table/short_coffee_table.xml",
+      "bytes": 1180,
+      "sha256": "0789382cbd8c0964990161ecdc3763676397058e140e9021839ed2d0c5afc8bf"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/study_background/study_background.xml",
+      "bytes": 1158,
+      "sha256": "84e751686a7bb6d1a69602b44aa1817f075ef0e2518af34e1fc1bc497dd11414"
+    },
+    {
+      "relative_path": "libero/libero/assets/scenes/study_wall_painting/study_wall_painting.xml",
+      "bytes": 1194,
+      "sha256": "54befd605ead9fa01ea29cac461c121bc95feba2d2b92d8b0b7617cd9d80d0a5"
+    },
+    {
+      "relative_path": "libero/libero/assets/serving_region.xml",
+      "bytes": 616,
+      "sha256": "d0dd1d7611b9c535883a8bee9bc475a85014d2d235f9c894ef57f13c6bd64335"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/alphabet_soup/alphabet_soup.xml",
+      "bytes": 5812,
+      "sha256": "09a230f3cc5cbb437190adb9d2212ad20edfb5904bda8094a5db7acb2595afc3"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/bbq_sauce/bbq_sauce.xml",
+      "bytes": 1680,
+      "sha256": "2ec3d7d89ce3dbbe600dd5714a568efcd326104a8f786fdf0a6d1def19ae56e0"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/butter/butter.xml",
+      "bytes": 1053,
+      "sha256": "2d0d3ffd627243007e8bd8106140f9b5abbf6115a30a59c21405e8c26ffb8aa9"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/chocolate_pudding/chocolate_pudding.xml",
+      "bytes": 1065,
+      "sha256": "f2ec3318aeed8feb6b16d234149ce52127050e81c65f7d43aaa6384cdd26ecf2"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/cookies/cookies.xml",
+      "bytes": 1063,
+      "sha256": "f79f4e6274a286b10ea8f8799690c56c7ddbb2ca2c63703c06c92febb966bf70"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/cream_cheese/cream_cheese.xml",
+      "bytes": 1550,
+      "sha256": "a1bbeb0321d9d20d723aca62baa54f6012bf74c0af5d4f767a58ca0cdde50d95"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/ketchup/ketchup.xml",
+      "bytes": 3656,
+      "sha256": "9007c9658863067a55dcea588d2000c9779e9edb1ba9d816312a840cb190064b"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/macaroni_and_cheese/macaroni_and_cheese.xml",
+      "bytes": 1070,
+      "sha256": "53d12d072c167ffc26a072bca10f89ab5ca7c6b05b1038dc41d5428122e72440"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/milk/milk.xml",
+      "bytes": 1778,
+      "sha256": "41febcc4121fae47a42f2e667a6b18f722b3feb863241b4533613672c36ad160"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/new_salad_dressing/new_salad_dressing.xml",
+      "bytes": 4441,
+      "sha256": "daa4f363607329fcc4d4c0edccce9f9584db074d00eef2f14291803b0accfeb3"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/orange_juice/orange_juice.xml",
+      "bytes": 1786,
+      "sha256": "c0c9ac0596d8978fe3aceec05dde0fab3e9f5eda4fedbda6ceb5d5276806618e"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/popcorn/popcorn.xml",
+      "bytes": 1077,
+      "sha256": "79b3a7f8d48b6ce592228789b934bf37fffb5991412b66d376f0aff8b0f57f43"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/salad_dressing/salad_dressing.xml",
+      "bytes": 4379,
+      "sha256": "dfc46d9f59fce1f814a80d1bd476d93216e8b16489e1761e8f5506e5f30980c8"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_hope_objects/tomato_sauce/tomato_sauce.xml",
+      "bytes": 6520,
+      "sha256": "b13d88bc065d04481150832581812bd0cbc9e4c0efcabccda2dc8d58654ee32b"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/akita_black_bowl/akita_black_bowl.xml",
+      "bytes": 10343,
+      "sha256": "18c1074cfa09baea739bb75928f9bd2bd80e22ac18655f6a27f005dbf77ccfda"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/basin_faucet_base/basin_faucet_base.xml",
+      "bytes": 1678,
+      "sha256": "222415a2bf02d69c5983c29fb4d6bf4ecd0b73da46318cdf0115ba00740b713a"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/basin_faucet_movable/basin_faucet_movable.xml",
+      "bytes": 1468,
+      "sha256": "69b216384753495ba02f15fdb0eb41ef773277847027013c4cf2426c86151de9"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/basket/basket.xml",
+      "bytes": 2167,
+      "sha256": "9c1a8263944d17f5265de9cb5aec3cee934979dee19361d21f15e2128f22d253"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/chefmate_8_frypan/chefmate_8_frypan.xml",
+      "bytes": 6791,
+      "sha256": "8ba227a630dfb2f25f4b4285659460f5eddb59d8b7c90013a0c5ea0812da2376"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/glazed_rim_porcelain_ramekin/glazed_rim_porcelain_ramekin.xml",
+      "bytes": 6886,
+      "sha256": "61cf1b665e52faf68a98b044da3fc2b42f2303485b6445743741fbf99d3f9bcf"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/plate/plate.xml",
+      "bytes": 3158,
+      "sha256": "72b4de23b2daa3169843b784998c0c3c30a6559c6c85917c6b86e3d39fa241e6"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/red_bowl/red_bowl.xml",
+      "bytes": 9294,
+      "sha256": "98962cec001321da77b1def7cf89c35862b7398231c0a63eda00a6df3f23b309"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/simple_rack/simple_rack.xml",
+      "bytes": 4287,
+      "sha256": "b983fb05d2d777d5042a732ac8c0ecb5d02b64cb6a8aefdc4d3ea00c5f783542"
+    },
+    {
+      "relative_path": "libero/libero/assets/stable_scanned_objects/white_bowl/white_bowl.xml",
+      "bytes": 9307,
+      "sha256": "70d21ae151c9f67461ac6819c794b1539605418a3aca0f8f4345673dc7cd450b"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/black_book/black_book.xml",
+      "bytes": 1086,
+      "sha256": "dd50260bf3fe93abd3d4694403082b4025409ab0ee1590d8a73bd00c8a804b83"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/bowl_drainer/bowl_drainer.xml",
+      "bytes": 2844,
+      "sha256": "b73fea1507c47cd797b4f5a133a7efca7542f1776fc8632fb7a636de20335e9a"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/desk_caddy/desk_caddy.xml",
+      "bytes": 5572,
+      "sha256": "267de04e2191517700fced70d9f434958ba88d5e8d449e9def43aeaedd82dd85"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/desk_caddy/desk_caddy_site.xml",
+      "bytes": 1415,
+      "sha256": "275ca7cd2a80b882963b8219acc4115eef268c99776f2c07387e75f2dfd00a2c"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/dining_set_group/dining_set_group.xml",
+      "bytes": 2706,
+      "sha256": "a80770ab226c5dcaeb2c9b436e13f646fcfe4d8e3e3d38dc1c117ddc89203e92"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/moka_pot/moka_pot.xml",
+      "bytes": 4917,
+      "sha256": "b42223663280e10a755a65b395f3d6ef4f2e2ac476024a50c1e66cff9bfe5215"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/moka_pot/moka_pot_handle.xml",
+      "bytes": 4430,
+      "sha256": "048bf233852c38f8d5f52204ffc77169b3286bf0639ce070c9de04d439127970"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/porcelain_mug/porcelain_mug.xml",
+      "bytes": 6073,
+      "sha256": "cd72828fc40d20ccd8d3fb08ae37fbc87cb9957309eb4e3d04244554491f753e"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/red_coffee_mug/red_coffee_mug.xml",
+      "bytes": 3485,
+      "sha256": "53ea9985fcbcb6ead587056a801e795967ac2bd5329ceedc2aed006467dc5f80"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/white_storage_box/white_storage_box.xml",
+      "bytes": 2491,
+      "sha256": "db7b4ef7ef60d3a28bac7e6311601d33c42bc96a02da41e408188be8fc0ff544"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/white_yellow_mug/white_yellow_mug.xml",
+      "bytes": 10121,
+      "sha256": "134bfdb2e605b60609b63c4bae60d833ad027902973dfb6b912768e0870b435e"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_bottle/wine_bottle.xml",
+      "bytes": 6827,
+      "sha256": "9bdae6cb59f9260544cb802d4babe32c23b9dd66e0a5fb2bdb4662b468ce1a17"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_bottle/wine_bottle_red_main.xml",
+      "bytes": 5875,
+      "sha256": "460636a34ffe0ececda20fa00f27591b6999861c8f4cdf3d410f605ca2320bda"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_rack/wine_rack.xml",
+      "bytes": 4121,
+      "sha256": "18f97cd8bb76ed18b2f11d047c5abbe0a2d9490d53ac167e0657c596dd450c3e"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_rack/wine_rack_planes.xml",
+      "bytes": 1372,
+      "sha256": "d1e664d1aebb10264f71acae4acf5cc5f3b38a4b81d5900f0f53371e43cce3d9"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_rack/wine_rack_stand.xml",
+      "bytes": 2071,
+      "sha256": "6d5bf2f0056fcd8867f507302d78567bec7dad28521aa2ecb9e07b313d04f53d"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_rack/wine_rack_stoppers.xml",
+      "bytes": 1388,
+      "sha256": "f3dd125a83f55535044d9e7d6b9db7b5aebf5c6a403f17e269596d2c31526a27"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wine_rack_stand/wine_rack_stand.xml",
+      "bytes": 2067,
+      "sha256": "2980daf707602148bc6778f0fefe4c67bea1d4dfe7c7f97c2ee19480c0bdd6b1"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wooden_cabinet_base/wooden_cabinet_base.xml",
+      "bytes": 3038,
+      "sha256": "4d4ffea0612fe4b7e8e2dd5bdd9aad753fbc50d894538d80752288b877cc20d5"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wooden_shelf/wooden_shelf.xml",
+      "bytes": 3658,
+      "sha256": "a5f5662d2873cacd639064bef3802d6e1e763a94c15efd351844a5d855c9c22c"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wooden_tray/wooden_tray.xml",
+      "bytes": 4573,
+      "sha256": "d275a3ac94f12c633194f79248df724fe544ac053eaca7b3ee91e75685ec5dc3"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/wooden_two_layer_shelf/wooden_two_layer_shelf.xml",
+      "bytes": 2825,
+      "sha256": "f05e448de7985640152d7405f8a9bca65105d065268613ede321b02cb513fb28"
+    },
+    {
+      "relative_path": "libero/libero/assets/turbosquid_objects/yellow_book/yellow_book.xml",
+      "bytes": 1085,
+      "sha256": "d50e17f35728e7ccec4dd6bfa56316f27eed3cac3f5446fad11f2f3369c73acc"
+    },
+    {
+      "relative_path": "libero/libero/assets/wall.xml",
+      "bytes": 755,
+      "sha256": "81c5c1694f3093bb91f9632c090aa7d7722f2be53ec3d39df578f395690d81f4"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+      "bytes": 2129,
+      "sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53423,
+      "sha256": "6f6793ee550419a4a79dcb6ac83a9ba7bbf5e76e92fef26b82b6a7a10f72b04a"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+      "bytes": 2144,
+      "sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53039,
+      "sha256": "c524077b0c23006f28fc06760a5b5ab37eee67287b5329e84a34b0a8bd599b4a"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+      "bytes": 2117,
+      "sha256": "b1f4bb69d256a05f693838de46182bb0d3de0de68eec350df1b5b1e76f6c136d"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53487,
+      "sha256": "2326da7ccacd3ebc75d80847f92d2e310b537b8dbbd8a76840a29b13f00f9a65"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+      "bytes": 2108,
+      "sha256": "5d8053b40ff33246fdbcc38548db84032c6bb647b4b88b6646d9cf6b73a5006c"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53551,
+      "sha256": "f0925a8653c5902c5a4d78a2053365382ad7d05be7f059abe19c2004ffc5dc59"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+      "bytes": 2102,
+      "sha256": "9910aabf6717e8ba3e24a3f8500d9bce9ee075346ea6961e8fd766f1257d2996"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.pruned_init",
+      "bytes": 52399,
+      "sha256": "4a86269faf4c98baff4c1428997ac828d00c56922a9a131be94e19b6027e1db2"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+      "bytes": 2168,
+      "sha256": "674ceabc400b7b16d46e8eaf678709d4a633235c7e0a80233775044fe38b19b0"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53935,
+      "sha256": "1124189363e76609da182dd92217cd02c41be58e88c42e3949d23ba160da75a5"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+      "bytes": 2132,
+      "sha256": "6298533e7bcfb83e40779a77fda39216e8cd53f22bf1af6388585dad0abb0b50"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.pruned_init",
+      "bytes": 52975,
+      "sha256": "35b19ffab1fe08c6457ebd732c37d04b9bc0d22b7ce7de015986092ddddea151"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+      "bytes": 2114,
+      "sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53359,
+      "sha256": "5ea5483bca8abd80a8f1935e2c60570d60eaaf6a985c283d62805b46fb76aa94"
+    },
+    {
+      "relative_path": "libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+      "bytes": 2099,
+      "sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+    },
+    {
+      "relative_path": "libero/libero/init_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.pruned_init",
+      "bytes": 53295,
+      "sha256": "b987f7b11e8f9b47353cd7882e1da38ecdf6ec9715ad8a84346583ea71049fd3"
+    }
+  ],
+  "original_receipt": {
+    "path": "operator/issue33-r014-01/fresh-inventory.private.json",
+    "bytes": 117199,
+    "sha256": "d6c99f2c1bc2a301721bceeb518cbbbdfb0cf5ec7614f4c3e92c6fa0f3f3f2ae"
+  },
+  "exit_origin": {
+    "path": "operator/issue33-r014-01/CPU-preflight.exit.json",
+    "bytes": 146,
+    "sha256": "b3a1cc31227130d556aeb30cdc2a8d535f324cb69a104774e69fbd5896b4b778"
+  }
+}

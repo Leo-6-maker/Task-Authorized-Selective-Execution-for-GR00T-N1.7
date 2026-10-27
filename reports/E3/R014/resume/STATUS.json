@@ -1,0 +1,33 @@
+{
+  "status": "READY_FOR_INDEPENDENT_R014_REENTRY_REVIEW",
+  "scene_diagnostic_process_attempts": 1,
+  "scene_diagnostic_outcome": "EOF_BEFORE_LIBEROENV_IMPORT_COMPLETED_EXIT1",
+  "constructors": 0,
+  "init_loads": 0,
+  "model_calls": 0,
+  "E3_TEST_consumed": 0,
+  "E3_TEST_planned": 160,
+  "E3_protocol_frozen": false,
+  "E3_TEST_authorized": false,
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "signed_grant_commit": "eac3d8edeb3de7a33727d462ea652d7719e03629",
+  "grant_one_diagnostic_consumed": true,
+  "owner_GPU1_permission": "GRANTED_SAME_SCOPE_PERSISTS",
+  "CPU_regression": {
+    "normal": 187,
+    "optimized": 187,
+    "config_normal": 4,
+    "config_optimized": 4,
+    "all_actual_exits": 0
+  },
+  "E2_originals_18070_unchanged": true,
+  "E2_readonly_audit_equal": true,
+  "failed_scene_backup_independent_locations": 2,
+  "prior_CPU_backup_independent_locations": 2,
+  "new_runtime_source_changes": false,
+  "operator_failure": "MISSING_LIBERO_CONFIG_PATH_AND_TASK_RUNTIME_HOME_IN_EXTERNAL_LAUNCHER",
+  "correction": "Existing project config explicit source-bound environment; CPU tested only",
+  "next_action": "Independent GPT review and explicit permission for one additional same-head bounded scene diagnostic; no automatic retry",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "course_final_submission": "NOT_SUBMITTED"
+}

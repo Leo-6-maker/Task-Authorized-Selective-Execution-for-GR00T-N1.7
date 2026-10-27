@@ -1,0 +1,160 @@
+{
+  "status": "CPU_CONFIGURATION_SUBPROCESS_AND_FROZEN_REGRESSIONS_PASS",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "tests": {
+    "config-normal": {
+      "tests": 4,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:40:50.919051+08:00",
+      "completed_at_sgt": "2026-10-27T22:40:51.432859+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/config-normal.exit.json",
+        "bytes": 146,
+        "sha256": "ae415fcb2c1579e19c5f24b05d83366630804be6e5d8005a9ea7bf6432bdc960"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/config-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/config-normal.stderr.private.txt",
+        "bytes": 822,
+        "sha256": "41f2376101246af3f36ae31e31b351fa174cf17c800bb73337038609454d95cf"
+      }
+    },
+    "config-optimized": {
+      "tests": 4,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:40:51.523980+08:00",
+      "completed_at_sgt": "2026-10-27T22:40:52.285863+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/config-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "82d0a41476f6df205b8e58493b364dbe2dfa9a5dcee6d7c9398ba57475cf743e"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/config-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/config-optimized.stderr.private.txt",
+        "bytes": 822,
+        "sha256": "ead97cc10425bb7a8e0e05da8cbb446ae04e4b5d870d3aef0ab953e844bd666d"
+      }
+    },
+    "CPU-full-normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:40:52.390287+08:00",
+      "completed_at_sgt": "2026-10-27T22:41:27.989876+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/CPU-full-normal.exit.json",
+        "bytes": 146,
+        "sha256": "a813d9accc76ebf6d76a285bbc11adca662794d84062554a3e0e671942934028"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/CPU-full-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/CPU-full-normal.stderr.private.txt",
+        "bytes": 27691,
+        "sha256": "21a9c4d46c3e1cb9aff7fdd1faf00e35ac804818891970d6cb8bc9e9b2b4841c"
+      }
+    },
+    "CPU-full-optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:41:28.052345+08:00",
+      "completed_at_sgt": "2026-10-27T22:42:03.514334+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/CPU-full-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "40cf6bb08119f7c7cd47d77e818f523f5908ce18d4942ab4e8a2f7d49b2e1338"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/CPU-full-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/CPU-full-optimized.stderr.private.txt",
+        "bytes": 27691,
+        "sha256": "02990d7747ba5a500fb851a2720d38ce6a9c2e31cea742ed27d260696cda6254"
+      }
+    },
+    "CPU-preflight": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:36:58.229860+08:00",
+      "completed_at_sgt": "2026-10-27T22:37:03.259100+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/CPU-preflight.exit.json",
+        "bytes": 146,
+        "sha256": "b3a1cc31227130d556aeb30cdc2a8d535f324cb69a104774e69fbd5896b4b778"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/CPU-preflight.stdout.private.txt",
+        "bytes": 369,
+        "sha256": "ef98e50708870b1af8a349ce1bdf8f4185d8ec20a9981ab3aaf9d096e0695c6b"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/CPU-preflight.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "E2-normal": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:37:18.429136+08:00",
+      "completed_at_sgt": "2026-10-27T22:37:43.410458+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/E2-normal.exit.json",
+        "bytes": 146,
+        "sha256": "6702bf40776de1ace4c0e4a732cab5e38ff194c7a5e6545d1a6be176afcf5710"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/E2-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/E2-normal.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "E2-optimized": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-27T22:37:43.561859+08:00",
+      "completed_at_sgt": "2026-10-27T22:38:05.870849+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r014-01/E2-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "452eded560793cff96ed4ea92ba83080c466f2c015c918437c082ed992a270ed"
+      },
+      "stdout": {
+        "path": "operator/issue33-r014-01/E2-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r014-01/E2-optimized.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "configuration_regression_source": {
+    "path": "operator/issue33-r014-01/CPU_CONFIG_REGRESSION.py",
+    "bytes": 4995,
+    "sha256": "b8e328a161cf831daeb1c0678d9f3909623bae6904c3279bfdfc06a3e88d8ff4"
+  },
+  "CPU_bootstrap": "runpy of pinned os/yaml configuration initializer only, no benchmark/simulator import",
+  "scene_rerun": false
+}

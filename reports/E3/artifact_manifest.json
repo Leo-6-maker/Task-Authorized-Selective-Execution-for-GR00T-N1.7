@@ -1,17 +1,17 @@
 {
-  "status": "NEW_HOST_HANDOFF_READY_NATIVE_SCENE_NOT_EXECUTED",
+  "status": "R014_FAILED_BOOTSTRAP_CPU_RECOVERY_READY_FOR_INDEPENDENT_REENTRY_REVIEW",
   "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 12342,
-      "sha256": "b7582c2ca64f56872001c91ce758d9cc4939a0d414081c178124b2d7b0749bcf"
+      "bytes": 13307,
+      "sha256": "488b258c1d55ce4e09f72db75e315688aab17183f00595a47bae3757a958f4e7"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 2263,
-      "sha256": "1f915ae8eba5321f9ad00e63007d3894bc9431c19ec1d1ae2dd28da3b354d9e5"
+      "bytes": 3545,
+      "sha256": "cb82385dd5d1356c6efd8e826605f7a07383e3cd200115fb351c82a6755c0651"
     },
     {
       "path": "configs/e3_cells.proposed.json",
@@ -40,13 +40,13 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 8607,
-      "sha256": "b22ab9453a3b6a307994f09ed60063a983e0c657f3335660cf11a73c71184b70"
+      "bytes": 9572,
+      "sha256": "2d77dcf67831c3b58fb5391d6562a9f59d68593c7ad8eef0425394e34dd020d0"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 18697,
-      "sha256": "06812a6225245d7f47b3bab780736925e49ba6d040d62df8eb5887abf3bc3e9c"
+      "bytes": 19662,
+      "sha256": "17f2c77f5456b272453e1d64501463674cb8fff239d8bba4a233b1544852bb0a"
     },
     {
       "path": "docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md",
@@ -240,8 +240,8 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 3227,
-      "sha256": "ec60dd78d7f341bbecc6ea7415ca73a935fd089e966c1714998d545e367e10e0"
+      "bytes": 4319,
+      "sha256": "a8e2272d2547bc3ac9866787425340d02bb7063e7f7b478d1383e3cbc512e136"
     },
     {
       "path": "reports/E3/PLAN_BASELINE.md",
@@ -307,6 +307,61 @@
       "path": "reports/E3/R014/TRANSPORT_RECEIPT_ORIGINS.json",
       "bytes": 1449,
       "sha256": "e6919a5caf7c20ce5e031a6234bbf825cfa0b9ac00737e0daf42bad29808b315"
+    },
+    {
+      "path": "reports/E3/R014/resume/BACKUP_VERIFICATION.json",
+      "bytes": 637,
+      "sha256": "011171e3f82ed0b11c789e377b87fb10617c9b5a169c4ca5aa66d395415c7f48"
+    },
+    {
+      "path": "reports/E3/R014/resume/CPU_CONFIG_REGRESSION.py",
+      "bytes": 4995,
+      "sha256": "b8e328a161cf831daeb1c0678d9f3909623bae6904c3279bfdfc06a3e88d8ff4"
+    },
+    {
+      "path": "reports/E3/R014/resume/CPU_TESTS.json",
+      "bytes": 6277,
+      "sha256": "a35296698c036df0bf7a27436b271e43dcab75ed8c1fe58a8e5ea95591c00068"
+    },
+    {
+      "path": "reports/E3/R014/resume/E2_AND_PROCESS_PRESERVATION.json",
+      "bytes": 1640,
+      "sha256": "8f159e753b29f023e82c366d127d73aa85e7cfc70646b099208cf77c9ba1c28c"
+    },
+    {
+      "path": "reports/E3/R014/resume/FRESH_INVENTORY.json",
+      "bytes": 27818,
+      "sha256": "968210c0b0c6b8c1ce57e07d1f0c578ba05489dff7671f8dd35536dbcfd755f7"
+    },
+    {
+      "path": "reports/E3/R014/resume/ORIGINAL_RECEIPT_INDEX.json",
+      "bytes": 11447,
+      "sha256": "2fd2331ad9eec75d82dfef9203318012c61731a1d269a38f935cd61259e687d6"
+    },
+    {
+      "path": "reports/E3/R014/resume/PRIOR_CPU_BACKUP_CLOSED.json",
+      "bytes": 285,
+      "sha256": "143afae151cf040d29a8a409a2ad9af438cfd5dd72ff0b200e11ec4c33cf794a"
+    },
+    {
+      "path": "reports/E3/R014/resume/RECOVERY_REVIEW_REQUEST.md",
+      "bytes": 5357,
+      "sha256": "1813256e1f6370f202f5945f25db89011a88f86acedf823f43c93ae1e72c4cd1"
+    },
+    {
+      "path": "reports/E3/R014/resume/RESOURCE_ENVIRONMENT.json",
+      "bytes": 1455,
+      "sha256": "4029ce8d5e466c577313ea4f1d824fe15b02982c52384d3fbbb3d2cac6f6b5dc"
+    },
+    {
+      "path": "reports/E3/R014/resume/SCENE_FAILURE.json",
+      "bytes": 1637,
+      "sha256": "f15e1a1f4f42482fff6d6471aee4832de1f696dbf4b8532db6e68f548b750843"
+    },
+    {
+      "path": "reports/E3/R014/resume/STATUS.json",
+      "bytes": 1370,
+      "sha256": "5a493688a50d548a8f30cb5e503da74efff20eb2addf2b362cfa7cb478308d1f"
     },
     {
       "path": "reports/E3/README.md",
