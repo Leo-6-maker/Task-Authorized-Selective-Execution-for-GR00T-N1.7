@@ -1,0 +1,33 @@
+{
+  "status": "SCENE_INSPECTION_ERROR",
+  "error_type": "EOFError",
+  "traceback_sanitized": "Traceback (most recent call last):\n  File \"<CODE>/e3/scene_probe.py\", line 33, in main\n    from gr00t.eval.sim.LIBERO.libero_env import LiberoEnv\n  File \"<UPSTREAM>/gr00t/eval/sim/LIBERO/libero_env.py\", line 30, in <module>\n    from libero.libero import benchmark\n  File \"<UPSTREAM>/external_dependencies/LIBERO/libero/libero/__init__.py\", line 69, in <module>\n    answer = input(\n             ^^^^^^\nEOFError: EOF when reading a line\n",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "grant_commit": "eac3d8edeb3de7a33727d462ea652d7719e03629",
+  "actual_child_exit": 1,
+  "actual_operator_exit": 1,
+  "started_at_sgt": "2026-10-27T22:39:02.905757+08:00",
+  "completed_at_sgt": "2026-10-27T22:39:04.589077+08:00",
+  "constructors": 0,
+  "init_loads": 0,
+  "bindings": [],
+  "model_calls": 0,
+  "TEST_reservations": 0,
+  "scene_retry": false,
+  "origin": {
+    "path": "operator/issue33-r014-01/scene-probe-01/scene-inspection-result.json",
+    "bytes": 953,
+    "sha256": "7cc204d1c0eed29788c8bd73ba6f5e9248cef2945d8c4d6ed6822f1835c353f7"
+  },
+  "exit_origin": {
+    "path": "operator/issue33-r014-01/scene.exit.json",
+    "bytes": 146,
+    "sha256": "c2be80764788c6e4d6d3cb4481aa0fb23b7e847cad51dfbf293ab27dba0665cf"
+  },
+  "stderr_origin": {
+    "path": "operator/issue33-r014-01/scene.stderr.private.txt",
+    "bytes": 904,
+    "sha256": "cb03b5b8cc103bf3e89df55c314bd79281b77e5162fc90577d746b0d7170ab72"
+  },
+  "stop": "ONE_DIAGNOSTIC_ATTEMPT_FAILED_NO_NATIVE_RETRY_UNTIL_INDEPENDENT_REENTRY_CLEARANCE"
+}

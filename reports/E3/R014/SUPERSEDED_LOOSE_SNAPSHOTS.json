@@ -1,0 +1,106 @@
+{
+  "status": "SUPERSEDED_SNAPSHOT_NOT_CURRENT_STATUS",
+  "origins": [
+    {
+      "worktree_label": "legacy-takeover",
+      "head": "7e73108fd87a711b4cdc339d93749cc4add3628f",
+      "original_worktree_not_modified": true
+    },
+    {
+      "worktree_label": "superseded-course",
+      "head": "73ddec9790c8540ad2b1faec6c989c7172cc5078",
+      "original_worktree_not_modified": true
+    }
+  ],
+  "private_original_archive": {
+    "bytes": 490385,
+    "sha256": "d54b3a6bd04cd0d5e05e6abf81985d2a3f87837c3cf4c3d3724c49c9496582a7",
+    "members": 15,
+    "storage": "OWNER_PRIVATE_HOST_HANDOFF_PACKAGE"
+  },
+  "public_snapshot": {
+    "path": "reports/E3/R014/SUPERSEDED_LOOSE_SNAPSHOTS.zip",
+    "bytes": 496305,
+    "sha256": "e071715307a9d4aa9a2e63b5d733fb538ee0521625399dc7912cca9451e3f2ea",
+    "text_path_redactions": [
+      "legacy-takeover/TAKEOVER_REPORT.md"
+    ]
+  },
+  "original_member_manifest": [
+    {
+      "path": "legacy-takeover/TAKEOVER_REPORT.md",
+      "bytes": 16505,
+      "sha256": "b9d69e0ac781bbb6fe0885e7009914daec8de1c3db1135f2f8b3e18ffef72cca"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/README.md",
+      "bytes": 2375,
+      "sha256": "902e49b056374015981a4c5996f6a33d7746d4e7e1ccecd29a7bd602c9f6d525"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/artifact_manifest.json",
+      "bytes": 2923,
+      "sha256": "8e72d9c3ac3b5e957a296bea9fbe431df0fd8d16de028431e30827c4aa71cbac"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/checks.json",
+      "bytes": 1953,
+      "sha256": "23b870438211cc0c90fa2355adf96c1de37592ed46ba74d48459955ee74be235"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/normal.json",
+      "bytes": 716,
+      "sha256": "09b8faa0c35f2b2d2250291ea8019c5aeb78af5e05f8942631a5a1fa5382cded"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/normal.txt",
+      "bytes": 17345,
+      "sha256": "992a3958e9d56df436c170cc82dec06a2a94c237cc721932c1063207113feb2e"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/optimized.json",
+      "bytes": 726,
+      "sha256": "073200db581c2a436b188636d5ac336d50d19b5a9bb7f3ca55d1445e68b76ad1"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/optimized.txt",
+      "bytes": 17345,
+      "sha256": "0867a0913435593393297ba8957a87eb27ee83f858e19e249feb49bd216b532d"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/oracle-normal.json",
+      "bytes": 760,
+      "sha256": "678fba532481fe6a660fc1dbda91a1b04a0475605fa263979320a7f74ddc74e9"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/oracle-normal.txt",
+      "bytes": 1048,
+      "sha256": "2c49850add27e13207904ed72b66a901a5b6a742900fd2b473202c43c3cf6aef"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/oracle-optimized.json",
+      "bytes": 770,
+      "sha256": "242ab0fb7a373123c7fef5d578ca435c41be9d864bb3e2470042e2dffca091a4"
+    },
+    {
+      "path": "legacy-takeover/reports/takeover/20261023/oracle-optimized.txt",
+      "bytes": 1048,
+      "sha256": "ac212a282ec40aa4de233c1f70ef88b724e13c2d3b1b2c29fc56687d1caaa247"
+    },
+    {
+      "path": "legacy-takeover/tracked-working-tree.patch",
+      "bytes": 8304,
+      "sha256": "8bcbcdd5d0725f3309471d931fc93e9b384e805d22eea6492bfe11336da6fc53"
+    },
+    {
+      "path": "superseded-course/submission/R013-source-review/SOURCE_R013.zip",
+      "bytes": 259161,
+      "sha256": "3232ae484d7b413907162dcba1d9ad64ef0319d0a92aeb9ff5bf5cccb20b8b86"
+    },
+    {
+      "path": "superseded-course/submission/R3-review-draft/ME6401-full120-review-v2.pptx",
+      "bytes": 236878,
+      "sha256": "5737a71c7c087a9f9f550d516f99eabf1f1a20c7d2c6ba2968a87ebc969eeedb"
+    }
+  ]
+}

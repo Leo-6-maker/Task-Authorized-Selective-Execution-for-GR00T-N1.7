@@ -1,0 +1,48 @@
+{
+  "status": "FAILED_DIAGNOSTIC_CLOSED_NO_RETRY_E2_UNCHANGED",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "clean": true,
+  "owned_scene_processes_alive_count": 0,
+  "native_worker_started": false,
+  "E3_TEST_roots": {
+    "E3A_TEST": false,
+    "E3B_TEST": false
+  },
+  "model_calls": 0,
+  "main_controls": 0,
+  "constructors": 0,
+  "init_loads": 0,
+  "E2_source_files_rehashed_after_failure": 18070,
+  "E2_unchanged": true,
+  "E2_canonical_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+  "E2_audit": {
+    "status": "LIVE_COMPLETE_E2_READ_ONLY_AUDIT_EQUIVALENCE",
+    "normal_actual_exit": 0,
+    "optimized_actual_exit": 0,
+    "full_JSON_equals_final120": true,
+    "reserved": 120,
+    "full_outcomes": 117
+  },
+  "E2_audit_originals": [
+    {
+      "path": "operator/issue33-r014-01/E2-normal.audit.json",
+      "bytes": 197898,
+      "sha256": "aa83027482bba460b2251b87f219dcfc9915d25856ea96158bac261a76704eec"
+    },
+    {
+      "path": "operator/issue33-r014-01/E2-optimized.audit.json",
+      "bytes": 197898,
+      "sha256": "aa83027482bba460b2251b87f219dcfc9915d25856ea96158bac261a76704eec"
+    }
+  ],
+  "GPU_process_list_unchanged": true,
+  "default_HOME_config_created": false,
+  "no_directory_deleted": true,
+  "original_receipt": {
+    "path": "operator/issue33-r014-01/post-scene-check.private.json",
+    "bytes": 1293,
+    "sha256": "a61a0d955b2f61d84d2681b8a04b5b69dbe09242dc2f0a737973bd267bde971a"
+  },
+  "default_HOME_directory_exists_after_import": true,
+  "default_HOME_directory_creation_time": "NOT_CAPTURED_MAY_PREEXIST_OR_IMPORT_CREATED_PRESERVED"
+}

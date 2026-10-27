@@ -1,0 +1,81 @@
+{
+  "status": "READY_FOR_NEW_HOST_AGENT_HANDOFF_R014_NATIVE_NOT_EXECUTED",
+  "date_sgt": "2026-10-27",
+  "owner_latest_request": "Node reportedly restored; submit complete GitHub handoff before switching host agent",
+  "report_branch": "codex/33-r014-scene-inspection",
+  "report_pr": 34,
+  "report_predecessor_head": "dfd0141b9ff85ff23cd21681a76ec8543b8106c7",
+  "report_base": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "report_final_head": "RESOLVE_FROM_THIS_FILE_GIT_COMMIT_AND_PR34_NOT_EXECUTION_HEAD",
+  "runtime": {
+    "branch": "codex/31-e3-cpu",
+    "head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+    "pr": 32
+  },
+  "E2_final": {
+    "branch": "codex/28-r013-test",
+    "head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+    "pr": 30,
+    "consumed": 120,
+    "SUCCESS": 89,
+    "TIME_LIMIT": 18,
+    "SEMANTIC_ABORT": 10,
+    "CLEANUP_ERROR": [
+      "0010",
+      "0014",
+      "0016"
+    ],
+    "independent_R3": "PENDING"
+  },
+  "course": {
+    "branch": "codex/20-course-draft",
+    "head": "73ddec9790c8540ad2b1faec6c989c7172cc5078",
+    "pr": 22,
+    "deadline_sgt": "2026-11-06T23:59:00+08:00",
+    "submitted": false
+  },
+  "R014": {
+    "review_commit": "eac3d8edeb3de7a33727d462ea652d7719e03629",
+    "review_path": "docs/reviews/R014-E3-SCENE-INSPECTION-AUTHORIZED.json",
+    "owner_GPU1_permission": "ALREADY_GRANTED_SAME_9_ENV_36_INIT_ZERO_MODEL_ZERO_TEST_SCOPE",
+    "fresh_GPU_UUID_EGL_free_memory": "UNVERIFIED",
+    "XML106_fresh_CPU": "NOT_EXECUTED",
+    "constructors": 0,
+    "init_loads": 0,
+    "model_calls": 0,
+    "E3_TEST_consumed": 0,
+    "E3_TEST_proposed": 160,
+    "E3_protocol_frozen": false,
+    "E3_TEST_authorized": false
+  },
+  "this_turn_transport": {
+    "actual_exit": 255,
+    "classification": "REMOTE_CLOSED_DURING_KEY_EXCHANGE_NO_REMOTE_STDOUT",
+    "fresh_node_access": "NOT_VERIFIED_FROM_THIS_HOST_OWNER_REPORTS_RESTORED",
+    "original_receipt_hashes": {
+      "restored-access-01.stderr.private.txt": {
+        "bytes": 109,
+        "sha256": "a2bf0f2dc81e8301c80b213027a51f297270e11f4ccbc32933fc7f0308f1b9e6"
+      },
+      "restored-access-01.stdout.private.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "restored-access-01.transport-exit.json": {
+        "bytes": 56,
+        "sha256": "9b566cda0282e6674894d6487362685bf6ebecb1f4c7dcc378f7c2e22de6288b"
+      }
+    }
+  },
+  "private_CPU_archive": {
+    "stage": "issue33-r014-local-CPU-preservation-01",
+    "bytes": 638492,
+    "artifacts": 31,
+    "sha256": "5bc28bf84a0bd03401d8a4723ce3e00129027b97c9dbefdbf3df78ddeec751b7",
+    "independent_locations": 1,
+    "remote_copy": "PENDING"
+  },
+  "loose_history": "SUPERSEDED_LOOSE_SNAPSHOTS.json",
+  "next_action": "New host reads START_HERE then performs fresh inventory106 and resource/grant preflight for ONE R014 scene probe; no model/TEST",
+  "no_runtime_code_test_config_changes": true
+}

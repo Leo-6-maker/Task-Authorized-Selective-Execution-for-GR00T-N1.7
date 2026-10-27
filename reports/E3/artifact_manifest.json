@@ -1,12 +1,17 @@
 {
-  "status": "CPU_PROPOSED_E3_DELIVERY_PENDING_INDEPENDENT_REVIEW",
-  "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
+  "status": "R014_FAILED_BOOTSTRAP_CPU_RECOVERY_READY_FOR_INDEPENDENT_REENTRY_REVIEW",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 11115,
-      "sha256": "0ec2d015fe7cf2fdc2164d2601f9e8029be62f74fab17ef35043d488221b3222"
+      "bytes": 13307,
+      "sha256": "488b258c1d55ce4e09f72db75e315688aab17183f00595a47bae3757a958f4e7"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3545,
+      "sha256": "cb82385dd5d1356c6efd8e826605f7a07383e3cd200115fb351c82a6755c0651"
     },
     {
       "path": "configs/e3_cells.proposed.json",
@@ -35,18 +40,33 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 7380,
-      "sha256": "1438ee75f17b7633d6363e53ced919aefee75b38c3a168b295b18cbc129e4131"
+      "bytes": 9572,
+      "sha256": "2d77dcf67831c3b58fb5391d6562a9f59d68593c7ad8eef0425394e34dd020d0"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 17470,
-      "sha256": "e1601c8ef74f22b41843ac1bcd78d3d84c40b2d34689ee185a41174b8bddaed9"
+      "bytes": 19662,
+      "sha256": "17f2c77f5456b272453e1d64501463674cb8fff239d8bba4a233b1544852bb0a"
+    },
+    {
+      "path": "docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md",
+      "bytes": 11125,
+      "sha256": "718f65c8a6a9b7d62aa499f579eb7d6974b4086606f5d9249a7319aa3a54f744"
     },
     {
       "path": "docs/protocols/E3-001-v1.0-PROPOSED.md",
       "bytes": 7845,
       "sha256": "e565dbbc0aa122858387081e0e19498a08f3a1b9071ec1c8a97b6a37ef643010"
+    },
+    {
+      "path": "docs/reviews/R014-E3-CPU-scene-inspection-review.md",
+      "bytes": 10376,
+      "sha256": "24df17bbf10f46fb2a90d074012942bfc275db622f701a5058db6f1fd507c8f0"
+    },
+    {
+      "path": "docs/reviews/R014-E3-SCENE-INSPECTION-AUTHORIZED.json",
+      "bytes": 4188,
+      "sha256": "adddb3e67480c7f03c29b6313782fd46e3e084a5bd27e1a490eedc69be71b7f7"
     },
     {
       "path": "docs/work_packages/E3-EXPANSION-MASTER-PLAN-2026-10-26.md",
@@ -220,8 +240,8 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 2617,
-      "sha256": "a36614e1b417589b2653f375fa162b7226f4e08aeea4610bc74ffc8a3d80ab59"
+      "bytes": 4319,
+      "sha256": "a8e2272d2547bc3ac9866787425340d02bb7063e7f7b478d1383e3cbc512e136"
     },
     {
       "path": "reports/E3/PLAN_BASELINE.md",
@@ -232,6 +252,116 @@
       "path": "reports/E3/PROPOSED_CELLS_160.csv",
       "bytes": 76490,
       "sha256": "7f688245ed81319c431326d0d5640e06b8002bcf4c51619b708e6efb42347624"
+    },
+    {
+      "path": "reports/E3/R014/CPU_REGRESSION.json",
+      "bytes": 1105,
+      "sha256": "ea00a4d2670f276ee1dd614459ee2682bfd0506da078a37cd3f8d74bce7efd19"
+    },
+    {
+      "path": "reports/E3/R014/HOST_HANDOFF_STATUS.json",
+      "bytes": 2946,
+      "sha256": "fd2685e6a191542b99972b0925a8ef5ac9c14d7ca6118fc1175190f85f4e1034"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_BACKUP_VERIFICATION.json",
+      "bytes": 472,
+      "sha256": "cf273363405cbd154388502d03e7539e7c2e9b35ae60b7789e3571f1632f962f"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_E2_PRESERVATION.json",
+      "bytes": 590,
+      "sha256": "752793811388c1f49ea1adb3d66a9f6f4b55de72fbf8259114b9b1f92eb6e3f8"
+    },
+    {
+      "path": "reports/E3/R014/LOCAL_GRANT_SOURCE_CHECK.json",
+      "bytes": 569,
+      "sha256": "b4a2881b9ac2b6af6b741343c2705084a2c3e89e4ec83f895bc6586363ed85da"
+    },
+    {
+      "path": "reports/E3/R014/R014_STATUS.json",
+      "bytes": 3144,
+      "sha256": "2ef8144418e49f38d79f56181627a67a6a693a9af3e3a41dbfc8fcaff5ef695a"
+    },
+    {
+      "path": "reports/E3/R014/SOURCE_DIFF.json",
+      "bytes": 259,
+      "sha256": "53d5c175fdb49dade36522d459f9908b51000f03600d4086debaffafe5751eee"
+    },
+    {
+      "path": "reports/E3/R014/SUPERSEDED_LOOSE_SNAPSHOTS.json",
+      "bytes": 3784,
+      "sha256": "de8a0294715a91a16df4bbdc1690d8847f3c6bf9281af15aafa9b650207c5268"
+    },
+    {
+      "path": "reports/E3/R014/SUPERSEDED_LOOSE_SNAPSHOTS.zip",
+      "bytes": 496305,
+      "sha256": "e071715307a9d4aa9a2e63b5d733fb538ee0521625399dc7912cca9451e3f2ea"
+    },
+    {
+      "path": "reports/E3/R014/TAKEOVER_HANDOFF.md",
+      "bytes": 5581,
+      "sha256": "2a5c8c0861f73e7e6e95e0df31a25f3e8890650220988fc67ebfd588a0dec27d"
+    },
+    {
+      "path": "reports/E3/R014/TRANSPORT_RECEIPT_ORIGINS.json",
+      "bytes": 1449,
+      "sha256": "e6919a5caf7c20ce5e031a6234bbf825cfa0b9ac00737e0daf42bad29808b315"
+    },
+    {
+      "path": "reports/E3/R014/resume/BACKUP_VERIFICATION.json",
+      "bytes": 637,
+      "sha256": "011171e3f82ed0b11c789e377b87fb10617c9b5a169c4ca5aa66d395415c7f48"
+    },
+    {
+      "path": "reports/E3/R014/resume/CPU_CONFIG_REGRESSION.py",
+      "bytes": 4995,
+      "sha256": "b8e328a161cf831daeb1c0678d9f3909623bae6904c3279bfdfc06a3e88d8ff4"
+    },
+    {
+      "path": "reports/E3/R014/resume/CPU_TESTS.json",
+      "bytes": 6277,
+      "sha256": "a35296698c036df0bf7a27436b271e43dcab75ed8c1fe58a8e5ea95591c00068"
+    },
+    {
+      "path": "reports/E3/R014/resume/E2_AND_PROCESS_PRESERVATION.json",
+      "bytes": 1640,
+      "sha256": "8f159e753b29f023e82c366d127d73aa85e7cfc70646b099208cf77c9ba1c28c"
+    },
+    {
+      "path": "reports/E3/R014/resume/FRESH_INVENTORY.json",
+      "bytes": 27818,
+      "sha256": "968210c0b0c6b8c1ce57e07d1f0c578ba05489dff7671f8dd35536dbcfd755f7"
+    },
+    {
+      "path": "reports/E3/R014/resume/ORIGINAL_RECEIPT_INDEX.json",
+      "bytes": 11447,
+      "sha256": "2fd2331ad9eec75d82dfef9203318012c61731a1d269a38f935cd61259e687d6"
+    },
+    {
+      "path": "reports/E3/R014/resume/PRIOR_CPU_BACKUP_CLOSED.json",
+      "bytes": 285,
+      "sha256": "143afae151cf040d29a8a409a2ad9af438cfd5dd72ff0b200e11ec4c33cf794a"
+    },
+    {
+      "path": "reports/E3/R014/resume/RECOVERY_REVIEW_REQUEST.md",
+      "bytes": 5357,
+      "sha256": "1813256e1f6370f202f5945f25db89011a88f86acedf823f43c93ae1e72c4cd1"
+    },
+    {
+      "path": "reports/E3/R014/resume/RESOURCE_ENVIRONMENT.json",
+      "bytes": 1455,
+      "sha256": "4029ce8d5e466c577313ea4f1d824fe15b02982c52384d3fbbb3d2cac6f6b5dc"
+    },
+    {
+      "path": "reports/E3/R014/resume/SCENE_FAILURE.json",
+      "bytes": 1637,
+      "sha256": "f15e1a1f4f42482fff6d6471aee4832de1f696dbf4b8532db6e68f548b750843"
+    },
+    {
+      "path": "reports/E3/R014/resume/STATUS.json",
+      "bytes": 1370,
+      "sha256": "5a493688a50d548a8f30cb5e503da74efff20eb2addf2b362cfa7cb478308d1f"
     },
     {
       "path": "reports/E3/README.md",

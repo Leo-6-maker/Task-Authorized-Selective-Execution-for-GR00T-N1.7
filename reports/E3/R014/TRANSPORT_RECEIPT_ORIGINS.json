@@ -1,0 +1,35 @@
+{
+  "source-stage.exit.json": {
+    "actual_exit": 255,
+    "original_receipt_sha256": "f5efe967d8da8b0d936e0849ae77ea25899e23ad4e0239493a426e0b48900e42",
+    "original_bytes": 21
+  },
+  "source-stage-status-01.transport-exit.json": {
+    "actual_exit": 255,
+    "original_receipt_sha256": "ce4dbc5d380e7c7d80bbe8fd0842cd15e2e4b54a665b69cfca5006f92b879cb2",
+    "original_bytes": 60
+  },
+  "source-stage-status-02.transport-exit.json": {
+    "actual_exit": 255,
+    "original_receipt_sha256": "fde76b028cad7195aafaf17a62f84fd9f2e6c6841f38f55f3a891c99c51e91e3",
+    "original_bytes": 60
+  },
+  "source-stage.stderr.private.txt": {
+    "classification": "SSH_CONNECTION_TIMEOUT_BEFORE_AUTHENTICATED_REMOTE_COMMAND",
+    "original_sha256": "a9315ce58b83060eaa24d1d30d629071ca01790784ef2ee6a10f87f2dfd69405",
+    "original_bytes": 50,
+    "visibility": "OWNER_PRIVATE"
+  },
+  "source-stage-status-01.stderr.private.txt": {
+    "classification": "SSH_CONNECTION_TIMEOUT_BEFORE_AUTHENTICATED_REMOTE_COMMAND",
+    "original_sha256": "a9315ce58b83060eaa24d1d30d629071ca01790784ef2ee6a10f87f2dfd69405",
+    "original_bytes": 50,
+    "visibility": "OWNER_PRIVATE"
+  },
+  "source-stage-status-02.stderr.private.txt": {
+    "classification": "SSH_CONNECTION_TIMEOUT_BEFORE_AUTHENTICATED_REMOTE_COMMAND",
+    "original_sha256": "a9315ce58b83060eaa24d1d30d629071ca01790784ef2ee6a10f87f2dfd69405",
+    "original_bytes": 50,
+    "visibility": "OWNER_PRIVATE"
+  }
+}

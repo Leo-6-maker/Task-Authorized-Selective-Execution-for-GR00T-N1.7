@@ -1,0 +1,40 @@
+{
+  "scope": "FRESH_LOCAL_ONLY_CPU_REGRESSION_EXACT9599_NO_REMOTE_NATIVE_OR_SIM",
+  "code_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "suite": {
+    "normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "original_exit_receipt_sha256": "8d3be7f42afedd6e3e29c7151c963fae1eaa01f1d0189b03fa255d027c290309",
+      "original_log_sha256": "7ce84d175b88df80b01060428cdc33e9e6af465c2ea870d72c6cf1f39381ca0e",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    "optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "original_exit_receipt_sha256": "9b8cd61222d4e19b240d178c3975eed5270171cc7229541e11119610b75bf97a",
+      "original_log_sha256": "5e7cd98f3e53e097c07490834e371bdd408efa9628904c0c1fa1d4a27321599e",
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    }
+  },
+  "Corelab_this_round": "NOT_EXECUTED_SSH_UNAVAILABLE",
+  "model_calls": 0,
+  "scene_constructors": 0
+}

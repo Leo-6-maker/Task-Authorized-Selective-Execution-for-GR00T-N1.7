@@ -1,0 +1,45 @@
+{
+  "reviewer": "GPT",
+  "review_id": "R014-2026-10-26-E3-BOUND-SCENE-INSPECTION",
+  "disposition": "E3_SCENE_INSPECTION_AUTHORIZED",
+  "authorized_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "protocol_id": "E3-001-v1.0",
+  "scope": "ONE_PRE_FREEZE_NATIVE_SCENE_IDENTITY_DIAGNOSTIC_ONLY",
+  "allowed_entrypoint": "python -m e3.scene_probe",
+  "source_inventory_path": "configs/e3_sources.proposed.json",
+  "source_inventory_sha256": "c10d2640e1176a3f19e19ee806e3703c6f55213f0d623dba872d65b8c0b58b37",
+  "maximum_environment_constructors": 9,
+  "maximum_initialization_loads": 36,
+  "maximum_policy_calls": 0,
+  "maximum_server_starts": 0,
+  "maximum_TEST_reservations": 0,
+  "maximum_DEV_or_CALIB_reservations": 0,
+  "maximum_explicit_main_control_steps": 0,
+  "scene_source_XML_files_required": 106,
+  "owner_GPU_permission_required": true,
+  "current_GPU_owner_permission": "UNKNOWN_NOT_INHERITED; must separately obtain documented fresh legal owner allocation record bound to THIS machine grant commit and reviewed code Head",
+  "current_E3_TEST_authorized": false,
+  "E3_scientific_protocol_frozen": false,
+  "selected_variant": "UNDECIDED_FULL160_PROPOSED_ONLY",
+  "reviewer_report": "docs/reviews/R014-E3-CPU-scene-inspection-review.md",
+  "reviewer_report_commit": "69b1393fd5c52d82f8a38d14b7d2adbf25f4f43b",
+  "mandatory_preflight": [
+    "Before ANY native MuJoCo/LiberoEnv construction, fresh owner-authorized physical GPU resource allocation must bind exact full9599... code Head, the actual R014 machine grant commit and physical GPU index/UUID; no reuse of old R013/E2 GPU permission or foreign process interference.",
+    "Fetch current origin/main; grant content must equal historical signed R014 grant commit/path; clean checkout EXACT reviewed complete Head.",
+    "Fresh read-only CPU e3.scene.verify_inventory against every one of106 local pinned asset XML source hashes, plus exact BDDL/init sources and pinned GR00T/LIBERO commits. Save actual process exit0 and private source hash receipt. Missing full106 live check is STOP.",
+    "Fresh nvidia-smi physical GPU UUID, matching CUDA_VISIBLE_DEVICES selected UUID and MUJOCO_EGL_DEVICE_ID selected actual physical index, at least9GiB free on that allocated physical GPU, no process-ownership conflict or GPU0 fallback.",
+    "Use a uniquely named owned output directory and subprocess record_process wrapper; no loaded.json, no GR00T calls or model server, no original E2/E3 TEST IDs touched, and no replacing absent official 16-19 initialization bytes."
+  ],
+  "completion_criteria": [
+    "Exactly9 native LIBERO scene constructors each with full lifecycle closure,36 official initializations checked by hash and36 real compiled TaskSpecs matching expected trusted target, allowed C2 object/basket and valid nonoverlapping robot/body/geom IDs",
+    "Native source XML identity and original-frozen science boundaries recorded; no policy calls, no explicit robot control action, no E3 TEST/DEV/CALIB reservations and no shadow predictions",
+    "Actual child exit0, all native handles/worker PIDs released; failure/timeout/finalizer issue preserved as diagnostic FAILURE, no silent retry. Record actual internal constructor/reset activity separately from commanded control.",
+    "Full diagnostic original-source and result receipts have two independent approved storage copies, whole+member SHA, public sanitized evidence and an independent Gate P/C review handoff"
+  ],
+  "prohibited": [
+    "No model GR00T load or inference, no native policy server, no E3 simulations beyond the nine identity constructors/36 init loads; no real E3 TEST/DEV/CALIB acquisition or retune",
+    "No frozen E2 evidence/labels/statistics/source/grants changes, no new k, Oracle, policy model, TaskSpec decision data, C0/C2 instruction tuning, seed alterations",
+    "No old R013 grant reuse, no manual GPU fallback/resource cap loosening, no foreign process signals, no merge or owner course submission"
+  ],
+  "review_limitations": "GPT independently read GitHub source/160-row proposal/selected exact blobs, operator CPU187 receipts; no native MuJoCo scene run, private E2 original rehash or GPU permission verification."
+}
