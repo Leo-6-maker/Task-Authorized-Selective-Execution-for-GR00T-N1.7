@@ -1,3 +1,5 @@
+Latest host-change handoff: see [START_HERE](../../../START_HERE.md) and [HOST_HANDOFF_STATUS.json](HOST_HANDOFF_STATUS.json). The following is the preserved earlier CPU-preservation incident; the owner now reports the node restored and requests transfer to a new host.
+
 # R014 CPU preservation — scene diagnostic NOT EXECUTED
 
 Owner-directed status on2026-10-27SGT: **BLOCKED_SSH_CONNECTION_TIMEOUT / CPU_PRESERVED**. This is an incomplete Issue33 execution report, not successful scene inspection, protocol freeze or TEST authorization.

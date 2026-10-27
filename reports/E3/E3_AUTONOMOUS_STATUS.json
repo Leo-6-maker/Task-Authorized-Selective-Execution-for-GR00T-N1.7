@@ -1,6 +1,6 @@
 {
-  "phase": "R014_SCENE_PREFLIGHT_BLOCKED_SSH_CPU_PRESERVATION",
-  "status": "STOPPED",
+  "phase": "R014_NEW_HOST_HANDOFF",
+  "status": "HANDOFF_READY_NATIVE_NOT_EXECUTED",
   "code_head": "f8f4348dfc77eb0b40f85080b664d45ee368e86a",
   "original_E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
   "reviewer_grant": null,
@@ -55,8 +55,8 @@
     "mirror_actual_exit": 0
   },
   "last_checkpoint": "187_LOCAL_NORMAL_OPTIMIZED_187_CORELAB_NORMAL_OPTIMIZED_ALL0_AND_E2_18070_UNCHANGED",
-  "stop_reason": "3 SSH connect timeouts actual255; owner requested CPU preservation. No native diagnostic started.",
-  "next_action": "Owner restores SSH and requests resumption; verify exact9599/current R014, fresh106XML+BDDL/init CPU0 and actual allocated GPU1>=9GiB/UUID/EGL before ONE diagnostic. Owner permission for this same scope persists. No TEST grant or protocol freeze.",
+  "stop_reason": "Owner requested complete GitHub handoff to another host; current host SSH exit255 remote closed, fresh remote access not verified.",
+  "next_action": "New host reads START_HERE then performs fresh inventory106 and resource/grant preflight for ONE R014 scene probe; no model/TEST",
   "E2_R3": "PENDING_INDEPENDENT_GPT",
   "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
   "course_submission": "NOT_SUBMITTED",
@@ -74,5 +74,6 @@
   "engineering_review": "R014_P0_ACCEPTED_P1_STATIC_ACCEPTED_P2_CPU_ENGINEERING_ACCEPTED",
   "current_remote_XML106_check": "NOT_EXECUTED",
   "current_delivery_private_backup_status": "LOCAL_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED_REMOTE_COPY_PENDING",
-  "current_delivery_private_archive_sha256": "5bc28bf84a0bd03401d8a4723ce3e00129027b97c9dbefdbf3df78ddeec751b7"
+  "current_delivery_private_archive_sha256": "5bc28bf84a0bd03401d8a4723ce3e00129027b97c9dbefdbf3df78ddeec751b7",
+  "host_handoff_status": "reports/E3/R014/HOST_HANDOFF_STATUS.json"
 }

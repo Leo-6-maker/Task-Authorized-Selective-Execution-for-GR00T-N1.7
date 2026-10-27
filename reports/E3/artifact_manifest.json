@@ -1,12 +1,17 @@
 {
-  "status": "R014_LOCAL_CPU_PRESERVED_NATIVE_SCENE_NOT_EXECUTED_BLOCKED_SSH",
+  "status": "NEW_HOST_HANDOFF_READY_NATIVE_SCENE_NOT_EXECUTED",
   "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 11764,
-      "sha256": "bc299420449e96d7c452117c46ade55f19cd667199127a897023f0bb19c75191"
+      "bytes": 12342,
+      "sha256": "b7582c2ca64f56872001c91ce758d9cc4939a0d414081c178124b2d7b0749bcf"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 2263,
+      "sha256": "1f915ae8eba5321f9ad00e63007d3894bc9431c19ec1d1ae2dd28da3b354d9e5"
     },
     {
       "path": "configs/e3_cells.proposed.json",
@@ -35,13 +40,18 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 8029,
-      "sha256": "a09d7eef9aef4ee4741b501ad9ea08df3cee98df9852a861b676ae5938eed645"
+      "bytes": 8607,
+      "sha256": "b22ab9453a3b6a307994f09ed60063a983e0c657f3335660cf11a73c71184b70"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 18119,
-      "sha256": "4a656a609956bc620db4ccd647f9b1770290816f313fabe8706e578cfcf4d012"
+      "bytes": 18697,
+      "sha256": "06812a6225245d7f47b3bab780736925e49ba6d040d62df8eb5887abf3bc3e9c"
+    },
+    {
+      "path": "docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md",
+      "bytes": 11125,
+      "sha256": "718f65c8a6a9b7d62aa499f579eb7d6974b4086606f5d9249a7319aa3a54f744"
     },
     {
       "path": "docs/protocols/E3-001-v1.0-PROPOSED.md",
@@ -230,8 +240,8 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 3246,
-      "sha256": "b5e60f81b795354c3b372df9ee9ae59b76cabef17aa3413838f4654500da54f5"
+      "bytes": 3227,
+      "sha256": "ec60dd78d7f341bbecc6ea7415ca73a935fd089e966c1714998d545e367e10e0"
     },
     {
       "path": "reports/E3/PLAN_BASELINE.md",
@@ -247,6 +257,11 @@
       "path": "reports/E3/R014/CPU_REGRESSION.json",
       "bytes": 1105,
       "sha256": "ea00a4d2670f276ee1dd614459ee2682bfd0506da078a37cd3f8d74bce7efd19"
+    },
+    {
+      "path": "reports/E3/R014/HOST_HANDOFF_STATUS.json",
+      "bytes": 2946,
+      "sha256": "fd2685e6a191542b99972b0925a8ef5ac9c14d7ca6118fc1175190f85f4e1034"
     },
     {
       "path": "reports/E3/R014/LOCAL_BACKUP_VERIFICATION.json",
@@ -274,9 +289,19 @@
       "sha256": "53d5c175fdb49dade36522d459f9908b51000f03600d4086debaffafe5751eee"
     },
     {
+      "path": "reports/E3/R014/SUPERSEDED_LOOSE_SNAPSHOTS.json",
+      "bytes": 3784,
+      "sha256": "de8a0294715a91a16df4bbdc1690d8847f3c6bf9281af15aafa9b650207c5268"
+    },
+    {
+      "path": "reports/E3/R014/SUPERSEDED_LOOSE_SNAPSHOTS.zip",
+      "bytes": 496305,
+      "sha256": "e071715307a9d4aa9a2e63b5d733fb538ee0521625399dc7912cca9451e3f2ea"
+    },
+    {
       "path": "reports/E3/R014/TAKEOVER_HANDOFF.md",
-      "bytes": 5310,
-      "sha256": "fff3384306454a6a5ca68fc96072d099218acc4b8cad474ae6b4c13b132d7299"
+      "bytes": 5581,
+      "sha256": "2a5c8c0861f73e7e6e95e0df31a25f3e8890650220988fc67ebfd588a0dec27d"
     },
     {
       "path": "reports/E3/R014/TRANSPORT_RECEIPT_ORIGINS.json",
