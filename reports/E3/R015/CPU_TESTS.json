@@ -1,0 +1,180 @@
+{
+  "status": "FRESH_NORMAL_OPTIMIZED_REGRESSIONS_AND_PREFLIGHTS_ALL_EXIT0",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "tests": {
+    "CPU-preflight": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:27:59.395825+08:00",
+      "completed_at_sgt": "2026-10-28T01:28:02.236176+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/CPU-preflight.exit.json",
+        "bytes": 146,
+        "sha256": "2ea22a5e39d51c0b55d011173efe788241e90b2624bd4b91b03291dc5d412a82"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/CPU-preflight.stdout.private.txt",
+        "bytes": 369,
+        "sha256": "ef98e50708870b1af8a349ce1bdf8f4185d8ec20a9981ab3aaf9d096e0695c6b"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/CPU-preflight.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "config-preflight": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:28:40.491818+08:00",
+      "completed_at_sgt": "2026-10-28T01:28:40.623340+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/config-preflight.exit.json",
+        "bytes": 146,
+        "sha256": "29f5df1d4459f27726a177b6d903bee49fc4ca04f674761e2d3561326bf4b99c"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/config-preflight.stdout.private.txt",
+        "bytes": 303,
+        "sha256": "eda26495f79e98901b68e38ab10fcbc390456d23e75e896916a468e3bc935e8d"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/config-preflight.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "E2-normal": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:28:06.432102+08:00",
+      "completed_at_sgt": "2026-10-28T01:28:27.846590+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/E2-normal.exit.json",
+        "bytes": 146,
+        "sha256": "718a11061a1f4b33bd47fb16b0e8ee213c4cba851001451d87907bf8a10e3f40"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/E2-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/E2-normal.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "E2-optimized": {
+      "tests": null,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:28:27.949131+08:00",
+      "completed_at_sgt": "2026-10-28T01:28:48.874092+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/E2-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "e8a2953c874fd7574e40d163ece68108853b1ed662650bce78b2887101f175dd"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/E2-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/E2-optimized.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "config-normal": {
+      "tests": 4,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:29:24.997637+08:00",
+      "completed_at_sgt": "2026-10-28T01:29:25.539902+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/config-normal.exit.json",
+        "bytes": 146,
+        "sha256": "821332f5f68216c2301c69724ac6291a45fec00c6208a4afaecf29be6ca17a51"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/config-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/config-normal.stderr.private.txt",
+        "bytes": 822,
+        "sha256": "b441f7e921b992daaca57ba4a9008de69e272e198a4d344b4d2ab532bcd13887"
+      }
+    },
+    "config-optimized": {
+      "tests": 4,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:29:25.635482+08:00",
+      "completed_at_sgt": "2026-10-28T01:29:26.163597+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/config-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "e71a48ad9cf29f168b0d58046ef88bfcebc730fc725ceeb683f95efce29a65d7"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/config-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/config-optimized.stderr.private.txt",
+        "bytes": 822,
+        "sha256": "cf12662d7e57cb5d8bf3997182a6181ec57d304a748c2db7f6d8d4349babfbdf"
+      }
+    },
+    "CPU-full-normal": {
+      "tests": 187,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:29:26.272143+08:00",
+      "completed_at_sgt": "2026-10-28T01:30:02.252135+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-normal.exit.json",
+        "bytes": 146,
+        "sha256": "5c8aae667c78b3d561805bacce9570d33990fc63606c73b7559cfeae9baf0e62"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-normal.stderr.private.txt",
+        "bytes": 27691,
+        "sha256": "55bfa42915c159243d8197596345da8ae9e45aa9ad0adb6c34acb4f992a52a9d"
+      }
+    },
+    "CPU-full-optimized": {
+      "tests": 187,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-10-28T01:30:02.354657+08:00",
+      "completed_at_sgt": "2026-10-28T01:30:37.500912+08:00",
+      "exit_receipt": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "db986e33f2a4c2b6316bc4146a9c14e7de25dec9b36407597284afac5bb2a884"
+      },
+      "stdout": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue33-r015-scene-02/CPU-full-optimized.stderr.private.txt",
+        "bytes": 27691,
+        "sha256": "cb3a133278bf8175371d11e41b9dfe6ac5b93fc94ee85b6ffacdeabed65f1e9c"
+      }
+    }
+  },
+  "config_test_source": {
+    "path": "operator/issue33-r015-scene-02/CPU_CONFIG_REGRESSION.py",
+    "bytes": 4995,
+    "sha256": "b8e328a161cf831daeb1c0678d9f3909623bae6904c3279bfdfc06a3e88d8ff4"
+  },
+  "config_regression_scope": "Four real CPU subprocess cases from PR34, config initializer runpy only; full187 suite unchanged; native scene process separately authorized and measured"
+}

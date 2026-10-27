@@ -1,0 +1,13 @@
+{
+  "status": "PINNED_INITIAL_STATE_INTERNAL_SOURCE_READ_ONLY",
+  "source_path": "libero/libero/envs/env_wrapper.py",
+  "source_sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+  "functions": [
+    {
+      "function": "regenerate_obs_from_state",
+      "line": 139,
+      "source": "    def regenerate_obs_from_state(self, mujoco_state):\n        self.set_state(mujoco_state)\n        self.env.sim.forward()\n        self.check_success()\n        self._post_process()\n        self._update_observables(force=True)\n        return self.env._get_observations()"
+    }
+  ],
+  "no_additional_native_calls": true
+}

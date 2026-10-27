@@ -1,7 +1,7 @@
 {
   "reviewer": "GPT",
   "review_id": "R014-2026-10-26-E3-BOUND-SCENE-INSPECTION",
-  "disposition": "E3_SCENE_INSPECTION_AUTHORIZED",
+  "disposition": "E3_SCENE_INSPECTION_CONSUMED_FAILED_BOOTSTRAP",
   "authorized_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "protocol_id": "E3-001-v1.0",
   "scope": "ONE_PRE_FREEZE_NATIVE_SCENE_IDENTITY_DIAGNOSTIC_ONLY",
@@ -41,5 +41,14 @@
     "No frozen E2 evidence/labels/statistics/source/grants changes, no new k, Oracle, policy model, TaskSpec decision data, C0/C2 instruction tuning, seed alterations",
     "No old R013 grant reuse, no manual GPU fallback/resource cap loosening, no foreign process signals, no merge or owner course submission"
   ],
-  "review_limitations": "GPT independently read GitHub source/160-row proposal/selected exact blobs, operator CPU187 receipts; no native MuJoCo scene run, private E2 original rehash or GPU permission verification."
+  "review_limitations": "GPT independently read GitHub source/160-row proposal/selected exact blobs, operator CPU187 receipts; no native MuJoCo scene run, private E2 original rehash or GPU permission verification.",
+  "authorizes_additional_diagnostics": false,
+  "original_historical_grant_commit": "eac3d8edeb3de7a33727d462ea652d7719e03629",
+  "consumption_review": "docs/reviews/R015-E3-LIBERO-CONFIG-BOOTSTRAP-REENTRY-REVIEW.md",
+  "consumption_review_commit": "1fc873cfc527f1ba81fd88d7f4b48856009dd12c",
+  "consumed_processes": 1,
+  "failed_process_exit": 1,
+  "consumed_failure_source": "reports/E3/R014/resume/SCENE_FAILURE.json@3536e8e4fcb0152e381e25fd3ba58cbf70fef193",
+  "consumed_failure_sha256": "7cc204d1c0eed29788c8bd73ba6f5e9248cef2945d8c4d6ed6822f1835c353f7",
+  "original_history_preserved": true
 }

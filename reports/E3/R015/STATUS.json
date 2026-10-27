@@ -1,0 +1,56 @@
+{
+  "status": "READY_FOR_E3_GATE_P_C_REVIEW",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "R015_machine_review_commit": "c0ca90f4827c67e04e4033c6358e410f5ac6aace",
+  "R015_machine_review_path": "docs/reviews/R015-E3-SCENE-REENTRY-AUTHORIZED.json",
+  "prior_R014_attempt": {
+    "processes": 1,
+    "actual_exit": 1,
+    "constructors": 0,
+    "init_loads": 0,
+    "permanently_preserved": true
+  },
+  "R015_attempt": {
+    "processes": 1,
+    "actual_child_exit": 0,
+    "actual_operator_exit": 0,
+    "constructors": 9,
+    "native_closes": 9,
+    "close_evidence": "successful loop/unchanged finally paths + process exit/no orphans; no per-close trace",
+    "init_loads": 36,
+    "real_TaskSpec_mappings": 36,
+    "remaining_diagnostic_processes": 0
+  },
+  "CPU_tests": {
+    "normal187": 0,
+    "optimized187": 0,
+    "config_normal4": 0,
+    "config_optimized4": 0,
+    "XML106_init36_preflight": 0,
+    "all_config_paths_preflight": 0,
+    "E2_audit_normal": 0,
+    "E2_audit_optimized": 0
+  },
+  "all_18070_E2_originals_unchanged": true,
+  "private_original_backup_locations": 2,
+  "model_calls": 0,
+  "server_starts": 0,
+  "Shadow_predictions": 0,
+  "explicit_main_control_steps": 0,
+  "E3_planned_proposal": {
+    "A": 112,
+    "B": 48
+  },
+  "E3_TEST_consumed": {
+    "A": 0,
+    "B": 0
+  },
+  "E3_protocol_frozen": false,
+  "E3_TEST_authorized": false,
+  "raw_compiled_XML_export": "NOT_CAPTURED_HASH_AND_REAL_TASKSPEC_ONLY",
+  "full_reset_seed_settling_physics_policy_parity": "NOT_TESTED",
+  "next_action": "Independent Gate P scientific freeze and Gate C NEW exact runner Head/new E3_TEST_AUTHORIZED. No more R015 diagnostic, no model/TEST until later grants.",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "no_experiments_on": "2026-11-06",
+  "course_submission": "NOT_SUBMITTED"
+}

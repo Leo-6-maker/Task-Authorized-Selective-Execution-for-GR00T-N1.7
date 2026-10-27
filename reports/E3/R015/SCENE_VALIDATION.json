@@ -1,0 +1,71 @@
+{
+  "status": "R015_NATIVE_SCENE_IDENTITY9_INIT36_CLOSED_READY_FOR_INDEPENDENT_GATE_P_C",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "review_commit": "c0ca90f4827c67e04e4033c6358e410f5ac6aace",
+  "actual_child_exit": 0,
+  "actual_operator_exit": 0,
+  "outer_invocation_exit": 0,
+  "started_at_sgt": "2026-10-28T01:31:12.309510+08:00",
+  "completed_at_sgt": "2026-10-28T01:31:27.816645+08:00",
+  "constructors": 9,
+  "initialization_checks": 36,
+  "valid_real_TaskSpecs": 36,
+  "successful_native_close_paths": 9,
+  "close_evidence": "DERIVED_FROM_SUCCESSFUL_FULL_LOOP_AND_UNCHANGED_FINALLY_CLOSE_CONTROL_FLOW_NOT_SEPARATE_PER_CLOSE_EVENT_TRACE",
+  "distinct_compiled_scene_fingerprints": 9,
+  "scene_result_public_identical_to_original": true,
+  "source_bindings": [
+    {
+      "path": "operator/issue33-r015-scene-02/scene-probe-02/scene-inspection-result.json",
+      "bytes": 170068,
+      "sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene.exit.started.json",
+      "bytes": 807,
+      "sha256": "73e3820abba32802f57d697ad89d38275bd8b5a93c32f7ca3d93fc9c84c8ae97"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene.exit.json",
+      "bytes": 146,
+      "sha256": "376b4bb19b01c8438a529d74542e1603240efe32afd15a542be277d05c4a75c0"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene-operator.started.json",
+      "bytes": 1119,
+      "sha256": "367d55fa07add64c8026a4e0ca221761caf448a6c83e0e69ce816649d9af2f55"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene-operator.exit.json",
+      "bytes": 89,
+      "sha256": "5b48f8f7da9b370603e0bef3175a2f5a44791cd310b47044dbd41f89bc32225a"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene.stdout.private.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene.stderr.private.txt",
+      "bytes": 700,
+      "sha256": "496d232651adce3081914bec1be73ca242ffe49ee63fb74f810a5c23ef695288"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/post-scene-validation.private.json",
+      "bytes": 18192,
+      "sha256": "ad9a032287737a170230d7827e07099257589b1bfde881e3d6a56c04e636e577"
+    }
+  ],
+  "no_interactive_prompt": true,
+  "model_calls": 0,
+  "server_starts": 0,
+  "Shadow_predictions": 0,
+  "explicit_main_control_steps": 0,
+  "owned_wrapper_and_child_absent": true,
+  "active_native_project_process_count": 0,
+  "internal_activity_disclosure": "Native constructors initialize simulation; set_init_state regenerates observations by set_state, sim.forward, check_success, _post_process, observable update, and observation retrieval. Internal constructor calls were not individually traced. No explicit action-step loop/policy episode; no native reset(seed)+10-settling or Shadow/physics/policy parity test.",
+  "full_reset_seed_settling_physics_policy_parity": "NOT_TESTED",
+  "compiled_XML_raw_bytes_retained": false,
+  "compiled_XML_capture": "approved probe records SHA256 from live model.get_xml, not full XML bytes; no repeat scene for export",
+  "stderr": "UNCHANGED_ROBOSUITE_MACRO_AND_GYM_MAINTENANCE_WARNINGS_NO_TRACEBACK_OR_FINALIZER_ERROR"
+}

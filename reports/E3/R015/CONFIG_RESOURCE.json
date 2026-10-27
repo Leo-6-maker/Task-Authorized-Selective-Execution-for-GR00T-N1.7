@@ -1,0 +1,80 @@
+{
+  "status": "R015_NEW_GRANT_BOUND_ALLOCATION_AND_EXISTING_CONFIG_VALIDATED",
+  "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "new_allocation_review_commit": "c0ca90f4827c67e04e4033c6358e410f5ac6aace",
+  "grant_sha256": "16b87ed591a599880b6c0b96c2bac68614df2b25b4c15b787bb909a56f4a9dfe",
+  "grant_current_main_equal": true,
+  "prior_R014_current_main": "E3_SCENE_INSPECTION_CONSUMED_FAILED_BOOTSTRAP",
+  "owner_permission": "EXISTING_EXPLICIT_SAME_SCOPE_GPU1_CONSENT_PRESERVED_AND_DOCUMENTED_FOR_R015",
+  "physical_GPU_index": 1,
+  "UUID_EGL_match": "VERIFIED_PRIVATE_ORIGINAL",
+  "fresh_free_before_start_MiB": 15899,
+  "required_minimum_free_MiB": 9216,
+  "process_set_unchanged_after": true,
+  "explicit_existing_HOME": "workspace/runtime/home",
+  "explicit_LIBERO_CONFIG_PATH": "workspace/runtime/libero-config",
+  "stdin": "DEVNULL",
+  "config_sha256": "5fefd0e212d29140bc34de34b4a30e36fe374207dd160a15076a413aefaad63a",
+  "config_paths_checked": [
+    "benchmark_root",
+    "bddl_files",
+    "init_states",
+    "assets",
+    "datasets"
+  ],
+  "configuration_bytes_unchanged": true,
+  "source_files_changed": false,
+  "CPU_directory_preparation": {
+    "action": "CREATED_EMPTY_OFFICIAL_DATASETS_DIRECTORY_ONLY",
+    "reason": "R015 requires every configured path present; datasets folder unused by scene diagnostic but must be an existing permitted path",
+    "directory_empty": true,
+    "downloaded_files": 0,
+    "datasets_available": false,
+    "config_path_and_bytes_unchanged": true,
+    "git_clean": true,
+    "native_started_at_preparation": 0
+  },
+  "environment_versions": {
+    "server": {
+      "python": "3.12.14",
+      "matched_packages": 138
+    },
+    "sim": {
+      "python": "3.12.14",
+      "matched_packages": 159
+    }
+  },
+  "upstream_source_file_hashes_matched": 7,
+  "originals": [
+    {
+      "path": "operator/issue33-r015-scene-02/config-preflight.private.json",
+      "bytes": 1404,
+      "sha256": "63675a63c9c21a84773f69e6924ba9f254e94540159d7a1e6d529acc5b0b0f83"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/config-directory-preparation.private.json",
+      "bytes": 1877,
+      "sha256": "192c32fafbdeebfee999cdafdbdbe0e34b38db57c18fc9fef27ac5e76e08a5c7"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/gpu-allocation.R015.private.json",
+      "bytes": 727,
+      "sha256": "759696127ccd73abe11964a1817b380d46cc4b191fcc07fda73f24fe6d6f63e4"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/owner-resource-approval.private.json",
+      "bytes": 576,
+      "sha256": "cb69e629c26796c44daa377b798bc9106cdce93651cb90b8b7355a3b4272b102"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/fixed-environment.private.json",
+      "bytes": 11505,
+      "sha256": "c93fed44da401ce234d77edc7e2d2dd2a16ea1404213f1784727bfce73c8f4e5"
+    },
+    {
+      "path": "operator/issue33-r015-scene-02/scene-activation.private.json",
+      "bytes": 1266,
+      "sha256": "405038073255a9db1c9e71b5d22da8bdb62b24305d4170f8736716591f18730a"
+    }
+  ]
+}
