@@ -1,0 +1,67 @@
+{
+  "status": "GPU1_ONLY_CPU_ENGINEERING_VERIFIED_GATE_C_PENDING",
+  "owner_consent": "DIRECT_HUMAN2026-10-30_RETAINED_NO_RECONFIRMATION_REQUEST",
+  "owner_record": {
+    "label": "PRIVATE_OWNER_GPU1_RECORD",
+    "bytes": 452,
+    "sha256": "eebff1f5c04d4d7d9699b8467464713a70fae5aeec175cdb2952d58bb5224855"
+  },
+  "physical_GPU_index": 1,
+  "CUDA_logical_index": 0,
+  "CUDA_visible_device": "PRIVATE_ACTUAL_GPU1_UUID",
+  "EGL_device": "1",
+  "sampled_free_MiB": 15899,
+  "sampled_total_MiB": 16376,
+  "sample_does_not_guarantee_future_capacity": true,
+  "minimum_free_GiB": 9,
+  "maximum_allocator_fraction": 0.55,
+  "sampled_headroom_GiB": 2,
+  "allocation_formula": "min(0.55, (free - 2GiB) / total)",
+  "GPU0_fallback": false,
+  "formal_TEST_allocation_created": false,
+  "reason": "New exact final Head E3_TEST_AUTHORIZED commit does not exist yet; bind current owner consent after independent Gate C, and remeasure actual GPU1 before any native run",
+  "sources": [
+    "e3/authorization.py",
+    "e3/resource.py",
+    "e3/server_launcher.py",
+    "e3/server.py",
+    "e3/supervisor.py",
+    "e3/native_runner.py"
+  ],
+  "genuine_R016_denial_check": {
+    "status": "GENUINE_R016_DENIED_ALL_FIVE_ADMISSION_PATHS",
+    "code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+    "checks": [
+      {
+        "entry": "authorize",
+        "status": "EXPECTED_DENIAL",
+        "reason": "new independent E3 grant required"
+      },
+      {
+        "entry": "launcher",
+        "status": "EXPECTED_DENIAL",
+        "reason": "new independent E3 grant required"
+      },
+      {
+        "entry": "supervisor",
+        "status": "EXPECTED_DENIAL",
+        "reason": "new independent E3 grant required"
+      },
+      {
+        "entry": "native_runner",
+        "status": "EXPECTED_DENIAL",
+        "reason": "new independent E3 grant required"
+      },
+      {
+        "entry": "native_server",
+        "status": "EXPECTED_DENIAL",
+        "reason": "new independent E3 grant required"
+      }
+    ],
+    "model_calls": 0,
+    "native_constructors": 0,
+    "TEST_reservations": 0
+  },
+  "CPU_denial_actual_exit": 0,
+  "no_new_model_scene_Shadow_TEST": true
+}

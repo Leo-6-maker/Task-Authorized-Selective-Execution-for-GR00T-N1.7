@@ -1,0 +1,139 @@
+{
+  "status": "FOUR_FULL211_RUNS_ALL_ACTUAL_EXIT0",
+  "CPU_snapshot_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+  "tests": {
+    "local-normal": {
+      "cases": 211,
+      "elapsed_seconds": 31.409,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T01:33:30.825496+08:00",
+      "code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+      "raw_sources": {
+        ".stderr.private.txt": {
+          "label": "PRIVATE_local-normal.stderr.private.txt",
+          "bytes": 31438,
+          "sha256": "583b0712cc40c0ea50560172bccf2d7b25115888afde9f8fe4ea6d158aeb3d80"
+        },
+        ".stdout.private.txt": {
+          "label": "PRIVATE_local-normal.stdout.private.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".exit.started.json": {
+          "label": "PRIVATE_local-normal.exit.started.json",
+          "bytes": 310,
+          "sha256": "3ae98f581a4c6d58e4a3edfa22c4df5a82b8655a9cb38369bfb66a9c766b7028"
+        },
+        ".exit.json": {
+          "label": "PRIVATE_local-normal.exit.json",
+          "bytes": 146,
+          "sha256": "92bbfe65b2145c3a1d3d35468cf03c2a5dbe2fe1caada272b2c580946e236e05"
+        }
+      }
+    },
+    "local-optimized": {
+      "cases": 211,
+      "elapsed_seconds": 31.276,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T01:34:02.298536+08:00",
+      "code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+      "raw_sources": {
+        ".stderr.private.txt": {
+          "label": "PRIVATE_local-optimized.stderr.private.txt",
+          "bytes": 31438,
+          "sha256": "9bbd90d1028753205d7fe3c35ea099039c7de3580de49cacba23f39394c8aff2"
+        },
+        ".stdout.private.txt": {
+          "label": "PRIVATE_local-optimized.stdout.private.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".exit.started.json": {
+          "label": "PRIVATE_local-optimized.exit.started.json",
+          "bytes": 320,
+          "sha256": "aa4f2034af8e00c00666e5b8ee490a1f6e3ac69102a8c66dadd2739cc15288c8"
+        },
+        ".exit.json": {
+          "label": "PRIVATE_local-optimized.exit.json",
+          "bytes": 146,
+          "sha256": "93e8a46e291aebc154e005422df5170341d4cbf4a1071f2d9da212e149c71a4c"
+        }
+      }
+    },
+    "Corelab-normal": {
+      "cases": 211,
+      "elapsed_seconds": 37.546,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T01:33:43.592935+08:00",
+      "code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+      "raw_sources": {
+        ".stderr.private.txt": {
+          "label": "PRIVATE_Corelab-normal.stderr.private.txt",
+          "bytes": 31479,
+          "sha256": "750360fba49316fe99559dcad12d9a7899896776747418f4e82bfb8a9c62aa41"
+        },
+        ".stdout.private.txt": {
+          "label": "PRIVATE_Corelab-normal.stdout.private.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".exit.started.json": {
+          "label": "PRIVATE_Corelab-normal.exit.started.json",
+          "bytes": 290,
+          "sha256": "65afd6db0f716f20cc2e5792d4c06b6cd3184a2c540246f572c991b3130e55a7"
+        },
+        ".exit.json": {
+          "label": "PRIVATE_Corelab-normal.exit.json",
+          "bytes": 146,
+          "sha256": "8cf6497d109fa6745b19070bcdcf8a6fb50bb23e5cc6294eb40dcefd18d31c3d"
+        }
+      }
+    },
+    "Corelab-optimized": {
+      "cases": 211,
+      "elapsed_seconds": 36.724,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T01:34:21.285388+08:00",
+      "code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+      "raw_sources": {
+        ".stderr.private.txt": {
+          "label": "PRIVATE_Corelab-optimized.stderr.private.txt",
+          "bytes": 31479,
+          "sha256": "3a094e9de6af3dc35e31402de91d722a6921edf1f5bd7aa5a70d1accbb6e714d"
+        },
+        ".stdout.private.txt": {
+          "label": "PRIVATE_Corelab-optimized.stdout.private.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".exit.started.json": {
+          "label": "PRIVATE_Corelab-optimized.exit.started.json",
+          "bytes": 300,
+          "sha256": "5df61aeb96c311498636e74f70a9a3f97d12b63acb65195001f9c662270eb65e"
+        },
+        ".exit.json": {
+          "label": "PRIVATE_Corelab-optimized.exit.json",
+          "bytes": 146,
+          "sha256": "5a922b8752e5ed8c2a9e7064c8f104ff82a173940fa4cea6a2a98e06a91a0a81"
+        }
+      }
+    }
+  },
+  "thread_caps": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 2,
+    "MKL_NUM_THREADS": 2,
+    "NUMBA_NUM_THREADS": 2
+  },
+  "scope": "CPU synthetic/real CPU subprocess tests, no native simulator/model/CUDA initialization",
+  "targeted_precommit": {
+    "cases": 24,
+    "actual_exit": 0,
+    "receipt": {
+      "label": "PRIVATE_LOCAL_TARGETED_EXIT",
+      "bytes": 146,
+      "sha256": "265b91aef163e7c88f2b15903b673706fdda52fcb895fa816cc6354df9072734"
+    }
+  },
+  "earlier_PR37_failures": "Preserved unchanged in reports/E3/CPU_ADMISSION_20261030/CPU_TEST_RECEIPTS.json and prior two-site archives"
+}

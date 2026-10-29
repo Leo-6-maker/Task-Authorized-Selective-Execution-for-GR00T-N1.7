@@ -5,6 +5,7 @@ import time
 import hashlib
 import os
 from pathlib import Path
+from e3.resource import binding,live_gpu1
 from tase.evidence import append_json, now_sgt, write_json
 from tase.resource_memory import (allocator_fraction, MINIMUM_FREE_BYTES,
                              RESERVED_FREE_BYTES, MAXIMUM_PROCESS_FRACTION)
@@ -28,6 +29,8 @@ def main():
     permission = json.loads(a.allocation_record.read_text())
     if not permission.get('shared_gpu_inference_authorized'):
         raise ValueError('GPU inference allocation is not authorized')
+    binding(permission,os.environ)
+    physical=live_gpu1(permission)
     a.output.mkdir(parents=True, exist_ok=False)
     if a.epoch and os.environ.get('GROOT_SKIP_HF_MODEL_WEIGHTS','').strip().lower() not in ['', '0','false','no','off']:
         raise ValueError('E3 requires real weights; upstream test-only weight skipping is forbidden')
@@ -54,6 +57,7 @@ def main():
         'torch': torch.__version__, 'torch_cuda': torch.version.cuda,
         'free_vram_before_load_bytes': free, 'allocator_fraction_cap': fraction,
         'total_vram_bytes': total,
+        'physical_resource_preflight': physical,
         'memory_admission': {'minimum_free_bytes': MINIMUM_FREE_BYTES,
             'reserved_free_bytes': RESERVED_FREE_BYTES,
             'maximum_process_fraction': MAXIMUM_PROCESS_FRACTION},

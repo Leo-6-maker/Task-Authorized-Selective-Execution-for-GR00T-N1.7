@@ -8,6 +8,7 @@ from tase.retention import cleanup_resources,traced_control_step
 from e3.authorization import authorize,resource
 from e3.ledger import claim,ROOTS
 from e3.discovery import require
+from e3.resource import binding,live_gpu1
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
@@ -15,7 +16,8 @@ def main(argv=None):
     for n in ['run-id','review-commit','review-path']:p.add_argument('--'+n,required=True)
     p.add_argument('--port',type=int,default=5561)
     a=p.parse_args(argv);repo=Path.cwd();lock,cells,identity=authorize(repo,a.review_commit,a.review_path)
-    resource(json.loads(a.allocation_record.read_text()),identity)
+    allocation=json.loads(a.allocation_record.read_text());resource(allocation,identity)
+    binding(allocation,os.environ);live_gpu1(allocation)
     cell=next((c for c in cells if c['run_id']==a.run_id),None);require(cell is not None,'unplanned E3 ID')
     a.task=cell['task'];a.init_index=cell['init_index'];a.system=cell['system'];a.condition=cell['condition'];a.verify_reset=False;a.probe_only=False
     a.config=repo/'configs/e3_run_config.proposed.json';config=json.loads(a.config.read_text());config['source_tasks']=json.loads((repo/'configs/e3_sources.proposed.json').read_text())['tasks'];split='TEST'

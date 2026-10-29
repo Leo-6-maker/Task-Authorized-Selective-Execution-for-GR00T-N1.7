@@ -26,9 +26,11 @@ def authorize(repo,review_commit,review_path):
     source=json.loads((repo/'configs/e3_sources.proposed.json').read_text());cells=json.loads((repo/'configs/e3_cells.proposed.json').read_text())['cells'];verify(cells,source)
     lock=json.loads((repo/'configs/e3_protocol_lock.proposed.json').read_text());identity=dict(authorized_head=git(repo,'rev-parse','HEAD'),protocol_lock_sha256=sha(repo/'configs/e3_protocol_lock.proposed.json'),cells_file_sha256=sha(repo/'configs/e3_cells.proposed.json'),runtime_lock_sha256=sha(repo/'configs/runtime_lock_E2.json'))
     grant=json.loads(text);validate_grant(grant,lock,cells,identity)
+    from .freeze import verify_freeze
+    verify_freeze(repo)
     for name,digest in lock['source_sha256'].items():require(sha(repo/name)==digest,'E3 source lock differs: '+name)
     return lock,cells,dict(identity,review_commit=review_commit,review_path=review_path,review_blob=git(repo,'rev-parse',review_commit+':'+review_path),budgets=grant['budgets'],grant_protocol='E3-001-v1.0')
 
 def resource(record,identity):
     require(record.get('protocol_id')=='E3-001-v1.0' and record.get('authorized_head')==identity['authorized_head'] and record.get('review_commit')==identity['review_commit'],'E2/stale resource permit cannot authorize E3')
-    require(record.get('shared_gpu_inference_authorized') is True and type(record.get('gpu_index')) is int and record['gpu_index'] in [0,1] and record.get('gpu_uuid') and record.get('owner_approval_evidence'),'current explicit owner GPU allocation required')
+    require(record.get('shared_gpu_inference_authorized') is True and type(record.get('gpu_index')) is int and record['gpu_index']==1 and record.get('gpu_uuid') and record.get('owner_approval_evidence'),'current explicit owner GPU1-only allocation required')
