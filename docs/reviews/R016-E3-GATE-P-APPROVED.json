@@ -1,0 +1,88 @@
+{
+  "review_id": "R016",
+  "review_date_sgt": "2026-10-30",
+  "reviewer_role": "GPT independent reviewer of the existing executor submission",
+  "attestation_type": "Version-bound workflow decision; not a cryptographic signature or hardware-safety certification",
+  "protocol_id": "E3-001-v1.0",
+  "disposition": "GATE_P_APPROVED_CPU_FREEZE_AUTHORIZED",
+  "reviewed_pr": 35,
+  "reviewed_report_head": "5c959b54c0e7f3c1253b0754c895227341a7f2e0",
+  "reviewed_executable_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "protocol_document_git_blob": "87d305f67313a1d111415998109c592838eb8e0b",
+  "selected_variant": "FULL160",
+  "budgets": {"E3A": 112, "E3B": 48},
+  "independent_task_init_clusters": 36,
+  "official_init_indices": [16, 17, 18, 19],
+  "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+  "source_inventory_sha256": "c10d2640e1176a3f19e19ee806e3703c6f55213f0d623dba872d65b8c0b58b37",
+  "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "gate_k": 3,
+  "raw_chunk": 16,
+  "execution_prefix": 8,
+  "maximum_controls": 720,
+  "settling_controls": 10,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 641500,
+  "scene_evidence": {
+    "source": "reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv",
+    "git_blob": "d1dfec122daf1fca64bc2a244d063a222b795bca",
+    "published_constructors": 9,
+    "published_init_bindings": 36,
+    "operator_reported_child_exit": 0,
+    "accepted_for": "Gate P scene-identity evidence only",
+    "does_not_prove": "Full TEST reset/settling, model execution, Shadow/main physics parity, native lifecycle or current GPU allocation"
+  },
+  "independent_checks": {
+    "actual_source_read": ["docs/protocols/E3-001-v1.0-PROPOSED.md", "e3/manifest.py", "e3/reactive_gate.py", "e3/context.py", "e3/boundary.py", "e3/authorization.py", "tase/gate_features.py", "configs/e3_protocol_lock.proposed.json", "reports/E3/R015/STATUS.json", "reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv"],
+    "byte_verified_rule_sources": {
+      "e3/reactive_gate.py": "dda5e19fb21c7c7b5a92c9980892c6ad69fee6b0",
+      "tase/gate_features.py": "45304283c1e2fb23cb5509f3e78c9ae3d27641e6"
+    },
+    "synthetic_rule_tests_normal": {"passed": 10, "exit_code": 0},
+    "synthetic_rule_tests_optimized": {"passed": 10, "exit_code": 0},
+    "test_limit": "Rule-level tests use TaskSpec/discovery test doubles. They are not the repository full187 suite or native runtime verification.",
+    "full187_suite_rerun_by_reviewer": false,
+    "private_originals_rehashed_by_reviewer": false,
+    "new_model_calls": 0,
+    "new_simulator_calls": 0,
+    "new_TEST_reservations": 0
+  },
+  "allowed_now": [
+    "Implement the independently selected full160 freeze in a new clean E3-only branch, without changing cell identities, scientific thresholds, seeds, conditions or outcome definitions.",
+    "Bind the genuine R015 scene evidence and hashes into the protocol lock; set its scientific freeze status and verified scene-identity field only after those bindings are checked.",
+    "Complete CPU-only regression, source-lock verification, resource-routing checks, historical E2 read-only equivalence and the final exact-Head Gate C review package.",
+    "Continue E2-only course documentation and packaging independently of E3."
+  ],
+  "gate_C_required": [
+    "New exact clean executable Head after lock/binding changes, with full manifest and source-hash validation, and no E2 scientific or original-data changes.",
+    "Normal and python -O full CPU regression (187 existing cases plus required additions); report actual failures/exits, not only summaries.",
+    "Retain A0 as current consecutive-contact-at-admission-boundary semantics. Explicitly test contact loss before a boundary; do not silently replace it with an event-latching or within-chunk interrupt baseline.",
+    "Demonstrate GPU1-only routing in the complete launch path. The reviewed resource() helper accepts indices 0 or 1; either show an effective downstream GPU1 guard or implement and test the required restriction before Gate C.",
+    "Read-only original E2 full120 audit equivalence and custody checks; all three CLEANUP_ERROR outcomes remain censored.",
+    "Independent reviewer publishes a NEW E3_TEST_AUTHORIZED record binding the final runnable Head and lock hashes. This R016 record is deliberately not that disposition."
+  ],
+  "runtime_execution_authorized": false,
+  "authorized_real_TEST": false,
+  "resource_authorization_required": true,
+  "resource_conditions_for_later_TEST": {
+    "fresh_owner_allocation_bound_to_final_head_and_grant": true,
+    "gpu_index": 1,
+    "gpu_uuid_and_EGL_must_match": true,
+    "minimum_free_GiB_launcher_and_native": 9,
+    "maximum_allocator_fraction": 0.55,
+    "sampled_headroom_GiB": 2,
+    "GPU0_fallback": false,
+    "foreign_job_interference": false
+  },
+  "later_execution_checkpoints": {"E3A_first_and_each_cluster": 4, "E3B_first_and_each_cluster": 6, "require_two_location_original_custody": true},
+  "scientific_limits": [
+    "E3 is a new exploratory study; do not pool it into the frozen E2 primary denominator.",
+    "A0/G comparison is limited to the same native8 admission frequency and the declared current-contact streak; no claim against all reactive safety systems.",
+    "No baseline-positive comparable pair means conditional prevention N/A, not perfect safety.",
+    "All started, failed, interrupted and unstarted planned cells stay in the selected denominator after first reservation; no retries, replacement IDs, task deletion or outcome-driven budget reduction.",
+    "No training, WBC, new checkpoint, hardware experiment, R014/R015 diagnostic replay, automatic merge or automatic Canvas submission."
+  ],
+  "E2_preservation": {"report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333", "planned_consumed": 120, "eligible": 117, "censored": 3, "R3_status": "PENDING_SEPARATE_RESULT_REVIEW"},
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "no_experiments_on": "2026-11-06"
+}
