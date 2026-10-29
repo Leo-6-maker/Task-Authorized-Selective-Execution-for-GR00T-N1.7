@@ -1,0 +1,36 @@
+name: Course evidence export (CPU only)
+on:
+  push:
+    branches: [codex/course-release-20261030]
+    paths: [.github/workflows/course-evidence-export.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Export existing public Git objects; do not execute project code
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir repo payload
+          git -C repo init -q
+          git -C repo remote add origin https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7.git
+          for sha in 73ddec9790c8540ad2b1faec6c989c7172cc5078 3484f3de388df63ea1a758dfd6ff4cfa545b2333 5c959b54c0e7f3c1253b0754c895227341a7f2e0 f10035fe17937058f788f196a66303088b5f7b98; do
+            git -C repo fetch -q --depth=1 origin "$sha"
+          done
+          git -C repo show 73ddec9790c8540ad2b1faec6c989c7172cc5078:submission/R3-review-draft/SOURCE_R013_FINAL.zip > payload/SOURCE_R013_FINAL.zip
+          git -C repo show 73ddec9790c8540ad2b1faec6c989c7172cc5078:submission/R3-review-draft/ME6401-full120-review-v3.pptx > payload/ME6401-full120-review-v3.pptx
+          git -C repo archive --format=zip 3484f3de388df63ea1a758dfd6ff4cfa545b2333 reports/E2/R013/final120 > payload/E2_PUBLIC_FINAL120.zip
+          git -C repo archive --format=zip 5c959b54c0e7f3c1253b0754c895227341a7f2e0 e3 tase scripts tests configs docs reports/E3 > payload/E3_REVIEW_SOURCE.zip
+          git -C repo archive --format=zip f10035fe17937058f788f196a66303088b5f7b98 docs AGENTS.md README.md reports > payload/MAIN_REVIEW_RECORDS.zip
+          (cd payload && sha256sum *.zip *.pptx > SHA256SUMS.txt)
+          printf '%s\n' 'Read-only Git export; no project Python, model, MuJoCo, TEST reservation, weights, credentials or private runtime data accessed.' > payload/EXPORT_SCOPE.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: me6401-immutable-public-evidence
+          path: payload/
+          retention-days: 7
+          if-no-files-found: error
+          compression-level: 0
