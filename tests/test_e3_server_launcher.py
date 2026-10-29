@@ -89,6 +89,25 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         self.gpu.assert_not_called()
         self.handoff.assert_not_called()
 
+    def test_GPU0_allocation_cannot_reach_launcher_inventory(self):
+        self.record['gpu_index'] = 0
+        self.allocation.write_text(json.dumps(self.record))
+        with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+            self.run_server()
+        self.inventory.assert_not_called()
+        self.gpu.assert_not_called()
+        self.handoff.assert_not_called()
+
+    def test_GPU0_command_cannot_override_GPU1_allocation(self):
+        with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+            launcher.serve(self.workspace, self.repo, 'b'*40,
+                           'docs/reviews/SYNTHETIC-E3-GRANT.json', self.allocation,
+                           self.workspace/'server/bin/python', self.workspace/'sim/bin/python',
+                           'test-server-e3-cpu', 0, 5561)
+        self.inventory.assert_not_called()
+        self.gpu.assert_not_called()
+        self.handoff.assert_not_called()
+
     def test_inventory_corruption_stops_before_runtime_and_GPU(self):
         self.inventory.side_effect = ValueError('synthetic asset XML mismatch')
         with self.assertRaisesRegex(ValueError, 'XML mismatch'):

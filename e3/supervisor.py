@@ -6,6 +6,7 @@ from e3.discovery import require,sha
 from e3.ledger import reserve,write,ROOTS
 from tase.e2_evidence import storage
 from tase.resource_memory import require_free_memory
+from e3.resource import binding,live_gpu1
 
 def run(workspace,repo,run_id,review_commit,review_path,allocation_record,sim_python,server_session,port=5561):
     _,cells,identity=authorize(repo,review_commit,review_path)
@@ -18,7 +19,7 @@ def run(workspace,repo,run_id,review_commit,review_path,allocation_record,sim_py
     require(not (workspace/'runs'/(server_session+'.exit.json')).exists() and (server/'loaded.json').is_file(),'E3 server closed/not loaded')
     start=json.loads((workspace/'runs'/(server_session+'.exit.started.json')).read_text());pid=start['child_pid'];proc=Path('/proc')/str(pid)
     require(proc.stat().st_uid==os.getuid() and [x.decode() for x in (proc/'cmdline').read_bytes().split(b'\0') if x]==start['command'] and 'e3.server' in start['command'],'E3 server process not owned/exact')
-    inventory=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,memory.free','--format=csv,noheader,nounits'],text=True);selected=next(row.split(',') for row in inventory.splitlines() if int(row.split(',')[0])==allocation['gpu_index']);require(selected[1].strip()==allocation['gpu_uuid']==admission['gpu_uuid'],'E3 CUDA/EGL identity differs');require_free_memory(int(selected[2])*1024**2)
+    live=live_gpu1(allocation);require(live['gpu_uuid']==admission['gpu_uuid'] and admission['egl_device_id']=='1','E3 CUDA/EGL identity differs')
     cell=next((c for c in cells if c['run_id']==run_id),None);require(cell is not None,'unplanned E3 cell');epoch_cells=[c for c in cells if c['epoch']==cell['epoch']]
     # Every existing original must pass its historical versioned source audit.
     from e3.ledger import audit
@@ -29,6 +30,7 @@ def run(workspace,repo,run_id,review_commit,review_path,allocation_record,sim_py
     folder=reserve(workspace/'runs'/ROOTS[cell['epoch']],cell,epoch_cells,identity);wrapper=None;failure=None
     try:
         up=workspace/'upstream/Isaac-GR00T';env=os.environ.copy();env.update(HOME=str(workspace/'runtime/home'),HF_HOME=str(workspace/'cache/huggingface'),LIBERO_CONFIG_PATH=str(workspace/'runtime/libero-config'),PYTHONPATH=os.pathsep.join(map(str,[repo,up,up/'external_dependencies/LIBERO'])),CUDA_VISIBLE_DEVICES=allocation['gpu_uuid'],MUJOCO_EGL_DEVICE_ID=str(allocation['gpu_index']),MUJOCO_GL='egl',PYOPENGL_PLATFORM='egl',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',WANDB_MODE='disabled',WANDB_DISABLED='true',HF_HUB_DISABLE_TELEMETRY='1',DO_NOT_TRACK='1',PYTHONNOUSERSITE='1',OPENBLAS_NUM_THREADS='1')
+        binding(allocation,env)
         require(json.loads((sim_python.parent.parent/'e2-derived-environment.json').read_text())['workspace']==str(workspace),'non-owned fixed interpreter')
         cmd=[str(sim_python),'-u',str(repo/'scripts/record_process.py'),'--receipt',str(workspace/'runs'/(run_id+'.exit.json')),'--',str(sim_python),'-u','-m','e3.native_runner','--workspace',str(workspace),'--run-id',run_id,'--review-commit',review_commit,'--review-path',review_path,'--allocation-record',str(allocation_record),'--port',str(port)]
         write(folder/'supervisor_start.json',dict(run_id=run_id,server_session=server_session,server_loaded_sha256=sha(server/'loaded.json'),authorization=identity))
