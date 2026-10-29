@@ -1,0 +1,57 @@
+{
+  "protocol_id": "TASE-002-v1.0",
+  "run_epoch": "E2",
+  "split": "TEST",
+  "maximum_episode_attempts": 120,
+  "maximum_consistency_attempts": 96,
+  "test_authorized": false,
+  "tasks": [
+    "alphabet_soup",
+    "cream_cheese",
+    "ketchup"
+  ],
+  "development_init_indices": [
+    0,
+    1
+  ],
+  "execution_horizon_candidate": 8,
+  "max_inner_steps": 720,
+  "settling_steps": 10,
+  "environment_seed_base": 640401,
+  "policy_seed_base": 640400,
+  "gate_k": 3,
+  "gate_candidates": [
+    1,
+    2,
+    3
+  ],
+  "oracle_lift_m": 0.02,
+  "oracle_sustain_control_steps": 2,
+  "oracle_relative_motion_tolerance_m": 0.01,
+  "c2_policy_targets": {
+    "alphabet_soup": "butter",
+    "cream_cheese": "alphabet_soup",
+    "ketchup": "alphabet_soup"
+  },
+  "position_tolerance_m": 1e-05,
+  "orientation_tolerance_rad": 0.0001,
+  "gripper_tolerance_m": 1e-06,
+  "legacy_evidence": "TEMPORARILY_UNAVAILABLE / NOT_INDEPENDENTLY_VERIFIED; not included in E2 denominators",
+  "authorization": "INDEPENDENT_GPT_MAIN_REVIEW_REQUIRED_NO_EXECUTOR_GRANT",
+  "frozen_sha256": {
+    "configs/runtime_lock_E2.json": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "configs/e2_splits.json": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+    "configs/e2_calibration_plan.json": "6c7150c206a7981a78c821889b5aba781ee8071db17d4e179360e45d54d77eec",
+    "configs/e2_calib_selection.json": "59fddd9407ff9d7d2bed44a9a8e4a28d596db395405afa6e9d7942821d274115",
+    "configs/e2_test_cells.proposed.json": "60a27c4828a5004d959c85229d39e617a9dabc32fbcaf847eb6ced4cbfd1e1ff",
+    "configs/e2_protocol_lock.json": "395f21e51e22e22792b5d116b88c4cf1adf7c6a4c59306db894a4b49c2fc66a2",
+    "tase/gate_features.py": "4ecefd7bc4a381bf624ee84a2f16538fefe5305d15d65c5e46ce458d7972afec",
+    "tase/event_oracle.py": "9aceedda605ec944bea795d5f48cfcef2b51e2f6b17e3be085524b9695afaff9",
+    "tase/task_spec.py": "8bd892311bdaa2b01c6ab500d88bac94f6e53aa741d3c7752ef675e51883348c",
+    "tase/execution_gate.py": "919e7bef69580cdecef7ac3e60af611db2dded5cdfad05c1621d377fffe92bbe",
+    "tase/e2_context.py": "ee14144f4b1f778a77fcc9fadce127b4ac23523cfe1e2087dd0635584c190294",
+    "tase/m2_native.py": "22dc1e8a99edb88acb8ab1663a929abf496fb18529f24c07d7bf081c8e136f4d",
+    "tase/shadow.py": "c29aec977a8d97eb34a34e4c08f3108d97579c6c3e5e5e2fda19e25dcc76e04b",
+    "tase/snapshot.py": "8e184a6ce2b126f334f4f965896b4b32ee8efdd5764206111aa5eec5eb1cf1bb"
+  }
+}
