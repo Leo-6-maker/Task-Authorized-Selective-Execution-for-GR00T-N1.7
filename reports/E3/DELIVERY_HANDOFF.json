@@ -1,11 +1,12 @@
 {
-  "status": "READY_FOR_E3_GATE_C_REVIEW",
-  "current_status": "reports/E3/R016/TAKEOVER_STATUS.json",
-  "review_request": "reports/E3/R016/GATE_C_REVIEW_REQUEST.md",
-  "CPU_snapshot_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
-  "GateP_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
-  "TEST_authorized": false,
-  "owner_GPU1_consent": "RETAINED",
-  "E2_formal_PR38_unchanged": true,
-  "next_action": "Independent GPT Gate C on exact new full PR Head and frozen lock; after NEW E3_TEST_AUTHORIZED, bind retained owner GPU1 consent to exact head/grant, fresh preflight, first E3A four-cell checkpoint; do not run now"
+  "status": "NATIVE_STOP_CPU_DIAGNOSED",
+  "execution_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "CPU_candidate_head": "84ce33cebdbaca74986ccac18928665d15c22a10",
+  "current_status": "reports/E3/R017/OVERNIGHT_STATUS.json",
+  "handoff": "reports/E3/R017/OVERNIGHT_SUMMARY.md",
+  "native_TEST_consumed": 1,
+  "unstarted": 159,
+  "report_head_not_runtime_authorized": true,
+  "next_action": "Independent0001 reconciliation and CPU audit candidate review; no same-night native continuation",
+  "E2_formal_head_unchanged": "9efba1994235ee0cb844653a45c6f1b0812442a7"
 }

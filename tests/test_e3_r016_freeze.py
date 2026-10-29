@@ -37,7 +37,10 @@ class FreezeTests(unittest.TestCase):
             'reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv'}
         for name in names:
             (self.repo/name).parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(REPO/name, self.repo/name)
+            # The verifier's positive fixture is the actual approved runtime,
+            # never the current unapproved CPU repair checkout's changed files.
+            (self.repo/name).write_bytes(historical(
+                REPO, '859e40b5f460365a8853bf3486969e9f8e28951c', name))
         self.enterContext(patch('e3.freeze.historical',
                                 side_effect=lambda _, rev, path: historical(REPO, rev, path)))
 

@@ -1,0 +1,178 @@
+{
+  "status": "ACTUAL_EXIT_CODES_NO_SUCCESS_NORMALIZATION",
+  "processes": {
+    "controller": {
+      "completed_at_sgt": "2026-10-30T02:15:03.358922+08:00",
+      "child_pid": 3339086,
+      "child_returncode": 1,
+      "exit_code": 1,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_controller_EXIT",
+        "bytes": 146,
+        "sha256": "30874fa8ce4d943e21774fca6b1b966df1c6bc989caf5e02afe26ba321fd45d1"
+      }
+    },
+    "episode_native": {
+      "completed_at_sgt": "2026-10-30T02:15:00.080516+08:00",
+      "child_pid": 3339803,
+      "child_returncode": 0,
+      "exit_code": 0,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_episode_native_EXIT",
+        "bytes": 146,
+        "sha256": "daecf89c6d855876f650f5dbf3990918683f7b5160e62d931131172dc75349d6"
+      }
+    },
+    "server_native": {
+      "completed_at_sgt": "2026-10-30T02:15:01.801833+08:00",
+      "child_pid": 3339236,
+      "child_returncode": -2,
+      "exit_code": 130,
+      "signal": 2,
+      "source": {
+        "label": "PRIVATE_server_native_EXIT",
+        "bytes": 146,
+        "sha256": "08275aec1c5df95d3e5542633131cf7dc1afbd3bbf55dcbdb3a6f9655fafd7fa"
+      }
+    },
+    "server_launcher": {
+      "completed_at_sgt": "2026-10-30T02:15:02.057525+08:00",
+      "child_pid": 3339125,
+      "child_returncode": 1,
+      "exit_code": 1,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_server_launcher_EXIT",
+        "bytes": 146,
+        "sha256": "ff90d3c88acbb3bbf6ef16b63ff9c9f0a150bbdee3d380e5585cea7175d53ab1"
+      }
+    },
+    "frozen_audit_normal": {
+      "completed_at_sgt": "2026-10-30T02:15:02.727512+08:00",
+      "child_pid": 3340288,
+      "child_returncode": 1,
+      "exit_code": 1,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_frozen_audit_normal_EXIT",
+        "bytes": 146,
+        "sha256": "d291bf3a172c196a37c7d0f47497d22be8d561a661338d3efda75998d4a63258"
+      }
+    },
+    "frozen_audit_optimized": {
+      "completed_at_sgt": "2026-10-30T02:32:05.668001+08:00",
+      "child_pid": 3352968,
+      "child_returncode": 1,
+      "exit_code": 1,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_frozen_audit_optimized_EXIT",
+        "bytes": 146,
+        "sha256": "92996c237125f87f97b78ba7e7daca7c9553d7caa7e3fdd36cd41773ef52f52c"
+      }
+    },
+    "candidate_audit_normal": {
+      "completed_at_sgt": "2026-10-30T02:33:14.643240+08:00",
+      "child_pid": 3359285,
+      "child_returncode": 0,
+      "exit_code": 0,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_candidate_audit_normal_EXIT",
+        "bytes": 146,
+        "sha256": "3c1c7097e01cf5c989077e2a092c519e2eb87c1a8660e1a1136bcfbf53acc0ee"
+      }
+    },
+    "candidate_audit_optimized": {
+      "completed_at_sgt": "2026-10-30T02:33:15.099938+08:00",
+      "child_pid": 3359299,
+      "child_returncode": 0,
+      "exit_code": 0,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_candidate_audit_optimized_EXIT",
+        "bytes": 146,
+        "sha256": "5312caf0765ab0be6e98c786e0f72945e090429998032eca5092544cfe7f9589"
+      }
+    },
+    "fixed160_diagnostic": {
+      "completed_at_sgt": "2026-10-30T02:32:06.301164+08:00",
+      "child_pid": 3353179,
+      "child_returncode": 0,
+      "exit_code": 0,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_fixed160_diagnostic_EXIT",
+        "bytes": 146,
+        "sha256": "e62793e44b7de962d6fe781f17c2ae3c98a420a200cf4d1ac254ad52fc3b201f"
+      }
+    },
+    "CPU_preflight_original": {
+      "completed_at_sgt": "2026-10-30T02:05:34.691674+08:00",
+      "child_pid": 3333254,
+      "child_returncode": 1,
+      "exit_code": 1,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_CPU_preflight_original_EXIT",
+        "bytes": 146,
+        "sha256": "df0fcb5a30f5c09180425722dbfe90777c6d08f426c79a475daf4742983b3d9e"
+      }
+    },
+    "CPU_preflight_corrected": {
+      "completed_at_sgt": "2026-10-30T02:06:50.682587+08:00",
+      "child_pid": 3334255,
+      "child_returncode": 0,
+      "exit_code": 0,
+      "signal": null,
+      "source": {
+        "label": "PRIVATE_CPU_preflight_corrected_EXIT",
+        "bytes": 146,
+        "sha256": "6c4550a57ac4559277e752f09b1e25feda93cb961f4a6ef8d74f1dcc2628465e"
+      }
+    }
+  },
+  "episode_supervisor": {
+    "run_id": "e3a-test-0001",
+    "wrapper_returncode": 0,
+    "failure_type": null,
+    "complete_child_receipt": true
+  },
+  "server_handshake": {
+    "wrapper_returncode": 130,
+    "signal_received": null,
+    "failure_type": "ValueError",
+    "admission_published": true,
+    "model_ready": true,
+    "forced_owned_cleanup": false,
+    "actual_child_exit_receipt_present": true,
+    "TEST_cells_executed_by_server_launcher": 0
+  },
+  "server_shutdown": {
+    "action": "operator sent SIGINT to verified owned native server after audit stop",
+    "native_returncode": -2,
+    "mapped_exit": 130,
+    "launcher_exit": 1,
+    "forced_cleanup": false,
+    "zero_exit_claim": false
+  },
+  "model_load": {
+    "seconds": 31.936476136092097,
+    "peak_reserved_bytes": 6392119296,
+    "free_before_load_bytes": 16404774912,
+    "allocator_fraction_cap": 0.55,
+    "runtime_head": "859e40b5f460365a8853bf3486969e9f8e28951c"
+  },
+  "native_policy_requests": 16,
+  "extra_health_get_action_calls": 0,
+  "Shadow_predictions": 0,
+  "exited_process_ids": {
+    "controller_wrapper": 3339085,
+    "controller": 3339086,
+    "native_server": 3339236,
+    "episode_runner": 3339803
+  },
+  "no_active_project_processes_after_stop": true
+}

@@ -1,0 +1,11 @@
+{
+  "E3A_first_required_through": 4,
+  "E3A_consumed": 1,
+  "E3B_first_required_through": 6,
+  "E3B_consumed": 0,
+  "completed_frozen_checkpoints": [],
+  "machine_checkpoint_published": false,
+  "reason": "first cell post-execution frozen original audit failed before the second reservation; no complete cluster to pass e3.checkpoint.build",
+  "two_copy_original_inventory_is_not_a_cluster_PASS": true,
+  "all_future_cells_unstarted": true
+}
