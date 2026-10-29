@@ -1,0 +1,53 @@
+{
+  "status": "ALL_ENGINEERING_ERRORS_RETAINED_NO_SCIENTIFIC_RERUN",
+  "events": [
+    {
+      "operation": "E2 audit SSH transport",
+      "actual_exit": 255,
+      "remote_audit_actual_exit": [
+        0,
+        0
+      ],
+      "recovery": "Read existing remote receipts and verify complete equality; no audit rerun",
+      "source": {
+        "label": "PRIVATE_TRANSPORT_EXIT",
+        "bytes": 53,
+        "sha256": "1acb0f84cd57f0671d53d0bb287a9ad919aa37ac2aa10453b57e0674e0ebe179"
+      }
+    },
+    {
+      "operation": "First local archive custody helper",
+      "actual_exit": 1,
+      "error": "System Python lacks hashlib.file_digest",
+      "recovery": "Use existing pinned Python3.12; actual custody check exit0, no archive modification",
+      "source": {
+        "label": "PRIVATE_CAPTURED_TOOL_EXIT_RECORD",
+        "bytes": 312,
+        "sha256": "40b9bac677f30e56c304bd7d440140773645a8ee673e6ba3df61c0ade1808ff9"
+      }
+    },
+    {
+      "operation": "First CPU evidence export",
+      "actual_exit": 1,
+      "child_git_bundle_exit": 128,
+      "recovery": "Preserve partial export; resume only bundle/export with named HEAD ref, actual bundle exit0; no code or experiment rerun",
+      "source": {
+        "label": "PRIVATE_EXPORT_FAILURE_RECORD",
+        "bytes": 323,
+        "sha256": "b95429c88fede17fd92846b3d5e2ca7ff1787b88375662db27efa4351164a827"
+      }
+    },
+    {
+      "operation": "Preflight JSON serialization",
+      "actual_preflight_exit": 0,
+      "recovery": "Original trailing literal newline escape preserved; separate normalized JSON derivative with unchanged parsed object",
+      "source": {
+        "label": "PRIVATE_SERIALIZATION_NOTE",
+        "bytes": 325,
+        "sha256": "1cfcce2a9a2e8fc7c81c0c51ed7d22d8ee4d9a4420d4bd24fe872ff66ec0d2ab"
+      }
+    }
+  ],
+  "ordinary_full_regression_failures_this_delivery": 0,
+  "new_TEST_consumption": 0
+}

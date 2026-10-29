@@ -1,0 +1,49 @@
+{
+  "status": "SCIENTIFIC_FREEZE_VERIFIED_GATE_C_REQUIRED",
+  "variant": "FULL160",
+  "budgets": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "clusters": 36,
+  "native_scene_tasks": 9,
+  "scene_scope": "SCENE_IDENTITY_ONLY",
+  "gate_P_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+  "protocol_lock_sha256": "1d2bafa862adfaccae75eb932b9a80e787bb18c71a4ba8631aa989b1ef1af72f",
+  "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+  "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "scene_identity_sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+  "authorized_real_TEST": false,
+  "CPU_preflight_actual_exit": 0,
+  "XML_count": 106,
+  "tasks": 9,
+  "Object_Cosmos_verified_files": 17,
+  "fixed_environments": {
+    "server": {
+      "python": "3.12.14",
+      "verified_packages": 138,
+      "marker_sha256": "5033aa07440889fce08e211362cfdd7f08807b96855b93b5a5d57a2c4155f32b"
+    },
+    "sim": {
+      "python": "3.12.14",
+      "verified_packages": 159,
+      "marker_sha256": "9266aee1d6f26e80cf9de0b4413f441b8fb9dd5893e8fe4a4e9028620a91d8f6"
+    }
+  },
+  "runtime_metadata_and_weight_hashes_only": true,
+  "source": {
+    "label": "PRIVATE_CORELAB_CPU_PREFLIGHT_STDOUT",
+    "bytes": 1215,
+    "sha256": "9b332984ec9498d23a950c31a6eacf559ae398978f57c8760f2a880088d739c6"
+  },
+  "raw_scene_source": {
+    "label": "reports/E3/R015/SCENE_RESULT.json",
+    "bytes": 170068,
+    "sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a"
+  },
+  "frozen_scene_source": {
+    "label": "configs/e3_scene_identity.frozen.json",
+    "bytes": 170068,
+    "sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a"
+  }
+}

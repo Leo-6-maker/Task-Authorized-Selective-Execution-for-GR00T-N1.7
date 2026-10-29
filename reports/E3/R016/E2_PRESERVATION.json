@@ -1,0 +1,125 @@
+{
+  "status": "E2_FULL120_AUDIT_EQUIVALENT_ALL18070_ORIGINALS_UNCHANGED",
+  "audits": {
+    "status": "LIVE_COMPLETE_E2_READ_ONLY_AUDIT_EQUIVALENCE",
+    "normal_actual_exit": 0,
+    "optimized_actual_exit": 0,
+    "full_JSON_equals_final120": true,
+    "reserved": 120,
+    "full_outcomes": 117
+  },
+  "originals": {
+    "status": "ALL18070_ORIGINAL_E2_FILES_REHASHED_UNCHANGED",
+    "source_files": 18070,
+    "canonical_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+    "changed": [],
+    "model_calls": 0
+  },
+  "consumed": 120,
+  "full_outcomes": 117,
+  "censored_ids": [
+    "e2-test-0010",
+    "e2-test-0014",
+    "e2-test-0016"
+  ],
+  "censored_status": "CLEANUP_ERROR",
+  "statuses": {
+    "SUCCESS": 89,
+    "TIME_LIMIT": 18,
+    "SEMANTIC_ABORT": 10,
+    "CLEANUP_ERROR": 3
+  },
+  "code_equivalence": {
+    "CPU_code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+    "E2_tase_scripts_and_all_prior_configs_unchanged": true,
+    "config_changes": [
+      "configs/e3_protocol_lock.proposed.json",
+      "configs/e3_scene_identity.frozen.json"
+    ],
+    "E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+    "formal_course_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+    "GateP": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+    "new_model_native_TEST_calls": 0
+  },
+  "E2_R3": "PENDING_SEPARATE_INDEPENDENT_REVIEW",
+  "archive_custody": {
+    "locations": 2,
+    "archives_per_location": 13,
+    "whole_hashes_freshly_verified": true,
+    "previous_member_verification_preserved": true,
+    "fresh_member_redecompression": false,
+    "coverage": "12 dependencies plus delta closure; not two standalone full archives",
+    "checked": [
+      {
+        "stage": "issue25-resource84-full-01",
+        "bytes": 2246177125,
+        "sha256": "d01b3d745545c9425a0073fad2558f4cb57f5cc9c681cf53a38f37dcca126cad"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0086",
+        "bytes": 37755942,
+        "sha256": "dc72780422eb6fa8fcb64e12d2b25bceb13f9d9d5a0856ca4c48e313a072e392"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0088",
+        "bytes": 67976166,
+        "sha256": "ac1191a51caaf6406ddea70fdae5550af505d15857b8c2f0424ee11cb134b283"
+      },
+      {
+        "stage": "issue28-test-checkpoint-0092",
+        "bytes": 73695611,
+        "sha256": "022c9a05ff4e7207cacd683190b90a216cb73f8a3b88e051aacf919723048aa6"
+      },
+      {
+        "stage": "issue28-recovered92-coverage-01",
+        "bytes": 1104750,
+        "sha256": "5fb3eea76f6e1d584dcec9c2bbff0e51ef5a0a8ee25016d6b1dee554e2cc6595"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0096",
+        "bytes": 80236956,
+        "sha256": "9743e25f72b7d2c653f173ce21395c2cdff1f1d60f82527565ab55576210d099"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0100",
+        "bytes": 77692879,
+        "sha256": "9a8b5a9305a757cacc86adb8f84359bd04e3a3eb1ab7f2b138904bc21b9b33ba"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0104",
+        "bytes": 226522236,
+        "sha256": "82399c7ff4b09e222f3342c52325b9af6de7d606ac29a214d13ffb4baccf3ca9"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0108",
+        "bytes": 71183608,
+        "sha256": "1e711049c6971a420baf2668957ab83c20a139440c608a2c806b2d0c8148db26"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0112",
+        "bytes": 237174974,
+        "sha256": "aacab7d35021a0c98ee066a9133bfefda96ad2327af721b4e9384ccd2268c825"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0116",
+        "bytes": 224799146,
+        "sha256": "abb004e1888617188f7df08ec7ff58a2a7b248f07ea2571ba9a3527d7e3995cb"
+      },
+      {
+        "stage": "issue28-resume92-test-checkpoint-0120",
+        "bytes": 243520604,
+        "sha256": "6a19a184c9506701bda841af0b7d24e3b7c74a1b3f7242442cff3dafcb28dc4f"
+      },
+      {
+        "stage": "issue28-final120-original-coverage-01",
+        "bytes": 836321,
+        "sha256": "1c75486418dffaae40977fcd3a7f65d6c89b2f5855e34b5ae2d1b980a00cacd3"
+      }
+    ]
+  },
+  "original_source": {
+    "label": "PRIVATE_CORELAB_E2_NORMAL_AUDIT",
+    "bytes": 197898,
+    "sha256": "aa83027482bba460b2251b87f219dcfc9915d25856ea96158bac261a76704eec"
+  }
+}

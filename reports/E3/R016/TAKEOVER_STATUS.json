@@ -1,0 +1,51 @@
+{
+  "status": "READY_FOR_E3_GATE_C_REVIEW",
+  "date_sgt": "2026-10-30",
+  "issue": 36,
+  "GateP": "R016_APPROVED_AND_CPU_FREEZE_IMPLEMENTED",
+  "GateP_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+  "GateC": "PENDING_NEW_INDEPENDENT_E3_TEST_AUTHORIZED",
+  "CPU_snapshot_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+  "final_execution_identity": "EXACT_FULL_HEAD_OF_THIS_PR; resolve/read back on GitHub after report commit, never substitute CPU snapshot",
+  "protocol_frozen": true,
+  "scene_identity_verified": true,
+  "full_TEST_reset_settling_shadow_lifecycle_verified": false,
+  "TEST_authorized": false,
+  "owner_GPU1_consent": "GRANTED_AND_RETAINED_FINAL_GRANT_BINDING_PENDING",
+  "planned": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "consumed": {
+    "E3A": 0,
+    "E3B": 0
+  },
+  "completed": 0,
+  "failed_started": 0,
+  "unknown_started": 0,
+  "unstarted": 160,
+  "model_calls_this_delivery": 0,
+  "native_constructors_this_delivery": 0,
+  "Shadow_predictions_this_delivery": 0,
+  "CPU_cases_per_mode": 211,
+  "full_CPU_actual_exits": {
+    "local_normal": 0,
+    "local_optimized": 0,
+    "Corelab_normal": 0,
+    "Corelab_optimized": 0
+  },
+  "E2_audit_actual_exits": [
+    0,
+    0
+  ],
+  "E2_originals_unchanged": 18070,
+  "E2_R3": "PENDING_SEPARATE_INDEPENDENT_REVIEW",
+  "course_formal_PR": 38,
+  "course_formal_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+  "course_submission": "NOT_SUBMITTED_BY_THIS_AGENT",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "no_experiments_on": "2026-11-06",
+  "next_action": "Independent GPT Gate C on exact new full PR Head and frozen lock; after NEW E3_TEST_AUTHORIZED, bind retained owner GPU1 consent to exact head/grant, fresh preflight, first E3A four-cell checkpoint; do not run now",
+  "independent_result_review": "NOT_SELF_SIGNED",
+  "new_CPU_backup_locations": 2
+}

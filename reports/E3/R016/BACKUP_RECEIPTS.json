@@ -1,0 +1,27 @@
+{
+  "status": "TWO_LOCATIONS_NEW_CPU_EVIDENCE_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+  "Corelab_originals": {
+    "stage": "issue36-r016-CPU-freeze-01",
+    "bytes": 67428,
+    "sha256": "35765fa715886cd1f8a2c8afc9526b500bc3cc820a66c787101d4616febc2e65",
+    "artifacts": 45,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "candidate_code_head": "f7af1c0abb753be79d6cfb02df5159a835a71c57",
+    "new_model_TEST_calls": 0,
+    "independent_locations": 2,
+    "independent_review": "NOT_PERFORMED_BY_EXECUTOR",
+    "transfer_actual_exit": 0
+  },
+  "local_originals_and_recovery_records": {
+    "stage": "issue36-r016-local-closure-01",
+    "bytes": 72964,
+    "sha256": "3c7cb6e917bd1745d17da276b8827ae44f6d15904a9614f49937b31ebf4ca688",
+    "artifacts": 117,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  },
+  "private_runtime_map": "PRIVATE_CORELAB_OPERATOR/runtime-map.R016.local.json",
+  "independent_review": "NOT_PERFORMED_BY_EXECUTOR",
+  "historical_R014_R015_originals_and_old_checkout": "VERIFIED_UNCHANGED",
+  "historical_CPU_failure_archives": "PRESERVED_UNCHANGED"
+}
