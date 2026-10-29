@@ -79,5 +79,11 @@
   "Canvas_submitted": false,
   "PR_merged": false,
   "next_action": "Independent reconciliation of original0001 and CPU audit repair; preserve same-ID record, do not resume any native TEST tonight or use CPU candidate under R017",
-  "result_review_self_signed": false
+  "result_review_self_signed": false,
+  "R017_machine_grant_was_valid_and_used": true,
+  "nightly_stop_latched": true,
+  "native_execution_may_resume_this_night": false,
+  "CPU_work_finished": true,
+  "current_native_server": null,
+  "completed_original_files_with_exit_receipts": 78
 }

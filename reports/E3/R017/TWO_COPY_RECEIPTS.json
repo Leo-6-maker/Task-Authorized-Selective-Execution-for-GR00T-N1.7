@@ -1609,5 +1609,13 @@
     }
   ],
   "original0001_changed_during_CPU_work": false,
-  "independent_GPT_verification": "NOT_CLAIMED"
+  "independent_GPT_verification": "NOT_CLAIMED",
+  "local_receipts_and_closure": {
+    "stage": "r017-local-cpu-closure-01",
+    "bytes": 35656718,
+    "sha256": "c086acc75369df3a9306bf6ba827940746870998965be5d9d17d87db31a05f9a",
+    "artifacts": 523,
+    "status": "TWO_LOCATIONS_ARCHIVE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "independent_review": "NOT_PERFORMED"
+  }
 }

@@ -27,5 +27,11 @@
     "preflight helper SyntaxError exit1 corrected outside runtime",
     "metadata helper NameError exit1 corrected without repeating successful preflight"
   ],
-  "no_new_environment_weights_or_shared_config": true
+  "no_new_environment_weights_or_shared_config": true,
+  "late_delivery_helper_error": {
+    "actual_python_exit": 1,
+    "kind": "FileNotFoundError in local report closure-path metadata step",
+    "retained": true,
+    "correction": "absolute existing private path; no runtime/original change"
+  }
 }

@@ -85,7 +85,9 @@ serialization SyntaxError(exit1), then a metadata variable NameError(exit1).
 Both were corrected outside the frozen tree under the allowed finite path;
 successful preflight was not repeated for the metadata correction. No policy
 request or reservation existed at either failure. No further native retry or
-resource-threshold adjustment occurred.
+resource-threshold adjustment occurred. A later local report-metadata helper
+raised FileNotFoundError(exit1); its captured error was preserved and only the
+report path was corrected. It did not affect any runtime or original evidence.
 
 ## Full160 accounting and statistical limits
 
@@ -124,7 +126,10 @@ SHA256 `4ca80aae9735f0d12f89f727d543d3d02f07fe1b8d954b68fa500b50a6cbb26b`.
 The217-artifact final CPU-diagnosis package is18,051,479bytes,
 SHA256 `438535a52e83355786ec806a926b62b1863530b8219dcc5eda4b1bff06dc6e6b`.
 Each was copied between the two locations and verified as a whole archive and
-every member. Their exact0001 original inventories are equal. The private final
+every member. The separate523-artifact local receipt/Git/transport closure
+is35,656,718bytes, SHA256
+`c086acc75369df3a9306bf6ba827940746870998965be5d9d17d87db31a05f9a`,
+also verified at both locations as a whole and every member. Their exact0001 original inventories are equal. The private final
 runtime map preserves real interpreters, paths, allocation, PID/start identities,
 original lock and CPU-candidate location. Final report/Git closure receipts are
 published in the final PR handoff without changing the native runtime.
