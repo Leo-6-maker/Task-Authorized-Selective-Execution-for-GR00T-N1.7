@@ -1,0 +1,92 @@
+{
+  "CPU_snapshot_head": "84ce33cebdbaca74986ccac18928665d15c22a10",
+  "cases_per_mode": 223,
+  "full_tests": {
+    "candidate-local-normal": {
+      "cases": 223,
+      "elapsed_seconds": 31.853,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T02:32:14.045772+08:00",
+      "raw_log": {
+        "label": "PRIVATE_candidate-local-normal_STDERR",
+        "bytes": 33356,
+        "sha256": "d525eb51e0dec01514b0be19c94f0db45835b09ee816b78f09f8c3cff08433b5"
+      },
+      "raw_exit": {
+        "label": "PRIVATE_candidate-local-normal_EXIT",
+        "bytes": 146,
+        "sha256": "0bc0c8a3c0893d6278f8bb2e03b7c29de78fe9757cb11c89b60c8367cf82ab62"
+      }
+    },
+    "candidate-local-optimized": {
+      "cases": 223,
+      "elapsed_seconds": 32.019,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T02:32:46.300567+08:00",
+      "raw_log": {
+        "label": "PRIVATE_candidate-local-optimized_STDERR",
+        "bytes": 33356,
+        "sha256": "ded349d9d315864531c4d716de6a739dab6ca09a08fd1187476fe6d6f042e6d3"
+      },
+      "raw_exit": {
+        "label": "PRIVATE_candidate-local-optimized_EXIT",
+        "bytes": 146,
+        "sha256": "8ac6429091e699d6ae757d94dd8b5a88f083304c1a032ceea8dd24bb5b1b367b"
+      }
+    },
+    "candidate-Corelab-normal": {
+      "cases": 223,
+      "elapsed_seconds": 42.219,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T02:32:32.308828+08:00",
+      "raw_log": {
+        "label": "PRIVATE_candidate-Corelab-normal_STDERR",
+        "bytes": 33430,
+        "sha256": "870ebd1c36e9142a7588d670398dfc08114030ea0d4711d7aa1043b32de1948c"
+      },
+      "raw_exit": {
+        "label": "PRIVATE_candidate-Corelab-normal_EXIT",
+        "bytes": 146,
+        "sha256": "94fe7806eba396edeaef568a494b1b7ee83a3ac638423d82a57d7afa910cd29b"
+      }
+    },
+    "candidate-Corelab-optimized": {
+      "cases": 223,
+      "elapsed_seconds": 40.599,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T02:33:13.516341+08:00",
+      "raw_log": {
+        "label": "PRIVATE_candidate-Corelab-optimized_STDERR",
+        "bytes": 33430,
+        "sha256": "9faeeb359e09f113208ced1d185e2e0e8c5d118b6b6bc0d384af0ceee0ec075a"
+      },
+      "raw_exit": {
+        "label": "PRIVATE_candidate-Corelab-optimized_EXIT",
+        "bytes": 146,
+        "sha256": "3ad559514f03975529afd03191cfb72cdbe897f3a12c8512faebd32c6be2d921"
+      }
+    }
+  },
+  "targeted12": {
+    "actual_exit": 0,
+    "source": "Observed initial tool exit0 and retained 12-test log; later included in all four full223 runs"
+  },
+  "real0001_candidate_readonly_summary": {
+    "status": "CPU_CANDIDATE_READONLY_ORIGINAL_RECONCILIATION_NOT_FROZEN_PASS",
+    "normal_optimized_actual_exit": [
+      0,
+      0
+    ],
+    "full_JSON_equal": true,
+    "candidate_verified_originals": 1,
+    "frozen_primary_audit_remains_failed": true,
+    "candidate_runtime_authorized": false,
+    "candidate_grant_denial_actual_exit": 0,
+    "next_0002_absent": true,
+    "new_model_TEST_calls": 0
+  },
+  "scope": "CPU synthetic/integration plus genuine original read-only audit; no model/simulation/TEST rerun",
+  "frozen_runtime_head_unchanged": true,
+  "source_lock_updated": false,
+  "R017_runtime_permission_for_candidate": false
+}

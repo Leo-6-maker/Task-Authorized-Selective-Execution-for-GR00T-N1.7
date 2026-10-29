@@ -1,0 +1,41 @@
+{
+  "run_id": "e3a-test-0001",
+  "task": "salad_dressing",
+  "init_index": 16,
+  "condition": "C0",
+  "system": "B0",
+  "source_video_artifact": "runs/E3A_TEST/e3a-test-0001/rollout.mp4",
+  "source_video_sha256": "7c911ce42e70f870b06023fa358226341c43981a2c551be7c6163d07002531b4",
+  "source_video_frames": 121,
+  "source_video_fps": 20.0,
+  "frames": [
+    {
+      "control_step": 1,
+      "zero_based_video_frame": 0,
+      "video_timestamp_s": 0.0,
+      "derived_PNG": "control-0001.png",
+      "derived_sha256": "3c3ce8736d7057b8f517b90b79b7a7f194cef76cbfd11d3cab348f858c889a13",
+      "scope": "decoded original stacked native cameras, no reconstruction or simulator replay"
+    },
+    {
+      "control_step": 60,
+      "zero_based_video_frame": 59,
+      "video_timestamp_s": 2.95,
+      "derived_PNG": "control-0060.png",
+      "derived_sha256": "78adf96713f142d8ff5aa533d7b524b9b1e5e890baae66819b8e59d9ca998804",
+      "scope": "decoded original stacked native cameras, no reconstruction or simulator replay"
+    },
+    {
+      "control_step": 121,
+      "zero_based_video_frame": 120,
+      "video_timestamp_s": 6.0,
+      "derived_PNG": "control-0121.png",
+      "derived_sha256": "47fd468ace3e2ad1cc2da17bf2845f07ece4cdd6c23cff4ba05600b0bcb550ce",
+      "scope": "decoded original stacked native cameras, no reconstruction or simulator replay"
+    }
+  ],
+  "raw_result_status": "SUCCESS",
+  "raw_official_success": true,
+  "frozen_audit_status": "FAILED_MANIFEST_COVERAGE_NO_PRIMARY_ELIGIBILITY",
+  "not_Gate_efficacy_evidence": true
+}

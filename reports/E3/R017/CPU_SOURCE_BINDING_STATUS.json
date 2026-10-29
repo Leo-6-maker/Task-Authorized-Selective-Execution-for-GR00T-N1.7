@@ -1,0 +1,30 @@
+{
+  "status": "CPU_CANDIDATE_UNAUTHORIZED_SOURCE_LOCK_NOT_REFRESHED",
+  "frozen_runtime_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "CPU_candidate_snapshot": "84ce33cebdbaca74986ccac18928665d15c22a10",
+  "frozen_protocol_lock_unchanged": true,
+  "drift": [
+    {
+      "path": "e3/audit.py",
+      "frozen_sha256": "51f2d91da1d40a82056daa4c4bf93239fd86829dfef884b721702aa1184877f1",
+      "candidate_sha256": "9324bf0d5e8393415aaec9c169eaed33e56f1e0d1f50c5e4cf8e0afe565f165b"
+    },
+    {
+      "path": "tests/test_e3_r016_freeze.py",
+      "frozen_sha256": "566e046599159f59486acfeb42f970ef02a7f1572167f592fee1c38543274abc",
+      "candidate_sha256": "3a5524e6e37d9e0529e6fbdf7b30aa20de46fec35c19277760e1b785ed011fb3"
+    }
+  ],
+  "additional_candidate_files": [
+    {
+      "path": "e3/audit_manifest.py",
+      "sha256": "a6117e721100ca4d81924e1eaedbbe00a2bd9766516177c3b389d36df00d6e69"
+    },
+    {
+      "path": "tests/test_e3_audit_manifest.py",
+      "sha256": "aa5d6fa1ce7f92e0496582fa6d7cbe52578d9b45cb2563dd3eb625ac1d90dbed"
+    }
+  ],
+  "new_native_runtime_authorized": false,
+  "reason": "R017 grants only859e40; this is a CPU-only repair/review packet, not a source-lock refresh or native continuation"
+}

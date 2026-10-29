@@ -1,0 +1,19 @@
+{
+  "status": "FIXED_FORMAL_E2_OFFLINE_RECOUNT_VERIFIED_UNCHANGED",
+  "formal_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+  "normal_optimized_equal": true,
+  "recount_actual_exits": [
+    0,
+    0
+  ],
+  "synthetic_cases_per_mode": 5,
+  "synthetic_actual_exits": {
+    "E2-formal-synthetic-normal": 0,
+    "E2-formal-synthetic-optimized": 0
+  },
+  "scope": "Public source/ledger/counts only, not a new GPU run, bootstrap recomputation, deck render or independent R3 approval",
+  "planned": 120,
+  "eligible": 117,
+  "censored": 3,
+  "source_clean": true
+}

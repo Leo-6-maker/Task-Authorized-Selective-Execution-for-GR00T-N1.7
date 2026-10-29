@@ -1,0 +1,31 @@
+{
+  "primary_error": "manifest coverage mismatch",
+  "site": "e3/audit.py original() calling strict tase.evidence.verify_manifest()",
+  "original_manifest_rows": 74,
+  "required_minimum_subset": 15,
+  "missing_mandatory_files": [],
+  "legitimate_extra_files": 59,
+  "all74_original_hashes_verified_by_candidate": true,
+  "frozen_ordinary_optimized_actual_exits": [
+    1,
+    1
+  ],
+  "raw_native_status": "SUCCESS",
+  "raw_native_exit": 0,
+  "scientific_frozen_primary_eligibility": "UNKNOWN_PENDING_INDEPENDENT_RECONCILIATION",
+  "CPU_candidate_fix": "separate mandatory subset presence from exact complete pre-close file inventory; reject unrecorded/missing/mutated/external/symlink files; keep shared verifier equality",
+  "late_files_excluded_from_runner_manifest": [
+    "artifact_manifest.json",
+    "supervisor_exit.json"
+  ],
+  "late_supervisor_receipt_still_verified_separately": true,
+  "test_fixture_adjustment": "positive historical R016 freeze fixture loads reviewed859e40 Git bytes, rather than unapproved candidate source files",
+  "no_Gate_model_or_science_change": true,
+  "no_second_ID_or_retry": true,
+  "no_native_shadow_efficacy_claim": true,
+  "initial_CPU_operator_errors_preserved": [
+    "preflight helper SyntaxError exit1 corrected outside runtime",
+    "metadata helper NameError exit1 corrected without repeating successful preflight"
+  ],
+  "no_new_environment_weights_or_shared_config": true
+}

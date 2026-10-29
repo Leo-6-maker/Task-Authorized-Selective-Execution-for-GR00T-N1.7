@@ -1,0 +1,70 @@
+{
+  "cell": {
+    "run_id": "e3a-test-0001",
+    "epoch": "E3A",
+    "protocol_id": "E3-001-v1.0",
+    "split": "TEST",
+    "task": "salad_dressing",
+    "init_index": 16,
+    "init_hash": "a232b5f71a6f88f30712c205625a4158dd810fab5468e27aa5e996ea3cec4a44",
+    "init_file_sha256": "6f6793ee550419a4a79dcb6ac83a9ba7bbf5e76e92fef26b82b6a7a10f72b04a",
+    "bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a",
+    "bddl_git_blob": "f83758a229d7a098eaaa1b2c1bd33093aa7c8e33",
+    "scene_source_fingerprint": "af85f5a00df91346eeaae6511e1239cb8a70b22e03dfc0205d52aa525777e7e3",
+    "condition": "C0",
+    "system": "B0",
+    "scenario_id": "E3A-salad_dressing-i16-C0",
+    "policy_target": "salad_dressing",
+    "actual_policy_language": "pick up the salad dressing and place it in the basket",
+    "trusted_target": "salad_dressing_1",
+    "basket": "basket_1",
+    "policy_seed": 641000,
+    "environment_seed": 641001
+  },
+  "actual_policy_language": "pick up the salad dressing and place it in the basket",
+  "true_task_target": "salad_dressing_1",
+  "epoch": "E3A",
+  "protocol_id": "E3-001-v1.0",
+  "baseline_positions": {
+    "salad_dressing_1": [
+      0.05000070616610801,
+      -0.09999129744571139,
+      0.07270544927976622
+    ],
+    "basket_1": [
+      0.0009928478760783616,
+      0.24960819596852624,
+      -0.0045823453265843445
+    ],
+    "ketchup_1": [
+      -0.11999706998658927,
+      -0.2399975853602489,
+      0.07240547270045598
+    ],
+    "alphabet_soup_1": [
+      -0.14909425574469123,
+      0.06021878264901684,
+      0.038392910369975934
+    ],
+    "cream_cheese_1": [
+      0.10173165593586704,
+      -0.20131274741571442,
+      0.008921477418607878
+    ],
+    "milk_1": [
+      0.14641293603383307,
+      0.027982876008280703,
+      0.06973547626138672
+    ],
+    "tomato_sauce_1": [
+      -0.19976095092862958,
+      -0.07993920296124815,
+      0.03839259641983711
+    ]
+  },
+  "oracle_parameters": {
+    "oracle_lift_m": 0.02,
+    "oracle_sustain_control_steps": 2,
+    "oracle_relative_motion_tolerance_m": 0.01
+  }
+}

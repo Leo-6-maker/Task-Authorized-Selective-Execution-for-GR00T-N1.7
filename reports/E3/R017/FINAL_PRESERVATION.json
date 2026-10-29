@@ -1,0 +1,31 @@
+{
+  "status": "POST_STOP_SOURCE_RESOURCE_AND_ORIGINALS_CHECKED",
+  "runtime_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "grant_current": true,
+  "owned_native_project_processes": [],
+  "GPU1_baseline_foreign_pids": [],
+  "GPU1_final_foreign_pids": [],
+  "GPU1_foreign_interference_observed": false,
+  "checkpoint_files": [],
+  "A_consumed": 1,
+  "B_consumed": 0,
+  "next0002_absent": true,
+  "model_policy_requests": 16,
+  "Shadow_predictions": 0,
+  "A0_calls": 0,
+  "E2_equivalence": {
+    "status": "LIVE_COMPLETE_E2_READ_ONLY_AUDIT_EQUIVALENCE",
+    "normal_actual_exit": 0,
+    "optimized_actual_exit": 0,
+    "full_JSON_equals_final120": true,
+    "reserved": 120,
+    "full_outcomes": 117
+  },
+  "E2_originals": {
+    "status": "ALL18070_ORIGINAL_E2_FILES_REHASHED_UNCHANGED",
+    "source_files": 18070,
+    "canonical_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+    "changed": [],
+    "model_calls": 0
+  }
+}

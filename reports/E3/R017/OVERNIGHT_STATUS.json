@@ -1,0 +1,83 @@
+{
+  "status": "NATIVE_STOP_CPU_DIAGNOSED",
+  "execution_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "grant_commit": "ca979be10c00389ed57b77967c232d7a84132406",
+  "grant_path": "docs/reviews/R017-E3-TEST-AUTHORIZED.json",
+  "runtime_tree_clean": true,
+  "CPU_candidate_head": "84ce33cebdbaca74986ccac18928665d15c22a10",
+  "report_Head_is_not_authorized_runtime": true,
+  "operator_started_at_sgt": "2026-10-30T02:13:53.855872+08:00",
+  "native_cell_started_at_sgt": "2026-10-30T02:14:41.097585+08:00",
+  "native_cell_completed_at_sgt": "2026-10-30T02:14:59.113171+08:00",
+  "stopped_new_TEST_at_sgt": "2026-10-30T02:15:00.494545+08:00",
+  "operator_finished_at_sgt": "2026-10-30T02:15:03.175489+08:00",
+  "reservation_cutoff_sgt": "2026-10-30T07:30:00+08:00",
+  "cutoff_reached": false,
+  "stop_reason": "frozen original manifest coverage audit error after native0001 exit0",
+  "planned": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "reserved": {
+    "E3A": 1,
+    "E3B": 0
+  },
+  "unstarted": {
+    "E3A": 111,
+    "E3B": 48
+  },
+  "frozen_eligible": {
+    "E3A": 0,
+    "E3B": 0
+  },
+  "unknown_started": {
+    "E3A": 1,
+    "E3B": 0
+  },
+  "raw_observed_statuses": {
+    "SUCCESS": 1
+  },
+  "raw_native_actual_exit": 0,
+  "controller_actual_exit": 1,
+  "server_native_actual_exit": 130,
+  "server_launcher_actual_exit": 1,
+  "active_controller_pid": null,
+  "active_native_server_pid": null,
+  "active_episode_or_worker_pids": [],
+  "no_owned_GPU_jobs_verified": true,
+  "GPU1_foreign_process_set_unchanged": true,
+  "model_policy_requests": 16,
+  "model_health_probe_calls": 0,
+  "Shadow_predictions": 0,
+  "checkpoints_passed": [],
+  "CPU_tests": {
+    "cases_per_mode": 223,
+    "local_normal_exit": 0,
+    "local_optimized_exit": 0,
+    "Corelab_normal_exit": 0,
+    "Corelab_optimized_exit": 0
+  },
+  "candidate_readonly_audit_actual_exits": [
+    0,
+    0
+  ],
+  "frozen_audit_actual_exits": [
+    1,
+    1
+  ],
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 641500,
+  "statistics_scope": "CONSERVATIVE_ALL160_DIAGNOSTIC_NOT_FROZEN_PASS; independent candidate posthoc separately labeled",
+  "conditional_prevention": "N/A",
+  "originals_backed_up_locations": 2,
+  "E2_original18070_unchanged": true,
+  "E2_full120_audits_equal": true,
+  "E2_formal_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+  "E2_formal_source_unchanged": true,
+  "E2_R3": "PENDING_SEPARATE_INDEPENDENT_REVIEW",
+  "E2_E3_pooled": false,
+  "Canvas_submitted": false,
+  "PR_merged": false,
+  "next_action": "Independent reconciliation of original0001 and CPU audit repair; preserve same-ID record, do not resume any native TEST tonight or use CPU candidate under R017",
+  "result_review_self_signed": false
+}
