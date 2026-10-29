@@ -1,0 +1,31 @@
+{
+  "status": "OWNER_GPU1_PERMISSION_GRANTED_MACHINE_BINDING_PENDING_SCIENCE_AND_CODE_GRANTS",
+  "owner_statement": "继续按照E3推进任务，可以使用corelab 4080s gpu1",
+  "owner_date_sgt": "2026-10-30",
+  "owner_original": {
+    "label": "LOCAL_OPERATOR/owner-GPU1-permission.private.json",
+    "bytes": 452,
+    "sha256": "eebff1f5c04d4d7d9699b8467464713a70fae5aeec175cdb2952d58bb5224855"
+  },
+  "SSH_exit": 0,
+  "physical_GPU_index": 1,
+  "current_free_MiB": 15899,
+  "current_total_MiB": 16376,
+  "current_UUID": "VERIFIED_PRIVATE_ORIGINAL",
+  "other_compute_processes_observed": 0,
+  "current_free_sample_not_future_capacity_guarantee": true,
+  "new_model_TEST_calls": 0,
+  "new_scene_constructors": 0,
+  "E3_TEST_roots": {
+    "E3A_TEST": false,
+    "E3B_TEST": false
+  },
+  "formal_new_allocation_created": false,
+  "reason": "No signed Gate P/new exact executable E3_TEST_AUTHORIZED yet; cannot bind unknown grant commit",
+  "R015_execution_checkout_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
+  "R015_execution_checkout_clean": true,
+  "old_scene_result_hashes": {
+    "R014": "7cc204d1c0eed29788c8bd73ba6f5e9248cef2945d8c4d6ed6822f1835c353f7",
+    "R015": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a"
+  }
+}

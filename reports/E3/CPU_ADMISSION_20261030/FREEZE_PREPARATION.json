@@ -1,0 +1,47 @@
+{
+  "status": "CPU_PREPARATION_ONLY_REQUIRES_INDEPENDENT_GATE_P_BEFORE_FORMAL_FREEZE",
+  "candidate_code_head": "1a032d4fe0cfb6b2e17373c589d51bf61e456f02",
+  "GateP_review_input": {
+    "PR": 35,
+    "head": "5c959b54c0e7f3c1253b0754c895227341a7f2e0"
+  },
+  "selected_variant": "UNDECIDED_FULL160_PROPOSED_ONLY",
+  "current_protocol_lock_status": "PROPOSED_FOR_INDEPENDENT_FREEZE",
+  "current_runtime_scene_binding_verified_flag": false,
+  "current_real_TEST_authorized": false,
+  "unmodified_proposal_files": [
+    "configs/e3_cells.proposed.json",
+    "configs/e3_splits.proposed.json",
+    "configs/e3_protocol_lock.proposed.json",
+    "configs/e3_sources.proposed.json",
+    "configs/e3_run_config.proposed.json",
+    "configs/runtime_lock_E2.json"
+  ],
+  "original_source_lock_entries": 129,
+  "known_hash_updates_required_at_GateC": [
+    {
+      "path": "e3/server_launcher.py",
+      "proposed_lock_sha256": "11f81d98dc4325766cfad34ff8affefd66e197c5fe69c979cbbd4cebac8613fe",
+      "candidate_sha256": "ae3748e9e8e1200232cb28ad2bf91c1de24321c2e274d5d818107f375aa0b5f6"
+    }
+  ],
+  "new_test_to_add_to_future_source_lock": {
+    "path": "tests/test_e3_server_launcher.py",
+    "sha256": "157cce95ca7df5104318ecd4abe8f73ff64bd428a25370046ae09d6e06cf40a1"
+  },
+  "scene_binding_evidence": {
+    "report_head": "5c959b54c0e7f3c1253b0754c895227341a7f2e0",
+    "scene_result_path": "reports/E3/R015/SCENE_RESULT.json",
+    "scene_result_sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+    "real_init_TaskSpecs": 36
+  },
+  "ordered_remaining_gates": [
+    "Independent Gate P signed scientific decision at full report Head",
+    "CPU-only implement approved frozen state/scene binding/hash locks including new test, form NEW full runtime Head",
+    "Normal/-O and frozen E2 read-only checks, independent Gate C new exact Head E3_TEST_AUTHORIZED",
+    "Bind already owner-granted GPU1 consent into a fresh actual UUID/EGL/resource allocation for new Head/grant; realtime weights/environment/storage/two-site preflight",
+    "Only then one new server and fixed first A4/B6 checkpoints"
+  ],
+  "current_candidate_fails_formal_TEST_admission": true,
+  "warning": "Do not set frozen flags or refresh hashes in science configs before independent Gate P; this report is not an authorized native candidate."
+}

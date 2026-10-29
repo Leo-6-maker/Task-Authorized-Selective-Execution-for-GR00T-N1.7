@@ -1,0 +1,195 @@
+{
+  "status": "ALL_ATTEMPTS_RETAINED_NO_FAILURE_ERASURE",
+  "candidate_code_head": "1a032d4fe0cfb6b2e17373c589d51bf61e456f02",
+  "tests": {
+    "before-targeted": {
+      "tests": 7,
+      "actual_exit": 1,
+      "receipt": {
+        "label": "LOCAL_OPERATOR/before-targeted.exit.json",
+        "bytes": 146,
+        "sha256": "d7944d1fb57181db577a09faa4513d87a4f1e905256f3e073e9efb3c81615994"
+      },
+      "stdout": {
+        "label": "LOCAL_OPERATOR/before-targeted.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "label": "LOCAL_OPERATOR/before-targeted.stderr.private.txt",
+        "bytes": 2608,
+        "sha256": "68daa5c76becfa3db966c7be7f4d2c163151b17a5b61743e7f2bd14efb23d80b"
+      },
+      "source_state": "EXPLORATORY_CPU_REPRODUCTION: original PR35 launcher + newly added untracked integration test; not a clean committed runtime",
+      "launcher_source_sha256": "11f81d98dc4325766cfad34ff8affefd66e197c5fe69c979cbbd4cebac8613fe",
+      "test_source_sha256": "157cce95ca7df5104318ecd4abe8f73ff64bd428a25370046ae09d6e06cf40a1"
+    },
+    "after-targeted": {
+      "tests": 7,
+      "actual_exit": 0,
+      "receipt": {
+        "label": "LOCAL_OPERATOR/after-targeted.exit.json",
+        "bytes": 146,
+        "sha256": "723f3ce7fa210d510fd16fa3e0cb73e2cf2263a50f73072bf8a07f9d98d5c51f"
+      },
+      "stdout": {
+        "label": "LOCAL_OPERATOR/after-targeted.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "label": "LOCAL_OPERATOR/after-targeted.stderr.private.txt",
+        "bytes": 1378,
+        "sha256": "b753df173a63cef63610e60e93f69f69f1aa7d8b4d6cdafc9ed42a68ff233877"
+      },
+      "source_state": "EXPLORATORY_CPU_CHECK: corrected launcher + new test before commit; full suites afterward run clean snapshot1a032d4"
+    },
+    "local-normal": {
+      "tests": 194,
+      "actual_exit": 0,
+      "receipt": {
+        "label": "LOCAL_OPERATOR/local-normal.exit.json",
+        "bytes": 146,
+        "sha256": "a6fb9e3249868122d0e8eab2431c219d541347a5fb43567388fd5c6ffa77ef30"
+      },
+      "stdout": {
+        "label": "LOCAL_OPERATOR/local-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "label": "LOCAL_OPERATOR/local-normal.stderr.private.txt",
+        "bytes": 28948,
+        "sha256": "52596a8f0583c8a4624f8c52247d3ca4c1acd67ab6453dd69c01be476e9d18de"
+      }
+    },
+    "local-optimized": {
+      "tests": 194,
+      "actual_exit": 0,
+      "receipt": {
+        "label": "LOCAL_OPERATOR/local-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "ef9122fb99f87d44a6b9c8af1cf8606805169632cddbf38f6b7f2c3e27354377"
+      },
+      "stdout": {
+        "label": "LOCAL_OPERATOR/local-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "label": "LOCAL_OPERATOR/local-optimized.stderr.private.txt",
+        "bytes": 28948,
+        "sha256": "6b2849872e258d5712283ea74951743674dd2019b6d9af290b26ae50ec0b0a57"
+      }
+    },
+    "Corelab-normal": {
+      "tests": 194,
+      "actual_exit": 1,
+      "receipt": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal.exit.json",
+        "bytes": 146,
+        "sha256": "6d98b3aff89f3c5a59369f6cb82a62e0ce4beffaf70936d9c27d9874a793d0ef"
+      },
+      "stdout": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal.stderr.private.txt",
+        "bytes": 30054,
+        "sha256": "33c24afd8228ccc6d6b103a5da206dc82b27ad578ff243b067bedfa07389cecd"
+      }
+    },
+    "Corelab-normal-repeat": {
+      "tests": 194,
+      "actual_exit": 0,
+      "receipt": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal-repeat.exit.json",
+        "bytes": 146,
+        "sha256": "49a9b760fbe3e695e141725c3d3f1555e329445cfaa2981a7bd1a9cd1be598ab"
+      },
+      "stdout": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal-repeat.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-normal-repeat.stderr.private.txt",
+        "bytes": 28977,
+        "sha256": "ab32c6816d1348d363185aa2316b3df8ff47a2a6402bc12f1caf1829817e091d"
+      }
+    },
+    "Corelab-optimized-repeat": {
+      "tests": 194,
+      "actual_exit": 0,
+      "receipt": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-optimized-repeat.exit.json",
+        "bytes": 146,
+        "sha256": "e584d12de436bb79f1ae3ec2980c1bfbf3cc28ba8c0d3c71805043c2c98a0f6f"
+      },
+      "stdout": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-optimized-repeat.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue36-e3-CPU-01/Corelab-optimized-repeat.stderr.private.txt",
+        "bytes": 28977,
+        "sha256": "d14df3136b9f559f2a31bb0d6508b7568f7bf8938b9863dae42854d91bba0970"
+      }
+    },
+    "E2-normal": {
+      "tests": null,
+      "actual_exit": 0,
+      "receipt": {
+        "path": "operator/issue36-e3-CPU-01/E2-normal.exit.json",
+        "bytes": 146,
+        "sha256": "564f6339612d73749eecd254c659f0ac4423e42647418d3a1f026a3946b381f7"
+      },
+      "stdout": {
+        "path": "operator/issue36-e3-CPU-01/E2-normal.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue36-e3-CPU-01/E2-normal.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "E2-optimized": {
+      "tests": null,
+      "actual_exit": 0,
+      "receipt": {
+        "path": "operator/issue36-e3-CPU-01/E2-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "6382996fdbe045668dc5dd7e217978c5e136c176a7d0474f1d993686546ecc2f"
+      },
+      "stdout": {
+        "path": "operator/issue36-e3-CPU-01/E2-optimized.stdout.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "operator/issue36-e3-CPU-01/E2-optimized.stderr.private.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "initial_Corelab_failure": "EXISTING_CPU_PROXY_STARTUP_DID_NOT_READY_WITHIN8s_EXACT_CAUSE_UNPROVEN",
+  "bounded_recheck_context": {
+    "reason": "Preserve initial normal194 error: CPU proxy failed8s startup; exact scheduling cause unproven. Bounded CPU-only recheck after E2 audit completion, using declared runtime thread caps. No test deadlines/runtime/source modified.",
+    "thread_caps": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "NUMBA_NUM_THREADS": "2"
+    },
+    "original_first_normal_exit": 1,
+    "maximum_additional_full_suite_runs": 2
+  },
+  "deadlines_and_error_classification_unchanged": true,
+  "new_model_TEST_calls": 0
+}
