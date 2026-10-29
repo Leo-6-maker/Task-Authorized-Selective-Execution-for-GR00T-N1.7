@@ -25,7 +25,7 @@ def serve(workspace,repo,review_commit,review_path,allocation_record,server_pyth
     with socket.socket() as sock:sock.bind(('127.0.0.1',port))
     folder=workspace/'runs'/session
     admission=dict(authorization=identity,preflight=verified,port=port,
-        gpu_uuid=selected[1].strip(),egl_device_id=str(gpu_index),allocation_sha256=sha256(allocation_record))
+        gpu_uuid=selected[1].strip(),egl_device_id=str(gpu_index),allocation_sha256=sha(allocation_record))
     up=workspace/'upstream/Isaac-GR00T'
     env=os.environ.copy();env.update(HOME=str(workspace/'runtime/home'),HF_HOME=str(workspace/'cache/huggingface'),
         LIBERO_CONFIG_PATH=str(workspace/'runtime/libero-config'),

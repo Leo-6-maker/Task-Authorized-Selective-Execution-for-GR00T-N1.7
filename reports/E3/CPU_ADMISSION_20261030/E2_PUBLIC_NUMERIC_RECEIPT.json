@@ -1,0 +1,13 @@
+{
+  "actual_exit": 0,
+  "helper_sha256": "0deb1af3506371dfea723aeddb325a04f942ba3773e3fca1fbac72ad2badbe4c",
+  "exit_receipt": {
+    "label": "LOCAL_OPERATOR/E2-public-numeric.exit.json",
+    "bytes": 146,
+    "sha256": "b4f28c2b29faf92b1367c06ca601a25097cf804c88edc45a09c245deb71760ba"
+  },
+  "source_ledger_path": "PR30@3484f3de388df63ea1a758dfd6ff4cfa545b2333:reports/E2/R013/final120/review/attempt_ledger_120.json",
+  "source_ledger_sha256": "bfae5bdb77935d87cc50fe26da98d0b877f9dbb4cdcd9444c5582887a4b591cf",
+  "bootstrap_not_recomputed": true,
+  "independent_R3_not_signed": true
+}

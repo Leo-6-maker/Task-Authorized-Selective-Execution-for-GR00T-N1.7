@@ -1,17 +1,17 @@
 {
-  "status": "R015_SCENE_IDENTITY9_INIT36_COMPLETE_READY_FOR_INDEPENDENT_GATE_P_C",
+  "status": "ISSUE36_CPU_LAUNCHER_REPAIR_GATE_P_PENDING_NO_MODEL_TEST_AUTHORITY",
   "execution_head": "9599f2e1b8d8ad4a51cb79cd7274f3daff493d42",
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 14269,
-      "sha256": "6d346e7f214c31aa42be309939363096137ae62d4345a3656d84a791add59468"
+      "bytes": 15262,
+      "sha256": "0410fdd09d1c02e20fa924255fe9a073e827e59ce2524d159d0b1f93d5e50927"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 2370,
-      "sha256": "c9889455cc5a1ba451a2e0cf7c7e436ce81a8cd928b69af81a8ff644d2fe9f12"
+      "bytes": 2433,
+      "sha256": "e2746f2f3d69ed6702eb7a05e25e19e651a6d10fcdde96566d98953a0e5c98c7"
     },
     {
       "path": "configs/e3_cells.proposed.json",
@@ -40,13 +40,13 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 10534,
-      "sha256": "2eeea907a9ad0caa57b0c5bfa212b68dc83f54445eec171a96b78a7b6b7011cb"
+      "bytes": 11527,
+      "sha256": "5379753d06a719fbd32eb77e366e8750df08e574cdbeef7aa2b03cf79ece3c9a"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 20624,
-      "sha256": "cda93456182105ba82fbdc0a47fd00ffddc07e2a4d3de0c40d380b254095f392"
+      "bytes": 21617,
+      "sha256": "2c3a7db20d3636fadcc29b3a041f2816b74f7ece0ab2f484f8a013e16bb15498"
     },
     {
       "path": "docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md",
@@ -77,6 +77,11 @@
       "path": "docs/reviews/R015-E3-SCENE-REENTRY-AUTHORIZED.json",
       "bytes": 5637,
       "sha256": "16b87ed591a599880b6c0b96c2bac68614df2b25b4c15b787bb909a56f4a9dfe"
+    },
+    {
+      "path": "docs/work_packages/DUAL-TRACK-E2-R3-E3-GATE-PC-TO-SUBMISSION-2026-10-28.md",
+      "bytes": 22152,
+      "sha256": "13e693ac385c4f64c5a9349c39ea08abb3001afbec760fbb0d7b619ffafdaa05"
     },
     {
       "path": "docs/work_packages/E3-EXPANSION-MASTER-PLAN-2026-10-26.md",
@@ -175,8 +180,8 @@
     },
     {
       "path": "e3/server_launcher.py",
-      "bytes": 3624,
-      "sha256": "11f81d98dc4325766cfad34ff8affefd66e197c5fe69c979cbbd4cebac8613fe"
+      "bytes": 3621,
+      "sha256": "ae3748e9e8e1200232cb28ad2bf91c1de24321c2e274d5d818107f375aa0b5f6"
     },
     {
       "path": "e3/statistics.py",
@@ -197,6 +202,61 @@
       "path": "reports/E3/CORELAB_CPU_TEST_PROOF.json",
       "bytes": 698,
       "sha256": "042a8bb144438651fcd9ca0f0b32bd1eb98a83a0328fb2a9ce2bb61e8a943c68"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/BACKUP_VERIFICATION.json",
+      "bytes": 444,
+      "sha256": "cc749d3f4f0b7f813692d787c4f8cc8d45acaae86a53d90e7ffd2802ca6d6260"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/CPU_DELTA_HANDOFF.md",
+      "bytes": 5848,
+      "sha256": "0eef88c7121ed8063f2d11df472b1e076aec85442321e91c781e52eda788adc7"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/CPU_TEST_RECEIPTS.json",
+      "bytes": 7602,
+      "sha256": "9b48db54db6e0a1aec1aba4f96882403da2922c1c12b4e7cc798b3df03420cc8"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/E2_PRESERVATION.json",
+      "bytes": 1536,
+      "sha256": "f01911e6d6f8fd67497e08552150c29bdfe05d67275e34dced540c49f78e0c00"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/E2_PUBLIC_NUMERIC.json",
+      "bytes": 2312,
+      "sha256": "6c9984c5df125dde3adc6dfc4d6fabccc64e64577adb00241f2c416f8449d20c"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/E2_PUBLIC_NUMERIC_RECEIPT.json",
+      "bytes": 589,
+      "sha256": "8e44fe553574f75d7500886a4a5ba18ca5b724eb9e27e542bdd99c7b6aaeaf89"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/FREEZE_PREPARATION.json",
+      "bytes": 2333,
+      "sha256": "0cb2f4b0b5fd9b18c95e2d967e832770d4e09804d6630f7f5e14a2f13825f117"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/ORIGINAL_RECEIPT_INDEX.json",
+      "bytes": 7709,
+      "sha256": "3bad7406211bd91087372a0d4536468edae99aa01d17bab81e5edecff13e2adf"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/OWNER_RESOURCE_STATUS.json",
+      "bytes": 1255,
+      "sha256": "67aba6cdde20bcbf664d6698ef7dc59779d0de1c73cedaed6bb15b696fefb393"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/REPRODUCE_E2_SUMMARY.py",
+      "bytes": 4113,
+      "sha256": "0deb1af3506371dfea723aeddb325a04f942ba3773e3fca1fbac72ad2badbe4c"
+    },
+    {
+      "path": "reports/E3/CPU_ADMISSION_20261030/STATUS.json",
+      "bytes": 1683,
+      "sha256": "009c5884ddae39bc8e891be26f925b4e8d3ebdb368146c4168b274b3ae9b1d34"
     },
     {
       "path": "reports/E3/CPU_ENGINEERING_EVENTS.json",
@@ -250,8 +310,8 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 4798,
-      "sha256": "cbd2c00843a221f8a683d3e914b84c286d66bb0cd85ce8e7c6f927ba36b9220f"
+      "bytes": 5632,
+      "sha256": "eb7f08672fce7aa6eb5a9ae1bfaf8cea7f89bc9501442b197c09c293bb807736"
     },
     {
       "path": "reports/E3/PLAN_BASELINE.md",
@@ -487,6 +547,12 @@
       "path": "tests/test_e3_cpu.py",
       "bytes": 18438,
       "sha256": "218c48147ba31bb09a0d2767f86223da2de538e3ec14b4456f8f6563aecfec6c"
+    },
+    {
+      "path": "tests/test_e3_server_launcher.py",
+      "bytes": 6131,
+      "sha256": "157cce95ca7df5104318ecd4abe8f73ff64bd428a25370046ae09d6e06cf40a1"
     }
-  ]
+  ],
+  "CPU_candidate_code_head": "1a032d4fe0cfb6b2e17373c589d51bf61e456f02"
 }

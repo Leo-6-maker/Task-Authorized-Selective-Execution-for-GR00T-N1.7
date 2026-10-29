@@ -1,16 +1,15 @@
-# 当前入口：R015 场景身份检查完成（2026-10-28 SGT）
+# 当前入口：Issue36 CPU 启动修复与独立审核（2026-10-30 SGT）
 
-**先读 [R015 集中审核交接](reports/E3/R015/REVIEW_HANDOFF.md)、[机器状态](reports/E3/R015/STATUS.json) 和 [真实原件结果](reports/E3/R015/SCENE_RESULT.json)。**
+先读 [本轮 CPU 修复交接](reports/E3/CPU_ADMISSION_20261030/CPU_DELTA_HANDOFF.md)、[机器状态](reports/E3/CPU_ADMISSION_20261030/STATUS.json)、[冻结准备清单](reports/E3/CPU_ADMISSION_20261030/FREEZE_PREPARATION.json) 和 [最新双线工作包](docs/work_packages/DUAL-TRACK-E2-R3-E3-GATE-PC-TO-SUBMISSION-2026-10-28.md)。
 
-- 新 R015 单次探针真实完成：**9/9 环境、36/36 初始化、36 份编译 TaskSpec；child/operator 退出均 0**。9 个关闭路径完成，进程释放检查通过。
-- R014 首次 EOF 失败永久保留；R015 独立的一次额外额度也已消耗，不能再次运行。实际执行仍为干净 **9599f2e1b8d8ad4a51cb79cd7274f3daff493d42**，报告分支的新 Head 不可代替执行版本。
-- 本轮全部 106 XML、9 任务/36 初始化、现有配置五路径、固定双环境和新 R015 绑定 GPU1 记录已验证。配置子进程普通/-O 各4/4、完整回归各187/187，实际退出均0。
-- E2 全部18070原件在运行前后验哈希未变，120格普通/-O只读审计与原结果一致。新70项场景/CPU原件已两地整包和逐成员验哈希；见 [备份证明](reports/E3/R015/BACKUP_VERIFICATION.json)。
+负责人已于10/30再次授权Corelab 4080s GPU1；目前独立Gate P及新E3 TEST grant仍未签发。资源许可已保留，不能据此启动模型/场景/Shadow/TEST。本轮在独立CPU分支修复E3 launcher构造授权收据时的未定义哈希调用，保留native独占创建与所有科学/资源守卫，新增7项集成负测试。没有改动科学提案/阈值/初态/seed。
 
-**下一步：独立 GPT 的 Gate P 科学协议冻结，以及后续 Gate C 新完整执行 Head/新 E3_TEST_AUTHORIZED 审核。** 当前 E3 仍0/160、方案未冻结、模型/Shadow/正式TEST未授权。场景检查不证明完整reset/settling、Shadow预测、动作执行或任务成功。
+本机普通/-O各194/194实际0；Corelab首轮normal194实际1（既有CPU proxy未在8s启动，原因未定，收据保留），有界补验normal/-O各194/194实际0，没有放宽测试超时或清理错误分类。E2普通/-O完整120审计与原输出一致，全18070原件重新哈希未变；新增本机数值复算保留117完整+3未知和全部120分母。
 
-既有内容位置与换主机办法见 [完整主机交接](docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md)；其中旧网络/等待重入状态已由本页取代。实际环境与原件 private runtime map 在 R015 原件归档内，不上传公开仓库。旧 [R014 故障包](reports/E3/R014/resume/RECOVERY_REVIEW_REQUEST.md) 保留。
+**PR35@5c959b54c0e7f3c1253b0754c895227341a7f2e0仍是Gate P科学输入，PR30@3484f3de388df63ea1a758dfd6ff4cfa545b2333仍是E2 R3独立审核输入。两个Head保持不变。** 本分支CPU修复候选不替代上述输入，也不作为已冻结执行版本。源码锁原有129项里launcher哈希待Gate P批准后更新，并须将新测试纳入最终锁；现在的提案仍主动阻止TEST。
 
-E2 完整结果：[PR #30](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/pull/30) / codex/28-r013-test @3484f3de388df63ea1a758dfd6ff4cfa545b2333；课程最终v3：[PR #22](https://github.com/Leo-6-maker/Task-Authorized-Selective-Execution-for-GR00T-N1.7/pull/22) / codex/20-course-draft @73ddec9790c8540ad2b1faec6c989c7172cc5078。必须分别fetch，main不含全部实现/成果。E2独立R3仍待审核，课程未提交。
+唯一下一关：独立GPT科学Gate P决定，以及同等优先E2 R3决定。Gate P之后才实施正式CPU冻结、刷新锁、新完整Head和Gate C签署；新E3_TEST_AUTHORIZED及实时GPU1/权重/环境/双备份准入通过后才开始固定A4/B6。R014/R015次数已耗尽，不再做场景探针。
 
-**2026-11-06 23:59 SGT 课程交付优先，11月6日不做实验。** 不自签、不自动merge、不重跑历史失败、不改变科学协议或下载模型。
+历史R015真实9环境/36初始化/36TaskSpec及原件在 [R015交接](reports/E3/R015/REVIEW_HANDOFF.md)；它没有验证完整reset/settling、模型、Shadow或闭环有效性。E3始终0/160。
+
+课程E2-only最终v3与源码仍在PR22@73ddec9790c8540ad2b1faec6c989c7172cc5078。11/06 23:59SGT交付优先，11/06不做实验。当前10/30原计划启动目标尚未满足，不伪报按期完成；若需缩减方案须在任何TEST前另经负责人/独立审核，不自行截断。课程仍未提交，不自动merge。

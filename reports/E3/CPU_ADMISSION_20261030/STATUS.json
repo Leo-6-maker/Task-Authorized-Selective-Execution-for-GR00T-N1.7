@@ -1,0 +1,48 @@
+{
+  "status": "CPU_REPAIR_READY_FOR_REVIEW_GATE_P_PENDING",
+  "date_sgt": "2026-10-30",
+  "master_issue": 36,
+  "main_plan_commit": "f10035f",
+  "GateP_review_input_PR35_head": "5c959b54c0e7f3c1253b0754c895227341a7f2e0",
+  "candidate_code_head": "1a032d4fe0cfb6b2e17373c589d51bf61e456f02",
+  "E2_R3_PR30_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "GateP": "PENDING_INDEPENDENT_GPT",
+  "GateC": "PENDING_AFTER_GATE_P",
+  "TEST_grant": null,
+  "owner_GPU1_consent": "GRANTED20261030_CURRENT_GRANT_BINDING_PENDING",
+  "E3_model_calls_this_turn": 0,
+  "E3_scene_constructors_this_turn": 0,
+  "E3_Shadow_predictions_this_turn": 0,
+  "E3_TEST_consumed": {
+    "A": 0,
+    "B": 0
+  },
+  "E3_planned_PROPOSAL": {
+    "A": 112,
+    "B": 48
+  },
+  "protocol_frozen": false,
+  "TEST_authorized": false,
+  "CPU_code_fix": "Use already imported sha helper for allocation digest in E3 launcher",
+  "CPU_final_checks": {
+    "local_normal194": 0,
+    "local_optimized194": 0,
+    "Corelab_normal194_repeat": 0,
+    "Corelab_optimized194_repeat": 0
+  },
+  "CPU_failures_preserved": {
+    "before_fix_targeted7_NameError": 1,
+    "initial_Corelab_normal194_CPU_proxy_startup": 1
+  },
+  "E2_audit_normal_optimized_exit": [
+    0,
+    0
+  ],
+  "E2_original18070_unchanged": true,
+  "R014_R015_preserved": true,
+  "backup_independent_locations": 2,
+  "next_action": "Independent Gate P on PR35 plus equal-priority E2 R3 on PR30. After Gate P, CPU-only formal freeze/hash refresh/new exact Head, then independent Gate C E3_TEST_AUTHORIZED. No new runtime now.",
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00",
+  "no_experiments_on": "2026-11-06",
+  "course_submission": "NOT_SUBMITTED"
+}
