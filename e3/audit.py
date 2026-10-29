@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from .authorization import git,validate_grant
 from .discovery import require,sha
-from tase.e2_evidence import verify_manifest
+from .audit_manifest import verify_complete_manifest
 from tase.test_history import verify_lifecycle
 
 def original(workspace,repo,folder,reservation):
@@ -24,8 +24,7 @@ def original(workspace,repo,folder,reservation):
     child=json.loads((workspace/'runs'/(folder.name+'.exit.json')).read_text());require(child.get('exit_code')==0,'complete E3 lacks actual native exit0')
     claim=json.loads((folder/'runner_claim.json').read_text());require(claim['reservation_sha256']==sha(folder/'reservation.json') and claim['authorization']==auth,'E3 claim does not authenticate original reservation')
     required=['reservation.json','runner_claim.json','result.json','task_spec.json','benchmark_init.npy','settled_state.npy','scene.xml','reset_parity.json','horizon.json','gate_decisions.jsonl','snapshots.jsonl','actual_requests.jsonl','control_trace.npz','rollout.mp4','supervisor_start.json']
-    require(all((folder/n).is_file() for n in required),'complete E3 missing native originals')
-    records=json.loads((folder/'artifact_manifest.json').read_text());verify_manifest(workspace,records,{str((folder/n).relative_to(workspace)) for n in required},folder.name)
+    verify_complete_manifest(workspace,folder,required)
     require(sha(folder/'benchmark_init.npy')==cell['init_hash'],'historical heldout bytes changed')
     from .scene import validate
     from tase.task_spec import TaskSpec
