@@ -1,65 +1,62 @@
 {
-  "status": "READY_FOR_R018_CPU_REFREEZE_REVIEW",
-  "authority_commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
-  "authority_path": "docs/reviews/R018-E3-INCIDENT-CPU-REVIEW.json",
-  "authority_disposition": "CHANGES_REQUIRED_CPU_FIX_AND_CONDITIONAL_READONLY_RECONCILIATION",
-  "CPU_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
-  "native_execution_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
-  "report_head": "READ_THIS_COMMIT_GIT_HEAD; source/config/test parity with CPU snapshot must be verified",
-  "runtime_execution_authorized": false,
-  "nightly_stop_latched": true,
-  "reservation_cutoff_sgt": "2026-10-30T07:30:00+08:00",
-  "cutoff_reached": true,
-  "planned": {
-    "E3A": 112,
-    "E3B": 48
-  },
-  "reserved": {
-    "E3A": 1,
-    "E3B": 0
-  },
-  "unstarted": {
-    "E3A": 111,
-    "E3B": 48
-  },
-  "new_R018_versioned_eligible": {
-    "E3A": 1,
-    "E3B": 0
-  },
-  "unstarted_unknown": 159,
-  "original_0001_status": "SUCCESS",
-  "original_0001_execution_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
-  "original_0001_grant_commit": "ca979be10c00389ed57b77967c232d7a84132406",
-  "historical_frozen_audit_actual_exits": [
+  "status": "CPU_EXECUTION_PREPARATION_COMPLETE_AWAITING_INDEPENDENT_EXECUTION_DECISION",
+  "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "CPU_approval": "R019_APPROVED_NO_TEST",
+  "CPU_review_commit": "266ce04507a6a430fade03f1dac4ce0f568aca22",
+  "B1": "CLOSED_DO_NOT_REWORK",
+  "science_unchanged": true,
+  "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "report_branch_is_not_native_runtime": true,
+  "original0001_preserved_eligible": true,
+  "old_frozen_audit_exits": [
     1,
     1
   ],
-  "original_0001_bytes_unchanged": true,
-  "analysis_id": "E3-R018-RECONCILED-v1",
-  "reconciliation_record": "reports/E3/R018/RECONCILIATION_0001_v1.json",
-  "original_sealed_files": 74,
-  "original_full_custody_files": 78,
-  "full_CPU_cases_per_mode": 231,
-  "local_Corelab_normal_optimized_exits": [
+  "reserved": 1,
+  "remaining_unknown": 159,
+  "first_future_id": "e3a-test-0002",
+  "first_A4_contains": [
+    "e3a-test-0001",
+    "e3a-test-0002",
+    "e3a-test-0003",
+    "e3a-test-0004"
+  ],
+  "planned_checkpoints": {
+    "E3A": 28,
+    "E3B": 8
+  },
+  "actual_checkpoints_completed": 0,
+  "planner17_local_Corelab_normal_optimized_exits": [
     0,
     0,
     0,
     0
   ],
-  "stale_or_nonexecution_grant_admission_denials": 20,
-  "complete_A4_checkpoint": false,
-  "G_A0_Shadow_episodes": 0,
-  "conditional_prevention": "N/A",
+  "current_original_audit_normal_optimized_exits": [
+    0,
+    0
+  ],
+  "weights_files_rehashed": 17,
+  "XML_rehashed": 106,
+  "Python_roles_metadata_verified": {
+    "server": 138,
+    "sim": 159
+  },
+  "owner_GPU1_consent": "RENEWED_CURRENT_TURN",
+  "resource_sample_is_not_future_allocation": true,
+  "new_execution_grant": null,
+  "new_execution_window": null,
+  "expired_R017_window_not_reused": true,
+  "postload_resource_guard_preserved": true,
   "new_GPU_model_sim_Shadow_calls": 0,
   "new_TEST_reservations": 0,
-  "owned_native_processes": [],
-  "originals_backed_up_locations": 2,
+  "night_stop_latched": true,
+  "conditional_prevention": "N/A",
   "E2_formal_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
-  "E2_originals_freshly_rehashed_unchanged": 18070,
-  "E2_R3": "PENDING_SEPARATE_INDEPENDENT_REVIEW",
   "E2_E3_pooled": false,
-  "result_review_self_signed": false,
+  "E2_R3": "SEPARATE_PENDING",
+  "E2_files_not_modified": true,
   "PR_merged": false,
   "Canvas_submitted": false,
-  "next_action": "Independent consolidated review of the complete new refrozen Head and same-ID reconciliation. No native continuation under R018; only a later exact-Head grant plus fresh resource binding can permit untouched0002, with original0001+0002–0004 as first A4 checkpoint."
+  "next_action": "Independent execution admission for unchanged1264910 and current141-source lock, including explicit new time window and historical0001+firstA4. Fresh GPU1 allocation and postload9GiB must independently pass; no new B1/scientific changes needed."
 }

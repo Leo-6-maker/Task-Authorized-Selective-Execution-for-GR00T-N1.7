@@ -1,0 +1,118 @@
+{
+  "review_id": "R019",
+  "review_date_sgt": "2026-10-30",
+  "reviewer_role": "GPT independent read-only reviewer of PR #41",
+  "attestation_type": "Version-bound independent workflow decision; no cryptographic signing, hardware certification, or independent private-archive custody access",
+  "reviewed_pr": 41,
+  "reviewed_complete_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "reviewed_CPU_tested_clean_snapshot": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+  "original_native_execution_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "original_native_grant_commit": "ca979be10c00389ed57b77967c232d7a84132406",
+  "prior_incident_review_commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+  "protocol_id": "E3-001-v1.0",
+  "disposition": "APPROVED_CPU_REFREEZE_AND_0001_RECONCILIATION_NO_TEST",
+  "B1_status": "CLOSED",
+  "B1_review": {
+    "history_fixture": "Names and bytes both read from historical859e40 lock and objects; no current lock/historical file mixing",
+    "actual_refrozen_positive": "New worktree verifies genuine current lock and real Git history without historical() fixture patch",
+    "negatives": "Both newly locked audit/test paths missing, modified, omitted from lock; unlocked added Python; science/native config drift",
+    "strengthened_coverage": "source_inventory(repo) lists actual code/tests/config independent from source-lock keys, refuses symlink files and missing lock coverage"
+  },
+  "source_lock": {
+    "sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+    "entry_count": 141,
+    "independently_enumerated_git_tree_active_source_paths": 136,
+    "additional_locked_protocol_and_R015_evidence_paths": 5,
+    "missing_active_paths": 0,
+    "directory_trees_truncated": false,
+    "independently_rehashed_exact_source_files": 11,
+    "independently_rehashed_critical_source_file_mismatches": 0,
+    "lock_self_sha256_independently_recomputed_matches": true,
+    "independent_scope": "The remaining 130 file SHA256 claims are source-locked in the executor's CPU receipts; not independently byte-rehashed here"
+  },
+  "code_and_reports": {
+    "snapshot_to_final_head": "GitHub compare showed 24 changed files confined to reports and navigation; zero changes in e3/, tase/, scripts/, tests/, configs/, or frozen protocol",
+    "R018_approved_audit_code_bytes_retained": true,
+    "scientific_config_cell_seed_k_oracle_action_simulator_changes": false
+  },
+  "CPU_verification": {
+    "local_normal_231": "Published test-log 231 tests OK; executor actual exit0",
+    "local_optimized_231": "Published test-log 231 tests OK; executor actual exit0",
+    "Corelab_normal_231": "Published test-log 231 tests OK; executor actual exit0",
+    "Corelab_optimized_231": "Published test-log 231 tests OK; executor actual exit0",
+    "four_local_remote_exits_reported": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "independently_examined_all_four_public_test_logs": true,
+    "independently_reran_complete_231_suite": false,
+    "stale_R017_or_nonexecution_R018_denial_checks": "20 recorded expected denials across five native entry paths, normal/-O, before new reservation or model import",
+    "test_harness_failures": "Earlier nonzero CPU operator/helper/transport failures retained separately and not substituted for successful scientific tests"
+  },
+  "reconciliation_0001": {
+    "disposition": "ACCEPT_VERSIONED_ELIGIBLE_SUCCESS_FROM_EXISTING_0001_READ_ONLY_EVIDENCE",
+    "acquisition_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+    "original_grant_commit": "ca979be10c00389ed57b77967c232d7a84132406",
+    "original_status": "SUCCESS",
+    "official_success": true,
+    "native_runner_exit": 0,
+    "supervisor_exit": 0,
+    "original_control_steps": 121,
+    "settling_steps": 10,
+    "original_policy_requests": 16,
+    "original_74_manifest_rows_unique_and_source_run_matched": true,
+    "original_mandatory_path_subset": 15,
+    "original_78_file_custody": "Executor-attested private originals; reviewer independently inspected public original result, 74-row manifest, versioned reconciliation script, metadata and receipts, not all private bytes",
+    "old_frozen_audit_exits": [
+      1,
+      1
+    ],
+    "old_frozen_audit_pass": false,
+    "repaired_audit_normal_optimized_exits": [
+      0,
+      0
+    ],
+    "original_run_replayed": false,
+    "original_files_rewritten": false,
+    "basis": "R018 authorized conditional CPU-only reconciliation; published versioned record preserves frozen historical failure and separate raw success; new analysis alone may mark 0001 eligible",
+    "independent_private_original_rehash": false
+  },
+  "planned_160_status": {
+    "E3A_total": 112,
+    "E3B_total": 48,
+    "consumed": 1,
+    "eligible": 1,
+    "unstarted": 159,
+    "unstarted_are_unknown_not_safe": true,
+    "G_A0_Shadow_runs": 0,
+    "first_E3A_four_cell_checkpoint_complete": false,
+    "efficacy_or_generalization_claim_allowed": false,
+    "conditional_prevention": "N/A",
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 641500
+  },
+  "E2_preservation": {
+    "original_files_reported_unchanged": 18070,
+    "original_manifest_sha256": "9e4ce4d233e1d2ff6fc3d2154a099cb1721d4f9140a01463ccb184851277d603",
+    "independent_private_rehash": false,
+    "course_PR38_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+    "R3_review": "PENDING_SEPARATE",
+    "E2_E3_pooled": false
+  },
+  "authorization_boundary": {
+    "CPU_refreeze_approved": true,
+    "same_ID_0001_readonly_reconciliation_accepted": true,
+    "runtime_execution_authorized": false,
+    "new_TEST_authorized": false,
+    "previous_night_stop_latched": true,
+    "old_R017_must_not_run_new_head": true,
+    "next_first_unstarted_cell": "e3a-test-0002",
+    "mandatory_first_four_cell_checkpoint": "Original e3a-test-0001 plus once-only 0002–0004 under later grant",
+    "future_requirement": "Independent new exact complete-Head E3_TEST_AUTHORIZED decision, current main binding, fresh owner GPU1 UUID/EGL/VRAM allocation, clean code tree and checkpoints; R019 cannot substitute",
+    "automatic_merge_authorized": false,
+    "Canvas_submission_authorized": false
+  },
+  "reviewer_scope_limits": "Independent GitHub code/patch/log/source-hash/metadata review, 11 exact files and full source-path enumeration; no connected Corelab execution, model/GPU/MuJoCo invocation, rerun of 231-case suite or private-original byte hashing."
+}

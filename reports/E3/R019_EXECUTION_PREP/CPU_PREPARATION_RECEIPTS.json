@@ -1,0 +1,170 @@
+{
+  "CPU_preparation_commit": "df4b797ac468b64d3ae2b1db7e5b01ad4b5f5fc8",
+  "approved_runtime_head_unchanged": "126491066226a0d52968d8bcf363d295781c2684",
+  "planner_tests": {
+    "resume-planner-local-normal": {
+      "cases": 17,
+      "elapsed_seconds": 0.259,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:34:35.568943+08:00",
+      "raw_exit": {
+        "label": "PRIVATE/resume-planner-local-normal.exit.json",
+        "bytes": 146,
+        "sha256": "9d37d731dbf71117f3114105e2a4903b5f198fdfbe2613092db53bac561c72c3"
+      },
+      "raw_log": {
+        "label": "PRIVATE/resume-planner-local-normal.stderr.private.txt",
+        "bytes": 2487,
+        "sha256": "9be8ef79cd78ae8f7b3ebdc11e6a676449424d82fee612749b19d48e7aba8f2f"
+      },
+      "public_log": {
+        "label": "reports/E3/R019_EXECUTION_PREP/logs/resume-planner-local-normal.log.txt",
+        "bytes": 2487,
+        "sha256": "9be8ef79cd78ae8f7b3ebdc11e6a676449424d82fee612749b19d48e7aba8f2f"
+      },
+      "source_commit": "df4b797ac468b64d3ae2b1db7e5b01ad4b5f5fc8",
+      "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684"
+    },
+    "resume-planner-local-optimized": {
+      "cases": 17,
+      "elapsed_seconds": 0.255,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:34:35.900613+08:00",
+      "raw_exit": {
+        "label": "PRIVATE/resume-planner-local-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "fa08c90f05834f83047442dd10205bf0dbd304b392597f8e6709990532635d99"
+      },
+      "raw_log": {
+        "label": "PRIVATE/resume-planner-local-optimized.stderr.private.txt",
+        "bytes": 2487,
+        "sha256": "397e6af61dab59e389ad602e772c9108ccc0909ff75c494acbae130cc81a1600"
+      },
+      "public_log": {
+        "label": "reports/E3/R019_EXECUTION_PREP/logs/resume-planner-local-optimized.log.txt",
+        "bytes": 2487,
+        "sha256": "397e6af61dab59e389ad602e772c9108ccc0909ff75c494acbae130cc81a1600"
+      },
+      "source_commit": "df4b797ac468b64d3ae2b1db7e5b01ad4b5f5fc8",
+      "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684"
+    },
+    "resume-planner-Corelab-normal": {
+      "cases": 17,
+      "elapsed_seconds": 0.461,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:50.772358+08:00",
+      "raw_exit": {
+        "label": "PRIVATE/resume-planner-Corelab-normal.exit.json",
+        "bytes": 146,
+        "sha256": "e9f6f53d56f0ecb10ff64849838f66fbde4c5b6e900affa31773a87bedf89d39"
+      },
+      "raw_log": {
+        "label": "PRIVATE/resume-planner-Corelab-normal.stderr.private.txt",
+        "bytes": 2487,
+        "sha256": "97c4fd5d422daf9acd8e47e87164132a73c9c59d645496aeeb7aaf1243469c8e"
+      },
+      "public_log": {
+        "label": "reports/E3/R019_EXECUTION_PREP/logs/resume-planner-Corelab-normal.log.txt",
+        "bytes": 2487,
+        "sha256": "97c4fd5d422daf9acd8e47e87164132a73c9c59d645496aeeb7aaf1243469c8e"
+      },
+      "source_commit": "df4b797ac468b64d3ae2b1db7e5b01ad4b5f5fc8",
+      "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684"
+    },
+    "resume-planner-Corelab-optimized": {
+      "cases": 17,
+      "elapsed_seconds": 0.448,
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:53.685421+08:00",
+      "raw_exit": {
+        "label": "PRIVATE/resume-planner-Corelab-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "0a7eb44b5f020487e75f0db00a3704cd1ff1d3f894d8716fe47ff020cfe2b5ec"
+      },
+      "raw_log": {
+        "label": "PRIVATE/resume-planner-Corelab-optimized.stderr.private.txt",
+        "bytes": 2487,
+        "sha256": "d317fa8244eaf23406dfe12a4d0221f288f0cca88b78e80d143bd54800fe89c8"
+      },
+      "public_log": {
+        "label": "reports/E3/R019_EXECUTION_PREP/logs/resume-planner-Corelab-optimized.log.txt",
+        "bytes": 2487,
+        "sha256": "d317fa8244eaf23406dfe12a4d0221f288f0cca88b78e80d143bd54800fe89c8"
+      },
+      "source_commit": "df4b797ac468b64d3ae2b1db7e5b01ad4b5f5fc8",
+      "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684"
+    }
+  },
+  "cases_per_mode": 17,
+  "readonly_checks": {
+    "current-main-fetch": {
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:49.604518+08:00",
+      "raw_receipt": {
+        "label": "PRIVATE/current-main-fetch.exit.json",
+        "bytes": 146,
+        "sha256": "29bb8dfd25ba43eba3bc2319112c17172101bf519e3629909e1e5964f5148b2f"
+      }
+    },
+    "original-readonly-normal": {
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:51.355162+08:00",
+      "raw_receipt": {
+        "label": "PRIVATE/original-readonly-normal.exit.json",
+        "bytes": 146,
+        "sha256": "d7c17d7cc2ba2f87be6f5dd26b5f050a80c66423983d31c497f5c3fc17f94e3e"
+      }
+    },
+    "original-readonly-optimized": {
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:54.511574+08:00",
+      "raw_receipt": {
+        "label": "PRIVATE/original-readonly-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "448e0532fa1072dc631d89ab9b16aa367ffed629861aa63a897c1fcba04bad69"
+      }
+    },
+    "current-readonly-resume-plan": {
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:35:54.765057+08:00",
+      "raw_receipt": {
+        "label": "PRIVATE/current-readonly-resume-plan.exit.json",
+        "bytes": 146,
+        "sha256": "4e9c282363e0d35eaf79c2f54c81dac0127faaf581bb5d2cc3a5a98f03d05ac6"
+      }
+    },
+    "real-readonly-fixed-resource-preflight": {
+      "actual_exit": 0,
+      "completed_at_sgt": "2026-10-30T22:36:04.781805+08:00",
+      "raw_receipt": {
+        "label": "PRIVATE/real-readonly-fixed-resource-preflight.exit.json",
+        "bytes": 146,
+        "sha256": "5ee0ff61e881cc51af38587ebe52d42a34bf7163aac11323b20cbb78c7cf4308"
+      }
+    }
+  },
+  "public_planner_sha256": "3dd3bde67c7dcc4f81ae123ec338f77e44ce656fdff7f5be476b2ed5c1e19804",
+  "public_test_sha256": "32d0e76a6bdccd2e4829106412c1d7150ad0f17043b7fbed77cb5eec46c7e7df",
+  "source_copies_remote_sha256": {
+    "R019_REVIEW.original.json": {
+      "bytes": 6411,
+      "sha256": "fda1fae97db074828b3ab07f3fcbf1f290f28ac98b9b59540a3a02810358f6ae"
+    },
+    "resume_plan.py": {
+      "bytes": 10946,
+      "sha256": "3dd3bde67c7dcc4f81ae123ec338f77e44ce656fdff7f5be476b2ed5c1e19804"
+    },
+    "test_resume_plan.py": {
+      "bytes": 9003,
+      "sha256": "32d0e76a6bdccd2e4829106412c1d7150ad0f17043b7fbed77cb5eec46c7e7df"
+    },
+    "real_readonly_preflight_child.py": {
+      "bytes": 5054,
+      "sha256": "9cf4a4ddf2960f91eb8470f15d6ca7b261ae162adc9bd8cab48586f70c0b5fd3"
+    }
+  },
+  "new_TEST_reservations": 0,
+  "new_GPU_model_sim_Shadow_calls": 0,
+  "scope": "new CPU-only preparation tools; existing approved231 suite was not redundantly rerun",
+  "native_validation": "NOT_RUN_NOT_AUTHORIZED"
+}

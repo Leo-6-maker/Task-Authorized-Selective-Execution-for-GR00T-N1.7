@@ -1,0 +1,62 @@
+{
+  "status": "CPU_EXECUTION_PREPARATION_COMPLETE_AWAITING_INDEPENDENT_EXECUTION_DECISION",
+  "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "CPU_approval": "R019_APPROVED_NO_TEST",
+  "CPU_review_commit": "266ce04507a6a430fade03f1dac4ce0f568aca22",
+  "B1": "CLOSED_DO_NOT_REWORK",
+  "science_unchanged": true,
+  "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "report_branch_is_not_native_runtime": true,
+  "original0001_preserved_eligible": true,
+  "old_frozen_audit_exits": [
+    1,
+    1
+  ],
+  "reserved": 1,
+  "remaining_unknown": 159,
+  "first_future_id": "e3a-test-0002",
+  "first_A4_contains": [
+    "e3a-test-0001",
+    "e3a-test-0002",
+    "e3a-test-0003",
+    "e3a-test-0004"
+  ],
+  "planned_checkpoints": {
+    "E3A": 28,
+    "E3B": 8
+  },
+  "actual_checkpoints_completed": 0,
+  "planner17_local_Corelab_normal_optimized_exits": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "current_original_audit_normal_optimized_exits": [
+    0,
+    0
+  ],
+  "weights_files_rehashed": 17,
+  "XML_rehashed": 106,
+  "Python_roles_metadata_verified": {
+    "server": 138,
+    "sim": 159
+  },
+  "owner_GPU1_consent": "RENEWED_CURRENT_TURN",
+  "resource_sample_is_not_future_allocation": true,
+  "new_execution_grant": null,
+  "new_execution_window": null,
+  "expired_R017_window_not_reused": true,
+  "postload_resource_guard_preserved": true,
+  "new_GPU_model_sim_Shadow_calls": 0,
+  "new_TEST_reservations": 0,
+  "night_stop_latched": true,
+  "conditional_prevention": "N/A",
+  "E2_formal_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+  "E2_E3_pooled": false,
+  "E2_R3": "SEPARATE_PENDING",
+  "E2_files_not_modified": true,
+  "PR_merged": false,
+  "Canvas_submitted": false,
+  "next_action": "Independent execution admission for unchanged1264910 and current141-source lock, including explicit new time window and historical0001+firstA4. Fresh GPU1 allocation and postload9GiB must independently pass; no new B1/scientific changes needed."
+}

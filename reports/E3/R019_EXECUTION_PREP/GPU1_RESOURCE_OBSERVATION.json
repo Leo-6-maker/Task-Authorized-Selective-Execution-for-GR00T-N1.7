@@ -1,0 +1,25 @@
+{
+  "status": "READONLY_SAMPLE_WITH_RENEWED_OWNER_PERMISSION_NOT_LAUNCH_ADMISSION",
+  "sampled_at_sgt": "2026-10-30T22:36:04.590877+08:00",
+  "owner_GPU1_permission": "DIRECT_USER_ALLOW_GPU1_TASKS_RECORDED_THIS_TURN",
+  "owner_consent_record_sha256": "c6d0ead813e7ed406b5fd5fe7db501a808854e406cb265f220265e87eb9159cc",
+  "GPU1": {
+    "free_MiB": 10121,
+    "total_MiB": 16376,
+    "uuid_matches_retained_route": true,
+    "preload_9GiB_observed": true,
+    "postload_9GiB_observed": "NOT_TESTED_NO_MODEL_PERMISSION",
+    "EGL_context_tested": false,
+    "actual_allocation_created": false,
+    "resource_sample_is_not_reservation_or_authorization": true
+  },
+  "historical_R017_model_peak_reserved_bytes": 6392119296,
+  "historical_reserved_MiB": 6096.0,
+  "arithmetic_only_estimated_free_after_same_reserved_MiB": 4025.0,
+  "estimate_is_not_live_capacity_measurement": true,
+  "post_load_required_free_MiB": 9216,
+  "post_load_capacity_concern": true,
+  "action": "Keep both preload/postload9GiB guards; after a later independent grant re-read allocation/UUID/EGL/VRAM and bounded resource policy. No speculative model load now, no GPU0 switch or threshold relaxation.",
+  "actual_allocation_created": false,
+  "new_model_loads": 0
+}

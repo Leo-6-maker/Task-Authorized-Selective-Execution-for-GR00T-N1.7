@@ -1,0 +1,51 @@
+{
+  "status": "REQUEST_ONLY_NOT_AUTHORIZATION",
+  "target_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "protocol_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "existing_independent_CPU_approval": {
+    "commit": "266ce04507a6a430fade03f1dac4ce0f568aca22",
+    "path": "docs/reviews/R019-E3-CPU-REFREEZE-APPROVED.json",
+    "B1": "CLOSED"
+  },
+  "frozen_science_unchanged": true,
+  "preexisting_eligible_originals": [
+    "e3a-test-0001"
+  ],
+  "unstarted_E3A": 111,
+  "unstarted_E3B": 48,
+  "remaining_once_only_TOTAL": 159,
+  "full_original_budgets": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "requested_future_decision_fields": {
+    "disposition": "E3_TEST_AUTHORIZED",
+    "authorized_head": "126491066226a0d52968d8bcf363d295781c2684",
+    "protocol_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+    "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "protocol_id": "E3-001-v1.0",
+    "budgets": {
+      "E3A": 112,
+      "E3B": 48
+    },
+    "gate_k": 3,
+    "bootstrap_seed": 641500,
+    "maximum_controls": 720,
+    "resource_authorization_required": true
+  },
+  "additional_explicit_reentry_decisions_needed": [
+    "Supersede prior incident night stop for this exact Head; R019 itself does not",
+    "Define a fresh execution window/cutoff; expired30Oct07:30SGT cannot be silently reused",
+    "Consume only untouched0002 onward; preserve0001 under historical859/R017",
+    "FirstA4 must include original0001+new0002\u20130004; real 4/6 checkpoints release automatically",
+    "Fresh current GPU1 allocation binds new exact review commit, retained owner consent, actual UUID/EGL/free VRAM; preload and postload9GiB remain mandatory",
+    "Normal scientific negative outcomes continue; real native/resource/evidence error stops new TEST and switches to CPU preserving consumed ID"
+  ],
+  "owner_GPU1_permission": "RENEWED_DIRECT_USER_CURRENT_TURN_RECORDED_PRIVATELY",
+  "owner_permission_is_not_independent_TEST_grant": true,
+  "old_R017_may_start_new_HEAD": false,
+  "executor_signed_execution_grant": false,
+  "native_execution_authorized": false,
+  "new_TEST_reservations": 0
+}
