@@ -21,6 +21,22 @@ SCENE_PATH = 'reports/E3/R015/SCENE_RESULT.json'
 CSV_PATH = 'reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv'
 
 
+def source_inventory(repo):
+    """Active code/test/config paths, independent of the supplied lock's keys."""
+    repo = Path(repo)
+    paths = set()
+    for directory in ['e3', 'tase', 'scripts', 'tests']:
+        for p in (repo/directory).rglob('*'):
+            if p.is_file() and p.suffix in ['.py', '.sh']:
+                require(not p.is_symlink(), 'source inventory contains a symlink')
+                paths.add(str(p.relative_to(repo)))
+    for p in (repo/'configs').rglob('*'):
+        if p.is_file() and p.suffix in ['.json', '.txt'] and p.name != 'e3_protocol_lock.proposed.json':
+            require(not p.is_symlink(), 'config inventory contains a symlink')
+            paths.add(str(p.relative_to(repo)))
+    return paths
+
+
 def historical(repo, revision, path):
     return subprocess.check_output(['git', 'show', revision+':'+path], cwd=repo)
 
@@ -33,6 +49,8 @@ def verify_freeze(repo):
             lock['variant'] == 'FULL160', 'Gate P FULL160 freeze required')
     require(lock['authorized_real_TEST'] is False,
             'scientific lock cannot self-authorize real TEST')
+    require(source_inventory(repo) <= set(lock['source_sha256']),
+            'E3 source lock missing active files')
     approval = historical(repo, P_COMMIT, P_PATH)
     require((repo/P_PATH).read_bytes() == approval, 'R016 historical approval differs')
     gate_p = json.loads(approval)

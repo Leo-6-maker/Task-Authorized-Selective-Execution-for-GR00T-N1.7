@@ -1,0 +1,197 @@
+{
+  "CPU_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+  "status": "REAL_CPU_ENTRY_DENIALS_NO_NATIVE_CONTEXT_OR_MOCKS",
+  "entry_paths": [
+    "authorize",
+    "launcher",
+    "supervisor",
+    "native_runner",
+    "direct_server"
+  ],
+  "reviews": [
+    "historical_R017",
+    "R018_CPU_nonexecution_decision"
+  ],
+  "modes": {
+    "normal": {
+      "actual_exit": 0,
+      "checks": [
+        {
+          "entry": "authorize",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "launcher",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "supervisor",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "native_runner",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "direct_server",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "authorize",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "launcher",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "supervisor",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "native_runner",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "direct_server",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        }
+      ],
+      "new_TEST_reservations": 0,
+      "freeze": {
+        "status": "SCIENTIFIC_FREEZE_VERIFIED_GATE_C_REQUIRED",
+        "variant": "FULL160",
+        "budgets": {
+          "E3A": 112,
+          "E3B": 48
+        },
+        "clusters": 36,
+        "native_scene_tasks": 9,
+        "scene_scope": "SCENE_IDENTITY_ONLY",
+        "gate_P_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+        "protocol_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+        "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+        "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+        "scene_identity_sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+        "authorized_real_TEST": false
+      },
+      "raw_exit": {
+        "label": "PRIVATE/refrozen-admission-corrected-normal.exit.json",
+        "bytes": 146,
+        "sha256": "4240612b9c62549a88b19788ad5c1af5ef3d9d2b932f816e85b8a03713b515ab"
+      }
+    },
+    "optimized": {
+      "actual_exit": 0,
+      "checks": [
+        {
+          "entry": "authorize",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "launcher",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "supervisor",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "native_runner",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "direct_server",
+          "commit": "ca979be10c00389ed57b77967c232d7a84132406",
+          "status": "EXPECTED_DENIAL",
+          "reason": "E3 grant code/lock/cells/runtime mismatch"
+        },
+        {
+          "entry": "authorize",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "launcher",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "supervisor",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "native_runner",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        },
+        {
+          "entry": "direct_server",
+          "commit": "9a81613ff7af768ded32f5ac23a5034e222fed52",
+          "status": "EXPECTED_DENIAL",
+          "reason": "new independent E3 grant required"
+        }
+      ],
+      "new_TEST_reservations": 0,
+      "freeze": {
+        "status": "SCIENTIFIC_FREEZE_VERIFIED_GATE_C_REQUIRED",
+        "variant": "FULL160",
+        "budgets": {
+          "E3A": 112,
+          "E3B": 48
+        },
+        "clusters": 36,
+        "native_scene_tasks": 9,
+        "scene_scope": "SCENE_IDENTITY_ONLY",
+        "gate_P_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+        "protocol_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+        "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+        "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+        "scene_identity_sha256": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+        "authorized_real_TEST": false
+      },
+      "raw_exit": {
+        "label": "PRIVATE/refrozen-admission-corrected-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "1ca3d88ed9fae00c780fb823e9b0c15f26731b7742002cb2909eaab7f2331de7"
+      }
+    }
+  },
+  "total_expected_denials": 20,
+  "all_denied_before_resource_allocation_or_native_initialization": true,
+  "new_TEST_reservations": 0,
+  "new_model_sim_Shadow_calls": 0
+}

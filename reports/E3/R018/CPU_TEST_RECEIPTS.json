@@ -1,0 +1,173 @@
+{
+  "CPU_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+  "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "full_tests": {
+    "refreeze-local-normal": {
+      "cases": 231,
+      "elapsed_seconds": 32.362,
+      "actual_exit": 0,
+      "child_returncode": 0,
+      "signal": null,
+      "completed_at_sgt": "2026-10-30T09:03:32.299862+08:00",
+      "source_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+      "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+      "raw_exit": {
+        "label": "PRIVATE/refreeze-local-normal.exit.json",
+        "bytes": 146,
+        "sha256": "d4261a158aa663a218e6c1f9fcd7ecf6fbe00a682745e85e4e6c36ecef76b765"
+      },
+      "raw_log": {
+        "label": "PRIVATE/refreeze-local-normal.stderr.private.txt",
+        "bytes": 34702,
+        "sha256": "cb8d19176d7c7124907783bd1af015b0720f203bfafb05180cf70d6fb4309895"
+      },
+      "public_log": {
+        "label": "reports/E3/R018/logs/refreeze-local-normal.log.txt",
+        "bytes": 34230,
+        "sha256": "52358f1d390b391c12adcd9fa17b66eb3240f3503f3ef7e4fc8ec73f1a18b2e8"
+      },
+      "private_paths_redacted": true
+    },
+    "refreeze-local-optimized": {
+      "cases": 231,
+      "elapsed_seconds": 32.36,
+      "actual_exit": 0,
+      "child_returncode": 0,
+      "signal": null,
+      "completed_at_sgt": "2026-10-30T09:04:04.884914+08:00",
+      "source_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+      "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+      "raw_exit": {
+        "label": "PRIVATE/refreeze-local-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "1fa5b764abeead748ee6bbac6feb4c9de06e151d0307caf833f6aa6a18559927"
+      },
+      "raw_log": {
+        "label": "PRIVATE/refreeze-local-optimized.stderr.private.txt",
+        "bytes": 34702,
+        "sha256": "1796e8a26505ac5015730c666d7fa9f1ae1b09c619206c92f16240e0a710b0e8"
+      },
+      "public_log": {
+        "label": "reports/E3/R018/logs/refreeze-local-optimized.log.txt",
+        "bytes": 34230,
+        "sha256": "ce31f90f7e1f4a8193d290ccaab3ef4d2be95505bc1beff97868bf3714f23a72"
+      },
+      "private_paths_redacted": true
+    },
+    "refreeze-Corelab-normal": {
+      "cases": 231,
+      "elapsed_seconds": 42.156,
+      "actual_exit": 0,
+      "child_returncode": 0,
+      "signal": null,
+      "completed_at_sgt": "2026-10-30T09:03:47.189381+08:00",
+      "source_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+      "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+      "raw_exit": {
+        "label": "PRIVATE/refreeze-Corelab-normal.exit.json",
+        "bytes": 146,
+        "sha256": "d35cd20397d64a425362850e398028ca098dc974e2589cbd41fdeaddcb4be586"
+      },
+      "raw_log": {
+        "label": "PRIVATE/refreeze-Corelab-normal.stderr.private.txt",
+        "bytes": 34749,
+        "sha256": "13e15929bfbd2a9207be7a9c1fba9c11ef9343a0c64c704e3896bf35983344f1"
+      },
+      "public_log": {
+        "label": "reports/E3/R018/logs/refreeze-Corelab-normal.log.txt",
+        "bytes": 34230,
+        "sha256": "54a69cab7e782043cf9722776c8cbd929afd102b9f0ffd1156e475501ae93881"
+      },
+      "private_paths_redacted": true
+    },
+    "refreeze-Corelab-optimized": {
+      "cases": 231,
+      "elapsed_seconds": 43.532,
+      "actual_exit": 0,
+      "child_returncode": 0,
+      "signal": null,
+      "completed_at_sgt": "2026-10-30T09:04:31.356470+08:00",
+      "source_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+      "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+      "raw_exit": {
+        "label": "PRIVATE/refreeze-Corelab-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "769e6aff97263be9298bcfd8bd44a6560b49344fd8ec552930ae9b550fa64ba8"
+      },
+      "raw_log": {
+        "label": "PRIVATE/refreeze-Corelab-optimized.stderr.private.txt",
+        "bytes": 34749,
+        "sha256": "ec4faac5076c9eab1b5108af308b57bb43c5bc44e2362da50965173dd19ca077"
+      },
+      "public_log": {
+        "label": "reports/E3/R018/logs/refreeze-Corelab-optimized.log.txt",
+        "bytes": 34230,
+        "sha256": "068d26db577aced4bc2b31e5a9fae77a259625be294065da7d657b2dda334df0"
+      },
+      "private_paths_redacted": true
+    }
+  },
+  "cases_per_full_mode": 231,
+  "precommit_targeted": {
+    "cases": 35,
+    "actual_exit": 0,
+    "scope": "precommit targeted stage; not the final full snapshot",
+    "raw_exit": {
+      "label": "PRIVATE/local-targeted.exit.json",
+      "bytes": 146,
+      "sha256": "6efd46faca965dd7965d0080cc1ed27f517ac8ccc01b51bf516cbd88a2ca9691"
+    }
+  },
+  "corrected_admission_actual_exits": [
+    0,
+    0
+  ],
+  "readonly_audits": {
+    "normal": {
+      "actual_exit": 0,
+      "raw_exit": {
+        "label": "PRIVATE/refrozen-readonly-normal.exit.json",
+        "bytes": 146,
+        "sha256": "91570448e8fcedd32bad95651c42585d776090b85ed54c27ecfaddc13811b767"
+      },
+      "output": {
+        "label": "PRIVATE/refrozen-readonly-normal.audit.json",
+        "bytes": 276609,
+        "sha256": "7db8a4b027e5147a5999b403d2683cdcf2f792a2daa759203077daa09d0e9835"
+      }
+    },
+    "optimized": {
+      "actual_exit": 0,
+      "raw_exit": {
+        "label": "PRIVATE/refrozen-readonly-optimized.exit.json",
+        "bytes": 146,
+        "sha256": "bdc9bd02997bb1209f84d8b1728ae4bb29fdc6e4cc4539db9db66af6b2239f2e"
+      },
+      "output": {
+        "label": "PRIVATE/refrozen-readonly-optimized.audit.json",
+        "bytes": 276609,
+        "sha256": "7db8a4b027e5147a5999b403d2683cdcf2f792a2daa759203077daa09d0e9835"
+      }
+    }
+  },
+  "formal_reconciliation": {
+    "actual_exit": 0,
+    "raw_exit": {
+      "label": "PRIVATE/reconciliation-0001-v1.exit.json",
+      "bytes": 146,
+      "sha256": "d0bc239e832483305e9fc60fc5a06edb2fd5d925b9c98ac988dfec908d4cfc2c"
+    },
+    "record": {
+      "label": "reports/E3/R018/RECONCILIATION_0001_v1.json",
+      "bytes": 22032,
+      "sha256": "aedd688ac8a0e4aab48af8af0f828b7f5ca898607bc1826b4fcde9ecb9e039dd"
+    }
+  },
+  "old_frozen_audit_actual_exits": [
+    1,
+    1
+  ],
+  "test_harness_scope": "full unit/CPU synthetic/process suite; native identity denial and real private originals audited without model or MuJoCo execution",
+  "independent_reviewer_rerun": false,
+  "new_TEST_reservations": 0
+}
