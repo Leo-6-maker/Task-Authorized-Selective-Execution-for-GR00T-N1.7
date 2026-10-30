@@ -1,0 +1,72 @@
+{
+  "CPU_snapshot_head": "6c8e38c1c84083b7664ee0cb7f11fc0cb0d03651",
+  "reviewed_PR40_base_head": "5e3eab34cbde600caa340452996dd470704e55c6",
+  "actual_native_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "source_lock_entries": 141,
+  "old_lock_entries": 139,
+  "added_locked_paths": [
+    "e3/audit_manifest.py",
+    "tests/test_e3_audit_manifest.py"
+  ],
+  "changed_locked_paths": [
+    "e3/audit.py",
+    "e3/freeze.py",
+    "tests/test_e3_r016_freeze.py"
+  ],
+  "changed_active_paths_vs_native": [
+    "configs/e3_protocol_lock.proposed.json",
+    "e3/audit.py",
+    "e3/audit_manifest.py",
+    "e3/freeze.py",
+    "tests/test_e3_audit_manifest.py",
+    "tests/test_e3_r016_freeze.py"
+  ],
+  "changed_active_paths_vs_PR40": [
+    "configs/e3_protocol_lock.proposed.json",
+    "e3/freeze.py",
+    "tests/test_e3_r016_freeze.py"
+  ],
+  "unchanged_scientific_and_native_sha256": {
+    "configs/e3_cells.proposed.json": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+    "configs/e3_sources.proposed.json": "c10d2640e1176a3f19e19ee806e3703c6f55213f0d623dba872d65b8c0b58b37",
+    "configs/e3_run_config.proposed.json": "e771af92e1d79db89230f5200a3eaf23ead9b42d822027fa2830a34be39e0e37",
+    "configs/runtime_lock_E2.json": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "configs/e3_scene_identity.frozen.json": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+    "e3/reactive_gate.py": "b28ffbc67f8139f4784f1f7532dcff85f7961504f64c2ab49e4166b0b8098127",
+    "e3/statistics.py": "ab52cba5b72b7f4e30e2ba4e70f3daf0d2ad3df9151294963dadfbb4b8a21fad",
+    "e3/native_runner.py": "bb26ef9402f9b6c32a07fbec50147d3962eae9e2d11286ab626e77b2fadf15c3",
+    "e3/server.py": "f9d9732e8709478ffa405ef0317430a1da31a11fe8d94d74d3f889d1698240be",
+    "e3/server_launcher.py": "b36dd360841f6666c0bcb4650f026890774159054eedad810b38f0a01dbba966"
+  },
+  "all141_source_hashes_match": true,
+  "unlocked_active_source_files": [],
+  "historical_fixture_revision": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "historical_names_and_bytes_same_revision": true,
+  "current_actual_worktree_positive_without_mocks": true,
+  "current_missing_mutated_omitted_lock_new_file_negatives": true,
+  "unlocked_extra_source_rejected": true,
+  "Gate_k": 3,
+  "raw_chunk": 16,
+  "execution_prefix": 8,
+  "episode_control_cap": 720,
+  "settling_controls": 10,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 641500,
+  "FULL160": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "Gate_P": "R016",
+  "runtime_execution_authorized": false,
+  "manifest_repair_sources_unchanged_from_R018_review": {
+    "e3/audit.py": "9324bf0d5e8393415aaec9c169eaed33e56f1e0d1f50c5e4cf8e0afe565f165b",
+    "e3/audit_manifest.py": "a6117e721100ca4d81924e1eaedbbe00a2bd9766516177c3b389d36df00d6e69"
+  },
+  "new_snapshot_FULL_suite_actual_exits": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

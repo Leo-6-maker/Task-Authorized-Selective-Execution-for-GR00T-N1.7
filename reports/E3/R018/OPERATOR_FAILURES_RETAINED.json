@@ -1,0 +1,51 @@
+{
+  "status": "ALL_ACTUAL_CPU_OPERATOR_FAILURES_PRESERVED_NOT_TEST_RESULTS",
+  "failures": [
+    {
+      "id": "OPERATOR_ARGV_OUTPUT",
+      "scope": "external CPU admission harness only",
+      "initial_normal_actual_exit": 0,
+      "initial_optimized_actual_exit": 1,
+      "evidence": {
+        "label": "PRIVATE/operator-admission-error.json",
+        "bytes": 582,
+        "sha256": "f5e58f3a8fd650b39492173ce89a6e8e67463afa35704c7f38737b4507f37fb2"
+      },
+      "cause": "Direct-server denial changed sys.argv; outer harness used overwritten argv to select output, creating an untracked --model JSON in CPU clone01. The -O clean-tree guard correctly rejected that tree.",
+      "correction": "Capture output path before any parser mutation; retain clone01 and misplaced output; use clean independent same-commit clone03.",
+      "production_or_originals_changed": false
+    },
+    {
+      "id": "CPU_HISTORY_STAGING",
+      "scope": "CPU-only Git recovery",
+      "actual_git_fetch_exit": 1,
+      "actual_shared_checkout_exit": 128,
+      "actual_historical_object_probe_exit": 128,
+      "outer_recovery_transports": [
+        1,
+        1,
+        1
+      ],
+      "evidence": {
+        "label": "PRIVATE/CPU-restage-failures.json",
+        "bytes": 551,
+        "sha256": "794f3d47c2a37b0f530f8f1ded8eed243dfaa1d5b84bffa16c7a3eec372327b4"
+      },
+      "cause": "GitHub synchronization failed; a shared clone exceeded Git alternate nesting; independent clone did not copy unreferenced historical grant commit.",
+      "correction": "Packed independent clone plus SHA-bound bundle with four named required history commits. All failed clones/logs retained. Corrected admission/readonly reconciliation actual exits0.",
+      "production_or_originals_changed": false
+    }
+  ],
+  "corrected_normal_optimized_admission_exits": [
+    0,
+    0
+  ],
+  "readonly_audits": [
+    0,
+    0
+  ],
+  "reconciliation_exit": 0,
+  "new_TEST_reservations": 0,
+  "errors_not_normalized_to_zero": true,
+  "raw_private_evidence_in_two_copy_archive": true
+}
