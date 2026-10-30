@@ -24,18 +24,22 @@ from .processes import Recorded, identity, live_same, stamp, write
 class NativeBackend:
     def __init__(self, runtime_map, operator_directory, review_commit, review_path, session):
         self.map = json.loads(Path(runtime_map).read_text())
+        require(all(key in self.map for key in
+                    ['runtime_repo', 'workspace', 'sim_python', 'server_python', 'port']),
+                'incomplete private runtime map; restore fields from existing receipts')
         self.repo = Path(self.map['runtime_repo']).resolve(strict=True)
         self.workspace = Path(self.map['workspace']).resolve(strict=True)
         self.op = Path(operator_directory).resolve()
         require(not self.op.is_relative_to(self.repo) and
                 not self.op.is_relative_to(self.workspace/'runs'),
                 'operator output must be outside exact runtime and originals')
-        self.op.mkdir(mode=0o700)  # Existing directory/attempt never reused.
         self.review_commit, self.review_path, self.session = review_commit, review_path, session
         require(session.startswith('test-server-e3-') and
                 all(c.isalnum() or c in '-_' for c in session), 'exclusive E3 server session required')
         self.sim, self.server_python = [Path(self.map[n]) for n in ['sim_python', 'server_python']]
         self.port = self.map['port']
+        require(type(self.port) is int and 0 < self.port < 65536, 'valid private loopback port required')
+        self.op.mkdir(mode=0o700)  # Existing directory/attempt never reused.
         self.env = dict(os.environ, HOME=str(self.workspace/'runtime/home'),
                         LIBERO_CONFIG_PATH=str(self.workspace/'runtime/libero-config'),
                         PYTHONPATH=str(self.repo), CUDA_VISIBLE_DEVICES='',

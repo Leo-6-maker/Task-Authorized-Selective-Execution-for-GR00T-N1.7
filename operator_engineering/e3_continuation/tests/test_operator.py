@@ -227,6 +227,14 @@ class RealProcessTests(unittest.TestCase):
 
 
 class ActualAdmissionDenialTests(unittest.TestCase):
+    def test_missing_map_field_does_not_create_attempt_directory(self):
+        from operator_engineering.e3_continuation.native import NativeBackend
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);config=root/'map.json';config.write_text('{}')
+            with self.assertRaisesRegex(ValueError,'incomplete private runtime map'):
+                NativeBackend(config,root/'operator','0'*40,'missing','test-server-e3-CPU-ONLY')
+            self.assertFalse((root/'operator').exists())
+
     def test_actual_R019_and_stale_R017_deny_before_GPU_or_allocation(self):
         from operator_engineering.e3_continuation.native import NativeBackend
         for commit,path in [('266ce04507a6a430fade03f1dac4ce0f568aca22',
