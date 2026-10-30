@@ -20,6 +20,32 @@ from e3.resource import binding, live_gpu1
 from tests.test_e3_cpu import ReactiveGate, frame, spec
 
 REPO = Path(__file__).resolve().parents[1]
+HISTORICAL_HEAD = '859e40b5f460365a8853bf3486969e9f8e28951c'
+LOCK_PATH = 'configs/e3_protocol_lock.proposed.json'
+
+
+def copy_freeze_fixture(destination, revision=None):
+    """Names and bytes must come from the same tree, including its lock.
+
+    A current fixture also copies any unlocked executable/test/config files so
+    coverage-negative tests cannot hide an omission by constructing a subset.
+    """
+    read = ((lambda name: historical(REPO, revision, name)) if revision else
+            (lambda name: (REPO/name).read_bytes()))
+    lock = json.loads(read(LOCK_PATH))
+    names = set(lock['source_sha256']) | {
+        LOCK_PATH, 'configs/e3_scene_identity.frozen.json',
+        'docs/reviews/R016-E3-GATE-P-APPROVED.json',
+        'docs/protocols/E3-001-v1.0-PROPOSED.md',
+        'reports/E3/R015/SCENE_RESULT.json',
+        'reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv'}
+    if revision is None:
+        from e3.freeze import source_inventory
+        names.update(source_inventory(REPO))
+    for name in names:
+        (destination/name).parent.mkdir(parents=True, exist_ok=True)
+        (destination/name).write_bytes(read(name))
+    return lock
 
 
 class FreezeTests(unittest.TestCase):
@@ -27,20 +53,7 @@ class FreezeTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.repo = Path(self.temp.name)
-        lock = json.loads((REPO/'configs/e3_protocol_lock.proposed.json').read_text())
-        names = set(lock['source_sha256']) | {
-            'configs/e3_protocol_lock.proposed.json',
-            'configs/e3_scene_identity.frozen.json',
-            'docs/reviews/R016-E3-GATE-P-APPROVED.json',
-            'docs/protocols/E3-001-v1.0-PROPOSED.md',
-            'reports/E3/R015/SCENE_RESULT.json',
-            'reports/E3/R015/COMPILED_SCENE_BINDINGS_36.csv'}
-        for name in names:
-            (self.repo/name).parent.mkdir(parents=True, exist_ok=True)
-            # The verifier's positive fixture is the actual approved runtime,
-            # never the current unapproved CPU repair checkout's changed files.
-            (self.repo/name).write_bytes(historical(
-                REPO, '859e40b5f460365a8853bf3486969e9f8e28951c', name))
+        copy_freeze_fixture(self.repo, HISTORICAL_HEAD)
         self.enterContext(patch('e3.freeze.historical',
                                 side_effect=lambda _, rev, path: historical(REPO, rev, path)))
 
@@ -101,6 +114,73 @@ class FreezeTests(unittest.TestCase):
         p.write_bytes(p.read_bytes()+b'\n# synthetic drift\n')
         with self.assertRaisesRegex(ValueError, 'source lock differs'):
             verify_freeze(self.repo)
+
+    def test_historical_names_come_from_historical_lock_not_new_worktree(self):
+        original = json.loads(historical(REPO, HISTORICAL_HEAD, LOCK_PATH))
+        self.assertEqual(json.loads((self.repo/LOCK_PATH).read_text()), original)
+        self.assertNotIn('e3/audit_manifest.py', original['source_sha256'])
+        self.assertFalse((self.repo/'e3/audit_manifest.py').exists())
+        self.assertEqual(verify_freeze(self.repo)['clusters'], 36)
+
+
+class ActualRefrozenWorktreeTests(unittest.TestCase):
+    def test_actual_new_worktree_and_lock_pass_without_historical_fixture_patch(self):
+        # Real current files + current lock, genuine Git history, no test double.
+        result = verify_freeze(REPO)
+        self.assertEqual(result['clusters'], 36)
+        self.assertFalse(result['authorized_real_TEST'])
+
+
+class CurrentRefrozenTreeTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.repo = Path(self.temp.name)
+        self.lock = copy_freeze_fixture(self.repo)
+        self.enterContext(patch('e3.freeze.historical',
+                                side_effect=lambda _, rev, path: historical(REPO, rev, path)))
+
+    def test_current_fixture_includes_both_new_files_and_their_new_hashes(self):
+        from e3.discovery import sha
+        for name in ['e3/audit_manifest.py', 'tests/test_e3_audit_manifest.py']:
+            self.assertIn(name, self.lock['source_sha256'])
+            self.assertEqual(sha(self.repo/name), self.lock['source_sha256'][name])
+        self.assertEqual(verify_freeze(self.repo)['budgets'], {'E3A':112, 'E3B':48})
+
+    def test_either_new_locked_file_missing_is_rejected(self):
+        for name in ['e3/audit_manifest.py', 'tests/test_e3_audit_manifest.py']:
+            with self.subTest(name=name):
+                p = self.repo/name; before = p.read_bytes(); p.unlink()
+                try:
+                    with self.assertRaises((FileNotFoundError, ValueError)):verify_freeze(self.repo)
+                finally:p.write_bytes(before)
+
+    def test_either_new_locked_file_mutation_is_rejected(self):
+        for name in ['e3/audit_manifest.py', 'tests/test_e3_audit_manifest.py']:
+            with self.subTest(name=name):
+                p = self.repo/name; before = p.read_bytes(); p.write_bytes(before+b'\n# CPU synthetic mutation\n')
+                try:
+                    with self.assertRaisesRegex(ValueError, 'source lock differs'):verify_freeze(self.repo)
+                finally:p.write_bytes(before)
+
+    def test_omitting_new_module_or_test_from_lock_is_rejected(self):
+        for name in ['e3/audit_manifest.py', 'tests/test_e3_audit_manifest.py']:
+            with self.subTest(name=name):
+                lock = copy.deepcopy(self.lock); del lock['source_sha256'][name]
+                (self.repo/LOCK_PATH).write_text(json.dumps(lock))
+                with self.assertRaisesRegex(ValueError, 'source lock missing active files'):verify_freeze(self.repo)
+
+    def test_unlocked_added_python_file_is_rejected(self):
+        (self.repo/'e3/unlocked_CPU_test_only.py').write_text('# not executable permission\n')
+        with self.assertRaisesRegex(ValueError, 'source lock missing active files'):verify_freeze(self.repo)
+
+    def test_current_runtime_or_scientific_config_drift_is_rejected(self):
+        for name in ['configs/e3_run_config.proposed.json', 'e3/server.py']:
+            with self.subTest(name=name):
+                p = self.repo/name; before = p.read_bytes(); p.write_bytes(before+b'\n')
+                try:
+                    with self.assertRaises(ValueError):verify_freeze(self.repo)
+                finally:p.write_bytes(before)
 
 
 class R016BoundaryTests(unittest.TestCase):

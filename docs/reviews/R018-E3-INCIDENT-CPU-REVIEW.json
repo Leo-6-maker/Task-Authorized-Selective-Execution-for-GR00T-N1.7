@@ -1,0 +1,117 @@
+{
+  "review_id": "R018",
+  "review_date_sgt": "2026-10-30",
+  "reviewer_role": "GPT reviewer of PR40 executor submission",
+  "attestation_type": "Version-bound workflow review, not a cryptographic signature or a hardware-safety certification",
+  "protocol_id": "E3-001-v1.0",
+  "reviewed_pr": 40,
+  "reviewed_head": "5e3eab34cbde600caa340452996dd470704e55c6",
+  "CPU_tested_snapshot": "84ce33cebdbaca74986ccac18928665d15c22a10",
+  "actual_native_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "historical_native_grant_commit": "ca979be10c00389ed57b77967c232d7a84132406",
+  "disposition": "CHANGES_REQUIRED",
+  "incident_containment": "ACCEPTED_AT_DECLARED_EVIDENCE_LEVEL",
+  "root_cause": "Confirmed caller/shared-verifier set-contract mismatch; mandatory15 paths were incorrectly supplied as exact inventory for a74-file manifest",
+  "core_manifest_repair": "APPROVED_FOR_CPU_READ_ONLY_RECONCILIATION",
+  "runtime_execution_authorized": false,
+  "new_TEST_authorized": false,
+  "nightly_stop_remains_latched": true,
+  "merge_authorized": false,
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "severity": "BLOCKS_REFREEZE_VALIDATION",
+      "path": "tests/test_e3_r016_freeze.py",
+      "symbol": "FreezeTests.setUp",
+      "finding": "The fixture enumerates CURRENT lock source_sha256 paths, then loads every path from historical859e40. A legitimate lock refresh adding e3/audit_manifest.py and tests/test_e3_audit_manifest.py makes git show fail because those paths do not exist at859e40. Current223 passes with the deliberately unrefreshed139-entry lock do not test the final refrozen worktree.",
+      "evidence": "Actual source read and PR additions; historical e3/audit_manifest.py lookup returned404; synthetic Git reproduction of current-list/old-bytes selection returned128 for both newly locked paths.",
+      "required_fix": "Derive historical fixture names AND bytes from the same historical lock/revision. Keep an explicit historical positive test and add a separate current-refrozen-worktree positive test plus lock-completeness/drift negatives. Do not omit new files from the source lock or weaken freeze validation."
+    }
+  ],
+  "additional_required_preparation": [
+    "Refresh the legitimate source lock for all changed/new executable and test files only after B1 is fixed; keep the scientific protocol unchanged.",
+    "Create a new explicit same-ID0001 reconciliation record with immutable source bindings and old/new audit outcomes; do not overwrite the historical failed audit or original raw SUCCESS.",
+    "Run full ordinary and optimized CPU suites on the final clean refrozen snapshot and verify executable/config/test parity with its final report Head. Submit one consolidated final-version review package, not repeated per-function approval requests."
+  ],
+  "0001_observations": {
+    "run_id": "e3a-test-0001",
+    "task": "salad_dressing",
+    "init_index": 16,
+    "condition": "C0",
+    "system": "B0",
+    "published_raw_status": "SUCCESS",
+    "published_official_success": true,
+    "published_native_exit": 0,
+    "published_supervisor_exit": 0,
+    "policy_controls": 121,
+    "settling_controls": 10,
+    "policy_requests": 16,
+    "public_decision_sequence": "16 B0 ACCEPT decisions;15 prefixes of8 and final1, ending at121",
+    "G_A0_Shadow_experiment_evidence": "NONE",
+    "first_complete_A4_checkpoint": false,
+    "frozen_audit_exits_retained": [1, 1],
+    "candidate_readonly_audit_exits_executor_reported": [0, 0],
+    "current_published_primary_eligibility": "UNKNOWN_PENDING_RECONCILIATION",
+    "replay_allowed": false
+  },
+  "CPU_reconciliation": {
+    "decision": "CONDITIONALLY_AUTHORIZED_READ_ONLY_NO_REPLAY",
+    "reuse_existing_exact_identity_receipts": true,
+    "record_outside_original_run_directory": true,
+    "result_sha256": "c78ff39766f533f5fa6cb512404c2cc2ac95b266539cef4573709901300c9dcc",
+    "original_manifest_sha256": "d28191ccd311d56903a3bdd9c1fb93c868fdc76516855b4c2fd66bb38c32062a",
+    "reviewed_audit_integration_sha256": "9324bf0d5e8393415aaec9c169eaed33e56f1e0d1f50c5e4cf8e0afe565f165b",
+    "reviewed_manifest_module_sha256": "a6117e721100ca4d81924e1eaedbbe00a2bd9766516177c3b389d36df00d6e69",
+    "required_conditions": [
+      "Keep original0001/R017/859e40 identities and every original byte unchanged; no model or simulation calls.",
+      "Machine-verify all74 sealed files and all15 mandatory paths, with exact path/size/hash/source-run equality; retain complete78-file episode/process-receipt custody coverage.",
+      "Full existing actual-physics/oracle/action/claim/native-exit/supervisor eligibility checks must pass; manifest helper success alone is insufficient.",
+      "Bind existing exact normal/-O matching read-only receipts, or repeat only those CPU checks when identity cannot be established. State explicitly that private verification is executor-attested, not a reviewer private-byte rehash.",
+      "Keep frozen failure1/1, raw SUCCESS and all real process exits; publish new versioned reconciliation/analysis rather than rewriting historical frozen results."
+    ],
+    "if_all_conditions_verified": "A new reconciled analysis may mark original0001 eligible SUCCESS using the reviewed audit correction; all159 unstarted cells remain unknown in their fixed planned denominators.",
+    "otherwise": "Retain UNKNOWN; no blind eligibility promotion or replacement experiment."
+  },
+  "process_exit_interpretation": {
+    "controller": 1,
+    "server_native_returncode": -2,
+    "server_signal": 2,
+    "server_mapped_exit": 130,
+    "launcher": 1,
+    "interpretation": "Published receipts describe operator SIGINT after the audit stop. Preserve literal nonzero exits; no all-process-exit0 claim. No live Corelab process check performed by this reviewer."
+  },
+  "independent_verification": {
+    "git_blob_verified_files": {
+      "e3/audit_manifest.py": "0ff1a26db5a28a9ed1c41f168d61782518cbf88d",
+      "tase/e2_evidence.py": "c9180d5b2640a1f86809b75b043d9c4fdb3f5f56",
+      "tase/evidence.py": "8cbe5f3c6dceda0216542cf22ecdd29805dffe74",
+      "tests/test_e3_audit_manifest.py": "eee2ba0fe7263acff783b309fdf7f9f928cdffb6"
+    },
+    "original_new_manifest_tests": {"normal_passed": 12, "optimized_passed": 12, "actual_exits": [0, 0]},
+    "additional_reviewer_synthetic_tests": {"normal_passed": 6, "optimized_passed": 6, "actual_exits": [0, 0]},
+    "additional_cases": ["74-complete/15-mandatory old failure then repaired pass", "verified external runs-storage alias", "changed ownership marker denial", "wrong size denial", "missing manifest denial", "excluded late receipt symlink denial"],
+    "harness_scope": "Four complete source/test files matched Git blobs; exact require() helper extracted from discovery and inert package initializers. Scoped CPU tests, not full223 or native runtime.",
+    "refreeze_fixture_probe": "Synthetic Git history reproduced two expected missing-path exit128 failures; not an actual full candidate refreeze run.",
+    "CPU_snapshot_to_report_comparison": "GitHub compare84ce33... to5e3e... inspected: no executable/config/test delta.",
+    "full223_independently_rerun": false,
+    "full_video_independently_viewed": false,
+    "private74_or78_original_bytes_rehashed": false,
+    "private_E2_18070_originals_rehashed": false,
+    "new_model_calls": 0,
+    "new_simulator_calls": 0,
+    "new_TEST_reservations": 0
+  },
+  "executor_receipts_reviewed": {
+    "four_full_CPU_runs": "Local/Corelab ordinary/-O223, four published source-bound actual exits0; executor results, not reviewer reruns.",
+    "custody": "Published two-location whole/member proof inspected selectively; complete private files not accessed by reviewer.",
+    "E2": "Published full120 audit equivalence and18070-file preservation receipt; formalPR38 unchanged. E2 R3 not closed by R018."
+  },
+  "allowed_now": [
+    "Correct B1, add current-lock integration/negative tests and prepare a legitimate refrozen CPU candidate.",
+    "Perform the bounded0001 read-only reconciliation above and append a versioned record without altering originals.",
+    "Verify mixed-version history: preserve0001 under historicalR017/859e40; new native calls on modified code must still reject staleR017.",
+    "Preserve E2 and prepare documentation/statistics with E3 marked exploratory and incomplete."
+  ],
+  "future_native_boundary": "No native continuation authorized by R018. A later exact-final-head grant and fresh valid resource binding are needed. Future next untouched ID is0002, never0001; firstA4 checkpoint must include original0001 and0002-0004 with actual paired evidence. This night's stop remains latched.",
+  "forbidden": ["new GPU/model/server/MuJoCo/Shadow/TEST execution under this review", "replay or replace0001", "delete legitimate extra originals", "weaken exact manifest equality", "drop new files from source lock to make tests pass", "change thresholds/seeds/model/native action semantics or denominators", "pool E2 and E3 primary outcomes", "automatic merge or Canvas submission"]
+}
