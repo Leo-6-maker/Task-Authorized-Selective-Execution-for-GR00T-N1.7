@@ -12,6 +12,8 @@ from .processes import write
 def archive(workspace, stage, original_rows, extras, destination):
     workspace, destination = Path(workspace), Path(destination)
     require(not destination.exists(), 'exclusive new archive required')
+    require(len({row['path'] for row in original_rows}) == len(original_rows),
+            'duplicate original custody row')
     entries = {}
     for row in original_rows:
         path = Path(row['path'])

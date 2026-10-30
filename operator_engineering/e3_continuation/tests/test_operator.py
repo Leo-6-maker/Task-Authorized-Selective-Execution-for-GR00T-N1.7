@@ -19,6 +19,7 @@ from operator_engineering.e3_continuation.contract import (
     RUNTIME, LOCK, SGT, admission_contract, capacity, drive, blocks, validate_history)
 from operator_engineering.e3_continuation.custody import archive, verify_archive, second_copy
 from operator_engineering.e3_continuation.processes import Recorded, identity, live_same
+from operator_engineering.e3_continuation.backup_agent import Copier
 
 REPO = Path(__file__).resolve().parents[3]
 APPROVED = Path(os.environ['E3_APPROVED_CPU_REPO'])
@@ -268,6 +269,56 @@ class CustodyTests(unittest.TestCase):
             with self.assertRaises(ValueError):archive(self.root,'x',rows,[],self.root/'new.tar.gz')
         (self.root/'alias').symlink_to(self.root/'original.bin')
         with self.assertRaises(ValueError):archive(self.root,'x',[dict(self.rows[0],path='alias')],[],self.root/'new.tar.gz')
+    def test_duplicate_custody_rows_refused(self):
+        with self.assertRaises(ValueError):archive(self.root,'x',self.rows*2,[],self.root/'new.tar.gz')
+
+
+class LocalCPUTransport(Copier):
+    """Explicitly substitutes same-host Python subprocess for SSH, data-only."""
+    def remote(self,code,destination=None):
+        value=subprocess.run([sys.executable,'-c',code],stdout=destination or subprocess.PIPE,
+                             stderr=subprocess.PIPE,timeout=5)
+        if value.returncode:raise ValueError(value.stderr.decode())
+        return value.stdout
+
+
+class BackupTransportTests(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
+        self.root=Path(self.temp.name);self.workspace=self.root/'remote';self.workspace.mkdir()
+        stage=self.workspace/'evidence_exports/CPU-TEST';stage.mkdir(parents=True)
+        (self.workspace/'original').write_bytes(b'preserve')
+        rows=[dict(path='original',bytes=8,sha256=hashlib.sha256(b'preserve').hexdigest())]
+        self.receipt=archive(self.workspace,'CPU-TEST',rows,[],stage/'evidence.tar.gz')
+        self.config=dict(workspace=str(self.workspace),operator_directory=str(self.workspace/'operator'),
+            local_backup_root=str(self.root/'local'),
+            transport_argv=['ssh','-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','CPU-NOT-CONNECTED'])
+    def test_actual_generated_transfer_and_proof_programs(self):
+        agent=LocalCPUTransport(self.config,self.root/'receipts')
+        proof=agent.copy(self.receipt)
+        primary=self.workspace/'evidence_exports/CPU-TEST/second-copy-proof.json'
+        self.assertEqual(json.loads(primary.read_text()),proof)
+        self.assertEqual(proof['primary_archive_sha256'],proof['secondary_archive_sha256'])
+    def test_resume_partial_bytes_at_actual_offset(self):
+        dest=self.root/'local/CPU-TEST';dest.mkdir(parents=True)
+        source=(self.workspace/'evidence_exports/CPU-TEST/evidence.tar.gz').read_bytes()
+        (dest/'evidence.tar.gz.pending').write_bytes(source[:51])
+        agent=LocalCPUTransport(self.config,self.root/'receipts')
+        agent.copy(self.receipt)
+        self.assertEqual((dest/'evidence.tar.gz').read_bytes(),source)
+    def test_wrong_partial_hash_is_not_overwritten_or_proven(self):
+        dest=self.root/'local/CPU-TEST';dest.mkdir(parents=True)
+        (dest/'evidence.tar.gz.pending').write_bytes(b'x'*self.receipt['bytes'])
+        agent=LocalCPUTransport(self.config,self.root/'receipts')
+        with self.assertRaises(ValueError):agent.copy(self.receipt)
+        self.assertTrue((dest/'evidence.tar.gz.pending').exists())
+        self.assertFalse((dest/'second-copy-proof.json').exists())
+    def test_strict_host_verification_cannot_be_disabled(self):
+        self.config['transport_argv']=['ssh','-o','StrictHostKeyChecking=no','-o','BatchMode=yes','CPU-ONLY']
+        with self.assertRaises(ValueError):Copier(self.config,self.root/'receipts')
+    def test_nested_transport_also_requires_strict_host_verification(self):
+        self.config['nested_transport_argv']=['ssh','-o','StrictHostKeyChecking=no','CPU-ONLY']
+        with self.assertRaises(ValueError):Copier(self.config,self.root/'receipts')
 
 
 if __name__=='__main__':unittest.main()

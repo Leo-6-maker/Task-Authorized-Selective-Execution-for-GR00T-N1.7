@@ -28,6 +28,7 @@ def source_digest():
     """Bind every operator/transport module, independent of mutable report files."""
     root = Path(__file__).parent
     rows = {p.name: sha(p) for p in sorted(root.glob('*.py'))}
+    rows['../__init__.py'] = sha(root.parent/'__init__.py')
     return hashlib.sha256(json.dumps(rows, sort_keys=True,
                                      separators=(',', ':')).encode()).hexdigest()
 

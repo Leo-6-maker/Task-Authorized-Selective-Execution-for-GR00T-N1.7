@@ -67,12 +67,14 @@ class Copier:
         require(stage and all(c.isalnum() or c in '-_' for c in stage), 'unsafe archive stage')
         dest = Path(self.config['local_backup_root'])/stage
         dest.mkdir(mode=0o700, parents=True, exist_ok=True)
+        require(not dest.is_symlink(), 'redirected backup stage refused')
         marker = dest/'primary-receipt.json'
         if marker.exists():
             require(json.loads(marker.read_text()) == receipt, 'source archive receipt conflict')
         else:
             write(marker, receipt)
         final, partial = dest/'evidence.tar.gz', dest/'evidence.tar.gz.pending'
+        require(not final.is_symlink() and not partial.is_symlink(), 'redirected backup copy refused')
         remote_path = str(Path(self.config['workspace'])/'evidence_exports'/stage/'evidence.tar.gz')
         if not final.exists():
             with partial.open('ab') as out:
@@ -139,7 +141,23 @@ def main():
         for request in state['requests']:
             stage = request['receipt']['stage']
             if stage not in handled:
-                agent.copy(request['receipt'])
+                try:
+                    agent.copy(request['receipt'])
+                except BaseException as error:
+                    record = dict(type=type(error).__name__, message=str(error),
+                                  stage=stage, new_IDs_must_stop=True)
+                    write(agent.receipts/'COPY_ERROR.json', record)
+                    # No fake proof on error. Tell the operator to stop waiting,
+                    # retaining exact originals, partial transfer and failures.
+                    code = 'from pathlib import Path;import json\n'
+                    code += 'p=Path('+repr(str(Path(agent.config['operator_directory'])/
+                                               'BACKUP_INTEGRITY_ERROR.json'))+')\n'
+                    code += 'if not p.exists():p.open("x").write('+repr(json.dumps(record))+')\n'
+                    try:
+                        agent.remote(code)
+                    except Exception:
+                        pass  # Bounded operator deadline remains the final stop.
+                    raise
                 handled.add(stage)
         if state['terminal'] is not None:
             write(agent.receipts/'remote-terminal-observed.json', state['terminal'])
