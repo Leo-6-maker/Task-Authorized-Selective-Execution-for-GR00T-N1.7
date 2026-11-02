@@ -1,0 +1,41 @@
+{
+  "operation": "python [-O] -m e3.cli audit --repo [PINNED_NATIVE] --workspace [PRIVATE_WORKSPACE] --output [NEW_OUTPUT]",
+  "native_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "model_simulation_TEST_calls": 0,
+  "normal_optimized_outputs_equal": true,
+  "receipts": [
+    {
+      "mode": "normal",
+      "actual": {
+        "at": "2026-11-02T19:02:23.830395+08:00",
+        "child_returncode": 0,
+        "exit_code": 0,
+        "signal": null,
+        "deadline_exceeded": false,
+        "unexpected_descendant_after_parent_exit": false
+      },
+      "raw_exit_receipt_sha256": "fea7e8eb2589ca70780d480ca05c4291a9e1a093d03476fb7b032d771c56594c",
+      "raw_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": "2b4cb9612392814caf9878feb7f4077e529a20b0c5f682ab348893d5f7995ac9"
+    },
+    {
+      "mode": "optimized",
+      "actual": {
+        "at": "2026-11-02T19:02:34.772309+08:00",
+        "child_returncode": 0,
+        "exit_code": 0,
+        "signal": null,
+        "deadline_exceeded": false,
+        "unexpected_descendant_after_parent_exit": false
+      },
+      "raw_exit_receipt_sha256": "bf83fa908b95d5f0dabbfa3d0e1fcb02196d30e9976f57501fb4e70c264ba2c6",
+      "raw_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": "2b4cb9612392814caf9878feb7f4077e529a20b0c5f682ab348893d5f7995ac9"
+    }
+  ],
+  "historical_full_regression": "reports/E3/OWNER_GPU0_20261102/CPU_RECEIPTS.json",
+  "historical_full_regression_count": 282,
+  "full_282_suite_rerun_this_report_only_delivery": false
+}

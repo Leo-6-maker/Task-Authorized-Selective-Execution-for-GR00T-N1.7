@@ -1,0 +1,19 @@
+{
+  "receipt": {
+    "stage": "owner-e3-gpu0-0012-stop-and-recovery-20261102-01",
+    "bytes": 546398,
+    "sha256": "74ce5b7bcecfc646501180b06eed3e7a5e61ffb8fec8684385de60a165200eab",
+    "artifacts": 345,
+    "original_files": []
+  },
+  "proof": {
+    "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "stage": "owner-e3-gpu0-0012-stop-and-recovery-20261102-01",
+    "original_files": [],
+    "primary_archive_sha256": "74ce5b7bcecfc646501180b06eed3e7a5e61ffb8fec8684385de60a165200eab",
+    "secondary_archive_sha256": "74ce5b7bcecfc646501180b06eed3e7a5e61ffb8fec8684385de60a165200eab",
+    "archive_bytes": 546398,
+    "actual_copied_artifacts": 345,
+    "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER"
+  }
+}

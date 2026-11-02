@@ -1,0 +1,405 @@
+{
+  "checkpoint_archives": 36,
+  "terminal_custody_archives": 1,
+  "executor_verified_not_independent_private_review": true,
+  "archives": [
+    {
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0004",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "bf64eac8806b449600b08b12a9cd5a4aca08ab6b381bb6f39d05a11b988a7519",
+      "secondary_archive_sha256": "bf64eac8806b449600b08b12a9cd5a4aca08ab6b381bb6f39d05a11b988a7519",
+      "archive_bytes": 65012022,
+      "actual_copied_artifacts": 423,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 372
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0008",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "276a7b2c68cfd44a276caf08a64d831e860a12665bc9090198164b341128bcf2",
+      "secondary_archive_sha256": "276a7b2c68cfd44a276caf08a64d831e860a12665bc9090198164b341128bcf2",
+      "archive_bytes": 62710034,
+      "actual_copied_artifacts": 458,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 364
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0012",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "c42da3e7397dbcaaf021024c131fd5fcf5d29cee607ded1b3ddf51f655a8630b",
+      "secondary_archive_sha256": "c42da3e7397dbcaaf021024c131fd5fcf5d29cee607ded1b3ddf51f655a8630b",
+      "archive_bytes": 77207290,
+      "actual_copied_artifacts": 557,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 420
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0016",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "8fbd976bfce3837828af703cdd9cb194125ffbdf561839bd8e1c6b11293ec15c",
+      "secondary_archive_sha256": "8fbd976bfce3837828af703cdd9cb194125ffbdf561839bd8e1c6b11293ec15c",
+      "archive_bytes": 65056740,
+      "actual_copied_artifacts": 430,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 372
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0020",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "5064046a7132843c744ca7fbc4a77e7186cfc1c0109b5b6e3998185842a91038",
+      "secondary_archive_sha256": "5064046a7132843c744ca7fbc4a77e7186cfc1c0109b5b6e3998185842a91038",
+      "archive_bytes": 140868493,
+      "actual_copied_artifacts": 676,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 575
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0024",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "4dd835466edfa60aed101c35f4f428e26374f46c6c709b9b63a6a985ee8db35b",
+      "secondary_archive_sha256": "4dd835466edfa60aed101c35f4f428e26374f46c6c709b9b63a6a985ee8db35b",
+      "archive_bytes": 155787577,
+      "actual_copied_artifacts": 775,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 631
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0028",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "7af10bfec1a373fa5a41d2e279ac8d1e0621eacc2b565f0c35717542c70dbe94",
+      "secondary_archive_sha256": "7af10bfec1a373fa5a41d2e279ac8d1e0621eacc2b565f0c35717542c70dbe94",
+      "archive_bytes": 144431355,
+      "actual_copied_artifacts": 770,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 583
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0032",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "d0f463ffc7f779edf3b4bab0b7e2830cdde4a7341162222c1576360c5c5886b3",
+      "secondary_archive_sha256": "d0f463ffc7f779edf3b4bab0b7e2830cdde4a7341162222c1576360c5c5886b3",
+      "archive_bytes": 149202768,
+      "actual_copied_artifacts": 842,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 612
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0036",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "1dbe047942549aa4d45e832254c289b8ba92a7c74f115257018f02709a5341e2",
+      "secondary_archive_sha256": "1dbe047942549aa4d45e832254c289b8ba92a7c74f115257018f02709a5341e2",
+      "archive_bytes": 163935094,
+      "actual_copied_artifacts": 958,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 685
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0040",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "1d0be8482cd1fdb0a134ffa0a898d7fb58a49e75b3e9b5bb221041137f12e72c",
+      "secondary_archive_sha256": "1d0be8482cd1fdb0a134ffa0a898d7fb58a49e75b3e9b5bb221041137f12e72c",
+      "archive_bytes": 144889578,
+      "actual_copied_artifacts": 889,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 573
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0044",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "9f74699ee836e123c1ca982c60d9a493f73fba8b3f6c24e55a1e15716632a9d0",
+      "secondary_archive_sha256": "9f74699ee836e123c1ca982c60d9a493f73fba8b3f6c24e55a1e15716632a9d0",
+      "archive_bytes": 141579502,
+      "actual_copied_artifacts": 929,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 570
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0048",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "3c0574e1e7437907dcef9bb19e589291ff1503b1f20a302d0a800d153f4057c6",
+      "secondary_archive_sha256": "3c0574e1e7437907dcef9bb19e589291ff1503b1f20a302d0a800d153f4057c6",
+      "archive_bytes": 144196460,
+      "actual_copied_artifacts": 972,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 570
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0052",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "e96faaf28ac22c9c7447766eda3bfb519831949af3db2463db3a79b8e2a8fd84",
+      "secondary_archive_sha256": "e96faaf28ac22c9c7447766eda3bfb519831949af3db2463db3a79b8e2a8fd84",
+      "archive_bytes": 162508018,
+      "actual_copied_artifacts": 1098,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 653
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0056",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "bd65bd03c2bc6c7558a2382add98d3a470e4200ea969a753a62e77c98f843a78",
+      "secondary_archive_sha256": "bd65bd03c2bc6c7558a2382add98d3a470e4200ea969a753a62e77c98f843a78",
+      "archive_bytes": 157628597,
+      "actual_copied_artifacts": 1120,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 632
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0060",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "03b9b3ca78e1de8468273893610c34a6879945398920cecb821ff86a97caf6b1",
+      "secondary_archive_sha256": "03b9b3ca78e1de8468273893610c34a6879945398920cecb821ff86a97caf6b1",
+      "archive_bytes": 239125986,
+      "actual_copied_artifacts": 1527,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 996
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0064",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "04ecf3aaafc5a93c0f24a052debbbdbe13317bfde7ae2b1cc39486834c332c6b",
+      "secondary_archive_sha256": "04ecf3aaafc5a93c0f24a052debbbdbe13317bfde7ae2b1cc39486834c332c6b",
+      "archive_bytes": 243049294,
+      "actual_copied_artifacts": 1626,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 1052
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0068",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "92361a01c8632972066510fb9b49969ada0cba2ef85cecd7d346138f652b9685",
+      "secondary_archive_sha256": "92361a01c8632972066510fb9b49969ada0cba2ef85cecd7d346138f652b9685",
+      "archive_bytes": 73832123,
+      "actual_copied_artifacts": 1013,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 396
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0072",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "fad70242bafec7674fd1b71c86ed4f38f0a4b2636ccdab4db3b0a7980deeca44",
+      "secondary_archive_sha256": "fad70242bafec7674fd1b71c86ed4f38f0a4b2636ccdab4db3b0a7980deeca44",
+      "archive_bytes": 76123392,
+      "actual_copied_artifacts": 1064,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 404
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0076",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "324abe6084e3ed5ed27848d4d050f8e0d6d4fce4b4aa9da9291c410902e1d74f",
+      "secondary_archive_sha256": "324abe6084e3ed5ed27848d4d050f8e0d6d4fce4b4aa9da9291c410902e1d74f",
+      "archive_bytes": 73267641,
+      "actual_copied_artifacts": 1099,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 396
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0080",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "171e6805db25e76f4f13d0cdab3bce991485b72aa4817e4a6e09cc6412bf9271",
+      "secondary_archive_sha256": "171e6805db25e76f4f13d0cdab3bce991485b72aa4817e4a6e09cc6412bf9271",
+      "archive_bytes": 221407034,
+      "actual_copied_artifacts": 1726,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 980
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0084",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "24db38ba8d68dc959231ebd60ad3ac0f2f7ae77526d0786f7aeee1044ebed569",
+      "secondary_archive_sha256": "24db38ba8d68dc959231ebd60ad3ac0f2f7ae77526d0786f7aeee1044ebed569",
+      "archive_bytes": 85789818,
+      "actual_copied_artifacts": 1233,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 444
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0088",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "e81ba3eceda67d5679947436955a73fa604b80777e53d5106cf4c51a0b91ac62",
+      "secondary_archive_sha256": "e81ba3eceda67d5679947436955a73fa604b80777e53d5106cf4c51a0b91ac62",
+      "archive_bytes": 84913960,
+      "actual_copied_artifacts": 1268,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 436
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0092",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "05815a14d90d60f179d884b576d8f9a37e3894f5d227adc9dbad511384fab656",
+      "secondary_archive_sha256": "05815a14d90d60f179d884b576d8f9a37e3894f5d227adc9dbad511384fab656",
+      "archive_bytes": 80955561,
+      "actual_copied_artifacts": 1295,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 420
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0096",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "b69085715be1a07b6d23209bd8e3b5178eb3e2b8af9289650b0348e5ebb8d4d7",
+      "secondary_archive_sha256": "b69085715be1a07b6d23209bd8e3b5178eb3e2b8af9289650b0348e5ebb8d4d7",
+      "archive_bytes": 87126636,
+      "actual_copied_artifacts": 1362,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 444
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0100",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "ce19e4283d2d71dbf34f5b711ad98baa2348c699653150eed6442c228b6adad3",
+      "secondary_archive_sha256": "ce19e4283d2d71dbf34f5b711ad98baa2348c699653150eed6442c228b6adad3",
+      "archive_bytes": 143691620,
+      "actual_copied_artifacts": 1539,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 578
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0104",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "a5993844c91e0f330eb3049c97997960639b3f1ab110eae4c71202147c88463a",
+      "secondary_archive_sha256": "a5993844c91e0f330eb3049c97997960639b3f1ab110eae4c71202147c88463a",
+      "archive_bytes": 138289149,
+      "actual_copied_artifacts": 1558,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 554
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0108",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "5254a8c541284eaff3da25f0676a3831bd968a578a6e99b9dc34eac6314c6fb7",
+      "secondary_archive_sha256": "5254a8c541284eaff3da25f0676a3831bd968a578a6e99b9dc34eac6314c6fb7",
+      "archive_bytes": 146260433,
+      "actual_copied_artifacts": 1630,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 583
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3a-0112",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "61520830a69250e134ae5ced85f18498f3b0d87a55856a96e3204aaae549fe81",
+      "secondary_archive_sha256": "61520830a69250e134ae5ced85f18498f3b0d87a55856a96e3204aaae549fe81",
+      "archive_bytes": 143452014,
+      "actual_copied_artifacts": 1667,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 577
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0006",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "2b5cd566900e402859886382b26642eee68cdccf5e12b7a5746a70fd4e15b381",
+      "secondary_archive_sha256": "2b5cd566900e402859886382b26642eee68cdccf5e12b7a5746a70fd4e15b381",
+      "archive_bytes": 171909334,
+      "actual_copied_artifacts": 1865,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 720
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0012",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "5c89c3c09719e23ebcadf4cd09f048a6725d4bab0a48c80b13c43d2bd95d1578",
+      "secondary_archive_sha256": "5c89c3c09719e23ebcadf4cd09f048a6725d4bab0a48c80b13c43d2bd95d1578",
+      "archive_bytes": 172333052,
+      "actual_copied_artifacts": 1920,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 720
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0018",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "18ee30f1086e7efc6774c6ba802b48e6ff8d6911dfbf7963794a31a5e6d2bf40",
+      "secondary_archive_sha256": "18ee30f1086e7efc6774c6ba802b48e6ff8d6911dfbf7963794a31a5e6d2bf40",
+      "archive_bytes": 163473374,
+      "actual_copied_artifacts": 1945,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 690
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0024",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "31aa9527b28d03b9fd400186ea5e2af8d67f12cc551a6f7c1b107609106fb2bf",
+      "secondary_archive_sha256": "31aa9527b28d03b9fd400186ea5e2af8d67f12cc551a6f7c1b107609106fb2bf",
+      "archive_bytes": 171903593,
+      "actual_copied_artifacts": 2027,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 717
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0030",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "4d81cedbab7c85ebdb22dfdd38598b0b87bf322f995d7f32d0e6b63e3ae1beb0",
+      "secondary_archive_sha256": "4d81cedbab7c85ebdb22dfdd38598b0b87bf322f995d7f32d0e6b63e3ae1beb0",
+      "archive_bytes": 157167080,
+      "actual_copied_artifacts": 2078,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 713
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0036",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "b674393dc07f968988fd1f165c35be34c34d8a3ef30bdeb7c01f59b35780e6ce",
+      "secondary_archive_sha256": "b674393dc07f968988fd1f165c35be34c34d8a3ef30bdeb7c01f59b35780e6ce",
+      "archive_bytes": 184002856,
+      "actual_copied_artifacts": 2243,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 823
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0042",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "e4064392d6831ceba2549e3b2d6f6b2f4e8937978cfa7667af05be4567f4ab82",
+      "secondary_archive_sha256": "e4064392d6831ceba2549e3b2d6f6b2f4e8937978cfa7667af05be4567f4ab82",
+      "archive_bytes": 142415504,
+      "actual_copied_artifacts": 2144,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 669
+    },
+    {
+      "stage": "owner-e3-gpu0-20261102-02-e3b-0048",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "fc2722a73dc56328a9f94c32935c7f41ba6a2add95b45919a680652f70fd225f",
+      "secondary_archive_sha256": "fc2722a73dc56328a9f94c32935c7f41ba6a2add95b45919a680652f70fd225f",
+      "archive_bytes": 122248135,
+      "actual_copied_artifacts": 2133,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 603
+    },
+    {
+      "stage": "owner-e3-gpu0-final-custody-20261102-01",
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+      "primary_archive_sha256": "d63f884ce75893fb4b6ab08b830e4e681e03271af11af8c067dd22496b753f25",
+      "secondary_archive_sha256": "d63f884ce75893fb4b6ab08b830e4e681e03271af11af8c067dd22496b753f25",
+      "archive_bytes": 6219003,
+      "actual_copied_artifacts": 1996,
+      "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER",
+      "original_file_entries": 0
+    }
+  ],
+  "additional_fresh_CPU_review_archive": {
+    "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+    "stage": "owner-e3-final-CPU-review-20261102-01",
+    "original_files": [],
+    "primary_archive_sha256": "7c0f0ae38271273aa21adee1da74f972a267c276f8e8c05be6bc483d7ac4ea5d",
+    "secondary_archive_sha256": "7c0f0ae38271273aa21adee1da74f972a267c276f8e8c05be6bc483d7ac4ea5d",
+    "archive_bytes": 1237347,
+    "actual_copied_artifacts": 17,
+    "verification_by": "EXECUTOR_NOT_INDEPENDENT_SCIENTIFIC_REVIEWER"
+  },
+  "fresh_original_rehash": {
+    "timestamp_sgt": "2026-11-02T19:02:38.487188+08:00",
+    "status": "EXECUTOR_CPU_REVIEW_COMPLETE_PENDING_INDEPENDENT_SCIENTIFIC_REVIEW",
+    "audits_identical": true,
+    "audit_actual_exit_codes": [
+      0,
+      0
+    ],
+    "planned": 160,
+    "known": 160,
+    "checkpoints": 36,
+    "original_files_rehashed": 21527,
+    "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+    "authorization_source": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+    "independent_scientific_review": false,
+    "model_simulation_TEST_started": 0
+  },
+  "public_omits_raw_videos_arrays_and_private_identifiers": true
+}

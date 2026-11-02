@@ -6,6 +6,24 @@ from pathlib import Path
 import numpy as np
 from .contract import require
 from e3.ledger import ROOTS
+from e3.authorization import git
+
+
+def expected_gpu_index(repo, authorization):
+    """Authenticate each original's own grant; oldGPU1 and newGPU0 may coexist."""
+    ref = authorization['review_commit']+':'+authorization['review_path']
+    require(git(repo, 'rev-parse', ref) == authorization['review_blob'],
+            'physical-check historical grant blob differs')
+    grant = json.loads(git(repo, 'show', ref))
+    require(grant.get('authorized_head') == authorization['authorized_head'] and
+            grant.get('protocol_id') == 'E3-001-v1.0' and
+            grant.get('disposition') == 'E3_TEST_AUTHORIZED',
+            'physical-check original grant identity differs')
+    index = grant.get('authorized_physical_GPU_index',
+                      grant.get('standing_owner_scope', {}).get('gpu_index'))
+    require(type(index) is int and index in [0, 1],
+            'physical-check grant must explicitly name GPU0 or GPU1')
+    return index
 
 def check_block(R, REPO, block):
     """Read-only actual reset/physical-window checks; no protocol retuning."""
@@ -17,8 +35,9 @@ def check_block(R, REPO, block):
     comparisons=[]
     for cell in block:
         f=R/'runs'/ROOTS[cell['epoch']]/cell['run_id'];result=json.loads((f/'result.json').read_text())
+        expected_gpu = expected_gpu_index(REPO, result['authorization'])
         require(result['settling_steps']==10 and result['egl_binding_check']=='MATCH' and
-                result['egl_process_gpu_indices']==[1], 'actual reset/settling/EGL contract differs')
+                result['egl_process_gpu_indices']==[expected_gpu], 'actual reset/settling/EGL contract differs')
         parity=json.loads((f/'reset_parity.json').read_text())
         require(parity['state_unchanged'] is True and
                 all(parity['latest_native_observation_equal'].values()),'native reset parity failed')

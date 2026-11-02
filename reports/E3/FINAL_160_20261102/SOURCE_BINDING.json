@@ -1,0 +1,24 @@
+{
+  "native_protocol_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "fresh_review_archive_sha256": "7c0f0ae38271273aa21adee1da74f972a267c276f8e8c05be6bc483d7ac4ea5d",
+  "raw_unit_export_sha256": "cd19f40d67b7dcd6b459637617a848209c4d6604075838454d0a6e32757bd6b9",
+  "public_data_sha256": {
+    "AUDIT_FINAL_ORIGINAL.json": "2b4cb9612392814caf9878feb7f4077e529a20b0c5f682ab348893d5f7995ac9",
+    "CHECKPOINTS.json": "37d5fd4c9b3ebb7ef2a9e40eff5399f7d87f38081b3ddebaaf4bdb2e0a1e8512",
+    "CPU_AUDIT_RECEIPTS.json": "08022788b89ca2d5cdbfa54b51b67b36a51287e4681a0314a82f8e40da69867b",
+    "CUSTODY.json": "9a319729bac1041f053c998aea7b4f297d1148725543dc99fa036b22b57965d4",
+    "EXITS.json": "b5616e34c46332a3b3bc770f19ff1f3338bb5e01385d473ed21cd1b25f1c4fca",
+    "LEDGER.csv": "24b904303b434399527d9bde070459ec04eda8f95cbf535549265dd0974d9168",
+    "LEDGER.json": "0ae369795a4086c6f59ba6f8bf2a1f72df5d6f37d4344ebf132d57b14c57a54e",
+    "ORIGINAL_INVENTORY.json": "2469e2d17fd7ee0a2ffb067c023d2a689257726035aeb3a36a87a1d6f4a5368e",
+    "SCIENTIFIC_CONFIG_EQUIVALENCE.json": "3284286faf8389e516c459f295db9c68474222db9b58d16e348879bc78a42df2",
+    "GPU_SOURCE_SUPPLEMENT.json": "a718271ed39b219ca13482ff4f49d366305c62b4151d75ab3a38c5b68333fc1b",
+    "INDEPENDENT_FORMULA_CROSSCHECK.json": "11406609cd29cfda8f2b8b8610753a9fff4081b00c7b5b9232f6fb594c4ed955",
+    "DELIVERY_CHECK_RECEIPTS.json": "3d4c18626fde44da42de5d1553cd364023f90e074ad1ddd0adff9cd68400fd4f",
+    "HISTORICAL_LIVE_SNAPSHOT_151944.json": "de502c929eb335441dbd85aea45346eb29b5823ef2af66727ea3e9644bf0be84",
+    "AUTONOMOUS_STATUS.json": "0aa9ce4bc43d3a7e3419ccf7ca0bb6266a4976315cfca86d9e63ad68ce29cdcb"
+  },
+  "sanitization": "Only private process identifiers omitted from lifecycle/exit exports; original identities/hashes, outcome/control/timing values retained. Raw originals are in executor two-location archives.",
+  "frozen_statistics_status_label_retained": "PROPOSED_STATISTICAL_IMPLEMENTATION_NOT_REAL_E3_RESULTS",
+  "frozen_statistics_label_is_historical_metadata_not_current_data_state": true
+}

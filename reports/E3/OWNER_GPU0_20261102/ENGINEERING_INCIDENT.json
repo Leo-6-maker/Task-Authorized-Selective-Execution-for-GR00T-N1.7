@@ -1,0 +1,39 @@
+{
+  "original_actual_error": {
+    "kind": "OSError E2BIG",
+    "phase": "second-copy proof program sent as SSH argv",
+    "stopped_after_complete_native_cell": "e3a-test-0012",
+    "backup_agent_actual_exit": 1,
+    "controller_actual_exit": 1,
+    "policy_or_simulator_failed": false,
+    "no_failed_TEST_replay": true
+  },
+  "fix": "Send Python program through SSH stdin, never expand complete proof into argv; preserve true no-child spawn error",
+  "CPU_helper_failures_preserved": [
+    {
+      "kind": "FileNotFoundError before source preparation completed",
+      "actual_exit": 1,
+      "new_GPU_TEST": 0
+    },
+    {
+      "kind": "Generated CPU dry-run placeholder collision SyntaxError",
+      "actual_exit": 1,
+      "new_GPU_TEST": 0
+    },
+    {
+      "kind": "Missing blocks import in new CPU resume bridge",
+      "actual_exit": 1,
+      "new_GPU_TEST": 0,
+      "corrected_with_complete_bridge_IO_regression": true
+    }
+  ],
+  "final282_local_Corelab_normal_optimized": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "actual_original_prefix_CPU_dry_run_exit": 0,
+  "actual_same_stage_proof_recovery_SSH_exit": 0,
+  "old_errors_unchanged": true
+}

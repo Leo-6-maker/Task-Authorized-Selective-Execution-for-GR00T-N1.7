@@ -1,0 +1,22 @@
+{
+  "failure": {
+    "phase": "CPU_ONLY_PRELAUNCH_ADMISSION",
+    "actual_exit": 1,
+    "reason": "Native cwd selected old operator module before the explicit external source",
+    "model_calls": 0,
+    "TEST_reservations": 0
+  },
+  "correction": {
+    "external_source_cwd_explicit": true,
+    "corrected_admission_actual_exit": 0,
+    "native_source_unchanged": true,
+    "previous_failure_retained": true
+  },
+  "checkpoint_issue": {
+    "found_before_MODEL_and_TEST": true,
+    "old_assumption": "egl_process_gpu_indices==[1]",
+    "correction": "Authenticate device from each original grant; oldR017 standing_owner_scope1/newOwner explicit0",
+    "source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+    "independent_GPT_review_not_claimed": true
+  }
+}

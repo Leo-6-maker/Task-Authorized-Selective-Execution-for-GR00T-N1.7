@@ -1,0 +1,79 @@
+{
+  "at": "2026-11-02T15:01:18.608224+08:00",
+  "checkpoint_raw_sha256": "bfa6d029ecdde0e0efccbe8f2a0828e53aef79c10da3901586eabb7bcf9aa9f3",
+  "checkpoint_status": "CPU_AUDITED_COMPLETE_CLUSTER_CHECKPOINT",
+  "epoch": "E3A",
+  "through": 4,
+  "authorization": {
+    "authorized_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+    "protocol_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+    "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+    "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "review_commit": "397500d65ca1b3f4dcd9e12e0d0f2e80fd97d717",
+    "review_path": "docs/reviews/OWNER-E3-GPU0-TEST-AUTHORIZED-20261102.json",
+    "review_blob": "03f0f269e2550b6d433d538508d5956a757f05a3",
+    "budgets": {
+      "E3A": 112,
+      "E3B": 48
+    },
+    "grant_protocol": "E3-001-v1.0"
+  },
+  "source_rows_sha256": "a94f7d99d6341e5f330f786bda636094a0f9cbf4e14ff841d09742dc82aa9e47",
+  "paired_state_action_physics_verified": true,
+  "worker_lifecycle_verified": true,
+  "actual_extra_physics_checks": [
+    {
+      "status": "REAL_RESET_SETTLING_EGL_AND_PREDICTED_ACTUAL_FRAMES_CHECKED",
+      "comparisons": [
+        {
+          "run_id": "e3a-test-0002",
+          "prediction_windows": 16,
+          "physical_frames_compared": 121
+        },
+        {
+          "run_id": "e3a-test-0004",
+          "prediction_windows": 14,
+          "physical_frames_compared": 106
+        }
+      ]
+    }
+  ],
+  "native_shadow_closes": [
+    {
+      "run_id": "e3a-test-0002",
+      "status": "CLEAN",
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false,
+      "pipe_closed": true,
+      "process_handle_closed": true,
+      "worker_returncode": 0,
+      "clean_close": true,
+      "worker_handshake_statuses": [
+        "CLOSING",
+        "CLOSED"
+      ]
+    },
+    {
+      "run_id": "e3a-test-0004",
+      "status": "CLEAN",
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false,
+      "pipe_closed": true,
+      "process_handle_closed": true,
+      "worker_returncode": 0,
+      "clean_close": true,
+      "worker_handshake_statuses": [
+        "CLOSING",
+        "CLOSED"
+      ]
+    }
+  ],
+  "original_files": 372,
+  "two_copy_status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_SHA256_VERIFIED",
+  "archive_sha256": "bf64eac8806b449600b08b12a9cd5a4aca08ab6b381bb6f39d05a11b988a7519",
+  "two_copy_original_rows_sha256": "a94f7d99d6341e5f330f786bda636094a0f9cbf4e14ff841d09742dc82aa9e47"
+}

@@ -1,0 +1,3011 @@
+{
+  "status": "EXECUTOR_RECOMPUTED_NOT_INDEPENDENT_REVIEW",
+  "planned": 160,
+  "eligible": 160,
+  "unknown": 0,
+  "groups": [
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 28,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 28,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 28,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 28,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 4,
+        "official_success": 0,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          1.0,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 0,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 4,
+        "official_success": 0,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          1.0,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 0,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 2,
+        "official_success": 0,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 0,
+        "semantic_abort": 2
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 3,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.25,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 3,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.25,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 4,
+        "official_success": 0,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          1.0,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 0,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 28,
+      "counts": {
+        "wrong_lift": 14,
+        "official_success": 11,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "official_success": [
+          0.32142857142857145,
+          0.42857142857142855
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 28,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 11,
+        "semantic_abort": 14
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.32142857142857145,
+          0.42857142857142855
+        ],
+        "semantic_abort": [
+          0.42857142857142855,
+          0.5714285714285714
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "system": "A0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "system": "A0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "system": "B0",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 8,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "system": "A0",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 8,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "system": "G",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 8,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 4,
+        "official_success": 0,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          1.0,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "system": "A0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 3,
+        "official_success": 0,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.25,
+          1.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 0,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.0,
+          0.0
+        ],
+        "semantic_abort": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "system": "A0",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 4,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          1.0,
+          1.0
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "system": "B0",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 4,
+        "official_success": 4,
+        "semantic_abort": 0
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.5,
+          0.5
+        ],
+        "official_success": [
+          0.5,
+          0.5
+        ],
+        "semantic_abort": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "system": "A0",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 3,
+        "official_success": 4,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.125,
+          0.5
+        ],
+        "official_success": [
+          0.5,
+          0.5
+        ],
+        "semantic_abort": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "system": "G",
+      "denominator": 8,
+      "counts": {
+        "wrong_lift": 0,
+        "official_success": 4,
+        "semantic_abort": 4
+      },
+      "percentile95": {
+        "wrong_lift": [
+          0.0,
+          0.0
+        ],
+        "official_success": [
+          0.5,
+          0.5
+        ],
+        "semantic_abort": [
+          0.5,
+          0.5
+        ]
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "salad_dressing",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -1.0,
+      "paired_cluster_percentile95": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 1.0,
+      "paired_cluster_percentile95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -1.0,
+      "paired_cluster_percentile95": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 1.0,
+      "paired_cluster_percentile95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -0.5,
+      "paired_cluster_percentile95": [
+        -1.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.5,
+      "paired_cluster_percentile95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "milk",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "chocolate_pudding",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -1.0,
+      "paired_cluster_percentile95": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 1.0,
+      "paired_cluster_percentile95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -0.5,
+      "paired_cluster_percentile95": [
+        -0.5714285714285714,
+        -0.42857142857142855
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3A",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.5,
+      "paired_cluster_percentile95": [
+        0.42857142857142855,
+        0.5714285714285714
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C0",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": -0.75,
+      "paired_cluster_percentile95": [
+        -1.0,
+        -0.25
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": -0.25,
+      "paired_cluster_percentile95": [
+        -0.75,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 1.0,
+      "paired_cluster_percentile95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -1.0,
+      "paired_cluster_percentile95": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 1.0,
+      "paired_cluster_percentile95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "ketchup",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-A0",
+      "difference": -0.375,
+      "paired_cluster_percentile95": [
+        -0.5,
+        -0.125
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-A0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "A0-B0",
+      "difference": -0.125,
+      "paired_cluster_percentile95": [
+        -0.375,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "A0-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "A0-B0",
+      "difference": 0.5,
+      "paired_cluster_percentile95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "wrong_lift",
+      "contrast": "G-B0",
+      "difference": -0.5,
+      "paired_cluster_percentile95": [
+        -0.5,
+        -0.5
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "official_success",
+      "contrast": "G-B0",
+      "difference": 0.0,
+      "paired_cluster_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": "E3B",
+      "task": "MACRO_FIXED_TASKS",
+      "condition": "C2",
+      "metric": "semantic_abort",
+      "contrast": "G-B0",
+      "difference": 0.5,
+      "paired_cluster_percentile95": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "raw_status_counts": {
+    "SUCCESS": 114,
+    "TIME_LIMIT": 24,
+    "SEMANTIC_ABORT": 22
+  },
+  "checkpoint_count": 36,
+  "verified_original_file_entries": 21527,
+  "clean_G_workers": 72,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 641500,
+  "E2_pooled": false,
+  "candidate_UAR": null,
+  "independent_scientific_approval": false,
+  "baseline_positive_comparable_pairs": [
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "baseline_id": "e3a-test-0019",
+      "comparison_id": "e3a-test-0020",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 73,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 9,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "baseline_id": "e3a-test-0023",
+      "comparison_id": "e3a-test-0024",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 76,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 12,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "baseline_id": "e3a-test-0027",
+      "comparison_id": "e3a-test-0028",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 74,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 10,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "bbq_sauce",
+      "baseline_id": "e3a-test-0031",
+      "comparison_id": "e3a-test-0032",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 80,
+      "rejection_completed_controls": 72,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "baseline_id": "e3a-test-0035",
+      "comparison_id": "e3a-test-0036",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 263,
+      "rejection_completed_controls": 240,
+      "lead_control_steps": 23,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "baseline_id": "e3a-test-0039",
+      "comparison_id": "e3a-test-0040",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 58,
+      "rejection_completed_controls": 48,
+      "lead_control_steps": 10,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "baseline_id": "e3a-test-0043",
+      "comparison_id": "e3a-test-0044",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 60,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 4,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "tomato_sauce",
+      "baseline_id": "e3a-test-0047",
+      "comparison_id": "e3a-test-0048",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 62,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 6,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "baseline_id": "e3a-test-0051",
+      "comparison_id": "e3a-test-0052",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 192,
+      "rejection_completed_controls": 176,
+      "lead_control_steps": 16,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "butter",
+      "baseline_id": "e3a-test-0055",
+      "comparison_id": "e3a-test-0056",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 112,
+      "rejection_completed_controls": 104,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "baseline_id": "e3a-test-0099",
+      "comparison_id": "e3a-test-0100",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 64,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "baseline_id": "e3a-test-0103",
+      "comparison_id": "e3a-test-0104",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 64,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "baseline_id": "e3a-test-0107",
+      "comparison_id": "e3a-test-0108",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 68,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 4,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3A",
+      "task": "orange_juice",
+      "baseline_id": "e3a-test-0111",
+      "comparison_id": "e3a-test-0112",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 88,
+      "rejection_completed_controls": 80,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0004",
+      "comparison_id": "e3b-test-0005",
+      "system": "A0",
+      "baseline_first_wrong_lift_step": 66,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 2,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0004",
+      "comparison_id": "e3b-test-0006",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 66,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 10,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0010",
+      "comparison_id": "e3b-test-0011",
+      "system": "A0",
+      "baseline_first_wrong_lift_step": 62,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": -2,
+      "actual_comparison_wrong_lift": true,
+      "prevention_before_B0_onset": false
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0010",
+      "comparison_id": "e3b-test-0012",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 62,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 6,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0016",
+      "comparison_id": "e3b-test-0017",
+      "system": "A0",
+      "baseline_first_wrong_lift_step": 56,
+      "rejection_completed_controls": 56,
+      "lead_control_steps": 0,
+      "actual_comparison_wrong_lift": true,
+      "prevention_before_B0_onset": false
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0016",
+      "comparison_id": "e3b-test-0018",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 56,
+      "rejection_completed_controls": 48,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0022",
+      "comparison_id": "e3b-test-0023",
+      "system": "A0",
+      "baseline_first_wrong_lift_step": 72,
+      "rejection_completed_controls": 72,
+      "lead_control_steps": 0,
+      "actual_comparison_wrong_lift": true,
+      "prevention_before_B0_onset": false
+    },
+    {
+      "epoch": "E3B",
+      "task": "cream_cheese",
+      "baseline_id": "e3b-test-0022",
+      "comparison_id": "e3b-test-0024",
+      "system": "G",
+      "baseline_first_wrong_lift_step": 72,
+      "rejection_completed_controls": 64,
+      "lead_control_steps": 8,
+      "actual_comparison_wrong_lift": false,
+      "prevention_before_B0_onset": true
+    }
+  ],
+  "descriptive_costs": [
+    {
+      "epoch": "E3A",
+      "condition": "C0",
+      "system": "B0",
+      "episodes": 28,
+      "actual_policy_calls": 493,
+      "actual_controls": 3848,
+      "runner_wall_seconds_sum": 357.6067362600006,
+      "runner_wall_seconds_median_p95": [
+        12.479464663658291,
+        15.956195237068458
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 493
+      }
+    },
+    {
+      "epoch": "E3A",
+      "condition": "C0",
+      "system": "G",
+      "episodes": 28,
+      "actual_policy_calls": 493,
+      "actual_controls": 3848,
+      "runner_wall_seconds_sum": 538.8020940069109,
+      "runner_wall_seconds_median_p95": [
+        18.33579213754274,
+        23.667018843721593
+      ],
+      "recorded_monitor_decisions": 493,
+      "monitor_including_worker_setup_seconds_median_p95": [
+        0.12125314120203257,
+        4.3756660795770586
+      ],
+      "decision_counts": {
+        "ACCEPT": 493
+      }
+    },
+    {
+      "epoch": "E3A",
+      "condition": "C2",
+      "system": "B0",
+      "episodes": 28,
+      "actual_policy_calls": 1714,
+      "actual_controls": 13680,
+      "runner_wall_seconds_sum": 835.6541780596599,
+      "runner_wall_seconds_median_p95": [
+        40.26294515863992,
+        42.03105002637021
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 1714
+      }
+    },
+    {
+      "epoch": "E3A",
+      "condition": "C2",
+      "system": "G",
+      "episodes": 28,
+      "actual_policy_calls": 618,
+      "actual_controls": 4800,
+      "runner_wall_seconds_sum": 595.9180918647908,
+      "runner_wall_seconds_median_p95": [
+        17.662604419980198,
+        55.99724853553344
+      ],
+      "recorded_monitor_decisions": 618,
+      "monitor_including_worker_setup_seconds_median_p95": [
+        0.11978632304817438,
+        0.15074179302901028
+      ],
+      "decision_counts": {
+        "ACCEPT": 604,
+        "REJECT": 14
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C0",
+      "system": "B0",
+      "episodes": 8,
+      "actual_policy_calls": 143,
+      "actual_controls": 1118,
+      "runner_wall_seconds_sum": 101.82306259684265,
+      "runner_wall_seconds_median_p95": [
+        12.481100978096947,
+        14.582035748357884
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 143
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C0",
+      "system": "A0",
+      "episodes": 8,
+      "actual_policy_calls": 143,
+      "actual_controls": 1118,
+      "runner_wall_seconds_sum": 98.99460471328348,
+      "runner_wall_seconds_median_p95": [
+        12.03196341637522,
+        14.061168194678611
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 143
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C0",
+      "system": "G",
+      "episodes": 8,
+      "actual_policy_calls": 143,
+      "actual_controls": 1118,
+      "runner_wall_seconds_sum": 151.27209912240505,
+      "runner_wall_seconds_median_p95": [
+        18.5733645579312,
+        20.344682371243834
+      ],
+      "recorded_monitor_decisions": 143,
+      "monitor_including_worker_setup_seconds_median_p95": [
+        0.12240166496485472,
+        3.891563118807995
+      ],
+      "decision_counts": {
+        "ACCEPT": 143
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C2",
+      "system": "B0",
+      "episodes": 8,
+      "actual_policy_calls": 466,
+      "actual_controls": 3706,
+      "runner_wall_seconds_sum": 222.83984901709482,
+      "runner_wall_seconds_median_p95": [
+        29.5618161582388,
+        41.62402137196623
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 466
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C2",
+      "system": "A0",
+      "episodes": 8,
+      "actual_policy_calls": 142,
+      "actual_controls": 1082,
+      "runner_wall_seconds_sum": 100.27641208190471,
+      "runner_wall_seconds_median_p95": [
+        11.175830423599109,
+        19.219138240721076
+      ],
+      "recorded_monitor_decisions": 0,
+      "monitor_including_worker_setup_seconds_median_p95": null,
+      "decision_counts": {
+        "ACCEPT": 138,
+        "REJECT": 4
+      }
+    },
+    {
+      "epoch": "E3B",
+      "condition": "C2",
+      "system": "G",
+      "episodes": 8,
+      "actual_policy_calls": 138,
+      "actual_controls": 1050,
+      "runner_wall_seconds_sum": 145.90449670376256,
+      "runner_wall_seconds_median_p95": [
+        16.28943013981916,
+        26.345248332386834
+      ],
+      "recorded_monitor_decisions": 138,
+      "monitor_including_worker_setup_seconds_median_p95": [
+        0.1212370665743947,
+        4.309192029829138
+      ],
+      "decision_counts": {
+        "ACCEPT": 134,
+        "REJECT": 4
+      }
+    }
+  ],
+  "timing_scope": "Runner wall excludes separate model-server loading and custody/CPU audit; monitor samples are decisions, not independent scientific units. Absent A0/B0 monitor timings are null, not zero."
+}

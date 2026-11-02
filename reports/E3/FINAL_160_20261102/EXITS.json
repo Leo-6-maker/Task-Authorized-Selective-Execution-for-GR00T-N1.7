@@ -1,0 +1,62 @@
+{
+  "current_controller": {
+    "completed_at_sgt": "2026-11-02T17:31:36.911576+08:00",
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "current_server": {
+    "completed_at_sgt": "2026-11-02T17:31:36.534396+08:00",
+    "child_returncode": -2,
+    "exit_code": 130,
+    "signal": 2
+  },
+  "current_server_launcher": {
+    "exit_code": 1,
+    "classification": "EXPECTED_BY_UNCHANGED_EXTERNAL_CLOSE_CONTRACT_WHEN_NATIVE_SIGINT130",
+    "source": "final terminal archive / recorded SERVER_ACTUAL_EXIT event",
+    "raw_receipt_retained": true,
+    "actual_returncode": 1,
+    "signal": null,
+    "at": "2026-11-02T17:31:36.712820+08:00",
+    "raw_event_file_sha256": "d2e2aa7eebce0456b633f50eb28175b0d95d5538c3876954df8448b47f3f5a2d"
+  },
+  "backup_agent": {
+    "completed_at_sgt": "2026-11-02T17:31:52.455720+08:00",
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "terminal_custody_monitor": {
+    "completed_at_sgt": "2026-11-02T17:32:12.582352+08:00",
+    "child_returncode": 0,
+    "exit_code": 0,
+    "signal": null
+  },
+  "episode_native_exit_counts": {
+    "0": 160
+  },
+  "earlier_transport_incident": {
+    "controller_exit": 1,
+    "backup_agent_exit": 1,
+    "server_exit": 130,
+    "server_signal": 2,
+    "launcher_exit": 1,
+    "failure": "BACKUP_PROOF_TRANSPORT_E2BIG",
+    "consumed_at_stop": 12,
+    "same_originals_recovered_without_replay": true,
+    "old_error_receipts_unchanged": true
+  },
+  "original_0001": {
+    "native_exit": 0,
+    "supervisor_exit": 0,
+    "original_frozen_audits": [
+      1,
+      1
+    ],
+    "accepted_versioned_readonly_reconciliation": "R019",
+    "acquisition_head": "859e40b5f460365a8853bf3486969e9f8e28951c"
+  },
+  "raw_closure_sha256": "f6880a48d1bb8af191bba0a395ce4e2f6ab9fa20e0c206172b02b3a133f95237",
+  "all_zero_exit_claim": false
+}

@@ -41,6 +41,22 @@ def fixture_grant():
 
 
 class ContractTests(unittest.TestCase):
+    def test_explicit_12_original_resume_scope_requires_complete_digest(self):
+        grant=fixture_grant();c=grant['continuation']
+        c.update(completed_prefix=12,first_new_id='e3a-test-0013',
+            preserve_history_ids=[v['run_id'] for v in CELLS[:12]],
+            remaining={'E3A':100,'E3B':48},release_completed_transport_stop=True,
+            completed_prefix_original_rows_sha256='a'*64,recovery_evidence_sha256='b'*64)
+        result=admission_contract(grant,dict(authorized_head=RUNTIME,protocol_lock_sha256=LOCK),
+                                 dt.datetime(2026,10,31,1,tzinfo=SGT),'SYNTHETIC_ONLY')
+        self.assertEqual(result['completed_prefix'],12)
+        for key,bad in [('completed_prefix',13),('completed_prefix',True),
+                        ('recovery_evidence_sha256',''),('release_completed_transport_stop',False),
+                        ('first_new_id','e3a-test-0002'),('preserve_history_ids',['e3a-test-0001'])]:
+            changed=copy.deepcopy(grant);changed['continuation'][key]=bad
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                admission_contract(changed,dict(authorized_head=RUNTIME,protocol_lock_sha256=LOCK),
+                                   dt.datetime(2026,10,31,1,tzinfo=SGT),'SYNTHETIC_ONLY')
     def test_explicit_current_window_and_source_required(self):
         grant = fixture_grant()
         result = admission_contract(grant, dict(authorized_head=RUNTIME,
@@ -141,6 +157,26 @@ class SyntheticBackend:
 
 
 class StateMachineTests(unittest.TestCase):
+    def test_explicit_12_prefix_only_runs_remaining148_without_replaying_checkpoints(self):
+        backend=SyntheticBackend();backend.count=backend.completed_prefix=12
+        backend.verify_completed_prefix=lambda:backend.saved.append('CPU_verified12')
+        drive(backend)
+        self.assertEqual(backend.ids,[c['run_id'] for c in CELLS[12:]])
+        self.assertEqual(len(backend.ids),148)
+        self.assertEqual(backend.checkpoints[0],('E3A',16))
+        self.assertNotIn(('E3A',12),backend.checkpoints)
+        self.assertIn('CPU_verified12',backend.saved)
+
+    def test_prefix_digest_or_progress_failure_has_no_model_or_new_ID(self):
+        backend=SyntheticBackend();backend.count=backend.completed_prefix=12
+        def corrupt():raise ValueError('CPU changed original digest')
+        backend.verify_completed_prefix=corrupt
+        with self.assertRaises(ValueError):drive(backend)
+        self.assertEqual(backend.ids,[])
+        self.assertNotIn('synthetic_server_start',backend.saved)
+        backend=SyntheticBackend();backend.count=11;backend.completed_prefix=12
+        with self.assertRaises(ValueError):drive(backend)
+        self.assertNotIn('synthetic_server_start',backend.saved)
     def test_once_only159_and_all_36_checkpoints_automatic(self):
         backend=SyntheticBackend();drive(backend)
         self.assertEqual(backend.ids,[c['run_id'] for c in CELLS[1:]])
@@ -257,6 +293,83 @@ class ActualAdmissionDenialTests(unittest.TestCase):
 
 
 class NativeResourceAndSocketTests(unittest.TestCase):
+    def test_CPU_prefix_bridge_rechecks_old_checkpoints_and_exclusively_records_new_one(self):
+        from operator_engineering.e3_continuation.native import NativeBackend
+        def rows(folders):
+            return [dict(path='runs/E3A_TEST/'+f.name+'/CPU-only',bytes=0,sha256='a'*64) for f in folders]
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);op=root/'new-operator';op.mkdir()
+            checkpoints=root/'operator/e3-checkpoints';checkpoints.mkdir(parents=True)
+            folders=[root/'runs/E3A_TEST'/c['run_id'] for c in CELLS[:12]]
+            past={}
+            for end in [4,8,12]:
+                proof=dict(stage='CPU-only-'+str(end),primary_archive_sha256='a'*64)
+                past[end]=dict(status='CPU_AUDITED_COMPLETE_CLUSTER_CHECKPOINT',epoch='E3A',through=end,
+                    source_rows=rows(folders[end-4:end]),two_copy_proof=proof,
+                    paired_state_action_physics_verified=True,worker_lifecycle_verified=True)
+                export=root/'evidence_exports'/proof['stage'];export.mkdir(parents=True)
+                (export/'receipt.json').write_text(json.dumps(dict(sha256='a'*64)))
+                if end<12:(checkpoints/f'E3A-{end:04d}.json').write_text(json.dumps(past[end]))
+            recovery=root/'CPU-recovery.json';recovery.write_text(json.dumps(dict(
+                status='CPU_RECONCILED_EXISTING_CLUSTER_NO_LIVE_RELEASE',original_stop_preserved=True,
+                new_model_calls=0,new_TEST_reservations=0,computed_checkpoint=past[12])))
+            b=NativeBackend.__new__(NativeBackend);b.workspace=root;b.repo=APPROVED;b.op=op
+            b.map=dict(readonly_recovery_evidence=str(recovery));b.cells=CELLS;b.completed_prefix=12;b.auth={'CPU_ONLY':True}
+            b.continuation=dict(recovery_evidence_sha256=hashlib.sha256(recovery.read_bytes()).hexdigest(),
+                completed_prefix_original_rows_sha256=hashlib.sha256(json.dumps(rows(folders),sort_keys=True,separators=(',',':')).encode()).hexdigest())
+            with patch('e3.checkpoint.original_inventory',side_effect=lambda w,fs:rows(fs)),\
+                 patch('e3.checkpoint.require_backup'),\
+                 patch('operator_engineering.e3_continuation.native.verify_archive') as archive_check,\
+                 patch('operator_engineering.e3_continuation.physics_checks.check_block'),\
+                 patch('e3.checkpoint.build',return_value=past[12]) as build:
+                b.verify_completed_prefix()
+                self.assertEqual(json.loads((checkpoints/'E3A-0012.json').read_text()),past[12])
+                self.assertEqual(archive_check.call_count,3)
+                build.assert_called_once()
+            changed=copy.deepcopy(past[4]);changed['worker_lifecycle_verified']=False
+            (checkpoints/'E3A-0004.json').write_text(json.dumps(changed))
+            with patch('e3.checkpoint.original_inventory',side_effect=lambda w,fs:rows(fs)),\
+                 patch('e3.checkpoint.require_backup'),\
+                 patch('operator_engineering.e3_continuation.native.verify_archive'),\
+                 patch('e3.checkpoint.build') as build:
+                with self.assertRaisesRegex(ValueError,'earlier checkpoint'):b.verify_completed_prefix()
+                build.assert_not_called()
+
+    def test_checkpoint_mixed_history_uses_each_authenticated_grants_GPU(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        common=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                    authorized_head='c'*40)
+        for grant,expected in [(dict(common,standing_owner_scope=dict(gpu_index=1)),1),
+                               (dict(common,authorized_physical_GPU_index=0),0)]:
+            with self.subTest(GPU=expected),patch('operator_engineering.e3_continuation.physics_checks.git',
+                side_effect=['b'*40,json.dumps(grant)]):
+                self.assertEqual(expected_gpu_index(APPROVED,auth),expected)
+
+    def test_checkpoint_physical_scope_unknown_or_malformed_is_rejected(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        common=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                    authorized_head='c'*40)
+        for bad in [None,True,'0',2]:
+            with self.subTest(GPU=bad),patch('operator_engineering.e3_continuation.physics_checks.git',
+                side_effect=['b'*40,json.dumps(dict(common,authorized_physical_GPU_index=bad))]):
+                with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+
+    def test_checkpoint_physical_scope_rejects_changed_grant_identity(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        with patch('operator_engineering.e3_continuation.physics_checks.git',return_value='d'*40):
+            with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+        grant=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                   authorized_head='d'*40,authorized_physical_GPU_index=0)
+        with patch('operator_engineering.e3_continuation.physics_checks.git',
+                   side_effect=['b'*40,json.dumps(grant)]):
+            with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+
     def test_real_new_and_retained_lock_exclusion_without_deletion(self):
         from operator_engineering.e3_continuation.processes import controller_lock
         with tempfile.TemporaryDirectory() as t:
@@ -373,6 +486,35 @@ class BackupTransportTests(unittest.TestCase):
         primary=self.workspace/'evidence_exports/CPU-TEST/second-copy-proof.json'
         self.assertEqual(json.loads(primary.read_text()),proof)
         self.assertEqual(proof['primary_archive_sha256'],proof['secondary_archive_sha256'])
+
+    def test_large_proof_program_streams_stdin_through_small_nested_SSH_argv(self):
+        self.config['nested_transport_argv']=['ssh','-o','StrictHostKeyChecking=yes',
+                                            '-o','BatchMode=yes','CPU-ONLY']
+        agent=Copier(self.config,self.root/'receipts')
+        actual_run=subprocess.run;commands=[]
+        # Only substitute SSH transport with a real local Python child. Exercise
+        # the real Copier.remote input/stdout/receipts and a256KiB program.
+        def CPU_transport(command,**kwargs):
+            commands.append(command)
+            self.assertLess(max(map(len,command)),4096)
+            self.assertGreater(len(kwargs['input']),256*1024)
+            return actual_run([sys.executable,'-'],**kwargs)
+        code='payload='+repr('x'*(256*1024))+'\nprint(len(payload))\n'
+        with patch('operator_engineering.e3_continuation.backup_agent.subprocess.run',
+                   side_effect=CPU_transport):
+            self.assertEqual(agent.remote(code),b'262144\n')
+        self.assertEqual(len(commands),1)
+        self.assertEqual(json.loads((self.root/'receipts/transport-00001.exit.json').read_text())['actual_exit'],0)
+
+    def test_transport_spawn_error_is_preserved_as_no_child(self):
+        agent=Copier(self.config,self.root/'receipts')
+        with patch('operator_engineering.e3_continuation.backup_agent.subprocess.run',
+                   side_effect=OSError(7,'Argument list too long')):
+            with self.assertRaises(OSError):agent.remote('print(1)')
+        receipt=json.loads((self.root/'receipts/transport-00001.exit.json').read_text())
+        self.assertIsNone(receipt['actual_exit'])
+        self.assertFalse(receipt['child_created'])
+        self.assertEqual(receipt['errno'],7)
     def test_resume_partial_bytes_at_actual_offset(self):
         dest=self.root/'local/CPU-TEST';dest.mkdir(parents=True)
         source=(self.workspace/'evidence_exports/CPU-TEST/evidence.tar.gz').read_bytes()
