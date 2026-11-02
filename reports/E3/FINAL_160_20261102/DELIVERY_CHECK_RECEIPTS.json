@@ -66,5 +66,12 @@
     "raw_evidence": "Codex tool execution receipt retained",
     "model_simulation_TEST_calls": 0
   },
-  "independent_scientific_approval": false
+  "independent_scientific_approval": false,
+  "publication_preflight_finding": {
+    "kind": "GIT_CSV_EOL_NORMALIZATION",
+    "first_unpublished_report_commit": "7234375c6bbbef8d89c9e8f995da49d543055798",
+    "detected": "Git normalized CSV CRLF to LF; pre-push Git-blob comparison found CSV hash mismatch",
+    "repair": "Normalize local CSV to committed LF and refresh source/global manifests; scientific values unchanged",
+    "model_simulation_TEST_calls": 0
+  }
 }
