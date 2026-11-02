@@ -1,0 +1,60 @@
+{
+  "authorization_id": "OWNER-E3-GPU0-20261102",
+  "disposition": "E3_TEST_AUTHORIZED",
+  "protocol_id": "E3-001-v1.0",
+  "authorization_source": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "recorded_by_role": "Codex executor, not independent reviewer",
+  "independent_GPT_runtime_review_completed": false,
+  "independent_scientific_results_review_completed": false,
+  "attestation_type": "Recorded explicit owner instruction; not a cryptographic signature or GPT review",
+  "owner_replaced_independent_runtime_admission_for_this_exact_execution": true,
+  "owner_instruction_evidence_sha256": "7dad90592e5ea0031c062791890d984f6d23009cb5bdc9689b6c89343224b48f",
+  "owner_instruction_recorded_at_sgt": "2026-11-02T14:49:29.813311+08:00",
+  "authorized_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "protocol_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "cells_file_sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+  "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "gpu_resource_config_sha256": "8476d611f0933a97906e905bf10d379a18da6da5f48edb8ab906e2c2a80b1e77",
+  "authorized_physical_GPU_index": 0,
+  "budgets": {
+    "E3A": 112,
+    "E3B": 48
+  },
+  "gate_k": 3,
+  "bootstrap_seed": 641500,
+  "maximum_controls": 720,
+  "resource_authorization_required": true,
+  "automatic_GPU_fallback": false,
+  "retained_limits": {
+    "minimum_free_MiB": 9216,
+    "maximum_process_fraction": 0.55,
+    "reserved_free_MiB": 2048
+  },
+  "continuation": {
+    "release_prior_incident_stop": true,
+    "first_new_id": "e3a-test-0002",
+    "preserve_history_ids": [
+      "e3a-test-0001"
+    ],
+    "remaining": {
+      "E3A": 111,
+      "E3B": 48
+    },
+    "operator_source_sha256": "ee32d4a679365a542b43638c8d6bfe98355daa6b9d6298b3c338e75ee65fd8e1",
+    "execution_window_sgt": {
+      "start": "2026-11-02T14:49:29.813311+08:00",
+      "no_new_reservations_after": "2026-11-05T20:00:00+08:00",
+      "end": "2026-11-05T21:00:00+08:00"
+    }
+  },
+  "retained_constraints": [
+    "Exact PR44 runtime and source lock; no runtime mutation while collecting",
+    "Original0001 remains859e40/R017 with historical audit failures and versioned reconciliation",
+    "FirstA4 historical0001 plus new0002–0004; A4/B6 require genuine physics/RNG/lifecycle/two-copy checks",
+    "Normal scientific negative outcomes continue; actual native/evidence/resource error stops new IDs and preserves consumption",
+    "No replay or substituted ID; no Gate/k/TaskSpec/Oracle/model/task/init/seed/statistic changes",
+    "No automatic PR merge or Canvas submission; no experiments6November; E2 remains independent"
+  ],
+  "historical_R019_decision_unchanged": true,
+  "scientific_results_not_self_approved": true
+}
