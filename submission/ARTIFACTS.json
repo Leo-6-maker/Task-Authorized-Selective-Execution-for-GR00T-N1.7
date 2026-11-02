@@ -1,0 +1,12 @@
+{
+  "edition": "ME6401_FINAL_E2E3_20261102",
+  "binary_delivery": "Conversation attachments; repository retains exact builder and checksums, not the binary PPTX/PDF",
+  "deck_structure": "1 cover + 15 content + 1 reference",
+  "owner_identity_complete": false,
+  "files": {
+    "ME6401_TASE_Final_E2E3.pptx": {"bytes": 95315, "sha256": "e944479b93389132e9a39e57913d4cc130692d91495177a810514235a27d0a35"},
+    "ME6401_TASE_Final_E2E3.pdf": {"bytes": 464835, "sha256": "d96b8267391b2758c3921745e892a70794a48e81dd62a244779b92ecd9c8dcc0"},
+    "submission/build_final_deck.py": {"bytes": 24584, "sha256": "f71e05731b356aed828ab59af29959eb85693f37fdd81c0dcdf785219648b24f", "git_blob": "15976617486b8d644de1b0a0ef975de4d865ca58"},
+    "tools/verify_release.py": {"bytes": 8026, "sha256": "4771f2134989287b9b0fcac6333dede4f4029e222ace0797d64372c139b30b28", "git_blob": "886358471d287d12691131d5f33d5c39a1cbfc22"}
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "review_id": "R020",
+  "review_date_sgt": "2026-11-02",
+  "review_kind": "E3 R3 independent public-evidence scientific result review and ME6401 readiness assessment",
+  "reviewed_PR": 45,
+  "reviewed_exact_report_head": "36dacd6bcc06dab534330758dcf5708209ffdad8",
+  "reviewed_native_execution_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "reviewed_operator_source_head": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+  "source_locked_protocol_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "disposition": "QUALIFIED_ACCEPTANCE_PUBLIC_E3_RESULTS_COURSE_INTEGRATION_PENDING",
+  "attestation_level": "Public source and Git-linked artifact review; NOT a cryptographic signature, independent private raw-file rehash, live Corelab authentication, original Owner-message verification, native simulation rerun or universal robot safety certification",
+  "science_numerical_checks": {
+    "raw_audit_epochs": {
+      "E3A": {
+        "planned": 112,
+        "consumed": 112,
+        "eligible": 112,
+        "unknown": 0
+      },
+      "E3B": {
+        "planned": 48,
+        "consumed": 48,
+        "eligible": 48,
+        "unknown": 0
+      }
+    },
+    "independently_counted_original_IDs": 160,
+    "unique_original_IDs": 160,
+    "independent_status_recount": {
+      "SUCCESS": 114,
+      "TIME_LIMIT": 24,
+      "SEMANTIC_ABORT": 22
+    },
+    "full_pair_design": "9 task identities, 4 initializations each indexed 16–19, 72 condition/task/init matching arm groups; checked pairing source identity/seed fields with 0 discrepancies",
+    "E3A_C2_wrong_lift": {
+      "B0": "14/28",
+      "G": "0/28",
+      "G_minus_B0_pp": -50,
+      "bootstrap_percentile95_pp": [
+        -57.142857,
+        -42.857143
+      ]
+    },
+    "E3B_C2_wrong_lift": {
+      "B0": "4/8",
+      "A0": "3/8",
+      "G": "0/8",
+      "G_minus_A0_pp": -37.5,
+      "bootstrap_percentile95_pp": [
+        -50,
+        -12.5
+      ],
+      "A0_minus_B0_pp": -12.5,
+      "G_minus_B0_pp": -50
+    },
+    "normal_C0_official_success": "E3A B0/G both 28/28; E3B B0/A0/G each 8/8",
+    "controlled_mismatch_C2_official_success": "E3A B0/G each 11/28; E3B B0/A0/G each 4/8; rejection is not task recovery",
+    "risk_positive_task_scope": "E3A 4/7 tasks, E3B 1/2 tasks; all zero-positive tasks remain in denominators",
+    "original_baseline_positive_pairs": "18 B0 positive scenario pairs, 22 comparison records",
+    "lead_and_onset_recount_against_independent_CSV": "22/22 comparison records match public CSV baseline first wrong lift / comparison executed controls / lead fields",
+    "G_before_B0_wrong_lift_onset": {
+      "E3A": "14/14",
+      "E3B": "4/4"
+    },
+    "reactive_A0_before_B0_wrong_lift_onset": "1/4; 3/4 A0 comparisons already had wrong lift",
+    "frozen_bootstrap": "2000 task-stratified within-task initialization-cluster resamples, seed 641500; no E2 pooling; fixed-task conditional uncertainty only",
+    "interpretation": "Observed preventive interrupt under controlled instruction mismatch, not task recovery, natural OOD detection, independent task-population/general robot safety or hardware safety guarantee"
+  },
+  "audit_and_custody": {
+    "public_checkpoint_files": 36,
+    "E3A_A4_checkpoints": 28,
+    "E3B_B6_checkpoints": 8,
+    "exact_checkpoint_ordinals_and_pairs_recounted": true,
+    "summed_checkpoint_original_entries": 21527,
+    "checkpoint_public_physics_lifecycle_flags_all_true": true,
+    "all_checkpoint_public_primary_secondary_archive_digest_fields_match": true,
+    "actual_private_original_sha256_verified_by_reviewer": false,
+    "executor_private_rehash_claimed": 21527,
+    "public_artifact_manifest_entries": 409,
+    "unique_entries": 409,
+    "verified_public_git_tree_path_and_byte_size_for_all_entries": "409/409; tree complete, no truncation",
+    "independently_rehashed_11_source_bound_public_data_files": "11/11 exact SHA256 matches SOURCE_BINDING",
+    "independently_rehashed_all409_public_SHA256": false,
+    "committed_final_report_has_source_or_science_diff_vs_operator_executed_head": false,
+    "raw_episode_and_supervisor_exit_counts_from_public_evidence": "160/160 actual0",
+    "independent_live_process_verification": false,
+    "end_of_collection_process_history": "controller0,backup_agent0,terminal monitor0; server graceful SIGINT recorded as exit130 and launcher1; earlier controller1/copy1 E2BIG proof-transfer incident retained; 0001 historic frozen audit1/1 retained",
+    "public_CPU_tests": "15/15 ordinary and15/15 optimized logs examined, exits0 per source-bound executor receipt; original 282-case full suite not independently rerun",
+    "post_close_public_CPU_audits": "ordinary/-O both actual0 per executor receipts; independently recounted public audit status and intervals"
+  },
+  "runtime_and_authority_deviation": {
+    "former_reviewed_resource_route": "Physical GPU1-only from R016/R019 review era",
+    "actual_current_native_resource_route": "Explicit source-locked physical GPU0 in PR44, no automatic fallback, same stated 9GiB pre/post, 55pct allocator, 2GiB reserved",
+    "original_0001_source": "859e40b5f460365a8853bf3486969e9f8e28951c, R017, physical GPU1",
+    "remaining_159_source": "1d8e2d37932390ec07b5d04daddc1664efc64eb4, physical GPU0",
+    "acquisition_0002_to_0012_owner_grant": "397500d65ca1b3f4dcd9e12e0d0f2e80fd97d717",
+    "acquisition_0013_to_end_owner_grant": "a92843a1d7ae920a6264e5acaed6a375c58780b5",
+    "owner_grant_issuer": "Codex executor recording PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+    "independent_GPT_runtime_gate_for_current_GPU0_acquisition": false,
+    "owner_original_chat_private_receipt_independently_read_by_reviewer": false,
+    "status": "REPORT AS EXPLICIT PROCESS/AUTHORITY DEVIATION FROM PRIOR INDEPENDENT GPT/GPU1 ADMISSION; do not mislabel Owner grant as independent reviewer approval",
+    "scientific_pairing_scope": "One E3A C0 B0/G pair crosses GPU1/0; all E3 C2 B0/G/A0 primary wrong-lift contrasts use GPU0; cross-device numerical/latency comparability cannot be universalized",
+    "science_constants_unchanged": "k3/raw16/execution8/cap720/settling10/tasks/heldout init16-19/2000 seed641500 remain source-bound"
+  },
+  "limits_and_requirements_for_formal_course_use": {
+    "fixed_task_small_cluster": "E3-A 7 fixed tasks ×4 heldout inits, E3-B 2 fixed tasks ×4; bootstrap intervals condition on task set, not a confidence interval over arbitrary unseen tasks",
+    "time_cost": "E3 G monitoring median near0.12 sec, p95 incl. worker startup ~3.9–4.4 sec in some groups; no hard20Hz wall-clock guarantee",
+    "simulator_privilege": "Trusted TaskSpec + MuJoCo contact/pose state, not demonstrated sensor-only autonomous production safety",
+    "generalization": "Additional tasks are additional evaluation tasks, not demonstrated unseen-pretraining or natural OOD population generalization",
+    "candidate_UAR": "N/A; no separate audited candidate denominator",
+    "E2": "Separate frozen E2 120 consumed,117 eligible,3 censored CLEANUP_ERROR; independent E2 R3 still pending; no dataset pooling",
+    "coursework_artifacts": "Locally verified 17-slide existing PPTX/PDF are E2-only (cover+15 content+1 references), with blank student identity; PR38 downloadable formal source ZIP is E2-only; neither currently incorporates completed E3 or its operator/source/review evidence",
+    "next_required": "Choose E2-only final submission or revise within15 content slides to include explicitly exploratory E3 results and build a matching code ZIP with relevant E3 sources/tests/README/evidence. Verify cover/refs/AI-assistance policy and Canvas submission receipt by Nov6 23:59 SGT.",
+    "independent_private_custody": "Full private original member hash verification remains executor-attested, not independently rerun; do not assert otherwise"
+  },
+  "final_recommendation": {
+    "E2_core_scientific_project_complete": true,
+    "E3_study_collection_complete": true,
+    "E3_bounded_public_scientific_conclusions_acceptable": true,
+    "exact_E3_full_private_original_review_certified": false,
+    "latest_E3_course_submission_package_complete": false,
+    "additional_TEST_necessary": false,
+    "additional_TEST_authorized": false,
+    "approve_PR_merge": false,
+    "course_submitted": false,
+    "decision": "Accept bounded public E3 results for carefully qualified project analysis; keep unmerged source/evidence intact, complete final artifact integration and E2 R3 review, and do not claim independent runtime admission or independent private-archive certification."
+  }
+}
