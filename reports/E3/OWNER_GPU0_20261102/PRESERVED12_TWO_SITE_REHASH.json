@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE12_ORIGINALS_SECONDARY_REHASHED_MATCH_PRIMARY",
+  "original_files": 1156,
+  "original_inventory_sha256": "b0b9e01c192d523e5d79e0dd0b30866d0f03f8a195217d0535dc41cef7f7c193",
+  "archives": [
+    {
+      "through": 4,
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0004",
+      "bytes": 65012022,
+      "sha256": "bf64eac8806b449600b08b12a9cd5a4aca08ab6b381bb6f39d05a11b988a7519",
+      "artifacts": 423,
+      "original_files": 372,
+      "secondary_verified": true
+    },
+    {
+      "through": 8,
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0008",
+      "bytes": 62710034,
+      "sha256": "276a7b2c68cfd44a276caf08a64d831e860a12665bc9090198164b341128bcf2",
+      "artifacts": 458,
+      "original_files": 364,
+      "secondary_verified": true
+    },
+    {
+      "through": 12,
+      "stage": "owner-e3-gpu0-20261102-01-e3a-0012",
+      "bytes": 77207290,
+      "sha256": "c42da3e7397dbcaaf021024c131fd5fcf5d29cee607ded1b3ddf51f655a8630b",
+      "artifacts": 557,
+      "original_files": 420,
+      "secondary_verified": true
+    }
+  ],
+  "independent_reviewer_rehash": false
+}

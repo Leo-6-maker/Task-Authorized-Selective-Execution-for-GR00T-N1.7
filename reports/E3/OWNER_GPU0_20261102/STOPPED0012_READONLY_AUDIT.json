@@ -1,0 +1,91 @@
+{
+  "at": "2026-11-02T15:07:08.193400+08:00",
+  "status": "STOPPED_E2BIG_PROOF_TRANSPORT_CPU_RECONCILED_NO_NEW_TEST",
+  "E3_planned": 160,
+  "E3_consumed": 12,
+  "E3_eligible": 12,
+  "E3_unstarted": 148,
+  "actual_outcomes": {
+    "SUCCESS": 12
+  },
+  "next_unstarted_id": "e3a-test-0013",
+  "next0013_absent": true,
+  "completed_live_A4": 2,
+  "live_A4_0012_released": false,
+  "third_cluster_readonly_checks_passed": true,
+  "audit_actual_exits": [
+    0,
+    0
+  ],
+  "audit_modes_identical": true,
+  "original_files": 1156,
+  "original_inventory_sha256": "b0b9e01c192d523e5d79e0dd0b30866d0f03f8a195217d0535dc41cef7f7c193",
+  "original0001_78_unchanged": true,
+  "native_shadow_closes": [
+    {
+      "run_id": "e3a-test-0002",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    },
+    {
+      "run_id": "e3a-test-0004",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    },
+    {
+      "run_id": "e3a-test-0006",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    },
+    {
+      "run_id": "e3a-test-0008",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    },
+    {
+      "run_id": "e3a-test-0010",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    },
+    {
+      "run_id": "e3a-test-0012",
+      "status": "CLEAN",
+      "worker_returncode": 0,
+      "clean": true,
+      "forced": false,
+      "term_sent": false,
+      "kill_sent": false
+    }
+  ],
+  "no_owned_native_process": true,
+  "controller_actual_exit": 1,
+  "server_actual_exit": 130,
+  "server_signal": 2,
+  "launcher_actual_exit": 1,
+  "formal_scientific_review": false,
+  "scientific_config_and_native_Head_unchanged": true,
+  "TESTs_replayed": 0,
+  "new_model_calls_in_recovery": 0,
+  "backup_proof_repaired_same_stage": true,
+  "original_stop_and_backup_error_not_erased": true
+}

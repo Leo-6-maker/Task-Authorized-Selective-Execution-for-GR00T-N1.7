@@ -1,7 +1,5 @@
 {
-  "engineering_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
-  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
-  "actual_runs": [
+  "prelaunch276": [
     {
       "host": "local",
       "mode": "normal",
@@ -51,7 +49,59 @@
       "public_log_sha256": "ceb7b518ee1098a33e45599fdd567b920e4170614b329daa5df4002ae1a7aa81"
     }
   ],
+  "prelaunch_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+  "latest_cpu_engineering_source": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+  "latest_actual_runs": [
+    {
+      "host": "local",
+      "mode": "normal",
+      "tests": 282,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T15:12:56.678036+08:00",
+      "completed_at_sgt": "2026-11-02T15:13:33.967384+08:00",
+      "raw_log_sha256": "94dd8319efbf11755baec75e4b610e2d99fba284a249dc3dd61eea8e4a8b714e",
+      "raw_exit_receipt_sha256": "6388c208b2eb6cf838ae496126abc9b0790ac03c47edb19f375f1f4d54fa95f6",
+      "public_log": "logs/recovered282-local-normal.txt",
+      "public_log_sha256": "c3c910e3d009c21190c3e98262240f8e539e9bc4d440aa64f1a3ecb94046c516"
+    },
+    {
+      "host": "local",
+      "mode": "optimized",
+      "tests": 282,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T15:13:33.999842+08:00",
+      "completed_at_sgt": "2026-11-02T15:14:12.679694+08:00",
+      "raw_log_sha256": "9c11f9ef74636628917d99f9050d0df54da23d5f0b50302145323256c2ba31fd",
+      "raw_exit_receipt_sha256": "7834552b0b6a1c142de469cea239790dc49657cda8d90cbb9378e1d5a77af150",
+      "public_log": "logs/recovered282-local-optimized.txt",
+      "public_log_sha256": "5a7a4192d58627a71d087bd6390c321f64d24772eec5ef3afbd0e40390f4d2c6"
+    },
+    {
+      "host": "Corelab",
+      "mode": "normal",
+      "tests": 282,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T15:12:58.702908+08:00",
+      "completed_at_sgt": "2026-11-02T15:13:40.631977+08:00",
+      "raw_log_sha256": "abc3e9741524c1d56338b0465753a6ce0d89c25dcf744b685831e03457bf5a7e",
+      "raw_exit_receipt_sha256": "6a81cbe23d5f4489a596b5b94994ccd5e7d2813bd6723ee6e83207c782563174",
+      "public_log": "logs/recovered282-Corelab-normal.txt",
+      "public_log_sha256": "9bbda0cc1d93db337921e2dcf63fbe3680ea4673989fab66ffdf02598459fe2c"
+    },
+    {
+      "host": "Corelab",
+      "mode": "optimized",
+      "tests": 282,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T15:13:40.776487+08:00",
+      "completed_at_sgt": "2026-11-02T15:14:23.845800+08:00",
+      "raw_log_sha256": "9d2da6c3ab6400490fa0ad4df94869d6b4f44da872a657cd4cb759b17da671e5",
+      "raw_exit_receipt_sha256": "6558eeba49c570923cb08b57889b644aaf1e7f1a7735550b48d18c2066e161c0",
+      "public_log": "logs/recovered282-Corelab-optimized.txt",
+      "public_log_sha256": "a5f54c953796c410228d2d8c3ba28611a40ecf30f0b0d5a4d3a8c4cc52f4d7f7"
+    }
+  ],
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
   "native_locked_source_diff": [],
-  "new_external_tests": 3,
-  "scope": "234 root/native CPU tests +42 external CPU tests; mocked grants/GPU plus real subprocess/lock/copy tests; not model physics validation"
+  "latest_scope": "234 root/native +48 external CPU tests. Real256KiB stdin subprocess, spawn-error receipts, prefix planner and CPU checkpoint IO regression; simulated authorization/GPU checks labeled."
 }

@@ -1,0 +1,15 @@
+{
+  "status": "PRESERVED12_RESUME_CPU_DRY_RUN_VERIFIED",
+  "actual_exit": 0,
+  "recovery_evidence_sha256": "3babef07e0f9cdaf860475140f7c88149adf8673e2ffacb4fed39c9a3ed2a5b4",
+  "completed_prefix_original_rows_sha256": "b0b9e01c192d523e5d79e0dd0b30866d0f03f8a195217d0535dc41cef7f7c193",
+  "completed_prefix": 12,
+  "next_original_id": "e3a-test-0013",
+  "remaining": {
+    "E3A": 100,
+    "E3B": 48
+  },
+  "live_checkpoint_written": false,
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "new_MODEL_TEST": 0
+}
