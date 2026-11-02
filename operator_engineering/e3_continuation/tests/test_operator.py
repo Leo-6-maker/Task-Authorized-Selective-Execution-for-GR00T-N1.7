@@ -257,6 +257,21 @@ class ActualAdmissionDenialTests(unittest.TestCase):
 
 
 class NativeResourceAndSocketTests(unittest.TestCase):
+    def test_real_new_and_retained_lock_exclusion_without_deletion(self):
+        from operator_engineering.e3_continuation.processes import controller_lock
+        with tempfile.TemporaryDirectory() as t:
+            path=Path(t)/'controller.lock'
+            first=controller_lock(path)
+            raw=path.read_bytes()
+            try:
+                with self.assertRaises(BlockingIOError):controller_lock(path)
+                self.assertEqual(path.read_bytes(),raw)
+            finally:first.close()
+            with controller_lock(path):self.assertEqual(path.read_bytes(),raw)
+            path.write_text('{"schema":"FOREIGN_MARKER"}\n')
+            with self.assertRaises(ValueError):controller_lock(path)
+            self.assertEqual(path.read_text(),'{"schema":"FOREIGN_MARKER"}\n')
+
     def test_native_memory_API_shape_and_second_query_floor(self):
         from operator_engineering.e3_continuation.native import NativeBackend
         with tempfile.TemporaryDirectory() as t:
@@ -265,25 +280,25 @@ class NativeResourceAndSocketTests(unittest.TestCase):
             backend=NativeBackend.__new__(NativeBackend)
             backend.workspace=root;backend.op=root/'operator';backend.sequence=0
             backend.native_server=None;backend.foreign_baseline=set()
-            backend.allocation=dict(gpu_uuid='GPU-SYNTHETIC-CPU-ONLY')
-            with patch('e3.resource.live_gpu1',return_value=dict(gpu_index=1,
+            backend.allocation=dict(gpu_index=0,gpu_uuid='GPU-SYNTHETIC-CPU-ONLY')
+            with patch('e3.resource.live_gpu',return_value=dict(gpu_index=0,
                     gpu_uuid='GPU-SYNTHETIC-CPU-ONLY',sampled_free_bytes=10121*1024**2)),\
                  patch.object(backend,'gpu_apps',return_value=set()),\
                  patch('operator_engineering.e3_continuation.native.subprocess.check_output',
-                       return_value='1, GPU-SYNTHETIC-CPU-ONLY, 10121, 16376\n'):
+                       return_value='0, GPU-SYNTHETIC-CPU-ONLY, 10121, 16376\n'):
                 self.assertFalse(backend.capacity_ready())
-            with patch('e3.resource.live_gpu1',return_value=dict(sampled_free_bytes=9216*1024**2)),\
+            with patch('e3.resource.live_gpu',return_value=dict(sampled_free_bytes=9216*1024**2)),\
                  patch.object(backend,'gpu_apps',return_value=set()),\
                  patch('operator_engineering.e3_continuation.native.subprocess.check_output',
-                       return_value='1, GPU-SYNTHETIC-CPU-ONLY, 9215, 16376\n'):
+                       return_value='0, GPU-SYNTHETIC-CPU-ONLY, 9215, 16376\n'):
                 with self.assertRaisesRegex(ValueError,'9GiB'):backend.resource_sample(postload=True)
 
     def test_foreign_process_growth_blocks_even_with_free_memory(self):
         from operator_engineering.e3_continuation.native import NativeBackend
         backend=NativeBackend.__new__(NativeBackend)
-        backend.allocation=dict(gpu_uuid='GPU-SYNTHETIC-CPU-ONLY');backend.native_server=None
+        backend.allocation=dict(gpu_index=0,gpu_uuid='GPU-SYNTHETIC-CPU-ONLY');backend.native_server=None
         backend.foreign_baseline={11}
-        with patch('e3.resource.live_gpu1',return_value=dict(sampled_free_bytes=16000*1024**2)),\
+        with patch('e3.resource.live_gpu',return_value=dict(sampled_free_bytes=16000*1024**2)),\
              patch.object(backend,'gpu_apps',return_value={11,12}):
             with self.assertRaisesRegex(ValueError,'foreign'):backend.resource_sample()
 

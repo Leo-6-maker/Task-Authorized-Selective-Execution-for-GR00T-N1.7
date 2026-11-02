@@ -24,7 +24,7 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
                              grant_protocol='E3-001-v1.0')
         self.allocation = self.workspace/'allocation.json'
         self.record = dict(protocol_id='E3-001-v1.0', **self.identity,
-                           shared_gpu_inference_authorized=True, gpu_index=1,
+                           shared_gpu_inference_authorized=True, gpu_index=0,
                            gpu_uuid='GPU-SYNTHETIC-TEST-ONLY',
                            owner_approval_evidence='SYNTHETIC_UNIT_TEST_NOT_PERMISSION')
         self.allocation.write_text(json.dumps(self.record))
@@ -33,7 +33,7 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         self.inventory = self.enter('verify_inventory')
         self.runtime = self.enter('verify', return_value=self.preflight)
         self.gpu = self.enter('subprocess.check_output',
-                              return_value='1, GPU-SYNTHETIC-TEST-ONLY, 12000\n')
+                              return_value='0, GPU-SYNTHETIC-TEST-ONLY, 12000\n')
         self.socket = self.enter('socket.socket')
         self.handoff = self.enter('_run_owned_server', return_value=0)
 
@@ -45,7 +45,7 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         return launcher.serve(self.workspace, self.repo, 'b'*40,
                               'docs/reviews/SYNTHETIC-E3-GRANT.json',
                               self.allocation, self.workspace/'server/bin/python',
-                              self.workspace/'sim/bin/python', 'test-server-e3-cpu', 1, 5561)
+                              self.workspace/'sim/bin/python', 'test-server-e3-cpu', 0, 5561)
 
     def test_admitted_entry_binds_exact_allocation_bytes_and_preserves_native_creation(self):
         before = self.allocation.read_bytes()
@@ -56,11 +56,11 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         self.assertEqual(admission['authorization'], self.identity)
         self.assertEqual(admission['preflight'], self.preflight)
         self.assertEqual(admission['gpu_uuid'], self.record['gpu_uuid'])
-        self.assertEqual(admission['egl_device_id'], '1')
+        self.assertEqual(admission['egl_device_id'], '0')
         self.assertEqual(env['HOME'], str(workspace/'runtime/home'))
         self.assertEqual(env['LIBERO_CONFIG_PATH'], str(workspace/'runtime/libero-config'))
         self.assertEqual(env['CUDA_VISIBLE_DEVICES'], self.record['gpu_uuid'])
-        self.assertEqual(env['MUJOCO_EGL_DEVICE_ID'], '1')
+        self.assertEqual(env['MUJOCO_EGL_DEVICE_ID'], '0')
         self.assertEqual(env['HF_HUB_OFFLINE'], '1')
         self.assertIn('e3.server', command)
         self.assertEqual(command[command.index('--output')+1], str(workspace/'runs'/session))
@@ -89,21 +89,21 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         self.gpu.assert_not_called()
         self.handoff.assert_not_called()
 
-    def test_GPU0_allocation_cannot_reach_launcher_inventory(self):
-        self.record['gpu_index'] = 0
+    def test_unconfigured_GPU1_allocation_cannot_reach_launcher_inventory(self):
+        self.record['gpu_index'] = 1
         self.allocation.write_text(json.dumps(self.record))
-        with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+        with self.assertRaisesRegex(ValueError, 'source-locked GPU route'):
             self.run_server()
         self.inventory.assert_not_called()
         self.gpu.assert_not_called()
         self.handoff.assert_not_called()
 
-    def test_GPU0_command_cannot_override_GPU1_allocation(self):
-        with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+    def test_GPU1_command_cannot_override_GPU0_allocation(self):
+        with self.assertRaisesRegex(ValueError, 'source-locked GPU route'):
             launcher.serve(self.workspace, self.repo, 'b'*40,
                            'docs/reviews/SYNTHETIC-E3-GRANT.json', self.allocation,
                            self.workspace/'server/bin/python', self.workspace/'sim/bin/python',
-                           'test-server-e3-cpu', 0, 5561)
+                           'test-server-e3-cpu', 1, 5561)
         self.inventory.assert_not_called()
         self.gpu.assert_not_called()
         self.handoff.assert_not_called()
@@ -117,14 +117,14 @@ class ServerLauncherAdmissionTests(unittest.TestCase):
         self.handoff.assert_not_called()
 
     def test_insufficient_memory_stops_before_socket_and_handoff(self):
-        self.gpu.return_value = '1, GPU-SYNTHETIC-TEST-ONLY, 9215\n'
+        self.gpu.return_value = '0, GPU-SYNTHETIC-TEST-ONLY, 9215\n'
         with self.assertRaises(ValueError):
             self.run_server()
         self.socket.assert_not_called()
         self.handoff.assert_not_called()
 
     def test_wrong_physical_UUID_stops_before_socket_and_handoff(self):
-        self.gpu.return_value = '1, GPU-DIFFERENT-SYNTHETIC-DEVICE, 12000\n'
+        self.gpu.return_value = '0, GPU-DIFFERENT-SYNTHETIC-DEVICE, 12000\n'
         with self.assertRaisesRegex(ValueError, 'UUID differs'):
             self.run_server()
         self.socket.assert_not_called()

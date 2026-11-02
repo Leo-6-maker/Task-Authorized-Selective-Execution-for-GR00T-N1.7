@@ -4,7 +4,6 @@ Native initialization is impossible before a current independent exact grant,
 the operator-source binding and a new permitted window have all passed.
 """
 import datetime as dt
-import fcntl
 import json
 import os
 from pathlib import Path
@@ -14,11 +13,11 @@ import subprocess
 import time
 import traceback
 
-from .contract import (RUNTIME, LOCK, SGT, HISTORICAL_HEAD, HISTORICAL_GRANT,
+from .contract import (LOCK, SGT, HISTORICAL_HEAD, HISTORICAL_GRANT,
                        admission_contract, capacity, require, sha, source_digest,
                        validate_history)
 from .custody import archive, verify_archive
-from .processes import Recorded, identity, live_same, stamp, write
+from .processes import Recorded, controller_lock, identity, live_same, stamp, write
 
 
 class NativeBackend:
@@ -50,6 +49,7 @@ class NativeBackend:
         self.record = Recorded(self.op, self.env, self.repo)
         self.server = self.server_expected = self.native_server = None
         self.lock_handle = None
+        self.runtime_head = None
         self.cells, self.auth, self.window, self.allocation = [], None, None, None
         self.sequence = 0
         self.last_progress = None  # Expected history is not an observed/audited count.
@@ -81,9 +81,9 @@ class NativeBackend:
 
     def admit(self):
         import sys
-        require(subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.repo,
-                                       text=True).strip() == RUNTIME and
-                not subprocess.check_output(['git', 'status', '--porcelain'], cwd=self.repo),
+        self.runtime_head = subprocess.check_output(['git','rev-parse','HEAD'],
+                                                   cwd=self.repo,text=True).strip()
+        require(not subprocess.check_output(['git', 'status', '--porcelain'], cwd=self.repo),
                 'clean exact approved runtime required, never report branch')
         self.fetch_main()
         sys.path.insert(0, str(self.repo))
@@ -100,24 +100,16 @@ class NativeBackend:
         self.allocation_path = Path(self.map['allocation_record'])
         self.allocation = json.loads(self.allocation_path.read_text())
         resource(self.allocation, self.auth)
-        require(self.allocation.get('egl_device_id') == '1' and
+        require(self.allocation.get('egl_device_id') == str(self.allocation['gpu_index']) and
                 self.allocation.get('created_for_execution_window') ==
                 grant['continuation']['execution_window_sgt'], 'new actual window/EGL resource binding required')
         owner = Path(self.allocation['owner_approval_evidence']['path'])
         require(sha(owner) == self.allocation['owner_approval_evidence']['sha256'],
-                'retained direct owner GPU1 evidence changed')
+                'retained direct owner GPU evidence changed')
         for root in ['runs', 'operator', 'evidence_exports']:
             require((self.workspace/root).is_dir(), 'existing project storage required')
         lock = self.workspace/'operator/e3-continuation-single-controller.lock'
-        try:
-            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_RDWR, 0o600)
-            os.write(fd, b'{"schema":"E3_EXTERNAL_CONTROLLER_FLOCK_V1"}\n')
-        except FileExistsError:
-            fd = os.open(lock, os.O_RDWR | os.O_NOFOLLOW)
-        self.lock_handle = os.fdopen(fd, 'r+')
-        require(json.loads(self.lock_handle.read()) == {'schema':'E3_EXTERNAL_CONTROLLER_FLOCK_V1'},
-                'unknown controller lock; preserve without deletion')
-        fcntl.flock(self.lock_handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        self.lock_handle = controller_lock(lock)
         self.require_no_native_process()
         write(self.op/'controller-lock-owner.json', dict(at=stamp(), controller=identity(os.getpid()),
               native_authorization=self.auth, lock_retained_after_exit=True))
@@ -176,11 +168,11 @@ class NativeBackend:
                 if row.strip() and row.split(',')[0].strip() == self.allocation['gpu_uuid']}
 
     def resource_sample(self, postload=False):
-        from e3.resource import live_gpu1
-        live = live_gpu1(self.allocation)  # Unchanged actual9GiB physicalGPU1 check.
+        from e3.resource import live_gpu
+        live = live_gpu(self.allocation)  # Unchanged actual9GiB physical-device check.
         apps = self.gpu_apps()
         own = set() if self.native_server is None else {self.native_server['pid']}
-        require(apps - own == self.foreign_baseline, 'foreign GPU1 process set changed')
+        require(apps - own == self.foreign_baseline, 'foreign allocated GPU process set changed')
         import shutil
         require(all(shutil.disk_usage(self.workspace/r).free >= 3*1024**3
                     for r in ['runs', 'evidence_exports']), 'project storage below3GiB')
@@ -189,11 +181,11 @@ class NativeBackend:
         raw = subprocess.check_output(['nvidia-smi', '--query-gpu=index,uuid,memory.free,memory.total',
                                        '--format=csv,noheader,nounits'], text=True)
         selected = [[s.strip() for s in row.split(',')] for row in raw.splitlines()
-                    if row.split(',')[0].strip() == '1']
+                    if row.split(',')[0].strip() == str(self.allocation['gpu_index'])]
         require(len(selected) == 1 and selected[0][1] == self.allocation['gpu_uuid'],
-                'capacity query physicalGPU1 UUID differs')
+                'capacity query allocated physical GPU UUID differs')
         free_mib, total_mib = map(int, selected[0][2:])
-        require(free_mib >= 9216, 'second actual GPU1 sample below unchanged9GiB')
+        require(free_mib >= 9216, 'second actual allocated GPU sample below unchanged9GiB')
         return dict(free_MiB=free_mib, total_MiB=total_mib, native_live_check=live)
 
     def capacity_ready(self):
@@ -235,7 +227,7 @@ class NativeBackend:
                    '--review-commit', self.review_commit, '--review-path', self.review_path,
                    '--allocation-record', str(self.allocation_path), '--server-python',
                    str(self.server_python), '--sim-python', str(self.sim),
-                   '--session', self.session, '--gpu-index', '1', '--port', str(self.port)]
+                   '--session', self.session, '--gpu-index', str(self.allocation['gpu_index']), '--port', str(self.port)]
         self.server_label = self.label('server-launcher')
         self.server, self.server_expected = self.record.start(self.server_label, command)
         ready = self.workspace/'operator'/self.session/'server_ready.json'
@@ -248,7 +240,7 @@ class NativeBackend:
         self.native_server = identity(value['child_pid'])
         self.check_server()
         loaded = json.loads((self.workspace/'runs'/self.session/'loaded.json').read_text())
-        require(loaded['physical_resource_preflight']['gpu_index'] == 1 and
+        require(loaded['physical_resource_preflight']['gpu_index'] == self.allocation['gpu_index'] and
                 loaded['physical_resource_preflight']['gpu_uuid'] == self.allocation['gpu_uuid'],
                 'actual loaded GPU binding differs')
         self.resource_sample(postload=True)
@@ -370,7 +362,7 @@ class NativeBackend:
 
     def finish(self, terminal):
         write(self.op/'operator-terminal.json', dict(at=stamp(), status=terminal,
-              runtime_head=RUNTIME, report_head_is_not_runtime=True,
+              runtime_head=self.runtime_head, runtime_head_is_observed=True,
               review_commit=self.review_commit, last_fully_audited_consumed=self.last_progress,
               consumed_count_may_exceed_last_audit_after_failure=True,
               active_or_consumed_id=self.current_cell, scientific_result_self_approved=False,

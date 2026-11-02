@@ -6,12 +6,12 @@ from e3.authorization import authorize,resource
 from e3.discovery import require,sha
 from tase.test_runtime import verify
 from tase.resource_memory import require_free_memory
-from e3.resource import binding,live_gpu1
+from e3.resource import binding,live_gpu,configured_index
 def serve(workspace,repo,review_commit,review_path,allocation_record,server_python,sim_python,
           session,gpu_index,port=5561):
     _,_,identity=authorize(repo,review_commit,review_path)
     resource(json.loads(allocation_record.read_text()),identity)
-    require(type(gpu_index) is int and gpu_index==1,'E3 GPU1-only launcher')
+    require(type(gpu_index) is int and gpu_index==configured_index(),'E3 command differs from source-locked GPU route')
     workspace=workspace.resolve(strict=True)
     require(session.startswith('test-server-e3-') and all(c.isalnum() or c in '-_' for c in session), 'TEST server session ID')
     allocation=json.loads(allocation_record.read_text())
@@ -20,16 +20,16 @@ def serve(workspace,repo,review_commit,review_path,allocation_record,server_pyth
     from e3.scene import verify_inventory
     verify_inventory(workspace/'upstream/Isaac-GR00T/external_dependencies/LIBERO',json.loads((repo/'configs/e3_sources.proposed.json').read_text()))
     verified=verify(workspace,repo,server_python,sim_python)
-    live=live_gpu1(allocation)
+    live=live_gpu(allocation)
     with socket.socket() as sock:sock.bind(('127.0.0.1',port))
     folder=workspace/'runs'/session
     admission=dict(authorization=identity,preflight=verified,port=port,
-        gpu_uuid=live['gpu_uuid'],egl_device_id='1',allocation_sha256=sha(allocation_record),resource_preflight=live)
+        gpu_uuid=live['gpu_uuid'],egl_device_id=str(gpu_index),allocation_sha256=sha(allocation_record),resource_preflight=live)
     up=workspace/'upstream/Isaac-GR00T'
     env=os.environ.copy();env.update(HOME=str(workspace/'runtime/home'),HF_HOME=str(workspace/'cache/huggingface'),
         LIBERO_CONFIG_PATH=str(workspace/'runtime/libero-config'),
         PYTHONPATH=os.pathsep.join(map(str,[repo,up,up/'external_dependencies/LIBERO'])),
-        CUDA_VISIBLE_DEVICES=live['gpu_uuid'],MUJOCO_EGL_DEVICE_ID='1',MUJOCO_GL='egl',PYOPENGL_PLATFORM='egl',
+        CUDA_VISIBLE_DEVICES=live['gpu_uuid'],MUJOCO_EGL_DEVICE_ID=str(gpu_index),MUJOCO_GL='egl',PYOPENGL_PLATFORM='egl',
         HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',WANDB_MODE='disabled',WANDB_DISABLED='true',
         PYTHONNOUSERSITE='1',DO_NOT_TRACK='1',HF_HUB_DISABLE_TELEMETRY='1',OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='2')
     binding(allocation,env)

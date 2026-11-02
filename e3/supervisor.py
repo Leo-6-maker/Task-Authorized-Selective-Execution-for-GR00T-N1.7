@@ -6,7 +6,7 @@ from e3.discovery import require,sha
 from e3.ledger import reserve,write,ROOTS
 from tase.e2_evidence import storage
 from tase.resource_memory import require_free_memory
-from e3.resource import binding,live_gpu1
+from e3.resource import binding,live_gpu
 
 def run(workspace,repo,run_id,review_commit,review_path,allocation_record,sim_python,server_session,port=5561):
     _,cells,identity=authorize(repo,review_commit,review_path)
@@ -19,7 +19,7 @@ def run(workspace,repo,run_id,review_commit,review_path,allocation_record,sim_py
     require(not (workspace/'runs'/(server_session+'.exit.json')).exists() and (server/'loaded.json').is_file(),'E3 server closed/not loaded')
     start=json.loads((workspace/'runs'/(server_session+'.exit.started.json')).read_text());pid=start['child_pid'];proc=Path('/proc')/str(pid)
     require(proc.stat().st_uid==os.getuid() and [x.decode() for x in (proc/'cmdline').read_bytes().split(b'\0') if x]==start['command'] and 'e3.server' in start['command'],'E3 server process not owned/exact')
-    live=live_gpu1(allocation);require(live['gpu_uuid']==admission['gpu_uuid'] and admission['egl_device_id']=='1','E3 CUDA/EGL identity differs')
+    live=live_gpu(allocation);require(live['gpu_uuid']==admission['gpu_uuid'] and admission['egl_device_id']==str(allocation['gpu_index']),'E3 CUDA/EGL identity differs')
     cell=next((c for c in cells if c['run_id']==run_id),None);require(cell is not None,'unplanned E3 cell');epoch_cells=[c for c in cells if c['epoch']==cell['epoch']]
     # Every existing original must pass its historical versioned source audit.
     from e3.ledger import audit

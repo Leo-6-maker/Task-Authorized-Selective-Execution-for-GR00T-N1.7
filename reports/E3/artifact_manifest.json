@@ -1,20 +1,20 @@
 {
-  "status": "LONG_HORIZON_M0_CPU_ENGINEERING_DELIVERED_NO_NATIVE_AUTHORIZATION",
+  "status": "CPU_GPU0_ROUTE_CANDIDATE_WITH_REAL_MODEL_LOAD_DIAGNOSTIC_NOT_TEST",
   "approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
-  "CPU_engineering_snapshot": "49cb3f03d3370958d9674563cb1b45b66cb25036",
-  "operator_source_sha256": "2f3ecf87b0a560691b442ede3c54968c7d6f1ee06235165855a45e069d6a4f58",
+  "CPU_engineering_snapshot": "162b12d1a73e39653d155b4ae49e8bc898ce0a70",
+  "operator_source_sha256": "ee32d4a679365a542b43638c8d6bfe98355daa6b9d6298b3c338e75ee65fd8e1",
   "self_excluded": true,
   "private_marker_hits": 0,
   "artifacts": [
     {
       "path": "AGENTS.md",
-      "bytes": 20655,
-      "sha256": "4fc17cc1d443f184842383c6a102b599e1068f48e3a5a40be060f93737fe358e"
+      "bytes": 21601,
+      "sha256": "515f3deb706b3f43dce23071674e8ecf971e98b4795c0251c86964e7aa36633e"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 7826,
-      "sha256": "d9ffb882689e87da993754f740457a2a795d22dc7705043cb821d22f8a42bdb1"
+      "bytes": 8772,
+      "sha256": "e594d7d99cfe64c6352d2a551f2b5924829c1e6771bb398c98190f9a91859de7"
     },
     {
       "path": "configs/dev_baseline.json",
@@ -87,9 +87,14 @@
       "sha256": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be"
     },
     {
+      "path": "configs/e3_gpu_resource.json",
+      "bytes": 210,
+      "sha256": "8476d611f0933a97906e905bf10d379a18da6da5f48edb8ab906e2c2a80b1e77"
+    },
+    {
       "path": "configs/e3_protocol_lock.proposed.json",
-      "bytes": 15282,
-      "sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc"
+      "bytes": 15488,
+      "sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc"
     },
     {
       "path": "configs/e3_run_config.proposed.json",
@@ -153,13 +158,13 @@
     },
     {
       "path": "docs/CODEX_HANDOFF.md",
-      "bytes": 16920,
-      "sha256": "90995fe96a1dba44852e480f5855cd5883e2350b7d7b2bd944a47f052a6a8364"
+      "bytes": 17866,
+      "sha256": "46cebcb7054d84771bc60536b820fda3cd7de7215df4db23576d2af048194636"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 27010,
-      "sha256": "dae3be3155e288fcd3be01a6c6177b65dee4163b793873595b023367e62cbdc3"
+      "bytes": 27956,
+      "sha256": "5838fae3ca008ef2b6a66134067039ba7f625edb2e69977528a2d2955dc0c755"
     },
     {
       "path": "docs/handoff/AGENT_HOST_HANDOFF_2026-10-27.md",
@@ -253,8 +258,8 @@
     },
     {
       "path": "e3/authorization.py",
-      "bytes": 3451,
-      "sha256": "05b533d8f8ebe5bebbb42946e674850359d38c4301f6633e55be271cfb993527"
+      "bytes": 3445,
+      "sha256": "0eccc35e4c14c9cc1071392a85985092d51ee802691f0ec5d8877a1c0019bce8"
     },
     {
       "path": "e3/boundary.py",
@@ -298,8 +303,8 @@
     },
     {
       "path": "e3/native_runner.py",
-      "bytes": 18489,
-      "sha256": "bb26ef9402f9b6c32a07fbec50147d3962eae9e2d11286ab626e77b2fadf15c3"
+      "bytes": 18487,
+      "sha256": "44a0e1cd564e11618a0d01d9255c087addf78ad94cd3c86d4b86fdede6d30e83"
     },
     {
       "path": "e3/offline.py",
@@ -318,8 +323,8 @@
     },
     {
       "path": "e3/resource.py",
-      "bytes": 1636,
-      "sha256": "768cc3e163d9aba463ff58f7e33ff818138f4ad0f6ce8dd2ee4af80b0cf26b17"
+      "bytes": 2577,
+      "sha256": "b678359e08aefaa68e68c7a9ee38673b5685d616c979bbcee7fd86d657783cc0"
     },
     {
       "path": "e3/scene.py",
@@ -333,13 +338,13 @@
     },
     {
       "path": "e3/server.py",
-      "bytes": 7485,
-      "sha256": "f9d9732e8709478ffa405ef0317430a1da31a11fe8d94d74d3f889d1698240be"
+      "bytes": 7483,
+      "sha256": "9be3f89140349a0a577e67c81ec5f21b52122ecf77f8f93c1c9cfc779baa0b7f"
     },
     {
       "path": "e3/server_launcher.py",
-      "bytes": 3417,
-      "sha256": "b36dd360841f6666c0bcb4650f026890774159054eedad810b38f0a01dbba966"
+      "bytes": 3497,
+      "sha256": "3f135ca00dbe9a396ce67682bc64704904e1db59bc37b31feae8b739d5bb53b0"
     },
     {
       "path": "e3/statistics.py",
@@ -348,8 +353,8 @@
     },
     {
       "path": "e3/supervisor.py",
-      "bytes": 5701,
-      "sha256": "89a21c04ce22747d01eb90baa2deb9cecab90271b27bff5114e8a8f8145cd596"
+      "bytes": 5724,
+      "sha256": "f880737bb327e6f96931a26174be7176635ad5aae65a39c4ce2b713b8c6dc097"
     },
     {
       "path": "operator_engineering/__init__.py",
@@ -368,8 +373,8 @@
     },
     {
       "path": "operator_engineering/e3_continuation/contract.py",
-      "bytes": 8616,
-      "sha256": "547f73b2f8deee5d6b602a3d98e991db92930a55386f6dc7def85dc9431eb5f3"
+      "bytes": 8776,
+      "sha256": "2bf492cc7079db6593bfc5294ee6bc319907e780021422b540510894d09dc6e1"
     },
     {
       "path": "operator_engineering/e3_continuation/custody.py",
@@ -383,8 +388,8 @@
     },
     {
       "path": "operator_engineering/e3_continuation/native.py",
-      "bytes": 22169,
-      "sha256": "7105a9a761e1d7fec34129d12645e8431e3ce1e0fa410b8aec4575d6d6814887"
+      "bytes": 21856,
+      "sha256": "0a617443d4f5ce702cb522dbb8dd0b34f00ca5085c784961128e7449f74cad1d"
     },
     {
       "path": "operator_engineering/e3_continuation/physics_checks.py",
@@ -393,13 +398,13 @@
     },
     {
       "path": "operator_engineering/e3_continuation/processes.py",
-      "bytes": 7604,
-      "sha256": "dc8396f0e236f5ddc377525c36074471c21bb1f27d3590adfb92de563f96c4c8"
+      "bytes": 8342,
+      "sha256": "0e8e1f42783d4441192d979b8195d1c5a80fc0990b7bd893c1845a8e1fa08b52"
     },
     {
       "path": "operator_engineering/e3_continuation/tests/test_operator.py",
-      "bytes": 23827,
-      "sha256": "05d201ecf9ca122819becba17a6a8486dca154c51043c5c1bb654d111842a2d3"
+      "bytes": 24645,
+      "sha256": "f0274b2a1a6ed08b8750df4333d9335492b10dd40d81f178870aaa33bc169ef2"
     },
     {
       "path": "reports/E3/CORELAB_CPU_BACKUP.json",
@@ -518,8 +523,68 @@
     },
     {
       "path": "reports/E3/E3_AUTONOMOUS_STATUS.json",
-      "bytes": 3552,
-      "sha256": "c351d853be50dd63774aaf816afdcdc8bc2ebbb217655739f7d6153846bea515"
+      "bytes": 1963,
+      "sha256": "0f80ac6ad68c18159bfbe00b61c33ebc0ab1121f071f80c76664f7d2889952ba"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/AUTONOMOUS_STATUS.json",
+      "bytes": 1963,
+      "sha256": "0f80ac6ad68c18159bfbe00b61c33ebc0ab1121f071f80c76664f7d2889952ba"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/CPU_RECEIPTS.json",
+      "bytes": 2777,
+      "sha256": "a7402bc277c9a48874c9d2252bc6e26dc7b1d04af1663460eb3726539f6c0650"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/ENGINEERING_FAILURES_RETAINED.json",
+      "bytes": 1652,
+      "sha256": "861b271b2f64bc1839a3b530034b8ec4d3959768adaf96ef34aec2fe53fbe9e8"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/GPU0_MODEL_LOAD.json",
+      "bytes": 1329,
+      "sha256": "19e3b4855cb731b0480a6db096a2aabd6adbe3da8f24402c3c9322f8b03008e0"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/GPU0_RUNTIME_DELTA_HANDOFF.md",
+      "bytes": 5180,
+      "sha256": "b8ced202a93c3fc36adac60075d2a8f4f9a30c04d3d40d229a75e446b787c63d"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/NEXT_EXECUTION_REQUEST.json",
+      "bytes": 900,
+      "sha256": "1d7f711bb5a3a79261ee290818661f764b25e294569efaaf08ac1aa5a03e7181"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/SOURCE_IDENTITY.json",
+      "bytes": 1030,
+      "sha256": "18f8761b5e100f6a18bcd7b19451c30f30e3e9ce79d74ec8a74fa53f38eeee40"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/TWO_COPY_RECEIPTS.json",
+      "bytes": 1160,
+      "sha256": "9ee1f5a7fef35aca711fbbb592699cbad2cd07921bbb342c2f3907e1f8c4f59f"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/logs/GPU0-Corelab-full-normal.txt",
+      "bytes": 41843,
+      "sha256": "41a25faeacc77b4f64e292232c73cb30fe3b4ece3ecf53cc7cc45f892dd5accd"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/logs/GPU0-Corelab-full-optimized.txt",
+      "bytes": 41843,
+      "sha256": "8fc8ab9049599d3cf3c932fa7eaa1177628629dcc6ab96d50a27922fea5670c2"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/logs/GPU0-local-full-normal.txt",
+      "bytes": 41843,
+      "sha256": "683bf579d9eb1c044f558dfb23b648a24ddf157d6c8a40ab0ad63043f77086b2"
+    },
+    {
+      "path": "reports/E3/GPU0_ROUTE_20261102/logs/GPU0-local-full-optimized.txt",
+      "bytes": 41843,
+      "sha256": "0be3a65215ccc6fa6b58238bf8ac5924e8191397cd1484253f0a70d56a6877d0"
     },
     {
       "path": "reports/E3/LONG_HORIZON_M0/AUTONOMOUS_STATUS.json",
@@ -1697,14 +1762,19 @@
       "sha256": "218c48147ba31bb09a0d2767f86223da2de538e3ec14b4456f8f6563aecfec6c"
     },
     {
+      "path": "tests/test_e3_gpu_route.py",
+      "bytes": 2862,
+      "sha256": "f7abce79d2d41486841dc69b90d29a85ed97a19420818beacd420d0efa955fb1"
+    },
+    {
       "path": "tests/test_e3_r016_freeze.py",
-      "bytes": 14488,
-      "sha256": "1abe1cd814882fd8fb4be276530703b42c535fca3f4be5a5e22d33e676cc8ccf"
+      "bytes": 14522,
+      "sha256": "d8ad43a234490fcd0cdc6dbd30e9b8576d32b2a7710fcd8146816cf96070419f"
     },
     {
       "path": "tests/test_e3_server_launcher.py",
-      "bytes": 7059,
-      "sha256": "dcca1ee685e5a888d32251821d653064a3c48ed439e26138a992ee0f36205fe3"
+      "bytes": 7100,
+      "sha256": "ae66e56e65ad7e16c9e7fa960ad7f4cc5ce49dc36768d8463f2dc67082490542"
     },
     {
       "path": "tests/test_evidence.py",
@@ -1741,5 +1811,7 @@
       "bytes": 13048,
       "sha256": "3d1cd4767d04c936c3b9f2c0062cf0dbf8f43087afbc8971f4b44cffd0c3ee85"
     }
-  ]
+  ],
+  "new_source_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "independent_new_runtime_authorization": false
 }

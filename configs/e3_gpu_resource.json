@@ -1,0 +1,8 @@
+{
+  "schema": "E3_GPU_RESOURCE_ROUTE_V1",
+  "physical_gpu_index": 0,
+  "automatic_fallback": false,
+  "minimum_free_bytes": 9663676416,
+  "maximum_process_fraction": 0.55,
+  "reserved_free_bytes": 2147483648
+}

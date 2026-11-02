@@ -1,0 +1,46 @@
+{
+  "errors": [
+    {
+      "scope": "CPU constructor source inspection",
+      "actual_exit": 1,
+      "kind": "ValueError substring not found",
+      "GPU_model_attempts": 0,
+      "recovery": "AST read-only source extraction exit0"
+    },
+    {
+      "scope": "CPU diagnostic supervisor before CUDA",
+      "actual_exit": 1,
+      "kind": "JSONDecodeError: new lock fd at EOF",
+      "GPU_model_attempts": 0,
+      "recovery": "seek0 without deleting marker; recovered supervisor/model both0; real kernel-lock regression added"
+    },
+    {
+      "scope": "Initial local targeted harness import",
+      "actual_exits": [
+        1,
+        1
+      ],
+      "kind": "Missing E3_APPROVED_CPU_REPO",
+      "GPU_model_attempts": 0,
+      "recovery": "Required fixture repository supplied; complete273 normal/-O local/Corelab all0"
+    },
+    {
+      "scope": "Initial local report builder interpreter",
+      "actual_exit": 1,
+      "kind": "System Python lacks hashlib.file_digest",
+      "GPU_model_attempts": 0,
+      "recovery": "Run with existing pinned Python3.12; no runtime/source/environment change"
+    },
+    {
+      "scope": "Initial public manifest validation",
+      "validator_actual_exit": 1,
+      "intermediate_unpushed_report_commit": "a06630fb712cd3d5f0787031086b0d2f7b5d1c31",
+      "kind": "Retained old hashes for changed source/navigation; dependent shell continued after check failure",
+      "GPU_model_attempts": 0,
+      "recovery": "Rehash all rows and new sources before push; check=True stops publication on mismatch"
+    }
+  ],
+  "original_error_records_retained": true,
+  "model_retries": 0,
+  "failed_TESTs_added": 0
+}

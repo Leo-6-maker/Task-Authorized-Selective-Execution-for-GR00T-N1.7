@@ -16,7 +16,7 @@ from unittest.mock import patch
 
 from e3.authorization import resource, validate_grant
 from e3.freeze import verify_freeze, historical
-from e3.resource import binding, live_gpu1
+from e3.resource import binding, live_gpu
 from tests.test_e3_cpu import ReactiveGate, frame, spec
 
 REPO = Path(__file__).resolve().parents[1]
@@ -200,20 +200,20 @@ class R016BoundaryTests(unittest.TestCase):
         self.assertEqual(gate.decide(8)['decision'], 'REJECT')
 
 
-class GPU1RoutingTests(unittest.TestCase):
+class GPU0RoutingTests(unittest.TestCase):
     def setUp(self):
         self.identity = dict(authorized_head='a'*40, review_commit='b'*40)
         self.record = dict(protocol_id='E3-001-v1.0', **self.identity,
-                           shared_gpu_inference_authorized=True, gpu_index=1,
+                           shared_gpu_inference_authorized=True, gpu_index=0,
                            gpu_uuid='GPU-SYNTHETIC-TEST-ONLY',
                            owner_approval_evidence='SYNTHETIC_UNIT_TEST_NOT_PERMISSION')
         self.env = dict(CUDA_VISIBLE_DEVICES=self.record['gpu_uuid'],
-                        MUJOCO_EGL_DEVICE_ID='1', MUJOCO_GL='egl', PYOPENGL_PLATFORM='egl')
+                        MUJOCO_EGL_DEVICE_ID='0', MUJOCO_GL='egl', PYOPENGL_PLATFORM='egl')
 
-    def test_resource_and_binding_allow_only_physical_GPU1(self):
+    def test_resource_and_binding_allow_only_configured_physical_GPU0(self):
         resource(self.record, self.identity)
         binding(self.record, self.env)
-        for bad in [0, True, '1', 2, None]:
+        for bad in [1, True, '0', 2, None]:
             changed = dict(self.record, gpu_index=bad)
             with self.subTest(index=bad):
                 with self.assertRaises(ValueError): resource(changed, self.identity)
@@ -221,22 +221,22 @@ class GPU1RoutingTests(unittest.TestCase):
 
     def test_wrong_environment_uuid_or_EGL_denied(self):
         for key, bad in [('CUDA_VISIBLE_DEVICES','0'), ('CUDA_VISIBLE_DEVICES','1'),
-                         ('CUDA_VISIBLE_DEVICES','GPU-OTHER'), ('MUJOCO_EGL_DEVICE_ID','0'),
+                         ('CUDA_VISIBLE_DEVICES','GPU-OTHER'), ('MUJOCO_EGL_DEVICE_ID','1'),
                          ('MUJOCO_GL','osmesa'), ('PYOPENGL_PLATFORM','glx')]:
             with self.subTest(key=key, value=bad):
                 with self.assertRaises(ValueError): binding(self.record, dict(self.env, **{key:bad}))
 
-    def test_live_inventory_no_GPU0_fallback_and_exact_9GiB_floor(self):
+    def test_live_inventory_no_GPU1_fallback_and_exact_9GiB_floor(self):
         with patch('e3.resource.subprocess.check_output') as query:
-            query.return_value = '0, GPU-OTHER, 99999\n1, GPU-SYNTHETIC-TEST-ONLY, 9216\n'
-            self.assertEqual(live_gpu1(self.record)['gpu_index'], 1)
-            for value in ['0, GPU-OTHER, 99999\n',
-                          '1, GPU-SYNTHETIC-TEST-ONLY, 9215\n',
-                          '1, GPU-OTHER, 12000\n',
-                          '1, GPU-SYNTHETIC-TEST-ONLY, 12000\n'*2]:
+            query.return_value = '1, GPU-OTHER, 99999\n0, GPU-SYNTHETIC-TEST-ONLY, 9216\n'
+            self.assertEqual(live_gpu(self.record)['gpu_index'], 0)
+            for value in ['1, GPU-OTHER, 99999\n',
+                          '0, GPU-SYNTHETIC-TEST-ONLY, 9215\n',
+                          '0, GPU-OTHER, 12000\n',
+                          '0, GPU-SYNTHETIC-TEST-ONLY, 12000\n'*2]:
                 query.return_value = value
                 with self.subTest(inventory=value):
-                    with self.assertRaises(ValueError): live_gpu1(self.record)
+                    with self.assertRaises(ValueError): live_gpu(self.record)
 
     def test_direct_native_server_denial_before_output_or_torch_import(self):
         from e3.server import main
@@ -248,28 +248,28 @@ class GPU1RoutingTests(unittest.TestCase):
                     '--review-commit', 'b'*40, '--review-path', 'docs/reviews/SYNTHETIC.json']
             with patch('e3.authorization.authorize', return_value=({}, [], self.identity)), \
                  patch.object(sys, 'argv', argv), patch.dict(os.environ, self.env, clear=True), \
-                 patch('e3.server.live_gpu1', side_effect=ValueError('synthetic live memory denial')):
+                 patch('e3.server.live_gpu', side_effect=ValueError('synthetic live memory denial')):
                 with self.assertRaisesRegex(ValueError, 'live memory denial'): main()
             self.assertFalse((root/'output').exists())
             with patch('e3.authorization.authorize', return_value=({}, [], self.identity)), \
-                 patch.object(sys, 'argv', argv), patch.dict(os.environ, dict(self.env, MUJOCO_EGL_DEVICE_ID='0'), clear=True), \
-                 patch('e3.server.live_gpu1') as live:
+                 patch.object(sys, 'argv', argv), patch.dict(os.environ, dict(self.env, MUJOCO_EGL_DEVICE_ID='1'), clear=True), \
+                 patch('e3.server.live_gpu') as live:
                 with self.assertRaisesRegex(ValueError, 'binding differs'): main()
                 live.assert_not_called()
             self.assertFalse((root/'output').exists())
 
-    def test_supervisor_and_direct_runner_reject_GPU0_before_reservation(self):
+    def test_supervisor_and_direct_runner_reject_GPU1_before_reservation(self):
         from e3.supervisor import run
         from e3.native_runner import main
         with tempfile.TemporaryDirectory() as d:
             root = Path(d); allocation = root/'allocation.json'
-            allocation.write_text(json.dumps(dict(self.record, gpu_index=0)))
+            allocation.write_text(json.dumps(dict(self.record, gpu_index=1)))
             with patch('e3.supervisor.authorize', return_value=({}, [], self.identity)):
-                with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+                with self.assertRaisesRegex(ValueError, 'source-locked GPU route'):
                     run(root, REPO, 'e3a-test-0001', 'b'*40, 'docs/reviews/SYNTHETIC.json',
                         allocation, root/'python', 'test-server-e3-synthetic')
             with patch('e3.native_runner.authorize', return_value=({}, [], self.identity)):
-                with self.assertRaisesRegex(ValueError, 'GPU1-only'):
+                with self.assertRaisesRegex(ValueError, 'source-locked GPU route'):
                     main(['--workspace', str(root), '--allocation-record', str(allocation),
                           '--run-id', 'e3a-test-0001', '--review-commit', 'b'*40,
                           '--review-path', 'docs/reviews/SYNTHETIC.json'])
