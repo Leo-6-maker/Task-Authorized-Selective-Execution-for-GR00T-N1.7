@@ -1,0 +1,70 @@
+{
+  "timestamp_sgt": "2026-11-02T19:12:58.280965+08:00",
+  "executor_review_not_independent_GPT": true,
+  "new_review_tool_source_sha256": "682fc02e7e6bc8b0e42e8b4860f00b5a1039875cbf94f124e159c60e6f3671f1",
+  "new_review_test_source_sha256": "4cd916d3d17e383dea096000b732cf068f0ed0b890703971cfbb922bc434f103",
+  "actual_receipts": [
+    {
+      "check": "negative-regression-normal",
+      "actual_exit_code": 0,
+      "actual_returncode": 0,
+      "signal": null,
+      "at": "2026-11-02T19:08:39.326367+08:00",
+      "deadline_exceeded": false,
+      "raw_exit_receipt_sha256": "46a88a6a062a18d101254ed82e939e3ec85726ab3f6f4fec0b823aae4566f46f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b1da8025e66c8df84741b3641c92d2903ed4e6c9dbd22f3926afd0b645a878a9"
+    },
+    {
+      "check": "negative-regression-optimized",
+      "actual_exit_code": 0,
+      "actual_returncode": 0,
+      "signal": null,
+      "at": "2026-11-02T19:08:40.864070+08:00",
+      "deadline_exceeded": false,
+      "raw_exit_receipt_sha256": "f60d3be81e6610fe03a0028fc26109e83f8eb7db453435b9f9252337fa3656e6",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6a072d718a03181433ce432be7ce0371a615c378ab3558449a168e5a4a664e59"
+    },
+    {
+      "check": "recompute-normal",
+      "actual_exit_code": 0,
+      "actual_returncode": 0,
+      "signal": null,
+      "at": "2026-11-02T19:08:38.360236+08:00",
+      "deadline_exceeded": false,
+      "raw_exit_receipt_sha256": "f03cdbe0c5ef5085fd02b6450e9c0f18ba17bad4aacf46489a8d84ca094f7b93",
+      "stdout_sha256": "f156940ff5457945d970c09bb19d5958cf73e562ffde7cbd7458b9a11c3e5d5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "recompute-optimized",
+      "actual_exit_code": 0,
+      "actual_returncode": 0,
+      "signal": null,
+      "at": "2026-11-02T19:08:39.775349+08:00",
+      "deadline_exceeded": false,
+      "raw_exit_receipt_sha256": "dd4ce9706e171b612c77d28331f5a39bcd9bae29a221895604d5178daca27e25",
+      "stdout_sha256": "f156940ff5457945d970c09bb19d5958cf73e562ffde7cbd7458b9a11c3e5d5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "ordinary_optimized_recomputations_equal": true,
+  "negative_regression_tests_per_mode": 15,
+  "historical_282_suite_this_delivery": "NOT_RERUN_REPORT_ONLY; four source-bound actual0 receipts retained",
+  "preserved_delivery_only_failure": {
+    "actual_exit": 1,
+    "raw_exit_receipt_sha256": "128c4b6dd99e8c3ae30d2b6b9f66b97d7378cf48c421b3765d71d89f4df02819",
+    "raw_stderr_sha256": "4e4f664883ebf4c245feb4437f8757dc89ecf09ef08cfdcea50e64e2178a4baf",
+    "reason": "Local Git database lacked historical Owner grant397500d; git rev-parse128 propagated as checker1",
+    "repair": "Fetched main without changing worktree/native code; complete checks then passed",
+    "model_simulation_TEST_calls": 0
+  },
+  "preserved_report_builder_failure": {
+    "actual_exit": 2,
+    "reason": "Draft builder heredoc quoting caused Python SyntaxError before creating any output; replaced with a file patch",
+    "raw_evidence": "Codex tool execution receipt retained",
+    "model_simulation_TEST_calls": 0
+  },
+  "independent_scientific_approval": false
+}

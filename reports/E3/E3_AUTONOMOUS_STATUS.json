@@ -1,7 +1,7 @@
 {
   "project": "ME6401_TASE_E3",
-  "timestamp_sgt": "2026-11-02T15:19:44.466472+08:00",
-  "status": "OWNER_DIRECT_AUTHORIZED_RUNNING_AFTER_VERIFIED_TRANSPORT_REPAIR",
+  "timestamp_sgt": "2026-11-02T19:12:58.280965+08:00",
+  "status": "READY_FOR_INDEPENDENT_E3_R3_RESULT_REVIEW",
   "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
   "external_operator_source": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
   "operator_source_sha256": "81557fa76fb2502f1603747e71c3499ab9b07af539f5ddabb0834eaec0b79cd0",
@@ -13,137 +13,62 @@
   "independent_GPT_runtime_review_completed": false,
   "scientific_results_independently_reviewed": false,
   "E3_planned": 160,
-  "E3_consumed": 18,
-  "E3_unstarted": 142,
-  "observed_complete_native_exit0": 17,
-  "observed_active_or_incomplete": 1,
+  "E3_consumed": 160,
+  "E3_unstarted": 0,
+  "observed_complete_native_exit0": 160,
+  "observed_active_or_incomplete": 0,
   "complete_native_status_counts": {
-    "SUCCESS": 17
+    "SUCCESS": 114,
+    "TIME_LIMIT": 24,
+    "SEMANTIC_ABORT": 22
   },
-  "current_tail_rows": [
-    {
-      "run_id": "e3a-test-0007",
-      "status": "SUCCESS",
-      "controls": 103,
-      "policy_calls": 13,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0008",
-      "status": "SUCCESS",
-      "controls": 103,
-      "policy_calls": 13,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0009",
-      "status": "SUCCESS",
-      "controls": 158,
-      "policy_calls": 20,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0010",
-      "status": "SUCCESS",
-      "controls": 158,
-      "policy_calls": 20,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0011",
-      "status": "SUCCESS",
-      "controls": 121,
-      "policy_calls": 16,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0012",
-      "status": "SUCCESS",
-      "controls": 121,
-      "policy_calls": 16,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0013",
-      "status": "SUCCESS",
-      "controls": 119,
-      "policy_calls": 15,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0014",
-      "status": "SUCCESS",
-      "controls": 119,
-      "policy_calls": 15,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0015",
-      "status": "SUCCESS",
-      "controls": 118,
-      "policy_calls": 15,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0016",
-      "status": "SUCCESS",
-      "controls": 118,
-      "policy_calls": 15,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0017",
-      "status": "SUCCESS",
-      "controls": 124,
-      "policy_calls": 16,
-      "actual_exit": 0,
-      "result_present": true,
-      "process_exists": false
-    },
-    {
-      "run_id": "e3a-test-0018",
-      "status": "NO_FINAL_RESULT",
-      "controls": null,
-      "policy_calls": null,
-      "actual_exit": null,
-      "result_present": false,
-      "process_exists": true
-    }
-  ],
-  "actual_A4_completed": 4,
-  "actual_B6_completed": 0,
+  "current_tail_rows": [],
+  "actual_A4_completed": 28,
+  "actual_B6_completed": 8,
   "checkpoint_ids": [
     "E3A-0004.json",
     "E3A-0008.json",
     "E3A-0012.json",
-    "E3A-0016.json"
+    "E3A-0016.json",
+    "E3A-0020.json",
+    "E3A-0024.json",
+    "E3A-0028.json",
+    "E3A-0032.json",
+    "E3A-0036.json",
+    "E3A-0040.json",
+    "E3A-0044.json",
+    "E3A-0048.json",
+    "E3A-0052.json",
+    "E3A-0056.json",
+    "E3A-0060.json",
+    "E3A-0064.json",
+    "E3A-0068.json",
+    "E3A-0072.json",
+    "E3A-0076.json",
+    "E3A-0080.json",
+    "E3A-0084.json",
+    "E3A-0088.json",
+    "E3A-0092.json",
+    "E3A-0096.json",
+    "E3A-0100.json",
+    "E3A-0104.json",
+    "E3A-0108.json",
+    "E3A-0112.json",
+    "E3B-0006.json",
+    "E3B-0012.json",
+    "E3B-0018.json",
+    "E3B-0024.json",
+    "E3B-0030.json",
+    "E3B-0036.json",
+    "E3B-0042.json",
+    "E3B-0048.json"
   ],
   "all_original0001_0012_preserved": true,
   "replayed_experiments": 0,
-  "server_loaded": true,
-  "server_actual_exit": null,
-  "controller_actual_exit": null,
-  "active_exit_values_are_unknown_not_zero": true,
+  "server_loaded": false,
+  "server_actual_exit": 130,
+  "controller_actual_exit": 0,
+  "active_exit_values_are_unknown_not_zero": false,
   "first_run_controller_exit": 1,
   "first_run_backup_agent_exit": 1,
   "first_run_native_server_exit": 130,
@@ -170,5 +95,29 @@
   "independent_private_rehash": false,
   "course_PPT": "DEFERRED_BY_OWNER",
   "goal_complete": false,
-  "efficacy_or_generalization_claim_allowed": false
+  "efficacy_or_generalization_claim_allowed": false,
+  "server_launcher_actual_exit": 1,
+  "backup_agent_actual_exit": 0,
+  "terminal_custody_monitor_actual_exit": 0,
+  "collection_complete": true,
+  "collection_completed_at_sgt": "2026-11-02T17:31:36.802844+08:00",
+  "all_recorded_native_processes_exited": true,
+  "executor_report_contains_descriptive_observations": true,
+  "fresh_final_CPU_audit_exits": [
+    0,
+    0
+  ],
+  "new_export_recompute_exits": [
+    0,
+    0
+  ],
+  "new_export_negative_tests": [
+    15,
+    15
+  ],
+  "fresh_original_file_rehash_count": 21527,
+  "checkpoint_archive_count": 36,
+  "terminal_archive_count": 1,
+  "final_review": "reports/E3/FINAL_160_20261102/REVIEW_REQUEST.md",
+  "next_action": "Independent E3 result review; separate E2 R3 pending; no new TEST/course auto-submit"
 }

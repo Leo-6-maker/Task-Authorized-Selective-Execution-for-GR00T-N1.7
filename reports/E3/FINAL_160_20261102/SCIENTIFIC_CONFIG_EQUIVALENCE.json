@@ -1,0 +1,33 @@
+{
+  "native_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "historical_0001_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "source_lock_entries": 143,
+  "native_scientific_tree_diff_paths": [],
+  "external_operator_source_head": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+  "external_operator_source_digest": "81557fa76fb2502f1603747e71c3499ab9b07af539f5ddabb0834eaec0b79cd0",
+  "authorization_source": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "independent_GPT_runtime_review_completed": false,
+  "owner_record_revision3_commit": "a92843a1d7ae920a6264e5acaed6a375c58780b5",
+  "independent_result_review_completed": false,
+  "scientific_config_retuned": false,
+  "raw_chunk": 16,
+  "prefix": 8,
+  "control_cap": 720,
+  "settling": 10,
+  "k": 3,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 641500,
+  "physical_gpu0_owner_route_not_historical_gpu1_doc": true,
+  "E2_pooled": false,
+  "E2_full_private_18070_rehash_this_delivery": false,
+  "files": {
+    "configs/e3_protocol_lock.proposed.json": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+    "configs/e3_cells.proposed.json": "76a21aa1275eba0b8fc4eb5457325e90ce83871dab3e174ab5042ec7cab247be",
+    "configs/e3_run_config.proposed.json": "e771af92e1d79db89230f5200a3eaf23ead9b42d822027fa2830a34be39e0e37",
+    "configs/e3_splits.proposed.json": "8ff78fa823be49394bc10105530847ab8e1f298776799f68f5c60419da5171ca",
+    "configs/e3_sources.proposed.json": "c10d2640e1176a3f19e19ee806e3703c6f55213f0d623dba872d65b8c0b58b37",
+    "configs/e3_scene_identity.frozen.json": "aac214a36c5b30f4c65188c6e67ab2741b7e32f7695b7c8d1dfa757b50400b4a",
+    "configs/runtime_lock_E2.json": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+    "docs/protocols/E3-001-v1.0-FROZEN.md": "faee1fe5699786dc57d1bab18eb09da93513d572877e4c60c95d1381a466d58e"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "project": "ME6401_TASE_E3",
+  "timestamp_sgt": "2026-11-02T15:19:44.466472+08:00",
+  "status": "OWNER_DIRECT_AUTHORIZED_RUNNING_AFTER_VERIFIED_TRANSPORT_REPAIR",
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "external_operator_source": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+  "operator_source_sha256": "81557fa76fb2502f1603747e71c3499ab9b07af539f5ddabb0834eaec0b79cd0",
+  "authority": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "execution_grant": {
+    "commit": "a92843a1d7ae920a6264e5acaed6a375c58780b5",
+    "path": "docs/reviews/OWNER-E3-GPU0-TEST-AUTHORIZED-20261102.json"
+  },
+  "independent_GPT_runtime_review_completed": false,
+  "scientific_results_independently_reviewed": false,
+  "E3_planned": 160,
+  "E3_consumed": 18,
+  "E3_unstarted": 142,
+  "observed_complete_native_exit0": 17,
+  "observed_active_or_incomplete": 1,
+  "complete_native_status_counts": {
+    "SUCCESS": 17
+  },
+  "current_tail_rows": [
+    {
+      "run_id": "e3a-test-0007",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0008",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0009",
+      "status": "SUCCESS",
+      "controls": 158,
+      "policy_calls": 20,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0010",
+      "status": "SUCCESS",
+      "controls": 158,
+      "policy_calls": 20,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0011",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0012",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0013",
+      "status": "SUCCESS",
+      "controls": 119,
+      "policy_calls": 15,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0014",
+      "status": "SUCCESS",
+      "controls": 119,
+      "policy_calls": 15,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0015",
+      "status": "SUCCESS",
+      "controls": 118,
+      "policy_calls": 15,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0016",
+      "status": "SUCCESS",
+      "controls": 118,
+      "policy_calls": 15,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0017",
+      "status": "SUCCESS",
+      "controls": 124,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0018",
+      "status": "NO_FINAL_RESULT",
+      "controls": null,
+      "policy_calls": null,
+      "actual_exit": null,
+      "result_present": false,
+      "process_exists": true
+    }
+  ],
+  "actual_A4_completed": 4,
+  "actual_B6_completed": 0,
+  "checkpoint_ids": [
+    "E3A-0004.json",
+    "E3A-0008.json",
+    "E3A-0012.json",
+    "E3A-0016.json"
+  ],
+  "all_original0001_0012_preserved": true,
+  "replayed_experiments": 0,
+  "server_loaded": true,
+  "server_actual_exit": null,
+  "controller_actual_exit": null,
+  "active_exit_values_are_unknown_not_zero": true,
+  "first_run_controller_exit": 1,
+  "first_run_backup_agent_exit": 1,
+  "first_run_native_server_exit": 130,
+  "first_run_server_signal": 2,
+  "first_run_launcher_exit": 1,
+  "infrastructure_incidents_preserved": [
+    {
+      "kind": "BACKUP_PROOF_TRANSPORT_E2BIG",
+      "at_consumed": 12,
+      "originals_complete_copied_and_hashed": true,
+      "original_stop_preserved": true,
+      "CPU_repaired": true
+    }
+  ],
+  "recovery_checkpoint12_written_from_genuine_reaudit": true,
+  "CPU282_actual_exits": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "scientific_config_changed": false,
+  "E2_frozen_unchanged": true,
+  "independent_private_rehash": false,
+  "course_PPT": "DEFERRED_BY_OWNER",
+  "goal_complete": false,
+  "efficacy_or_generalization_claim_allowed": false
+}
