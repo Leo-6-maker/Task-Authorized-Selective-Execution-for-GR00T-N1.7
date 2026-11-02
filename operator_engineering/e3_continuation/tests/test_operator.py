@@ -257,6 +257,41 @@ class ActualAdmissionDenialTests(unittest.TestCase):
 
 
 class NativeResourceAndSocketTests(unittest.TestCase):
+    def test_checkpoint_mixed_history_uses_each_authenticated_grants_GPU(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        common=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                    authorized_head='c'*40)
+        for grant,expected in [(dict(common,standing_owner_scope=dict(gpu_index=1)),1),
+                               (dict(common,authorized_physical_GPU_index=0),0)]:
+            with self.subTest(GPU=expected),patch('operator_engineering.e3_continuation.physics_checks.git',
+                side_effect=['b'*40,json.dumps(grant)]):
+                self.assertEqual(expected_gpu_index(APPROVED,auth),expected)
+
+    def test_checkpoint_physical_scope_unknown_or_malformed_is_rejected(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        common=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                    authorized_head='c'*40)
+        for bad in [None,True,'0',2]:
+            with self.subTest(GPU=bad),patch('operator_engineering.e3_continuation.physics_checks.git',
+                side_effect=['b'*40,json.dumps(dict(common,authorized_physical_GPU_index=bad))]):
+                with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+
+    def test_checkpoint_physical_scope_rejects_changed_grant_identity(self):
+        from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
+        auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
+                  review_blob='b'*40,authorized_head='c'*40)
+        with patch('operator_engineering.e3_continuation.physics_checks.git',return_value='d'*40):
+            with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+        grant=dict(disposition='E3_TEST_AUTHORIZED',protocol_id='E3-001-v1.0',
+                   authorized_head='d'*40,authorized_physical_GPU_index=0)
+        with patch('operator_engineering.e3_continuation.physics_checks.git',
+                   side_effect=['b'*40,json.dumps(grant)]):
+            with self.assertRaises(ValueError):expected_gpu_index(APPROVED,auth)
+
     def test_real_new_and_retained_lock_exclusion_without_deletion(self):
         from operator_engineering.e3_continuation.processes import controller_lock
         with tempfile.TemporaryDirectory() as t:
