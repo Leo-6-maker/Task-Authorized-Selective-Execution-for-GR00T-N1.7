@@ -30,6 +30,14 @@
       "kind": "System Python lacks hashlib.file_digest",
       "GPU_model_attempts": 0,
       "recovery": "Run with existing pinned Python3.12; no runtime/source/environment change"
+    },
+    {
+      "scope": "Initial public manifest validation",
+      "validator_actual_exit": 1,
+      "intermediate_unpushed_report_commit": "a06630fb712cd3d5f0787031086b0d2f7b5d1c31",
+      "kind": "Retained old hashes for changed source/navigation; dependent shell continued after check failure",
+      "GPU_model_attempts": 0,
+      "recovery": "Rehash all rows and new sources before push; check=True stops publication on mismatch"
     }
   ],
   "original_error_records_retained": true,
