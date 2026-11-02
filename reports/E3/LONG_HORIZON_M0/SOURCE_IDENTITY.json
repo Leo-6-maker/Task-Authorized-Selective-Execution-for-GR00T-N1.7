@@ -1,0 +1,23 @@
+{
+  "CPU_engineering_commit": "49cb3f03d3370958d9674563cb1b45b66cb25036",
+  "operator_source_sha256": "2f3ecf87b0a560691b442ede3c54968c7d6f1ee06235165855a45e069d6a4f58",
+  "operator_source_digest_definition": "SHA256 of canonical sorted module-name->SHA256 JSON including all8 package modules and parent package initializer; excludes tests/reports",
+  "files": {
+    "operator_engineering/__init__.py": "8ffd99564ee3c8ca0d5fa615bed42920eecc6c6c306f337ea239d666d7ff351d",
+    "operator_engineering/e3_continuation/backup_agent.py": "f0edc9c0b96fd2e4de848336ea0b2ef60781a40f27568ec1097cbafa23dc2724",
+    "operator_engineering/e3_continuation/__init__.py": "245061372ca0a9ae52422a2f124150277fa60133231b33101b144a8838fad369",
+    "operator_engineering/e3_continuation/processes.py": "dc8396f0e236f5ddc377525c36074471c21bb1f27d3590adfb92de563f96c4c8",
+    "operator_engineering/e3_continuation/native.py": "7105a9a761e1d7fec34129d12645e8431e3ce1e0fa410b8aec4575d6d6814887",
+    "operator_engineering/e3_continuation/custody.py": "56e01c3cd66d1f11a502a415a33dce2db42bd7f7e6b06b8534b16512e55c44c9",
+    "operator_engineering/e3_continuation/main.py": "d849488b2030b0585303f826cf327cc2a92cf9d43f3db7a293685703124f6b9d",
+    "operator_engineering/e3_continuation/contract.py": "547f73b2f8deee5d6b602a3d98e991db92930a55386f6dc7def85dc9431eb5f3",
+    "operator_engineering/e3_continuation/physics_checks.py": "a0a912149958fe46d1ba64a5ce26a2509f16321b54aef12a1c98f16218c7e87a",
+    "operator_engineering/e3_continuation/tests/test_operator.py": "05d201ecf9ca122819becba17a6a8486dca154c51043c5c1bb654d111842a2d3"
+  },
+  "approved_native_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "source_lock_sha256": "14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc",
+  "frozen_code_config_test_protocol_diff": [],
+  "native_action_logic_reimplemented": false,
+  "retained_R017_extra_physical_checks_function_body_unchanged_except_explicit_parameters": true,
+  "operator_is_external_not_new_native_runtime": true
+}

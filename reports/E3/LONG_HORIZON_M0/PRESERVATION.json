@@ -1,0 +1,31 @@
+{
+  "timestamp_sgt": "2026-10-30T23:24:07.092664+08:00",
+  "runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "CPU_engineering_commit": "49cb3f03d3370958d9674563cb1b45b66cb25036",
+  "operator_source_sha256": "2f3ecf87b0a560691b442ede3c54968c7d6f1ee06235165855a45e069d6a4f58",
+  "M0_state": "IMPLEMENTED_CPU_VALIDATED_NO_NATIVE_AUTHORIZATION",
+  "engineering_tests_per_mode": 38,
+  "Corelab_actual_exits": [
+    0,
+    0
+  ],
+  "genuine_R019_denial_actual_exits": [
+    1,
+    1
+  ],
+  "raw_original_files_unchanged": 78,
+  "E3_consumed": 1,
+  "E3_versioned_eligible": 1,
+  "E3_unstarted": 159,
+  "actual_A4_completed": 0,
+  "actual_B6_completed": 0,
+  "owned_native_processes": [],
+  "new_GPU_model_sim_Shadow_calls": 0,
+  "new_TEST_reservations": 0,
+  "actual_backup_agent_exit": 0,
+  "actual_two_hop_transport": true,
+  "backup_smoke_is_not_TEST_checkpoint": true,
+  "execution_grant": null,
+  "night_stop_latched": true,
+  "science_unchanged": true
+}
