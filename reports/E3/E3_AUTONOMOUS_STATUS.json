@@ -1,55 +1,127 @@
 {
   "project": "ME6401_TASE_E3",
-  "timestamp_sgt": "2026-11-02T14:16:08.533128+08:00",
-  "status": "READY_FOR_GPU0_RUNTIME_DELTA_REVIEW",
-  "current_activity": "GPU0_DIAGNOSTIC_COMPLETE_CPU_DELIVERY",
-  "CPU_tested_snapshot": "162b12d1a73e39653d155b4ae49e8bc898ce0a70",
-  "proposed_report_head": "THIS_COMMIT_NOT_SELF_AUTHORIZED",
-  "prior_approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
-  "source_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
-  "operator_source_sha256": "ee32d4a679365a542b43638c8d6bfe98355daa6b9d6298b3c338e75ee65fd8e1",
-  "owner_GPU0_parallel_consent": "DIRECT_CURRENT_USER_PRIVATE_RECEIPT",
-  "configured_physical_GPU_index": 0,
-  "automatic_GPU_fallback": false,
-  "native_preload_and_postload_floor_MiB": 9216,
-  "maximum_process_fraction": 0.55,
-  "reserved_budget_MiB": 2048,
-  "real_GPU0_model_constructions": 1,
-  "real_GPU1_model_constructions": 0,
-  "model_load_actual_exit": 0,
-  "policy_requests": 0,
-  "new_simulator_constructions": 0,
-  "new_Shadow": 0,
-  "new_TEST_reservations": 0,
+  "timestamp_sgt": "2026-11-02T15:01:34.085007+08:00",
+  "status": "OWNER_DIRECT_AUTHORIZED_RUNNING",
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "external_operator_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+  "execution_grant": "OWNER-E3-GPU0-20261102",
+  "authority": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "independent_GPT_runtime_review_completed": false,
   "E3_planned": 160,
-  "E3_consumed": 1,
-  "E3_versioned_eligible": 1,
-  "E3_unstarted": 159,
-  "next_original_id": "e3a-test-0002",
-  "actual_A4_completed": 0,
+  "E3_consumed": 10,
+  "E3_unstarted": 150,
+  "observed_completed_full_results": 9,
+  "completed_count_is_recent_rows_only": false,
+  "current_tail_rows": [
+    {
+      "run_id": "e3a-test-0001",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0002",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0003",
+      "status": "SUCCESS",
+      "controls": 106,
+      "policy_calls": 14,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0004",
+      "status": "SUCCESS",
+      "controls": 106,
+      "policy_calls": 14,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0005",
+      "status": "SUCCESS",
+      "controls": 122,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0006",
+      "status": "SUCCESS",
+      "controls": 122,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0007",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0008",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0009",
+      "status": "SUCCESS",
+      "controls": 158,
+      "policy_calls": 20,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0010",
+      "status": "NO_FINAL_RESULT",
+      "controls": null,
+      "policy_calls": null,
+      "actual_exit": null,
+      "result_present": false,
+      "process_exists": true
+    }
+  ],
+  "actual_A4_completed": 2,
   "actual_B6_completed": 0,
-  "conditional_prevention": "N/A",
-  "execution_grant": null,
-  "formal_TEST_authorized": false,
-  "latest_independent_review": "R019_NO_TEST",
-  "previous_incident_stop_latched": true,
-  "original78_unchanged": true,
+  "actual_checkpoints": [
+    "E3A-0004.json",
+    "E3A-0008.json"
+  ],
+  "first_A4_complete": true,
+  "original0001_replayed": false,
+  "original0001_preserved": true,
   "E2_frozen_unchanged": true,
-  "independent_private_rehash": false,
-  "CPU_full273_actual_exits": [
-    0,
-    0,
-    0,
-    0
-  ],
-  "historical_audit_actual_exits": [
-    0,
-    0
-  ],
-  "expected_R019_entry_denial_actual_exits": [
-    1,
-    1
-  ],
-  "course_PPT": "DEFERRED_BY_OWNER_E3_FIRST",
-  "next_action": "Independent exact final-Head/lock/operator GPU0 execution admission with new continuation window; then unchanged original0002–0004 plus historical0001 firstA4"
+  "scientific_config_unchanged": true,
+  "server_loaded": true,
+  "server_exit": null,
+  "controller_exit": null,
+  "exits_are_unknown_while_running": true,
+  "backup_agent_actual_process": true,
+  "course_PPT": "DEFERRED_BY_OWNER",
+  "science_results_independently_reviewed": false,
+  "efficacy_or_generalization_claim_allowed": false,
+  "goal_complete": false
 }

@@ -1,0 +1,21 @@
+{
+  "execution_authorization_source": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "explicit_owner_scope": "Owner directly authorizes this exact PR44 execution in place of prior independent GPT runtime admission",
+  "independent_GPT_runtime_review_completed": false,
+  "independent_scientific_results_review_completed": false,
+  "record_commit": "397500d65ca1b3f4dcd9e12e0d0f2e80fd97d717",
+  "record_path": "docs/reviews/OWNER-E3-GPU0-TEST-AUTHORIZED-20261102.json",
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "external_operator_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+  "operator_source_sha256": "cb4073ca54b258a5fd6c654b0d32e86b118cc4b190403e2d835dd4cc26d028b5",
+  "owner_raw_confirmation_sha256": "7dad90592e5ea0031c062791890d984f6d23009cb5bdc9689b6c89343224b48f",
+  "grant_blob": "03f0f269e2550b6d433d538508d5956a757f05a3",
+  "grant_json_sha256": "f28a3e275101609032c5f7fcb3e395eb034691de432661c5994abf434fa080b2",
+  "no_signed_independent_review_invented": true,
+  "retained_prior_R019_and_R017_records": true,
+  "window": {
+    "start": "2026-11-02T14:49:29.813311+08:00",
+    "no_new_reservations_after": "2026-11-05T20:00:00+08:00",
+    "end": "2026-11-05T21:00:00+08:00"
+  }
+}

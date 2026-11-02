@@ -1,0 +1,57 @@
+{
+  "engineering_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "actual_runs": [
+    {
+      "host": "local",
+      "mode": "normal",
+      "tests": 276,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:52:31.568058+08:00",
+      "completed_at_sgt": "2026-11-02T14:53:09.274129+08:00",
+      "raw_log_sha256": "a91c7b51138dc678b1cde01d3a2acdad5b17ffdc909c92be60a621acc002369a",
+      "raw_exit_receipt_sha256": "62580e15d52792bee89ae64461156c9ef7e860be5738dc4404d6ab023d8cd56b",
+      "public_log": "logs/owner-GPU0-local-normal.txt",
+      "public_log_sha256": "7e7fc1236e8b94ae903a6a06c475865cd798c6ddce082cc30816c866e6083327"
+    },
+    {
+      "host": "local",
+      "mode": "optimized",
+      "tests": 276,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:53:09.298606+08:00",
+      "completed_at_sgt": "2026-11-02T14:53:46.714181+08:00",
+      "raw_log_sha256": "cfa29349c250d58dfe427dc80da220319fb533cb2413225ca95b034b42ee3d07",
+      "raw_exit_receipt_sha256": "51cf3998ba88048f347eefe58e05d0fc74a7f1a1d6cad180bc88fd016c5006a5",
+      "public_log": "logs/owner-GPU0-local-optimized.txt",
+      "public_log_sha256": "fa1e912e1d4491d896707fc1d5625f3c72a93790602918913f6f500fb35954d9"
+    },
+    {
+      "host": "Corelab",
+      "mode": "normal",
+      "tests": 276,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:53:26.989475+08:00",
+      "completed_at_sgt": "2026-11-02T14:54:12.449584+08:00",
+      "raw_log_sha256": "ec33bc639c3569bf9be874e9ecae4686f6904ac272188075712cbee5df9529ba",
+      "raw_exit_receipt_sha256": "d2fb137fe7abd12b9fcc996e732d289ec146d81e48e5d1d0228922f81b9f957f",
+      "public_log": "logs/owner-GPU0-Corelab-normal.txt",
+      "public_log_sha256": "f174e76a52cf7ade96173ac42331bc93086d485278c26c916d3549d58fed5db9"
+    },
+    {
+      "host": "Corelab",
+      "mode": "optimized",
+      "tests": 276,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:54:12.583203+08:00",
+      "completed_at_sgt": "2026-11-02T14:54:55.810419+08:00",
+      "raw_log_sha256": "4f27372387348be870685a4e9ca9d71b9f8d161f934b8c65002b1acfe09ad8d8",
+      "raw_exit_receipt_sha256": "8ff8a360a6e290661d4192b19a3521835f08d8e1cff817cf17d1098bdd0c61c5",
+      "public_log": "logs/owner-GPU0-Corelab-optimized.txt",
+      "public_log_sha256": "ceb7b518ee1098a33e45599fdd567b920e4170614b329daa5df4002ae1a7aa81"
+    }
+  ],
+  "native_locked_source_diff": [],
+  "new_external_tests": 3,
+  "scope": "234 root/native CPU tests +42 external CPU tests; mocked grants/GPU plus real subprocess/lock/copy tests; not model physics validation"
+}

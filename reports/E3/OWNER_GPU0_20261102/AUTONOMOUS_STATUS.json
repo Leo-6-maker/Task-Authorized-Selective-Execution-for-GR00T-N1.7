@@ -1,0 +1,127 @@
+{
+  "project": "ME6401_TASE_E3",
+  "timestamp_sgt": "2026-11-02T15:01:34.085007+08:00",
+  "status": "OWNER_DIRECT_AUTHORIZED_RUNNING",
+  "native_runtime": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "external_operator_source": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+  "execution_grant": "OWNER-E3-GPU0-20261102",
+  "authority": "PROJECT_OWNER_DIRECT_CHAT_CONFIRMATION",
+  "independent_GPT_runtime_review_completed": false,
+  "E3_planned": 160,
+  "E3_consumed": 10,
+  "E3_unstarted": 150,
+  "observed_completed_full_results": 9,
+  "completed_count_is_recent_rows_only": false,
+  "current_tail_rows": [
+    {
+      "run_id": "e3a-test-0001",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0002",
+      "status": "SUCCESS",
+      "controls": 121,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0003",
+      "status": "SUCCESS",
+      "controls": 106,
+      "policy_calls": 14,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0004",
+      "status": "SUCCESS",
+      "controls": 106,
+      "policy_calls": 14,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0005",
+      "status": "SUCCESS",
+      "controls": 122,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0006",
+      "status": "SUCCESS",
+      "controls": 122,
+      "policy_calls": 16,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0007",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0008",
+      "status": "SUCCESS",
+      "controls": 103,
+      "policy_calls": 13,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0009",
+      "status": "SUCCESS",
+      "controls": 158,
+      "policy_calls": 20,
+      "actual_exit": 0,
+      "result_present": true,
+      "process_exists": false
+    },
+    {
+      "run_id": "e3a-test-0010",
+      "status": "NO_FINAL_RESULT",
+      "controls": null,
+      "policy_calls": null,
+      "actual_exit": null,
+      "result_present": false,
+      "process_exists": true
+    }
+  ],
+  "actual_A4_completed": 2,
+  "actual_B6_completed": 0,
+  "actual_checkpoints": [
+    "E3A-0004.json",
+    "E3A-0008.json"
+  ],
+  "first_A4_complete": true,
+  "original0001_replayed": false,
+  "original0001_preserved": true,
+  "E2_frozen_unchanged": true,
+  "scientific_config_unchanged": true,
+  "server_loaded": true,
+  "server_exit": null,
+  "controller_exit": null,
+  "exits_are_unknown_while_running": true,
+  "backup_agent_actual_process": true,
+  "course_PPT": "DEFERRED_BY_OWNER",
+  "science_results_independently_reviewed": false,
+  "efficacy_or_generalization_claim_allowed": false,
+  "goal_complete": false
+}
