@@ -1,0 +1,66 @@
+{
+  "source_head": "162b12d1a73e39653d155b4ae49e8bc898ce0a70",
+  "full_regression": [
+    {
+      "host": "local",
+      "mode": "normal",
+      "tests": 273,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:07:32.587061+08:00",
+      "completed_at_sgt": "2026-11-02T14:08:12.194671+08:00",
+      "raw_log_sha256": "7f741fd9ca7dc4e1ba06ebd6552ba401b8781e265390322520649d0ec40bfd30",
+      "raw_exit_receipt_sha256": "d68cc3a387f3f094aa3548556710cd87fce53dd70fca7fad0a60adee8baf4a77",
+      "public_log": "logs/GPU0-local-full-normal.txt",
+      "public_log_sha256": "683bf579d9eb1c044f558dfb23b648a24ddf157d6c8a40ab0ad63043f77086b2"
+    },
+    {
+      "host": "local",
+      "mode": "optimized",
+      "tests": 273,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:08:12.229690+08:00",
+      "completed_at_sgt": "2026-11-02T14:08:51.918213+08:00",
+      "raw_log_sha256": "93dad33bb2ba9b3027fb7ae4e1064994c5e90efae907bd9bd366ffefd654317c",
+      "raw_exit_receipt_sha256": "29e7f7bfd4538693bdb9febc6bcab21d58acd7a27e62b6604f179844b489e783",
+      "public_log": "logs/GPU0-local-full-optimized.txt",
+      "public_log_sha256": "0be3a65215ccc6fa6b58238bf8ac5924e8191397cd1484253f0a70d56a6877d0"
+    },
+    {
+      "host": "Corelab",
+      "mode": "normal",
+      "tests": 273,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:10:31.803512+08:00",
+      "completed_at_sgt": "2026-11-02T14:11:15.896207+08:00",
+      "raw_log_sha256": "29fbed1037e16f8010cef53734d9b02fc2d322e03a38dc245f2be7233c849139",
+      "raw_exit_receipt_sha256": "205c8bff475f70741f0765f9bfb7f8a261dcf5c0c4b871de1105ff9f80137b8b",
+      "public_log": "logs/GPU0-Corelab-full-normal.txt",
+      "public_log_sha256": "41a25faeacc77b4f64e292232c73cb30fe3b4ece3ecf53cc7cc45f892dd5accd"
+    },
+    {
+      "host": "Corelab",
+      "mode": "optimized",
+      "tests": 273,
+      "actual_exit": 0,
+      "started_at_sgt": "2026-11-02T14:11:17.149378+08:00",
+      "completed_at_sgt": "2026-11-02T14:12:01.088275+08:00",
+      "raw_log_sha256": "2e7a741151cecd8c3f9a7a076afc261d54f94dc0bc41b886fe697894c4bd6d3f",
+      "raw_exit_receipt_sha256": "3906b1f3e276b7449013979a51b6a63ef7d7348b7b8781b3bd1f8b0ded7ea859",
+      "public_log": "logs/GPU0-Corelab-full-optimized.txt",
+      "public_log_sha256": "8fc8ab9049599d3cf3c932fa7eaa1177628629dcc6ab96d50a27922fea5670c2"
+    }
+  ],
+  "source_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "locked_source_entries": 143,
+  "historical0001_audit_actual_exits": [
+    0,
+    0
+  ],
+  "historical_audit_modes_identical": true,
+  "actual_R019_launcher_denial_exits": [
+    1,
+    1
+  ],
+  "denial_reason": "new independent E3 grant required",
+  "ordinary_CPU_testing_no_model_simulation": true
+}

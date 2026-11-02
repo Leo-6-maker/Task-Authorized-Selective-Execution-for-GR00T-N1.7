@@ -1,0 +1,38 @@
+{
+  "errors": [
+    {
+      "scope": "CPU constructor source inspection",
+      "actual_exit": 1,
+      "kind": "ValueError substring not found",
+      "GPU_model_attempts": 0,
+      "recovery": "AST read-only source extraction exit0"
+    },
+    {
+      "scope": "CPU diagnostic supervisor before CUDA",
+      "actual_exit": 1,
+      "kind": "JSONDecodeError: new lock fd at EOF",
+      "GPU_model_attempts": 0,
+      "recovery": "seek0 without deleting marker; recovered supervisor/model both0; real kernel-lock regression added"
+    },
+    {
+      "scope": "Initial local targeted harness import",
+      "actual_exits": [
+        1,
+        1
+      ],
+      "kind": "Missing E3_APPROVED_CPU_REPO",
+      "GPU_model_attempts": 0,
+      "recovery": "Required fixture repository supplied; complete273 normal/-O local/Corelab all0"
+    },
+    {
+      "scope": "Initial local report builder interpreter",
+      "actual_exit": 1,
+      "kind": "System Python lacks hashlib.file_digest",
+      "GPU_model_attempts": 0,
+      "recovery": "Run with existing pinned Python3.12; no runtime/source/environment change"
+    }
+  ],
+  "original_error_records_retained": true,
+  "model_retries": 0,
+  "failed_TESTs_added": 0
+}

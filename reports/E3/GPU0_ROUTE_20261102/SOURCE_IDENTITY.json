@@ -1,0 +1,23 @@
+{
+  "CPU_tested_snapshot": "162b12d1a73e39653d155b4ae49e8bc898ce0a70",
+  "stacked_base_PR": 43,
+  "stacked_base_head": "b11b6c160951157ba83b918fb1859a6e688bb91c",
+  "prior_approved_runtime_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "new_source_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "locked_source_entries": 143,
+  "operator_source_sha256": "ee32d4a679365a542b43638c8d6bfe98355daa6b9d6298b3c338e75ee65fd8e1",
+  "unchanged_scientific_and_E2_paths": [
+    "tase",
+    "scripts",
+    "configs/e3_cells.proposed.json",
+    "configs/e3_run_config.proposed.json",
+    "configs/e3_sources.proposed.json",
+    "configs/runtime_lock_E2.json",
+    "docs/protocols"
+  ],
+  "scientific_drift": [],
+  "model_probe_uses_pinned_upstream": "dac54b313160c201c450f97df0fd74ebd379c892",
+  "model_probe_is_not_candidate_native_launcher_validation": true,
+  "original_acquisition_head": "859e40b5f460365a8853bf3486969e9f8e28951c",
+  "original_grant": "ca979be10c00389ed57b77967c232d7a84132406"
+}

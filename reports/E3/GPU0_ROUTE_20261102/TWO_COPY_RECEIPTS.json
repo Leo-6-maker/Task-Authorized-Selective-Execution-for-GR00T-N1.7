@@ -1,0 +1,29 @@
+{
+  "archives": [
+    {
+      "stage": "GPU0-load-diagnostic-20261102-01",
+      "archive_bytes": 32084,
+      "archive_sha256": "cc3517cbb6fba49903424d7d5f14cc502f77f10704b63c570eb475a6c133e091",
+      "artifacts": 45,
+      "primary_every_member_sha256_verified": true,
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+      "local_transport_actual_exit": 0,
+      "secondary_every_member_sha256_verified": true,
+      "original78_prior_complete_backup_preserved": true
+    },
+    {
+      "stage": "GPU0-routing-CPU-20261102-01",
+      "archive_bytes": 45474,
+      "archive_sha256": "3bf60c99f74fc20d693237e07d5a5f5d7e5635703051beaaf7d6f3884842bb4c",
+      "artifacts": 47,
+      "primary_every_member_sha256_verified": true,
+      "status": "TWO_LOCATIONS_WHOLE_AND_EVERY_MEMBER_VERIFIED",
+      "local_transport_actual_exit": 0,
+      "secondary_every_member_sha256_verified": true,
+      "original78_prior_complete_backup_preserved": true
+    }
+  ],
+  "prior_original78_full_archive_sha256": "1432756e0c443f847efd6ed02373ca302b26c88535a107e7421ac8c83c4c21dc",
+  "executor_verified": true,
+  "independent_reviewer_private_rehash": false
+}
