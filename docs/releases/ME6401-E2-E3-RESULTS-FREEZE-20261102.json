@@ -1,0 +1,52 @@
+{
+  "release_id": "ME6401-E2-E3-FINAL-20261102",
+  "record_date_sgt": "2026-11-02",
+  "authority": "Current project-owner instruction: freeze experiment results and update the PPT and repository for final submission",
+  "status": "RESULTS_FROZEN_COURSEWORK_INTEGRATION_ONLY",
+  "new_experiments_authorized": false,
+  "new_model_simulator_or_Shadow_calls_authorized": false,
+  "training_or_WBC_authorized": false,
+  "remaining_TEST_budget": {"E2": 0, "E3A": 0, "E3B": 0},
+  "E2": {
+    "report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+    "final_runtime_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+    "prior_course_source_head": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+    "planned_consumed": 120,
+    "eligible": 117,
+    "censored": 3,
+    "censored_ids": ["e2-test-0010", "e2-test-0014", "e2-test-0016"],
+    "independent_R3_status": "SEPARATE_REVIEW_STILL_PENDING_NOT_CREATED_BY_PACKAGING"
+  },
+  "E3": {
+    "report_head": "36dacd6bcc06dab534330758dcf5708209ffdad8",
+    "native_runtime_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+    "external_operator_head": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+    "native_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+    "planned_consumed": 160,
+    "eligible": 160,
+    "unknown": 0,
+    "unstarted": 0,
+    "status_counts": {"SUCCESS": 114, "TIME_LIMIT": 24, "SEMANTIC_ABORT": 22},
+    "result_review_commit": "c071099f15aa5a866e822e743e2b56e2285a3506",
+    "result_review_path": "docs/reviews/R020-E3-R3-PUBLIC-RESULT-SCIENTIFIC-REVIEW.json",
+    "result_review_disposition": "QUALIFIED_ACCEPTANCE_PUBLIC_E3_RESULTS_COURSE_INTEGRATION_PENDING",
+    "review_scope": "Public evidence; no independent private-original rehash or retrospective independent GPU0 runtime authorization"
+  },
+  "preserve": [
+    "All original data, attempts, labels, manifests, seeds, task definitions and statistics remain byte-identical in their original versions.",
+    "E2 and E3 remain separate studies; their denominators and uncertainty must not be pooled.",
+    "E2 cleanup errors remain censored. Historical E3 0001 retains its acquisition identity and old audit failures; only the accepted versioned reconciliation marks it eligible.",
+    "Historical Owner/GPT authorization files remain evidence and are not rewritten by this packaging freeze.",
+    "No reruns, replacement IDs, relabeling, tuning, new model calls or new scientific claims are permitted by this record."
+  ],
+  "allowed_work": [
+    "CPU-only offline checks and result summarization using existing evidence",
+    "Final 15-content-slide deck plus cover and references",
+    "Repository documentation, matched source archive, provenance, reproducibility guide and release checks",
+    "Separate evidence-level review and wording correction without changing original results"
+  ],
+  "runtime_note": "This is the owner's workflow-level closeout instruction and result freeze, not a new execution grant and not a claim that remote processes were inspected or stopped by this author. All original budgets are exhausted. Operators must not treat a historical authorization file as permission for new experiments.",
+  "automatic_merge_authorized": false,
+  "Canvas_submission_performed": false,
+  "course_deadline_sgt": "2026-11-06T23:59:00+08:00"
+}

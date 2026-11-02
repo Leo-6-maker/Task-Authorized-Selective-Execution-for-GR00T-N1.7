@@ -1,0 +1,30 @@
+{
+  "edition": "ME6401_FINAL_E2E3_20261102",
+  "experiment_freeze_commit": "3a6a5c6ab1f33a3ec9beac9392ffca8f4f5fad8a",
+  "E2_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "E2_final_runtime_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "E2_compact_public_results_origin": "9efba1994235ee0cb844653a45c6f1b0812442a7",
+  "E2_compact_results_tree": "27b0caf0b55231446ecd273173933e68624761c7",
+  "E3_report_head": "36dacd6bcc06dab534330758dcf5708209ffdad8",
+  "E3_native_runtime_head": "1d8e2d37932390ec07b5d04daddc1664efc64eb4",
+  "E3_external_operator_head": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+  "E3_native_lock_sha256": "1cffc38c3b0c816ddc2c348cb27f7c6d7d5e4467f189eda83262cbcc24924cbc",
+  "R020_review_commit": "c071099f15aa5a866e822e743e2b56e2285a3506",
+  "unchanged_Git_trees_from_E3_report": {
+    "configs": "75a57dfa4b5cd58e4b902d21df946e6762d503dc",
+    "e3": "bbb47632c709580adf3512e23f3d08a464481289",
+    "operator_engineering": "dd2ce8fed49ef2b074805abf2cc9bdb4b01ba982",
+    "review_tools": "afb13945ada12ce8e6af8c123f933de9d8abdd9b",
+    "scripts": "748280239e01d075da45f3412a635e096f0abbdf",
+    "tase": "de7238e60cdba75ad217eb0c263a27a7feac3264",
+    "tests": "19f35f7e4764c27799e8a40d9f7a0c78ee007308",
+    "reports/E3": "4cf90c7da1bd5242a202696c3e4477d2cce3853e"
+  },
+  "new_scientific_or_native_changes": false,
+  "new_offline_and_documentation_files_only": true,
+  "release_commit_is_runtime_authorization": false,
+  "E2_E3_pooled": false,
+  "private_originals_included": false,
+  "course_identity_filled": false,
+  "owner_Canvas_submission_performed": false
+}
