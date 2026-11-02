@@ -1,0 +1,33 @@
+{
+  "CPU_engineering_commit": "49cb3f03d3370958d9674563cb1b45b66cb25036",
+  "operator_source_sha256": "2f3ecf87b0a560691b442ede3c54968c7d6f1ee06235165855a45e069d6a4f58",
+  "approved_native_head": "126491066226a0d52968d8bcf363d295781c2684",
+  "Corelab_normal_optimized_exits": [
+    0,
+    0
+  ],
+  "M0_cases_per_mode": 38,
+  "genuine_R019_entry_actual_exits": [
+    1,
+    1
+  ],
+  "denial_before_allocation_GPU_or_native": true,
+  "current_GPU1_hint": {
+    "preload_floor_MiB": 9216,
+    "postload_floor_MiB": 9216,
+    "observed_free_MiB": 10121,
+    "observed_total_MiB": 16376,
+    "historical_reserved_MiB": 6096.0,
+    "scheduling_reference_MiB": 15312.0,
+    "estimated_postload_free_MiB": 4025.0,
+    "status": "LIKELY_POSTLOAD_CAPACITY_BLOCKED",
+    "live_preload_pass": true,
+    "live_postload_pass": null,
+    "estimate_is_not_resource_authorization": true,
+    "estimated_allocator_fraction": 0.49297752808988765
+  },
+  "sampled_at_sgt": "2026-10-30T23:21:25.379257+08:00",
+  "original78_unchanged": true,
+  "new_GPU_model_sim_Shadow_calls": 0,
+  "new_TEST_reservations": 0
+}
