@@ -408,6 +408,35 @@ class BackupTransportTests(unittest.TestCase):
         primary=self.workspace/'evidence_exports/CPU-TEST/second-copy-proof.json'
         self.assertEqual(json.loads(primary.read_text()),proof)
         self.assertEqual(proof['primary_archive_sha256'],proof['secondary_archive_sha256'])
+
+    def test_large_proof_program_streams_stdin_through_small_nested_SSH_argv(self):
+        self.config['nested_transport_argv']=['ssh','-o','StrictHostKeyChecking=yes',
+                                            '-o','BatchMode=yes','CPU-ONLY']
+        agent=Copier(self.config,self.root/'receipts')
+        actual_run=subprocess.run;commands=[]
+        # Only substitute SSH transport with a real local Python child. Exercise
+        # the real Copier.remote input/stdout/receipts and a256KiB program.
+        def CPU_transport(command,**kwargs):
+            commands.append(command)
+            self.assertLess(max(map(len,command)),4096)
+            self.assertGreater(len(kwargs['input']),256*1024)
+            return actual_run([sys.executable,'-'],**kwargs)
+        code='payload='+repr('x'*(256*1024))+'\nprint(len(payload))\n'
+        with patch('operator_engineering.e3_continuation.backup_agent.subprocess.run',
+                   side_effect=CPU_transport):
+            self.assertEqual(agent.remote(code),b'262144\n')
+        self.assertEqual(len(commands),1)
+        self.assertEqual(json.loads((self.root/'receipts/transport-00001.exit.json').read_text())['actual_exit'],0)
+
+    def test_transport_spawn_error_is_preserved_as_no_child(self):
+        agent=Copier(self.config,self.root/'receipts')
+        with patch('operator_engineering.e3_continuation.backup_agent.subprocess.run',
+                   side_effect=OSError(7,'Argument list too long')):
+            with self.assertRaises(OSError):agent.remote('print(1)')
+        receipt=json.loads((self.root/'receipts/transport-00001.exit.json').read_text())
+        self.assertIsNone(receipt['actual_exit'])
+        self.assertFalse(receipt['child_created'])
+        self.assertEqual(receipt['errno'],7)
     def test_resume_partial_bytes_at_actual_offset(self):
         dest=self.root/'local/CPU-TEST';dest.mkdir(parents=True)
         source=(self.workspace/'evidence_exports/CPU-TEST/evidence.tar.gz').read_bytes()

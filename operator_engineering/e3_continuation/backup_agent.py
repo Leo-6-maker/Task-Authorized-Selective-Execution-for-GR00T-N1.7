@@ -36,20 +36,25 @@ class Copier:
                     'strict verified nested SSH required')
 
     def remote(self, code, destination=None):
-        # Appending one shell-quoted Python command works for private single/multi-hop
-        # transport prefixes; user-supplied data are repr() embedded, never shell text.
+        # Stream the program on stdin. Large complete evidence proofs must never
+        # become one argv item (Linux MAX_ARG_STRLEN is often only128KiB).
         self.serial += 1
         label = 'transport-'+str(self.serial).zfill(5)
-        remote_command = 'python3 -c '+shlex.quote(code)
+        remote_command = 'python3 -'
         if self.nested:
             remote_command = shlex.join(self.nested + [remote_command])
         command = self.transport + [remote_command]
         with (self.receipts/(label+'.stderr.private.txt')).open('x') as err:
             try:
-                result = subprocess.run(command, stdout=destination or subprocess.PIPE,
+                result = subprocess.run(command, input=code.encode(), stdout=destination or subprocess.PIPE,
                                         stderr=err, timeout=100)
             except subprocess.TimeoutExpired:
                 write(self.receipts/(label+'.exit.json'), dict(actual_exit=None, timeout=True))
+                raise
+            except OSError as error:
+                write(self.receipts/(label+'.exit.json'),
+                      dict(actual_exit=None, child_created=False,
+                           spawn_error=type(error).__name__, errno=error.errno))
                 raise
         write(self.receipts/(label+'.exit.json'), dict(actual_exit=result.returncode))
         require(result.returncode == 0, 'read-only copy transport failed; partial bytes retained')
