@@ -33,4 +33,6 @@ def authorize(repo,review_commit,review_path):
 
 def resource(record,identity):
     require(record.get('protocol_id')=='E3-001-v1.0' and record.get('authorized_head')==identity['authorized_head'] and record.get('review_commit')==identity['review_commit'],'E2/stale resource permit cannot authorize E3')
-    require(record.get('shared_gpu_inference_authorized') is True and type(record.get('gpu_index')) is int and record['gpu_index']==1 and record.get('gpu_uuid') and record.get('owner_approval_evidence'),'current explicit owner GPU1-only allocation required')
+    require(record.get('shared_gpu_inference_authorized') is True and record.get('gpu_uuid') and record.get('owner_approval_evidence'),'current explicit owner GPU allocation required')
+    from .resource import selected_index
+    selected_index(record)

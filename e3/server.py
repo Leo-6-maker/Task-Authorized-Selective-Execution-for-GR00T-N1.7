@@ -5,7 +5,7 @@ import time
 import hashlib
 import os
 from pathlib import Path
-from e3.resource import binding,live_gpu1
+from e3.resource import binding,live_gpu
 from tase.evidence import append_json, now_sgt, write_json
 from tase.resource_memory import (allocator_fraction, MINIMUM_FREE_BYTES,
                              RESERVED_FREE_BYTES, MAXIMUM_PROCESS_FRACTION)
@@ -30,7 +30,7 @@ def main():
     if not permission.get('shared_gpu_inference_authorized'):
         raise ValueError('GPU inference allocation is not authorized')
     binding(permission,os.environ)
-    physical=live_gpu1(permission)
+    physical=live_gpu(permission)
     a.output.mkdir(parents=True, exist_ok=False)
     if a.epoch and os.environ.get('GROOT_SKIP_HF_MODEL_WEIGHTS','').strip().lower() not in ['', '0','false','no','off']:
         raise ValueError('E3 requires real weights; upstream test-only weight skipping is forbidden')

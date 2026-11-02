@@ -3,6 +3,7 @@ import datetime as dt
 import hashlib
 import json
 from pathlib import Path
+import re
 
 RUNTIME = '126491066226a0d52968d8bcf363d295781c2684'
 LOCK = '14abb2ace96424b68a5b0bd25fcc3b897d152fa0eb8efb28ae153de38732b3bc'
@@ -47,9 +48,11 @@ def admission_contract(grant, identity, now, operator_digest):
     """
     require(grant.get('disposition') == 'E3_TEST_AUTHORIZED',
             'independent E3 TEST authorization required')
-    require(identity['authorized_head'] == grant['authorized_head'] == RUNTIME and
-            identity['protocol_lock_sha256'] == grant['protocol_lock_sha256'] == LOCK,
-            'exact approved native Head/lock required')
+    require(identity['authorized_head'] == grant['authorized_head'] and
+            identity['protocol_lock_sha256'] == grant['protocol_lock_sha256'] and
+            re.fullmatch('[0-9a-f]{40}', identity['authorized_head']) and
+            re.fullmatch('[0-9a-f]{64}', identity['protocol_lock_sha256']),
+            'exact independently authorized native Head/lock required')
     continuation = grant.get('continuation', {})
     require(continuation.get('release_prior_incident_stop') is True and
             continuation.get('first_new_id') == 'e3a-test-0002' and

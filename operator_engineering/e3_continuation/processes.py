@@ -1,5 +1,6 @@
 """Actual CPU/native child receipts with bounded cleanup of owned children only."""
 import datetime as dt
+import fcntl
 import json
 import os
 from pathlib import Path
@@ -20,6 +21,25 @@ def write(path, value):
         f.write('\n')
         f.flush()
         os.fsync(f.fileno())
+
+
+def controller_lock(path):
+    """Keep the marker; a kernel lease, not deleting a path, provides exclusion."""
+    try:
+        fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_RDWR, 0o600)
+        os.write(fd, b'{"schema":"E3_EXTERNAL_CONTROLLER_FLOCK_V1"}\n')
+    except FileExistsError:
+        fd = os.open(path, os.O_RDWR | os.O_NOFOLLOW)
+    handle = os.fdopen(fd, 'r+')
+    try:
+        handle.seek(0)
+        require(json.loads(handle.read()) == {'schema':'E3_EXTERNAL_CONTROLLER_FLOCK_V1'},
+                'unknown controller lock; preserve without deletion')
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        return handle
+    except BaseException:
+        handle.close()
+        raise
 
 
 def identity(pid):
