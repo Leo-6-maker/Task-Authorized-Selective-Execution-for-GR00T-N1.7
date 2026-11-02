@@ -32,22 +32,37 @@
   },
   "continuation": {
     "release_prior_incident_stop": true,
-    "first_new_id": "e3a-test-0002",
+    "first_new_id": "e3a-test-0013",
     "preserve_history_ids": [
-      "e3a-test-0001"
+      "e3a-test-0001",
+      "e3a-test-0002",
+      "e3a-test-0003",
+      "e3a-test-0004",
+      "e3a-test-0005",
+      "e3a-test-0006",
+      "e3a-test-0007",
+      "e3a-test-0008",
+      "e3a-test-0009",
+      "e3a-test-0010",
+      "e3a-test-0011",
+      "e3a-test-0012"
     ],
     "remaining": {
-      "E3A": 111,
+      "E3A": 100,
       "E3B": 48
     },
-    "operator_source_sha256": "cb4073ca54b258a5fd6c654b0d32e86b118cc4b190403e2d835dd4cc26d028b5",
+    "operator_source_sha256": "81557fa76fb2502f1603747e71c3499ab9b07af539f5ddabb0834eaec0b79cd0",
     "execution_window_sgt": {
       "start": "2026-11-02T14:49:29.813311+08:00",
       "no_new_reservations_after": "2026-11-05T20:00:00+08:00",
       "end": "2026-11-05T21:00:00+08:00"
     },
-    "operator_engineering_source_head": "a00a836fbdebc08c25385376ca5ded23fab03dec",
-    "prelaunch_engineering_correction": "Read-only checkpoint GPU identity comes from each original authenticated grant: historical0001GPU1; newOwnerGPU0; nativePR44 unchanged"
+    "operator_engineering_source_head": "0890fe0fd32cbb94817dfd71b79f932d6ce80e3b",
+    "prelaunch_engineering_correction": "Stream proof program through SSH stdin; authenticated full prefix and genuine CPU checkpoint bridge before first new0013; no replay",
+    "completed_prefix": 12,
+    "release_completed_transport_stop": true,
+    "completed_prefix_original_rows_sha256": "b0b9e01c192d523e5d79e0dd0b30866d0f03f8a195217d0535dc41cef7f7c193",
+    "recovery_evidence_sha256": "3babef07e0f9cdaf860475140f7c88149adf8673e2ffacb4fed39c9a3ed2a5b4"
   },
   "retained_constraints": [
     "Exact PR44 runtime and source lock; no runtime mutation while collecting",
@@ -59,7 +74,38 @@
   ],
   "historical_R019_decision_unchanged": true,
   "scientific_results_not_self_approved": true,
-  "previous_owner_record_commit": "3038f8a8e8d39cb3ee9b06454589216c9c39287e",
-  "revision": 2,
-  "revision_reason": "Autonomous prelaunch CPU engineering correction, no model/TEST before correction; explicit Owner-direct authority retained"
+  "previous_owner_record_commit": "397500d65ca1b3f4dcd9e12e0d0f2e80fd97d717",
+  "revision": 3,
+  "revision_reason": "Same explicitly Owner-authorized native PR44 and original once-only scope; autonomous external engineering repair after a stopped E2BIG backup-proof transport failure",
+  "revision_recorded_at_sgt": "2026-11-02T15:15:17.427034+08:00",
+  "revision_authority_basis": "Standing explicit Owner direct authorization plus autonomous engineering instructions; no new Owner message or independent GPT review is represented",
+  "native_runtime_changed": false,
+  "original_consumed_results_rewritten": false,
+  "engineering_transport_recovery": {
+    "old_controller_exit": 1,
+    "old_backup_agent_exit": 1,
+    "old_server_exit": 130,
+    "old_launcher_exit": 1,
+    "old_stop_and_error_records_preserved": true,
+    "diagnosis": "E2BIG during proof publication; exact archive already complete and hash-verified at both sites",
+    "same_archive_and_same_row_proof_recovery_exit": 0,
+    "poststop_readonly_audit_exits": [
+      0,
+      0
+    ],
+    "local_Corelab_normal_optimized282_exits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_preserved12_recovery_bridge_CPU_dry_run_exit": 0,
+    "original_files_both_sites": 1156,
+    "all12_original_native_exits": 0,
+    "all6_original_G_worker_exits": 0,
+    "all12_full_results": "SUCCESS",
+    "new_IDs_during_CPU_recovery": 0,
+    "policy_or_simulation_reexecutions": 0,
+    "scientific_protocol_changed": false
+  }
 }
