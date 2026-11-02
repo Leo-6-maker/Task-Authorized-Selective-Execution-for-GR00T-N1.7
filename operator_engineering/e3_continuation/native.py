@@ -169,14 +169,24 @@ class NativeBackend:
             block_rows = original_inventory(self.workspace,
                 [self.workspace/'runs'/ROOTS[c['epoch']]/c['run_id'] for c in block])
             require(previous['status'] == 'CPU_AUDITED_COMPLETE_CLUSTER_CHECKPOINT' and
-                    previous['source_rows'] == block_rows,
+                    previous['source_rows'] == block_rows and
+                    previous['paired_state_action_physics_verified'] is True and
+                    previous['worker_lifecycle_verified'] is True,
                     'preserved earlier checkpoint changed')
             require_backup(previous['two_copy_proof'],block_rows)
+            past_export = self.workspace/'evidence_exports'/previous['two_copy_proof']['stage']
+            past_receipt = json.loads((past_export/'receipt.json').read_text())
+            verify_archive(past_export/'evidence.tar.gz',past_receipt)
+            require(past_receipt['sha256'] == previous['two_copy_proof']['primary_archive_sha256'],
+                    'preserved earlier checkpoint archive identity differs')
         check_block(self.workspace,self.repo,group)
         rebuilt = build(self.workspace,self.repo,epoch,self.cells,self.auth,proof)
         target = self.workspace/'operator/e3-checkpoints'/f'{epoch}-{old["through"]:04d}.json'
-        require(not target.exists(), 'recovery never overwrites a live checkpoint')
-        write(target,rebuilt)
+        if target.exists():
+            require(json.loads(target.read_text()) == rebuilt,
+                    'recovery never overwrites a different live checkpoint')
+        else:
+            write(target,rebuilt)
         write(self.op/'preserved-prefix-originals.json',rows)
         self.event('CPU_RECOVERY_CHECKPOINT_RELEASED_NO_REPLAY',
                    epoch=epoch,through=old['through'],preserved_prefix=self.completed_prefix)
