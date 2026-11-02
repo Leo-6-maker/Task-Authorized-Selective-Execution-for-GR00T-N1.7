@@ -16,7 +16,7 @@ import traceback
 
 from .contract import (LOCK, SGT, HISTORICAL_HEAD, HISTORICAL_GRANT,
                        admission_contract, capacity, require, sha, source_digest,
-                       validate_history)
+                       validate_history, blocks)
 from .custody import archive, verify_archive
 from .processes import Recorded, controller_lock, identity, live_same, stamp, write
 

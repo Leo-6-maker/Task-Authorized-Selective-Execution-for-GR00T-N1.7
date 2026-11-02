@@ -293,6 +293,48 @@ class ActualAdmissionDenialTests(unittest.TestCase):
 
 
 class NativeResourceAndSocketTests(unittest.TestCase):
+    def test_CPU_prefix_bridge_rechecks_old_checkpoints_and_exclusively_records_new_one(self):
+        from operator_engineering.e3_continuation.native import NativeBackend
+        def rows(folders):
+            return [dict(path='runs/E3A_TEST/'+f.name+'/CPU-only',bytes=0,sha256='a'*64) for f in folders]
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);op=root/'new-operator';op.mkdir()
+            checkpoints=root/'operator/e3-checkpoints';checkpoints.mkdir(parents=True)
+            folders=[root/'runs/E3A_TEST'/c['run_id'] for c in CELLS[:12]]
+            past={}
+            for end in [4,8,12]:
+                proof=dict(stage='CPU-only-'+str(end),primary_archive_sha256='a'*64)
+                past[end]=dict(status='CPU_AUDITED_COMPLETE_CLUSTER_CHECKPOINT',epoch='E3A',through=end,
+                    source_rows=rows(folders[end-4:end]),two_copy_proof=proof,
+                    paired_state_action_physics_verified=True,worker_lifecycle_verified=True)
+                export=root/'evidence_exports'/proof['stage'];export.mkdir(parents=True)
+                (export/'receipt.json').write_text(json.dumps(dict(sha256='a'*64)))
+                if end<12:(checkpoints/f'E3A-{end:04d}.json').write_text(json.dumps(past[end]))
+            recovery=root/'CPU-recovery.json';recovery.write_text(json.dumps(dict(
+                status='CPU_RECONCILED_EXISTING_CLUSTER_NO_LIVE_RELEASE',original_stop_preserved=True,
+                new_model_calls=0,new_TEST_reservations=0,computed_checkpoint=past[12])))
+            b=NativeBackend.__new__(NativeBackend);b.workspace=root;b.repo=APPROVED;b.op=op
+            b.map=dict(readonly_recovery_evidence=str(recovery));b.cells=CELLS;b.completed_prefix=12;b.auth={'CPU_ONLY':True}
+            b.continuation=dict(recovery_evidence_sha256=hashlib.sha256(recovery.read_bytes()).hexdigest(),
+                completed_prefix_original_rows_sha256=hashlib.sha256(json.dumps(rows(folders),sort_keys=True,separators=(',',':')).encode()).hexdigest())
+            with patch('e3.checkpoint.original_inventory',side_effect=lambda w,fs:rows(fs)),\
+                 patch('e3.checkpoint.require_backup'),\
+                 patch('operator_engineering.e3_continuation.native.verify_archive') as archive_check,\
+                 patch('operator_engineering.e3_continuation.physics_checks.check_block'),\
+                 patch('e3.checkpoint.build',return_value=past[12]) as build:
+                b.verify_completed_prefix()
+                self.assertEqual(json.loads((checkpoints/'E3A-0012.json').read_text()),past[12])
+                self.assertEqual(archive_check.call_count,3)
+                build.assert_called_once()
+            changed=copy.deepcopy(past[4]);changed['worker_lifecycle_verified']=False
+            (checkpoints/'E3A-0004.json').write_text(json.dumps(changed))
+            with patch('e3.checkpoint.original_inventory',side_effect=lambda w,fs:rows(fs)),\
+                 patch('e3.checkpoint.require_backup'),\
+                 patch('operator_engineering.e3_continuation.native.verify_archive'),\
+                 patch('e3.checkpoint.build') as build:
+                with self.assertRaisesRegex(ValueError,'earlier checkpoint'):b.verify_completed_prefix()
+                build.assert_not_called()
+
     def test_checkpoint_mixed_history_uses_each_authenticated_grants_GPU(self):
         from operator_engineering.e3_continuation.physics_checks import expected_gpu_index
         auth=dict(review_commit='a'*40,review_path='docs/reviews/CPU-ONLY.json',
