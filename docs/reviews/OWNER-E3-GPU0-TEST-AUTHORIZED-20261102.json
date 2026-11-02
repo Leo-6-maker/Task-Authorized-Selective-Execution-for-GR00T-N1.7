@@ -40,12 +40,14 @@
       "E3A": 111,
       "E3B": 48
     },
-    "operator_source_sha256": "ee32d4a679365a542b43638c8d6bfe98355daa6b9d6298b3c338e75ee65fd8e1",
+    "operator_source_sha256": "cb4073ca54b258a5fd6c654b0d32e86b118cc4b190403e2d835dd4cc26d028b5",
     "execution_window_sgt": {
       "start": "2026-11-02T14:49:29.813311+08:00",
       "no_new_reservations_after": "2026-11-05T20:00:00+08:00",
       "end": "2026-11-05T21:00:00+08:00"
-    }
+    },
+    "operator_engineering_source_head": "a00a836fbdebc08c25385376ca5ded23fab03dec",
+    "prelaunch_engineering_correction": "Read-only checkpoint GPU identity comes from each original authenticated grant: historical0001GPU1; newOwnerGPU0; nativePR44 unchanged"
   },
   "retained_constraints": [
     "Exact PR44 runtime and source lock; no runtime mutation while collecting",
@@ -56,5 +58,8 @@
     "No automatic PR merge or Canvas submission; no experiments6November; E2 remains independent"
   ],
   "historical_R019_decision_unchanged": true,
-  "scientific_results_not_self_approved": true
+  "scientific_results_not_self_approved": true,
+  "previous_owner_record_commit": "3038f8a8e8d39cb3ee9b06454589216c9c39287e",
+  "revision": 2,
+  "revision_reason": "Autonomous prelaunch CPU engineering correction, no model/TEST before correction; explicit Owner-direct authority retained"
 }
