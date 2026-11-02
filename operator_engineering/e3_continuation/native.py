@@ -4,6 +4,7 @@ Native initialization is impossible before a current independent exact grant,
 the operator-source binding and a new permitted window have all passed.
 """
 import datetime as dt
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -54,6 +55,8 @@ class NativeBackend:
         self.sequence = 0
         self.last_progress = None  # Expected history is not an observed/audited count.
         self.sample = None
+        self.completed_prefix = 1
+        self.continuation = None
         self.current_cell = None
         write(self.op/'operator-started.json', dict(at=stamp(), controller=identity(os.getpid()),
               runtime_repo=str(self.repo), review_commit=review_commit, review_path=review_path,
@@ -92,6 +95,8 @@ class NativeBackend:
         grant = json.loads(subprocess.check_output(['git', 'show', self.review_commit+':'+
                                                     self.review_path], cwd=self.repo))
         self.window = admission_contract(grant, self.auth, dt.datetime.now(SGT), source_digest())
+        self.completed_prefix = self.window['completed_prefix']
+        self.continuation = grant['continuation']
         require(dt.datetime.now(SGT) + dt.timedelta(seconds=240) <
                 self.window['last_supervisor_start'], 'insufficient authorized window to load and finish')
         self.reconciliation = json.loads((self.repo/
@@ -116,6 +121,65 @@ class NativeBackend:
         self.foreign_baseline = self.gpu_apps()
         self.event('ADMISSION_VERIFIED', authorization=self.auth,
                    independent_window=grant['continuation']['execution_window_sgt'])
+
+    def verify_completed_prefix(self):
+        """CPU-only recovery of a fully known original prefix, before model load."""
+        from e3.checkpoint import build, original_inventory, require_backup
+        from e3.ledger import ROOTS
+        from .physics_checks import check_block
+        recovery_path = Path(self.map['readonly_recovery_evidence'])
+        require(sha(recovery_path) == self.continuation['recovery_evidence_sha256'],
+                'exact readonly recovery evidence changed')
+        recovery = json.loads(recovery_path.read_text())
+        require(recovery.get('status') == 'CPU_RECONCILED_EXISTING_CLUSTER_NO_LIVE_RELEASE' and
+                recovery.get('original_stop_preserved') is True and
+                recovery.get('new_model_calls') == recovery.get('new_TEST_reservations') == 0,
+                'CPU recovery must preserve the old transport stop and zero replay')
+        prefix = self.cells[:self.completed_prefix]
+        folders = [self.workspace/'runs'/ROOTS[c['epoch']]/c['run_id'] for c in prefix]
+        rows = original_inventory(self.workspace, folders)
+        digest = hashlib.sha256(json.dumps(rows,sort_keys=True,
+                                           separators=(',',':')).encode()).hexdigest()
+        require(digest == self.continuation['completed_prefix_original_rows_sha256'],
+                'complete preserved-prefix original bytes changed')
+        epoch = prefix[-1]['epoch']
+        size = 4 if epoch == 'E3A' else 6
+        group = prefix[-size:]
+        old = recovery['computed_checkpoint']
+        require(old['epoch'] == epoch and old['through'] ==
+                sum(c['epoch'] == epoch for c in prefix), 'recovery cluster differs')
+        last_rows = original_inventory(self.workspace, folders[-size:])
+        require(old['source_rows'] == last_rows, 'last recovered cluster original bytes changed')
+        proof = old['two_copy_proof']
+        require_backup(proof,last_rows)
+        export = self.workspace/'evidence_exports'/proof['stage']
+        receipt = json.loads((export/'receipt.json').read_text())
+        verify_archive(export/'evidence.tar.gz',receipt)
+        require(receipt['sha256'] == proof['primary_archive_sha256'],
+                'recovered primary archive identity differs')
+        # Recheck all original checkpoints without changing their recorded identity.
+        for block_epoch, through, block in blocks(self.cells):
+            if self.cells.index(block[-1]) >= self.completed_prefix:
+                break
+            checkpoint = self.workspace/'operator/e3-checkpoints'/f'{block_epoch}-{through:04d}.json'
+            if not checkpoint.exists():
+                require(block == group, 'missing earlier completed-cluster checkpoint')
+                continue
+            previous = json.loads(checkpoint.read_text())
+            block_rows = original_inventory(self.workspace,
+                [self.workspace/'runs'/ROOTS[c['epoch']]/c['run_id'] for c in block])
+            require(previous['status'] == 'CPU_AUDITED_COMPLETE_CLUSTER_CHECKPOINT' and
+                    previous['source_rows'] == block_rows,
+                    'preserved earlier checkpoint changed')
+            require_backup(previous['two_copy_proof'],block_rows)
+        check_block(self.workspace,self.repo,group)
+        rebuilt = build(self.workspace,self.repo,epoch,self.cells,self.auth,proof)
+        target = self.workspace/'operator/e3-checkpoints'/f'{epoch}-{old["through"]:04d}.json'
+        require(not target.exists(), 'recovery never overwrites a live checkpoint')
+        write(target,rebuilt)
+        write(self.op/'preserved-prefix-originals.json',rows)
+        self.event('CPU_RECOVERY_CHECKPOINT_RELEASED_NO_REPLAY',
+                   epoch=epoch,through=old['through'],preserved_prefix=self.completed_prefix)
 
     def require_no_native_process(self):
         for folder in Path('/proc').iterdir():

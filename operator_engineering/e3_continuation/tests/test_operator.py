@@ -41,6 +41,22 @@ def fixture_grant():
 
 
 class ContractTests(unittest.TestCase):
+    def test_explicit_12_original_resume_scope_requires_complete_digest(self):
+        grant=fixture_grant();c=grant['continuation']
+        c.update(completed_prefix=12,first_new_id='e3a-test-0013',
+            preserve_history_ids=[v['run_id'] for v in CELLS[:12]],
+            remaining={'E3A':100,'E3B':48},release_completed_transport_stop=True,
+            completed_prefix_original_rows_sha256='a'*64,recovery_evidence_sha256='b'*64)
+        result=admission_contract(grant,dict(authorized_head=RUNTIME,protocol_lock_sha256=LOCK),
+                                 dt.datetime(2026,10,31,1,tzinfo=SGT),'SYNTHETIC_ONLY')
+        self.assertEqual(result['completed_prefix'],12)
+        for key,bad in [('completed_prefix',13),('completed_prefix',True),
+                        ('recovery_evidence_sha256',''),('release_completed_transport_stop',False),
+                        ('first_new_id','e3a-test-0002'),('preserve_history_ids',['e3a-test-0001'])]:
+            changed=copy.deepcopy(grant);changed['continuation'][key]=bad
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                admission_contract(changed,dict(authorized_head=RUNTIME,protocol_lock_sha256=LOCK),
+                                   dt.datetime(2026,10,31,1,tzinfo=SGT),'SYNTHETIC_ONLY')
     def test_explicit_current_window_and_source_required(self):
         grant = fixture_grant()
         result = admission_contract(grant, dict(authorized_head=RUNTIME,
@@ -141,6 +157,26 @@ class SyntheticBackend:
 
 
 class StateMachineTests(unittest.TestCase):
+    def test_explicit_12_prefix_only_runs_remaining148_without_replaying_checkpoints(self):
+        backend=SyntheticBackend();backend.count=backend.completed_prefix=12
+        backend.verify_completed_prefix=lambda:backend.saved.append('CPU_verified12')
+        drive(backend)
+        self.assertEqual(backend.ids,[c['run_id'] for c in CELLS[12:]])
+        self.assertEqual(len(backend.ids),148)
+        self.assertEqual(backend.checkpoints[0],('E3A',16))
+        self.assertNotIn(('E3A',12),backend.checkpoints)
+        self.assertIn('CPU_verified12',backend.saved)
+
+    def test_prefix_digest_or_progress_failure_has_no_model_or_new_ID(self):
+        backend=SyntheticBackend();backend.count=backend.completed_prefix=12
+        def corrupt():raise ValueError('CPU changed original digest')
+        backend.verify_completed_prefix=corrupt
+        with self.assertRaises(ValueError):drive(backend)
+        self.assertEqual(backend.ids,[])
+        self.assertNotIn('synthetic_server_start',backend.saved)
+        backend=SyntheticBackend();backend.count=11;backend.completed_prefix=12
+        with self.assertRaises(ValueError):drive(backend)
+        self.assertNotIn('synthetic_server_start',backend.saved)
     def test_once_only159_and_all_36_checkpoints_automatic(self):
         backend=SyntheticBackend();drive(backend)
         self.assertEqual(backend.ids,[c['run_id'] for c in CELLS[1:]])

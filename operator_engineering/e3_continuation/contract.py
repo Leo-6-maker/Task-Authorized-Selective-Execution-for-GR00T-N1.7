@@ -54,12 +54,27 @@ def admission_contract(grant, identity, now, operator_digest):
             re.fullmatch('[0-9a-f]{64}', identity['protocol_lock_sha256']),
             'exact independently authorized native Head/lock required')
     continuation = grant.get('continuation', {})
+    completed = continuation.get('completed_prefix', 1)
+    require(type(completed) is int and (completed == 1 or
+            (4 <= completed <= 112 and completed % 4 == 0) or
+            (112 < completed < 160 and (completed-112) % 6 == 0)),
+            'explicit complete original cluster prefix required')
+    planned = ([f'e3a-test-{i:04d}' for i in range(1,113)] +
+               [f'e3b-test-{i:04d}' for i in range(1,49)])
     require(continuation.get('release_prior_incident_stop') is True and
-            continuation.get('first_new_id') == 'e3a-test-0002' and
-            continuation.get('preserve_history_ids') == ['e3a-test-0001'] and
-            continuation.get('remaining') == {'E3A': 111, 'E3B': 48} and
+            continuation.get('first_new_id') == planned[completed] and
+            continuation.get('preserve_history_ids') == planned[:completed] and
+            continuation.get('remaining') == {'E3A':max(112-completed,0),
+                                               'E3B':48-max(completed-112,0)} and
             continuation.get('operator_source_sha256') == operator_digest,
             'explicit exact-operator continuation scope required')
+    if completed > 1:
+        require(continuation.get('release_completed_transport_stop') is True and
+                re.fullmatch('[0-9a-f]{64}',
+                    continuation.get('completed_prefix_original_rows_sha256','')) is not None and
+                re.fullmatch('[0-9a-f]{64}',
+                    continuation.get('recovery_evidence_sha256','')) is not None,
+                'complete original digest and CPU recovery evidence required')
     window = continuation.get('execution_window_sgt', {})
     start, cutoff, end = [aware(window[n]) for n in
                           ['start', 'no_new_reservations_after', 'end']]
@@ -67,7 +82,7 @@ def admission_contract(grant, identity, now, operator_digest):
             'new bounded window required; November6 permits no experiments')
     require(now.tzinfo is not None and start <= now < end,
             'outside independent execution window')
-    return dict(start=start, cutoff=cutoff, end=end,
+    return dict(start=start, cutoff=cutoff, end=end, completed_prefix=completed,
                 last_supervisor_start=min(cutoff - dt.timedelta(seconds=1060),
                                           end - dt.timedelta(seconds=1060)))
 
@@ -152,15 +167,21 @@ def drive(backend):
     try:
         backend.admit()
         cells = backend.cells
-        require(backend.progress() == 1, 'new controller must start at reconciled0001 only')
+        completed = getattr(backend, 'completed_prefix', 1)
+        require(backend.progress() == completed,
+                'observed complete history differs from explicitly authorized prefix')
+        if completed > 1:
+            backend.verify_completed_prefix()
         if not backend.capacity_ready():
             terminal = 'CAPACITY_BLOCKED_CPU_WORK'
             return terminal
         terminal = 'NATIVE_STOP_PRESERVE_CPU_DIAGNOSE'
         backend.start_server()
         for epoch, through, group in blocks(cells):
+            if cells.index(group[-1]) < completed:
+                continue  # Never replay cells or rewrite their old checkpoints.
             for cell in group:
-                if cell['run_id'] == 'e3a-test-0001':
+                if cells.index(cell) < completed:
                     backend.preserve_original()
                     continue
                 if not backend.before_cell(cell):
