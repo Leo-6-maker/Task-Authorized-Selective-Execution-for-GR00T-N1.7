@@ -1,0 +1,23 @@
+{
+  "protocol_id": "TASE-001-v1.0",
+  "stage": "M2_DEV_ONLY",
+  "parent_sha": "3e214c0b761d0639bf73948356a92a03bf2ddedc",
+  "position_tolerance_m": 0.00001,
+  "orientation_tolerance_rad": 0.0001,
+  "gripper_tolerance_m": 0.000001,
+  "max_shadow_cases": 80,
+  "shadow_repeats": 3,
+  "max_new_dev_episodes": 6,
+  "previous_dev_used": 12,
+  "max_total_dev_this_package": 18,
+  "max_prefix_steps": 8,
+  "max_policy_steps": 720,
+  "c0_snapshot_decisions": [0, 3, 6, 9, 12, 15],
+  "c2_snapshot_decisions": [6, 9, 89],
+  "max_distinct_snapshots": 24,
+  "always_accept_extra_repeats": 2,
+  "oracle_lift_m": 0.02,
+  "oracle_sustain_control_steps": 2,
+  "oracle_relative_motion_tolerance_m": 0.01,
+  "notes": "Predeclared development tolerances/definitions; not frozen final TEST thresholds. No rejection or policy calls in shadow."
+}

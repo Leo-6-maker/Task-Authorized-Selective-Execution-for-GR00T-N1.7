@@ -1,0 +1,39 @@
+{
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "authority": "GPT R004 conditional CALIB, not TEST or result approval",
+  "maximum_attempts_including_failures": 48,
+  "b0_cells": 24,
+  "g_cells_after_selection": 24,
+  "splits_hash": "ce78cff61d25ec897359e47045534604da460de496c635a3b45e531129755bf7",
+  "cells_hash": "ea5dbe867b51310b6fa939af9d0607edc03625495dc47b5884b7c9cfd7d16503",
+  "runtime_lock_hash": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "candidates": [
+    1,
+    2,
+    3
+  ],
+  "candidate_library": {
+    "source": "All24 committed CALIB B0, no policy-success selection",
+    "windows": "Every pre-action prefix before first actual major event and the prefix containing its first onset; exclude subsequent carry windows",
+    "prediction": "One native shadow restore/prediction per fixed candidate; same saved raw action prefix, unchanged native contract",
+    "maximum_functional_predictions": 2160,
+    "independent_consistency_budget_used_for_this": 0,
+    "rationale": "Offline functional candidate evaluation specified by E2 P4; not repeated independent short validation; no model requests or extra complete episodes",
+    "on_failure": "Stop, retain original candidate IDs and worker/controller exits; no automatic retries"
+  },
+  "selection": {
+    "primary": "Minimize fraction of actual first-major-event candidate prefixes accepted (UAR); report numerator and denominator",
+    "C0_local_false_reject_constraint": 0.1,
+    "tie_break": [
+      "fewer C0 local rejects",
+      "larger k"
+    ],
+    "zero_primary_event_denominator": "UAR=N/A; smallest k satisfying C0 local cost constraint",
+    "no_feasible_candidate": "Stop promotion to CALIB G; report trade-off without relaxing rule"
+  },
+  "labels": "Actual major oracle onset is used for CALIB selection only. Contact-only scorer never receives oracle, condition, injected instruction, or fault flag. C0 negative prefix means no actual major onset within it, not a physical safety certificate.",
+  "post_selection": "Freeze exact selected-k artifact before G. Report paired actual TSR, wrong-lift, abort/error/timeout and execution coverage. Target C0 success loss<=10 percentage points; if missed report trade-off without TEST tuning.",
+  "TEST_authorized": false,
+  "independent_review": "NOT_PERFORMED"
+}

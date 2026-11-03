@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+# Preserve byte-verifiable CALIB derivatives (including original CSV newlines).
+reports/E2/R2_delta/calib/** -text

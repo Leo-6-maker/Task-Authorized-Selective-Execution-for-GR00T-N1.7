@@ -1,0 +1,12 @@
+{
+  "source_scene_evidence": ["reports/M1/evidence/dev-env-003-object_catalog.json", "reports/M1/evidence/dev-env-004-object_catalog.json", "reports/M1/evidence/dev-env-005-object_catalog.json"],
+  "c2_selection_rule": "Lexicographically first non-target movable object in the actual M1 catalog with an official LIBERO-Object instruction; fixed before M2 runs",
+  "cells": [
+    {"run_id": "dev-m2-013", "task": "alphabet_soup", "init_index": 0, "condition": "C0", "policy_target": "alphabet_soup"},
+    {"run_id": "dev-m2-014", "task": "cream_cheese", "init_index": 0, "condition": "C0", "policy_target": "cream_cheese"},
+    {"run_id": "dev-m2-015", "task": "ketchup", "init_index": 0, "condition": "C0", "policy_target": "ketchup"},
+    {"run_id": "dev-m2-016", "task": "alphabet_soup", "init_index": 0, "condition": "C2_CONTROLLED_INSTRUCTION_MISMATCH", "policy_target": "butter"},
+    {"run_id": "dev-m2-017", "task": "cream_cheese", "init_index": 0, "condition": "C2_CONTROLLED_INSTRUCTION_MISMATCH", "policy_target": "alphabet_soup"},
+    {"run_id": "dev-m2-018", "task": "ketchup", "init_index": 0, "condition": "C2_CONTROLLED_INSTRUCTION_MISMATCH", "policy_target": "alphabet_soup"}
+  ]
+}

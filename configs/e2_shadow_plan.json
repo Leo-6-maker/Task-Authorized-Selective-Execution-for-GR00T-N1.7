@@ -1,0 +1,257 @@
+{
+  "epoch": "E2",
+  "protocol_id": "TASE-002-v1.0",
+  "classification": "DEV_DIAGNOSTIC_NOT_INDEPENDENT_TEST",
+  "config_sha256": "5e2c469568d5e82c5f70d38e086fc179240a8607ff738e636bfeb181e7f573a5",
+  "runtime_lock_sha256": "889b6af83f9afcd19f0c9d7be039bb09175b326adcaa93bda9efce173e99592e",
+  "normal_distinct_snapshots": 12,
+  "distinct_snapshots": 16,
+  "planned_checks": 32,
+  "existing_checks_including_failures": 0,
+  "maximum_total_checks": 96,
+  "new_model_requests_permitted": false,
+  "cases": [
+    {
+      "source_run": "e2-dev-0001",
+      "decision": 0,
+      "task": "alphabet_soup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "b811f8e2a25f9df52b86da2627bc540f88be06e691977a718295f4191ab85abc",
+      "snapshot_sha256": "e71459f5e526d99d8f0d8e2cb62cb03294a221f307df01e5ac2bbaf96e684cc7",
+      "snapshot_digest": "54a0b3667905c05f5ee09ac33d065ff05731d6e427acae8b47f6b922d4d96c1f",
+      "completed_controls": 0,
+      "phases": [
+        "APPROACH_NO_CONTACT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0001",
+      "decision": 6,
+      "task": "alphabet_soup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "b811f8e2a25f9df52b86da2627bc540f88be06e691977a718295f4191ab85abc",
+      "snapshot_sha256": "49c22b7b60269bd34d0da86b662e07dd99cecf6cb007e210927961496252c9b2",
+      "snapshot_digest": "eff71bf765d1fb6fb59f9d379ce3a5c81222a49ab1da48f0bbd2558aaba138b4",
+      "completed_controls": 48,
+      "phases": [
+        "CONTACT_OR_CLOSURE"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0001",
+      "decision": 8,
+      "task": "alphabet_soup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "b811f8e2a25f9df52b86da2627bc540f88be06e691977a718295f4191ab85abc",
+      "snapshot_sha256": "4af726bac2f64f6ff813bc1e7c3caabaddecb1756897eb027daab9eb61a2208c",
+      "snapshot_digest": "4d8c6c6b7c8ba1fa23e8d16ea07d65f5dee5c907da985cb01cb0ae065ad2401f",
+      "completed_controls": 64,
+      "phases": [
+        "AUTHORIZED_TRANSPORT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0001",
+      "decision": 17,
+      "task": "alphabet_soup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "b811f8e2a25f9df52b86da2627bc540f88be06e691977a718295f4191ab85abc",
+      "snapshot_sha256": "7faa8a23a460c78eeb6bcdd94a2b99f11eeb4bd48ea2d86fc6283bd9824dfc9b",
+      "snapshot_digest": "1b5502d227ffa47c181b70076f0d4a8746108e9268083760ea91cf9e7bf8944d",
+      "completed_controls": 136,
+      "phases": [
+        "TERMINATION_BOUNDARY"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0003",
+      "decision": 0,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "0deafe84de87329ecce99faceecf9e6a6b7b3ea2b34cfabb8fdab63aa50b00bd",
+      "snapshot_sha256": "90cdc83993ed05b5aefab1687043238a2b899007ad6ac7b5865250bff9ad0e77",
+      "snapshot_digest": "f127ebccdf17dc9df72ce7e76900b7e8030a1920bd71cadff06b5ea4414a1891",
+      "completed_controls": 0,
+      "phases": [
+        "APPROACH_NO_CONTACT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0003",
+      "decision": 6,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "0deafe84de87329ecce99faceecf9e6a6b7b3ea2b34cfabb8fdab63aa50b00bd",
+      "snapshot_sha256": "457af301efb82d07a24a83620660033539789abd682b8b03642d8ad916bf1d3a",
+      "snapshot_digest": "b9888448ad7f790fde1c936d519f242bd6dd9093660d3a1fd79ebf596f05bf81",
+      "completed_controls": 48,
+      "phases": [
+        "CONTACT_OR_CLOSURE"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0003",
+      "decision": 8,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "0deafe84de87329ecce99faceecf9e6a6b7b3ea2b34cfabb8fdab63aa50b00bd",
+      "snapshot_sha256": "357b0d2be06b132e150b86726af867433783c21f9d4be189951f9692f63c9324",
+      "snapshot_digest": "08a9cb554144de690a89ed219c8794c1761b458b468662d6e1cc970497d1da96",
+      "completed_controls": 64,
+      "phases": [
+        "AUTHORIZED_TRANSPORT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0003",
+      "decision": 15,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "0deafe84de87329ecce99faceecf9e6a6b7b3ea2b34cfabb8fdab63aa50b00bd",
+      "snapshot_sha256": "6e301eaf67a6348210392cd0d9cdc358973fa7c7c5a3e2029a345b97e0bc850a",
+      "snapshot_digest": "ca1663f24c32b590777e8b66bbc3de0a2f850121ba3a296cf501724bd5bdff7a",
+      "completed_controls": 120,
+      "phases": [
+        "TERMINATION_BOUNDARY"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0005",
+      "decision": 0,
+      "task": "ketchup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "72b3ba512e44921f5d4f4672749b1708de35044e769b0557448aba88cb82635b",
+      "snapshot_sha256": "9eb734e4f2e9f5ba3d0fb17dd51dcc48906ceaf5f5d80914ad6de741bb0215a8",
+      "snapshot_digest": "87c540dafee28b37714ae4ab5905bf72be92647f1b30bb1440ecaab89dac9f00",
+      "completed_controls": 0,
+      "phases": [
+        "APPROACH_NO_CONTACT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0005",
+      "decision": 7,
+      "task": "ketchup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "72b3ba512e44921f5d4f4672749b1708de35044e769b0557448aba88cb82635b",
+      "snapshot_sha256": "0bba633e189c577be13a50adb80e5c0357c554c0df196b9353f99ef28eb3c4f5",
+      "snapshot_digest": "392191433fcc54908ee4076c43675053c88cece4cf0ed6eb52adeb1b25d779f9",
+      "completed_controls": 56,
+      "phases": [
+        "CONTACT_OR_CLOSURE"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0005",
+      "decision": 9,
+      "task": "ketchup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "72b3ba512e44921f5d4f4672749b1708de35044e769b0557448aba88cb82635b",
+      "snapshot_sha256": "d608543e0ec4cebb23765fd17e7fec08c358f1ce88ac9e12999b732549e0cf24",
+      "snapshot_digest": "83e6f7577b2544d647bb6903e6c75d76d9667cd5a0bcb30e71abc8cae5bfbbf5",
+      "completed_controls": 72,
+      "phases": [
+        "AUTHORIZED_TRANSPORT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0005",
+      "decision": 17,
+      "task": "ketchup",
+      "init_index": 0,
+      "condition": "C0",
+      "source_manifest_sha256": "72b3ba512e44921f5d4f4672749b1708de35044e769b0557448aba88cb82635b",
+      "snapshot_sha256": "e485b37743db3a6b50d839a11748947f3ed038c36536d9f3464944074f61f499",
+      "snapshot_digest": "af1bfc43c2fadad059e696a2f143ba75d7d19d8c14c0344b1ba4aaabc03f3f5b",
+      "completed_controls": 136,
+      "phases": [
+        "TERMINATION_BOUNDARY"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0009",
+      "decision": 7,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C2",
+      "source_manifest_sha256": "324db28bcee7e188a9c2b35e827bf92fb5cef652b5525088235c62f4c19355b5",
+      "snapshot_sha256": "d47ce548d44c97006dff37343b811f3e88ee8b4a355f86e6c85c885fc52d886a",
+      "snapshot_digest": "2f8ed5c73560b44e476cf71c19279def4a25e8230996729675cf00cef81fcb8b",
+      "completed_controls": 56,
+      "phases": [
+        "FIRST_MAJOR_EVENT_WINDOW"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0009",
+      "decision": 8,
+      "task": "cream_cheese",
+      "init_index": 0,
+      "condition": "C2",
+      "source_manifest_sha256": "324db28bcee7e188a9c2b35e827bf92fb5cef652b5525088235c62f4c19355b5",
+      "snapshot_sha256": "ea24e6f0fe637e37b5c5aa8046d03a522b8485bd4d435f727ee4816dd2bd5a64",
+      "snapshot_digest": "aed88c9797a31fd355f7b8c1e0a6a4e5a0cf3a1641209f9017ae6a46b0b0ba8a",
+      "completed_controls": 64,
+      "phases": [
+        "FOLLOWUP_AFTER_FIRST_MAJOR_EVENT"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0010",
+      "decision": 8,
+      "task": "cream_cheese",
+      "init_index": 1,
+      "condition": "C2",
+      "source_manifest_sha256": "eb518c1a8f252f294a33c891bcafdc9e6ea05780f41212aa91f2c7fb100cdb32",
+      "snapshot_sha256": "5d91550c193ca918d82eab7b622739f1b410890381138427b963b3140306a39e",
+      "snapshot_digest": "d6c1d2e57624c8429386e19ff2bfa16d465be8a1ccefabe3ea026594cf45cacb",
+      "completed_controls": 64,
+      "phases": [
+        "FIRST_MAJOR_EVENT_WINDOW"
+      ],
+      "repeats": 2
+    },
+    {
+      "source_run": "e2-dev-0010",
+      "decision": 9,
+      "task": "cream_cheese",
+      "init_index": 1,
+      "condition": "C2",
+      "source_manifest_sha256": "eb518c1a8f252f294a33c891bcafdc9e6ea05780f41212aa91f2c7fb100cdb32",
+      "snapshot_sha256": "d83b0898b3fb5787ca40506ea5caca978a94fc63bdb4f642ebbf80d72c28e469",
+      "snapshot_digest": "75fb166c157681a21cbade1a0ff4d7904b35c498a31296269be4bdf50e48c489",
+      "completed_controls": 72,
+      "phases": [
+        "FOLLOWUP_AFTER_FIRST_MAJOR_EVENT"
+      ],
+      "repeats": 2
+    }
+  ],
+  "boundary_exceptions": [],
+  "independent_review": "NOT_PERFORMED"
+}

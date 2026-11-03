@@ -1,0 +1,27 @@
+{
+  "edition": "ME6401_FORMAL_E2_2026-10-30",
+  "runtime_source_head": "79510d9a302eeb7820f7ed35463c29bc649e1431",
+  "original_runtime_trees": {
+    "configs": "6f190d243df6ec752e347516dd1cc5c80c159ba6",
+    "scripts": "748280239e01d075da45f3412a635e096f0abbdf",
+    "tase": "de7238e60cdba75ad217eb0c263a27a7feac3264",
+    "tests": "4a835532a795cbdff9e3d5a6778cad8b69df6656"
+  },
+  "evidence_report_head": "3484f3de388df63ea1a758dfd6ff4cfa545b2333",
+  "original_evidence_blobs": {
+    "results/e2/attempt_ledger_120.json": "e4b532df81f34f84f512e1b03fe1f86228997e09",
+    "results/e2/final_frozen_audit.json": "ca6051e395abee64965d6912fe6e7006615dc835",
+    "results/e2/R3_REVIEW_PACKET.md": "935c595cf83ebd2a8adafe79a01e2b307f56e1c8",
+    "results/e2/example_0043_first_actual_event_window.json": "617538d3601bcda66f1729215fcc9da5459ffb46",
+    "results/e2/example_0044_gate_decisions.jsonl": "de478354b09c09473fb96f37b8c68c1ab0af0a2b"
+  },
+  "R016_gate_P_commit": "5dafcec4dc390f69dad6f08ebff1eec4577caf2f",
+  "new_runtime_authorization": false,
+  "R3_result_approval_claimed": false,
+  "full_original_CPU_suite_rerun_this_session": false,
+  "new_helper_synthetic_tests": {"normal": 5, "optimized": 5, "exit_codes": [0, 0]},
+  "helper_full_ledger_execution_this_session": "NOT_PERFORMED",
+  "private_raw_rehash_by_reviewer": false,
+  "new_model_or_simulator_calls": 0,
+  "notes": "Original scientific modules/configs/tests reused by Git object identity. Documentation and offline helper are new. Earlier E2 execution epochs remain recorded in the original ledger."
+}

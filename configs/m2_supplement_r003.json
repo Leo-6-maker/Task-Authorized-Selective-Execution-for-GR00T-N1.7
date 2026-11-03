@@ -1,0 +1,18 @@
+{
+  "scope": "RECONSTRUCTED_FROM_FULL_SNAPSHOT_AND_SAVED_ACTIONS / DEV_DIAGNOSTIC",
+  "review": "R003",
+  "source_episode": "dev-m2-017",
+  "anchor_decision": 9,
+  "anchor_control_steps": 72,
+  "boundary_decisions": [11, 12],
+  "repeats_per_boundary": 3,
+  "max_prefix_steps": 8,
+  "prior_shadow_attempts": 74,
+  "max_total_shadow_attempts": 80,
+  "dev_used": 18,
+  "new_model_calls": 0,
+  "new_autonomous_episodes": 0,
+  "failure_policy": "STOP_AND_REPORT_NO_RETRY",
+  "original_runtime_sha": "16f0249299a11805666f68eb06c09c8f3974efef",
+  "original_delivery_sha": "d64cb1002980738f170e3206d004b4a882166543"
+}
