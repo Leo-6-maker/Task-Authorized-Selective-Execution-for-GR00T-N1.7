@@ -1,0 +1,56 @@
+name: Export source-locked ME6401 frames
+on:
+  push:
+    branches: [codex/me6401-hires-frames-20261103]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original E2 frames via authenticated GitHub Contents API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p original_frames
+          COMMIT=3484f3de388df63ea1a758dfd6ff4cfa545b2333
+          PREFIX=reports/E2/R013/final120/review/figures
+          for BASE in e2-test-0041-control-0130.png e2-test-0043-control-0058.png e2-test-0044-control-0048.png; do
+            echo "Fetching source-bound $BASE"
+            curl -fLsS --retry 3 \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Accept: application/vnd.github.raw+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${PREFIX}/${BASE}?ref=${COMMIT}" \
+              -o "original_frames/${BASE}"
+          done
+          python3 - <<'PY'
+          import hashlib, pathlib, struct
+          expected={
+          'e2-test-0041-control-0130.png':'be5d3d82e55e97ca1ba616c4f2046372eb5990ed37ac9192734d31d94c005f83',
+          'e2-test-0043-control-0058.png':'b28926c22a881aa750c9122aacce7daac6f123d3e0e004572742e437028c7f7b',
+          'e2-test-0044-control-0048.png':'4876d1ba67af4bc8f7a21cb3fa442545f010bbcf81f7af325552896fba6d4a6e',
+          }
+          for name in expected:
+              b=(pathlib.Path('original_frames')/name).read_bytes()
+              assert b[:8] == bytes.fromhex('89504e470d0a1a0a'), name
+              wh=struct.unpack('>II',b[16:24])
+              assert wh==(512,288), (name,wh)
+              print(name,wh,'bytes',len(b),'SHA256',hashlib.sha256(b).hexdigest())
+          PY
+          cat >original_frames/README.md <<'EOF'
+          Immutable E2 real simulation frames at fixed E2 report commit 3484f3de...
+          0041-C0-B0 control130: official goal SUCCESS
+          0043-C2-B0 control58: actual wrong lift
+          0044-C2-G control48: semantic abort before wrong lift
+          These are original 512x288 PNGs, not generated or upscaled previews.
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: me6401-original-source-frames
+          path: original_frames/
+          retention-days: 14
