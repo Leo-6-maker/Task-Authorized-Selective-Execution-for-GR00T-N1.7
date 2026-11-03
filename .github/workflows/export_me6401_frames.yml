@@ -3,7 +3,7 @@ on:
   push:
     branches: [codex/me6401-hires-frames-20261103]
   pull_request:
-    branches: [main]
+    branches: [main, codex/course-final-e2-e3-20261102]
 permissions:
   contents: read
 jobs:
@@ -31,16 +31,18 @@ jobs:
           python3 - <<'PY'
           import hashlib, pathlib, struct
           expected={
-          'e2-test-0041-control-0130.png':'be5d3d82e55e97ca1ba616c4f2046372eb5990ed37ac9192734d31d94c005f83',
-          'e2-test-0043-control-0058.png':'b28926c22a881aa750c9122aacce7daac6f123d3e0e004572742e437028c7f7b',
-          'e2-test-0044-control-0048.png':'4876d1ba67af4bc8f7a21cb3fa442545f010bbcf81f7af325552896fba6d4a6e',
+          'e2-test-0041-control-0130.png':'ee1b925de3e9516ce7be44eeee639ed2fd6b0036',
+          'e2-test-0043-control-0058.png':'d0880f9f6ca7b79ed1d0943bb12e0a348e9bb489',
+          'e2-test-0044-control-0048.png':'861a2c4bc558be9c852b0799ef42d546d05aeca6',
           }
           for name in expected:
               b=(pathlib.Path('original_frames')/name).read_bytes()
               assert b[:8] == bytes.fromhex('89504e470d0a1a0a'), name
               wh=struct.unpack('>II',b[16:24])
               assert wh==(512,288), (name,wh)
-              print(name,wh,'bytes',len(b),'SHA256',hashlib.sha256(b).hexdigest())
+              actual=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\x00'+b).hexdigest()
+              assert actual==expected[name],(name,actual,expected[name])
+              print(name,wh,'bytes',len(b),'GitBlob',actual)
           PY
           cat >original_frames/README.md <<'EOF'
           Immutable E2 real simulation frames at fixed E2 report commit 3484f3de...
