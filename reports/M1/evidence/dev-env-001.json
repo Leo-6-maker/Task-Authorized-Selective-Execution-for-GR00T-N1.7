@@ -1,0 +1,20 @@
+{
+  "run_id": "dev-env-001",
+  "task": "alphabet_soup",
+  "init_index": 0,
+  "split": "DEV",
+  "repo_sha": "3e5bfeb379239fa9c372d0b6ccd236a8025c5afd",
+  "config_hash": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+  "status": "RUNTIME_ERROR",
+  "official_success": null,
+  "policy_calls": 0,
+  "inner_steps": 0,
+  "settling_steps": 0,
+  "exit_code": 1,
+  "started_at_sgt": "2026-10-21T18:31:54.367938+08:00",
+  "error_type": "UnpicklingError",
+  "wall_seconds": 7.485756916925311,
+  "completed_at_sgt": "2026-10-21T18:32:01.853627+08:00",
+  "full_policy_episode": false,
+  "error_summary": "PyTorch restricted loader rejected native NumPy initialization; retained, then repaired."
+}

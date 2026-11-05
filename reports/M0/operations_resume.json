@@ -1,0 +1,230 @@
+[
+  {
+    "operation": "backbone-access-preflight-01",
+    "exit_code": 0,
+    "wall_seconds": 0.8909999999996217,
+    "completed_utc": "2026-10-21T10:30:22.128016+00:00"
+  },
+  {
+    "operation": "backbone-cache-02",
+    "exit_code": 0,
+    "wall_seconds": 185.59299999999712,
+    "completed_utc": "2026-10-21T11:28:31.039962+00:00"
+  },
+  {
+    "operation": "backbone-existing-01",
+    "exit_code": 0,
+    "wall_seconds": 0.6719999999986612,
+    "completed_utc": "2026-10-21T11:27:11.402901+00:00"
+  },
+  {
+    "operation": "backbone-progress-01",
+    "exit_code": 0,
+    "wall_seconds": 0.9370000000017171,
+    "completed_utc": "2026-10-21T11:26:51.177849+00:00"
+  },
+  {
+    "operation": "backbone-progress-02",
+    "exit_code": 0,
+    "wall_seconds": 0.625,
+    "completed_utc": "2026-10-21T11:27:47.237191+00:00"
+  },
+  {
+    "operation": "backbone-progress-03",
+    "exit_code": 0,
+    "wall_seconds": 0.9060000000026776,
+    "completed_utc": "2026-10-21T11:28:38.553219+00:00"
+  },
+  {
+    "operation": "bootstrap-source-01",
+    "exit_code": 0,
+    "wall_seconds": 20.938000000000102,
+    "completed_utc": "2026-10-21T10:15:33.244951+00:00"
+  },
+  {
+    "operation": "clone-course-01",
+    "exit_code": 0,
+    "wall_seconds": 1.5779999999995198,
+    "completed_utc": "2026-10-21T10:24:52.062978+00:00"
+  },
+  {
+    "operation": "collect-identity-01",
+    "exit_code": 0,
+    "wall_seconds": 2.5,
+    "completed_utc": "2026-10-21T10:36:26.483441+00:00"
+  },
+  {
+    "operation": "collect-resume-01",
+    "exit_code": 0,
+    "wall_seconds": 1.7190000000009604,
+    "completed_utc": "2026-10-21T11:35:05.613649+00:00"
+  },
+  {
+    "operation": "download-model-01",
+    "exit_code": 0,
+    "wall_seconds": 509.4220000000005,
+    "completed_utc": "2026-10-21T10:27:53.975672+00:00"
+  },
+  {
+    "operation": "environment-probe-01",
+    "exit_code": 1,
+    "wall_seconds": 10.438000000000102,
+    "completed_utc": "2026-10-21T10:32:02.904950+00:00"
+  },
+  {
+    "operation": "extra-environment-probes-01",
+    "exit_code": 0,
+    "wall_seconds": 21.281999999999243,
+    "completed_utc": "2026-10-21T10:35:16.703747+00:00"
+  },
+  {
+    "operation": "final-resource-inventory-01",
+    "exit_code": 0,
+    "wall_seconds": 2.57799999999952,
+    "completed_utc": "2026-10-21T10:38:54.300628+00:00"
+  },
+  {
+    "operation": "hf-config-check-01",
+    "exit_code": 0,
+    "wall_seconds": 1.7339999999967404,
+    "completed_utc": "2026-10-21T11:15:45.538941+00:00"
+  },
+  {
+    "operation": "hf-path-diagnosis-01",
+    "exit_code": 0,
+    "wall_seconds": 2.0469999999986612,
+    "completed_utc": "2026-10-21T11:14:53.395525+00:00"
+  },
+  {
+    "operation": "install-server-01",
+    "exit_code": 0,
+    "wall_seconds": 389.1409999999996,
+    "completed_utc": "2026-10-21T10:23:27.857058+00:00"
+  },
+  {
+    "operation": "install-sim-01",
+    "exit_code": 0,
+    "wall_seconds": 686.3279999999995,
+    "completed_utc": "2026-10-21T10:30:40.893712+00:00"
+  },
+  {
+    "operation": "live-007a",
+    "exit_code": 0,
+    "wall_seconds": 0.6399999999994179,
+    "completed_utc": "2026-10-21T11:31:47.087421+00:00"
+  },
+  {
+    "operation": "live-matrix-a",
+    "exit_code": 0,
+    "wall_seconds": 0.5940000000009604,
+    "completed_utc": "2026-10-21T11:33:04.016773+00:00"
+  },
+  {
+    "operation": "network-probe-01",
+    "exit_code": 0,
+    "wall_seconds": 8.156999999999243,
+    "completed_utc": "2026-10-21T10:26:50.627867+00:00"
+  },
+  {
+    "operation": "policy-006",
+    "exit_code": 1,
+    "wall_seconds": 7.921999999998661,
+    "completed_utc": "2026-10-21T11:30:33.364366+00:00"
+  },
+  {
+    "operation": "policy-007",
+    "exit_code": 0,
+    "wall_seconds": 12.75,
+    "completed_utc": "2026-10-21T11:31:37.577416+00:00"
+  },
+  {
+    "operation": "policy-matrix-008-012",
+    "exit_code": 0,
+    "wall_seconds": 63.29699999999866,
+    "completed_utc": "2026-10-21T11:33:13.628860+00:00"
+  },
+  {
+    "operation": "policy-status-006",
+    "exit_code": 0,
+    "wall_seconds": 0.875,
+    "completed_utc": "2026-10-21T11:30:47.252160+00:00"
+  },
+  {
+    "operation": "read-backbone-01",
+    "exit_code": 127,
+    "wall_seconds": 0.7029999999977008,
+    "completed_utc": "2026-10-21T11:24:35.044812+00:00"
+  },
+  {
+    "operation": "read-backbone-02",
+    "exit_code": 0,
+    "wall_seconds": 0.6719999999986612,
+    "completed_utc": "2026-10-21T11:24:48.242835+00:00"
+  },
+  {
+    "operation": "repair-sim-and-probe-02",
+    "exit_code": 0,
+    "wall_seconds": 14.953000000001339,
+    "completed_utc": "2026-10-21T10:33:21.157868+00:00"
+  },
+  {
+    "operation": "resume-preflight-01",
+    "exit_code": 2,
+    "wall_seconds": 2.375,
+    "completed_utc": "2026-10-21T11:24:06.202195+00:00"
+  },
+  {
+    "operation": "server-launch-01",
+    "exit_code": 0,
+    "wall_seconds": 18.60899999999856,
+    "completed_utc": "2026-10-21T10:29:09.393642+00:00"
+  },
+  {
+    "operation": "server-start-02",
+    "exit_code": 0,
+    "wall_seconds": 2.952999999997701,
+    "completed_utc": "2026-10-21T11:28:46.795064+00:00"
+  },
+  {
+    "operation": "server-start-03",
+    "exit_code": 0,
+    "wall_seconds": 0.9370000000017171,
+    "completed_utc": "2026-10-21T11:29:46.594378+00:00"
+  },
+  {
+    "operation": "server-status-02a",
+    "exit_code": 0,
+    "wall_seconds": 0.875,
+    "completed_utc": "2026-10-21T11:28:59.249669+00:00"
+  },
+  {
+    "operation": "server-status-03a",
+    "exit_code": 0,
+    "wall_seconds": 0.6100000000005821,
+    "completed_utc": "2026-10-21T11:29:56.532685+00:00"
+  },
+  {
+    "operation": "server-status-03b",
+    "exit_code": 0,
+    "wall_seconds": 0.6090000000003783,
+    "completed_utc": "2026-10-21T11:30:17.105857+00:00"
+  },
+  {
+    "operation": "source-audit-01",
+    "exit_code": 2,
+    "wall_seconds": 2.7809999999990396,
+    "completed_utc": "2026-10-21T10:27:37.311336+00:00"
+  },
+  {
+    "operation": "stop-server-03",
+    "exit_code": 0,
+    "wall_seconds": 5.217999999997119,
+    "completed_utc": "2026-10-21T11:34:03.172766+00:00"
+  },
+  {
+    "operation": "verify-auxiliary-03",
+    "exit_code": 0,
+    "wall_seconds": 1.5159999999996217,
+    "completed_utc": "2026-10-21T11:32:52.245905+00:00"
+  }
+]

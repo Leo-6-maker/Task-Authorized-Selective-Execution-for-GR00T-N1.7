@@ -1,0 +1,15 @@
+{
+  "protocol_id": "TASE-001-v1.0",
+  "stage": "M1",
+  "split": "DEV",
+  "condition": "C0",
+  "maximum_episode_attempts": 24,
+  "tasks": ["alphabet_soup", "cream_cheese", "ketchup"],
+  "development_init_indices": [0, 1],
+  "execution_horizon_candidate": 8,
+  "max_inner_steps": 720,
+  "settling_steps": 10,
+  "policy_seed": 640100,
+  "environment_seed": 640101,
+  "notes": "DEV only. No formal calibration, TEST, shadow, gate or training."
+}

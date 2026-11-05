@@ -1,0 +1,26 @@
+{
+  "state_unchanged": true,
+  "latest_native_observation_equal": {
+    "video.image": true,
+    "video.wrist_image": true,
+    "state.x": true,
+    "state.y": true,
+    "state.z": true,
+    "state.roll": true,
+    "state.pitch": true,
+    "state.yaw": true,
+    "state.gripper": true,
+    "annotation.human.action.task_description": true
+  },
+  "history": {
+    "n_action_steps": 8,
+    "action_horizon": 16,
+    "video_delta_indices": [
+      0
+    ],
+    "state_delta_indices": [
+      0
+    ]
+  },
+  "scope": "native settled reset and official wrapper history; no shadow"
+}

@@ -1,0 +1,37 @@
+{
+  "run_id": "dev-policy-008",
+  "task": "alphabet_soup",
+  "init_index": 1,
+  "split": "DEV",
+  "repo_sha": "46b3461a0f24d0575141b4e35e430ee1e3280e2c",
+  "config_hash": "543653dcdecdf4227c9814713041dc58635bef0da4379b6dafd844274ebab389",
+  "status": "SUCCESS",
+  "official_success": true,
+  "policy_calls": 18,
+  "policy_requests_attempted": 18,
+  "inner_steps": 144,
+  "settling_steps": 10,
+  "exit_code": 0,
+  "started_at_sgt": "2026-10-21T19:32:11.207415+08:00",
+  "init_hash": "53cb81fb5d5c87cc2a472e58509c3c0f656a6e305fe5bee2eb56db0da4870f6d",
+  "init_file_sha256": "b9023e5546b239cacb2aaa3c76df3b73c3de6f97500fea5e27a0db9827002a19",
+  "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+  "full_task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+  "native_language": "pick up the alphabet soup and place it in the basket",
+  "settled_state_hash": "a4cbe946486055df904b3fe1282bd6bd62fec184e3a2398581469379190cf7dc",
+  "scene_xml_hash": "67343e48219418a95042ae9d55d1c9ca23ec784815c811c8202eac86889628f9",
+  "control_hz": 20,
+  "task_objects": [
+    "alphabet_soup_1",
+    "basket_1"
+  ],
+  "gl_renderer": "NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2",
+  "gl_vendor": "NVIDIA Corporation",
+  "egl_process_gpu_indices": [
+    0
+  ],
+  "egl_binding_check": "MATCH",
+  "wall_seconds": 9.219286060892045,
+  "completed_at_sgt": "2026-10-21T19:32:20.426659+08:00",
+  "full_policy_episode": true
+}

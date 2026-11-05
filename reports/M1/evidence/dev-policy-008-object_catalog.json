@@ -1,0 +1,44 @@
+{
+  "objects": [
+    "alphabet_soup_1",
+    "basket_1",
+    "salad_dressing_1",
+    "cream_cheese_1",
+    "milk_1",
+    "tomato_sauce_1",
+    "butter_1"
+  ],
+  "objects_of_interest": [
+    "alphabet_soup_1",
+    "basket_1"
+  ],
+  "body_names": [
+    "world",
+    "floor",
+    "robot0_base",
+    "robot0_link0",
+    "robot0_link1",
+    "robot0_link2",
+    "robot0_link3",
+    "robot0_link4",
+    "robot0_link5",
+    "robot0_link6",
+    "robot0_link7",
+    "robot0_right_hand",
+    "gripper0_right_gripper",
+    "gripper0_eef",
+    "gripper0_leftfinger",
+    "gripper0_finger_joint1_tip",
+    "gripper0_rightfinger",
+    "gripper0_finger_joint2_tip",
+    "mount0_base",
+    "alphabet_soup_1_main",
+    "basket_1_main",
+    "salad_dressing_1_main",
+    "cream_cheese_1_main",
+    "milk_1_main",
+    "tomato_sauce_1_main",
+    "butter_1_main"
+  ],
+  "meaning": "Native scene inventory only; not a Gate or event oracle"
+}
